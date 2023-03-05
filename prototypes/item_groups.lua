@@ -32,4 +32,11 @@ data:extend({
     group = "cube-intermediates",
     order = "z",
   },
+
+  {
+    type = "item-subgroup",
+    name = "cube-production-machines",
+    group = "production",
+    order = "z",
+  },
 })

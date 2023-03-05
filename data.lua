@@ -49,5 +49,10 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 require("prototypes.item_groups")
 require("prototypes.recipe_categories")
 require("prototypes.items")
+require("prototypes.items_production")
 require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
+require("prototypes.recipes_production")
+
+require("prototypes.entities.charger")
+require("prototypes.entities.explosions")

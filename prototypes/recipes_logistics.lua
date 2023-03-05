@@ -1,6 +1,33 @@
 data:extend({
   {
     type = "recipe",
+    name = "cube-iron-chest",
+    ingredients = {{"cube-basic-matter-unit", 10}},
+    results = {{"iron-chest", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
+    name = "cube-pipe",
+    ingredients = {{"cube-basic-matter-unit", 2}},
+    results = {{"pipe", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
+    name = "cube-underground-pipe",
+    ingredients = {
+      {"pipe", 10},
+      {"cube-basic-matter-unit", 8},
+    },
+    results = {{"pipe-to-ground", 2}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
     name = "cube-transport-belt",
     ingredients = {{"cube-basic-matter-unit", 2}},
     results = {{"express-transport-belt", 1}},
