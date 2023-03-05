@@ -9,6 +9,7 @@ local function on_init()
   if remote.interfaces["freeplay"] then
     remote.call("freeplay", "set_disable_crashsite", true)
     remote.call("freeplay", "set_created_items", {
+      ["cube-hyperdense-utility-cube"] = 1,
       ["iron-chest"] = 4,
     })
     remote.call("freeplay", "set_respawn_items", {})

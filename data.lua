@@ -45,3 +45,6 @@ data.raw.turret["big-worm-turret"].autoplace = nil
 data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
+
+require("prototypes.item-groups")
+require("prototypes.items")
