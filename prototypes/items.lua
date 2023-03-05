@@ -52,4 +52,65 @@ data:extend({
     order = "0[a-knowledge-0]",
     stack_size = 100,
   },
+
+  {
+    type = "item",
+    name = "cube-calcium",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-basics",
+    order = "a[calcium]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "cube-intelligent-calcium",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-processing",
+    order = "z[calcium]",
+    stack_size = 100,
+  },
 })

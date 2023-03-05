@@ -24,6 +24,12 @@ data:extend({
     type = "item-subgroup",
     name = "cube-knowledge",
     group = "cube-intermediates",
+    order = "x",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-processing",
+    group = "cube-intermediates",
     order = "z",
   },
 })

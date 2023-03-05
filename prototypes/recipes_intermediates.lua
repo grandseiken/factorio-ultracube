@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "cube-manual-reboot",
+    name = "cube-utility-cube-manual-reboot",
     icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
     icon_size = 64,
     icon_mipmaps = 4,
@@ -12,6 +12,24 @@ data:extend({
     category = "crafting",
     subgroup = "cube-cubes",
     order = "0[0-cube]",
+    allow_inserter_overload = false,
+    allow_decomposition = false,
+    allow_intermediates = false,
+    allow_as_intermediate = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-utility-cube-recharge",
+    icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    ingredients = {{"cube-depleted-utility-cube", 1}},
+    results = {{"cube-hyperdense-utility-cube", 1}},
+    main_product = "",
+    energy_required = 1,
+    category = "cube-charger",
+    subgroup = "cube-cubes",
+    order = "0[1-cube]",
     allow_inserter_overload = false,
     allow_decomposition = false,
     allow_intermediates = false,
@@ -98,5 +116,17 @@ data:extend({
     -- category = "cube-synthesizer",
     subgroup = "cube-knowledge",
     order = "0[b-knowledge-1]",
+  },
+
+  {
+    type = "recipe",
+    name = "cube-intelligent-calcium",
+    ingredients = {
+      {"cube-calcium", 2},
+      {"cube-basic-knowledge-unit", 1},
+    },
+    results = {{"cube-intelligent-calcium", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
   },
 })

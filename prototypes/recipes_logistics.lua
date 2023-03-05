@@ -33,6 +33,38 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-medium-electric-pole",
+    ingredients = {{"cube-basic-matter-unit", 10}},
+    results = {{"medium-electric-pole", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
+    name = "cube-big-electric-pole",
+    ingredients = {
+      {"cube-basic-matter-unit", 25},
+      {"cube-n-dimensional-widget", 1},
+    },
+    results = {{"big-electric-pole", 1}},
+    energy_required = 2,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
+    name = "cube-substation",
+    ingredients = {
+      {"big-electric-pole", 1},
+      {"cube-basic-matter-unit", 50},
+      {"cube-n-dimensional-widget", 10},
+    },
+    results = {{"substation", 1}},
+    energy_required = 4,
+    -- category = "cube-fabricator",
+  },
+
+  {
+    type = "recipe",
     name = "cube-constant-combinator",
     ingredients = {
       {"cube-basic-matter-unit", 2},
