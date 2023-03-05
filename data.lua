@@ -47,4 +47,6 @@ data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
 require("prototypes.item-groups")
+require("prototypes.recipe_categories")
 require("prototypes.items")
+require("prototypes.recipes")

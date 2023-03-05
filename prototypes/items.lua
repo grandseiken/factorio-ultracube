@@ -8,7 +8,7 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "0[0-cube]",
-    stack_size = 1
+    stack_size = 1,
   },
   {
     type = "item",
@@ -19,7 +19,7 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "0[1-cube]",
-    stack_size = 1
+    stack_size = 1,
   },
 
   {
@@ -29,8 +29,8 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-basics",
-    order = "0[a-matter]",
-    stack_size = 100
+    order = "0[a-matter-0]",
+    stack_size = 100,
   },
   {
     type = "item",
@@ -39,8 +39,8 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-basics",
-    order = "0[b-widget]",
-    stack_size = 50
+    order = "0[b-widget-0]",
+    stack_size = 50,
   },
   {
     type = "item",
@@ -48,8 +48,8 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "cube-basics",
-    order = "1[a-knowledge]",
-    stack_size = 100
+    subgroup = "cube-knowledge",
+    order = "0[a-knowledge-0]",
+    stack_size = 100,
   },
 })
