@@ -10,10 +10,6 @@ local function on_init()
     remote.call("freeplay", "set_disable_crashsite", true)
     remote.call("freeplay", "set_created_items", {
       ["cube-hyperdense-utility-cube"] = 1,
-      ["cube-depleted-utility-cube"] = 1,
-      ["cube-basic-matter-unit"] = 500,
-      ["cube-n-dimensional-widget"] = 100,
-      ["cube-basic-knowledge-unit"] = 100,
       ["iron-chest"] = 4,
     })
     remote.call("freeplay", "set_respawn_items", {})
