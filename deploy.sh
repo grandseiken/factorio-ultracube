@@ -2,7 +2,7 @@
 DIR="$(dirname "$(readlink -f "$0")")"
 NAME=$(basename "${DIR}")
 MODS="${HOME}/.factorio/mods"
-REGEX=".*/LICENSE\|.*\.lua"
+REGEX=".*/LICENSE\|.*\.lua\|.*\.json"
 (cd "${DIR}/.." && \
     rm -rf "${NAME}.zip" &&
     find "${NAME}" -regex "${REGEX}" | xargs zip "${NAME}.zip" &&
