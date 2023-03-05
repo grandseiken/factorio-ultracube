@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item-group",
-    name = "cube-cubes",
+    name = "cube-intermediates",
     order = "0",
     order_in_recipe = "0",
     icon = "__base__/graphics/item-group/intermediate-products.png",
@@ -10,8 +10,14 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-cube",
-    group = "cube-cubes",
+    name = "cube-cubes",
+    group = "cube-intermediates",
     order = "0"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-basics",
+    group = "cube-intermediates",
+    order = "a"
   },
 })
