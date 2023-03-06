@@ -14,7 +14,6 @@ data:extend({
     results = {{"pipe", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    -- category = "cube-fabricator",
   },
   {
     type = "recipe",
@@ -26,7 +25,6 @@ data:extend({
     results = {{"pipe-to-ground", 2}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    -- category = "cube-fabricator",
   },
   {
     type = "recipe",
@@ -38,7 +36,7 @@ data:extend({
     results = {{"storage-tank", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    -- category = "cube-fabricator",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -50,7 +48,7 @@ data:extend({
     results = {{"pump", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    -- category = "cube-fabricator",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -59,6 +57,7 @@ data:extend({
     results = {{"express-transport-belt", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -70,6 +69,7 @@ data:extend({
     results = {{"express-underground-belt", 2}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -82,8 +82,21 @@ data:extend({
     results = {{"express-splitter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 
+  {
+    type = "recipe",
+    name = "cube-lamp",
+    ingredients = {
+      {"cube-basic-matter-unit", 1},
+      {"cube-n-dimensional-widget", 1},
+    },
+    results = {{"small-lamp", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
   {
     type = "recipe",
     name = "cube-medium-electric-pole",
@@ -102,6 +115,7 @@ data:extend({
     results = {{"big-electric-pole", 1}},
     energy_required = 2,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -114,6 +128,7 @@ data:extend({
     results = {{"substation", 1}},
     energy_required = 4,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 
   {
@@ -126,6 +141,7 @@ data:extend({
     results = {{"constant-combinator", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -137,6 +153,7 @@ data:extend({
     results = {{"arithmetic-combinator", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -148,8 +165,8 @@ data:extend({
     results = {{"decider-combinator", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
-
 
   {
     type = "recipe",
@@ -161,6 +178,7 @@ data:extend({
     results = {{"power-switch", 1}},
     energy_required = 2,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -172,6 +190,7 @@ data:extend({
     results = {{"programmable-speaker", 1}},
     energy_required = 2,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -179,6 +198,7 @@ data:extend({
     ingredients = {{"cube-basic-matter-unit", 1}},
     results = {{"red-wire", 1}},
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -186,6 +206,7 @@ data:extend({
     ingredients = {{"cube-basic-matter-unit", 1}},
     results = {{"green-wire", 1}},
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 
   {
@@ -195,6 +216,16 @@ data:extend({
     results = {{"fast-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-long-inserter",
+    ingredients = {{"cube-basic-matter-unit", 8}},
+    results = {{"long-handed-inserter", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -206,14 +237,7 @@ data:extend({
     results = {{"filter-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-  },
-  {
-    type = "recipe",
-    name = "cube-long-inserter",
-    ingredients = {{"cube-basic-matter-unit", 8}},
-    results = {{"long-handed-inserter", 1}},
-    energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -225,6 +249,7 @@ data:extend({
     results = {{"stack-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -236,5 +261,6 @@ data:extend({
     results = {{"stack-filter-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 })

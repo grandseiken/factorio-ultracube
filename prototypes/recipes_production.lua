@@ -21,6 +21,17 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-lab",
+    ingredients = {
+      {"cube-basic-matter-unit", 40},
+      {"cube-basic-knowledge-unit", 10},
+    },
+    results = {{"cube-lab", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+  },
+  {
+    type = "recipe",
     name = "cube-steam_engine",
     ingredients = {
       {"cube-basic-matter-unit", 30},
@@ -39,6 +50,7 @@ data:extend({
     results = {{"cube-charger", 1}},
     energy_required = 10,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",

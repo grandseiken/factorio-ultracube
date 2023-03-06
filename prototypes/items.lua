@@ -48,7 +48,7 @@ data:extend({
     stack_size = 50,
   },
   {
-    type = "item",
+    type = "tool",
     name = "cube-basic-knowledge-unit",
     icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
     icon_size = 64,
@@ -56,6 +56,7 @@ data:extend({
     subgroup = "cube-knowledge",
     order = "0[a-knowledge-0]",
     stack_size = 100,
+    durability = 1,
   },
 
   {

@@ -12,6 +12,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-lab",
+    icon = "__base__/graphics/icons/lab.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "production-machine",
+    order = "g[lab]",
+    place_result = "cube-lab",
+    stack_size = 10
+  },
+  {
+    type = "item",
     name = "cube-charger",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,

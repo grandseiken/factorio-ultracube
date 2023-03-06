@@ -8,7 +8,7 @@ data:extend({
     ingredients = {{"cube-depleted-utility-cube", 1}},
     results = {{"cube-ultradense-utility-cube", 1}},
     main_product = "",
-    energy_required = 30,
+    energy_required = 20,
     category = "crafting",
     subgroup = "cube-cubes",
     order = "0[0-cube]",
@@ -34,6 +34,7 @@ data:extend({
     allow_decomposition = false,
     allow_intermediates = false,
     allow_as_intermediate = false,
+    enabled = false,
   },
 
   {
@@ -46,8 +47,8 @@ data:extend({
     },
     main_product = "cube-basic-matter-unit",
     energy_required = 1,
-    allow_decomposition = false,
     category = "cube-synthesizer-handcraft",
+    allow_decomposition = false,
   },
   {
     type = "recipe",
@@ -64,10 +65,11 @@ data:extend({
       {"cube-basic-matter-unit", 1000},
     },
     energy_required = 1,
-    allow_decomposition = false,
     category = "cube-synthesizer",
     subgroup = "cube-basics",
     order = "0[a-matter-1]",
+    allow_decomposition = false,
+    enabled = false,
   },
 
   {
@@ -80,8 +82,9 @@ data:extend({
     },
     main_product = "cube-n-dimensional-widget",
     energy_required = 1,
-    allow_decomposition = false,
     category = "cube-synthesizer",
+    allow_decomposition = false,
+    enabled = false,
   },
 
   {
@@ -94,8 +97,8 @@ data:extend({
     },
     main_product = "cube-basic-knowledge-unit",
     energy_required = 1,
-    allow_decomposition = false,
     category = "cube-synthesizer",
+    allow_decomposition = false,
   },
   {
     type = "recipe",
@@ -112,10 +115,11 @@ data:extend({
       {"cube-basic-knowledge-unit", 100},
     },
     energy_required = 1,
-    allow_decomposition = false,
     category = "cube-synthesizer",
     subgroup = "cube-knowledge",
     order = "0[b-knowledge-1]",
+    allow_decomposition = false,
+    enabled = false,
   },
 
   {
