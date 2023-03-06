@@ -121,7 +121,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "1MW",
+    energy_usage = "5MW",
     -- ingredient_count = 1,
     result_inventory_size = 1,
     source_inventory_size = 1,
