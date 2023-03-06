@@ -44,7 +44,7 @@ data:extend({
     type = "recipe",
     name = "cube-charger",
     ingredients = {
-      {"cube-basic-matter-unit", 500},
+      {"cube-basic-matter-unit", 250},
       {"cube-n-dimensional-widget", 10},
     },
     results = {{"cube-charger", 1}},
@@ -56,8 +56,8 @@ data:extend({
     type = "recipe",
     name = "cube-synthesizer",
     ingredients = {
-      {"cube-basic-matter-unit", 200},
-      {"cube-n-dimensional-widget", 10},
+      {"cube-basic-matter-unit", 500},
+      {"cube-n-dimensional-widget", 20},
     },
     results = {{"cube-synthesizer", 1}},
     energy_required = 5,
@@ -68,7 +68,7 @@ data:extend({
     type = "recipe",
     name = "cube-fabricator",
     ingredients = {
-      {"cube-basic-matter-unit", 100},
+      {"cube-basic-matter-unit", 200},
       {"cube-n-dimensional-widget", 5},
     },
     results = {{"cube-fabricator", 1}},

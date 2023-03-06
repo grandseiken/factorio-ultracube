@@ -101,7 +101,7 @@ data:extend({
       apparent_volume = 1.5,
     },
     crafting_speed = 1,
-    energy_usage = "5MW",
+    energy_usage = "20MW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

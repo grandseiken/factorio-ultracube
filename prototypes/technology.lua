@@ -43,7 +43,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 15,
+      count = 20,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
       time = 10,
     },
@@ -65,7 +65,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 15,
+      count = 20,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
       time = 10,
     },
@@ -80,9 +80,9 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-stack-inserter"},
       {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
     },
-    prerequisites = {"cube-inserters", "cube-n-dimensional-widgets"},
+    prerequisites = {"cube-inserters", "cube-combinatorics"},
     unit = {
-      count = 15,
+      count = 60,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
       time = 10,
     },
@@ -99,9 +99,9 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit =
     {
-      count = 20,
+      count = 30,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
-      time = 10
+      time = 10,
     },
     order = "0-0-3"
   },
@@ -115,9 +115,9 @@ data:extend({
     },
     unit =
     {
-      count = 30,
+      count = 20,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
-      time = 10
+      time = 10,
     },
     order = "0-0-3"
   },
@@ -147,7 +147,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
       time = 10,
     },
@@ -177,14 +177,15 @@ data:extend({
     icon = "__base__/graphics/technology/plastics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-1"},
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
       {type = "unlock-recipe", recipe = "cube-basic-knowledge-unit-1"},
     },
-    prerequisites = {"cube-charger"},
+    prerequisites = {"cube-charger", "cube-synthesizer"},
     unit =
     {
       count = 60,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
-      time = 10
+      time = 10,
     },
     order = "0-0-3"
   },
@@ -199,9 +200,9 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit =
     {
-      count = 20,
+      count = 30,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
-      time = 10
+      time = 10,
     },
     order = "0-0-3"
   },
@@ -216,9 +217,9 @@ data:extend({
     prerequisites = {"cube-electric-energy-distribution-1"},
     unit =
     {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-knowledge-unit", 1}},
-      time = 30
+      time = 10,
     },
     order = "0-0-4"
   },
