@@ -61,6 +61,97 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-raw-rare-metals",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-3.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "raw-resource",
+    order = "ga[raw-rare-metals]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-rare-metals",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-3.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-4.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-5.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-6.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "raw-material",
+    order = "c[rare-metals]",
+    stack_size = 100,
+  },
+
+  {
+    type = "item",
     name = "cube-calcium",
     icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
     icon_size = 64,

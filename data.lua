@@ -13,6 +13,16 @@ for _, t in pairs(data.raw.recipe) do
 end
 
 -- Disable all default autoplacing.
+local function copy_autoplace_control(source, target)
+  for _, t in pairs(data.raw["map-gen-presets"]) do
+    for _, preset in pairs(t) do
+      if preset.basic_settings and preset.basic_settings.autoplace_controls then
+        preset.basic_settings.autoplace_controls[target] = preset.basic_settings.autoplace_controls[source]
+      end
+    end
+  end
+end
+
 local function remove_autoplace_control(name)
   data.raw["autoplace-control"][name] = nil
   for _, t in pairs(data.raw["map-gen-presets"]) do
@@ -24,6 +34,7 @@ local function remove_autoplace_control(name)
   end
 end
 
+copy_autoplace_control("stone", "cube-rare-metals")
 remove_autoplace_control("iron-ore")
 remove_autoplace_control("copper-ore")
 remove_autoplace_control("stone")
@@ -55,6 +66,7 @@ require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")
 require("prototypes.technology")
+require("prototypes.resources")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.lab")
