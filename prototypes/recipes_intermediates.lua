@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     ingredients = {{"cube-depleted-utility-cube", 1}},
-    results = {{"cube-hyperdense-utility-cube", 1}},
+    results = {{"cube-ultradense-utility-cube", 1}},
     main_product = "",
     energy_required = 30,
     category = "crafting",
@@ -24,7 +24,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     ingredients = {{"cube-depleted-utility-cube", 1}},
-    results = {{"cube-hyperdense-utility-cube", 1}},
+    results = {{"cube-ultradense-utility-cube", 1}},
     main_product = "",
     energy_required = 2,
     category = "cube-charger",
@@ -39,9 +39,9 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-matter-unit-0",
-    ingredients = {{"cube-hyperdense-utility-cube", 1}},
+    ingredients = {{"cube-ultradense-utility-cube", 1}},
     results = {
-      {"cube-hyperdense-utility-cube", 1},
+      {"cube-ultradense-utility-cube", 1},
       {"cube-basic-matter-unit", 100},
     },
     main_product = "cube-basic-matter-unit",
@@ -56,7 +56,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     ingredients = {
-      {"cube-hyperdense-utility-cube", 1},
+      {"cube-ultradense-utility-cube", 1},
       {"cube-basic-matter-unit", 1},
     },
     results = {
@@ -73,7 +73,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
-    ingredients = {{"cube-hyperdense-utility-cube", 1}},
+    ingredients = {{"cube-ultradense-utility-cube", 1}},
     results = {
       {"cube-depleted-utility-cube", 1},
       {"cube-n-dimensional-widget", 10},
@@ -87,9 +87,9 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-knowledge-unit-0",
-    ingredients = {{"cube-hyperdense-utility-cube", 1}},
+    ingredients = {{"cube-ultradense-utility-cube", 1}},
     results = {
-      {"cube-hyperdense-utility-cube", 1},
+      {"cube-ultradense-utility-cube", 1},
       {"cube-basic-knowledge-unit", 10},
     },
     main_product = "cube-basic-knowledge-unit",
@@ -104,7 +104,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     ingredients = {
-      {"cube-hyperdense-utility-cube", 1},
+      {"cube-ultradense-utility-cube", 1},
       {"cube-basic-knowledge-unit", 1},
     },
     results = {

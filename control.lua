@@ -2,7 +2,7 @@ local util = require("util")
 
 local heavy_recipes = {}
 local heavy_items = {
-  "cube-hyperdense-utility-cube",
+  "cube-ultradense-utility-cube",
   "cube-depleted-utility-cube",
 }
 
@@ -39,7 +39,7 @@ script.on_configuration_changed(on_init)
 function on_player_created(e)
   if not global["cube_given"] then
     global["cube_given"] = true
-    game.players[e.player_index].insert("cube-hyperdense-utility-cube")
+    game.players[e.player_index].insert("cube-ultradense-utility-cube")
   end
 end
 
@@ -61,14 +61,14 @@ end
 
 function on_mined_entity(e)
   if e.entity.burner and
-     e.entity.burner.currently_burning.name == "cube-hyperdense-utility-cube" then
+     e.entity.burner.currently_burning.name == "cube-ultradense-utility-cube" then
     e.buffer.insert("cube-depleted-utility-cube")
   end
 end
 
 function on_entity_died(e)
   if e.entity.burner and
-     e.entity.burner.currently_burning.name == "cube-hyperdense-utility-cube" then
+     e.entity.burner.currently_burning.name == "cube-ultradense-utility-cube" then
     e.loot.insert("cube-depleted-utility-cube")
   end
 end

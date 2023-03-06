@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "item",
-    name = "cube-hyperdense-utility-cube",
+    name = "cube-ultradense-utility-cube",
     icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
     icon_size = 64,
     icon_mipmaps = 4,
