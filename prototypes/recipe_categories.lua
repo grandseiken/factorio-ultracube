@@ -11,7 +11,22 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "cube-synthesizer-handcraft",
+    order = "a",
+  },
+  {
+    type = "recipe-category",
     name = "cube-fabricator",
     order = "b",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-fabricator-handcraft",
+    order = "b",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-crusher",
+    order = "c",
   },
 })

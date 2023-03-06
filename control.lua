@@ -73,6 +73,7 @@ function on_entity_died(e)
   end
 end
 
+-- TODO: add some cool light/effect to whatever is holding the cube.
 script.on_event(defines.events.on_player_created, on_player_created)
 script.on_event(defines.events.on_player_main_inventory_changed, set_player_status)
 script.on_event(defines.events.on_player_dropped_item, set_player_status)

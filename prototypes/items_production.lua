@@ -21,4 +21,15 @@ data:extend({
     place_result = "cube-charger",
     stack_size = 10,
   },
+  {
+    type = "item",
+    name = "cube-synthesizer",
+    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon_size = 128,
+    icon_mipmaps = 4,
+    subgroup = "cube-production-machines",
+    order = "0[1-synthesizer]",
+    place_result = "cube-synthesizer",
+    stack_size = 10,
+  },
 })

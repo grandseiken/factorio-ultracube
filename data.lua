@@ -57,5 +57,6 @@ require("prototypes.recipes_production")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.charger")
+require("prototypes.entities.synthesizer")
 require("prototypes.entities.explosions")
 require("prototypes.entities.tweaks")

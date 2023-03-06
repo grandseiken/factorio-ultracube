@@ -12,7 +12,7 @@ data:extend({
     minable = {mining_time = 1, result = "cube-charger"},
     max_health = 200,
     damaged_trigger_effect = hit_effects.entity(),
-    dying_explosion = "small-matter-explosion",
+    dying_explosion = "cube-small-matter-explosion",
     corpse = "medium-remnants",
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},

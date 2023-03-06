@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "explosion",
-    name = "small-matter-explosion",
+    name = "cube-small-matter-explosion",
     flags = {"not-on-map"},
     animations = {
       {
@@ -51,7 +51,7 @@ data:extend({
 
   {
     type = "explosion",
-    name = "medium-matter-explosion",
+    name = "cube-medium-matter-explosion",
     flags = {"not-on-map"},
     animations = {
       {

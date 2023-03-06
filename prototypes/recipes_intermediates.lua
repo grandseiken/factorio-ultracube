@@ -47,7 +47,7 @@ data:extend({
     main_product = "cube-basic-matter-unit",
     energy_required = 1,
     allow_decomposition = false,
-    -- category = "cube-synthesizer",
+    category = "cube-synthesizer-handcraft",
   },
   {
     type = "recipe",
@@ -65,7 +65,7 @@ data:extend({
     },
     energy_required = 1,
     allow_decomposition = false,
-    -- category = "cube-synthesizer",
+    category = "cube-synthesizer",
     subgroup = "cube-basics",
     order = "0[a-matter-1]",
   },
@@ -81,7 +81,7 @@ data:extend({
     main_product = "cube-n-dimensional-widget",
     energy_required = 1,
     allow_decomposition = false,
-    -- category = "cube-synthesizer",
+    category = "cube-synthesizer",
   },
 
   {
@@ -95,7 +95,7 @@ data:extend({
     main_product = "cube-basic-knowledge-unit",
     energy_required = 1,
     allow_decomposition = false,
-    -- category = "cube-synthesizer",
+    category = "cube-synthesizer",
   },
   {
     type = "recipe",
@@ -113,7 +113,7 @@ data:extend({
     },
     energy_required = 1,
     allow_decomposition = false,
-    -- category = "cube-synthesizer",
+    category = "cube-synthesizer",
     subgroup = "cube-knowledge",
     order = "0[b-knowledge-1]",
   },
@@ -127,6 +127,6 @@ data:extend({
     },
     results = {{"cube-intelligent-calcium", 1}},
     energy_required = 1,
-    -- category = "cube-fabricator",
+    category = "cube-crusher",
   },
 })

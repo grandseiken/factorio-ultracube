@@ -7,7 +7,7 @@ data:extend({
     },
     results = {{"offshore-pump", 1}},
     energy_required = 2,
-    -- category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
   },
   {
     type = "recipe",
@@ -17,7 +17,7 @@ data:extend({
     },
     results = {{"cube-boiler", 1}},
     energy_required = 1,
-    -- category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
   },
   {
     type = "recipe",
@@ -27,7 +27,7 @@ data:extend({
     },
     results = {{"steam-engine", 1}},
     energy_required = 2,
-    -- category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
   },
   {
     type = "recipe",
@@ -38,6 +38,16 @@ data:extend({
     },
     results = {{"cube-charger", 1}},
     energy_required = 10,
-    -- category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
+  },
+  {
+    type = "recipe",
+    name = "cube-synthesizer",
+    ingredients = {
+      {"cube-basic-matter-unit", 200},
+    },
+    results = {{"cube-synthesizer", 1}},
+    energy_required = 5,
+    category = "cube-fabricator-handcraft",
   },
 })
