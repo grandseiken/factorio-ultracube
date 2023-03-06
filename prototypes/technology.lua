@@ -94,7 +94,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/fluid-handling.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-storage-tank"},
       {type = "unlock-recipe", recipe = "cube-pump"},
     },
     prerequisites = {"cube-n-dimensional-widgets"},
@@ -121,6 +120,38 @@ data:extend({
       time = 10
     },
     order = "0-0-3"
+  },
+  {
+    type = "technology",
+    name = "cube-fabricator",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fabricator"},
+    },
+    prerequisites = {"cube-n-dimensional-widgets"},
+    unit = {
+      count = 30,
+      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      time = 10,
+    },
+    order = "0-0-0",
+  },
+  {
+    type = "technology",
+    name = "cube-synthesizer",
+    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon_size = 128, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-synthesizer"},
+    },
+    prerequisites = {"cube-n-dimensional-widgets"},
+    unit = {
+      count = 30,
+      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      time = 10,
+    },
+    order = "0-0-0",
   },
   {
     type = "technology",

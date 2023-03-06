@@ -57,9 +57,23 @@ data:extend({
     name = "cube-synthesizer",
     ingredients = {
       {"cube-basic-matter-unit", 200},
+      {"cube-n-dimensional-widget", 10},
     },
     results = {{"cube-synthesizer", 1}},
     energy_required = 5,
     category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-fabricator",
+    ingredients = {
+      {"cube-basic-matter-unit", 100},
+      {"cube-n-dimensional-widget", 5},
+    },
+    results = {{"cube-fabricator", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 })

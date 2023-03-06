@@ -36,7 +36,6 @@ data:extend({
     results = {{"storage-tank", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    enabled = false,
   },
   {
     type = "recipe",

@@ -13,7 +13,7 @@ for _, t in pairs(data.raw.recipe) do
 end
 
 -- Disable all default autoplacing.
-function remove_autoplace_control(name)
+local function remove_autoplace_control(name)
   data.raw["autoplace-control"][name] = nil
   for _, t in pairs(data.raw["map-gen-presets"]) do
     for _, preset in pairs(t) do
@@ -60,5 +60,6 @@ require("prototypes.entities.boiler")
 require("prototypes.entities.lab")
 require("prototypes.entities.charger")
 require("prototypes.entities.synthesizer")
+require("prototypes.entities.fabricator")
 require("prototypes.entities.explosions")
 require("prototypes.entities.tweaks")

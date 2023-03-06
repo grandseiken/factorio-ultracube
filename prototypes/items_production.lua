@@ -42,4 +42,15 @@ data:extend({
     place_result = "cube-synthesizer",
     stack_size = 10,
   },
+  {
+    type = "item",
+    name = "cube-fabricator",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-production-machines",
+    order = "0[2-fabricator]",
+    place_result = "cube-fabricator",
+    stack_size = 50,
+  }
 })
