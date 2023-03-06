@@ -28,6 +28,17 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-storage-tank",
+    ingredients = {
+      {"pipe", 4},
+      {"cube-basic-matter-unit", 40},
+    },
+    results = {{"storage-tank", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
     name = "cube-transport-belt",
     ingredients = {{"cube-basic-matter-unit", 2}},
     results = {{"express-transport-belt", 1}},

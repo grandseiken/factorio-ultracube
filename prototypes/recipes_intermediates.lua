@@ -26,7 +26,7 @@ data:extend({
     ingredients = {{"cube-depleted-utility-cube", 1}},
     results = {{"cube-hyperdense-utility-cube", 1}},
     main_product = "",
-    energy_required = 1,
+    energy_required = 2,
     category = "cube-charger",
     subgroup = "cube-cubes",
     order = "0[1-cube]",

@@ -9,6 +9,11 @@ data:extend({
     subgroup = "cube-cubes",
     order = "0[0-cube]",
     stack_size = 1,
+
+    fuel_category = "cube-cube",
+    fuel_value = "1GJ",
+    fuel_glow_color = {1, 0, 1, 1},
+    burnt_result = "cube-depleted-utility-cube",
   },
   {
     type = "item",

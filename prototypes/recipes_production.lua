@@ -11,6 +11,26 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-boiler",
+    ingredients = {
+      {"cube-basic-matter-unit", 20},
+    },
+    results = {{"cube-boiler", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
+    name = "cube-steam_engine",
+    ingredients = {
+      {"cube-basic-matter-unit", 30},
+    },
+    results = {{"steam-engine", 1}},
+    energy_required = 2,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
     name = "cube-charger",
     ingredients = {
       {"cube-basic-matter-unit", 500},
