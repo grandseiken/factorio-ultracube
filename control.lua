@@ -59,10 +59,27 @@ function set_player_status(e)
   player.character_running_speed_modifier = -1.0 + 0.5^count
 end
 
+function on_mined_entity(e)
+  if e.entity.burner and
+     e.entity.burner.currently_burning.name == "cube-hyperdense-utility-cube" then
+    e.buffer.insert("cube-depleted-utility-cube")
+  end
+end
+
+function on_entity_died(e)
+  if e.entity.burner and
+     e.entity.burner.currently_burning.name == "cube-hyperdense-utility-cube" then
+    e.loot.insert("cube-depleted-utility-cube")
+  end
+end
+
 script.on_event(defines.events.on_player_created, on_player_created)
 script.on_event(defines.events.on_player_main_inventory_changed, set_player_status)
 script.on_event(defines.events.on_player_dropped_item, set_player_status)
 script.on_event(defines.events.on_player_cancelled_crafting, set_player_status)
+script.on_event(defines.events.on_player_cursor_stack_changed, set_player_status)
 script.on_event(defines.events.on_player_fast_transferred, set_player_status)
 script.on_event(defines.events.on_pre_player_crafted_item, set_player_status)
--- TODO: need to make sure taking a boiler returns the cube.
+script.on_event(defines.events.on_player_mined_entity, on_mined_entity)
+script.on_event(defines.events.on_robot_mined_entity, on_mined_entity)
+script.on_event(defines.events.on_entity_died, on_entity_died)

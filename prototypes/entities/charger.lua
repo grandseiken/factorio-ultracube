@@ -101,10 +101,12 @@ data:extend({
       apparent_volume = 1.5,
     },
     crafting_speed = 1,
+    energy_usage = "5MW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 1,
+      drain = "40KW",
     },
 
     water_reflection = {
@@ -121,7 +123,6 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "5MW",
     -- ingredient_count = 1,
     result_inventory_size = 1,
     source_inventory_size = 1,

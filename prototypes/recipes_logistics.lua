@@ -39,6 +39,17 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-pump",
+    ingredients = {
+      {"cube-basic-matter-unit", 20},
+      {"cube-n-dimensional-widget", 1},
+    },
+    results = {{"pump", 1}},
+    energy_required = 1,
+    -- category = "cube-fabricator",
+  },
+  {
+    type = "recipe",
     name = "cube-transport-belt",
     ingredients = {{"cube-basic-matter-unit", 2}},
     results = {{"express-transport-belt", 1}},
