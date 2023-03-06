@@ -156,9 +156,10 @@ data:extend({
     ingredients = {
       {"cube-calcium", 2},
       {"cube-basic-knowledge-unit", 1},
+      {type = "fluid", name = "steam", amount = 100},
     },
     results = {{"cube-intelligent-calcium", 1}},
     energy_required = 1,
-    category = "cube-crusher",
+    category = "cube-fabricator",
   },
 })
