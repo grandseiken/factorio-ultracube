@@ -8,7 +8,7 @@ data:extend({
     icon = "__base__/graphics/icons/lab.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 0.25, result = "lab"},
+    minable = {mining_time = 0.25, result = "cube-lab"},
     max_health = 200,
     corpse = "lab-remnants",
     dying_explosion = "lab-explosion",

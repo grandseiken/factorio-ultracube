@@ -57,10 +57,11 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: bottled consciousness / sentience transfer.
 -- TODO: rare metals to circuits or similar.
 -- TODO: something with big bulk conversion.
 -- TODO: widgets need rare metals?
+-- TODO: duplication still needs something else?
+-- TODO: bottled consciousness / sentience transfer.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
 
 require("prototypes.item_groups")

@@ -31,24 +31,25 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-1-0",
+    order = "0-0-1",
   },
   {
     type = "technology",
-    name = "cube-optics",
+    name = "cube-n-dimensional-widgets",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/optics.png",
+    icon = "__Krastorio2Assets__/technologies/matter-processing.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-lamp"},
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
-    unit = {
+    unit =
+    {
       count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-1-0",
+    order = "0-1-0"
   },
+
   {
     type = "technology",
     name = "cube-combinatorics",
@@ -69,24 +70,23 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-1",
+    order = "1-0-0",
   },
   {
     type = "technology",
-    name = "cube-stack-inserters",
+    name = "cube-optics",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    icon = "__base__/graphics/technology/optics.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-stack-inserter"},
-      {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
+      {type = "unlock-recipe", recipe = "cube-lamp"},
     },
-    prerequisites = {"cube-inserters", "cube-combinatorics"},
+    prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 60,
+      count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-2",
+    order = "1-0-1",
   },
   {
     type = "technology",
@@ -103,55 +103,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-3"
-  },
-  {
-    type = "technology",
-    name = "cube-n-dimensional-widgets",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/matter-processing.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
-    },
-    unit =
-    {
-      count = 20,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "0-0-3"
-  },
-  {
-    type = "technology",
-    name = "cube-fabricator",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-fabricator"},
-    },
-    prerequisites = {"cube-n-dimensional-widgets"},
-    unit = {
-      count = 30,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "0-0-0",
-  },
-  {
-    type = "technology",
-    name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
-    icon_size = 128, icon_mipmaps = 4,
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-synthesizer"},
-    },
-    prerequisites = {"cube-n-dimensional-widgets"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "0-0-0",
+    order = "1-1-0"
   },
   {
     type = "technology",
@@ -168,7 +120,74 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-0",
+    order = "1-2-0",
+  },
+  {
+    type = "technology",
+    name = "cube-fabricator",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fabricator"},
+    },
+    prerequisites = {"cube-n-dimensional-widgets"},
+    unit = {
+      count = 30,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "1-2-1",
+  },
+  {
+    type = "technology",
+    name = "cube-synthesizer",
+    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon_size = 128, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-synthesizer"},
+    },
+    prerequisites = {"cube-n-dimensional-widgets"},
+    unit = {
+      count = 60,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "1-2-2",
+  },
+
+  {
+    type = "technology",
+    name = "cube-electric-energy-distribution-1",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
+    },
+    prerequisites = {"cube-n-dimensional-widgets"},
+    unit =
+    {
+      count = 30,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "2-0-0"
+  },
+  {
+    type = "technology",
+    name = "cube-stack-inserters",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/stack-inserter.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-stack-inserter"},
+      {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
+    },
+    prerequisites = {"cube-inserters", "cube-combinatorics"},
+    unit = {
+      count = 60,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "2-0-1",
   },
   {
     type = "technology",
@@ -187,25 +206,9 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-3"
+    order = "2-1-0"
   },
-  {
-    type = "technology",
-    name = "cube-electric-energy-distribution-1",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
-    },
-    prerequisites = {"cube-n-dimensional-widgets"},
-    unit =
-    {
-      count = 30,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "0-0-3"
-  },
+
   {
     type = "technology",
     name = "cube-electric-energy-distribution-2",
@@ -221,6 +224,6 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-0-4"
+    order = "3-0-0"
   },
 })
