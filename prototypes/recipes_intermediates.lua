@@ -1,3 +1,16 @@
+local function duplicate_icon(icon)
+  return {
+    icon,
+    {
+      icon = "__base__/graphics/icons/fluid/steam.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+      scale = 0.375,
+      shift = {6, -6},
+    }
+  }
+end
+
 data:extend({
   {
     type = "recipe",
@@ -55,12 +68,15 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-matter-unit-1",
-    icon = "__base__/graphics/icons/plastic-bar.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = duplicate_icon({
+      icon = "__base__/graphics/icons/plastic-bar.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+    }),
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-basic-matter-unit", 1},
+      {type = "fluid", name = "steam", amount = "500"},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
@@ -93,12 +109,15 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-1",
-    icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = duplicate_icon({
+      icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+    }),
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-n-dimensional-widget", 50},
+      {type = "fluid", name = "steam", amount = "500"},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
@@ -130,12 +149,15 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-1",
-    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icons = duplicate_icon({
+      icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+      icon_size = 64,
+      icon_mipmaps = 4,
+    }),
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-basic-contemplation-unit", 1},
+      {type = "fluid", name = "steam", amount = "500"},
     },
     results = {
       {"cube-dormant-utility-cube", 1},

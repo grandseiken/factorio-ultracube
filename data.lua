@@ -61,7 +61,6 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 -- TODO: rare metals to circuits or similar.
 -- TODO: something with big bulk conversion.
 -- TODO: widgets need rare metals?
--- TODO: duplication needs some other trick to it. Steam?
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
 
 require("prototypes.item_groups")
