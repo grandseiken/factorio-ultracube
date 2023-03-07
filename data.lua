@@ -57,6 +57,13 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
+-- TODO: bottled consciousness / sentience transfer.
+-- TODO: rare metals to circuits or similar.
+-- TODO: something with big bulk conversion.
+-- TODO: widgets need rare metals?
+-- TODO: duplication needs some other trick to it. Steam?
+-- TODO: ultradense constituent and reassembly. Something with weird ratios.
+
 require("prototypes.item_groups")
 require("prototypes.fuel_categories")
 require("prototypes.recipe_categories")
@@ -70,7 +77,7 @@ require("prototypes.resources")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.lab")
-require("prototypes.entities.charger")
+require("prototypes.entities.recovery_bay")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.fabricator")
 require("prototypes.entities.explosions")

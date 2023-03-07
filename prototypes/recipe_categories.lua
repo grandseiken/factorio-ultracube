@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe-category",
-    name = "cube-charger",
+    name = "cube-recovery-bay",
     order = "0",
   },
   {

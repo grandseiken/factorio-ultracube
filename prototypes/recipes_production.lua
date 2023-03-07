@@ -24,7 +24,7 @@ data:extend({
     name = "cube-lab",
     ingredients = {
       {"cube-basic-matter-unit", 40},
-      {"cube-basic-knowledge-unit", 10},
+      {"cube-basic-contemplation-unit", 10},
     },
     results = {{"cube-lab", 1}},
     energy_required = 1,
@@ -42,12 +42,12 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-charger",
+    name = "cube-recovery-bay",
     ingredients = {
       {"cube-basic-matter-unit", 250},
       {"cube-n-dimensional-widget", 10},
     },
-    results = {{"cube-charger", 1}},
+    results = {{"cube-recovery-bay", 1}},
     energy_required = 10,
     category = "cube-fabricator-handcraft",
     enabled = false,

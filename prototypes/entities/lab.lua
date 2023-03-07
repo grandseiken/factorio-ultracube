@@ -189,7 +189,7 @@ data:extend({
     },
     energy_usage = "100KW",
     researching_speed = 1,
-    inputs = {"cube-basic-knowledge-unit"},
+    inputs = {"cube-basic-contemplation-unit"},
     module_specification =
     {
       module_slots = 0,

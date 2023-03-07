@@ -4,12 +4,12 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({
   {
     type = "furnace",
-    name = "cube-charger",
+    name = "cube-recovery-bay",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "cube-charger"},
+    minable = {mining_time = 1, result = "cube-recovery-bay"},
     max_health = 200,
     damaged_trigger_effect = hit_effects.entity(),
     dying_explosion = "cube-small-matter-explosion",
@@ -90,7 +90,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = {"cube-charger"},
+    crafting_categories = {"cube-recovery-bay"},
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {

@@ -11,7 +11,7 @@ data:extend({
     },
     unit = {
       count = 10,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-0",
@@ -28,7 +28,7 @@ data:extend({
     },
     unit = {
       count = 20,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-1-0",
@@ -44,7 +44,7 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
       count = 20,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-1-0",
@@ -66,7 +66,7 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
       count = 20,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-1",
@@ -83,7 +83,7 @@ data:extend({
     prerequisites = {"cube-inserters", "cube-combinatorics"},
     unit = {
       count = 60,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-2",
@@ -100,7 +100,7 @@ data:extend({
     unit =
     {
       count = 30,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-3"
@@ -116,7 +116,7 @@ data:extend({
     unit =
     {
       count = 20,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-3"
@@ -132,7 +132,7 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
       count = 30,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-0",
@@ -148,24 +148,24 @@ data:extend({
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
       count = 60,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-0",
   },
   {
     type = "technology",
-    name = "cube-charger",
+    name = "cube-recovery-bay",
     icon_size = 128, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-charger"},
+      {type = "unlock-recipe", recipe = "cube-recovery-bay"},
       {type = "unlock-recipe", recipe = "cube-utility-cube-recharge"},
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
       count = 20,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-0",
@@ -178,13 +178,13 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-1"},
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
-      {type = "unlock-recipe", recipe = "cube-basic-knowledge-unit-1"},
+      {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
     },
-    prerequisites = {"cube-charger", "cube-synthesizer"},
+    prerequisites = {"cube-recovery-bay", "cube-synthesizer"},
     unit =
     {
       count = 60,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-3"
@@ -201,7 +201,7 @@ data:extend({
     unit =
     {
       count = 30,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-3"
@@ -218,7 +218,7 @@ data:extend({
     unit =
     {
       count = 60,
-      ingredients = {{"cube-basic-knowledge-unit", 1}},
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-0-4"

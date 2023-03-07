@@ -2,7 +2,7 @@ local util = require("util")
 
 local heavy_items = {
   "cube-ultradense-utility-cube",
-  "cube-depleted-utility-cube",
+  "cube-dormant-utility-cube",
 }
 
 local function on_init()
@@ -68,18 +68,20 @@ end
 local function on_mined_entity(e)
   if e.entity.burner and e.entity.burner.currently_burning and
      e.entity.burner.currently_burning.name == "cube-ultradense-utility-cube" then
-    e.buffer.insert("cube-depleted-utility-cube")
+    e.buffer.insert("cube-dormant-utility-cube")
   end
 end
 
 local function on_entity_died(e)
   if e.entity.burner and e.entity.burner.currently_burning and
      e.entity.burner.currently_burning.name == "cube-ultradense-utility-cube" then
-    e.loot.insert("cube-depleted-utility-cube")
+    e.loot.insert("cube-dormant-utility-cube")
   end
 end
 
--- TODO: add some cool light/effect to whatever is holding the cube.
+-- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
+-- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
+--       as a cube teleport logistic option.
 script.on_event(defines.events.on_player_created, on_player_created)
 script.on_event(defines.events.on_player_main_inventory_changed, set_player_status)
 script.on_event(defines.events.on_player_dropped_item, set_player_status)

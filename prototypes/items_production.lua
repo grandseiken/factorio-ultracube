@@ -22,13 +22,13 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-charger",
+    name = "cube-recovery-bay",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     icon_mipmaps = 4,
     subgroup = "cube-production-machines",
-    order = "0[0-charger]",
-    place_result = "cube-charger",
+    order = "0[0-recovery-bay]",
+    place_result = "cube-recovery-bay",
     stack_size = 10,
   },
   {
