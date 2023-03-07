@@ -61,6 +61,37 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-electronic-circuit",
+    icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-processing",
+    order = "0[c-electronic-circuit]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-basic-motor-unit",
+    icon = "__base__/graphics/icons/engine-unit.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-processing",
+    order = "0[a-basic-motor-unit]",
+    stack_size = 50,
+  },
+  {
+    type = "item",
+    name = "cube-semiregular-lattice",
+    icon = "__base__/graphics/icons/low-density-structure.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-processing",
+    order = "0[b-semiregular-lattice]",
+    stack_size = 50,
+  },
+
+  {
+    type = "item",
     name = "cube-raw-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
     icon_size = 64,

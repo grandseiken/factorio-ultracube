@@ -2746,7 +2746,7 @@ data:extend({
       },
     },
 
-    mining_speed = 1,
+    mining_speed = 2,
     energy_source = {
       type = "electric",
       emissions_per_minute = 10,
@@ -4773,7 +4773,7 @@ data:extend({
       },
     },
 
-    mining_speed = 2,
+    mining_speed = 4,
     energy_source = {
       type = "electric",
       emissions_per_minute = 15,

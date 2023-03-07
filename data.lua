@@ -57,13 +57,22 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: upgrade graphics for pipes, boiler, steam engine, tanks?
--- TODO: make widgets need rare metals.
--- TODO: rare metals to circuits or similar; need wire somehow.
---       Something with big bulk conversion.
+-- TODO: rare metal furnacing or crushing or something. Make widgets (etc) need rare metals.
+-- TODO: are matter intermediates OK.
+-- TODO: rare metals + matter + other intermediates (wire?) to circuits, or similar.
+-- TODO: somewhere above, something with big bulk conversion; maybe something with steam or
+--       water in/out.
+
 -- TODO: duplication still needs something else?
--- TODO: bottled consciousness / sentience transfer.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
+-- TODO: upgrade graphics for pipes, boiler, steam engine, tanks?
+
+-- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
+-- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
+-- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
+--       bots that look the same, but 1 horribly slow
+-- TODO: (further on) basic antimatter unit. Basic dark matter unit.
+-- TODO: some joke with hydroxyl group vs abelian group.
 
 require("prototypes.item_groups")
 require("prototypes.fuel_categories")

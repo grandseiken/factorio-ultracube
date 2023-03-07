@@ -20,7 +20,7 @@ data:extend({
     type = "technology",
     name = "cube-logistics",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/logistics-3.png",
+    icon = "__base__/graphics/technology/logistics-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-transport-belt"},
       {type = "unlock-recipe", recipe = "cube-underground-belt"},
@@ -51,12 +51,29 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-electronics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electronics.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
+    },
+    prerequisites = {"cube-electric-mining-drill"},
+    unit = {
+      count = 10,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "0-1-1",
+  },
+  {
+    type = "technology",
     name = "cube-n-dimensional-widgets",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-processing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
+    prerequisites = {"cube-electric-mining-drill"},
     unit =
     {
       count = 20,
@@ -80,7 +97,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-programmable-speaker"},
       {type = "unlock-recipe", recipe = "cube-power-switch"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {"cube-electronics"},
     unit = {
       count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
@@ -96,7 +113,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-lamp"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {"cube-electronics"},
     unit = {
       count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
@@ -112,7 +129,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-pump"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {"cube-electronics"},
     unit =
     {
       count = 30,
@@ -179,7 +196,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {"cube-electronics"},
     unit =
     {
       count = 30,
@@ -241,5 +258,23 @@ data:extend({
       time = 10,
     },
     order = "3-0-0"
+  },
+  {
+    type = "technology",
+    name = "cube-express-logistics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/logistics-3.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+    },
+    prerequisites = {"cube-logistics", "cube-electronics", "cube-n-dimensional-widgets"},
+    unit = {
+      count = 60,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "3-1-0",
   },
 })

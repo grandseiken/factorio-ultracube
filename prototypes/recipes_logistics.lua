@@ -42,7 +42,8 @@ data:extend({
     name = "cube-pump",
     ingredients = {
       {"cube-basic-matter-unit", 20},
-      {"cube-n-dimensional-widget", 1},
+      {"cube-electronic-circuit", 1},
+      {"pipe", 2},
     },
     results = {{"pump", 1}},
     energy_required = 1,
@@ -52,9 +53,12 @@ data:extend({
   {
     type = "recipe",
     name = "cube-transport-belt",
-    ingredients = {{"cube-basic-matter-unit", 2}},
-    results = {{"express-transport-belt", 1}},
-    energy_required = 0.5,
+    ingredients = {
+      {"cube-basic-matter-unit", 10},
+      {"cube-basic-motor-unit", 1},
+    },
+    results = {{"fast-transport-belt", 4}},
+    energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
@@ -62,10 +66,10 @@ data:extend({
     type = "recipe",
     name = "cube-underground-belt",
     ingredients = {
-      {"express-transport-belt", 10},
+      {"fast-transport-belt", 10},
       {"cube-basic-matter-unit", 10},
     },
-    results = {{"express-underground-belt", 2}},
+    results = {{"fast-underground-belt", 2}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,
@@ -74,8 +78,45 @@ data:extend({
     type = "recipe",
     name = "cube-splitter",
     ingredients = {
-      {"express-transport-belt", 2},
+      {"fast-transport-belt", 2},
       {"cube-basic-matter-unit", 20},
+      {"cube-electronic-circuit", 2},
+    },
+    results = {{"fast-splitter", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-transport-belt-2",
+    ingredients = {
+      {"cube-semiregular-lattice", 10},
+      {"cube-basic-motor-unit", 10},
+    },
+    results = {{"express-transport-belt", 4}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-underground-belt-2",
+    ingredients = {
+      {"express-transport-belt", 10},
+      {"cube-semiregular-lattice", 10},
+    },
+    results = {{"express-underground-belt", 2}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-splitter-2",
+    ingredients = {
+      {"express-transport-belt", 2},
+      {"cube-semiregular-lattice", 20},
       {"cube-n-dimensional-widget", 4},
     },
     results = {{"express-splitter", 1}},
@@ -89,7 +130,7 @@ data:extend({
     name = "cube-lamp",
     ingredients = {
       {"cube-basic-matter-unit", 1},
-      {"cube-n-dimensional-widget", 1},
+      {"cube-electronic-circuit", 1},
     },
     results = {{"small-lamp", 1}},
     energy_required = 1,
@@ -108,8 +149,8 @@ data:extend({
     type = "recipe",
     name = "cube-big-electric-pole",
     ingredients = {
-      {"cube-basic-matter-unit", 25},
-      {"cube-n-dimensional-widget", 1},
+      {"cube-basic-matter-unit", 20},
+      {"cube-semiregular-lattice", 10},
     },
     results = {{"big-electric-pole", 1}},
     energy_required = 1,
@@ -122,7 +163,7 @@ data:extend({
     ingredients = {
       {"big-electric-pole", 1},
       {"cube-basic-matter-unit", 50},
-      {"cube-n-dimensional-widget", 10},
+      {"cube-semiregular-lattice", 10},
     },
     results = {{"substation", 1}},
     energy_required = 2,
@@ -135,7 +176,7 @@ data:extend({
     name = "cube-constant-combinator",
     ingredients = {
       {"cube-basic-matter-unit", 2},
-      {"cube-n-dimensional-widget", 1},
+      {"cube-electronic-circuit", 1},
     },
     results = {{"constant-combinator", 1}},
     energy_required = 1,
@@ -147,7 +188,7 @@ data:extend({
     name = "cube-arithmetic-combinator",
     ingredients = {
       {"cube-basic-matter-unit", 4},
-      {"cube-n-dimensional-widget", 2},
+      {"cube-electronic-circuit", 2},
     },
     results = {{"arithmetic-combinator", 1}},
     energy_required = 1,
@@ -159,7 +200,7 @@ data:extend({
     name = "cube-decider-combinator",
     ingredients = {
       {"cube-basic-matter-unit", 4},
-      {"cube-n-dimensional-widget", 2},
+      {"cube-electronic-circuit", 2},
     },
     results = {{"decider-combinator", 1}},
     energy_required = 1,
@@ -172,7 +213,7 @@ data:extend({
     name = "cube-power-switch",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-n-dimensional-widget", 4}
+      {"cube-electronic-circuit", 2}
     },
     results = {{"power-switch", 1}},
     energy_required = 2,
@@ -184,7 +225,7 @@ data:extend({
     name = "cube-programmable-speaker",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-n-dimensional-widget", 4}
+      {"cube-electronic-circuit", 4}
     },
     results = {{"programmable-speaker", 1}},
     energy_required = 2,
@@ -194,7 +235,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-red-wire",
-    ingredients = {{"cube-basic-matter-unit", 1}},
+    ingredients = {
+      {"cube-basic-matter-unit", 1},
+      {"cube-rare-metals", 1},
+    },
     results = {{"red-wire", 1}},
     energy_required = 0.5,
     category = "cube-fabricator-handcraft",
@@ -203,7 +247,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-green-wire",
-    ingredients = {{"cube-basic-matter-unit", 1}},
+    ingredients = {
+      {"cube-basic-matter-unit", 1},
+      {"cube-rare-metals", 1},
+    },
     results = {{"green-wire", 1}},
     energy_required = 0.5,
     category = "cube-fabricator-handcraft",
@@ -213,7 +260,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-fast-inserter",
-    ingredients = {{"cube-basic-matter-unit", 4}},
+    ingredients = {
+      {"cube-basic-matter-unit", 4},
+      {"cube-basic-motor-unit", 1},
+    },
     results = {{"fast-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
@@ -222,7 +272,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-long-inserter",
-    ingredients = {{"cube-basic-matter-unit", 8}},
+    ingredients = {
+      {"cube-basic-matter-unit", 8},
+      {"cube-basic-motor-unit", 1},
+    },
     results = {{"long-handed-inserter", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
@@ -245,7 +298,8 @@ data:extend({
     name = "cube-stack-inserter",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-n-dimensional-widget", 4},
+      {"cube-n-dimensional-widget", 2},
+      {"cube-basic-motor-unit", 1},
     },
     results = {{"stack-inserter", 1}},
     energy_required = 1,

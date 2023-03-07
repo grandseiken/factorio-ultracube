@@ -94,7 +94,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
-    ingredients = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {"cube-ultradense-utility-cube", 1},
+      {"cube-rare-metals", 50},
+    },
     results = {
       {"cube-dormant-utility-cube", 1},
       {"cube-n-dimensional-widget", 5},
@@ -116,6 +119,7 @@ data:extend({
     }),
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
+      {"cube-rare-metals", 50},
       {"cube-n-dimensional-widget", 50},
       {type = "fluid", name = "steam", amount = "500"},
     },
@@ -172,6 +176,35 @@ data:extend({
     enabled = false,
   },
 
+  {
+    type = "recipe",
+    name = "cube-electronic-circuit",
+    ingredients = {
+      {"cube-basic-matter-unit", 1},
+      {"cube-semiregular-lattice", 1},
+      {"cube-rare-metals", 1},
+    },
+    energy_required = 1,
+    results = {{"cube-electronic-circuit", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-basic-motor-unit",
+    ingredients = {
+      {"pipe", 2},
+      {"cube-basic-matter-unit", 4},
+    },
+    energy_required = 4,
+    results = {{"cube-basic-motor-unit", 1}},
+  },
+  {
+    type = "recipe",
+    name = "cube-semiregular-lattice",
+    ingredients = {{"cube-basic-matter-unit", 500}},
+    energy_required = 15,
+    results = {{"cube-semiregular-lattice", 250}},
+  },
   {
     type = "recipe",
     name = "cube-intelligent-calcium",

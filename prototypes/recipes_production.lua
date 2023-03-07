@@ -45,6 +45,7 @@ data:extend({
     name = "cube-electric-mining-drill",
     ingredients = {
       {"cube-basic-matter-unit", 120},
+      {"cube-basic-motor-unit", 10},
     },
     results = {{"cube-electric-mining-drill", 1}},
     energy_required = 2,
@@ -55,7 +56,8 @@ data:extend({
     type = "recipe",
     name = "cube-recovery-bay",
     ingredients = {
-      {"cube-basic-matter-unit", 250},
+      {"cube-basic-matter-unit", 150},
+      {"cube-semiregular-lattice", 50},
       {"cube-n-dimensional-widget", 5},
     },
     results = {{"cube-recovery-bay", 1}},
@@ -67,7 +69,8 @@ data:extend({
     type = "recipe",
     name = "cube-synthesizer",
     ingredients = {
-      {"cube-basic-matter-unit", 500},
+      {"cube-basic-matter-unit", 200},
+      {"cube-semiregular-lattice", 200},
       {"cube-n-dimensional-widget", 20},
     },
     results = {{"cube-synthesizer", 1}},
