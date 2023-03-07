@@ -57,9 +57,10 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: rare metals to circuits or similar.
--- TODO: something with big bulk conversion.
--- TODO: widgets need rare metals?
+-- TODO: upgrade graphics for pipes, boiler, steam engine, tanks?
+-- TODO: make widgets need rare metals.
+-- TODO: rare metals to circuits or similar; need wire somehow.
+--       Something with big bulk conversion.
 -- TODO: duplication still needs something else?
 -- TODO: bottled consciousness / sentience transfer.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
@@ -77,6 +78,7 @@ require("prototypes.resources")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.lab")
+require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.fabricator")

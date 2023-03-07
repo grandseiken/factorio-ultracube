@@ -42,10 +42,21 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-electric-mining-drill",
+    ingredients = {
+      {"cube-basic-matter-unit", 120},
+    },
+    results = {{"cube-electric-mining-drill", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-recovery-bay",
     ingredients = {
       {"cube-basic-matter-unit", 250},
-      {"cube-n-dimensional-widget", 10},
+      {"cube-n-dimensional-widget", 5},
     },
     results = {{"cube-recovery-bay", 1}},
     energy_required = 10,

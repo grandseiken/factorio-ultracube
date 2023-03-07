@@ -35,6 +35,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-electric-mining-drill",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk2.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-electric-mining-drill"},
+    },
+    unit =
+    {
+      count = 20,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "0-1-0"
+  },
+  {
+    type = "technology",
     name = "cube-n-dimensional-widgets",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-processing.png",
@@ -47,7 +63,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-1-0"
+    order = "0-2-0"
   },
 
   {

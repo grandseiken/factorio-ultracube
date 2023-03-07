@@ -317,7 +317,7 @@ data:extend({
       emissions_per_minute = 5,
       drain = "10KW",
     },
-    energy_usage = "120KW",
+    energy_usage = "150KW",
 
     water_reflection = {
       pictures = {

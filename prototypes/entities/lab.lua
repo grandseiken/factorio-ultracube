@@ -187,7 +187,7 @@ data:extend({
       usage_priority = "secondary-input",
       drain = "10KW",
     },
-    energy_usage = "100KW",
+    energy_usage = "250KW",
     researching_speed = 1,
     inputs = {"cube-basic-contemplation-unit"},
     module_specification =
