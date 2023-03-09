@@ -57,13 +57,10 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: rare metal furnacing or crushing or something. Make widgets (etc) need rare metals.
--- TODO: are matter intermediates OK.
--- TODO: rare metals + matter + other intermediates (wire?) to circuits, or similar.
--- TODO: somewhere above, something with big bulk conversion; maybe something with steam or
---       water in/out.
+-- TODO: rework lattice. More complications.
+-- TODO: do we need wires for circuits or some other ingredient.
+-- TODO: duplication still needs some other complication. Make input/output not trivially loopable somehow?
 
--- TODO: duplication still needs something else?
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
 -- TODO: upgrade graphics for pipes, boiler, steam engine, tanks?
 
@@ -78,6 +75,7 @@ require("prototypes.item_groups")
 require("prototypes.fuel_categories")
 require("prototypes.recipe_categories")
 require("prototypes.items")
+require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
@@ -88,8 +86,10 @@ require("prototypes.resources")
 require("prototypes.entities.boiler")
 require("prototypes.entities.lab")
 require("prototypes.entities.electric_mining_drills")
+require("prototypes.entities.ultradense_furnace")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.fabricator")
 require("prototypes.entities.explosions")
+require("prototypes.entities.remnants")
 require("prototypes.entities.tweaks")

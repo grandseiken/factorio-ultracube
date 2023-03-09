@@ -1,4 +1,4 @@
-function assemblerkpipepictures()
+local function assemblerpipepictures()
   return {
     north = {
       filename = "__Krastorio2Assets__/entities/advanced-assembling-machine/advanced-assembling-machine-k-pipe-N.png",
@@ -84,7 +84,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assemblerkpipepictures(),
+        pipe_picture = assemblerpipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = -1,
@@ -93,7 +93,7 @@ data:extend({
       },
       {
         production_type = "output",
-        pipe_picture = assemblerkpipepictures(),
+        pipe_picture = assemblerpipepictures(),
         pipe_covers = pipecoverspictures(),
         base_area = 10,
         base_level = 1,

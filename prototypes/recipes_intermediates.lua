@@ -96,7 +96,7 @@ data:extend({
     name = "cube-n-dimensional-widget-0",
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-rare-metals", 50},
+      {"cube-rare-metals", 25},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
@@ -119,7 +119,7 @@ data:extend({
     }),
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-rare-metals", 50},
+      {"cube-rare-metals", 500},
       {"cube-n-dimensional-widget", 50},
       {type = "fluid", name = "steam", amount = "500"},
     },
@@ -178,14 +178,23 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-rare-metals",
+    ingredients = {{"cube-raw-rare-metals", 500}},
+    results = {{"cube-rare-metals", 500}},
+    energy_required = 4,
+    category = "cube-ultradense-smelting",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-electronic-circuit",
     ingredients = {
-      {"cube-basic-matter-unit", 1},
-      {"cube-semiregular-lattice", 1},
+      {"cube-basic-matter-unit", 2},
       {"cube-rare-metals", 1},
     },
-    energy_required = 1,
     results = {{"cube-electronic-circuit", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -195,15 +204,17 @@ data:extend({
       {"pipe", 2},
       {"cube-basic-matter-unit", 4},
     },
-    energy_required = 4,
     results = {{"cube-basic-motor-unit", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
   },
   {
     type = "recipe",
     name = "cube-semiregular-lattice",
     ingredients = {{"cube-basic-matter-unit", 500}},
-    energy_required = 15,
     results = {{"cube-semiregular-lattice", 250}},
+    energy_required = 15,
+    category = "cube-fabricator-handcraft",
   },
   {
     type = "recipe",

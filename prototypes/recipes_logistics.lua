@@ -58,7 +58,7 @@ data:extend({
       {"cube-basic-motor-unit", 1},
     },
     results = {{"fast-transport-belt", 4}},
-    energy_required = 1,
+    energy_required = 2,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
@@ -79,7 +79,7 @@ data:extend({
     name = "cube-splitter",
     ingredients = {
       {"fast-transport-belt", 2},
-      {"cube-basic-matter-unit", 20},
+      {"cube-basic-motor-unit", 2},
       {"cube-electronic-circuit", 2},
     },
     results = {{"fast-splitter", 1}},
@@ -116,7 +116,7 @@ data:extend({
     name = "cube-splitter-2",
     ingredients = {
       {"express-transport-belt", 2},
-      {"cube-semiregular-lattice", 20},
+      {"cube-basic-motor-unit", 2},
       {"cube-n-dimensional-widget", 4},
     },
     results = {{"express-splitter", 1}},

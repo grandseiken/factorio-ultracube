@@ -43,7 +43,7 @@ data:extend({
     energy_consumption = "500MW",
     energy_source = {
       type = "burner",
-      fuel_category = "cube-cube",
+      fuel_categories = {"cube-cube"},
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,

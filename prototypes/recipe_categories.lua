@@ -16,6 +16,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "cube-ultradense-smelting",
+    order = "b",
+  },
+  {
+    type = "recipe-category",
     name = "cube-fabricator",
     order = "b",
   },

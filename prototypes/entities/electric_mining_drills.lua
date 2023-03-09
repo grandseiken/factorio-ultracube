@@ -401,7 +401,7 @@ electric_drill_animation_shadow_sequence = {
   1,
 }
 
-function electric_mining_drill_smoke()
+local function electric_mining_drill_smoke()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-smoke.png",
@@ -427,7 +427,7 @@ function electric_mining_drill_smoke()
   }
 end
 
-function electric_mining_drill_smoke_front()
+local function electric_mining_drill_smoke_front()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-smoke-front.png",
@@ -453,7 +453,7 @@ function electric_mining_drill_smoke_front()
   }
 end
 
-function electric_mining_drill_mk2_animation()
+local function electric_mining_drill_mk2_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill.png",
@@ -481,7 +481,7 @@ function electric_mining_drill_mk2_animation()
   }
 end
 
-function electric_mining_drill_mk3_animation()
+local function electric_mining_drill_mk3_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk3/electric-mining-drill.png",
@@ -509,7 +509,7 @@ function electric_mining_drill_mk3_animation()
   }
 end
 
-function electric_mining_drill_shadow_animation()
+local function electric_mining_drill_shadow_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-shadow.png",
@@ -537,7 +537,7 @@ function electric_mining_drill_shadow_animation()
   }
 end
 
-function electric_mining_drill_mk2_horizontal_animation()
+local function electric_mining_drill_mk2_horizontal_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal.png",
@@ -565,7 +565,7 @@ function electric_mining_drill_mk2_horizontal_animation()
   }
 end
 
-function electric_mining_drill_mk3_horizontal_animation()
+local function electric_mining_drill_mk3_horizontal_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk3/electric-mining-drill-horizontal.png",
@@ -593,7 +593,7 @@ function electric_mining_drill_mk3_horizontal_animation()
   }
 end
 
-function electric_mining_drill_horizontal_front_animation()
+local function electric_mining_drill_horizontal_front_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal-front.png",
@@ -621,7 +621,7 @@ function electric_mining_drill_horizontal_front_animation()
   }
 end
 
-function electric_mining_drill_horizontal_shadow_animation()
+local function electric_mining_drill_horizontal_shadow_animation()
   return {
     priority = "high",
     filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-horizontal-shadow.png",
@@ -649,7 +649,7 @@ function electric_mining_drill_horizontal_shadow_animation()
   }
 end
 
-function electric_mining_drill_status_colors()
+local function electric_mining_drill_status_colors()
   return {
     -- If no_power, idle, no_minable_resources, disabled, insufficient_input or full_output is used, always_draw of corresponding layer must be set to true to draw it in those states.
 
@@ -666,7 +666,7 @@ function electric_mining_drill_status_colors()
   }
 end
 
-function electric_mining_drill_status_leds_working_visualisation()
+local function electric_mining_drill_status_leds_working_visualisation()
   local led_blend_mode = nil -- "additive"
   local led_tint = {1, 1, 1, 0.5}
   return {

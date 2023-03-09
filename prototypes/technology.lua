@@ -51,15 +51,33 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-ultradense-furnace",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
+      {type = "unlock-recipe", recipe = "cube-rare-metals"},
+    },
+    prerequisites = {"cube-electric-mining-drill"},
+    unit =
+    {
+      count = 30,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "0-3-0"
+  },
+  {
+    type = "technology",
     name = "cube-electronics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electronics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
     },
-    prerequisites = {"cube-electric-mining-drill"},
+    prerequisites = {"cube-ultradense-furnace"},
     unit = {
-      count = 10,
+      count = 30,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -73,16 +91,15 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
-    prerequisites = {"cube-electric-mining-drill"},
+    prerequisites = {"cube-ultradense-furnace"},
     unit =
     {
-      count = 20,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-2-0"
   },
-
   {
     type = "technology",
     name = "cube-combinatorics",
@@ -107,6 +124,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-fabricator",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fabricator"},
+    },
+    prerequisites = {"cube-electronics"},
+    unit = {
+      count = 60,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "1-0-1",
+  },
+  {
+    type = "technology",
     name = "cube-optics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/optics.png",
@@ -119,7 +152,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "1-0-1",
+    order = "1-0-2",
   },
   {
     type = "technology",
@@ -154,22 +187,6 @@ data:extend({
       time = 10,
     },
     order = "1-2-0",
-  },
-  {
-    type = "technology",
-    name = "cube-fabricator",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-fabricator"},
-    },
-    prerequisites = {"cube-n-dimensional-widgets"},
-    unit = {
-      count = 30,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "1-2-1",
   },
   {
     type = "technology",
