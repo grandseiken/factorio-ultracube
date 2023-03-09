@@ -27,7 +27,7 @@ data:extend({
       {"cube-basic-contemplation-unit", 10},
     },
     results = {{"cube-lab", 1}},
-    energy_required = 1,
+    energy_required = 2,
     category = "cube-fabricator-handcraft",
   },
   {

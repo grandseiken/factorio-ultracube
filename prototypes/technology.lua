@@ -61,7 +61,7 @@ data:extend({
     prerequisites = {"cube-electric-mining-drill"},
     unit =
     {
-      count = 30,
+      count = 40,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -77,7 +77,7 @@ data:extend({
     },
     prerequisites = {"cube-ultradense-furnace"},
     unit = {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -94,7 +94,7 @@ data:extend({
     prerequisites = {"cube-ultradense-furnace"},
     unit =
     {
-      count = 60,
+      count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -116,7 +116,7 @@ data:extend({
     },
     prerequisites = {"cube-electronics"},
     unit = {
-      count = 20,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -148,7 +148,7 @@ data:extend({
     },
     prerequisites = {"cube-electronics"},
     unit = {
-      count = 20,
+      count = 30,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -165,7 +165,7 @@ data:extend({
     prerequisites = {"cube-electronics"},
     unit =
     {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -182,7 +182,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 20,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -198,7 +198,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 60,
+      count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -216,7 +216,7 @@ data:extend({
     prerequisites = {"cube-electronics"},
     unit =
     {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -252,7 +252,7 @@ data:extend({
     prerequisites = {"cube-recovery-bay", "cube-synthesizer"},
     unit =
     {
-      count = 60,
+      count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -270,7 +270,7 @@ data:extend({
     prerequisites = {"cube-electric-energy-distribution-1"},
     unit =
     {
-      count = 60,
+      count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -288,7 +288,7 @@ data:extend({
     },
     prerequisites = {"cube-logistics", "cube-electronics", "cube-n-dimensional-widgets"},
     unit = {
-      count = 60,
+      count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },

@@ -5,7 +5,7 @@ data:extend({
   {
     type = "lab",
     name = "cube-lab",
-    icon = "__base__/graphics/icons/lab.png",
+    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.25, result = "cube-lab"},
@@ -15,163 +15,250 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    on_animation =
-    {
-      layers =
-      {
+    light = {
+      intensity = 0.8,
+      size = 4,
+      color = { r = 255, g = 255, b = 255 },
+    },
+    on_animation = {
+      layers = {
         {
-          filename = "__base__/graphics/entity/lab/lab.png",
-          width = 98,
-          height = 87,
-          frame_count = 33,
-          line_length = 11,
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-anim-light.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
           animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 1.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab.png",
-            width = 194,
-            height = 174,
-            frame_count = 33,
-            line_length = 11,
-            animation_speed = 1 / 3,
-            shift = util.by_pixel(0, 1.5),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 122,
-          height = 81,
-          frame_count = 1,
-          line_length = 1,
-          repeat_count = 33,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(0, 15.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-integration.png",
-            width = 242,
-            height = 162,
-            frame_count = 1,
-            line_length = 1,
-            repeat_count = 33,
-            animation_speed = 1 / 3,
-            shift = util.by_pixel(0, 15.5),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-light.png",
-          blend_mode = "additive",
+          shift = { 0, -0.05 },
           draw_as_light = true,
-          width = 106,
-          height = 100,
-          frame_count = 33,
-          line_length = 11,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(-1, 1),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-light.png",
-            blend_mode = "additive",
-            draw_as_light = true,
-            width = 216,
-            height = 194,
-            frame_count = 33,
-            line_length = 11,
+          scale = 2 * 0.64,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-anim-light.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
             animation_speed = 1 / 3,
-            shift = util.by_pixel(0, 0),
-            scale = 0.5
-          }
+            shift = { 0, -0.05 },
+            draw_as_light = true,
+            scale = 0.64,
+          },
         },
         {
-          filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 122,
-          height = 68,
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-anim.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.64,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-anim.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.64,
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-anim.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.64,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-anim.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.64,
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-anim.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.64,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-anim.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.64,
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-light-anim.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.64,
+          blend_mode = "additive-soft",
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-light-anim.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.64,
+            blend_mode = "additive-soft",
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-light-anim.png",
+          width = 75,
+          height = 75,
+          frame_count = 29,
+          line_length = 10,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          draw_as_light = true,
+          scale = 2 * 0.64,
+          blend_mode = "additive-soft",
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-light-anim.png",
+            width = 150,
+            height = 150,
+            frame_count = 29,
+            line_length = 10,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            draw_as_light = true,
+            scale = 0.64,
+            blend_mode = "additive-soft",
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-shadow.png",
+          width = 120,
+          height = 120,
           frame_count = 1,
           line_length = 1,
-          repeat_count = 33,
-          animation_speed = 1 / 3,
-          shift = util.by_pixel(13, 11),
+          repeat_count = 29,
+          animation_speed = 1,
+          shift = { 0, -0.20 },
+          scale = 2 * 0.75,
           draw_as_shadow = true,
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-shadow.png",
-            width = 242,
-            height = 136,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-shadow.png",
+            width = 240,
+            height = 240,
             frame_count = 1,
             line_length = 1,
-            repeat_count = 33,
-            animation_speed = 1 / 3,
-            shift = util.by_pixel(13, 11),
-            scale = 0.5,
-            draw_as_shadow = true
-          }
-        }
-      }
-    },
-    off_animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/lab/lab.png",
-          width = 98,
-          height = 87,
-          frame_count = 1,
-          shift = util.by_pixel(0, 1.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab.png",
-            width = 194,
-            height = 174,
-            frame_count = 1,
-            shift = util.by_pixel(0, 1.5),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 122,
-          height = 81,
-          frame_count = 1,
-          shift = util.by_pixel(0, 15.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-integration.png",
-            width = 242,
-            height = 162,
-            frame_count = 1,
-            shift = util.by_pixel(0, 15.5),
-            scale = 0.5
-          }
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 122,
-          height = 68,
-          frame_count = 1,
-          shift = util.by_pixel(13, 11),
-          draw_as_shadow = true,
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/lab/hr-lab-shadow.png",
-            width = 242,
-            height = 136,
-            frame_count = 1,
-            shift = util.by_pixel(13, 11),
+            repeat_count = 29,
+            animation_speed = 1,
+            shift = { 0, -0.20 },
+            scale = 0.75,
             draw_as_shadow = true,
-            scale = 0.5
-          }
-        }
-      }
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-ao.png",
+          width = 110,
+          height = 110,
+          frame_count = 1,
+          repeat_count = 29,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.50,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-ao.png",
+            width = 220,
+            height = 220,
+            frame_count = 1,
+            repeat_count = 29,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.50,
+          },
+        },
+      },
     },
-    working_sound =
-    {
-      sound =
-      {
-        filename = "__base__/sound/lab.ogg",
+    off_animation = {
+      layers = {
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab.png",
+          width = 75,
+          height = 75,
+          frame_count = 1,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.64,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab.png",
+            width = 150,
+            height = 150,
+            frame_count = 1,
+            shift = { 0, -0.05 },
+            scale = 0.64,
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-shadow.png",
+          width = 120,
+          height = 120,
+          frame_count = 1,
+          repeat_count = 1,
+          shift = { 0, -0.20 },
+          scale = 2 * 0.75,
+          draw_as_shadow = true,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-shadow.png",
+            width = 240,
+            height = 240,
+            frame_count = 1,
+            repeat_count = 1,
+            shift = { 0, -0.20 },
+            scale = 0.75,
+            draw_as_shadow = true,
+          },
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/biusart-lab/biusart-lab-ao.png",
+          width = 110,
+          height = 110,
+          frame_count = 1,
+          repeat_count = 1,
+          animation_speed = 1 / 3,
+          shift = { 0, -0.05 },
+          scale = 2 * 0.5,
+          hr_version = {
+            filename = "__Krastorio2Assets__/entities/biusart-lab/hr-biusart-lab-ao.png",
+            width = 220,
+            height = 220,
+            frame_count = 1,
+            repeat_count = 1,
+            animation_speed = 1 / 3,
+            shift = { 0, -0.05 },
+            scale = 0.5,
+          },
+        },
+      },
+    },
+    working_sound = {
+      sound = {
+        filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg",
         volume = 0.7
       },
       audible_distance_modifier = 0.7,
@@ -181,8 +268,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       drain = "10KW",

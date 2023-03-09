@@ -62,7 +62,7 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 -- TODO: duplication still needs some other complication. Make input/output not trivially loopable somehow?
 
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
--- TODO: upgrade graphics for pipes, boiler, steam engine, tanks?
+-- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 
 -- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)

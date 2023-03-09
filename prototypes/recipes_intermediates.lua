@@ -21,7 +21,7 @@ data:extend({
     ingredients = {{"cube-dormant-utility-cube", 1}},
     results = {{"cube-ultradense-utility-cube", 1}},
     main_product = "",
-    energy_required = 15,
+    energy_required = 10,
     category = "crafting",
     subgroup = "cube-cubes",
     order = "0[0-cube]",
@@ -96,7 +96,7 @@ data:extend({
     name = "cube-n-dimensional-widget-0",
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-rare-metals", 25},
+      {"cube-rare-metals", 50},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
@@ -180,7 +180,7 @@ data:extend({
     type = "recipe",
     name = "cube-rare-metals",
     ingredients = {{"cube-raw-rare-metals", 500}},
-    results = {{"cube-rare-metals", 500}},
+    results = {{"cube-rare-metals", 250}},
     energy_required = 4,
     category = "cube-ultradense-smelting",
     enabled = false,

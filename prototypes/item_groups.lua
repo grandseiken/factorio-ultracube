@@ -22,9 +22,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-knowledge",
+    name = "cube-smelting",
     group = "cube-intermediates",
     order = "x",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-knowledge",
+    group = "cube-intermediates",
+    order = "y",
   },
   {
     type = "item-subgroup",
