@@ -50,6 +50,7 @@ data:extend({
       emissions_per_minute = 30,
       light_flicker = boiler_data.energy_source.light_flicker,
       smoke = boiler_data.energy_source.smoke,
+      render_no_power_icon = false,
     },
     burning_cooldown = 20,
 

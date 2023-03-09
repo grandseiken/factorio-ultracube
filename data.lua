@@ -1,4 +1,59 @@
--- Disable all default recipes and technologies.
+-- Disable all default items (except for whitelisted), recipes and technologies.
+local default_item_whitelist = {
+  ["pipe"] = true,
+  ["storage-tank"] = true,
+  ["steam-engine"] = true,
+  ["offshore-pump"] = true,
+  ["fast-transport-belt"] = true,
+  ["fast-underground-belt"] = true,
+  ["fast-splitter"] = true,
+  ["express-transport-belt"] = true,
+  ["express-underground-belt"] = true,
+  ["express-splitter"] = true,
+  ["small-lamp"] = true,
+  ["red-wire"] = true,
+  ["green-wire"] = true,
+  ["constant-combinator"] = true,
+  ["arithmetic-combinator"] = true,
+  ["decider-combinator"] = true,
+  ["power-switch"] = true,
+  ["programmable-speaker"] = true,
+  ["medium-electric-pole"] = true,
+  ["big-electric-pole"] = true,
+  ["substation"] = true,
+  ["fast-inserter"] = true,
+  ["long-handed-inserter"] = true,
+  ["filter-inserter"] = true,
+  ["stack-inserter"] = true,
+  ["stack-filter-inserter"] = true,
+}
+
+-- TODO: various entities must be hidden explicitly (not just the item)
+-- to avoid showing up in places. Done for inserters.
+for _, v in pairs(data.raw) do
+  for _, t in pairs(v) do
+    if not default_item_whitelist[t.name] then
+      t.next_upgrade = nil
+    end
+  end
+end
+for _, t in pairs(data.raw.inserter) do
+  if not default_item_whitelist[t.name] then
+    if not t.flags then
+      t.flags = {}
+    end
+    t.flags[#t.flags + 1] = "hidden"
+  end
+end
+for _, t in pairs(data.raw.item) do
+  if not default_item_whitelist[t.name] then
+    if not t.flags then
+      t.flags = {}
+    end
+    t.flags[#t.flags + 1] = "hidden"
+  end
+end
+
 for _, t in pairs(data.raw.technology) do
   t.enabled = false
 end
@@ -57,9 +112,12 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: rework lattice. More complications.
+-- TODO: tweak costs. Probably things are slightly too expensive in terms of base matter before the upgrade.
+-- TODO: output buffer on rare metals / matter, etc, can it be fixed?
+-- TODO: rework lattice. Bit pointless right now. More complications.
 -- TODO: do we need wires for circuits or some other ingredient.
 -- TODO: duplication still needs some other complication. Make input/output not trivially loopable somehow?
+-- TODO: science 2. Construction robots.
 
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?

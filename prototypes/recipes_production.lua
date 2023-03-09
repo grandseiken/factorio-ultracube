@@ -32,7 +32,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-steam_engine",
+    name = "cube-steam-engine",
     ingredients = {
       {"cube-basic-matter-unit", 30},
     },

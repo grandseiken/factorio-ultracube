@@ -205,6 +205,7 @@ data:extend({
     order = "1-2-2",
   },
 
+  -- TODO: below here are draft techs.
   {
     type = "technology",
     name = "cube-electric-energy-distribution-1",
@@ -261,6 +262,24 @@ data:extend({
 
   {
     type = "technology",
+    name = "cube-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "inserter-stack-size-bonus", modifier = 1},
+    },
+    prerequisites = {"cube-inserters", "cube-combinatorics"},
+    unit =
+    {
+      count = 240,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10
+    },
+    upgrade = true,
+    order = "3-0-0",
+  },
+  {
+    type = "technology",
     name = "cube-electric-energy-distribution-2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
@@ -270,11 +289,11 @@ data:extend({
     prerequisites = {"cube-electric-energy-distribution-1"},
     unit =
     {
-      count = 120,
+      count = 240,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "3-0-0"
+    order = "3-0-1",
   },
   {
     type = "technology",
@@ -288,7 +307,7 @@ data:extend({
     },
     prerequisites = {"cube-logistics", "cube-electronics", "cube-n-dimensional-widgets"},
     unit = {
-      count = 120,
+      count = 240,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },

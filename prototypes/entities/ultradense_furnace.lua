@@ -128,10 +128,18 @@ local function furnacepipepictures_b()
   }
 end
 
+local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({
+  smoke_animations.trivial_smoke {
+    name = "cube-ultradense-furnace-smoke",
+    color = {r = 0.4, g = 0.4, b = 0.4, a = 0.4},
+    start_scale = 1,
+    end_scale = 3,
+    duration = 160,
+  },
   {
     type = "assembling-machine",
     name = "cube-ultradense-furnace",
@@ -376,13 +384,14 @@ data:extend({
       emissions_per_minute = 60,
       smoke = {
         {
-          name = "smoke",
-          position = util.by_pixel(0, -20),
-          frequency = 25,
-          starting_vertical_speed = 1.0,
+          name = "cube-ultradense-furnace-smoke",
+          position = util.by_pixel(-24, -100),
+          frequency = 20,
+          starting_vertical_speed = 1.0 / 16,
           starting_frame_deviation = 60,
         }
-      }
+      },
+      render_no_power_icon = false,
     },
 
     water_reflection = {
