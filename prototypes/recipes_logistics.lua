@@ -19,7 +19,7 @@ data:extend({
     type = "recipe",
     name = "cube-underground-pipe",
     ingredients = {
-      {"pipe", 10},
+      {"pipe", 8},
       {"cube-basic-matter-unit", 8},
     },
     results = {{"pipe-to-ground", 2}},
@@ -41,7 +41,8 @@ data:extend({
     type = "recipe",
     name = "cube-pump",
     ingredients = {
-      {"cube-basic-matter-unit", 20},
+      {"cube-basic-matter-unit", 12},
+      {"cube-basic-motor-unit", 1},
       {"cube-electronic-circuit", 1},
       {"pipe", 2},
     },
@@ -54,7 +55,7 @@ data:extend({
     type = "recipe",
     name = "cube-transport-belt",
     ingredients = {
-      {"cube-basic-matter-unit", 10},
+      {"cube-basic-matter-unit", 8},
       {"cube-basic-motor-unit", 1},
     },
     results = {{"fast-transport-belt", 4}},
@@ -66,8 +67,8 @@ data:extend({
     type = "recipe",
     name = "cube-underground-belt",
     ingredients = {
-      {"fast-transport-belt", 10},
-      {"cube-basic-matter-unit", 10},
+      {"fast-transport-belt", 8},
+      {"cube-basic-matter-unit", 8},
     },
     results = {{"fast-underground-belt", 2}},
     energy_required = 1,
@@ -151,6 +152,7 @@ data:extend({
     ingredients = {
       {"cube-basic-matter-unit", 20},
       {"cube-semiregular-lattice", 10},
+      {"copper-cable", 4},
     },
     results = {{"big-electric-pole", 1}},
     energy_required = 1,
@@ -164,6 +166,7 @@ data:extend({
       {"big-electric-pole", 1},
       {"cube-basic-matter-unit", 50},
       {"cube-semiregular-lattice", 10},
+      {"copper-cable", 16},
     },
     results = {{"substation", 1}},
     energy_required = 2,
@@ -187,7 +190,7 @@ data:extend({
     type = "recipe",
     name = "cube-arithmetic-combinator",
     ingredients = {
-      {"cube-basic-matter-unit", 4},
+      {"cube-basic-matter-unit", 2},
       {"cube-electronic-circuit", 2},
     },
     results = {{"arithmetic-combinator", 1}},
@@ -199,7 +202,7 @@ data:extend({
     type = "recipe",
     name = "cube-decider-combinator",
     ingredients = {
-      {"cube-basic-matter-unit", 4},
+      {"cube-basic-matter-unit", 2},
       {"cube-electronic-circuit", 2},
     },
     results = {{"decider-combinator", 1}},
@@ -225,7 +228,7 @@ data:extend({
     name = "cube-programmable-speaker",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-electronic-circuit", 4}
+      {"cube-electronic-circuit", 2}
     },
     results = {{"programmable-speaker", 1}},
     energy_required = 2,
@@ -237,9 +240,9 @@ data:extend({
     name = "cube-red-wire",
     ingredients = {
       {"cube-basic-matter-unit", 1},
-      {"cube-rare-metals", 1},
+      {"copper-cable", 2},
     },
-    results = {{"red-wire", 1}},
+    results = {{"red-wire", 2}},
     energy_required = 0.5,
     category = "cube-fabricator-handcraft",
     enabled = false,
@@ -249,9 +252,9 @@ data:extend({
     name = "cube-green-wire",
     ingredients = {
       {"cube-basic-matter-unit", 1},
-      {"cube-rare-metals", 1},
+      {"copper-cable", 2},
     },
-    results = {{"green-wire", 1}},
+    results = {{"green-wire", 2}},
     energy_required = 0.5,
     category = "cube-fabricator-handcraft",
     enabled = false,

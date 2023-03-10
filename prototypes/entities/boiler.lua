@@ -24,11 +24,8 @@ data:extend({
       height = 2,
       base_level = -1,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {
-        {type = "input-output", position = {-2, 0.5}},
-        {type = "input-output", position = {2, 0.5}}
-      },
-      production_type = "input-output",
+      pipe_connections = {{type = "input", position = {0, -1.5}}},
+      production_type = "input",
       filter = "water"
     },
     output_fluid_box = {
@@ -36,7 +33,10 @@ data:extend({
       height = 2,
       base_level = 1,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{type = "output", position = {0, -1.5}}},
+      pipe_connections = {
+        {type = "output", position = {-2, 0.5}},
+        {type = "output", position = {2, 0.5}}
+      },
       production_type = "output",
       filter = "steam"
     },

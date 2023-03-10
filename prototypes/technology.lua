@@ -73,6 +73,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electronics.png",
     effects = {
+      {type = "unlock-recipe", recipe = "cube-conductive-wire"},
       {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
     },
     prerequisites = {"cube-ultradense-furnace"},
@@ -232,7 +233,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-stack-inserter"},
       {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
     },
-    prerequisites = {"cube-inserters", "cube-combinatorics"},
+    prerequisites = {"cube-inserters", "cube-n-dimensional-widgets"},
     unit = {
       count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
@@ -263,7 +264,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-inserter-capacity-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/inserter-capacity.png"),
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "inserter-stack-size-bonus", modifier = 1},
@@ -277,6 +278,24 @@ data:extend({
     },
     upgrade = true,
     order = "3-0-0",
+  },
+  {
+    type = "technology",
+    name = "cube-stack-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "stack-inserter-capacity-bonus", modifier = 1},
+    },
+    prerequisites = {"cube-stack-inserters", "cube-combinatorics"},
+    unit =
+    {
+      count = 240,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10
+    },
+    upgrade = true,
+    order = "3-0-1",
   },
   {
     type = "technology",

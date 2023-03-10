@@ -12,7 +12,7 @@ data:extend({
 
     fuel_category = "cube-cube",
     fuel_value = "1GJ",
-    fuel_glow_color = {1, 0, 1, 1},
+    fuel_glow_color = {0.5, 0.5, 1, 1},
     burnt_result = "cube-dormant-utility-cube",
   },
   {
@@ -61,16 +61,6 @@ data:extend({
 
   {
     type = "item",
-    name = "cube-electronic-circuit",
-    icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "cube-processing",
-    order = "0[c-electronic-circuit]",
-    stack_size = 100,
-  },
-  {
-    type = "item",
     name = "cube-basic-motor-unit",
     icon = "__base__/graphics/icons/engine-unit.png",
     icon_size = 64,
@@ -81,12 +71,22 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-electronic-circuit",
+    icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-processing",
+    order = "0[c-electronic-circuit]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
     name = "cube-semiregular-lattice",
     icon = "__base__/graphics/icons/low-density-structure.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-processing",
-    order = "0[b-semiregular-lattice]",
+    order = "1[b-semiregular-lattice]",
     stack_size = 50,
   },
 })

@@ -3,7 +3,9 @@ data:extend({
     type = "recipe",
     name = "cube-offshore-pump",
     ingredients = {
-      {"cube-basic-matter-unit", 50},
+      {"cube-basic-matter-unit", 40},
+      {"cube-basic-motor-unit", 1},
+      {"pipe", 1},
     },
     results = {{"offshore-pump", 1}},
     energy_required = 2,
@@ -14,6 +16,7 @@ data:extend({
     name = "cube-boiler",
     ingredients = {
       {"cube-basic-matter-unit", 20},
+      {"pipe", 4},
     },
     results = {{"cube-boiler", 1}},
     energy_required = 1,
@@ -34,7 +37,9 @@ data:extend({
     type = "recipe",
     name = "cube-steam-engine",
     ingredients = {
-      {"cube-basic-matter-unit", 30},
+      {"cube-basic-matter-unit", 20},
+      {"cube-basic-motor-unit", 1},
+      {"pipe", 2},
     },
     results = {{"steam-engine", 1}},
     energy_required = 2,

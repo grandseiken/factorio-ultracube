@@ -18,7 +18,7 @@ data:extend({
     subgroup = "production-machine",
     order = "g[lab]",
     place_result = "cube-lab",
-    stack_size = 10
+    stack_size = 10,
   },
   {
     type = "item",
@@ -84,6 +84,6 @@ data:extend({
     subgroup = "cube-production-machines",
     order = "1[2-fabricator]",
     place_result = "cube-fabricator",
-    stack_size = 50,
+    stack_size = 20,
   }
 })

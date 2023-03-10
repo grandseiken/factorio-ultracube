@@ -11,6 +11,7 @@ local default_item_whitelist = {
   ["express-underground-belt"] = true,
   ["express-splitter"] = true,
   ["small-lamp"] = true,
+  ["copper-cable"] = true,
   ["red-wire"] = true,
   ["green-wire"] = true,
   ["constant-combinator"] = true,
@@ -32,7 +33,7 @@ local default_item_whitelist = {
 -- to avoid showing up in places. Done for inserters.
 for _, v in pairs(data.raw) do
   for _, t in pairs(v) do
-    if not default_item_whitelist[t.name] then
+    if not default_item_whitelist[t.name] and t.next_upgrade then
       t.next_upgrade = nil
     end
   end
@@ -112,15 +113,28 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
--- TODO: tweak costs. Probably things are slightly too expensive in terms of base matter before the upgrade.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
--- TODO: rework lattice. Bit pointless right now. More complications.
--- TODO: do we need wires for circuits or some other ingredient.
--- TODO: duplication still needs some other complication. Make input/output not trivially loopable somehow?
--- TODO: science 2. Construction robots.
+-- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
+-- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
+--       as a cube teleport logistic option. Or teleport building somehow.
 
+-- TODO: 2 electronic circuit + 1 widget -> science 2
+--       matter units + more steam + less water -> matter duplication gel + less steam + more water
+--       duplication recipes get some combination of gel/steam in/out
+
+-- TODO: science 2 techs:
+--       chemical plant, duplication (early)
+--       construction robots, roboport (via sentience transfer)
+--       circuit 2?
+--       accumulators?
+--       trains. fuel processing gives train fuel and somehow more efficient power
+--       hypercube can be used in trains for lols
+
+-- TODO: rework lattice. Bit pointless right now. More complications.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
+-- TODO: something that requires _dormant_ cube?
+-- TODO: some sort of weird biter farmer spawning synthesis.
 
 -- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
