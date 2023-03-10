@@ -275,7 +275,10 @@ data:extend({
     },
     energy_usage = "250KW",
     researching_speed = 1,
-    inputs = {"cube-basic-contemplation-unit"},
+    inputs = {
+      "cube-basic-contemplation-unit",
+      "cube-fundamental-comprehension-card",
+    },
     module_specification =
     {
       module_slots = 0,

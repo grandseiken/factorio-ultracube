@@ -117,8 +117,7 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 -- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
 -- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
 --       as a cube teleport logistic option. Or teleport building somehow.
-
--- TODO: 2 electronic circuit + 1 widget -> science 2
+-- TODO: duplication:
 --       matter units + more steam + less water -> matter duplication gel + less steam + more water
 --       duplication recipes get some combination of gel/steam in/out
 
@@ -149,9 +148,11 @@ require("prototypes.recipe_categories")
 require("prototypes.items")
 require("prototypes.items_resources")
 require("prototypes.items_production")
+require("prototypes.items_science")
 require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")
+require("prototypes.recipes_science")
 require("prototypes.technology")
 require("prototypes.resources")
 

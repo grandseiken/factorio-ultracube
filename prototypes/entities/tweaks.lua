@@ -9,5 +9,6 @@ data.raw.character.character.crafting_categories = {
 }
 data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
 data.raw.inserter["stack-inserter"].stack_size_bonus = 3
+data.raw.inserter["stack-filter-inserter"].stack_size_bonus = 3
 data.raw.item["copper-cable"].subgroup = "cube-processing"
 data.raw.item["copper-cable"].order = "0[b-conductive-wire]"

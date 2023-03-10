@@ -47,17 +47,6 @@ data:extend({
     order = "0[b-widget-0]",
     stack_size = 50,
   },
-  {
-    type = "tool",
-    name = "cube-basic-contemplation-unit",
-    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "cube-knowledge",
-    order = "0[a-contemplation-0]",
-    stack_size = 100,
-    durability = 1,
-  },
 
   {
     type = "item",

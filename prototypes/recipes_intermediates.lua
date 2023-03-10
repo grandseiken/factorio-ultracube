@@ -1,16 +1,3 @@
-local function duplicate_icon(icon)
-  return {
-    icon,
-    {
-      icon = "__base__/graphics/icons/fluid/steam.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-      scale = 0.375,
-      shift = {6, -6},
-    }
-  }
-end
-
 data:extend({
   {
     type = "recipe",
@@ -68,11 +55,17 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-matter-unit-1",
-    icons = duplicate_icon({
-      icon = "__base__/graphics/icons/plastic-bar.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-    }),
+    icons = {
+      {
+        icon = "__base__/graphics/icons/plastic-bar.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/icons/fluid/steam.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.375, shift = {6, -6},
+      }
+    },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-basic-matter-unit", 1},
@@ -112,11 +105,17 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-1",
-    icons = duplicate_icon({
-      icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-    }),
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/icons/fluid/steam.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.375, shift = {6, -6},
+      }
+    },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-rare-metals", 500},
@@ -131,46 +130,6 @@ data:extend({
     category = "cube-synthesizer",
     subgroup = "cube-basics",
     order = "0[b-widget-1]",
-    always_show_made_in = true,
-    allow_decomposition = false,
-    enabled = false,
-  },
-
-  {
-    type = "recipe",
-    name = "cube-basic-contemplation-unit-0",
-    ingredients = {{"cube-ultradense-utility-cube", 1}},
-    results = {
-      {"cube-ultradense-utility-cube", 1},
-      {"cube-basic-contemplation-unit", 10},
-    },
-    main_product = "cube-basic-contemplation-unit",
-    energy_required = 1,
-    category = "cube-synthesizer",
-    always_show_made_in = true,
-    allow_decomposition = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-basic-contemplation-unit-1",
-    icons = duplicate_icon({
-      icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
-      icon_size = 64,
-      icon_mipmaps = 4,
-    }),
-    ingredients = {
-      {"cube-ultradense-utility-cube", 1},
-      {"cube-basic-contemplation-unit", 1},
-      {type = "fluid", name = "steam", amount = "500"},
-    },
-    results = {
-      {"cube-dormant-utility-cube", 1},
-      {"cube-basic-contemplation-unit", 100},
-    },
-    energy_required = 1,
-    category = "cube-synthesizer",
-    subgroup = "cube-knowledge",
-    order = "0[b-contemplation-1]",
     always_show_made_in = true,
     allow_decomposition = false,
     enabled = false,

@@ -205,6 +205,22 @@ data:extend({
     },
     order = "1-2-2",
   },
+  {
+    type = "technology",
+    name = "cube-fundamental-comprehension-card",
+    icon = "__Krastorio2Assets__/technologies/logistic-tech-card.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fundamental-comprehension-card"},
+    },
+    prerequisites = {"cube-electronics", "cube-n-dimensional-widgets"},
+    unit = {
+      count = 120,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "1-3-0",
+  },
 
   -- TODO: below here are draft techs.
   {
@@ -215,12 +231,15 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
     },
-    prerequisites = {"cube-electronics"},
+    prerequisites = {"cube-fundamental-comprehension-card"},
     unit =
     {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
+      count = 30,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     order = "2-0-0"
   },
@@ -233,11 +252,14 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-stack-inserter"},
       {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
     },
-    prerequisites = {"cube-inserters", "cube-n-dimensional-widgets"},
+    prerequisites = {"cube-inserters", "cube-fundamental-comprehension-card"},
     unit = {
       count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     order = "2-0-1",
   },
@@ -251,12 +273,15 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
       {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
     },
-    prerequisites = {"cube-recovery-bay", "cube-synthesizer"},
+    prerequisites = {"cube-recovery-bay", "cube-synthesizer", "cube-fundamental-comprehension-card"},
     unit =
     {
       count = 120,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     order = "2-1-0"
   },
@@ -269,12 +294,15 @@ data:extend({
     effects = {
       {type = "inserter-stack-size-bonus", modifier = 1},
     },
-    prerequisites = {"cube-inserters", "cube-combinatorics"},
+    prerequisites = {"cube-inserters", "cube-fundamental-comprehension-card"},
     unit =
     {
       count = 240,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     upgrade = true,
     order = "3-0-0",
@@ -287,12 +315,15 @@ data:extend({
     effects = {
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserters", "cube-combinatorics"},
+    prerequisites = {"cube-stack-inserters", "cube-fundamental-comprehension-card"},
     unit =
     {
       count = 240,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     upgrade = true,
     order = "3-0-1",
@@ -309,8 +340,11 @@ data:extend({
     unit =
     {
       count = 240,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     order = "3-0-1",
   },
@@ -324,11 +358,14 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
       {type = "unlock-recipe", recipe = "cube-splitter-2"},
     },
-    prerequisites = {"cube-logistics", "cube-electronics", "cube-n-dimensional-widgets"},
+    prerequisites = {"cube-logistics", "cube-fundamental-comprehension-card"},
     unit = {
       count = 240,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
     },
     order = "3-1-0",
   },
