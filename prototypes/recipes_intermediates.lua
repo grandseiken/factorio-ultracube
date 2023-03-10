@@ -69,6 +69,7 @@ data:extend({
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-basic-matter-unit", 1},
+      {type = "fluid", name = "cube-matter-duplication-gel", amount = 200},
       {type = "fluid", name = "steam", amount = "500"},
     },
     results = {
@@ -120,6 +121,7 @@ data:extend({
       {"cube-ultradense-utility-cube", 1},
       {"cube-rare-metals", 500},
       {"cube-n-dimensional-widget", 50},
+      {type = "fluid", name = "cube-matter-duplication-gel", amount = 500},
       {type = "fluid", name = "steam", amount = "500"},
     },
     results = {
@@ -141,7 +143,7 @@ data:extend({
     ingredients = {{"cube-raw-rare-metals", 500}},
     results = {{"cube-rare-metals", 250}},
     energy_required = 4,
-    category = "cube-ultradense-smelting",
+    category = "cube-ultradense-furnace",
     enabled = false,
   },
   {
@@ -196,5 +198,27 @@ data:extend({
     results = {{"cube-intelligent-calcium", 1}},
     energy_required = 1,
     category = "cube-fabricator",
+  },
+
+  {
+    type = "recipe",
+    name = "cube-matter-duplication-gel",
+    ingredients = {
+      {"cube-ultradense-utility-cube", 1},
+      {"cube-basic-matter-unit", 100},
+      {type = "fluid", name = "steam", amount = 1000, catalyst_amount = 500},
+      {type = "fluid", name = "water", amount = 500, catalyst_amount = 500},
+    },
+    results = {
+      {"cube-dormant-utility-cube", 1},
+      {type = "fluid", name = "cube-matter-duplication-gel", amount = 1000},
+      {type = "fluid", name = "steam", amount = 500, catalyst_amount = 500},
+      {type = "fluid", name = "water", amount = 1000, catalyst_amount = 500},
+    },
+    main_product = "cube-matter-duplication-gel",
+    energy_required = 2,
+    category = "cube-ultradense-furnace",
+    always_show_made_in = true,
+    enabled = false,
   },
 })

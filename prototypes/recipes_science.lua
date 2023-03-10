@@ -30,6 +30,7 @@ data:extend({
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {"cube-basic-contemplation-unit", 1},
+      {type = "fluid", name = "cube-matter-duplication-gel", amount = 500},
       {type = "fluid", name = "steam", amount = "500"},
     },
     results = {

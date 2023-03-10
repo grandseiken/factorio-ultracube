@@ -1,5 +1,7 @@
 -- Disable all default items (except for whitelisted), recipes and technologies.
 local default_item_whitelist = {
+  ["water"] = true,
+  ["steam"] = true,
   ["pipe"] = true,
   ["storage-tank"] = true,
   ["steam-engine"] = true,
@@ -113,13 +115,18 @@ data.raw.turret["behemoth-worm-turret"].autoplace = nil
 data.raw["unit-spawner"]["biter-spawner"].autoplace = nil
 data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 
+-- TODO: useless stone/coal/wood/etc from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
 -- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
 --       as a cube teleport logistic option. Or teleport building somehow.
--- TODO: duplication:
---       matter units + more steam + less water -> matter duplication gel + less steam + more water
---       duplication recipes get some combination of gel/steam in/out
+-- TODO: check duplication; recipes get some combination of gel/steam in/out
+
+-- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
+-- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
+-- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
+-- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
+--       bots that look the same, but 1 horribly slow
 
 -- TODO: science 2 techs:
 --       chemical plant, duplication (early)
@@ -129,26 +136,25 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 --       trains. fuel processing gives train fuel and somehow more efficient power
 --       hypercube can be used in trains for lols
 
+-- TODO: storylore tooltips! Hide future researches behind science pack
 -- TODO: rework lattice. Bit pointless right now. More complications.
--- TODO: ultradense constituent and reassembly. Something with weird ratios.
+-- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: something that requires _dormant_ cube?
+-- TODO: something that requires _dormant_ cube? Tooltip: for safety, must be done while indisposed to avoid adverse reactions.
 -- TODO: some sort of weird biter farmer spawning synthesis.
+-- TODO: late game forbidden tech. Experiments on cube. Suffering
 
--- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
--- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
--- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
---       bots that look the same, but 1 horribly slow
 -- TODO: (further on) basic antimatter unit. Basic dark matter unit.
 -- TODO: some joke with hydroxyl group vs abelian group.
 
-require("prototypes.item_groups")
+require("prototypes.fluids")
 require("prototypes.fuel_categories")
-require("prototypes.recipe_categories")
+require("prototypes.item_groups")
 require("prototypes.items")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
+require("prototypes.recipe_categories")
 require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")

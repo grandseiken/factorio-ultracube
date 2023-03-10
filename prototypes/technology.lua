@@ -261,7 +261,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-0-1",
+    order = "2-1-0",
   },
   {
     type = "technology",
@@ -269,6 +269,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/plastics.png",
     effects = {
+      {type = "unlock-recipe", recipe = "cube-matter-duplication-gel"},
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-1"},
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
       {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
@@ -283,7 +284,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-1-0"
+    order = "2-2-0"
   },
 
   {

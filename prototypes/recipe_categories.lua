@@ -16,7 +16,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-ultradense-smelting",
+    name = "cube-ultradense-furnace",
     order = "b",
   },
   {
