@@ -2,9 +2,9 @@
 
 A work-in-progress overhaul mod for Factorio.
 
-This mod is rather more difficult than vanilla Factorio, but in a way that feels fairly different from many other overhaul mods.
+This mod is a bit more difficult than vanilla Factorio, but in a way that feels fairly different from many other overhaul mods.
 
-It doesn't add huge numbers of intermediate products or require complex recipes to produce basic logistics and production machines.
+It doesn't add huge numbers of intermediate products, and recipes for basic logistics and production machines are generally of roughly comparable complexity to the base game.
 
 Instead, the player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps for raw materials.
 
@@ -14,9 +14,11 @@ The need to intelligently route the single catalyst where it's needed presents a
 
 ## Frequently asked questions
 
-* **I lost my cube!**
+* **Why am I moving so slowly?** Take a look at the descriptions of the items you're carrying.
 
-* **Where are the biters?**
+* **Where are the biters?** Currently, there are no military technologies and biters are disabled. This decision might be revisited if it seems like there could be a good place for biters in the mod, but right now the priority is to get the main production mechanics right.
+
+* **I lost my cube!** While care has been taken to eliminate obvious ways to accidentally destroy the cube, it's possible there's still some way to do it. If you really can't find it, it's not stuck in a machine as an ingredient or partially-used burner fuel (mining the machine will retrive your cube), for now run `/c game.player.insert("cube-ultradense-utility-cube")` in the console. If you have any idea how it got lost, please file a bug report. An in-game mechanic to facilitate retrieval of lost or destroyed cubes is planned.
 
 ## Compatibility
 

@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "fluid",
-    name = "cube-matter-duplication-gel",
+    name = "cube-matter-replication-gel",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     base_color = {r=0.8, g=0.8, b=0.8},

@@ -22,20 +22,19 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__base__/graphics/icons/fluid/steam.png",
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         icon_size = 64, icon_mipmaps = 4,
-        scale = 0.375, shift = {6, -6},
+        scale = 0.25, shift = {8, -8},
       }
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-basic-contemplation-unit", 1},
-      {type = "fluid", name = "cube-matter-duplication-gel", amount = 500},
-      {type = "fluid", name = "steam", amount = "500"},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
       {"cube-basic-contemplation-unit", 100},
+      {type = "fluid", name = "steam", amount = 8000},
     },
     energy_required = 1,
     category = "cube-synthesizer",

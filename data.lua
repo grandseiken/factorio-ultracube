@@ -120,16 +120,17 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 -- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
 -- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
 --       as a cube teleport logistic option. Or teleport building somehow.
--- TODO: check duplication; recipes get some combination of gel/steam in/out
 
 -- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
 -- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
 -- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
 --       bots that look the same, but 1 horribly slow
+-- TODO: good candidate here for something where a cube-source leads into big slow production
+--       chain with several steps, then eventually into another cube-powered thing
 
 -- TODO: science 2 techs:
---       chemical plant, duplication (early)
+--       chemical plant, replication (early)
 --       construction robots, roboport (via sentience transfer)
 --       circuit 2?
 --       accumulators?

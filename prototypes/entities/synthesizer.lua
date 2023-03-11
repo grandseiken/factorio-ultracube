@@ -51,7 +51,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 20,
         base_level = -1,
-        pipe_connections = {{type = "input-output", position = {0, -4}}},
+        pipe_connections = {{type = "input", position = {0, -4}}},
       },
       {
         production_type = "input",
@@ -59,7 +59,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 20,
         base_level = -1,
-        pipe_connections = {{type = "input-output", position = {0, 4}}},
+        pipe_connections = {{type = "input", position = {0, 4}}},
       },
       {
         production_type = "output",
@@ -67,7 +67,7 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 20,
         base_level = 1,
-        pipe_connections = {{type = "input-output", position = {-4, 0}}},
+        pipe_connections = {{type = "output", position = {-4, 0}}},
       },
       {
         production_type = "output",
@@ -75,9 +75,9 @@ data:extend({
         pipe_covers = pipecoverspictures(),
         base_area = 20,
         base_level = 1,
-        pipe_connections = {{type = "input-output", position = {4, 0}}},
+        pipe_connections = {{type = "output", position = {4, 0}}},
       },
-      off_when_no_fluid_recipe = false,
+      off_when_no_fluid_recipe = true,
     },
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},

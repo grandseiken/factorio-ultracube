@@ -265,14 +265,21 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-matter-duplication",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/plastics.png",
+    name = "cube-matter-replication",
+    icons = {
+      {
+        icon_size = 128, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        scale = 1, shift = {24, -24},
+      },
+    },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-matter-duplication-gel"},
+      {type = "unlock-recipe", recipe = "cube-matter-replication-gel"},
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-1"},
-      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
-      {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
     },
     prerequisites = {"cube-recovery-bay", "cube-synthesizer", "cube-fundamental-comprehension-card"},
     unit =
@@ -285,6 +292,64 @@ data:extend({
       time = 20,
     },
     order = "2-2-0"
+  },
+  {
+    type = "technology",
+    name = "cube-contemplative-replication",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/energy-control-unit.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        scale = 2, shift = {48, -48},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
+    },
+    prerequisites = {"cube-matter-replication"},
+    unit =
+    {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-1"
+  },
+  {
+    type = "technology",
+    name = "cube-widget-replication",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        scale = 2, shift = {48, -48},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
+    },
+    prerequisites = {"cube-matter-replication"},
+    unit =
+    {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-2"
   },
 
   {
