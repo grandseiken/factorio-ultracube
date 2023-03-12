@@ -72,6 +72,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-crusher",
+    ingredients = {
+      {"cube-basic-matter-unit", 320},
+      {"cube-basic-motor-unit", 20},
+      {"cube-rare-metals", 100},
+    },
+    results = {{"cube-crusher", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-fabricator",
     ingredients = {
       {"cube-basic-matter-unit", 200},

@@ -273,6 +273,28 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-crusher",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/crusher.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-crusher"},
+      {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
+    },
+    prerequisites = {"cube-fundamental-comprehension-card"},
+    unit =
+    {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-0",
+    enabled = false,
+  },
+  {
+    type = "technology",
     name = "cube-matter-replication",
     icons = {
       {
@@ -299,7 +321,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-0",
+    order = "2-3-0",
     enabled = false,
   },
   {
@@ -329,7 +351,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-1",
+    order = "2-3-1",
     enabled = false,
   },
   {
@@ -359,7 +381,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-2",
+    order = "2-3-2",
     enabled = false,
   },
 

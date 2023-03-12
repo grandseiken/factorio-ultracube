@@ -122,6 +122,7 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 --       as a cube teleport logistic option. Or teleport building somehow.
 
 -- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
+--       enriched ore has better product ratio but worse cube ratio
 -- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
 -- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
@@ -170,6 +171,7 @@ require("prototypes.entities.ultradense_furnace")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.fabricator")
+require("prototypes.entities.crusher")
 require("prototypes.entities.explosions")
 require("prototypes.entities.remnants")
 require("prototypes.entities.tweaks")

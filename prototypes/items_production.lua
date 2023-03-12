@@ -55,6 +55,17 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-crusher",
+    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-production-machines",
+    order = "0[1-crusher]",
+    place_result = "cube-crusher",
+    stack_size = 10,
+  },
+  {
+    type = "item",
     name = "cube-recovery-bay",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
