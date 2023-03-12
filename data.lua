@@ -137,7 +137,7 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 --       trains. fuel processing gives train fuel and somehow more efficient power
 --       hypercube can be used in trains for lols
 
--- TODO: storylore tooltips! Hide future researches behind science pack
+-- TODO: storylore tooltips!
 -- TODO: rework lattice. Bit pointless right now. More complications.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?

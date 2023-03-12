@@ -5,6 +5,10 @@ local heavy_items = {
   "cube-dormant-utility-cube",
 }
 
+local unlock_technologies = {
+  ["cube-fundamental-comprehension-card"] = 1,
+}
+
 local function on_init()
   if not remote.interfaces.freeplay then
     return
@@ -79,6 +83,28 @@ local function on_entity_died(e)
   end
 end
 
+local function on_research_finished(e)
+  local unlock_index = unlock_technologies[e.research.name]
+  if not unlock_index then
+    return
+  end
+  local filters = {
+    {filter = "enabled", invert = true},
+    {filter = "research-unit-ingredient", ingredient = e.research.name, mode = "and"},
+  }
+  for name, index in pairs(unlock_technologies) do
+    if index > unlock_index then
+      filters[#filters + 1] = {
+        filter = "research-unit-ingredient",
+        ingredient = name, invert = true, mode = "and",
+      }
+    end
+  end
+  for name, _ in pairs(game.get_filtered_technology_prototypes(filters)) do
+    e.research.force.technologies[name].enabled = true
+  end
+end
+
 script.on_event(defines.events.on_player_created, on_player_created)
 script.on_event(defines.events.on_player_main_inventory_changed, set_player_status)
 script.on_event(defines.events.on_player_dropped_item, set_player_status)
@@ -90,3 +116,4 @@ script.on_event(defines.events.on_pre_player_crafted_item, set_player_status)
 script.on_event(defines.events.on_player_mined_entity, on_mined_entity)
 script.on_event(defines.events.on_robot_mined_entity, on_mined_entity)
 script.on_event(defines.events.on_entity_died, on_entity_died)
+script.on_event(defines.events.on_research_finished, on_research_finished)

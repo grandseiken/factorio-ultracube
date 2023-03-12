@@ -212,6 +212,12 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-fundamental-comprehension-card"},
+      {
+        type = "nothing",
+        icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+        icon_size = 64, icon_mipmaps = 4,
+        effect_description = {"effect-description.technology-unlock"},
+      },
     },
     prerequisites = {"cube-electronics", "cube-n-dimensional-widgets"},
     unit = {
@@ -241,7 +247,8 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-0-0"
+    order = "2-0-0",
+    enabled = false,
   },
   {
     type = "technology",
@@ -262,6 +269,7 @@ data:extend({
       time = 20,
     },
     order = "2-1-0",
+    enabled = false,
   },
   {
     type = "technology",
@@ -291,7 +299,8 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-0"
+    order = "2-2-0",
+    enabled = false,
   },
   {
     type = "technology",
@@ -320,7 +329,8 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-1"
+    order = "2-2-1",
+    enabled = false,
   },
   {
     type = "technology",
@@ -349,7 +359,8 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-2"
+    order = "2-2-2",
+    enabled = false,
   },
 
   {
@@ -372,6 +383,7 @@ data:extend({
     },
     upgrade = true,
     order = "3-0-0",
+    enabled = false,
   },
   {
     type = "technology",
@@ -393,6 +405,7 @@ data:extend({
     },
     upgrade = true,
     order = "3-0-1",
+    enabled = false,
   },
   {
     type = "technology",
@@ -413,6 +426,7 @@ data:extend({
       time = 20,
     },
     order = "3-0-1",
+    enabled = false,
   },
   {
     type = "technology",
@@ -434,5 +448,6 @@ data:extend({
       time = 20,
     },
     order = "3-1-0",
+    enabled = false,
   },
 })
