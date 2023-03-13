@@ -240,7 +240,7 @@ data:extend({
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit =
     {
-      count = 120,
+      count = 60,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -315,7 +315,7 @@ data:extend({
     prerequisites = {"cube-recovery-bay", "cube-synthesizer", "cube-fundamental-comprehension-card"},
     unit =
     {
-      count = 120,
+      count = 60,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},

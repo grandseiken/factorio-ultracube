@@ -35,7 +35,7 @@ data:extend({
     icon_mipmaps = 4,
     subgroup = "cube-synthesis-basics",
     order = "0[a-matter-0]",
-    stack_size = 100,
+    stack_size = 200,
   },
   {
     type = "item",
