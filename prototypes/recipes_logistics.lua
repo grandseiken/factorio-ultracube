@@ -92,7 +92,7 @@ data:extend({
     type = "recipe",
     name = "cube-transport-belt-2",
     ingredients = {
-      {"cube-semiregular-lattice", 10},
+      {"cube-basic-matter-unit", 20},
       {"cube-basic-motor-unit", 10},
     },
     results = {{"express-transport-belt", 4}},
@@ -105,7 +105,7 @@ data:extend({
     name = "cube-underground-belt-2",
     ingredients = {
       {"express-transport-belt", 10},
-      {"cube-semiregular-lattice", 10},
+      {"cube-basic-matter-unit", 20},
     },
     results = {{"express-underground-belt", 2}},
     energy_required = 1,
@@ -150,8 +150,7 @@ data:extend({
     type = "recipe",
     name = "cube-big-electric-pole",
     ingredients = {
-      {"cube-basic-matter-unit", 20},
-      {"cube-semiregular-lattice", 10},
+      {"cube-basic-matter-unit", 40},
       {"copper-cable", 4},
     },
     results = {{"big-electric-pole", 1}},
@@ -164,8 +163,7 @@ data:extend({
     name = "cube-substation",
     ingredients = {
       {"big-electric-pole", 1},
-      {"cube-basic-matter-unit", 50},
-      {"cube-semiregular-lattice", 10},
+      {"cube-basic-matter-unit", 80},
       {"copper-cable", 16},
     },
     results = {{"substation", 1}},

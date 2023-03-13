@@ -139,9 +139,9 @@ data.raw["unit-spawner"]["spitter-spawner"].autoplace = nil
 --       hypercube can be used in trains for lols
 
 -- TODO: storylore tooltips!
--- TODO: rework lattice. Bit pointless right now. More complications.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
+-- TODO: some cube process that outputs random / multiple products.
 -- TODO: something that requires _dormant_ cube? Tooltip: for safety, must be done while indisposed to avoid adverse reactions.
 -- TODO: some sort of weird biter farmer spawning synthesis.
 -- TODO: late game forbidden tech. Experiments on cube. Suffering

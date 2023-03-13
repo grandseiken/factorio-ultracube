@@ -240,7 +240,7 @@ data:extend({
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit =
     {
-      count = 30,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -261,7 +261,7 @@ data:extend({
     },
     prerequisites = {"cube-inserters", "cube-fundamental-comprehension-card"},
     unit = {
-      count = 60,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -279,6 +279,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-crusher"},
       {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
+      {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit =
@@ -344,7 +345,7 @@ data:extend({
     prerequisites = {"cube-matter-replication"},
     unit =
     {
-      count = 120,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -374,7 +375,7 @@ data:extend({
     prerequisites = {"cube-matter-replication"},
     unit =
     {
-      count = 120,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},

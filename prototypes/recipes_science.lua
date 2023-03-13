@@ -29,7 +29,7 @@ data:extend({
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
@@ -38,7 +38,7 @@ data:extend({
     },
     energy_required = 1,
     category = "cube-synthesizer",
-    subgroup = "cube-knowledge",
+    subgroup = "cube-synthesis-science",
     order = "0[b-contemplation-1]",
     always_show_made_in = true,
     allow_decomposition = false,
@@ -49,11 +49,11 @@ data:extend({
     type = "recipe",
     name = "cube-fundamental-comprehension-card",
     ingredients = {
-      {"cube-electronic-circuit", 4},
+      {"cube-electronic-circuit", 6},
       {"cube-n-dimensional-widget", 1},
     },
     results = {{"cube-fundamental-comprehension-card", 1}},
-    energy_required = 10,
+    energy_required = 12,
     category = "cube-fabricator",
     enabled = false,
   },

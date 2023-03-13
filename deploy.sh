@@ -1,7 +1,11 @@
 #!/bin/bash
 set -e
 if [ -z "$1" ]; then
-  FACTORIO_DIR="${HOME}/.factorio"
+  if [[ "$OSTYPE" == "msys" ]]; then
+    FACTORIO_DIR="${APPDATA}/Factorio"
+  else
+    FACTORIO_DIR="${HOME}/.factorio"
+  fi
 else
   FACTORIO_DIR="$1"
 fi

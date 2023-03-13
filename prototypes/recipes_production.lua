@@ -100,8 +100,7 @@ data:extend({
     type = "recipe",
     name = "cube-recovery-bay",
     ingredients = {
-      {"cube-basic-matter-unit", 150},
-      {"cube-semiregular-lattice", 50},
+      {"cube-basic-matter-unit", 250},
       {"cube-n-dimensional-widget", 5},
     },
     results = {{"cube-recovery-bay", 1}},
@@ -113,8 +112,7 @@ data:extend({
     type = "recipe",
     name = "cube-synthesizer",
     ingredients = {
-      {"cube-basic-matter-unit", 200},
-      {"cube-semiregular-lattice", 200},
+      {"cube-basic-matter-unit", 600},
       {"cube-n-dimensional-widget", 20},
     },
     results = {{"cube-synthesizer", 1}},
