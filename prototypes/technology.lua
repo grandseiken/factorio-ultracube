@@ -214,8 +214,16 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-fundamental-comprehension-card"},
       {
         type = "nothing",
-        icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-        icon_size = 64, icon_mipmaps = 4,
+        icons = {
+          {
+            icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+            icon_size = 64, icon_mipmaps = 4,
+          },
+          {
+            icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
+            icon_size = 64, icon_mipmaps = 2,
+          }
+        },
         effect_description = {"effect-description.technology-unlock"},
       },
     },
@@ -228,7 +236,6 @@ data:extend({
     order = "1-3-0",
   },
 
-  -- TODO: below here are draft techs.
   {
     type = "technology",
     name = "cube-electric-energy-distribution-1",

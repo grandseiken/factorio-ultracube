@@ -3,9 +3,6 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: useless stone/coal/wood/etc from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
--- TODO: add some cool light/effect to whatever is holding the cube. Maybe matter explosions.
--- TODO: if possible, causality induction to retrieve cube. Maybe later allow in recovery bay
---       as a cube teleport logistic option. Or teleport building somehow.
 
 -- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
 --       enriched ore has better product ratio but worse cube ratio
@@ -30,7 +27,8 @@ require("prototypes.scripts.autoplace")
 -- TODO: some cube process that outputs random / multiple products.
 -- TODO: something that requires _dormant_ cube? Tooltip: for safety, must be done while indisposed to avoid adverse reactions.
 -- TODO: some sort of weird biter farmer spawning synthesis.
--- TODO: late game forbidden tech. Experiments on cube. Suffering
+-- TODO: late game forbidden tech. Experiments on cube. Suffering.
+-- TODO: some sort of teleport cube logistics option.
 
 -- TODO: (further on) basic antimatter unit. Basic dark matter unit.
 -- TODO: some joke with hydroxyl group vs abelian group.

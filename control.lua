@@ -1,13 +1,10 @@
+require("scripts.cube_fx")
 require("scripts.cube_management")
 require("scripts.tech_unlock")
 
 local function on_init()
-  if not remote.interfaces.freeplay then
-    return
-  end
-
   -- Disable starting things.
-  if remote.interfaces["freeplay"] then
+  if remote.interfaces.freeplay then
     remote.call("freeplay", "set_disable_crashsite", true)
     remote.call("freeplay", "set_created_items", {
       ["cube-synthesizer"] = 1,
@@ -15,7 +12,6 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
-  initialise_cube_management()
   for _, force in pairs(game.forces) do
     sync_unlock_technologies(force)
   end
@@ -25,9 +21,9 @@ script.on_init(on_init)
 script.on_configuration_changed(on_init)
 
 local function on_player_created(e)
-  if not global["cube_given"] then
-    global["cube_given"] = true
-    game.players[e.player_index].insert("cube-ultradense-utility-cube")
+  if not global.cube_given then
+    global.cube_given = true
+    game.players[e.player_index].insert(cubes.ultradense)
   end
 end
 
@@ -59,4 +55,8 @@ script.on_event(defines.events.on_entity_died, on_entity_died)
 
 script.on_event(defines.events.on_research_finished, function(e)
   unlock_technologies(e.research.force, e.research.name, true)
+end)
+
+script.on_event(defines.events.on_tick, function(e)
+  cube_fx_tick(e.tick)
 end)

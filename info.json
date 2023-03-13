@@ -5,7 +5,7 @@
   "author": "grand",
   "contact": "s+factorio@stu.scot",
   "homepage": "https://github.com/grandseiken/factorio-hypercube",
-  "factorio_version": "1.1",
+  "factorio_version": "1.1.77",
   "dependencies": [
     "base >= 1.1",
     "Krastorio2Assets >= 1.2"

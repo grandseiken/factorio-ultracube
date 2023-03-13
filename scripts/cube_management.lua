@@ -1,47 +1,70 @@
-local heavy_items = {
-  "cube-ultradense-utility-cube",
-  "cube-dormant-utility-cube",
+cubes = {
+  ultradense = "cube-ultradense-utility-cube",
+  dormant = "cube-dormant-utility-cube",
 }
 
-function initialise_cube_management()
-  local heavy_recipes = {}
-  for name, recipe in pairs(game.recipe_prototypes) do
-    local count = 0.0
-    for _, ingredient in ipairs(recipe.ingredients) do
-      for _, item in ipairs(heavy_items) do
-        if item == ingredient.name then
-          count = count + ingredient.amount
-          break
+cube_info = {
+  [cubes.ultradense] = {},
+  [cubes.dormant] = {},
+}
+
+local cube_recipes_cache = nil
+
+function cube_recipes()
+  if not cube_recipes_cache then
+    cube_recipes_cache = {}
+    for name, recipe in pairs(game.recipe_prototypes) do
+      local data = {total = 0}
+      for _, ingredient in ipairs(recipe.ingredients) do
+        if cube_info[ingredient.name] then
+          data.total = data.total + ingredient.amount
+          data[ingredient.name] = ingredient.amount
+        end
+      end
+      if data.total > 0 then
+        cube_recipes_cache[name] = data
+      end
+    end
+  end
+  return cube_recipes_cache
+end
+
+function player_cube_data(player)
+  local data = {total = 0}
+  for _, item in pairs(cubes) do
+    local count = player.get_item_count(item)
+    if count > 0 then
+      data.total = data.total + count
+      data[item] = count
+    end
+  end
+  local recipes = cube_recipes()
+  if player.crafting_queue then
+    for _, craft in ipairs(player.crafting_queue) do
+      local d = recipes[craft.recipe]
+      if d then
+        for k, v in ipairs(d) do
+          data[k] = (data[k] or 0) + v
         end
       end
     end
-    if count > 0.0 then
-      heavy_recipes[name] = count
-    end
   end
-  global["heavy_recipes"] = heavy_recipes
+  return data
 end
 
 function update_player_cube_status(player_index)
+  -- TODO: same for logistics bots.
   local player = game.players[player_index]
-  local count = 0.0
-  for _, item in ipairs(heavy_items) do
-    count = count + player.get_item_count(item)
-  end
-  local heavy_recipes = global["heavy_recipes"]
-  if player.crafting_queue then
-    for _, craft in ipairs(player.crafting_queue) do
-      if heavy_recipes[craft.recipe] then
-        count = count + heavy_recipes[craft.recipe]
-      end
-    end
-  end
-  player.character_running_speed_modifier = -1.0 + 0.5^count
+  player.character_running_speed_modifier = -1.0 + 0.5^player_cube_data(player).total
+end
+
+function is_entity_burning_fuel(entity, fuel_item)
+  return entity.burner and entity.burner.currently_burning and
+         entity.burner.currently_burning.name == fuel_item
 end
 
 function return_cube_fuel(entity, inventory)
-  if entity.burner and entity.burner.currently_burning and
-     entity.burner.currently_burning.name == "cube-ultradense-utility-cube" then
-    inventory.insert("cube-dormant-utility-cube")
+  if is_entity_burning_fuel(entity, cubes.ultradense) then
+    inventory.insert(cubes.dormant)
   end
 end

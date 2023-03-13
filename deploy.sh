@@ -13,7 +13,7 @@ fi
 DIR="$(dirname "$(readlink -f "$0")")"
 NAME=$(basename "${DIR}")
 MODS="${FACTORIO_DIR}/mods"
-REGEX=".*/LICENSE$\|.*\.lua$\|.*\.cfg$\|.*\.json$\|.*\.md$"
+REGEX=".*/LICENSE$\|.*\.lua$\|.*\.cfg$\|.*\.png\|.*\.json$\|.*\.md$"
 MODNAME=$(jq -r .name "${DIR}/info.json")
 VERSION=$(jq -r .version "${DIR}/info.json")
 ZIPNAME="${MODNAME}_${VERSION}.zip"
