@@ -248,7 +248,6 @@ data:extend({
       time = 20,
     },
     order = "2-0-0",
-    enabled = false,
   },
   {
     type = "technology",
@@ -269,7 +268,6 @@ data:extend({
       time = 20,
     },
     order = "2-1-0",
-    enabled = false,
   },
   {
     type = "technology",
@@ -292,7 +290,6 @@ data:extend({
       time = 20,
     },
     order = "2-2-0",
-    enabled = false,
   },
   {
     type = "technology",
@@ -323,7 +320,6 @@ data:extend({
       time = 20,
     },
     order = "2-3-0",
-    enabled = false,
   },
   {
     type = "technology",
@@ -353,7 +349,6 @@ data:extend({
       time = 20,
     },
     order = "2-3-1",
-    enabled = false,
   },
   {
     type = "technology",
@@ -383,7 +378,6 @@ data:extend({
       time = 20,
     },
     order = "2-3-2",
-    enabled = false,
   },
 
   {
@@ -406,7 +400,6 @@ data:extend({
     },
     upgrade = true,
     order = "3-0-0",
-    enabled = false,
   },
   {
     type = "technology",
@@ -428,7 +421,6 @@ data:extend({
     },
     upgrade = true,
     order = "3-0-1",
-    enabled = false,
   },
   {
     type = "technology",
@@ -449,7 +441,6 @@ data:extend({
       time = 20,
     },
     order = "3-0-1",
-    enabled = false,
   },
   {
     type = "technology",
@@ -471,6 +462,5 @@ data:extend({
       time = 20,
     },
     order = "3-1-0",
-    enabled = false,
   },
 })

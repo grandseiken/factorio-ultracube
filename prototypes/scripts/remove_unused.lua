@@ -84,10 +84,6 @@ for _, t in pairs(data.raw.fluid) do
   end
 end
 
-for _, t in pairs(data.raw.technology) do
-  t.enabled = false
-end
-
 for _, t in pairs(data.raw.recipe) do
   t.enabled = false
   if t.normal then

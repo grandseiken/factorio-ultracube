@@ -61,3 +61,7 @@ require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
+
+for _, t in pairs(data.raw.technology) do
+  t.enabled = false
+end
