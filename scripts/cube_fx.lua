@@ -7,9 +7,8 @@ local function cube_search_full(surface)
   local result = {}
   for _, item in pairs(cubes) do
     local search_inventory_parameters = {
-      -- TODO: does limiting types make this faster?
-      has_item_inside = game.item_prototypes[item],
       force = "player",
+      has_item_inside = game.item_prototypes[item],
     }
     for _, e in ipairs(surface.find_entities_filtered(search_inventory_parameters)) do
       result[#result + 1] = {
@@ -73,9 +72,12 @@ local function cube_search_full(surface)
 end
 
 local function get_cube_fx_source(result)
-  local source = {height = 0}
-  source.entity = result.entity
-  source.position = result.entity.position
+  local source = {
+    item = result.item,
+    entity = result.entity,
+    position = result.entity.position,
+    height = 0,
+  }
   if result.entity.type == "character" then
     source.height = 0.5
   end
@@ -111,10 +113,14 @@ end
 local function cube_boom(surface, results)
   for _, r in ipairs(results) do
     local source = get_cube_fx_source(r)
-    if not source then
-      goto continue
-    end
-    if source.velocity then
+    if source.item == cubes.dormant then
+      surface.create_entity {
+        name = "cube-periodic-dormant-explosion",
+        source = source.entity,
+        position = source.position,
+        target = source.position,
+      }
+    elseif source.velocity then
       surface.create_entity {
         name = "cube-periodic-ultradense-projectile",
         source = source.entity,
@@ -131,29 +137,27 @@ local function cube_boom(surface, results)
         target = source.position,
       }
     end
-    ::continue::
   end
 end
 
 local function cube_spark(surface, results)
   for _, r in ipairs(results) do
     local source = get_cube_fx_source(r)
-    if not source.entity or source.height < 0 then
-      goto continue
+    if source.height >= 0 and not (source.item == cubes.dormant) then
+      surface.create_entity {
+        name = source.height > 0 and "cube-periodic-ultradense-high-spark" or "cube-periodic-ultradense-low-spark",
+        source = source.entity,
+        position = source.position,
+        target = source.position,
+      }
     end
-    surface.create_entity {
-      name = source.height > 0 and "cube-periodic-ultradense-high-spark" or "cube-periodic-ultradense-low-spark",
-      source = source.entity,
-      position = source.position,
-      target = source.position,
-    }
-    ::continue::
   end
 end
 
+-- TODO: show on map somehow.
 function cube_fx_tick(tick)
   local cube_results = nil
-  local spark_tick = tick % 6 == 0 and tick % 240 >= 120
+  local spark_tick = tick % 6 == 0 and tick % 240 >= 120 and tick % 240 < 234
   local boom_tick = tick % 240 == 0
   if spark_tick or boom_tick then
     cube_results = cube_search_full(game.surfaces[1])
