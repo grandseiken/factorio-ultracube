@@ -1,3 +1,11 @@
+function make_set(array)
+  local r = {}
+  for _, v in ipairs(array) do
+    r[v] = true
+  end
+  return r
+end
+
 function from_polar(r, theta)
   return {x = r * math.cos(theta), y = r * math.sin(theta)}
 end

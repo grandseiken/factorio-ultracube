@@ -1,6 +1,12 @@
-cubes = {
+cube_defines = {
   ultradense = "cube-ultradense-utility-cube",
   dormant = "cube-dormant-utility-cube",
+  fuel_category = "cube-cube",
+}
+
+cubes = {
+  ultradense = cube_defines.ultradense,
+  dormant = cube_defines.dormant,
 }
 
 cube_info = {
@@ -9,16 +15,15 @@ cube_info = {
 }
 
 local cube_recipes_cache = nil
-
 function cube_recipes()
   if not cube_recipes_cache then
     cube_recipes_cache = {}
     for name, recipe in pairs(game.recipe_prototypes) do
-      local data = {total = 0}
+      local data = {recipe = recipe, total = 0, ingredients = {}}
       for _, ingredient in ipairs(recipe.ingredients) do
         if cube_info[ingredient.name] then
           data.total = data.total + ingredient.amount
-          data[ingredient.name] = ingredient.amount
+          data.ingredients[ingredient.name] = ingredient.amount
         end
       end
       if data.total > 0 then
@@ -29,22 +34,34 @@ function cube_recipes()
   return cube_recipes_cache
 end
 
+local cube_recipe_categories_cache = nil
+function cube_recipe_categories()
+  if not cube_recipe_categories_cache then
+    cube_recipe_categories_cache = {}
+    for _, data in pairs(cube_recipes()) do
+      cube_recipe_categories_cache[data.recipe.category] = true
+    end
+  end
+  return cube_recipe_categories_cache
+end
+
 function player_cube_data(player)
-  local data = {total = 0}
+  local data = {total = 0, ingredients = {}}
   for _, item in pairs(cubes) do
     local count = player.get_item_count(item)
     if count > 0 then
       data.total = data.total + count
-      data[item] = count
+      data.ingredients[item] = count
     end
   end
   local recipes = cube_recipes()
   if player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
-      local d = recipes[craft.recipe]
-      if d then
-        for k, v in ipairs(d) do
-          data[k] = (data[k] or 0) + v
+      local recipe = recipes[craft.recipe]
+      if recipe then
+        data.total = data.total + recipe.total
+        for k, count in ipairs(recipe.ingredients) do
+          data.ingredients[k] = data.ingredients[k] + count
         end
       end
     end
