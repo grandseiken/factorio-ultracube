@@ -46,7 +46,7 @@ local function make_spark_explosion(name, height)
         source_effects = {
           {
             type = "create-particle",
-            particle_name = "pole-spark-particle",
+            particle_name = "cube-spark-particle",
             repeat_count = 4,
             repeat_count_deviation = 2,
             initial_height = height,
@@ -69,6 +69,39 @@ end
 data:extend({
   make_spark_explosion("cube-periodic-ultradense-high-spark", 0.75),
   make_spark_explosion("cube-periodic-ultradense-low-spark", 0.125),
+
+  {
+    type = "optimized-particle",
+    name = "cube-spark-particle",
+    life_time = 20,
+    fade_away_duration = 8,
+    render_layer = "wires-above",
+    render_layer_when_on_ground = "corpse",
+    pictures = {
+      sheet = {
+        filename = "__base__/graphics/particle/pole-sparks/pole-sparks.png",
+        draw_as_glow = true,
+        line_length = 12,
+        width = 4,
+        height = 4,
+        frame_count = 12,
+        variation_count = 3,
+        shift = util.by_pixel(0,0),
+        hr_version = {
+          filename = "__base__/graphics/particle/pole-sparks/hr-pole-sparks.png",
+          draw_as_glow = true,
+          line_length = 12,
+          width = 6,
+          height = 6,
+          frame_count = 12,
+          variation_count = 3,
+          scale = 0.5,
+          shift = util.by_pixel(0,0)
+        }
+      }
+    },
+    movement_modifier_when_on_ground = 0,
+  },
   {
     type = "explosion",
     name = "cube-periodic-dormant-explosion",

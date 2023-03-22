@@ -10,10 +10,7 @@ local transport_line_entity_types = make_set({
 })
 
 local inventory_entity_types = make_set({
-  "assembling-machine",
-  "furnace",
   "reactor",
-  "rocket-silo",
   "lab",
   "car",
   "locomotive",

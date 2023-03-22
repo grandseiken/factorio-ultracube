@@ -37,7 +37,15 @@ local function cube_search_crafters(result_set, cache, item)
         add_result(result_set, item, e)
       end
     end
-    local output_inventory = e.get_output_inventory()
+    local inventory = e.get_inventory(defines.inventory.furnace_source)
+    if inventory and inventory.get_item_count(item) > 0 then
+      add_result(result_set, item, e)
+    end
+    inventory = e.get_inventory(defines.inventory.assembling_machine_input)
+    if inventory and inventory.get_item_count(item) > 0 then
+      add_result(result_set, item, e)
+    end
+    output_inventory = e.get_output_inventory()
     if output_inventory and output_inventory.get_item_count(item) > 0 then
       add_result(result_set, item, e)
     end
