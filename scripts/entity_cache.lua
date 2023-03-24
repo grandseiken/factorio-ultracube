@@ -2,6 +2,7 @@ require("scripts.lib")
 require("scripts.cube_management")
 
 local entity_cache = nil
+local chunk_size = 16
 
 function refresh_entity_cache()
   global.entity_cache = {
@@ -88,51 +89,55 @@ local function is_cube_burner(entity)
 end
 
 local function get_entity_chunk_index(entity)
-  return nil -- TODO
+  if vehicle_entity_types[entity.type] then
+    return nil
+  end
+  return entity.surface_index ..
+      "_" .. math.floor(entity.position.x / chunk_size) ..
+      "_" .. math.floor(entity.position.y / chunk_size)
 end
 
 function add_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
-    entity_cache.transport_lines[entity.unit_number] = entity
+    cache.transport_lines[entity.unit_number] = entity
   end
   if inventory_entity_types[entity.type] then
-    entity_cache.inventories[entity.unit_number] = entity
+    cache.inventories[entity.unit_number] = entity
   end
   if is_cube_crafter(entity) then
-    entity_cache.cube_crafters[entity.unit_number] = entity
+    cache.cube_crafters[entity.unit_number] = entity
   end
   if is_cube_burner(entity) then
-    entity_cache.cube_burners[entity.unit_number] = entity
+    cache.cube_burners[entity.unit_number] = entity
   end
   if entity.type == "inserter" then
-    entity_cache.inserters[entity.unit_number] = entity
+    cache.inserters[entity.unit_number] = entity
   end
-  if vehicle_entity_types[entity.type] then
-    entity_cache.vehicles[entity.unit_number] = entity
+  if is_global and vehicle_entity_types[entity.type] then
+    cache.vehicles[entity.unit_number] = entity
   end
 end
 
 function remove_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
-    entity_cache.transport_lines[entity.unit_number] = nil
+    cache.transport_lines[entity.unit_number] = nil
   end
   if inventory_entity_types[entity.type] then
-    entity_cache.inventories[entity.unit_number] = nil
+    cache.inventories[entity.unit_number] = nil
   end
   if is_cube_crafter(entity) then
-    entity_cache.cube_crafters[entity.unit_number] = nil
+    cache.cube_crafters[entity.unit_number] = nil
   end
   if is_cube_burner(entity) then
-    entity_cache.cube_burners[entity.unit_number] = nil
+    cache.cube_burners[entity.unit_number] = nil
   end
   if entity.type == "inserter" then
-    entity_cache.inserters[entity.unit_number] = nil
+    cache.inserters[entity.unit_number] = nil
   end
-  if vehicle_entity_types[entity.type] then
-    entity_cache.vehicles[entity.unit_number] = nil
+  if is_global and vehicle_entity_types[entity.type] then
+    cache.vehicles[entity.unit_number] = nil
   end
 end
-
 
 function add_entity_cache(entity)
   add_entity_cache_internal(entity, entity_cache, true)
@@ -140,10 +145,16 @@ function add_entity_cache(entity)
   if chunk_index then
     local chunk_cache = entity_cache.chunk_map[chunk_index]
     if not chunk_cache then
-      chunk_cache = {}
+      chunk_cache = {
+        transport_lines = {},
+        inventories = {},
+        cube_crafters = {},
+        cube_burners = {},
+        inserters = {},
+      }
       entity_cache.chunk_map[chunk_index] = chunk_cache
     end
-    add_entity_cache_internal(entity, chunk_cache, true)
+    add_entity_cache_internal(entity, chunk_cache, false)
   end
 end
 
