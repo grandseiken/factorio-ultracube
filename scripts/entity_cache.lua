@@ -12,10 +12,6 @@ local transport_line_entity_types = make_set({
 local inventory_entity_types = make_set({
   "reactor",
   "lab",
-  "car",
-  "locomotive",
-  "cargo-wagon",
-  "spider-vehicle",
   "container",
   "logistic-container",
   "infinity-container",
@@ -44,6 +40,13 @@ local cube_burner_entity_types = make_set({
   "mining-drill",
   "car",
   "locomotive",
+  "spider-vehicle",
+})
+
+local vehicle_entity_types = make_set({
+  "car",
+  "locomotive",
+  "cargo-wagon",
   "spider-vehicle",
 })
 
@@ -80,6 +83,9 @@ function add_entity_cache(entity)
   if entity.type == "inserter" then
     entity_cache.inserters[entity.unit_number] = entity
   end
+  if vehicle_entity_types[entity.type] then
+    entity_cache.vehicles[entity.unit_number] = entity
+  end
 end
 
 function remove_entity_cache(entity)
@@ -98,6 +104,9 @@ function remove_entity_cache(entity)
   if entity.type == "inserter" then
     entity_cache.inserters[entity.unit_number] = nil
   end
+  if vehicle_entity_types[entity.type] then
+    entity_cache.vehicles[entity.unit_number] = nil
+  end
 end
 
 function refresh_entity_cache()
@@ -107,6 +116,7 @@ function refresh_entity_cache()
     cube_crafters = {},
     cube_burners = {},
     inserters = {},
+    vehicles = {},
   }
   entity_cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do

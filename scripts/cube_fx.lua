@@ -26,6 +26,12 @@ local function cube_search_inventories(result_set, cache, item)
       add_result(result_set, item, e)
     end
   end
+  for _, e in pairs(cache.vehicles) do
+    local inventory = e.get_main_inventory()
+    if inventory and inventory.get_item_count(item) > 0 then
+      add_result(result_set, item, e)
+    end
+  end
 end
 
 local function cube_search_crafters(result_set, cache, item)

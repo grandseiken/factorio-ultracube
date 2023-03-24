@@ -29,6 +29,15 @@ script.on_init(on_init)
 script.on_configuration_changed(on_init)
 
 script.on_event(
+  defines.events.on_console_command,
+  function (e)
+    if e.command == "cube-refresh" then
+      on_init()
+      game.print("Refreshed data.")
+    end
+  end)
+
+script.on_event(
   defines.events.on_player_created,
   function(e)
     if not global.cube_given then
