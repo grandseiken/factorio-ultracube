@@ -1,6 +1,17 @@
 require("scripts.lib")
 require("scripts.cube_management")
 
+local cube_fx_data = nil
+
+function refresh_cube_fx_data()
+  global.cube_fx_data = {}
+  cube_fx_data = global.cube_fx_data
+end
+
+function cube_fx_data_on_load()
+  cube_fx_data = global.cube_fx_data
+end
+
 local function add_result(result_set, item, entity)
   result_set[#result_set + 1] = {
     item = item,
@@ -21,12 +32,6 @@ end
 
 local function cube_search_inventories(result_set, cache, item)
   for _, e in pairs(cache.inventories) do
-    local inventory = e.get_main_inventory()
-    if inventory and inventory.get_item_count(item) > 0 then
-      add_result(result_set, item, e)
-    end
-  end
-  for _, e in pairs(cache.vehicles) do
     local inventory = e.get_main_inventory()
     if inventory and inventory.get_item_count(item) > 0 then
       add_result(result_set, item, e)
@@ -85,6 +90,29 @@ local function cube_search_inserters(result_set, cache, item)
   end
 end
 
+local function cube_search_vehicles(result_set, cache, item)
+  for _, e in pairs(cache.vehicles) do
+    local inventory = e.get_main_inventory()
+    if inventory and inventory.get_item_count(item) > 0 then
+      add_result(result_set, item, e)
+    end
+    if e.type ~= "cargo-wagon" then
+      if item == cubes.ultradense then
+        local fuel_inventory = e.get_fuel_inventory()
+        if is_entity_burning_fuel(e, cubes.ultradense) or
+          (fuel_inventory and fuel_inventory.get_item_count(cubes.ultradense) > 0) then
+          add_result(result_set, cubes.ultradense, e)
+        end
+      elseif item == cubes.dormant then
+        local burnt_result_inventory = e.get_burnt_result_inventory()
+        if burnt_result_inventory and burnt_result_inventory.get_item_count(cubes.dormant) > 0 then
+          add_result(result_set, cubes.dormant, e)
+        end
+      end
+    end
+  end
+end
+
 local function cube_search_players(result_set, item)
   for _, player in pairs(game.players) do
     if player.character then
@@ -115,6 +143,7 @@ local function cube_search_full(item)
   cube_search_crafters(result_set, cache, item)
   cube_search_burners(result_set, cache, item)
   cube_search_inserters(result_set, cache, item)
+  cube_search_vehicles(result_set, cache, item)
   cube_search_players(result_set, item)
   cube_search_ground(result_set, item)
   return result_set

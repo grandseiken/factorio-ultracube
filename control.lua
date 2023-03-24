@@ -5,6 +5,7 @@ require("scripts.tech_unlock")
 
 local function on_load()
   entity_cache_on_load()
+  cube_fx_data_on_load()
 end
 
 local function on_init()
@@ -18,6 +19,7 @@ local function on_init()
   end
 
   refresh_entity_cache()
+  refresh_cube_fx_data()
   for _, force in pairs(game.forces) do
     sync_unlock_technologies(force)
   end
@@ -28,13 +30,11 @@ script.on_load(on_load)
 script.on_init(on_init)
 script.on_configuration_changed(on_init)
 
-script.on_event(
-  defines.events.on_console_command,
-  function (e)
-    if e.command == "cube-refresh" then
-      on_init()
-      game.print("Refreshed data.")
-    end
+commands.add_command(
+  "cube_refresh", nil,
+  function()
+    on_init()
+    game.print("Refreshed data.")
   end)
 
 script.on_event(

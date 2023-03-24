@@ -3,6 +3,32 @@ require("scripts.cube_management")
 
 local entity_cache = nil
 
+function refresh_entity_cache()
+  global.entity_cache = {
+    chunk_map = {},
+    transport_lines = {},
+    inventories = {},
+    cube_crafters = {},
+    cube_burners = {},
+    inserters = {},
+    vehicles = {},
+  }
+  entity_cache = global.entity_cache
+  for _, surface in pairs(game.surfaces) do
+    for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
+      add_entity_cache(entity)
+    end
+  end
+end
+
+function entity_cache_on_load()
+  entity_cache = global.entity_cache
+end
+
+function get_entity_cache()
+  return entity_cache
+end
+
 local transport_line_entity_types = make_set({
   "transport-belt",
   "underground-belt",
@@ -16,9 +42,6 @@ local inventory_entity_types = make_set({
   "logistic-container",
   "infinity-container",
   "character-corpse",
-  "transport-belt",
-  "underground-belt",
-  "splitter",
 })
 
 local cube_crafter_entity_types = make_set({
@@ -38,9 +61,6 @@ local cube_burner_entity_types = make_set({
   "generator",
   "lab",
   "mining-drill",
-  "car",
-  "locomotive",
-  "spider-vehicle",
 })
 
 local vehicle_entity_types = make_set({
@@ -67,7 +87,11 @@ local function is_cube_burner(entity)
          entity.prototype.burner_prototype.fuel_categories[cube_defines.fuel_category]
 end
 
-function add_entity_cache(entity)
+local function get_entity_chunk_index(entity)
+  return nil -- TODO
+end
+
+function add_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
     entity_cache.transport_lines[entity.unit_number] = entity
   end
@@ -88,7 +112,7 @@ function add_entity_cache(entity)
   end
 end
 
-function remove_entity_cache(entity)
+function remove_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
     entity_cache.transport_lines[entity.unit_number] = nil
   end
@@ -109,27 +133,27 @@ function remove_entity_cache(entity)
   end
 end
 
-function refresh_entity_cache()
-  global.entity_cache = {
-    transport_lines = {},
-    inventories = {},
-    cube_crafters = {},
-    cube_burners = {},
-    inserters = {},
-    vehicles = {},
-  }
-  entity_cache = global.entity_cache
-  for _, surface in pairs(game.surfaces) do
-    for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
-      add_entity_cache(entity)
+
+function add_entity_cache(entity)
+  add_entity_cache_internal(entity, entity_cache, true)
+  local chunk_index = get_entity_chunk_index(entity)
+  if chunk_index then
+    local chunk_cache = entity_cache.chunk_map[chunk_index]
+    if not chunk_cache then
+      chunk_cache = {}
+      entity_cache.chunk_map[chunk_index] = chunk_cache
     end
+    add_entity_cache_internal(entity, chunk_cache, true)
   end
 end
 
-function entity_cache_on_load()
-  entity_cache = global.entity_cache
-end
-
-function get_entity_cache()
-  return entity_cache
+function remove_entity_cache(entity)
+  remove_entity_cache_internal(entity, entity_cache, true)
+  local chunk_index = get_entity_chunk_index(entity)
+  if chunk_index then
+    local chunk_cache = entity_cache.chunk_map[chunk_index]
+    if chunk_cache then
+      remove_entity_cache_internal(entity, chunk_cache, false)
+    end
+  end
 end
