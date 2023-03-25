@@ -6,6 +6,8 @@ local chunk_size = 16
 
 function refresh_entity_cache()
   global.entity_cache = {
+    chunk_min = nil,
+    chunk_max = nil,
     chunk_map = {},
     transport_lines = {},
     inventories = {},
@@ -88,16 +90,7 @@ local function is_cube_burner(entity)
          entity.prototype.burner_prototype.fuel_categories[cube_defines.fuel_category]
 end
 
-local function get_entity_chunk_index(entity)
-  if vehicle_entity_types[entity.type] then
-    return nil
-  end
-  return entity.surface_index ..
-      "_" .. math.floor(entity.position.x / chunk_size) ..
-      "_" .. math.floor(entity.position.y / chunk_size)
-end
-
-function add_entity_cache_internal(entity, cache, is_global)
+local function add_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
     cache.transport_lines[entity.unit_number] = entity
   end
@@ -118,7 +111,7 @@ function add_entity_cache_internal(entity, cache, is_global)
   end
 end
 
-function remove_entity_cache_internal(entity, cache, is_global)
+local function remove_entity_cache_internal(entity, cache, is_global)
   if transport_line_entity_types[entity.type] then
     cache.transport_lines[entity.unit_number] = nil
   end
@@ -139,32 +132,66 @@ function remove_entity_cache_internal(entity, cache, is_global)
   end
 end
 
+function get_chunk_position(position)
+  return math.floor(position.x / chunk_size), math.floor(position.y / chunk_size)
+end
+
+function get_chunk_index(surface_index, chunk_x, chunk_y)
+  return surface_index .. "_" .. chunk_x .. "_" .. chunk_y
+end
+
 function add_entity_cache(entity)
   add_entity_cache_internal(entity, entity_cache, true)
-  local chunk_index = get_entity_chunk_index(entity)
-  if chunk_index then
-    local chunk_cache = entity_cache.chunk_map[chunk_index]
-    if not chunk_cache then
-      chunk_cache = {
-        transport_lines = {},
-        inventories = {},
-        cube_crafters = {},
-        cube_burners = {},
-        inserters = {},
-      }
-      entity_cache.chunk_map[chunk_index] = chunk_cache
-    end
-    add_entity_cache_internal(entity, chunk_cache, false)
+  if vehicle_entity_types[entity.type] then
+    return
   end
+
+  local chunk_x, chunk_y = get_chunk_position(entity.position)
+  local chunk_index = get_chunk_index(entity.surface_index, chunk_x, chunk_y)
+  local chunk_cache = entity_cache.chunk_map[chunk_index]
+  if not chunk_cache then
+    chunk_cache = {
+      transport_lines = {},
+      inventories = {},
+      cube_crafters = {},
+      cube_burners = {},
+      inserters = {},
+    }
+    entity_cache.chunk_map[chunk_index] = chunk_cache
+    if entity_cache.chunk_min then
+      entity_cache.chunk_min = {x = math.min(entity_cache.chunk_min.x, chunk_x),
+                                y = math.min(entity_cache.chunk_min.y, chunk_y)}
+    else
+      entity_cache.chunk_min = {x = chunk_x, y = chunk_y}
+    end
+    if entity_cache.chunk_max then
+      entity_cache.chunk_max = {x = math.min(entity_cache.chunk_max.x, chunk_x),
+                                y = math.min(entity_cache.chunk_max.y, chunk_y)}
+    else
+      entity_cache.chunk_max = {x = chunk_x, y = chunk_y}
+    end
+  end
+  add_entity_cache_internal(entity, chunk_cache, false)
 end
 
 function remove_entity_cache(entity)
   remove_entity_cache_internal(entity, entity_cache, true)
-  local chunk_index = get_entity_chunk_index(entity)
-  if chunk_index then
-    local chunk_cache = entity_cache.chunk_map[chunk_index]
-    if chunk_cache then
-      remove_entity_cache_internal(entity, chunk_cache, false)
+  if vehicle_entity_types[entity.type] then
+    return
+  end
+
+  local chunk_x, chunk_y = get_chunk_position(entity.position)
+  local chunk_index = get_chunk_index(entity.surface_index, chunk_x, chunk_y)
+  local chunk_cache = entity_cache.chunk_map[chunk_index]
+  if chunk_cache then
+    remove_entity_cache_internal(entity, chunk_cache, false)
+    local next = next
+    if next(chunk_cache.transport_lines) == nil and
+       next(chunk_cache.inventories) == nil and
+       next(chunk_cache.cube_crafters) == nil and
+       next(chunk_cache.cube_burners) == nil and
+       next(chunk_cache.inserters) == nil then
+      entity_cache.chunk_map[chunk_index] = nil
     end
   end
 end
