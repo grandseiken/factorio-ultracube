@@ -14,6 +14,9 @@ cube_info = {
   [cubes.dormant] = {},
 }
 
+local cubes = cubes
+local cube_info = cube_info
+
 local cube_recipes_cache = nil
 function cube_recipes()
   if not cube_recipes_cache then

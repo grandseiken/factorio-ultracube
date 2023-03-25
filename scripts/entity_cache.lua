@@ -1,6 +1,7 @@
 require("scripts.lib")
 require("scripts.cube_management")
 
+local cube_defines = cube_defines
 local entity_cache = nil
 local chunk_size = 16
 
@@ -32,48 +33,52 @@ function get_entity_cache()
   return entity_cache
 end
 
-local transport_line_entity_types = make_set({
-  "transport-belt",
-  "underground-belt",
-  "splitter",
-})
+entity_types = {
+  transport_line = make_set({
+    "transport-belt",
+    "underground-belt",
+    "splitter",
+  }),
+  inventory = make_set({
+    "reactor",
+    "lab",
+    "container",
+    "logistic-container",
+    "infinity-container",
+    "character-corpse",
+  }),
+  cube_crafter = make_set({
+    "furnace",
+    "assembling-machine",
+    "rocket-silo",
+  }),
+  cube_burner = make_set({
+    "inserter",
+    "assembling-machine",
+    "furnace",
+    "boiler",
+    "burner-generator",
+    "reactor",
+    "rocket-silo",
+    "generator",
+    "lab",
+    "mining-drill",
+  }),
+  vehicle = make_set({
+    "car",
+    "locomotive",
+    "cargo-wagon",
+    "spider-vehicle",
+  }),
+}
 
-local inventory_entity_types = make_set({
-  "reactor",
-  "lab",
-  "container",
-  "logistic-container",
-  "infinity-container",
-  "character-corpse",
-})
+local transport_line_entity_types = entity_types.transport_line
+local inventory_entity_types = entity_types.inventory
+local cube_crafter_entity_types = entity_types.cube_crafter
+local cube_burner_entity_types = entity_types.cube_burner
+local vehicle_entity_types = entity_types.vehicle
 
-local cube_crafter_entity_types = make_set({
-  "furnace",
-  "assembling-machine",
-  "rocket-silo",
-})
-
-local cube_burner_entity_types = make_set({
-  "inserter",
-  "assembling-machine",
-  "furnace",
-  "boiler",
-  "burner-generator",
-  "reactor",
-  "rocket-silo",
-  "generator",
-  "lab",
-  "mining-drill",
-})
-
-local vehicle_entity_types = make_set({
-  "car",
-  "locomotive",
-  "cargo-wagon",
-  "spider-vehicle",
-})
-
-local function is_cube_crafter(entity)
+function is_cube_crafter(entity)
   local categories = cube_recipe_categories()
   if cube_crafter_entity_types[entity.type] and entity.prototype.crafting_categories then
     for category, _ in pairs(entity.prototype.crafting_categories) do
@@ -85,16 +90,20 @@ local function is_cube_crafter(entity)
   return false
 end
 
-local function is_cube_burner(entity)
+function is_cube_burner(entity)
   return cube_burner_entity_types[entity.type] and entity.prototype.burner_prototype and
          entity.prototype.burner_prototype.fuel_categories[cube_defines.fuel_category]
 end
 
+local is_cube_crafter = is_cube_crafter
+local is_cube_burner = is_cube_burner
+
 local function add_entity_cache_internal(entity, cache, is_global)
-  if transport_line_entity_types[entity.type] then
+  local entity_type = entity.type
+  if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = entity
   end
-  if inventory_entity_types[entity.type] then
+  if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = entity
   end
   if is_cube_crafter(entity) then
@@ -103,19 +112,20 @@ local function add_entity_cache_internal(entity, cache, is_global)
   if is_cube_burner(entity) then
     cache.cube_burners[entity.unit_number] = entity
   end
-  if entity.type == "inserter" then
+  if entity_type == "inserter" then
     cache.inserters[entity.unit_number] = entity
   end
-  if is_global and vehicle_entity_types[entity.type] then
+  if is_global and vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = entity
   end
 end
 
 local function remove_entity_cache_internal(entity, cache, is_global)
-  if transport_line_entity_types[entity.type] then
+  local entity_type = entity.type
+  if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = nil
   end
-  if inventory_entity_types[entity.type] then
+  if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = nil
   end
   if is_cube_crafter(entity) then
@@ -124,10 +134,10 @@ local function remove_entity_cache_internal(entity, cache, is_global)
   if is_cube_burner(entity) then
     cache.cube_burners[entity.unit_number] = nil
   end
-  if entity.type == "inserter" then
+  if entity_type == "inserter" then
     cache.inserters[entity.unit_number] = nil
   end
-  if is_global and vehicle_entity_types[entity.type] then
+  if is_global and vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = nil
   end
 end
