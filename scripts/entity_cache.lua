@@ -18,8 +18,10 @@ function refresh_entity_cache()
   }
   entity_cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
-    for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
-      add_entity_cache(entity)
+    if surface and surface.valid then
+      for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
+        add_entity_cache(entity)
+      end
     end
   end
 end

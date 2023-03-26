@@ -356,16 +356,17 @@ local function cube_search_players(result_set)
 end
 
 local function cube_search_ground(result_set)
-  -- TODO: slowest search function by far, any way to speed it up?
   for _, surface in pairs(game.surfaces) do
-    local find_result = surface.find_entities_filtered {type = "item-entity"}
-    for _, e in ipairs(find_result) do
-      local item_name = e.stack.name
-      if item_name == cube_ultradense then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if item_name == cube_dormant then
-        if add_result(result_set, cube_dormant, e) then return true end
+    if surface and surface.valid then
+      local find_result = surface.find_entities_filtered {type = "item-entity"}
+      for _, e in ipairs(find_result) do
+        local item_name = e.stack.name
+        if item_name == cube_ultradense then
+          if add_result(result_set, cube_ultradense, e) then return true end
+        end
+        if item_name == cube_dormant then
+          if add_result(result_set, cube_dormant, e) then return true end
+        end
       end
     end
   end
@@ -428,8 +429,9 @@ local function cube_search_local(result_set, surface_index, position)
     end
     if i == 9 and cube_search_vehicles(result_set, cache) then return true end
   end
-  if surface_index <= #game.surfaces and game.surfaces[surface_index].valid then
-    local find_result = game.surfaces[surface_index].find_entities_filtered {
+  local surface = game.surfaces[surface_index]
+  if surface and surface.valid then
+    local find_result = surface.find_entities_filtered {
       type = "item-entity",
       area = {left_top = {x = (chunk_x - 1) * chunk_size, y = (chunk_y - 1) * chunk_size},
               right_bottom = {x = (chunk_x + 2) * chunk_size, y = (chunk_y + 2) * chunk_size}},
@@ -482,6 +484,15 @@ local function fill_cube_search_result(result)
         result.position = vector_add(result.position, i == 1 and {x = v.y, y = -v.x} or {x = -v.y, y = v.x})
       end
     end
+  end
+end
+
+function cube_search_hint_entity(entity)
+  if cube_check_entity(entity, {}) then
+    cube_search_data.last_tick = nil
+    cube_search_data.last_entity = entity
+    cube_search_data.last_position = entity.position
+    cube_search_data.last_surface_index = entity.surface_index
   end
 end
 

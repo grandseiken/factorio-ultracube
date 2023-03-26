@@ -49,15 +49,23 @@ script.on_event(
 script.on_event(
   {
     defines.events.on_player_main_inventory_changed,
-    defines.events.on_player_dropped_item,
     defines.events.on_player_cancelled_crafting,
     defines.events.on_player_crafted_item,
     defines.events.on_player_cursor_stack_changed,
-    defines.events.on_player_fast_transferred,
     defines.events.on_pre_player_crafted_item
   },
   function(e)
     update_player_cube_status(e.player_index)
+  end)
+
+script.on_event(
+  {
+    defines.events.on_player_dropped_item,
+    defines.events.on_player_fast_transferred,
+  },
+  function(e)
+    update_player_cube_status(e.player_index)
+    cube_search_hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -84,6 +92,15 @@ script.on_event(
   function(e)
     return_cube_fuel(e.entity, e.buffer)
     remove_entity_cache(e.entity)
+  end)
+
+script.on_event(
+  {
+    defines.events.on_surface_cleared,
+    defines.events.on_surface_deleted,
+  },
+  function(e)
+    refresh_entity_cache()
   end)
 
 script.on_event(
