@@ -1,14 +1,13 @@
 require("scripts.lib")
 require("scripts.cube_management")
 
+entity_cache_chunk_size = 8
 local cube_defines = cube_defines
 local entity_cache = nil
-local chunk_size = 16
+local chunk_size = entity_cache_chunk_size
 
 function refresh_entity_cache()
   global.entity_cache = {
-    chunk_min = nil,
-    chunk_max = nil,
     chunk_map = {},
     transport_lines = {},
     inventories = {},
@@ -168,18 +167,6 @@ function add_entity_cache(entity)
       inserters = {},
     }
     entity_cache.chunk_map[chunk_index] = chunk_cache
-    if entity_cache.chunk_min then
-      entity_cache.chunk_min = {x = math.min(entity_cache.chunk_min.x, chunk_x),
-                                y = math.min(entity_cache.chunk_min.y, chunk_y)}
-    else
-      entity_cache.chunk_min = {x = chunk_x, y = chunk_y}
-    end
-    if entity_cache.chunk_max then
-      entity_cache.chunk_max = {x = math.min(entity_cache.chunk_max.x, chunk_x),
-                                y = math.min(entity_cache.chunk_max.y, chunk_y)}
-    else
-      entity_cache.chunk_max = {x = chunk_x, y = chunk_y}
-    end
   end
   add_entity_cache_internal(entity, chunk_cache, false)
 end

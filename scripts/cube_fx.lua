@@ -2,7 +2,8 @@ require("scripts.lib")
 require("scripts.cube_search")
 
 local function cube_boom(results)
-  for _, result in ipairs(results) do
+  for i = 1, #results do
+    local result = results[i]
     if result.item == cubes.dormant then
       result.entity.surface.create_entity {
         name = "cube-periodic-dormant-explosion",
@@ -31,8 +32,9 @@ local function cube_boom(results)
 end
 
 local function cube_spark(results)
-  for _, result in ipairs(results) do
-    if result.height >= 0 and not (result.item == cubes.dormant) then
+  for i = 1, #results do
+    local result = results[i]
+    if result.height >= 0 and result.item ~= cubes.dormant then
       result.entity.surface.create_entity {
         name = result.height > 0 and "cube-periodic-ultradense-high-spark" or "cube-periodic-ultradense-low-spark",
         source = result.entity,
@@ -51,7 +53,7 @@ function cube_fx_tick(tick)
   if not update_tick then
     return
   end
-  local search_results = cube_search_update()
+  local search_results = cube_search_update(tick)
   if spark_tick then
     cube_spark(search_results)
   end
