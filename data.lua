@@ -1,6 +1,7 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
+-- TODO: rename to megacube?
 -- TODO: useless stone/coal/wood/etc from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 
@@ -19,7 +20,7 @@ require("prototypes.scripts.autoplace")
 --       circuit 2?
 --       accumulators?
 --       trains. fuel processing gives train fuel and somehow more efficient power
---       hypercube can be used in trains for lols
+--       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
 
 -- TODO: storylore tooltips!
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
@@ -33,10 +34,12 @@ require("prototypes.scripts.autoplace")
 -- TODO: (further on) basic antimatter unit. Basic dark matter unit.
 -- TODO: some joke with hydroxyl group vs abelian group.
 
+require("prototypes.equipment")
 require("prototypes.fluids")
 require("prototypes.fuel_categories")
 require("prototypes.item_groups")
 require("prototypes.items")
+require("prototypes.items_equipment")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
@@ -57,6 +60,7 @@ require("prototypes.entities.fabricator")
 require("prototypes.entities.lab")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
+require("prototypes.entities.robots")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
 

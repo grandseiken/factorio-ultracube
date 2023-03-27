@@ -224,7 +224,7 @@ data:extend({
             icon_size = 64, icon_mipmaps = 2,
           }
         },
-        effect_description = {"effect-description.technology-unlock"},
+        effect_description = {"effect-description.cube-technology-unlock"},
       },
     },
     prerequisites = {"cube-electronics", "cube-n-dimensional-widgets"},

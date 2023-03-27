@@ -29,6 +29,17 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-construction-robot",
+    icon = "__base__/graphics/icons/construction-robot.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "logistic-network",
+    order = "a[robot]-b[construction-robot]",
+    place_result = "cube-construction-robot",
+    stack_size = 50,
+  },
+
+  {
+    type = "item",
     name = "cube-basic-matter-unit",
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64,

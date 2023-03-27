@@ -14,6 +14,7 @@ local function on_init()
     remote.call("freeplay", "set_disable_crashsite", true)
     remote.call("freeplay", "set_created_items", {
       ["cube-synthesizer"] = 1,
+      ["cube-construction-robot"] = 5,
     })
     remote.call("freeplay", "set_respawn_items", {})
   end
@@ -24,6 +25,22 @@ local function on_init()
     sync_unlock_technologies(force)
   end
   on_load()
+end
+
+local function on_player_created(e)
+  local player = game.players[e.player_index]
+  if not global.cube_given then
+    global.cube_given = true
+    player.insert(cubes.ultradense)
+  end
+
+  local inventory = player.get_inventory(defines.inventory.character_armor)
+  inventory.insert("cube-modular-armor")
+  local grid = inventory[1].grid
+  grid.put {name = "cube-personal-roboport-equipment"}
+  grid.put {name = "cube-battery-equipment"}
+  grid.put {name = "cube-solar-panel-equipment"}
+  grid.put {name = "cube-solar-panel-equipment"}
 end
 
 script.on_load(on_load)
@@ -37,14 +54,7 @@ commands.add_command(
     game.print("Refreshed data.")
   end)
 
-script.on_event(
-  defines.events.on_player_created,
-  function(e)
-    if not global.cube_given then
-      global.cube_given = true
-      game.players[e.player_index].insert(cubes.ultradense)
-    end
-  end)
+script.on_event(defines.events.on_player_created, on_player_created)
 
 script.on_event(
   {
