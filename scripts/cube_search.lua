@@ -507,6 +507,7 @@ function cube_search_update(tick)
   local last_entity = cube_search_data.last_entity
   if last_entity and last_entity.valid then
     done = cube_check_entity(last_entity, result_set)
+    -- TODO: could check transport belt line outputs; inserter (etc) drop target, etc.
   end
 
   if not done then

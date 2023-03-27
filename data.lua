@@ -31,7 +31,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: late game forbidden tech. Experiments on cube. Suffering.
 -- TODO: some sort of teleport cube logistics option.
 
--- TODO: (further on) basic antimatter unit. Basic dark matter unit.
+-- TODO: (further on) basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter).
 -- TODO: some joke with hydroxyl group vs abelian group.
 
 require("prototypes.equipment")

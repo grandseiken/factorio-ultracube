@@ -11,7 +11,7 @@ data:extend({
     icon = "__base__/graphics/icons/construction-robot.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
-    minable = {mining_time = 0.1, result = "construction-robot"},
+    minable = {mining_time = 0.1, result = "cube-construction-robot"},
     resistances = {
       {
         type = "fire",
@@ -72,7 +72,7 @@ data:extend({
     icon = "__base__/graphics/icons/logistic-robot.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
-    minable = {mining_time = 0.1, result = "logistic-robot"},
+    -- minable = {mining_time = 0.1, result = "cube-logistic-robot"},
     resistances = {
       {
         type = "fire",
