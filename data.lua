@@ -4,10 +4,14 @@ require("prototypes.scripts.autoplace")
 -- TODO: rename to megacube?
 -- TODO: useless stone/coal/wood/etc from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
+-- TODO: layered icons look bad when disabled. Bake them.
 
+-- TODO: stone (furnace) -> bricks; bricks for some buildings (?)
+--       maybe reintroduce stone patches + basic furnace
+--       stone (crusher) -> sand; sand (furnace) -> glass, glass -> vesselheim
 -- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
---       enriched ore has better product ratio but worse cube ratio
--- TODO: calcium -> intelligent calcium + (vesselheim) flask -> bottled consciousness / sentience transfer.
+-- TODO: vesselheim + some cube synthesis fluid (?) / intelligent calcium (?) -> bottled consciousness
+-- TODO: matter + metal + bottled consciousness + intelligent calcium (?) + joy/anguish -> construction robot
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
 -- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
 --       bots that look the same, but 1 horribly slow

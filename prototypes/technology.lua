@@ -285,6 +285,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-crusher"},
       {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
       {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
+      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit =

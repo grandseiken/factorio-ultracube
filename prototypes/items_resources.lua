@@ -128,6 +128,31 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-sand",
+    icon = "__Hypercube__/graphics/sand-01.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Hypercube__/graphics/sand-01.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Hypercube__/graphics/sand-02.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-experimental",
+    order = "0[sand]",
+    stack_size = 200,
+  },
+
+  {
+    type = "item",
     name = "cube-calcium",
     icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
     icon_size = 64,
@@ -154,7 +179,7 @@ data:extend({
     },
     subgroup = "cube-experimental",
     order = "a[calcium]",
-    stack_size = 200,
+    stack_size = 100,
   },
   {
     type = "item",
