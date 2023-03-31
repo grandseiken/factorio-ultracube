@@ -150,6 +150,16 @@ data:extend({
     order = "0[sand]",
     stack_size = 200,
   },
+  {
+    type = "item",
+    name = "cube-glass",
+    icon = "__Krastorio2Assets__/icons/items/glass.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-experimental",
+    order = "1[glass]",
+    stack_size = 50,
+  },
 
   {
     type = "item",

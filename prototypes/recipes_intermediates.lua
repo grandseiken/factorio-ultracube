@@ -63,6 +63,16 @@ data:extend({
     always_show_made_in = true,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-glass",
+    category = "smelting",
+    energy_required = 3,
+    ingredients = {{"cube-sand", 12}},
+    results = {{"cube-glass", 1}},
+    always_show_made_in = true,
+    enabled = false,
+  },
 
   {
     type = "recipe",

@@ -6,9 +6,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
 
--- TODO: stone (furnace) -> bricks; bricks for some buildings (?)
---       maybe reintroduce stone patches + electric furnace (?)
---       stone (crusher) -> sand; sand (furnace) -> glass, glass -> vesselheim
+-- TODO: glass -> vesselheim
 -- TODO: vesselheim + some cube synthesis fluid (?) / intelligent calcium (?) -> bottled consciousness
 -- TODO: matter + metal + bottled consciousness + intelligent calcium (?) + joy/anguish -> construction robot
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)

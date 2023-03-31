@@ -296,7 +296,6 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-crusher"},
       {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
       {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
-      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit = {
@@ -308,6 +307,26 @@ data:extend({
       time = 20,
     },
     order = "2-2-0",
+  },
+  {
+    type = "technology",
+    name = "cube-stone-processing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/stone-processing.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
+      {type = "unlock-recipe", recipe = "cube-glass"},
+    },
+    prerequisites = {"cube-crusher"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-1",
   },
   {
     type = "technology",
