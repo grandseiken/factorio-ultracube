@@ -41,13 +41,28 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-electric-mining-drill"},
     },
-    unit =
-    {
+    unit = {
       count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
     order = "0-1-0"
+  },
+  {
+    type = "technology",
+    name = "cube-electric-furnace",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/advanced-material-processing-2.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-electric-furnace"},
+      {type = "unlock-recipe", recipe = "cube-stone-brick"},
+    },
+    unit = {
+      count = 20,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10
+    },
+    order = "0-1-1",
   },
   {
     type = "technology",
@@ -58,14 +73,13 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
       {type = "unlock-recipe", recipe = "cube-rare-metals"},
     },
-    prerequisites = {"cube-electric-mining-drill"},
-    unit =
-    {
+    prerequisites = {"cube-electric-mining-drill", "cube-electric-furnace"},
+    unit = {
       count = 40,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-3-0"
+    order = "0-1-0"
   },
   {
     type = "technology",
@@ -93,8 +107,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
     prerequisites = {"cube-ultradense-furnace"},
-    unit =
-    {
+    unit = {
       count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
@@ -164,8 +177,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-pump"},
     },
     prerequisites = {"cube-electronics"},
-    unit =
-    {
+    unit = {
       count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
@@ -245,8 +257,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
-    unit =
-    {
+    unit = {
       count = 60,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -288,8 +299,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
-    unit =
-    {
+    unit = {
       count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -318,8 +328,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-1"},
     },
     prerequisites = {"cube-recovery-bay", "cube-synthesizer", "cube-fundamental-comprehension-card"},
-    unit =
-    {
+    unit = {
       count = 60,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -347,8 +356,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
     },
     prerequisites = {"cube-matter-replication"},
-    unit =
-    {
+    unit = {
       count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -376,8 +384,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
     },
     prerequisites = {"cube-matter-replication"},
-    unit =
-    {
+    unit = {
       count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -397,8 +404,7 @@ data:extend({
       {type = "inserter-stack-size-bonus", modifier = 1},
     },
     prerequisites = {"cube-inserters", "cube-fundamental-comprehension-card"},
-    unit =
-    {
+    unit = {
       count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -418,8 +424,7 @@ data:extend({
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {"cube-stack-inserters", "cube-fundamental-comprehension-card"},
-    unit =
-    {
+    unit = {
       count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
@@ -439,8 +444,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-substation"},
     },
     prerequisites = {"cube-electric-energy-distribution-1"},
-    unit =
-    {
+    unit = {
       count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},

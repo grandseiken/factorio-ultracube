@@ -61,12 +61,25 @@ data:extend({
     type = "recipe",
     name = "cube-ultradense-furnace",
     ingredients = {
+      {"stone-brick", 100},
       {"cube-basic-matter-unit", 400},
       {"cube-basic-motor-unit", 10},
       {"pipe", 20},
     },
     results = {{"cube-ultradense-furnace", 1}},
     energy_required = 10,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-electric-furnace",
+    ingredients = {
+      {"cube-basic-matter-unit", 100},
+      {"cube-basic-motor-unit", 2},
+    },
+    results = {{"cube-electric-furnace", 1}},
+    energy_required = 4,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
@@ -100,6 +113,7 @@ data:extend({
     type = "recipe",
     name = "cube-recovery-bay",
     ingredients = {
+      {"stone-brick", 20},
       {"cube-basic-matter-unit", 250},
       {"cube-n-dimensional-widget", 5},
     },
@@ -112,6 +126,7 @@ data:extend({
     type = "recipe",
     name = "cube-synthesizer",
     ingredients = {
+      {"stone-brick", 100},
       {"cube-basic-matter-unit", 600},
       {"cube-n-dimensional-widget", 20},
     },

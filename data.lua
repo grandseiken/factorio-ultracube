@@ -7,9 +7,8 @@ require("prototypes.scripts.autoplace")
 -- TODO: layered icons look bad when disabled. Bake them.
 
 -- TODO: stone (furnace) -> bricks; bricks for some buildings (?)
---       maybe reintroduce stone patches + basic furnace
+--       maybe reintroduce stone patches + electric furnace (?)
 --       stone (crusher) -> sand; sand (furnace) -> glass, glass -> vesselheim
--- TODO: crushing: enriched ore + sand (-> glass -> vesselheim) + calcium?
 -- TODO: vesselheim + some cube synthesis fluid (?) / intelligent calcium (?) -> bottled consciousness
 -- TODO: matter + metal + bottled consciousness + intelligent calcium (?) + joy/anguish -> construction robot
 -- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
@@ -19,7 +18,8 @@ require("prototypes.scripts.autoplace")
 --       chain with several steps, then eventually into another cube-powered thing
 
 -- TODO: science 2 techs:
---       chemical plant, replication (early)
+--       chemical plant?
+--       some kind of slightly better power/steam source
 --       construction robots, roboport (via sentience transfer)
 --       circuit 2?
 --       accumulators?
@@ -31,6 +31,8 @@ require("prototypes.scripts.autoplace")
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: some cube process that outputs random / multiple products.
 -- TODO: something that requires _dormant_ cube? Tooltip: for safety, must be done while indisposed to avoid adverse reactions.
+-- TODO: eventually, cube can produce small amounts of burnable energy sources - but not too much better, mostly just
+--       obviating cube travel time
 -- TODO: some sort of weird biter farmer spawning synthesis.
 -- TODO: late game forbidden tech. Experiments on cube. Suffering.
 -- TODO: some sort of teleport cube logistics option.
@@ -58,6 +60,7 @@ require("prototypes.tweaks")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.crusher")
+require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.explosions")
 require("prototypes.entities.fabricator")

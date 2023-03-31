@@ -22,7 +22,6 @@ end
 copy_autoplace_control("stone", "cube-rare-metals")
 remove_autoplace_control("iron-ore")
 remove_autoplace_control("copper-ore")
-remove_autoplace_control("stone")
 remove_autoplace_control("coal")
 remove_autoplace_control("uranium-ore")
 remove_autoplace_control("crude-oil")
@@ -30,7 +29,6 @@ remove_autoplace_control("enemy-base")
 
 data.raw.resource["iron-ore"].autoplace = nil
 data.raw.resource["copper-ore"].autoplace = nil
-data.raw.resource["stone"].autoplace = nil
 data.raw.resource["coal"].autoplace = nil
 data.raw.resource["uranium-ore"].autoplace = nil
 data.raw.resource["crude-oil"].autoplace = nil

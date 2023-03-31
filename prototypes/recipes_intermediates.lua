@@ -55,6 +55,17 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-stone-brick",
+    category = "smelting",
+    energy_required = 3,
+    ingredients = {{"stone", 4}},
+    results = {{"stone-brick", 2}},
+    always_show_made_in = true,
+    enabled = false,
+  },
+
+  {
+    type = "recipe",
     name = "cube-basic-matter-unit-0",
     ingredients = {{"cube-ultradense-utility-cube", 1}},
     results = {
