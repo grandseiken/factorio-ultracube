@@ -289,6 +289,15 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-besselheim-flask",
+    ingredients = {{"cube-glass", 2}},
+    results = {{"cube-besselheim-flask", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-intelligent-calcium",
     ingredients = {
       {"cube-calcium", 2},

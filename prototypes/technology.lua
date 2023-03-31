@@ -316,6 +316,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
       {type = "unlock-recipe", recipe = "cube-glass"},
+      {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
     },
     prerequisites = {"cube-crusher"},
     unit = {

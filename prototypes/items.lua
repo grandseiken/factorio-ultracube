@@ -79,4 +79,14 @@ data:extend({
     order = "0[c-electronic-circuit]",
     stack_size = 100,
   },
+  {
+    type = "item",
+    name = "cube-besselheim-flask",
+    icon = "__Hypercube__/graphics/flask.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-experimental",
+    order = "2[d-besselheim-flask]",
+    stack_size = 50,
+  },
 })
