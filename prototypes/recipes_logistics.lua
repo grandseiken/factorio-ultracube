@@ -322,6 +322,19 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-car",
+    ingredients = {
+      {"iron-chest", 2},
+      {"cube-advanced-engine", 2},
+      {"cube-basic-matter-unit", 40},
+    },
+    results = {{"car", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-locomotive",
     ingredients = {
       {"cube-advanced-engine", 4},

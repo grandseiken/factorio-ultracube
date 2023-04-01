@@ -8,23 +8,26 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: science 2 techs:
 --       construction robots, roboport + 2 chests
---       some kind of slightly more efficient/complicated power/steam solution
---       trains fuel! fuel processing gives train fuel and somehow more efficient power (?)
---       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
---       some way to void sand/calcium?
+--       some way to void sand/calcium in chemical plant (e.g. by mixing with water -> more water)
 --       circuit 2?
 --       accumulators?
 --       science 3
 
+-- TODO: integrated power/fuel thing. Use Kras2 fuel building?
+--       some kind of slightly more efficient/complicated power/steam solution
+--       also somehow ends up with train fuel and possibly liquid byproduct (e.g. elbow grease)
+--       trains fuel! fuel processing gives train fuel and somehow more efficient power (?)
+--       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
+
 -- TODO: good candidate here for something where a cube-source leads into big slow production
---       chain with several steps, then eventually into another cube-powered thing. maybe science 2?
+--       chain with several steps, then eventually into another cube-powered thing. maybe science 3 or power thing?
 
 -- TODO: science 2 recipes
 --       matter + circuit + motor + bottled consciousness + joy/anguish -> 2x different construction robot
 --       bottled consciousness + ??? -> science 3
 
 -- TODO: little things
---       walls; gates; radar; cliff explosives; landfill; car
+--       walls; gates; radar; cliff explosives; landfill
 
 -- TODO: storylore tooltips!
 -- TODO: some cube process that outputs random / multiple products.

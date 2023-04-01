@@ -269,6 +269,25 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-automobilism",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/automobilism.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-car"},
+    },
+    prerequisites = {"cube-advanced-engine"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-8-1",
+  },
+  {
+    type = "technology",
     name = "cube-railway",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/railway.png",
