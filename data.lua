@@ -6,22 +6,28 @@ require("prototypes.scripts.autoplace")
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
 
--- TODO: besselheim + some cube synthesis fluid (?) / intelligent calcium (?) -> bottled consciousness
--- TODO: matter + metal + bottled consciousness + intelligent calcium (?) + joy/anguish -> construction robot
--- TODO: emotion synthesis. Joy / anguish. Regret (used for voiding?)
--- TODO: bottled consciousness + intermediates + Joy/Anguish -> 2x different construction
---       bots that look the same, but 1 horribly slow
--- TODO: good candidate here for something where a cube-source leads into big slow production
---       chain with several steps, then eventually into another cube-powered thing
-
 -- TODO: science 2 techs:
+--       construction robots, roboport + 2 chests
+--       some kind of slightly more efficient/complicated power/steam solution
+--       trains. fuel processing gives train fuel and somehow more efficient power (?)
+--       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
+--       some way to void sand/calcium?
 --       chemical plant?
---       some kind of slightly better power/steam source
---       construction robots, roboport (via sentience transfer)
 --       circuit 2?
 --       accumulators?
---       trains. fuel processing gives train fuel and somehow more efficient power
---       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
+--       science 3
+
+-- TODO: good candidate here for something where a cube-source leads into big slow production
+--       chain with several steps, then eventually into another cube-powered thing. maybe science 2?
+
+-- TODO: science 2 recipes
+--       besselheim + cerebral substrate + intelligent calcium -> bottled consciousness
+--       matter + circuit + motor + bottled consciousness + joy/anguish -> 2x different construction robot
+--       bottled consciousness + ??? -> science 3
+--       stone + ??? -> rails; lights + circuits + matter -> signals; cargo/fluid wagon + locomotive; station
+
+-- TODO: little things
+--       walls; gates; radar; cliff explosives; landfill; car
 
 -- TODO: storylore tooltips!
 -- TODO: some cube process that outputs random / multiple products.
@@ -30,10 +36,9 @@ require("prototypes.scripts.autoplace")
 -- TODO: eventually, cube can produce small amounts of burnable energy sources - but not too much better, mostly just
 --       obviating cube travel time
 -- TODO: some sort of weird biter farmer spawning synthesis.
--- TODO: late game forbidden tech. Experiments on cube. Suffering.
+-- TODO: late game forbidden tech. Experiments on cube. Suffering. Regret.
 -- TODO: some sort of teleport cube logistics option.
-
--- TODO: (further on) basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter).
+-- TODO: (further on) basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
 -- TODO: some joke with hydroxyl group vs abelian group.
 
 require("prototypes.equipment")
