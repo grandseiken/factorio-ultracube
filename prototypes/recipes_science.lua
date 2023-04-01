@@ -38,7 +38,7 @@ data:extend({
     },
     energy_required = 1,
     category = "cube-synthesizer",
-    subgroup = "cube-synthesis-science",
+    subgroup = "cube-synthesis-advanced",
     order = "0[b-contemplation-1]",
     always_show_made_in = true,
     allow_decomposition = false,

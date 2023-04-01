@@ -54,7 +54,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "cube-synthesis-basics",
+    subgroup = "cube-synthesis-advanced",
     order = "0[b-widget-0]",
     stack_size = 50,
   },
@@ -96,7 +96,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "2[d-besselheim-flask]",
+    order = "a[d-besselheim-flask]",
     stack_size = 50,
   },
   {
@@ -106,7 +106,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "y[e-besselheim-flask]",
+    order = "b[e-besselheim-flask]",
     stack_size = 50,
   },
 })

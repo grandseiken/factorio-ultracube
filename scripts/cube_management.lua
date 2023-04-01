@@ -52,10 +52,8 @@ function player_cube_data(player)
   local data = {total = 0, ingredients = {}}
   for _, item in pairs(cubes) do
     local count = player.get_item_count(item)
-    if count > 0 then
-      data.total = data.total + count
-      data.ingredients[item] = count
-    end
+    data.total = data.total + count
+    data.ingredients[item] = count
   end
   local recipes = cube_recipes()
   if player.crafting_queue then

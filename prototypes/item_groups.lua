@@ -28,9 +28,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-synthesis-science",
+    name = "cube-synthesis-advanced",
     group = "cube-synthesis",
     order = "y",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-synthesis-sentience",
+    group = "cube-synthesis",
+    order = "z",
   },
   {
     type = "item-subgroup",
@@ -43,6 +49,12 @@ data:extend({
     name = "cube-processing",
     group = "intermediate-products",
     order = "1",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-furnace",
+    group = "intermediate-products",
+    order = "2",
   },
   {
     type = "item-subgroup",

@@ -12,3 +12,5 @@ data.raw.inserter["stack-inserter"].stack_size_bonus = 4
 data.raw.inserter["stack-filter-inserter"].stack_size_bonus = 4
 data.raw.item["copper-cable"].subgroup = "cube-components"
 data.raw.item["copper-cable"].order = "0[b-conductive-wire]"
+data.raw.item["stone-brick"].subgroup = "cube-furnace"
+data.raw.item["stone-brick"].order = "0[a-brick]"

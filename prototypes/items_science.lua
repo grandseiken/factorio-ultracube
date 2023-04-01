@@ -5,7 +5,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "cube-synthesis-science",
+    subgroup = "cube-synthesis-advanced",
     order = "0[a-contemplation-0]",
     stack_size = 100,
     durability = 1,

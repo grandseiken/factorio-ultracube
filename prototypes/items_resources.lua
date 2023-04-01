@@ -156,8 +156,8 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/glass.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "cube-experimental",
-    order = "1[glass]",
+    subgroup = "cube-furnace",
+    order = "1[a-glass]",
     stack_size = 50,
   },
 
@@ -209,7 +209,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "b[calcium]",
+    order = "a[calcium]",
     stack_size = 100,
   },
 })
