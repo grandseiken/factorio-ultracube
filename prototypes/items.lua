@@ -71,6 +71,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-advanced-engine",
+    icon = "__base__/graphics/icons/electric-engine-unit.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-components",
+    order = "0[b-advanced-engine]",
+    stack_size = 50,
+  },
+  {
+    type = "item",
     name = "cube-electronic-circuit",
     icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
     icon_size = 64,

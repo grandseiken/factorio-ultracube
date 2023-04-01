@@ -289,6 +289,20 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-advanced-engine",
+    ingredients = {
+      {"cube-basic-matter-unit", 10},
+      {"cube-basic-motor-unit", 4},
+      {"cube-electronic-circuit", 2},
+      -- TODO: some fluid? Elbow grease?
+    },
+    results = {{"cube-advanced-engine", 1}},
+    energy_required = 8,
+    category = "cube-fabricator",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-besselheim-flask",
     ingredients = {{"cube-glass", 2}},
     results = {{"cube-besselheim-flask", 1}},

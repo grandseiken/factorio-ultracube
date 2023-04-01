@@ -9,7 +9,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: science 2 techs:
 --       construction robots, roboport + 2 chests
 --       some kind of slightly more efficient/complicated power/steam solution
---       trains. fuel processing gives train fuel and somehow more efficient power (?)
+--       trains fuel! fuel processing gives train fuel and somehow more efficient power (?)
 --       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
 --       some way to void sand/calcium?
 --       circuit 2?
@@ -22,7 +22,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: science 2 recipes
 --       matter + circuit + motor + bottled consciousness + joy/anguish -> 2x different construction robot
 --       bottled consciousness + ??? -> science 3
---       stone + ??? -> rails; lights + circuits + matter -> signals; cargo/fluid wagon + locomotive; station
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill; car

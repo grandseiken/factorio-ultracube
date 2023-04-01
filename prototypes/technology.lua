@@ -250,6 +250,87 @@ data:extend({
 
   {
     type = "technology",
+    name = "cube-advanced-engine",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-engine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-advanced-engine"},
+    },
+    prerequisites = {"cube-fundamental-comprehension-card"},
+    unit = {
+      count = 60,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-8-0",
+  },
+  {
+    type = "technology",
+    name = "cube-railway",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/railway.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-rail"},
+      {type = "unlock-recipe", recipe = "cube-locomotive"},
+      {type = "unlock-recipe", recipe = "cube-cargo-wagon"},
+      {type = "unlock-recipe", recipe = "cube-train-stop"},
+    },
+    prerequisites = {"cube-advanced-engine"},
+    unit = {
+      count = 80,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-9-0",
+  },
+  {
+    type = "technology",
+    name = "cube-rail-signals",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/rail-signals.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-rail-signal"},
+      {type = "unlock-recipe", recipe = "cube-chain-signal"},
+    },
+    prerequisites = {"cube-railway", "cube-optics"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-9-1",
+  },
+  {
+    type = "technology",
+    name = "cube-fluid-wagon",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/fluid-wagon.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fluid-wagon"},
+    },
+    prerequisites = {"cube-railway", "cube-fluid-handling"},
+    unit = {
+      count = 160,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-9-2",
+  },
+
+  {
+    type = "technology",
     name = "cube-electric-energy-distribution-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
