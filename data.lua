@@ -24,10 +24,9 @@ require("prototypes.scripts.autoplace")
 --       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
 
 -- TODO: storylore tooltips!
+-- TODO: some cube process that outputs random / multiple products.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: some cube process that outputs random / multiple products.
--- TODO: something that requires _dormant_ cube? Tooltip: for safety, must be done while indisposed to avoid adverse reactions.
 -- TODO: eventually, cube can produce small amounts of burnable energy sources - but not too much better, mostly just
 --       obviating cube travel time
 -- TODO: some sort of weird biter farmer spawning synthesis.

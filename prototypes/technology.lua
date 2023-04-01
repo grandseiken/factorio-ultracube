@@ -414,6 +414,26 @@ data:extend({
     },
     order = "2-3-2",
   },
+  {
+    type = "technology",
+    name = "cube-sentience-extraction",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/matter-water.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
+      {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
+    },
+    prerequisites = {"cube-matter-replication"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-4-0",
+  },
 
   {
     type = "technology",
