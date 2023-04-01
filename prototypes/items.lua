@@ -89,4 +89,14 @@ data:extend({
     order = "2[d-besselheim-flask]",
     stack_size = 50,
   },
+  {
+    type = "item",
+    name = "cube-bottled-consciousness",
+    icon = "__base__/graphics/icons/space-science-pack.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-experimental",
+    order = "y[e-besselheim-flask]",
+    stack_size = 50,
+  },
 })

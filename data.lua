@@ -21,7 +21,6 @@ require("prototypes.scripts.autoplace")
 --       chain with several steps, then eventually into another cube-powered thing. maybe science 2?
 
 -- TODO: science 2 recipes
---       besselheim + cerebral substrate + intelligent calcium -> bottled consciousness
 --       matter + circuit + motor + bottled consciousness + joy/anguish -> 2x different construction robot
 --       bottled consciousness + ??? -> science 3
 --       stone + ??? -> rails; lights + circuits + matter -> signals; cargo/fluid wagon + locomotive; station

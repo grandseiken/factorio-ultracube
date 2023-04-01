@@ -302,11 +302,24 @@ data:extend({
     ingredients = {
       {"cube-calcium", 2},
       {"cube-basic-contemplation-unit", 1},
-      {type = "fluid", name = "steam", amount = 100},
     },
     results = {{"cube-intelligent-calcium", 1}},
     energy_required = 1,
     category = "cube-fabricator",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-bottled-consciousness",
+    ingredients = {
+      {"cube-besselheim-flask", 1},
+      {"cube-intelligent-calcium", 2},
+      {type = "fluid", name = "cube-cerebral-substrate", amount = 120},
+    },
+    results = {{"cube-bottled-consciousness", 1}},
+    energy_required = 2,
+    category = "cube-fabricator",
+    enabled = false,
   },
 
   {

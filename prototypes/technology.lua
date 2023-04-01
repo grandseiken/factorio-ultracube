@@ -316,7 +316,6 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
       {type = "unlock-recipe", recipe = "cube-glass"},
-      {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
     },
     prerequisites = {"cube-crusher"},
     unit = {
@@ -433,6 +432,30 @@ data:extend({
       time = 20,
     },
     order = "2-4-0",
+  },
+  {
+    type = "technology",
+    name = "cube-bottled-consciousness",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/space-science-pack.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
+      {type = "unlock-recipe", recipe = "cube-intelligent-calcium"},
+      {type = "unlock-recipe", recipe = "cube-bottled-consciousness"},
+    },
+    prerequisites = {
+      "cube-stone-processing",
+      "cube-sentience-extraction",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-5-0",
   },
 
   {

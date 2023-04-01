@@ -209,7 +209,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "z[calcium]",
+    order = "b[calcium]",
     stack_size = 100,
   },
 })
