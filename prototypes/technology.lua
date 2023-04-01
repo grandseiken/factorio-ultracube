@@ -330,6 +330,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-chemical-plant",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/oil-processing.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-chemical-plant"},
+      {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
+    },
+    prerequisites = {"cube-stone-processing"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-2",
+  },
+  {
+    type = "technology",
     name = "cube-matter-replication",
     icons = {
       {
@@ -419,6 +439,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-water.png",
     effects = {
+      -- TODO: move emotional synthesis to its own tech.
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
       {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
     },
@@ -439,12 +460,11 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/space-science-pack.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
       {type = "unlock-recipe", recipe = "cube-intelligent-calcium"},
       {type = "unlock-recipe", recipe = "cube-bottled-consciousness"},
     },
     prerequisites = {
-      "cube-stone-processing",
+      "cube-chemical-plant",
       "cube-sentience-extraction",
     },
     unit = {

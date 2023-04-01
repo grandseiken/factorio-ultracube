@@ -39,4 +39,9 @@ data:extend({
     name = "cube-crusher",
     order = "c",
   },
+  {
+    type = "recipe-category",
+    name = "cube-chemical-plant",
+    order = "d",
+  },
 })

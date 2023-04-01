@@ -23,7 +23,9 @@ if [[ "$OSTYPE" == "msys" ]]; then
   ZIP_CMD="7z a -tzip"
 fi
 
-(cd "${DIR}/.." && \
-    rm -rf "${ZIPNAME}" &&
-    find "${NAME}" -regex "${REGEX}" | xargs ${ZIP_CMD} "${ZIPNAME}" &&
-    mv "${ZIPNAME}" "${MODS}")
+function prepend() { while read line; do echo "${1}${line}"; done; }
+FILELIST=$(git ls-files | grep "${REGEX}" | prepend "${NAME}/")
+
+(cd "${DIR}/.." && rm -rf "${ZIPNAME}" &&
+    echo ${FILELIST} | xargs ${ZIP_CMD} "${ZIPNAME}" &&
+    unzip -l "${ZIPNAME}" && mv "${ZIPNAME}" "${MODS}")

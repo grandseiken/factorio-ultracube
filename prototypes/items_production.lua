@@ -65,6 +65,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-chemical-plant",
+    icon = "__base__/graphics/icons/chemical-plant.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-processing-machines",
+    order = "1[0-chemical-plant]",
+    place_result = "cube-chemical-plant",
+    stack_size = 10,
+  },
+  {
+    type = "item",
     name = "cube-ultradense-furnace",
     icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
     icon_size = 128,

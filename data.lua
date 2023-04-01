@@ -12,7 +12,6 @@ require("prototypes.scripts.autoplace")
 --       trains. fuel processing gives train fuel and somehow more efficient power (?)
 --       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
 --       some way to void sand/calcium?
---       chemical plant?
 --       circuit 2?
 --       accumulators?
 --       science 3
@@ -59,6 +58,7 @@ require("prototypes.technology")
 require("prototypes.tweaks")
 
 require("prototypes.entities.boiler")
+require("prototypes.entities.chemical_plant")
 require("prototypes.entities.crusher")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")

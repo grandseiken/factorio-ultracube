@@ -111,6 +111,21 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-chemical-plant",
+    ingredients = {
+      {"stone-brick", 40},
+      {"cube-basic-matter-unit", 80},
+      {"cube-electronic-circuit", 4},
+      {"cube-glass", 20},
+      {"pipe", 8},
+    },
+    results = {{"cube-chemical-plant", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-recovery-bay",
     ingredients = {
       {"stone-brick", 20},

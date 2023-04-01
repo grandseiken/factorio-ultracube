@@ -318,7 +318,7 @@ data:extend({
     },
     results = {{"cube-bottled-consciousness", 1}},
     energy_required = 2,
-    category = "cube-fabricator",
+    category = "cube-chemical-plant",
     enabled = false,
   },
 
