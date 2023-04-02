@@ -139,12 +139,6 @@ data:extend({
         scale = 0.25,
         mipmap_count = 4,
       },
-      {
-        size = 64,
-        filename = "__Hypercube__/graphics/sand-02.png",
-        scale = 0.25,
-        mipmap_count = 4,
-      },
     },
     subgroup = "cube-experimental",
     order = "0[sand]",

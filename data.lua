@@ -23,7 +23,7 @@ require("prototypes.scripts.autoplace")
 --       chain with several steps, then eventually into another cube-powered thing. maybe science 3 or power thing?
 
 -- TODO: science 2 recipes
---       matter + circuit + motor + bottled consciousness + joy/anguish -> 2x different construction robot
+--       matter + circuit + motor/engine + bottled consciousness + joy/anguish -> 2x different construction robot
 --       bottled consciousness + ??? -> science 3
 
 -- TODO: little things
@@ -39,6 +39,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: late game forbidden tech. Experiments on cube. Suffering. Regret.
 -- TODO: some sort of teleport cube logistics option.
 -- TODO: (further on) basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
+-- TODO: eventually, modules.
 -- TODO: some joke with hydroxyl group vs abelian group.
 
 require("prototypes.equipment")
