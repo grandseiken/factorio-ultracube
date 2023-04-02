@@ -7,17 +7,21 @@ require("prototypes.scripts.autoplace")
 -- TODO: layered icons look bad when disabled. Bake them.
 
 -- TODO: science 2 techs:
---       construction robots, roboport + 2 chests
+--       construction robots, roboport + 2 chests; move emotional synthesis to its own tech?
 --       circuit 2?
 --       accumulators?
 --       science 3
 
 -- TODO: integrated power/fuel thing. Use Kras2 fuel building?
 --       some kind of slightly more efficient/complicated power/steam solution
---       also somehow ends up with train fuel and possibly liquid byproduct (e.g. elbow grease)
---       trains fuel! fuel processing gives train fuel and somehow more efficient power (?)
---       hypercube can be used in trains for lols. technology allows speed/acceleration bonus to work from cargo
-
+--       water+sand+wood (? - wood from greenhouse if necessary) ->
+--           ultradense furnace -> untreated / gelatinous (etc) tar
+--       tar -> chemical plant (somewhat big, slow, complicated with byproduct (matter? etc) / loopback) ->
+--           -> elbow grease (easier) (for engines?)
+--           -> another cube step giving some (small number) kind of solid fuel for vehicles, boilers, etc
+--       maybe use glass in vehicles (especially car)
+--       hypercube can be used in trains for lols.
+--       technology allows (hypercube only) speed/acceleration bonus to work from cargo
 -- TODO: good candidate here for something where a cube-source leads into big slow production
 --       chain with several steps, then eventually into another cube-powered thing. maybe science 3 or power thing?
 
@@ -27,10 +31,12 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill
+--       upgrade techs (robot speed, mining productivity, lab speed + increase times, etc)
 
 -- TODO: storylore tooltips!
 -- TODO: some cube process that outputs random / multiple products.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- TODO: something that forces cube to go far away on train (probably miners)
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: eventually, cube can produce small amounts of burnable energy sources - but not too much better, mostly just
 --       obviating cube travel time
@@ -66,6 +72,7 @@ require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.explosions")
 require("prototypes.entities.fabricator")
+require("prototypes.entities.greenhouse")
 require("prototypes.entities.lab")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")

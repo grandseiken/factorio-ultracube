@@ -7,17 +7,27 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-synthesizer",
-    order = "a",
+    order = "1",
   },
   {
     type = "recipe-category",
     name = "cube-synthesizer-handcraft",
-    order = "a",
+    order = "1",
   },
   {
     type = "recipe-category",
     name = "cube-ultradense-furnace",
-    order = "b",
+    order = "2",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-furnace",
+    order = "3",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-greenhouse",
+    order = "a",
   },
   {
     type = "recipe-category",
@@ -27,16 +37,11 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-fabricator",
-    order = "b",
+    order = "c",
   },
   {
     type = "recipe-category",
     name = "cube-fabricator-handcraft",
-    order = "b",
-  },
-  {
-    type = "recipe-category",
-    name = "cube-crusher",
     order = "c",
   },
   {

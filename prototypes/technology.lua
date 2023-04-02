@@ -449,6 +449,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-greenhouse",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/greenhouse.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-greenhouse"},
+      {type = "unlock-recipe", recipe = "cube-greenhouse-wood"},
+    },
+    prerequisites = {"cube-stone-processing", "cube-optics"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-2",
+  },
+  {
+    type = "technology",
     name = "cube-chemical-plant",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/oil-processing.png",
@@ -465,7 +485,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-2",
+    order = "2-2-3",
   },
   {
     type = "technology",
@@ -498,7 +518,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "2-2-3",
+    order = "2-2-4",
   },
   {
     type = "technology",
@@ -591,7 +611,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-water.png",
     effects = {
-      -- TODO: move emotional synthesis to its own tech.
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
       {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
     },

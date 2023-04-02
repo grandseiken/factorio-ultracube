@@ -13,7 +13,8 @@ local function cube_alert(results)
   for i = 1, #results do
     local result = results[i]
     for _, player in pairs(game.players) do
-      if player.mod_settings["cube-show-cube-alerts"].value then
+      if player.mod_settings["cube-show-cube-alerts"].value and
+         player_cube_data(player).total == 0 then
         player.add_custom_alert(result.entity, {type = "item", name = result.item},
                                 {"alert-description.cube-alert"}, true)
       end

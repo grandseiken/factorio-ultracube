@@ -85,6 +85,21 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-greenhouse",
+    ingredients = {
+      {"cube-basic-matter-unit", 200},
+      {"cube-glass", 40},
+      {"small-lamp", 16},
+      {"wood", 20},
+      {"pipe", 12},
+    },
+    results = {{"cube-greenhouse", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-crusher",
     ingredients = {
       {"cube-basic-matter-unit", 320},

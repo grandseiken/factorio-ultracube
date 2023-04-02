@@ -6,6 +6,7 @@ local whitelist = make_set({
   "steam",
   "stone",
   "stone-brick",
+  "wood",
   "pipe",
   "storage-tank",
   "steam-engine",

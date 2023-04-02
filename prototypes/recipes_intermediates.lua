@@ -56,7 +56,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-stone-brick",
-    category = "smelting",
+    category = "cube-furnace",
     energy_required = 3,
     ingredients = {{"stone", 4}},
     results = {{"stone-brick", 2}},
@@ -66,7 +66,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-glass",
-    category = "smelting",
+    category = "cube-furnace",
     energy_required = 3,
     ingredients = {{"cube-sand", 12}},
     results = {{"cube-glass", 1}},
@@ -284,6 +284,21 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
   },
+
+  {
+    type = "recipe",
+    name = "cube-greenhouse-wood",
+    category = "cube-greenhouse",
+    energy_required = 60,
+    ingredients = {
+      {type = "fluid", name = "water", amount = 400},
+    },
+    results = {{"wood", 60}},
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
+
   {
     type = "recipe",
     name = "cube-conductive-wire",
@@ -324,7 +339,6 @@ data:extend({
       {"cube-basic-matter-unit", 10},
       {"cube-basic-motor-unit", 4},
       {"cube-electronic-circuit", 2},
-      -- TODO: some fluid? Elbow grease?
     },
     results = {{"cube-advanced-engine", 1}},
     energy_required = 8,
@@ -396,6 +410,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {"cube-dormant-utility-cube", 1},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
     },
     results = {
       {"cube-dormant-utility-cube", 1},

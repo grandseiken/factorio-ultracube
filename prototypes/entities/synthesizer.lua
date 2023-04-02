@@ -1,35 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-
-local empty_sprite = {
-  filename = "__Krastorio2Assets__/entities/empty.png",
-  priority = "high",
-  width = 1,
-  height = 1,
-  scale = 0.5,
-  shift = {0, 0},
-}
-
-local pipe_path = {
-  north = empty_sprite,
-  east = empty_sprite,
-  south = {
-    filename = "__Krastorio2Assets__/entities/pipe-patch/pipe-patch.png",
-    priority = "high",
-    width = 28,
-    height = 25,
-    shift = {0.01, -0.58},
-    hr_version = {
-      filename = "__Krastorio2Assets__/entities/pipe-patch/hr-pipe-patch.png",
-      priority = "high",
-      width = 55,
-      height = 50,
-      scale = 0.5,
-      shift = {0.01, -0.58},
-    },
-  },
-  west = empty_sprite,
-}
+require("__Hypercube__/prototypes/entities/lib/pipe")
 
 data:extend({
   {

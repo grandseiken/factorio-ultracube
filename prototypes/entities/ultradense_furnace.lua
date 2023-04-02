@@ -233,7 +233,6 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/entities/advanced-furnace/advanced-furnace-sh.png",
           priority = "high",
-          scale = scale,
           width = 83,
           height = 240,
           shift = {3.1, -0.1},

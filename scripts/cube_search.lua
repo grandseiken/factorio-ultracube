@@ -47,11 +47,11 @@ local function cube_check_entity(entity, result_set)
     local player = entity.player
     if entity.player then
       local ingredients = player_cube_data(player).ingredients
-      if ingredients[cube_ultradense] then
+      if ingredients[cube_ultradense] > 0 then
         add_result(result_set, cube_ultradense, entity)
         return true
       end
-      if ingredients[cube_dormant] then
+      if ingredients[cube_dormant] > 0 then
         add_result(result_set, cube_dormant, entity)
         return true
       end
