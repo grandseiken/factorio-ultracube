@@ -191,15 +191,12 @@ data:extend({
     icons = {
       {
         icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
+        icon_size = 64, icon_mipmaps = 4,
       },
       {
         icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-        shift = {0, -4},
-        scale = 0.3125,
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.3125, shift = {0, -4},
       },
     },
     subgroup = "cube-experimental",

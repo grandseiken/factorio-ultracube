@@ -256,6 +256,36 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-sand-dilution",
+    icons = {
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/sand-01.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__base__/graphics/icons/fluid/water.png",
+        scale = 0.3125, shift = {0, -4},
+      },
+    },
+    ingredients = {
+      {type = "fluid", name = "water", amount = 200, catalyst_amount = 200},
+      {"cube-sand", 4},
+    },
+    results = {{type = "fluid", name = "water", amount = 240, catalyst_amount = 200}},
+    energy_required = 4,
+    category = "cube-chemical-plant",
+    subgroup = "cube-experimental",
+    order = "0[sand-recycling]",
+    main_product = "",
+    always_show_made_in = true,
+    always_show_products = true,
+    show_amount_in_title = false,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-conductive-wire",
     ingredients = {{"cube-rare-metals", 2}},
     results = {{"copper-cable", 4}},

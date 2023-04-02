@@ -8,7 +8,6 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: science 2 techs:
 --       construction robots, roboport + 2 chests
---       some way to void sand/calcium in chemical plant (e.g. by mixing with water -> more water)
 --       circuit 2?
 --       accumulators?
 --       science 3

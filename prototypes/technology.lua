@@ -411,8 +411,27 @@ data:extend({
   {
     type = "technology",
     name = "cube-stone-processing",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/stone-processing.png",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__base__/graphics/icons/stone.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/sand-01.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/items/glass.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
     effects = {
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
       {type = "unlock-recipe", recipe = "cube-glass"},
@@ -447,6 +466,39 @@ data:extend({
       time = 20,
     },
     order = "2-2-2",
+  },
+  {
+    type = "technology",
+    name = "cube-sand-dilution",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/sand-01.png",
+        shift = {0, 32},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__base__/graphics/icons/fluid/water.png",
+        shift = {0, -32},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-sand-dilution"},
+    },
+    prerequisites = {"cube-chemical-plant"},
+    unit = {
+      count = 80,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "2-2-3",
   },
   {
     type = "technology",
