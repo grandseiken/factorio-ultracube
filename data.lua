@@ -15,7 +15,6 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: integrated power/fuel thing. Use Kras2 fuel building?
 --       some kind of slightly more efficient/complicated power/steam solution
---       water+sand+wood (?) -> ultradense furnace -> untreated / gelatinous (etc) tar
 --       tar -> chemical plant (somewhat big, slow, complicated with byproduct (matter? etc) / loopback) ->
 --           -> elbow grease (easier) (for engines?)
 --           -> another cube step giving some (small number) kind of solid fuel for vehicles, boilers, etc
@@ -31,14 +30,14 @@ require("prototypes.scripts.autoplace")
 --       bottled consciousness + ??? -> science 3
 
 -- TODO: little things
---       walls; gates; radar; cliff explosives; landfill
+--       walls; gates; radar; cliff explosives; landfill; modular armour + equipments
 --       extend upgrade techs
 --       - lab speed + increase times (?)
 
 -- TODO: storylore tooltips!
 -- TODO: some cube process that outputs random / multiple products.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- TODO: something that forces cube to go far away on train (probably miners)
+-- TODO: something that forces cube to go far away on train (cube powered miner, basically)
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: some sort of weird biter farmer spawning synthesis.
 -- TODO: late game forbidden tech. Experiments on cube. Suffering. Regret.
@@ -62,8 +61,10 @@ require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")
 require("prototypes.recipes_science")
 require("prototypes.resources")
+require("prototypes.technology_0")
+require("prototypes.technology_1")
+require("prototypes.technology_unknown")
 require("prototypes.technology_upgrades")
-require("prototypes.technology")
 require("prototypes.tweaks")
 
 require("prototypes.entities.boiler")

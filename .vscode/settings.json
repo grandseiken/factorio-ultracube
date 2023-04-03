@@ -1,0 +1,18 @@
+{
+  "Lua.diagnostics.globals": [
+    "data",
+    "util",
+    "serpent",
+    "log",
+    "remote",
+    "defines",
+    "script",
+    "global",
+    "game",
+    "pipecoverspictures",
+    "commands"
+  ],
+  "Lua.diagnostics.disable": [
+    "lowercase-global"
+  ]
+}

@@ -29,7 +29,7 @@ data:extend({
       -- Base game goes up to 12, we start at 4
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserters", "cube-fundamental-comprehension-card"},
+    prerequisites = {"cube-stack-inserters"},
     unit = {
       count = 240,
       ingredients = {

@@ -1,6 +1,17 @@
 data:extend({
   {
     type = "fluid",
+    name = "cube-gelatinous-tar",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r=0.1, g=0.1, b=0.15},
+    flow_color = {r=0.15, g=0.15, b=0.20},
+    icon = "__Hypercube__/graphics/tar.png",
+    icon_size = 64, icon_mipmaps = 4,
+    order = "a[fluid]-b[tar]",
+  },
+  {
+    type = "fluid",
     name = "cube-matter-replication-gel",
     default_temperature = 25,
     heat_capacity = "0.1KJ",
