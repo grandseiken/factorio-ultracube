@@ -112,11 +112,11 @@ local function cube_check_entity(entity, result_set)
     if entity.is_crafting() then
       local recipe_data = recipes[entity.get_recipe().name]
       if recipe_data then
-        if recipe_data.ingredients[cube_ultradense] then
+        if recipe_data.ingredients[cube_ultradense] > 0 then
           add_result(result_set, cube_ultradense, entity)
           return true
         end
-        if recipe_data.ingredients[cube_dormant] then
+        if recipe_data.ingredients[cube_dormant] > 0 then
           add_result(result_set, cube_dormant, entity)
           return true
         end
@@ -237,10 +237,10 @@ local function cube_search_crafters(result_set, cache)
     if e.is_crafting() then
       local recipe_data = recipes[e.get_recipe().name]
       if recipe_data then
-        if recipe_data.ingredients[cube_ultradense] then
+        if recipe_data.ingredients[cube_ultradense] > 0 then
           if add_result(result_set, cube_ultradense, e) then return true end
         end
-        if recipe_data.ingredients[cube_dormant] then
+        if recipe_data.ingredients[cube_dormant] > 0 then
           if add_result(result_set, cube_dormant, e) then return true end
         end
       end
@@ -344,10 +344,10 @@ local function cube_search_players(result_set)
   for _, player in pairs(game.players) do
     if player.character then
       local ingredients = player_cube_data(player).ingredients
-      if ingredients[cube_ultradense] then
+      if ingredients[cube_ultradense] > 0 then
         if add_result(result_set, cube_ultradense, player.character) then return true end
       end
-      if ingredients[cube_dormant] then
+      if ingredients[cube_dormant] > 0 then
         if add_result(result_set, cube_dormant, player.character) then return true end
       end
     end

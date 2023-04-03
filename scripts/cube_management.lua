@@ -1,3 +1,5 @@
+require("scripts.lib")
+
 cube_defines = {
   ultradense = "cube-ultradense-utility-cube",
   dormant = "cube-dormant-utility-cube",
@@ -9,10 +11,7 @@ cubes = {
   dormant = cube_defines.dormant,
 }
 
-cube_info = {
-  [cubes.ultradense] = {},
-  [cubes.dormant] = {},
-}
+cube_info = make_set({cubes.ultradense, cubes.dormant})
 
 local cubes = cubes
 local cube_info = cube_info
@@ -23,6 +22,9 @@ function cube_recipes()
     cube_recipes_cache = {}
     for name, recipe in pairs(game.recipe_prototypes) do
       local data = {recipe = recipe, total = 0, ingredients = {}}
+      for k, _ in pairs(cube_info) do
+        data.ingredients[k] = 0
+      end
       for _, ingredient in ipairs(recipe.ingredients) do
         if cube_info[ingredient.name] then
           data.total = data.total + ingredient.amount

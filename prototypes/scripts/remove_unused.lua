@@ -44,13 +44,16 @@ local whitelist = make_set({
   "stack-filter-inserter",
 })
 
-local upgradable_prototypes = {
+local entity_prototypes = {
   "inserter",
   "transport-belt",
   "underground-belt",
   "splitter",
   "furnace",
   "assembling-machine",
+  "mining-drill",
+  "construction-robot",
+  "logistic-robot",
 }
 
 local item_prototypes = {
@@ -65,6 +68,7 @@ local item_prototypes = {
   "tool",
   "mining-tool",
   "repair-tool",
+  "artillery-wagon",
 }
 
 local function add_hidden_flag(t)
@@ -74,7 +78,7 @@ local function add_hidden_flag(t)
   t.flags[#t.flags + 1] = "hidden"
 end
 
-for _, v in ipairs(upgradable_prototypes) do
+for _, v in ipairs(entity_prototypes) do
   for _, t in pairs(data.raw[v]) do
     if not whitelist[t.name] then
       t.next_upgrade = nil

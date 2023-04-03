@@ -376,7 +376,6 @@ local function electric_mining_drill_status_leds_working_visualisation()
 end
 
 data:extend({
-
   {
     type = "mining-drill",
     name = "cube-electric-mining-drill",

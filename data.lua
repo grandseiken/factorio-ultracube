@@ -7,19 +7,20 @@ require("prototypes.scripts.autoplace")
 -- TODO: layered icons look bad when disabled. Bake them.
 
 -- TODO: science 2 techs:
---       construction robots, roboport + 2 chests; move emotional synthesis to its own tech?
+--       move emotional synthesis to its own tech? +make different and not need dormant cube (or cube at all)
+--       construction robots, roboport + 2 chests
 --       circuit 2?
 --       accumulators?
 --       science 3
 
 -- TODO: integrated power/fuel thing. Use Kras2 fuel building?
 --       some kind of slightly more efficient/complicated power/steam solution
---       water+sand+wood (? - wood from greenhouse if necessary) ->
---           ultradense furnace -> untreated / gelatinous (etc) tar
+--       water+sand+wood (?) -> ultradense furnace -> untreated / gelatinous (etc) tar
 --       tar -> chemical plant (somewhat big, slow, complicated with byproduct (matter? etc) / loopback) ->
 --           -> elbow grease (easier) (for engines?)
 --           -> another cube step giving some (small number) kind of solid fuel for vehicles, boilers, etc
 --       maybe use glass in vehicles (especially car)
+--       remove fuel values or categories from wood/coal
 --       hypercube can be used in trains for lols.
 --       technology allows (hypercube only) speed/acceleration bonus to work from cargo
 -- TODO: good candidate here for something where a cube-source leads into big slow production
@@ -31,15 +32,14 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill
---       upgrade techs (robot speed, mining productivity, lab speed + increase times, etc)
+--       extend upgrade techs
+--       - lab speed + increase times (?)
 
 -- TODO: storylore tooltips!
 -- TODO: some cube process that outputs random / multiple products.
 -- TODO: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: something that forces cube to go far away on train (probably miners)
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: eventually, cube can produce small amounts of burnable energy sources - but not too much better, mostly just
---       obviating cube travel time
 -- TODO: some sort of weird biter farmer spawning synthesis.
 -- TODO: late game forbidden tech. Experiments on cube. Suffering. Regret.
 -- TODO: some sort of teleport cube logistics option.
@@ -62,6 +62,7 @@ require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")
 require("prototypes.recipes_science")
 require("prototypes.resources")
+require("prototypes.technology_upgrades")
 require("prototypes.technology")
 require("prototypes.tweaks")
 
