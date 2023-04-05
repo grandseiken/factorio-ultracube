@@ -125,8 +125,8 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/crusher.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-crusher"},
-      {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
-      {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
+      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
+      {type = "unlock-recipe", recipe = "cube-glass"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit = {
@@ -141,7 +141,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stone-processing",
+    name = "cube-rare-metal-crushing",
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
@@ -149,23 +149,23 @@ data:extend({
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__base__/graphics/icons/stone.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
         shift = {0, -40},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/sand-01.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
         shift = {-0.866 * 40, 20},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/items/glass.png",
+        icon = "__base__/graphics/icons/stone.png",
         shift = {0.866 * 40, 20},
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
-      {type = "unlock-recipe", recipe = "cube-glass"},
+      {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
+      {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
     },
     prerequisites = {"cube-crusher"},
     unit = {
@@ -187,7 +187,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-greenhouse"},
       {type = "unlock-recipe", recipe = "cube-greenhouse-wood"},
     },
-    prerequisites = {"cube-stone-processing", "cube-optics"},
+    prerequisites = {"cube-crusher", "cube-optics"},
     unit = {
       count = 120,
       ingredients = {
@@ -207,7 +207,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-chemical-plant"},
       {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
     },
-    prerequisites = {"cube-stone-processing"},
+    prerequisites = {"cube-crusher"},
     unit = {
       count = 120,
       ingredients = {
@@ -250,6 +250,26 @@ data:extend({
       time = 20,
     },
     order = "1-2-3",
+  },
+  {
+    type = "technology",
+    name = "cube-fuel-refinement",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
+      {type = "unlock-recipe", recipe = "cube-gelatinous-tar"},
+    },
+    prerequisites = {"cube-greenhouse", "cube-chemical-plant"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-4",
   },
   {
     type = "technology",
@@ -365,10 +385,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-intelligent-calcium"},
       {type = "unlock-recipe", recipe = "cube-bottled-consciousness"},
     },
-    prerequisites = {
-      "cube-chemical-plant",
-      "cube-sentience-extraction",
-    },
+    prerequisites = {"cube-chemical-plant", "cube-rare-metal-crushing", "cube-sentience-extraction"},
     unit = {
       count = 240,
       ingredients = {

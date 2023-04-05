@@ -3,8 +3,7 @@ data:extend({
     type = "item",
     name = "cube-raw-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -39,8 +38,7 @@ data:extend({
     type = "item",
     name = "cube-refined-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -60,12 +58,6 @@ data:extend({
         scale = 0.25,
         mipmap_count = 4,
       },
-      {
-        size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-3.png",
-        scale = 0.25,
-        mipmap_count = 4,
-      },
     },
     subgroup = "raw-resource",
     order = "c[1-refined-rare-metals]",
@@ -75,8 +67,7 @@ data:extend({
     type = "item",
     name = "cube-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -130,8 +121,7 @@ data:extend({
     type = "item",
     name = "cube-sand",
     icon = "__Hypercube__/graphics/sand-01.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
@@ -148,8 +138,7 @@ data:extend({
     type = "item",
     name = "cube-glass",
     icon = "__Krastorio2Assets__/icons/items/glass.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-furnace",
     order = "1[a-glass]",
     stack_size = 50,
@@ -159,8 +148,7 @@ data:extend({
     type = "item",
     name = "cube-calcium",
     icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,

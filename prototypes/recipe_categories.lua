@@ -49,4 +49,9 @@ data:extend({
     name = "cube-chemical-plant",
     order = "d",
   },
+  {
+    type = "recipe-category",
+    name = "cube-fuel-refinery",
+    order = "e",
+  },
 })
