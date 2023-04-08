@@ -4,4 +4,9 @@ data:extend({
     name = "cube-cube",
     order = "0",
   },
+  {
+    type = "fuel-category",
+    name = "cube-fuel-canister",
+    order = "1",
+  },
 })

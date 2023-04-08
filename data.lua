@@ -2,7 +2,7 @@ require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
 -- TODO: rename to megacube?
--- TODO: useless stone/coal/wood/etc from decorations.
+-- TODO: useless coal from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
@@ -15,12 +15,11 @@ require("prototypes.scripts.autoplace")
 --       science 3
 
 -- TODO: integrated power/fuel thing. Use Kras2 fuel building?
---       some kind of slightly more efficient/complicated power/steam solution
---       tar -> chemical plant (somewhat big, slow, complicated with byproduct (matter? etc) / loopback) ->
---           -> elbow grease (easier) (for engines?)
---           -> another cube step giving some (small number) kind of solid fuel for vehicles, boilers, etc
 --       maybe use glass in vehicles (especially car)
 --       remove fuel values or categories from wood/coal
+--       split tar/fuel tech into 2
+--       tar -> heavy/light processing icon; rename heavy+light tar
+--       ~1k tar should make >~1 or a bit more fuel, check it's right
 --       hypercube can be used in trains for lols.
 --       technology allows (hypercube only) speed/acceleration bonus to work from cargo
 -- TODO: good candidate here for something where a cube-source leads into big slow production

@@ -38,6 +38,20 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-condensed-fuel",
+    icon = "__base__/graphics/icons/rocket-fuel.png",
+    icon_size = 64, icon_mipmaps = 4,
+    fuel_category = "cube-fuel-canister",
+    fuel_value = "500MJ",
+    fuel_acceleration_multiplier = 1.75,
+    fuel_top_speed_multiplier = 1.25,
+    subgroup = "cube-fuel",
+    order = "1[a-condensed-fuel]",
+    stack_size = 10,
+  },
+
+  {
+    type = "item",
     name = "cube-basic-matter-unit",
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,

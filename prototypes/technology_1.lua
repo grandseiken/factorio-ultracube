@@ -233,7 +233,7 @@ data:extend({
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__base__/graphics/icons/fluid/water.png",
+        icon = "__Krastorio2Assets__/icons/fluids/water.png",
         shift = {0, -32},
       },
     },
@@ -257,8 +257,12 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
       {type = "unlock-recipe", recipe = "cube-gelatinous-tar"},
+      {type = "unlock-recipe", recipe = "cube-tar-processing"},
+      {type = "unlock-recipe", recipe = "cube-unstable-gas"},
+      {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
+      {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
+      {type = "unlock-recipe", recipe = "cube-elbow-grease"},
     },
     prerequisites = {"cube-greenhouse", "cube-chemical-plant"},
     unit = {
@@ -270,6 +274,45 @@ data:extend({
       time = 20,
     },
     order = "1-2-4",
+  },
+  {
+    type = "technology",
+    name = "cube-tar-reclamation",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/tar.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
+    },
+    prerequisites = {"cube-fuel-refinement"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-5",
   },
   {
     type = "technology",

@@ -64,15 +64,21 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-experimental",
+    name = "cube-fuel",
     group = "intermediate-products",
     order = "b",
   },
   {
     type = "item-subgroup",
-    name = "cube-science",
+    name = "cube-experimental",
     group = "intermediate-products",
     order = "c",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-science",
+    group = "intermediate-products",
+    order = "d",
   },
 
   {
@@ -86,5 +92,23 @@ data:extend({
     name = "cube-production-machines",
     group = "production",
     order = "z",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-tar-input",
+    group = "fluids",
+    order = "f",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-tar-output",
+    group = "fluids",
+    order = "g",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-synthesis-fluids",
+    group = "fluids",
+    order = "h",
   },
 })

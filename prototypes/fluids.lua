@@ -7,8 +7,59 @@ data:extend({
     base_color = {r=0.1, g=0.1, b=0.15},
     flow_color = {r=0.15, g=0.15, b=0.20},
     icon = "__Hypercube__/graphics/tar.png",
+    subgroup = "cube-tar-input",
     icon_size = 64, icon_mipmaps = 4,
-    order = "a[fluid]-b[tar]",
+    order = "a[tar]-a[tar]",
+  },
+  {
+    type = "fluid",
+    name = "cube-heavy-tar",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    -- TODO: check colour matches icon.
+    base_color = {r=0.5, g=0.04, b=0},
+    flow_color = {r=0.85, g=0.6, b=0.3},
+    icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-tar-input",
+    order = "a[tar]-b[heavy]",
+  },
+  {
+    type = "fluid",
+    name = "cube-light-tar",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    -- TODO: check colour matches icon.
+    base_color = {r=0.57, g=0.33, b=0},
+    flow_color = {r=1, g=0.73, b=0.07},
+    icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-tar-input",
+    order = "a[tar]-c[light]",
+  },
+  {
+    type = "fluid",
+    name = "cube-unstable-gas",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r=0.3, g=0.1, b=0.3},
+    flow_color = {r=0.8, g=0.8, b=0.8},
+    icon = "__Krastorio2Assets__/icons/fluids/petroleum-gas.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-tar-output",
+    order = "a[tar]-d[unstable-gas]"
+  },
+  {
+    type = "fluid",
+    name = "cube-elbow-grease",
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    base_color = {r=0.15, g=0.32, b=0.03},
+    flow_color = {r=0.43, g=0.75, b=0.31},
+    icon = "__Krastorio2Assets__/icons/fluids/lubricant.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-tar-output",
+    order = "a[tar]-e[lubricant]",
   },
   {
     type = "fluid",
@@ -19,7 +70,8 @@ data:extend({
     flow_color = {r=0.9, g=0.9, b=0.9},
     icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
     icon_size = 64, icon_mipmaps = 4,
-    order = "a[fluid]-c[gel]"
+    subgroup = "cube-synthesis-fluids",
+    order = "b[matter]-a[gel]"
   },
   {
     type = "fluid",
@@ -30,7 +82,8 @@ data:extend({
     flow_color = {r=0.2, g=0.9, b=0.9},
     icon = "__Krastorio2Assets__/icons/fluids/matter.png",
     icon_size = 64, icon_mipmaps = 4,
-    order = "a[fluid]-d[grey]"
+    subgroup = "cube-synthesis-fluids",
+    order = "b[matter]-b[cerebral]"
   },
   {
     type = "fluid",
@@ -41,7 +94,8 @@ data:extend({
     flow_color = {r=0.95, g=0.15, b=0.5},
     icon = "__Hypercube__/graphics/joy.png",
     icon_size = 64, icon_mipmaps = 4,
-    order = "a[fluid]-e[joy]"
+    subgroup = "cube-synthesis-fluids",
+    order = "b[matter]-c[joy]"
   },
   {
     type = "fluid",
@@ -52,6 +106,7 @@ data:extend({
     flow_color = {r=0.4, g=0.2, b=0.75},
     icon = "__Hypercube__/graphics/anguish.png",
     icon_size = 64, icon_mipmaps = 4,
-    order = "a[fluid]-e[anguish]"
+    subgroup = "cube-synthesis-fluids",
+    order = "b[matter]-d[anguish]"
   },
 })
