@@ -14,20 +14,15 @@ require("prototypes.scripts.autoplace")
 --       accumulators?
 --       science 3
 
--- TODO: integrated power/fuel thing. Use Kras2 fuel building?
---       maybe use glass in vehicles (especially car)
+-- TODO: maybe use glass in vehicles (especially car)
 --       remove fuel values or categories from wood/coal
---       split tar/fuel tech into 2
---       tar -> heavy/light processing icon; rename heavy+light tar
---       ~1k tar should make >~1 or a bit more fuel, check it's right
---       hypercube can be used in trains for lols.
+--       tar processing tech graphic; tar -> heavy/light processing icon; rename heavy+light tar
+--       hypercube can be used in trains for lols. vehicle fuel generally
 --       technology allows (hypercube only) speed/acceleration bonus to work from cargo
--- TODO: good candidate here for something where a cube-source leads into big slow production
---       chain with several steps, then eventually into another cube-powered thing. maybe science 3 or power thing?
 
 -- TODO: science 2 recipes
 --       matter + circuit + motor/engine + bottled consciousness + joy/anguish -> 2x different construction robot
---       bottled consciousness + ??? -> science 3
+--       bottled consciousness + ??? (something from unstable gas maybe) -> science 3
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill; modular armour + equipments
@@ -36,7 +31,7 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: storylore tooltips!
 -- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.
---       - 1: maybe scale-focused
+--       - 1: maybe scale-focused, cube scale puzzles, maybe
 --       - 2: maybe power / energy / byproducts-focused?
 --       - 3: either - cube logistics puzzles, many interlinked recipes with short time and low amounts or
 --            (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?

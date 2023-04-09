@@ -7,7 +7,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-engine"},
     },
-    prerequisites = {"cube-fundamental-comprehension-card"},
+    prerequisites = {"cube-elbow-grease"},
     unit = {
       count = 60,
       ingredients = {
@@ -68,7 +68,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-rail-signal"},
       {type = "unlock-recipe", recipe = "cube-chain-signal"},
     },
-    prerequisites = {"cube-railway", "cube-optics"},
+    prerequisites = {"cube-railway"},
     unit = {
       count = 120,
       ingredients = {
@@ -253,16 +253,13 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-fuel-refinement",
+    name = "cube-tar-processing",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-gelatinous-tar"},
       {type = "unlock-recipe", recipe = "cube-tar-processing"},
       {type = "unlock-recipe", recipe = "cube-unstable-gas"},
-      {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
-      {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
-      {type = "unlock-recipe", recipe = "cube-elbow-grease"},
     },
     prerequisites = {"cube-greenhouse", "cube-chemical-plant"},
     unit = {
@@ -274,6 +271,45 @@ data:extend({
       time = 20,
     },
     order = "1-2-4",
+  },
+  {
+    type = "technology",
+    name = "cube-fuel-refinery",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
+      {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
+    },
+    prerequisites = {"cube-tar-processing"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-5",
+  },
+  {
+    type = "technology",
+    name = "cube-elbow-grease",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/lubricant.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-elbow-grease"},
+    },
+    prerequisites = {"cube-tar-processing"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-6",
   },
   {
     type = "technology",
@@ -303,7 +339,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
       {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
     },
-    prerequisites = {"cube-fuel-refinement"},
+    prerequisites = {"cube-tar-processing"},
     unit = {
       count = 240,
       ingredients = {
@@ -312,7 +348,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-5",
+    order = "1-2-7",
   },
   {
     type = "technology",

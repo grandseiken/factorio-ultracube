@@ -360,6 +360,7 @@ data:extend({
       {"cube-basic-matter-unit", 10},
       {"cube-basic-motor-unit", 4},
       {"cube-electronic-circuit", 2},
+      {type = "fluid", name = "cube-elbow-grease", amount = 40},
     },
     results = {{"cube-advanced-engine", 1}},
     energy_required = 8,
@@ -448,6 +449,23 @@ data:extend({
   {
     type = "recipe",
     name = "cube-tar-processing",
+    icons = {
+      {
+        icon = "__Hypercube__/graphics/tar.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.325, shift = {0, 0},
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {-6, 2},
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {6, 2},
+      },
+    },
     icon = "__Hypercube__/graphics/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
