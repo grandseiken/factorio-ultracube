@@ -81,7 +81,7 @@ data:extend({
   {
     type = "item",
     name = "cube-advanced-engine",
-    icon = "__base__/graphics/icons/electric-engine-unit.png",
+    icon = "__Krastorio2Assets__/icons/equipments/vehicle/additional-engine.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "0[b-advanced-engine]",
@@ -94,6 +94,15 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "0[c-electronic-circuit]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-advanced-circuit",
+    icon = "__Krastorio2Assets__/icons/items/advanced-circuit.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-components",
+    order = "0[d-advanced-circuit]",
     stack_size = 100,
   },
   {

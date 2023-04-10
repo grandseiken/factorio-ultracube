@@ -8,6 +8,8 @@ local whitelist = make_set({
   "stone-brick",
   "wood",
   "pipe",
+  "pipe-to-ground",
+  "iron-chest",
   "storage-tank",
   "steam-engine",
   "offshore-pump",

@@ -439,7 +439,7 @@ data:extend({
     type = "technology",
     name = "cube-sentience-extraction",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/matter-water.png",
+    icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
     },
@@ -477,8 +477,22 @@ data:extend({
   {
     type = "technology",
     name = "cube-emotional-synthesis",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/matter-water.png",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/joy.png",
+        shift = {-24, 0},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Hypercube__/graphics/anguish.png",
+        shift = {24, 0},
+      },
+    },
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
     },
@@ -495,11 +509,30 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-artificial-interrogation-card",
+    name = "cube-advanced-electronics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/advanced-electronics.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-advanced-circuit"},
+    },
+    prerequisites = {"cube-tar-processing"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-4-3",
+  },
+  {
+    type = "technology",
+    name = "cube-abstract-interrogation-card",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-artificial-interrogation-card"},
+      {type = "unlock-recipe", recipe = "cube-abstract-interrogation-card"},
       {
         type = "nothing",
         icons = {
@@ -515,7 +548,7 @@ data:extend({
         effect_description = {"effect-description.cube-technology-unlock"},
       },
     },
-    prerequisites = {"cube-tar-processing", "cube-bottled-consciousness"},
+    prerequisites = {"cube-advanced-electronics", "cube-bottled-consciousness"},
     unit = {
       count = 320,
       ingredients = {

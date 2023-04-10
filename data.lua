@@ -6,21 +6,20 @@ require("prototypes.scripts.autoplace")
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
+-- TODO: tech cost review
 
 -- TODO: icon reworks
---       - tar processing icon + tech graphic
---       - emotional synthesis icon + tech graphic, + cerebral tech graphic
+--       - advanced engine tech graphic
+--       - tar processing/reclamation icons, + tech graphic
+--       - emotional synthesis icon + tech graphic
 -- TODO: renames
 --       - unstable gas? heavy/light oil (essential oils?)
 
 -- TODO: science 2 techs:
---       rework emotion synthesis (different recipe, maybe pre-ingredient)
---       - maybe science 3 + emotion synthesis in new building (quantum computer / AI lab)
---       science 3: more products, something made from gas
+--       rework emotion synthesis (different recipe, maybe pre-ingredient, maybe different building)
+--       science 3: advanced circuit made from gas byproduct instead of directly?
 --       construction robots, roboport + 2 chests
---       circuit 2?
 --       accumulators?
---       science 3
 
 -- TODO: maybe use glass in vehicles (especially car)
 --       remove fuel values or categories from wood/coal

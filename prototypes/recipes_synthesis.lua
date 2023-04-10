@@ -79,7 +79,7 @@ data:extend({
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
-      }
+      },
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
@@ -129,7 +129,7 @@ data:extend({
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
-      }
+      },
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
@@ -196,8 +196,22 @@ data:extend({
   {
     type = "recipe",
     name = "cube-emotional-synthesis",
-    icon = "__Hypercube__/graphics/emotional-synthesis.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/fluids/matter.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Hypercube__/graphics/joy.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.275, shift = {-6, 0},
+      },
+      {
+        icon = "__Hypercube__/graphics/anguish.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.275, shift = {6, 0},
+      }
+    },
     ingredients = {
       {"cube-dormant-utility-cube", 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 200},

@@ -59,12 +59,12 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-artificial-interrogation-card",
+    name = "cube-abstract-interrogation-card",
     ingredients = {
       {"cube-bottled-consciousness", 1},
-      {type = "fluid", name = "cube-unstable-gas", amount = 50},
+      {"cube-advanced-circuit", 2},
     },
-    results = {{"cube-artificial-interrogation-card", 1}},
+    results = {{"cube-abstract-interrogation-card", 1}},
     energy_required = 8,
     category = "cube-fabricator",
     enabled = false,
