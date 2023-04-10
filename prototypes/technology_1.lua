@@ -495,11 +495,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-abstract-intelligence-card",
+    name = "cube-artificial-interrogation-card",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-abstract-intelligence-card"},
+      {type = "unlock-recipe", recipe = "cube-artificial-interrogation-card"},
       {
         type = "nothing",
         icons = {

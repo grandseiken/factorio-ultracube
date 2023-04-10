@@ -1,7 +1,7 @@
 local unlock_trigger_technologies = {
   ["cube-basic-contemplation-unit"] = 0,
   ["cube-fundamental-comprehension-card"] = 1,
-  ["cube-abstract-intelligence-card"] = 2,
+  ["cube-artificial-interrogation-card"] = 2,
 }
 
 local function get_unlocks_for_technology(technology_name)

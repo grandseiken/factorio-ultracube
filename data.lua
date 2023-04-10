@@ -15,6 +15,7 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: science 2 techs:
 --       rework emotion synthesis (different recipe, maybe pre-ingredient)
+--       - maybe science 3 + emotion synthesis in new building (quantum computer / AI lab)
 --       science 3: more products, something made from gas
 --       construction robots, roboport + 2 chests
 --       circuit 2?
