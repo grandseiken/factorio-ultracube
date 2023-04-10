@@ -19,4 +19,14 @@ data:extend({
     stack_size = 100,
     durability = 1,
   },
+  {
+    type = "tool",
+    name = "cube-abstract-intelligence-card",
+    icon = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-science",
+    order = "2[a-ai-0]",
+    stack_size = 100,
+    durability = 1,
+  },
 })

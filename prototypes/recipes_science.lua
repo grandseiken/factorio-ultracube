@@ -57,4 +57,16 @@ data:extend({
     category = "cube-fabricator",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-abstract-intelligence-card",
+    ingredients = {
+      {"cube-bottled-consciousness", 1},
+      {type = "fluid", name = "cube-unstable-gas", amount = 50},
+    },
+    results = {{"cube-abstract-intelligence-card", 1}},
+    energy_required = 8,
+    category = "cube-fabricator",
+    enabled = false,
+  },
 })

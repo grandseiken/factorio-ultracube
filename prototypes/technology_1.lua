@@ -442,7 +442,6 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/matter-water.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
-      {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
     },
     prerequisites = {"cube-matter-replication"},
     unit = {
@@ -474,5 +473,57 @@ data:extend({
       time = 20,
     },
     order = "1-4-1",
+  },
+  {
+    type = "technology",
+    name = "cube-emotional-synthesis",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/matter-water.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-emotional-synthesis"},
+    },
+    prerequisites = {"cube-sentience-extraction"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-4-2",
+  },
+  {
+    type = "technology",
+    name = "cube-abstract-intelligence-card",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-abstract-intelligence-card"},
+      {
+        type = "nothing",
+        icons = {
+          {
+            icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+            icon_size = 64, icon_mipmaps = 4,
+          },
+          {
+            icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
+            icon_size = 64, icon_mipmaps = 2,
+          }
+        },
+        effect_description = {"effect-description.cube-technology-unlock"},
+      },
+    },
+    prerequisites = {"cube-tar-processing", "cube-bottled-consciousness"},
+    unit = {
+      count = 320,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 30,
+    },
+    order = "1-5-0",
   },
 })

@@ -7,8 +7,15 @@ require("prototypes.scripts.autoplace")
 -- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 
+-- TODO: icon reworks
+--       - tar processing icon + tech graphic
+--       - emotional synthesis icon + tech graphic, + cerebral tech graphic
+-- TODO: renames
+--       - unstable gas? heavy/light oil (essential oils?)
+
 -- TODO: science 2 techs:
---       move emotional synthesis to its own tech? +make different and not need dormant cube (or cube at all)
+--       rework emotion synthesis (different recipe, maybe pre-ingredient)
+--       science 3: more products, something made from gas
 --       construction robots, roboport + 2 chests
 --       circuit 2?
 --       accumulators?
@@ -16,13 +23,11 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: maybe use glass in vehicles (especially car)
 --       remove fuel values or categories from wood/coal
---       tar processing tech graphic; tar -> heavy/light processing icon; rename heavy+light tar
 --       hypercube can be used in trains for lols. vehicle fuel generally
 --       technology allows (hypercube only) speed/acceleration bonus to work from cargo
 
 -- TODO: science 2 recipes
 --       matter + circuit + motor/engine + bottled consciousness + joy/anguish -> 2x different construction robot
---       bottled consciousness + ??? (something from unstable gas maybe) -> science 3
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill; modular armour + equipments
