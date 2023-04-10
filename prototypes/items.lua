@@ -12,6 +12,8 @@ data:extend({
     fuel_category = "cube-cube",
     fuel_value = "1GJ",
     fuel_glow_color = {0.5, 0.5, 1, 1},
+    fuel_acceleration_multiplier = 5,
+    fuel_top_speed_multiplier = 2,
     burnt_result = "cube-dormant-utility-cube",
   },
   {
@@ -27,12 +29,22 @@ data:extend({
 
   {
     type = "item",
-    name = "cube-construction-robot",
+    name = "cube-construction-robot-0",
     icon = "__base__/graphics/icons/construction-robot.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "logistic-network",
     order = "a[robot]-b[construction-robot]",
-    place_result = "cube-construction-robot",
+    place_result = "cube-construction-robot-0",
+    stack_size = 50,
+  },
+  {
+    type = "item",
+    name = "cube-construction-robot-1",
+    icon = "__base__/graphics/icons/construction-robot.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "logistic-network",
+    order = "a[robot]-b[construction-robot]",
+    place_result = "cube-construction-robot-1",
     stack_size = 50,
   },
 

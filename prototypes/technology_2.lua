@@ -9,7 +9,11 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
       {type = "unlock-recipe", recipe = "cube-splitter-2"},
     },
-    prerequisites = {"cube-logistics", "cube-elbow-grease", "cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-logistics",
+      "cube-elbow-grease",
+      "cube-abstract-interrogation-card",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -29,7 +33,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-substation"},
     },
-    prerequisites = {"cube-electric-energy-distribution-1", "cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-electric-energy-distribution-1",
+      "cube-abstract-interrogation-card",
+    },
     unit = {
       count = 240,
       ingredients = {

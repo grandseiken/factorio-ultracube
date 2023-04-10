@@ -46,7 +46,10 @@ data:extend({
       -- Base game goes up to 0.4 (before infinite).
       {type = "mining-drill-productivity-bonus", modifier = 0.025},
     },
-    prerequisites = {"cube-mining-productivity-1", "cube-rare-metal-crushing"},
+    prerequisites = {
+      "cube-mining-productivity-1",
+      "cube-rare-metal-crushing",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -67,7 +70,10 @@ data:extend({
       -- Base game goes up to 3
       {type = "inserter-stack-size-bonus", modifier = 1},
     },
-    prerequisites = {"cube-inserters", "cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-inserters",
+      "cube-abstract-interrogation-card",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -89,7 +95,10 @@ data:extend({
       -- Base game goes up to 12, we start at 4
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserters", "cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-stack-inserters",
+      "cube-abstract-interrogation-card",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -111,7 +120,7 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-speed", modifier = 0.2},
     },
-    prerequisites = {"cube-advanced-engine"},
+    prerequisites = {"cube-construction-robotics"},
     unit = {
       count = 180,
       ingredients = {
@@ -132,7 +141,7 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-storage", modifier = 1},
     },
-    prerequisites = {"cube-bottled-consciousness"},
+    prerequisites = {"cube-construction-robotics"},
     unit = {
       count = 240,
       ingredients = {

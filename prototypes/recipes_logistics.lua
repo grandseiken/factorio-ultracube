@@ -326,6 +326,7 @@ data:extend({
     name = "cube-car",
     ingredients = {
       {"iron-chest", 2},
+      {"cube-glass", 8},
       {"cube-advanced-engine", 2},
       {"cube-basic-matter-unit", 40},
     },
@@ -339,6 +340,7 @@ data:extend({
     name = "cube-locomotive",
     ingredients = {
       {"cube-advanced-engine", 4},
+      {"cube-glass", 10},
       {"cube-basic-matter-unit", 80},
       {"cube-electronic-circuit", 8},
     },
@@ -420,6 +422,30 @@ data:extend({
     results = {{"rail", 2}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+
+  {
+    type = "recipe",
+    name = "cube-construction-robot",
+    icon = "__base__/graphics/icons/construction-robot.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {"cube-basic-matter-unit", 8},
+      {"cube-electronic-circuit", 2},
+      {"cube-advanced-engine", 1},
+      {"cube-bottled-consciousness", 2},
+      {type = "fluid", name = "cube-joy", amount = 60},
+      {type = "fluid", name = "cube-anguish", amount = 60},
+    },
+    results = {
+      {"cube-construction-robot-0", 1},
+      {"cube-construction-robot-1", 1},
+    },
+    energy_required = 4,
+    category = "cube-fabricator",
+    subgroup = "logistic-network",
+    order = "a[robot]-b[construction-robot]",
     enabled = false,
   },
 })

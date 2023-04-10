@@ -53,21 +53,24 @@ end
 function player_cube_data(player)
   local data = {total = 0, ingredients = {}}
   for _, item in pairs(cubes) do
-    local count = player.get_item_count(item)
-    data.total = data.total + count
-    data.ingredients[item] = count
+    data.ingredients[item] = 0
   end
   local recipes = cube_recipes()
   if player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
       if recipe then
-        data.total = data.total + recipe.total
-        for k, count in ipairs(recipe.ingredients) do
-          data.ingredients[k] = data.ingredients[k] + count
+        data.total = math.max(data.total, recipe.total)
+        for k, count in pairs(recipe.ingredients) do
+          data.ingredients[k] = math.max(data.ingredients[k], count)
         end
       end
     end
+  end
+  for _, item in pairs(cubes) do
+    local count = player.get_item_count(item)
+    data.total = data.total + count
+    data.ingredients[item] = data.ingredients[item] + count
   end
   return data
 end

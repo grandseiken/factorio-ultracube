@@ -73,7 +73,10 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
       {type = "unlock-recipe", recipe = "cube-rare-metals"},
     },
-    prerequisites = {"cube-electric-mining-drill", "cube-electric-furnace"},
+    prerequisites = {
+      "cube-electric-mining-drill",
+      "cube-electric-furnace",
+    },
     unit = {
       count = 40,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
@@ -239,7 +242,10 @@ data:extend({
         effect_description = {"effect-description.cube-technology-unlock"},
       },
     },
-    prerequisites = {"cube-electronics", "cube-n-dimensional-widgets"},
+    prerequisites = {
+      "cube-electronics",
+      "cube-n-dimensional-widgets",
+    },
     unit = {
       count = 120,
       ingredients = {{"cube-basic-contemplation-unit", 1}},

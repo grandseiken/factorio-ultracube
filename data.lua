@@ -9,29 +9,25 @@ require("prototypes.scripts.autoplace")
 -- TODO: tech cost review
 
 -- TODO: icon reworks
---       - advanced engine tech graphic
+--       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons, + tech graphic
 --       - emotional synthesis icon + tech graphic
 -- TODO: renames
 --       - unstable gas? heavy/light oil (essential oils?)
+-- TODO: recipe crafting_machine_tint
 
--- TODO: science 2 techs:
---       rework emotion synthesis (different recipe, maybe pre-ingredient, maybe different building)
---       science 3: advanced circuit made from gas byproduct instead of directly?
---       construction robots, roboport + 2 chests
+-- TODO: science 3 techs:
+--       roboport + 2 chests
 --       accumulators?
 --       bigger boxes?
 
--- TODO: maybe use glass in vehicles (especially car)
---       remove fuel values or categories from wood/coal
---       hypercube can be used in trains for lols. vehicle fuel generally
+-- TODO: remove fuel values or categories from wood/coal?
+--       sort vehicle fuel in general; hypercube can be used in trains for lols
 --       technology allows (hypercube only) speed/acceleration bonus to work from cargo
-
--- TODO: science 2 recipes
---       matter + circuit + motor/engine + bottled consciousness + joy/anguish -> 2x different construction robot
+--       revisit construction robot recipe
 
 -- TODO: little things
---       walls; gates; radar; cliff explosives; landfill; modular armour + equipments
+--       walls; gates; radar; cliff explosives; landfill; equipments; repair packs
 --       extend upgrade techs
 --       - lab speed + increase times (?)
 
@@ -44,6 +40,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: (2) some cube process that outputs random / multiple products.
 -- TODO: (2/1?) ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- TODO: (1?) something that forces cube to go far away on train (cube powered miner, basically)
+--       - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
 -- TODO: (2?) some sort of weird biter farmer spawning synthesis.
 -- TODO: (3) late game forbidden tech. Experiments on cube. Suffering. Regret.
 -- TODO: (1) some sort of teleport cube logistics option.
@@ -60,8 +57,9 @@ require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
 require("prototypes.recipe_categories")
-require("prototypes.recipes_intermediates")
+require("prototypes.recipes_equipment")
 require("prototypes.recipes_fluids")
+require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
 require("prototypes.recipes_production")
 require("prototypes.recipes_resources")

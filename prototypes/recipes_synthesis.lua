@@ -195,7 +195,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-emotional-synthesis",
+    name = "cube-emotional-decomposition",
     icons = {
       {
         icon = "__Krastorio2Assets__/icons/fluids/matter.png",
@@ -213,18 +213,17 @@ data:extend({
       }
     },
     ingredients = {
-      {"cube-dormant-utility-cube", 1},
-      {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
+      {type = "fluid", name = "cube-cerebral-substrate", amount = 500},
+      {type = "fluid", name = "cube-unstable-gas", amount = 120},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
-      {type = "fluid", name = "cube-joy", amount = 1000},
-      {type = "fluid", name = "cube-anguish", amount = 1000},
+      {type = "fluid", name = "cube-joy", amount = 320},
+      {type = "fluid", name = "cube-anguish", amount = 320},
     },
-    energy_required = 2,
-    category = "cube-synthesizer",
+    energy_required = 4,
+    category = "cube-chemical-plant",
     subgroup = "cube-synthesis-sentience",
-    order = "1[cube-emotional-synthesis]",
+    order = "1[cube-emotional-decomposition]",
     always_show_made_in = true,
     enabled = false,
   },
