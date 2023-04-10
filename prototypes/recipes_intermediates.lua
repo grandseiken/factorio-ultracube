@@ -32,7 +32,7 @@ data:extend({
     },
     results = {{"cube-advanced-circuit", 1}},
     energy_required = 6,
-    category = "cube-fabricator-handcraft",
+    category = "cube-fabricator",
     enabled = false,
   },
   {
@@ -57,7 +57,7 @@ data:extend({
     },
     results = {{"cube-advanced-engine", 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    category = "cube-fabricator",
     enabled = false,
   },
   {

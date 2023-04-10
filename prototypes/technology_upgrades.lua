@@ -1,48 +1,6 @@
 data:extend({
   {
     type = "technology",
-    name = "cube-inserter-capacity-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
-    effects = {
-      -- Base game goes up to 3
-      {type = "inserter-stack-size-bonus", modifier = 1},
-    },
-    prerequisites = {"cube-inserters", "cube-fundamental-comprehension-card"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    upgrade = true,
-    order = "10-0-0",
-  },
-  {
-    type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
-    effects = {
-      -- Base game goes up to 12, we start at 4
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
-    },
-    prerequisites = {"cube-stack-inserters"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    upgrade = true,
-    order = "10-1-0",
-  },
-  {
-    type = "technology",
     name = "cube-braking-force-1",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
@@ -88,7 +46,7 @@ data:extend({
       -- Base game goes up to 0.4 (before infinite).
       {type = "mining-drill-productivity-bonus", modifier = 0.025},
     },
-    prerequisites = {"cube-mining-productivity-1", "cube-crusher"},
+    prerequisites = {"cube-mining-productivity-1", "cube-rare-metal-crushing"},
     unit = {
       count = 240,
       ingredients = {
@@ -99,6 +57,50 @@ data:extend({
     },
     upgrade = true,
     order = "10-3-1",
+  },
+  {
+    type = "technology",
+    name = "cube-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      -- Base game goes up to 3
+      {type = "inserter-stack-size-bonus", modifier = 1},
+    },
+    prerequisites = {"cube-inserters", "cube-abstract-interrogation-card"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-0-0",
+  },
+  {
+    type = "technology",
+    name = "cube-stack-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      -- Base game goes up to 12, we start at 4
+      {type = "stack-inserter-capacity-bonus", modifier = 1},
+    },
+    prerequisites = {"cube-stack-inserters", "cube-abstract-interrogation-card"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-1-0",
   },
   {
     type = "technology",

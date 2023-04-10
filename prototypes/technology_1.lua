@@ -1,106 +1,6 @@
 data:extend({
   {
     type = "technology",
-    name = "cube-advanced-engine",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/electric-engine.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-advanced-engine"},
-    },
-    prerequisites = {"cube-elbow-grease"},
-    unit = {
-      count = 60,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-0-0",
-  },
-  {
-    type = "technology",
-    name = "cube-automobilism",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/automobilism.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-car"},
-    },
-    prerequisites = {"cube-advanced-engine"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-0-1",
-  },
-  {
-    type = "technology",
-    name = "cube-railway",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/railway.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-rail"},
-      {type = "unlock-recipe", recipe = "cube-locomotive"},
-      {type = "unlock-recipe", recipe = "cube-cargo-wagon"},
-      {type = "unlock-recipe", recipe = "cube-train-stop"},
-    },
-    prerequisites = {"cube-advanced-engine"},
-    unit = {
-      count = 80,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-0-2",
-  },
-  {
-    type = "technology",
-    name = "cube-rail-signals",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/rail-signals.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-rail-signal"},
-      {type = "unlock-recipe", recipe = "cube-chain-signal"},
-    },
-    prerequisites = {"cube-railway"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-0-3",
-  },
-  {
-    type = "technology",
-    name = "cube-fluid-wagon",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/fluid-wagon.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-fluid-wagon"},
-    },
-    prerequisites = {"cube-railway", "cube-fluid-handling"},
-    unit = {
-      count = 160,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-0-4",
-  },
-
-  {
-    type = "technology",
     name = "cube-electric-energy-distribution-1",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
@@ -116,7 +16,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-0",
+    order = "1-0-0",
   },
   {
     type = "technology",
@@ -137,7 +37,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-1",
+    order = "1-0-1",
   },
   {
     type = "technology",
@@ -176,7 +76,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-0",
+    order = "1-1-0",
   },
   {
     type = "technology",
@@ -196,7 +96,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-1",
+    order = "1-1-1",
   },
   {
     type = "technology",
@@ -216,7 +116,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-2",
+    order = "1-1-2",
   },
   {
     type = "technology",
@@ -249,7 +149,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-3",
+    order = "1-1-3",
   },
   {
     type = "technology",
@@ -270,7 +170,26 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-4",
+    order = "1-1-4",
+  },
+  {
+    type = "technology",
+    name = "cube-elbow-grease",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/lubricant.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-elbow-grease"},
+    },
+    prerequisites = {"cube-tar-processing"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-1-5",
   },
   {
     type = "technology",
@@ -290,26 +209,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-5",
-  },
-  {
-    type = "technology",
-    name = "cube-elbow-grease",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/lubricant.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-elbow-grease"},
-    },
-    prerequisites = {"cube-tar-processing"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-2-6",
+    order = "1-1-6",
   },
   {
     type = "technology",
@@ -348,7 +248,126 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-7",
+    order = "1-1-7",
+  },
+  {
+    type = "technology",
+    name = "cube-advanced-engine",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-engine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-advanced-engine"},
+    },
+    prerequisites = {"cube-elbow-grease"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-0",
+  },
+  {
+    type = "technology",
+    name = "cube-automobilism",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/automobilism.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-car"},
+    },
+    prerequisites = {"cube-advanced-engine"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-1",
+  },
+  {
+    type = "technology",
+    name = "cube-railway",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/railway.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-rail"},
+      {type = "unlock-recipe", recipe = "cube-locomotive"},
+      {type = "unlock-recipe", recipe = "cube-cargo-wagon"},
+      {type = "unlock-recipe", recipe = "cube-train-stop"},
+    },
+    prerequisites = {"cube-advanced-engine"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-2",
+  },
+  {
+    type = "technology",
+    name = "cube-fluid-wagon",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/fluid-wagon.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fluid-wagon"},
+    },
+    prerequisites = {"cube-railway", "cube-fluid-handling"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-3",
+  },
+  {
+    type = "technology",
+    name = "cube-rail-signals",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/rail-signals.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-rail-signal"},
+      {type = "unlock-recipe", recipe = "cube-chain-signal"},
+    },
+    prerequisites = {"cube-railway"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-4",
+  },
+  {
+    type = "technology",
+    name = "cube-stack-inserters",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/stack-inserter.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-stack-inserter"},
+      {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
+    },
+    prerequisites = {"cube-inserters", "cube-advanced-engine"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-2-5",
   },
   {
     type = "technology",

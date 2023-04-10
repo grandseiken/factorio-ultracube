@@ -116,6 +116,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-fluid-handling",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/fluid-handling.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-pump"},
+    },
+    prerequisites = {"cube-electronics"},
+    unit = {
+      count = 60,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "0-2-3"
+  },
+  {
+    type = "technology",
     name = "cube-optics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/optics.png",
@@ -128,7 +144,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-2-3",
+    order = "0-2-4",
   },
   {
     type = "technology",
@@ -150,7 +166,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-2-4",
+    order = "0-2-5",
   },
   {
     type = "technology",
@@ -166,23 +182,7 @@ data:extend({
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
-    order = "0-2-5",
-  },
-  {
-    type = "technology",
-    name = "cube-fluid-handling",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/fluid-handling.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-pump"},
-    },
-    prerequisites = {"cube-electronics"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
-    order = "0-2-6"
+    order = "0-2-6",
   },
   {
     type = "technology",

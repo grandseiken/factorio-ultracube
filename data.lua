@@ -20,6 +20,7 @@ require("prototypes.scripts.autoplace")
 --       science 3: advanced circuit made from gas byproduct instead of directly?
 --       construction robots, roboport + 2 chests
 --       accumulators?
+--       bigger boxes?
 
 -- TODO: maybe use glass in vehicles (especially car)
 --       remove fuel values or categories from wood/coal
@@ -69,7 +70,7 @@ require("prototypes.recipes_synthesis")
 require("prototypes.resources")
 require("prototypes.technology_0")
 require("prototypes.technology_1")
-require("prototypes.technology_unknown")
+require("prototypes.technology_2")
 require("prototypes.technology_upgrades")
 require("prototypes.tweaks")
 
