@@ -109,7 +109,7 @@ data:extend({
     },
     main_product = "cube-condensed-fuel",
     category = "cube-fuel-refinery",
-    energy_required = 1,
+    energy_required = 16,
     always_show_made_in = true,
     enabled = false,
   },

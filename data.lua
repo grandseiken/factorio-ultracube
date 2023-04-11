@@ -1,7 +1,7 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- TODO: rename to megacube?
+-- TODO: rename to mega/ultracube?
 -- TODO: useless coal from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
