@@ -195,7 +195,7 @@ data:extend({
     render_layer = "higher-object-above",
     animations = {
       {
-        filename = "__Hypercube__/graphics/cube-medium-explosion-1.png",
+        filename = "__Ultracube__/graphics/cube-medium-explosion-1.png",
         draw_as_glow = true,
         priority = "high",
         width = 62,
@@ -206,7 +206,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Hypercube__/graphics/hr-cube-medium-explosion-1.png",
+          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-1.png",
           draw_as_glow = true,
           priority = "high",
           width = 124,
@@ -219,7 +219,7 @@ data:extend({
         }
       },
       {
-        filename = "__Hypercube__/graphics/cube-medium-explosion-2.png",
+        filename = "__Ultracube__/graphics/cube-medium-explosion-2.png",
         draw_as_glow = true,
         priority = "high",
         width = 78,
@@ -230,7 +230,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Hypercube__/graphics/hr-cube-medium-explosion-2.png",
+          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-2.png",
           draw_as_glow = true,
           priority = "high",
           width = 154,
@@ -243,7 +243,7 @@ data:extend({
         }
       },
       {
-        filename = "__Hypercube__/graphics/cube-medium-explosion-3.png",
+        filename = "__Ultracube__/graphics/cube-medium-explosion-3.png",
         draw_as_glow = true,
         priority = "high",
         width = 64,
@@ -254,7 +254,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Hypercube__/graphics/hr-cube-medium-explosion-3.png",
+          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-3.png",
           draw_as_glow = true,
           priority = "high",
           width = 126,
@@ -331,7 +331,7 @@ data:extend({
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Hypercube__/graphics/cube-shockwave-1.png",
+      filename = "__Ultracube__/graphics/cube-shockwave-1.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -345,7 +345,7 @@ data:extend({
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Hypercube__/graphics/hr-cube-shockwave-1.png",
+        filename = "__Ultracube__/graphics/hr-cube-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -361,7 +361,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Hypercube__/graphics/cube-shockwave-1.png",
+      filename = "__Ultracube__/graphics/cube-shockwave-1.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -374,7 +374,7 @@ data:extend({
       shift = util.by_pixel(-1, 0),
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Hypercube__/graphics/hr-cube-shockwave-1.png",
+        filename = "__Ultracube__/graphics/hr-cube-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -397,7 +397,7 @@ data:extend({
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Hypercube__/graphics/cube-shockwave-2.png",
+      filename = "__Ultracube__/graphics/cube-shockwave-2.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -411,7 +411,7 @@ data:extend({
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Hypercube__/graphics/hr-cube-shockwave-2.png",
+        filename = "__Ultracube__/graphics/hr-cube-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -427,7 +427,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Hypercube__/graphics/cube-shockwave-2.png",
+      filename = "__Ultracube__/graphics/cube-shockwave-2.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -440,7 +440,7 @@ data:extend({
       shift = util.by_pixel(-1, 0),
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Hypercube__/graphics/hr-cube-shockwave-2.png",
+        filename = "__Ultracube__/graphics/hr-cube-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,

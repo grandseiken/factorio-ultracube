@@ -120,12 +120,12 @@ data:extend({
   {
     type = "item",
     name = "cube-sand",
-    icon = "__Hypercube__/graphics/sand-01.png",
+    icon = "__Ultracube__/graphics/sand-01.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = "__Hypercube__/graphics/sand-01.png",
+        filename = "__Ultracube__/graphics/sand-01.png",
         scale = 0.25,
         mipmap_count = 4,
       },

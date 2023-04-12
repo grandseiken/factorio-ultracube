@@ -120,7 +120,7 @@ data:extend({
   {
     type = "item",
     name = "cube-besselheim-flask",
-    icon = "__Hypercube__/graphics/flask.png",
+    icon = "__Ultracube__/graphics/flask.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-experimental",
     order = "a[d-besselheim-flask]",

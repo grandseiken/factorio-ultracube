@@ -202,12 +202,12 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Hypercube__/graphics/joy.png",
+        icon = "__Ultracube__/graphics/joy.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.275, shift = {-6, 0},
       },
       {
-        icon = "__Hypercube__/graphics/anguish.png",
+        icon = "__Ultracube__/graphics/anguish.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.275, shift = {6, 0},
       }

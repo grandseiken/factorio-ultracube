@@ -45,7 +45,7 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/recycling.png",
+        icon = "__Ultracube__/graphics/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
@@ -127,11 +127,11 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/recycling.png",
+        icon = "__Ultracube__/graphics/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/sand-01.png",
+        icon = "__Ultracube__/graphics/sand-01.png",
         shift = {0, 32},
       },
       {
@@ -223,11 +223,11 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/recycling.png",
+        icon = "__Ultracube__/graphics/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/tar.png",
+        icon = "__Ultracube__/graphics/tar.png",
         shift = {0, -40},
       },
       {
@@ -523,12 +523,12 @@ data:extend({
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/joy.png",
+        icon = "__Ultracube__/graphics/joy.png",
         shift = {-24, 0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/anguish.png",
+        icon = "__Ultracube__/graphics/anguish.png",
         shift = {24, 0},
       },
     },

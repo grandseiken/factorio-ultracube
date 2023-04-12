@@ -6,7 +6,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     base_color = {r=0.1, g=0.1, b=0.15},
     flow_color = {r=0.15, g=0.15, b=0.20},
-    icon = "__Hypercube__/graphics/tar.png",
+    icon = "__Ultracube__/graphics/tar.png",
     subgroup = "cube-tar-input",
     icon_size = 64, icon_mipmaps = 4,
     order = "a[tar]-a[tar]",
@@ -92,7 +92,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     base_color = {r=0.85, g=0.1, b=0.4},
     flow_color = {r=0.95, g=0.15, b=0.5},
-    icon = "__Hypercube__/graphics/joy.png",
+    icon = "__Ultracube__/graphics/joy.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-fluids",
     order = "b[matter]-c[joy]"
@@ -104,7 +104,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     base_color = {r=0.35, g=0.15, b=0.7},
     flow_color = {r=0.4, g=0.2, b=0.75},
-    icon = "__Hypercube__/graphics/anguish.png",
+    icon = "__Ultracube__/graphics/anguish.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-fluids",
     order = "b[matter]-d[anguish]"

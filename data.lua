@@ -1,7 +1,6 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- TODO: rename to mega/ultracube?
 -- TODO: useless coal from decorations.
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
@@ -22,8 +21,8 @@ require("prototypes.scripts.autoplace")
 --       bigger boxes?
 
 -- TODO: remove fuel values or categories from wood/coal?
---       sort vehicle fuel in general; hypercube can be used in trains for lols
---       technology allows (hypercube only) speed/acceleration bonus to work from cargo
+--       sort vehicle fuel in general; cube can be used in trains for lols
+--       technology allows (cube only) speed/acceleration bonus to work from cargo
 --       revisit construction robot recipe
 
 -- TODO: little things

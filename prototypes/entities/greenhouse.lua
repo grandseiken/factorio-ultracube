@@ -1,5 +1,5 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
-require("__Hypercube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/pipe")
 
 data:extend({
   {

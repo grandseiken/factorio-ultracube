@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-gelatinous-tar",
-    icon = "__Hypercube__/graphics/tar.png",
+    icon = "__Ultracube__/graphics/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "steam", amount = 400},
@@ -25,7 +25,7 @@ data:extend({
     name = "cube-tar-processing",
     icons = {
       {
-        icon = "__Hypercube__/graphics/tar.png",
+        icon = "__Ultracube__/graphics/tar.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.325, shift = {0, 0},
       },
@@ -40,7 +40,7 @@ data:extend({
         scale = 0.25, shift = {6, 2},
       },
     },
-    icon = "__Hypercube__/graphics/tar.png",
+    icon = "__Ultracube__/graphics/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 400},
@@ -61,7 +61,7 @@ data:extend({
     name = "cube-heavy-tar-reclamation",
     icons = {
       {
-        icon = "__Hypercube__/graphics/tar.png",
+        icon = "__Ultracube__/graphics/tar.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -90,7 +90,7 @@ data:extend({
     name = "cube-light-tar-reclamation",
     icons = {
       {
-        icon = "__Hypercube__/graphics/tar.png",
+        icon = "__Ultracube__/graphics/tar.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {

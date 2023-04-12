@@ -107,7 +107,7 @@ data:extend({
     icons = {
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Hypercube__/graphics/sand-01.png",
+        icon = "__Ultracube__/graphics/sand-01.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,

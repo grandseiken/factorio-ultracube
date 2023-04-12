@@ -1,4 +1,4 @@
-# Hypercube (Factorio mod)
+# Ultracube: Age of Cube
 
 A work-in-progress overhaul mod for Factorio.
 

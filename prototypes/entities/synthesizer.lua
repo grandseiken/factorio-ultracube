@@ -1,6 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-require("__Hypercube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/pipe")
 
 data:extend({
   {
