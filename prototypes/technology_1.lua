@@ -578,7 +578,8 @@ data:extend({
       {type = "ghost-time-to-live", modifier = 60 * 60 * 60 * 24 * 7},
     },
     prerequisites = {
-      "cube-advanced-engine",
+      "cube-advanced-electronics",
+      "cube-bottled-consciousness",
       "cube-emotional-decomposition",
     },
     unit = {

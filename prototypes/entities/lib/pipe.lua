@@ -1,4 +1,4 @@
-local empty_sprite = {
+empty_sprite = {
   filename = "__Krastorio2Assets__/entities/empty.png",
   priority = "high",
   width = 1,

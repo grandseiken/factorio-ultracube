@@ -10,9 +10,9 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-splitter-2"},
     },
     prerequisites = {
+      "cube-abstract-interrogation-card",
       "cube-logistics",
       "cube-elbow-grease",
-      "cube-abstract-interrogation-card",
     },
     unit = {
       count = 240,
@@ -34,8 +34,33 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-substation"},
     },
     prerequisites = {
-      "cube-electric-energy-distribution-1",
       "cube-abstract-interrogation-card",
+      "cube-electric-energy-distribution-1",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-1",
+  },
+  {
+    type = "technology",
+    name = "cube-roboport",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-roboports.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-roboport"},
+      {type = "unlock-recipe", recipe = "cube-logistic-chest-passive-provider"},
+      {type = "unlock-recipe", recipe = "cube-logistic-chest-storage"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-personal-roboport-equipment",
     },
     unit = {
       count = 240,

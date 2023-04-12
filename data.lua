@@ -5,16 +5,19 @@ require("prototypes.scripts.autoplace")
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: tech cost review
+-- TODO: tech cost review.
 
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons, + tech graphic
 --       - emotional synthesis icon + tech graphic
+--       - roboport tech graphic
 -- TODO: renames
 --       - unstable gas? heavy/light oil (essential oils?)
 -- TODO: recipe crafting_machine_tint
 
+-- TODO: 1 more ingredient for science 3? advanced engine?
+-- TODO: small roboport doesn't have opening animation. (???)
 -- TODO: science 3 techs:
 --       roboport + 2 chests
 --       accumulators?
@@ -23,7 +26,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: remove fuel values or categories from wood/coal?
 --       sort vehicle fuel in general; cube can be used in trains for lols
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
---       revisit construction robot recipe
 
 -- TODO: little things
 --       walls; gates; radar; cliff explosives; landfill; equipments; repair packs
@@ -83,6 +85,7 @@ require("prototypes.entities.greenhouse")
 require("prototypes.entities.lab")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
+require("prototypes.entities.roboport")
 require("prototypes.entities.robots")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")

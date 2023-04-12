@@ -10,6 +10,11 @@ local whitelist = make_set({
   "pipe",
   "pipe-to-ground",
   "iron-chest",
+  "logistic-chest-passive-provider",
+  "logistic-chest-active-provider",
+  "logistic-chest-storage",
+  "logistic-chest-buffer",
+  "logistic-chest-requester",
   "storage-tank",
   "steam-engine",
   "offshore-pump",
@@ -58,6 +63,7 @@ local entity_prototypes = {
   "logistic-robot",
 }
 
+-- TODO: armors aren't properly disabled from tech tooltips.
 local item_prototypes = {
   "item",
   "item-with-entity-data",
