@@ -17,9 +17,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: recipe crafting_machine_tint
 
 -- TODO: 1 more ingredient for science 3? advanced engine?
--- TODO: small roboport doesn't have opening animation. (???)
 -- TODO: science 3 techs:
---       roboport + 2 chests
 --       accumulators?
 --       bigger boxes?
 

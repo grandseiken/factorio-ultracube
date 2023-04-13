@@ -129,15 +129,14 @@ data:extend({
     place_result = "cube-fabricator",
     stack_size = 20,
   },
-
   {
     type = "item",
     name = "cube-roboport",
-    icon = "__Krastorio2Assets__/icons/entities/small-roboport.png",
+    icon = "__Krastorio2Assets__/icons/entities/large-roboport.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    subgroup = "logistic-network",
-    order = "c[signal]-b[small-roboport]",
+    subgroup = "cube-logistic-machines",
+    order = "0[roboport]",
     place_result = "cube-roboport",
     stack_size = 20,
   },

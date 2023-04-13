@@ -63,7 +63,6 @@ local entity_prototypes = {
   "logistic-robot",
 }
 
--- TODO: armors aren't properly disabled from tech tooltips.
 local item_prototypes = {
   "item",
   "item-with-entity-data",

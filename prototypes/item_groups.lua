@@ -85,11 +85,17 @@ data:extend({
     type = "item-subgroup",
     name = "cube-processing-machines",
     group = "production",
-    order = "y",
+    order = "x",
   },
   {
     type = "item-subgroup",
     name = "cube-production-machines",
+    group = "production",
+    order = "y",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-logistic-machines",
     group = "production",
     order = "z",
   },

@@ -1,5 +1,17 @@
 data:extend({
   {
+    type = "equipment-category",
+    name = "cube-armor",
+    order = "0",
+  },
+  {
+    type = "equipment-grid",
+    name = "cube-small-equipment-grid",
+    width = 4,
+    height = 4,
+    equipment_categories = {"cube-armor"}
+  },
+  {
     type = "solar-panel-equipment",
     name = "cube-solar-panel-equipment",
     sprite = {
@@ -25,7 +37,7 @@ data:extend({
       usage_priority = "primary-output",
     },
     power = "40kW",
-    categories = {"armor"},
+    categories = {"cube-armor"},
   },
   {
     type = "battery-equipment",
@@ -53,7 +65,7 @@ data:extend({
       buffer_capacity = "20MJ",
       usage_priority = "tertiary",
     },
-    categories = {"armor"},
+    categories = {"cube-armor"},
   },
   {
     type = "roboport-equipment",
@@ -107,6 +119,6 @@ data:extend({
     charging_station_count = 2,
     charging_distance = 1.6,
     charging_threshold_distance = 5,
-    categories = {"armor"},
+    categories = {"cube-armor"},
   },
 })
