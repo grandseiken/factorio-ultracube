@@ -111,7 +111,7 @@ data:extend({
     },
     prerequisites = {"cube-ultradense-furnace"},
     unit = {
-      count = 120,
+      count = 80,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -143,7 +143,7 @@ data:extend({
     },
     prerequisites = {"cube-electronics"},
     unit = {
-      count = 30,
+      count = 60,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -198,7 +198,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 60,
+      count = 80,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -214,7 +214,7 @@ data:extend({
     },
     prerequisites = {"cube-n-dimensional-widgets"},
     unit = {
-      count = 120,
+      count = 80,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },

@@ -20,7 +20,7 @@ data:extend({
     name = "cube-underground-pipe",
     ingredients = {
       {"pipe", 8},
-      {"cube-basic-matter-unit", 8},
+      {"stone", 4},
     },
     results = {{"pipe-to-ground", 2}},
     energy_required = 1,

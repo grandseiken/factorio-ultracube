@@ -30,6 +30,7 @@ data:extend({
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
+      {type = "fluid", name = "water", amount = 8000},
     },
     results = {
       {"cube-dormant-utility-cube", 1},

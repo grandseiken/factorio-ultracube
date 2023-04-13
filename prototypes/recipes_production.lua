@@ -50,7 +50,7 @@ data:extend({
     name = "cube-electric-mining-drill",
     ingredients = {
       {"cube-basic-matter-unit", 120},
-      {"cube-basic-motor-unit", 10},
+      {"cube-basic-motor-unit", 4},
     },
     results = {{"cube-electric-mining-drill", 1}},
     energy_required = 2,
@@ -102,9 +102,9 @@ data:extend({
     type = "recipe",
     name = "cube-crusher",
     ingredients = {
-      {"cube-basic-matter-unit", 320},
-      {"cube-basic-motor-unit", 20},
-      {"cube-rare-metals", 100},
+      {"cube-basic-matter-unit", 160},
+      {"cube-basic-motor-unit", 8},
+      {"cube-rare-metals", 40},
     },
     results = {{"cube-crusher", 1}},
     energy_required = 4,
@@ -115,7 +115,7 @@ data:extend({
     type = "recipe",
     name = "cube-fabricator",
     ingredients = {
-      {"cube-basic-matter-unit", 200},
+      {"cube-basic-matter-unit", 160},
       {"cube-basic-motor-unit", 4},
       {"cube-electronic-circuit", 4},
     },

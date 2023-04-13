@@ -14,6 +14,7 @@ local function on_init()
     remote.call("freeplay", "set_disable_crashsite", true)
     remote.call("freeplay", "set_created_items", {
       ["cube-synthesizer"] = 1,
+      ["cube-fabricator"] = 1,
       ["cube-construction-robot-0"] = 5,
     })
     remote.call("freeplay", "set_respawn_items", {})

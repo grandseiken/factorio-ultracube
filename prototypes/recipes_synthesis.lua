@@ -84,7 +84,7 @@ data:extend({
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
-      {type = "fluid", name = "steam", amount = 2500},
+      {type = "fluid", name = "steam", amount = 2000},
     },
     results = {
       {"cube-ultradense-utility-cube", 1},
@@ -133,7 +133,7 @@ data:extend({
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-rare-metals", 500},
+      {"cube-rare-metals", 100},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
       {type = "fluid", name = "steam", amount = 1000},
     },

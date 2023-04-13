@@ -366,7 +366,10 @@ data:extend({
       smoke = {
         {
           name = "cube-ultradense-furnace-smoke",
-          position = util.by_pixel(-24, -100),
+          north_position = util.by_pixel(-24, -100),
+          south_position = util.by_pixel(-24, -100),
+          east_position = util.by_pixel(-24, -100),
+          west_position = util.by_pixel(-24, -100),
           frequency = 20,
           starting_vertical_speed = 1.0 / 16,
           starting_frame_deviation = 60,

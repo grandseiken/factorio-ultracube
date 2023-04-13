@@ -278,6 +278,7 @@ data:extend({
     inputs = {
       "cube-basic-contemplation-unit",
       "cube-fundamental-comprehension-card",
+      "cube-abstract-interrogation-card",
     },
     module_specification =
     {
