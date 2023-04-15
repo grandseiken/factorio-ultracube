@@ -62,6 +62,7 @@ data:extend({
     type = "recipe",
     name = "cube-abstract-interrogation-card",
     ingredients = {
+      {"cube-advanced-engine", 1},
       {"cube-bottled-consciousness", 1},
       {"cube-advanced-circuit", 2},
     },

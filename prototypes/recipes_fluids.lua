@@ -77,7 +77,7 @@ data:extend({
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 320},
     },
-    energy_required = 4,
+    energy_required = 2,
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
@@ -99,7 +99,7 @@ data:extend({
         scale = 0.25, shift = {8, -8},
       },
     },
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 2,
     ingredients = {
       {type = "fluid", name = "cube-light-tar", amount = 400},
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
@@ -128,7 +128,7 @@ data:extend({
       {type = "fluid", name = "cube-unstable-gas", amount = 600},
     },
     main_product = "",
-    energy_required = 2,
+    energy_required = 4,
     category = "cube-chemical-plant",
     subgroup = "cube-tar-output",
     order = "a[gas]",

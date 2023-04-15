@@ -145,7 +145,7 @@ data:extend({
     },
     prerequisites = {"cube-chemical-plant"},
     unit = {
-      count = 80,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -169,7 +169,7 @@ data:extend({
       "cube-chemical-plant",
     },
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -188,7 +188,7 @@ data:extend({
     },
     prerequisites = {"cube-tar-processing"},
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -208,7 +208,7 @@ data:extend({
     },
     prerequisites = {"cube-tar-processing"},
     unit = {
-      count = 120,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -247,7 +247,7 @@ data:extend({
     },
     prerequisites = {"cube-tar-processing"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -266,7 +266,7 @@ data:extend({
     },
     prerequisites = {"cube-elbow-grease"},
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -307,7 +307,7 @@ data:extend({
     },
     prerequisites = {"cube-advanced-engine"},
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -349,7 +349,7 @@ data:extend({
     },
     prerequisites = {"cube-railway"},
     unit = {
-      count = 120,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -658,6 +658,7 @@ data:extend({
       },
     },
     prerequisites = {
+      "cube-advanced-engine",
       "cube-advanced-electronics",
       "cube-bottled-consciousness",
     },

@@ -52,6 +52,7 @@ local whitelist = make_set({
 })
 
 local entity_prototypes = {
+  "lab",
   "inserter",
   "transport-belt",
   "underground-belt",

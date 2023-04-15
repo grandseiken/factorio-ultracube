@@ -210,7 +210,28 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-storage", modifier = 1},
     },
-    prerequisites = {"cube-construction-robotics"},
+    prerequisites = {"cube-roboport"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-5-0",
+  },
+  {
+    type = "technology",
+    name = "cube-research-speed-1",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    effects = {
+      {type = "laboratory-speed", modifier = 0.25},
+    },
+    prerequisites = {"cube-matter-replication"},
     unit = {
       count = 240,
       ingredients = {
@@ -220,6 +241,6 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-5-0",
+    order = "10-6-0",
   },
 })

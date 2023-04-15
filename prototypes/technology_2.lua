@@ -12,7 +12,6 @@ data:extend({
     prerequisites = {
       "cube-abstract-interrogation-card",
       "cube-logistics",
-      "cube-elbow-grease",
     },
     unit = {
       count = 240,

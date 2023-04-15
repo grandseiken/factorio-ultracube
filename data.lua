@@ -7,6 +7,9 @@ require("prototypes.scripts.autoplace")
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: tech cost review.
 
+-- TODO: make replication-based widgets/contemplation depend on something additional?
+-- TODO: all items seem to be unlocked in FNEI/signals etc without researching them.
+
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons, + tech graphic
@@ -16,12 +19,12 @@ require("prototypes.scripts.autoplace")
 --       - unstable gas? heavy/light oil (essential oils?)
 -- TODO: recipe crafting_machine_tint
 
--- TODO: 1 more ingredient for science 3? advanced engine?
 -- TODO: science 3 techs:
 --       accumulators?
 --       bigger boxes?
 
--- TODO: remove fuel values or categories from wood/coal?
+-- TODO: allow voiding calcium to get metal going earlier
+--       remove fuel values or categories from wood/coal?
 --       sort vehicle fuel in general; cube can be used in trains for lols
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
