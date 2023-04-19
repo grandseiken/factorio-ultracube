@@ -424,6 +424,19 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-radar",
+    ingredients = {
+      {"cube-basic-matter-unit", 8},
+      {"cube-rare-metals", 4},
+      {"cube-electronic-circuit", 4},
+    },
+    results = {{"radar", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 
   {
     type = "recipe",
@@ -456,20 +469,7 @@ data:extend({
       {"cube-basic-matter-unit", 20},
       {"cube-n-dimensional-widget", 1},
       {"cube-advanced-circuit", 2},
-    },
-    results = {{"cube-roboport", 1}},
-    energy_required = 5,
-    category = "cube-fabricator-handcraft",
-    enabled = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-roboport",
-    ingredients = {
-      {"stone-brick", 4},
-      {"cube-basic-matter-unit", 20},
-      {"cube-n-dimensional-widget", 1},
-      {"cube-advanced-circuit", 2},
+      {"radar", 1},
     },
     results = {{"cube-roboport", 1}},
     energy_required = 5,

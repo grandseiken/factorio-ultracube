@@ -49,6 +49,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-radar",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/radar.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-radar"},
+    },
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-2",
+  },
+  {
+    type = "technology",
     name = "cube-roboport",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/advanced-roboports.png",
@@ -58,7 +78,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-logistic-chest-storage"},
     },
     prerequisites = {
-      "cube-abstract-interrogation-card",
+      "cube-radar",
       "cube-personal-roboport-equipment",
     },
     unit = {
@@ -70,6 +90,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-1",
+    order = "2-0-3",
   },
 })

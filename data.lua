@@ -29,10 +29,11 @@ require("prototypes.scripts.autoplace")
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
 -- TODO: little things
---       walls; gates; radar; cliff explosives; landfill; equipments; repair packs
+--       walls/gates; cliff explosives; landfill; repair packs
 --       extend upgrade techs
 --       - lab speed + increase times (?)
 
+-- TODO: think about reintroducing biters?
 -- TODO: storylore tooltips!
 -- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.
 --       - 1: maybe scale-focused, cube scale puzzles, maybe
@@ -40,7 +41,9 @@ require("prototypes.scripts.autoplace")
 --       - 3: either - cube logistics puzzles, many interlinked recipes with short time and low amounts or
 --            (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?
 -- TODO: (2) some cube process that outputs random / multiple products.
--- TODO: (2/1?) ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- TODO: (1/2?) ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- TODO: (1/3?) something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
+--              can have some recipes that make old things e.g. matter units, but not strict replacement
 -- TODO: (1?) something that forces cube to go far away on train (cube powered miner, basically)
 --       - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
 -- TODO: (2?) some sort of weird biter farmer spawning synthesis.
