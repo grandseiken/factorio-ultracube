@@ -20,10 +20,10 @@ require("prototypes.scripts.autoplace")
 -- TODO: recipe crafting_machine_tint
 
 -- TODO: science 3 techs:
---       accumulators?
 --       bigger boxes?
 
 -- TODO: allow voiding calcium to get metal going earlier
+--       new intermediate: batteries (for various things)
 --       remove fuel values or categories from wood/coal?
 --       sort vehicle fuel in general; cube can be used in trains for lols
 --       technology allows (cube only) speed/acceleration bonus to work from cargo

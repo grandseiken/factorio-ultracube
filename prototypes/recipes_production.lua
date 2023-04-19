@@ -180,4 +180,16 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-accumulator",
+    ingredients = {
+      {"cube-rare-metals", 40},
+      {"cube-basic-matter-unit", 40},
+    },
+    results = {{"accumulator", 1}},
+    energy_required = 8,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 })

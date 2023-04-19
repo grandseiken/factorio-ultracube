@@ -49,6 +49,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-electric-energy-accumulators",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-accumulator"},
+    },
+    prerequisites = {"cube-electric-energy-distribution-2"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-2",
+  },
+  {
+    type = "technology",
     name = "cube-radar",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/radar.png",
@@ -65,7 +85,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-2",
+    order = "2-0-3",
   },
   {
     type = "technology",
@@ -90,6 +110,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-3",
+    order = "2-0-4",
   },
 })

@@ -18,6 +18,7 @@ local whitelist = make_set({
   "storage-tank",
   "steam-engine",
   "offshore-pump",
+  "accumulator",
   "radar",
   "car",
   "rail",
