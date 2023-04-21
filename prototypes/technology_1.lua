@@ -258,6 +258,30 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-concrete",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/concrete.png",
+    effects =
+    {
+      {type = "unlock-recipe", recipe = "cube-concrete"},
+      {type = "unlock-recipe", recipe = "cube-hazard-concrete"},
+      -- TODO: other tech?
+      -- {type = "unlock-recipe", recipe = "cube-refined-concrete"},
+      -- {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
+    },
+    prerequisites = {"cube-rare-metal-crushing"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-1-8",
+  },
+  {
+    type = "technology",
     name = "cube-advanced-engine",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electric-engine.png",

@@ -129,6 +129,32 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-concrete",
+    ingredients = {
+      {"stone-brick", 5},
+      {"cube-sand", 1},
+      {"cube-calcium", 2},
+      {type = "fluid", name = "water", amount = 100},
+    },
+    results = {{"concrete", 10}},
+    energy_required = 8,
+    category = "cube-fabricator",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-hazard-concrete",
+    energy_required = 1,
+    ingredients = {
+      {"concrete", 10},
+    },
+    results = {{"hazard-concrete", 10}},
+    category = "cube-fabricator",
+    enabled = false,
+  },
+
+  {
+    type = "recipe",
     name = "cube-lamp",
     ingredients = {
       {"cube-basic-matter-unit", 1},

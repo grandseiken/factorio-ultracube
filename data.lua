@@ -23,7 +23,7 @@ require("prototypes.scripts.autoplace")
 --       bigger boxes?
 
 -- TODO: allow voiding calcium to get metal going earlier
---       new intermediate: batteries (for various things)
+--       new intermediate: batteries (for various things) - involve besselheim
 --       remove fuel values or categories from wood/coal?
 --       sort vehicle fuel in general; cube can be used in trains for lols
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
@@ -35,22 +35,34 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: think about reintroducing biters?
 -- TODO: storylore tooltips!
+
 -- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.
---       - 1: maybe scale-focused, cube scale puzzles, maybe
---       - 2: maybe power / energy / byproducts-focused?
---       - 3: either - cube logistics puzzles, many interlinked recipes with short time and low amounts or
---            (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?
--- TODO: (2) some cube process that outputs random / multiple products.
--- TODO: (1/2?) ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- TODO: (1/3?) something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
---              can have some recipes that make old things e.g. matter units, but not strict replacement
--- TODO: (1?) something that forces cube to go far away on train (cube powered miner, basically)
---       - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
--- TODO: (2?) some sort of weird biter farmer spawning synthesis.
--- TODO: (3) late game forbidden tech. Experiments on cube. Suffering. Regret.
--- TODO: (1) some sort of teleport cube logistics option.
--- TODO: (2) (further on) basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
--- TODO: (1) eventually, modules.
+--   - 1: SCALE scale-focused, scale puzzles, maybe
+--   - 2: POWER maybe power / energy / byproducts-focused?
+--   - 3: PUZZLE either - cube logistics puzzles
+--
+-- Tech unlocks:
+-- 1: modules 1; logistics bots; V4 belts; some equipments
+-- 2: fancy power solutions; bigger accumulator; some equipments
+-- 3: spidertron; ???
+-- 1+2: modules 2; cliff explosives
+-- 1+3: matter repurposings (convert basic intermediates into others, maybe big scale, but in some way that you still need
+--                           original recipes occasionally - how exactly? and/or without conversion, reagents)
+-- 2+3: cube teleportation, some equipments
+--
+-- Requirements/puzzles and interactions:
+-- 1: something that forces cube to go far away on train (cube powered miner, basically - how exactly?)
+--    1+2: - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
+-- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
+--      can have some recipes that make old things e.g. matter units, but not strict replacement
+-- 2+3: blue chips
+-- 2: some cube process that outputs random / multiple products.
+--    basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
+-- 3: many interlinked recipes with short time and low amounts or
+--    (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?
+-- ?: some sort of weird biter farmer spawning synthesis.
+-- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
 
 require("prototypes.equipment")
 require("prototypes.fluids")

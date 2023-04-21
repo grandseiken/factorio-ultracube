@@ -136,7 +136,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-logistic-machines",
-    order = "0[roboport]",
+    order = "1[roboport]",
     place_result = "cube-roboport",
     stack_size = 20,
   },
