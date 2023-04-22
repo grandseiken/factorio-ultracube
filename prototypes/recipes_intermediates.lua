@@ -105,7 +105,7 @@ data:extend({
     },
     results = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-condensed-fuel", 10}
+      {"cube-condensed-fuel", 50}
     },
     main_product = "cube-condensed-fuel",
     category = "cube-fuel-refinery",

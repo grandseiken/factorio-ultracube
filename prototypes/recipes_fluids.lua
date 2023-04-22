@@ -10,7 +10,7 @@ data:extend({
       {"wood", 200},
     },
     results = {
-      {type = "fluid", name = "cube-gelatinous-tar", amount = 8000},
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 12000},
     },
     energy_required = 4,
     main_product = "",

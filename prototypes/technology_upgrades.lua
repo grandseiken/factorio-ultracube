@@ -243,4 +243,27 @@ data:extend({
     upgrade = true,
     order = "10-6-0",
   },
+
+  {
+    type = "technology",
+    name = "cube-test-technology-1",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/automation-1.png"),
+    effects = {},
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit =
+    {
+      count_formula = "2^(L-7)*1000",
+      ingredients =
+      {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    max_level = "infinite",
+    upgrade = true,
+    order = "11-0-0",
+  },
 })
