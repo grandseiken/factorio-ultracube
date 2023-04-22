@@ -93,7 +93,7 @@ data:extend({
     name = "cube-transport-belt-2",
     ingredients = {
       {"fast-transport-belt", 8},
-      {"cube-basic-motor-unit", 8},
+      {"cube-basic-motor-unit", 4},
       {type = "fluid", name = "cube-elbow-grease", amount = 120},
     },
     results = {{"express-transport-belt", 8}},

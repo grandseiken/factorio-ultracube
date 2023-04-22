@@ -180,11 +180,11 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {"cube-dormant-utility-cube", 1},
-      {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
     },
     results = {
       {"cube-dormant-utility-cube", 1},
-      {type = "fluid", name = "cube-cerebral-substrate", amount = 4000},
+      {type = "fluid", name = "cube-cerebral-substrate", amount = 8000},
     },
     energy_required = 2,
     category = "cube-synthesizer",
@@ -213,7 +213,7 @@ data:extend({
       }
     },
     ingredients = {
-      {type = "fluid", name = "cube-cerebral-substrate", amount = 500},
+      {type = "fluid", name = "cube-cerebral-substrate", amount = 400},
       {type = "fluid", name = "cube-unstable-gas", amount = 120},
     },
     results = {
