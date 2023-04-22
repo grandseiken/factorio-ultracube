@@ -60,9 +60,25 @@ data:extend({
     unit = {
       count = 20,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10
+      time = 10,
     },
     order = "0-1-1",
+  },
+  {
+    type = "technology",
+    name = "cube-stone-wall",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/stone-wall.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-stone-wall"},
+    },
+    prerequisites = {"cube-electric-furnace"},
+    unit = {
+      count = 40,
+      ingredients = {{"cube-basic-contemplation-unit", 1}},
+      time = 10,
+    },
+    order = "0-1-2",
   },
   {
     type = "technology",

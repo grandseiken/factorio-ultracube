@@ -129,6 +129,27 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-stone-wall",
+    ingredients = {{"stone-brick", 5}},
+    results = {{"stone-wall", 1}},
+    energy_required = 1,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-gate",
+    ingredients = {
+      {"stone-wall", 2},
+      {"concrete", 4},
+      {"cube-basic-matter-unit", 4},
+      {"cube-electronic-circuit", 2},
+    },
+    results = {{"gate", 1}},
+    energy_required = 2,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-concrete",
     ingredients = {
       {"stone-brick", 5},

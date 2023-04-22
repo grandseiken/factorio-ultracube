@@ -15,6 +15,7 @@ require("prototypes.scripts.autoplace")
 --       - tar processing/reclamation icons, + tech graphic
 --       - emotional synthesis icon + tech graphic
 --       - roboport tech graphic
+--       - concretes tech graphic?
 -- TODO: renames
 --       - unstable gas? heavy/light oil (essential oils?)
 -- TODO: recipe crafting_machine_tint
@@ -29,11 +30,11 @@ require("prototypes.scripts.autoplace")
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
 -- TODO: little things
---       walls/gates; cliff explosives; landfill; repair packs
+--       cliff explosives; landfill; repair packs
 --       extend upgrade techs
 --       - lab speed + increase times (?)
 
--- TODO: think about reintroducing biters?
+-- TODO: think about reintroducing biters + military?
 -- TODO: storylore tooltips!
 
 -- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.

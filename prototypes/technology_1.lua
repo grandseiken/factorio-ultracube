@@ -282,6 +282,25 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-gate",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/gate.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-gate"},
+    },
+    prerequisites = {"cube-concrete", "cube-stone-wall"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-1-9",
+  },
+  {
+    type = "technology",
     name = "cube-advanced-engine",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/electric-engine.png",
