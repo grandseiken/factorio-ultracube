@@ -4,6 +4,7 @@ require("scripts.lib")
 local whitelist = make_set({
   "water",
   "steam",
+  "sulfuric-acid",
   "stone",
   "stone-brick",
   "wood",
@@ -42,6 +43,8 @@ local whitelist = make_set({
   "express-splitter",
   "small-lamp",
   "copper-cable",
+  "sulfur",
+  "battery",
   "flying-robot-frame",
   "red-wire",
   "green-wire",

@@ -99,7 +99,7 @@ data:extend({
     },
     prerequisites = {
       "cube-radar",
-      "cube-personal-roboport-equipment",
+      "cube-robotics",
     },
     unit = {
       count = 240,
@@ -111,5 +111,39 @@ data:extend({
       time = 30,
     },
     order = "2-0-4",
+  },
+  {
+    type = "technology",
+    name = "cube-emotional-decomposition",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/joy.png",
+        shift = {-24, 0},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/anguish.png",
+        shift = {24, 0},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
+    },
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-0",
   },
 })

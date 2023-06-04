@@ -95,6 +95,48 @@ data:extend({
     category = "cube-chemical-plant",
     enabled = false,
   },
+
+  {
+    type = "recipe",
+    name = "cube-sulfur",
+    ingredients = {
+      {type = "fluid", name = "water", amount = 20},
+      {type = "fluid", name = "cube-heavy-tar", amount = 40},
+    },
+    results = {
+      {"sulfur", 2},
+      {type = "fluid", name = "steam", amount = 20},
+      {type = "fluid", name = "cube-light-tar", amount = 40},
+    },
+    main_product = "sulfur",
+    energy_required = 2,
+    category = "cube-chemical-plant",
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 1.000, g = 0.995, b = 0.089},
+      secondary = {r = 1.000, g = 0.974, b = 0.691},
+      tertiary = {r = 0.723, g = 0.638, b = 0.714},
+      quaternary = {r = 0.954, g = 1.000, b = 0.350},
+    },
+  },
+  {
+    type = "recipe",
+    name = "cube-battery",
+    ingredients = {
+      {type = "fluid", name = "sulfuric-acid", amount = 40},
+      {"cube-rare-metals", 2},
+    },
+    results = {{"battery", 1}},
+    energy_required = 4,
+    category = "cube-chemical-plant",
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.965, g = 0.482, b = 0.338},
+      secondary = {r = 0.831, g = 0.560, b = 0.222},
+      tertiary = {r = 0.728, g = 0.818, b = 0.443},
+      quaternary = {r = 0.939, g = 0.763, b = 0.191},
+    }
+  },
   {
     type = "recipe",
     name = "cube-flying-robot-frame",
@@ -102,7 +144,8 @@ data:extend({
     {
       {"cube-basic-motor-unit", 1},
       {"cube-basic-matter-unit", 2},
-      {"electronic-circuit", 1},
+      {"cube-electronic-circuit", 1},
+      {"battery", 1},
     },
     results = {{"flying-robot-frame", 1}},
     energy_required = 10,
@@ -115,6 +158,7 @@ data:extend({
     name = "cube-condensed-fuel",
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
+      {"sulfur", 10},
       {type = "fluid", name = "cube-unstable-gas", amount = 4000},
     },
     results = {

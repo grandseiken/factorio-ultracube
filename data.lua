@@ -18,13 +18,15 @@ require("prototypes.scripts.autoplace")
 --       - concretes tech graphic?
 -- TODO: renames
 --       - unstable gas? heavy/light oil (essential oils?)
--- TODO: recipe crafting_machine_tint
+-- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: science 3 techs:
 --       bigger boxes?
 
 -- TODO: allow voiding calcium to get metal going earlier?
---       new intermediate: batteries (for various things) - involve besselheim
+--       some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
+--       more with besselheim; twinned logistics robots
+--       make tar higher yield but don't allow recycling (only voiding with tower) until later?
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
 -- TODO: little things

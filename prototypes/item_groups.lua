@@ -70,15 +70,21 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-experimental",
+    name = "cube-chemical-intermediates",
     group = "intermediate-products",
     order = "c",
   },
   {
     type = "item-subgroup",
-    name = "cube-science",
+    name = "cube-experimental",
     group = "intermediate-products",
     order = "d",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-science",
+    group = "intermediate-products",
+    order = "e",
   },
 
   {

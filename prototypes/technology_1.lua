@@ -199,6 +199,26 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-sulfur-processing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/sulfur-processing.png",
+    prerequisites = {"cube-tar-processing"},
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-sulfur"},
+      {type = "unlock-recipe", recipe = "cube-sulfuric-acid"},
+    },
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-1-6",
+  },
+  {
+    type = "technology",
     name = "cube-fuel-refinery",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
@@ -206,7 +226,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
       {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
     },
-    prerequisites = {"cube-tar-processing"},
+    prerequisites = {"cube-sulfur-processing"},
     unit = {
       count = 240,
       ingredients = {
@@ -215,7 +235,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-6",
+    order = "1-1-7",
   },
   {
     type = "technology",
@@ -254,7 +274,26 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-7",
+    order = "1-1-8",
+  },
+  {
+    type = "technology",
+    name = "cube-battery",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/battery.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-battery"}
+    },
+    prerequisites = {"cube-sulfur-processing"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-1-9",
   },
   {
     type = "technology",
@@ -278,7 +317,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-8",
+    order = "1-2-0",
   },
   {
     type = "technology",
@@ -297,7 +336,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-1-9",
+    order = "1-2-1",
   },
   {
     type = "technology",
@@ -316,7 +355,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-0",
+    order = "1-2-2",
   },
   {
     type = "technology",
@@ -335,7 +374,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-1",
+    order = "1-2-3",
   },
   {
     type = "technology",
@@ -357,7 +396,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-2",
+    order = "1-2-4",
   },
   {
     type = "technology",
@@ -379,7 +418,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-3",
+    order = "1-2-5",
   },
   {
     type = "technology",
@@ -399,7 +438,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-4",
+    order = "1-2-6",
   },
   {
     type = "technology",
@@ -422,7 +461,7 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-2-5",
+    order = "1-2-7",
   },
   {
     type = "technology",
@@ -558,42 +597,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-emotional-decomposition",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/joy.png",
-        shift = {-24, 0},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/anguish.png",
-        shift = {24, 0},
-      },
-    },
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
-    },
-    prerequisites = {
-      "cube-tar-processing",
-      "cube-sentience-extraction",
-    },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-4-2",
-  },
-  {
-    type = "technology",
     name = "cube-advanced-electronics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/advanced-electronics.png",
@@ -609,25 +612,19 @@ data:extend({
       },
       time = 20,
     },
-    order = "1-4-3",
+    order = "1-4-2",
   },
   {
     type = "technology",
-    name = "cube-construction-robotics",
+    name = "cube-robotics",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/construction-robotics.png",
+    icon = "__base__/graphics/technology/robotics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-flying-robot-frame"},
-      {type = "unlock-recipe", recipe = "cube-construction-robot"},
-      {type = "ghost-time-to-live", modifier = 60 * 60 * 60 * 24 * 7},
     },
-    prerequisites = {
-      "cube-advanced-electronics",
-      "cube-bottled-consciousness",
-      "cube-emotional-decomposition",
-    },
+    prerequisites = {"cube-battery"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -638,15 +635,18 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-modular-armor",
+    name = "cube-construction-robotics",
     icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/armor-making.png"),
+    icon = "__base__/graphics/technology/construction-robotics.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-modular-armor"},
-      {type = "unlock-recipe", recipe = "cube-battery-equipment"},
-      {type = "unlock-recipe", recipe = "cube-solar-panel-equipment"},
+      {type = "unlock-recipe", recipe = "cube-construction-robot"},
+      {type = "ghost-time-to-live", modifier = 60 * 60 * 60 * 24 * 7},
     },
-    prerequisites = {"cube-advanced-electronics"},
+    prerequisites = {
+      "cube-robotics",
+      "cube-advanced-electronics",
+      "cube-bottled-consciousness",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -659,15 +659,17 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-personal-roboport-equipment",
+    name = "cube-modular-armor",
     icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-equipment.png"),
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/armor-making.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-personal-roboport-equipment"},
+      {type = "unlock-recipe", recipe = "cube-modular-armor"},
+      {type = "unlock-recipe", recipe = "cube-battery-equipment"},
+      {type = "unlock-recipe", recipe = "cube-solar-panel-equipment"},
     },
     prerequisites = {
-      "cube-construction-robotics",
-      "cube-modular-armor",
+      "cube-battery",
+      "cube-advanced-electronics",
     },
     unit = {
       count = 240,
@@ -678,6 +680,28 @@ data:extend({
       time = 20,
     },
     order = "1-5-2",
+  },
+  {
+    type = "technology",
+    name = "cube-personal-roboport-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-personal-roboport-equipment"},
+    },
+    prerequisites = {
+      "cube-robotics",
+      "cube-modular-armor",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-5-3",
   },
   {
     type = "technology",

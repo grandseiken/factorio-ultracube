@@ -16,7 +16,8 @@ data:extend({
     type = "recipe",
     name = "cube-battery-equipment",
     ingredients = {
-      {"cube-rare-metals", 40},
+      {"battery", 4},
+      {"cube-rare-metals", 20},
       {"cube-basic-matter-unit", 8},
     },
     results = {{"cube-battery-equipment", 1}},
@@ -41,6 +42,7 @@ data:extend({
     type = "recipe",
     name = "cube-personal-roboport-equipment",
     ingredients = {
+      {"battery", 4},
       {"cube-basic-matter-unit", 40},
       {"cube-advanced-circuit", 20},
     },

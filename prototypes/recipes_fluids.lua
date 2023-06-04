@@ -77,7 +77,7 @@ data:extend({
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 320},
     },
-    energy_required = 2,
+    energy_required = 16,
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
@@ -107,7 +107,7 @@ data:extend({
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 360},
     },
-    energy_required = 4,
+    energy_required = 12,
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
@@ -144,9 +144,7 @@ data:extend({
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
       {type = "fluid", name = "cube-light-tar", amount = 240},
     },
-    results = {
-      {type = "fluid", name = "cube-elbow-grease", amount = 200},
-    },
+    results = {{type = "fluid", name = "cube-elbow-grease", amount = 200}},
     main_product = "",
     energy_required = 2,
     category = "cube-chemical-plant",
@@ -154,5 +152,30 @@ data:extend({
     order = "b[grease]",
     always_show_made_in = true,
     enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-sulfuric-acid",
+    icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {type = "item", name = "sulfur", amount = 4},
+      {type = "item", name = "cube-raw-rare-metals", amount = 1},
+      {type = "fluid", name = "water", amount = 100},
+    },
+    results = {{type = "fluid", name = "sulfuric-acid", amount = 60}},
+    main_product = "",
+    energy_required = 1,
+    category = "cube-chemical-plant",
+    subgroup = "cube-tar-output",
+    order = "c[acid]",
+    always_show_made_in = true,
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 1.000, g = 0.958, b = 0.000},
+      secondary = {r = 1.000, g = 0.852, b = 0.172},
+      tertiary = {r = 0.876, g = 0.869, b = 0.597},
+      quaternary = {r = 0.969, g = 1.000, b = 0.019},
+    }
   },
 })
