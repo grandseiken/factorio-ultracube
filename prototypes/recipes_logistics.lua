@@ -491,8 +491,7 @@ data:extend({
     icon = "__base__/graphics/icons/construction-robot.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {"cube-basic-matter-unit", 8},
-      {"cube-basic-motor-unit", 2},
+      {"flying-robot-frame", 2},
       {"cube-advanced-circuit", 2},
       {"cube-bottled-consciousness", 2},
       {type = "fluid", name = "cube-joy", amount = 60},

@@ -617,6 +617,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/construction-robotics.png",
     effects = {
+      {type = "unlock-recipe", recipe = "cube-flying-robot-frame"},
       {type = "unlock-recipe", recipe = "cube-construction-robot"},
       {type = "ghost-time-to-live", modifier = 60 * 60 * 60 * 24 * 7},
     },

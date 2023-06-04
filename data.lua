@@ -23,7 +23,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: science 3 techs:
 --       bigger boxes?
 
--- TODO: allow voiding calcium to get metal going earlier
+-- TODO: allow voiding calcium to get metal going earlier?
 --       new intermediate: batteries (for various things) - involve besselheim
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
@@ -56,6 +56,8 @@ require("prototypes.scripts.autoplace")
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
 -- 2+3: blue chips
+-- ?: some more efficient basic materials but they come out in awkward ways (like
+--    only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
 --    basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
 -- 3: many interlinked recipes with short time and low amounts or

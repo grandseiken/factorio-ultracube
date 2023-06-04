@@ -42,6 +42,7 @@ local whitelist = make_set({
   "express-splitter",
   "small-lamp",
   "copper-cable",
+  "flying-robot-frame",
   "red-wire",
   "green-wire",
   "constant-combinator",

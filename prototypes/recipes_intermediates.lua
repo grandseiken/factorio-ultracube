@@ -95,6 +95,20 @@ data:extend({
     category = "cube-chemical-plant",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-flying-robot-frame",
+    ingredients =
+    {
+      {"cube-basic-motor-unit", 1},
+      {"cube-basic-matter-unit", 2},
+      {"electronic-circuit", 1},
+    },
+    results = {{"flying-robot-frame", 1}},
+    energy_required = 10,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 
   {
     type = "recipe",
