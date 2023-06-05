@@ -19,7 +19,6 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: science 3 techs:
 --       bigger boxes?
---       make tar higher yield but don't allow recycling (only voiding with tower) until later?
 
 -- TODO: allow voiding calcium to get metal going earlier?
 --       make replication-based widgets depend on something additional?
@@ -97,6 +96,7 @@ require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.explosions")
 require("prototypes.entities.fabricator")
+require("prototypes.entities.fluid_burner")
 require("prototypes.entities.fuel_refinery")
 require("prototypes.entities.greenhouse")
 require("prototypes.entities.lab")

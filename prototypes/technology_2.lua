@@ -114,6 +114,46 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-tar-reclamation",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/tar.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
+    },
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-0",
+  },
+  {
+    type = "technology",
     name = "cube-emotional-decomposition",
     icons = {
       {
@@ -144,6 +184,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-1-0",
+    order = "2-2-0",
   },
 })

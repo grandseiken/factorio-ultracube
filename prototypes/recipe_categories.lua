@@ -54,4 +54,9 @@ data:extend({
     name = "cube-fuel-refinery",
     order = "e",
   },
+  {
+    type = "recipe-category",
+    name = "cube-fluid-burner",
+    order = "z",
+  },
 })

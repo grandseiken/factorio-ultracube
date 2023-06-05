@@ -123,4 +123,10 @@ data:extend({
     group = "fluids",
     order = "h",
   },
+  {
+    type = "item-subgroup",
+    name = "cube-fluid-burner",
+    group = "fluids",
+    order = "z",
+  },
 })

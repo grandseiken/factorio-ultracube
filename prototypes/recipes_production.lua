@@ -141,6 +141,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-fluid-burner",
+    ingredients = {
+      {"cube-basic-matter-unit", 20},
+      {"stone-brick", 20},
+      {"pipe", 4},
+    },
+    results = {{"cube-fluid-burner", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-fuel-refinery",
     ingredients = {
       {"cube-basic-matter-unit", 80},
