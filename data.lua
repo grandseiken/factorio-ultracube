@@ -1,13 +1,10 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- TODO: useless coal from decorations.
+-- TODO: useless coal from decorations?
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
--- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: tech cost review.
-
--- TODO: make replication-based widgets/contemplation depend on something additional?
 -- TODO: all items seem to be unlocked in FNEI/signals etc without researching them.
 
 -- TODO: icon reworks
@@ -16,17 +13,18 @@ require("prototypes.scripts.autoplace")
 --       - emotional synthesis icon + tech graphic
 --       - roboport tech graphic
 --       - concretes tech graphic?
--- TODO: renames
---       - unstable gas? heavy/light oil (essential oils?)
+-- TODO: layered icons look bad when disabled. Bake them.
+-- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: science 3 techs:
 --       bigger boxes?
+--       make tar higher yield but don't allow recycling (only voiding with tower) until later?
 
 -- TODO: allow voiding calcium to get metal going earlier?
+--       make replication-based widgets depend on something additional?
 --       some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
 --       more with besselheim; twinned logistics robots
---       make tar higher yield but don't allow recycling (only voiding with tower) until later?
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
 -- TODO: little things

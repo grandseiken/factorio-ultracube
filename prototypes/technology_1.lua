@@ -513,7 +513,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-basic-contemplation-unit-1"},
     },
-    prerequisites = {"cube-matter-replication"},
+    prerequisites = {
+      "cube-matter-replication",
+      "cube-rare-metal-crushing",
+    },
     unit = {
       count = 240,
       ingredients = {

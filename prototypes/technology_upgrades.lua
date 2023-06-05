@@ -20,6 +20,7 @@ data:extend({
     upgrade = true,
     order = "10-2-0",
   },
+
   {
     type = "technology",
     name = "cube-mining-productivity-1",
@@ -109,6 +110,7 @@ data:extend({
     upgrade = true,
     order = "10-3-3",
   },
+
   {
     type = "technology",
     name = "cube-inserter-capacity-bonus-1",
@@ -134,6 +136,7 @@ data:extend({
     upgrade = true,
     order = "10-0-0",
   },
+
   {
     type = "technology",
     name = "cube-stack-inserter-capacity-bonus-1",
@@ -159,6 +162,7 @@ data:extend({
     upgrade = true,
     order = "10-1-0",
   },
+
   {
     type = "technology",
     name = "cube-worker-robot-speed-1",
@@ -189,7 +193,10 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-speed", modifier = 0.4},
     },
-    prerequisites = {"cube-worker-robot-speed-1", "cube-construction-robotics"},
+    prerequisites = {
+      "cube-worker-robot-speed-1",
+      "cube-construction-robotics",
+    },
     unit = {
       count = 240,
       ingredients = {
@@ -201,6 +208,7 @@ data:extend({
     upgrade = true,
     order = "10-4-1",
   },
+
   {
     type = "technology",
     name = "cube-worker-robot-storage-1",
@@ -223,6 +231,7 @@ data:extend({
     upgrade = true,
     order = "10-5-0",
   },
+
   {
     type = "technology",
     name = "cube-research-speed-1",
@@ -231,7 +240,7 @@ data:extend({
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
     },
-    prerequisites = {"cube-matter-replication"},
+    prerequisites = {"cube-sentience-extraction"},
     unit = {
       count = 240,
       ingredients = {
@@ -242,6 +251,31 @@ data:extend({
     },
     upgrade = true,
     order = "10-6-0",
+  },
+  {
+    type = "technology",
+    name = "cube-research-speed-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    effects = {
+      -- Base game goes up to ~2.5 before infinite.
+      {type = "laboratory-speed", modifier = 0.25},
+    },
+    prerequisites = {
+      "cube-research-speed-1",
+      "cube-abstract-interrogation-card",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-6-1",
   },
 
   {
