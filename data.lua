@@ -14,6 +14,7 @@ require("prototypes.scripts.autoplace")
 --       - roboport tech graphic
 --       - concretes tech graphic?
 -- TODO: layered icons look bad when disabled. Bake them.
+-- TODO: use krastorio advanced radar graphic for fun?
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
@@ -46,9 +47,11 @@ require("prototypes.scripts.autoplace")
 -- 1+2: modules 2; cliff explosives
 -- 1+3: matter repurposings (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
--- 2+3: cube teleportation, some equipments
+-- 2+3: cube teleportation (krastorio teleporter graphic?), some equipments
 --
 -- Requirements/puzzles and interactions:
+-- ?: GIN (need for joy/anguish - grow berries in greenhouse?)
+-- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
 -- 1: something that forces cube to go far away on train (cube powered miner, basically - how exactly?)
 --    1+2: - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
@@ -61,6 +64,7 @@ require("prototypes.scripts.autoplace")
 --    basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
 -- 3: many interlinked recipes with short time and low amounts or
 --    (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?
+--    e.g. quantum decoder; or qbits; every recipe is random with one pair from 6*6 options (so 1/21 chance)
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
 
@@ -73,6 +77,8 @@ require("prototypes.items_equipment")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
+require("prototypes.mechanical_network.data")
+require("prototypes.mechanical_network.entities")
 require("prototypes.recipe_categories")
 require("prototypes.recipes_equipment")
 require("prototypes.recipes_fluids")
