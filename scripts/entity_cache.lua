@@ -15,6 +15,7 @@ function refresh_entity_cache()
     cube_burners = {},
     inserters = {},
     vehicles = {},
+    multi_furnaces = {},
   }
   entity_cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
@@ -71,6 +72,17 @@ entity_types = {
     "cargo-wagon",
     "spider-vehicle",
   }),
+  multi_furnace = make_set({
+    "cube-mechanical-network-and-gate",
+    "cube-mechanical-network-and-gate-0",
+    "cube-mechanical-network-and-gate-1",
+    "cube-mechanical-network-or-gate",
+    "cube-mechanical-network-or-gate-0",
+    "cube-mechanical-network-or-gate-1",
+    "cube-mechanical-network-xor-gate",
+    "cube-mechanical-network-xor-gate-0",
+    "cube-mechanical-network-xor-gate-1",
+  }),
 }
 
 local transport_line_entity_types = entity_types.transport_line
@@ -78,6 +90,7 @@ local inventory_entity_types = entity_types.inventory
 local cube_crafter_entity_types = entity_types.cube_crafter
 local cube_burner_entity_types = entity_types.cube_burner
 local vehicle_entity_types = entity_types.vehicle
+local multi_furnace_entities = entity_types.multi_furnace
 
 function is_cube_crafter(entity)
   local categories = cube_recipe_categories()
@@ -101,46 +114,70 @@ local is_cube_burner = is_cube_burner
 
 local function add_entity_cache_internal(entity, cache, is_global)
   local entity_type = entity.type
+  local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = entity
+    needs_chunk_cache = true
   end
   if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = entity
+    needs_chunk_cache = true
   end
   if is_cube_crafter(entity) then
     cache.cube_crafters[entity.unit_number] = entity
+    needs_chunk_cache = true
   end
   if is_cube_burner(entity) then
     cache.cube_burners[entity.unit_number] = entity
+    needs_chunk_cache = true
   end
   if entity_type == "inserter" then
     cache.inserters[entity.unit_number] = entity
+    needs_chunk_cache = true
   end
-  if is_global and vehicle_entity_types[entity_type] then
+  if vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = entity
+    needs_chunk_cache = false
   end
+  if entity_type == "furnace" and multi_furnace_entities[entity.name] then
+    cache.multi_furnaces[entity.unit_number] = entity
+    needs_chunk_cache = false
+  end
+  return needs_chunk_cache
 end
 
 local function remove_entity_cache_internal(entity, cache, is_global)
   local entity_type = entity.type
+  local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = nil
+    needs_chunk_cache = true
   end
   if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = nil
+    needs_chunk_cache = true
   end
   if is_cube_crafter(entity) then
     cache.cube_crafters[entity.unit_number] = nil
+    needs_chunk_cache = true
   end
   if is_cube_burner(entity) then
     cache.cube_burners[entity.unit_number] = nil
+    needs_chunk_cache = true
   end
   if entity_type == "inserter" then
     cache.inserters[entity.unit_number] = nil
+    needs_chunk_cache = true
   end
-  if is_global and vehicle_entity_types[entity_type] then
+  if vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = nil
+    needs_chunk_cache = false
   end
+  if entity_type == "furnace" and multi_furnace_entities[entity.name] then
+    cache.multi_furnaces[entity.unit_number] = nil
+    needs_chunk_cache = false
+  end
+  return needs_chunk_cache
 end
 
 function get_chunk_position(position)
@@ -152,8 +189,7 @@ function get_chunk_index(surface_index, chunk_x, chunk_y)
 end
 
 function add_entity_cache(entity)
-  add_entity_cache_internal(entity, entity_cache, true)
-  if vehicle_entity_types[entity.type] then
+  if not add_entity_cache_internal(entity, entity_cache, true) then
     return
   end
 
@@ -174,8 +210,7 @@ function add_entity_cache(entity)
 end
 
 function remove_entity_cache(entity)
-  remove_entity_cache_internal(entity, entity_cache, true)
-  if vehicle_entity_types[entity.type] then
+  if not remove_entity_cache_internal(entity, entity_cache, true) then
     return
   end
 

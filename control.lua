@@ -1,6 +1,7 @@
 require("scripts.cube_fx")
 require("scripts.cube_management")
 require("scripts.entity_cache")
+require("scripts.multi_furnace")
 require("scripts.tech_unlock")
 
 local function on_load()
@@ -79,6 +80,7 @@ script.on_event(
     cube_search_hint_entity(e.entity)
   end)
 
+-- TODO: does fast replace leave broken entries in cache?
 script.on_event(
   {
     defines.events.on_built_entity,
@@ -123,4 +125,5 @@ script.on_event(
 script.on_event(defines.events.on_tick,
   function(e)
     cube_fx_tick(e.tick)
+    multi_furnace_tick(e.tick)
   end)

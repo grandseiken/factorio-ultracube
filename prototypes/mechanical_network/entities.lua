@@ -21,6 +21,9 @@ local function generate_2x1_combinator(data)
   data.vehicle_impact_sound = sounds.generic_impact
   data.open_sound = sounds.machine_open
   data.close_sound = sounds.machine_close
+  data.open_sound.filename = "__base__/sound/power-switch-activate-3.ogg"
+  data.close_sound.filename = "__base__/sound/power-switch-activate-1.ogg"
+  data.close_sound.voume = 0.2
   data.working_sound = {
     sound = {
       filename = "__base__/sound/combinator.ogg",
@@ -32,21 +35,25 @@ local function generate_2x1_combinator(data)
     audible_distance_modifier = 0.2,
     match_speed_to_activity = true
   }
+  data.show_recipe_icon = false
+  data.show_recipe_icon_on_map = false
   generate_decider_combinator(data)
   data.animation = data.sprites
-  data.working_visualisations = {
-    {
-        draw_as_light = true,
-        north_animation = data.activity_led_sprites.north,
-        south_animation = data.activity_led_sprites.south,
-        east_animation = data.activity_led_sprites.east,
-        west_animation = data.activity_led_sprites.west,
+  if not data.is_transition then
+    data.working_visualisations = {
+      {
+          draw_as_light = true,
+          north_animation = data.activity_led_sprites.north,
+          south_animation = data.activity_led_sprites.south,
+          east_animation = data.activity_led_sprites.east,
+          west_animation = data.activity_led_sprites.west,
+      }
     }
-  }
+  end
   return data
 end
 
-local function generate_1x1_combinator(data)
+local function generate_1x1_combinator(data, is_final)
   data.icon = "__base__/graphics/icons/constant-combinator.png"
   data.icon_size = 64
   data.icon_mipmaps = 4
@@ -65,6 +72,9 @@ local function generate_1x1_combinator(data)
   data.vehicle_impact_sound = sounds.generic_impact
   data.open_sound = sounds.machine_open
   data.close_sound = sounds.machine_close
+  data.open_sound.filename = "__base__/sound/power-switch-activate-3.ogg"
+  data.close_sound.filename = "__base__/sound/power-switch-activate-1.ogg"
+  data.close_sound.voume = 0.2
   data.working_sound = {
     sound = {
       filename = "__base__/sound/combinator.ogg",
@@ -76,17 +86,21 @@ local function generate_1x1_combinator(data)
     audible_distance_modifier = 0.2,
     match_speed_to_activity = true
   }
+  data.show_recipe_icon = false
+  data.show_recipe_icon_on_map = false
   generate_constant_combinator(data)
   data.animation = data.sprites
-  data.working_visualisations = {
-    {
-        draw_as_light = true,
-        north_animation = data.activity_led_sprites.north,
-        south_animation = data.activity_led_sprites.south,
-        east_animation = data.activity_led_sprites.east,
-        west_animation = data.activity_led_sprites.west,
+  if not data.is_transition then
+    data.working_visualisations = {
+      {
+          draw_as_light = true,
+          north_animation = data.activity_led_sprites.north,
+          south_animation = data.activity_led_sprites.south,
+          east_animation = data.activity_led_sprites.east,
+          west_animation = data.activity_led_sprites.west,
+      }
     }
-  }
+  end
   return data
 end
 
@@ -122,22 +136,26 @@ data:extend({
     result_inventory_size = 1,
     energy_usage = "10kW",
   },
-  -- TODO: furnace with multiple inputs isn't possible; need to simulate it.
+
   generate_2x1_combinator {
     type = "furnace",
     name = "cube-mechanical-network-and-gate",
+    fast_replaceable_group = "cube-mechanical-network-and-gate",
     minable = {mining_time = 0.1, result = "cube-mechanical-network-and-gate"},
     crafting_categories = {"cube-mechanical-network-and-gate"},
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 1,
     energy_usage = "20kW",
+    is_transition = true,
   },
   generate_2x1_combinator {
     type = "furnace",
-    name = "cube-mechanical-network-or-gate",
-    minable = {mining_time = 0.1, result = "cube-mechanical-network-or-gate"},
-    crafting_categories = {"cube-mechanical-network-or-gate"},
+    name = "cube-mechanical-network-and-gate-0",
+    fast_replaceable_group = "cube-mechanical-network-and-gate",
+    localised_name = {"entity-name.cube-mechanical-network-and-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-and-gate"},
+    crafting_categories = {"cube-mechanical-network-and-gate-0"},
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 1,
@@ -145,9 +163,85 @@ data:extend({
   },
   generate_2x1_combinator {
     type = "furnace",
+    name = "cube-mechanical-network-and-gate-1",
+    fast_replaceable_group = "cube-mechanical-network-and-gate",
+    localised_name = {"entity-name.cube-mechanical-network-and-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-and-gate"},
+    crafting_categories = {"cube-mechanical-network-and-gate-1"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+  },
+
+  generate_2x1_combinator {
+    type = "furnace",
+    name = "cube-mechanical-network-or-gate",
+    fast_replaceable_group = "cube-mechanical-network-or-gate",
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-or-gate"},
+    crafting_categories = {"cube-mechanical-network-or-gate"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+    is_transition = true,
+  },
+  generate_2x1_combinator {
+    type = "furnace",
+    name = "cube-mechanical-network-or-gate-0",
+    fast_replaceable_group = "cube-mechanical-network-or-gate",
+    localised_name = {"entity-name.cube-mechanical-network-or-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-or-gate"},
+    crafting_categories = {"cube-mechanical-network-or-gate-0"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+  },
+  generate_2x1_combinator {
+    type = "furnace",
+    name = "cube-mechanical-network-or-gate-1",
+    fast_replaceable_group = "cube-mechanical-network-or-gate",
+    localised_name = {"entity-name.cube-mechanical-network-or-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-or-gate"},
+    crafting_categories = {"cube-mechanical-network-or-gate-1"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+  },
+
+  generate_2x1_combinator {
+    type = "furnace",
     name = "cube-mechanical-network-xor-gate",
+    fast_replaceable_group = "cube-mechanical-network-xor-gate",
     minable = {mining_time = 0.1, result = "cube-mechanical-network-xor-gate"},
     crafting_categories = {"cube-mechanical-network-xor-gate"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+    is_transition = true,
+  },
+  generate_2x1_combinator {
+    type = "furnace",
+    name = "cube-mechanical-network-xor-gate-0",
+    fast_replaceable_group = "cube-mechanical-network-xor-gate",
+    localised_name = {"entity-name.cube-mechanical-network-xor-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-xor-gate"},
+    crafting_categories = {"cube-mechanical-network-xor-gate-0"},
+    crafting_speed = 1,
+    source_inventory_size = 1,
+    result_inventory_size = 1,
+    energy_usage = "20kW",
+  },
+  generate_2x1_combinator {
+    type = "furnace",
+    name = "cube-mechanical-network-xor-gate-1",
+    fast_replaceable_group = "cube-mechanical-network-xor-gate",
+    localised_name = {"entity-name.cube-mechanical-network-xor-gate"},
+    minable = {mining_time = 0.1, result = "cube-mechanical-network-xor-gate"},
+    crafting_categories = {"cube-mechanical-network-xor-gate-1"},
     crafting_speed = 1,
     source_inventory_size = 1,
     result_inventory_size = 1,
