@@ -61,6 +61,10 @@ local whitelist = make_set({
   "filter-inserter",
   "stack-inserter",
   "stack-filter-inserter",
+  -- Compatibility.
+  "nixie-tube",
+  "nixie-tube-alpha",
+  "nixie-tube-small",
 })
 
 local entity_prototypes = {
