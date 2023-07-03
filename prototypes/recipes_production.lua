@@ -199,6 +199,7 @@ data:extend({
     ingredients = {
       {"cube-rare-metals", 40},
       {"cube-basic-matter-unit", 40},
+      {"battery", 8},
     },
     results = {{"accumulator", 1}},
     energy_required = 8,

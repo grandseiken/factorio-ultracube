@@ -158,7 +158,7 @@ data:extend({
     name = "cube-condensed-fuel",
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"sulfur", 10},
+      {"sulfur", 20},
       {type = "fluid", name = "cube-unstable-gas", amount = 4000},
     },
     results = {

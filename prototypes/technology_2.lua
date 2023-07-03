@@ -55,7 +55,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-accumulator"},
     },
-    prerequisites = {"cube-electric-energy-distribution-2"},
+    prerequisites = {
+      "cube-battery",
+      "cube-electric-energy-distribution-2",
+    },
     unit = {
       count = 240,
       ingredients = {
