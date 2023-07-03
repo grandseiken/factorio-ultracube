@@ -242,7 +242,7 @@ data:extend({
     },
     prerequisites = {"cube-sentience-extraction"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},

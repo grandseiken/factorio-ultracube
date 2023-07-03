@@ -208,7 +208,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-sulfuric-acid"},
     },
     unit = {
-      count = 180,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -247,7 +247,7 @@ data:extend({
     },
     prerequisites = {"cube-tar-processing"},
     unit = {
-      count = 180,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -290,7 +290,7 @@ data:extend({
     },
     prerequisites = {"cube-rare-metal-crushing"},
     unit = {
-      count = 180,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -411,7 +411,7 @@ data:extend({
     },
     prerequisites = {"cube-railway"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -478,6 +478,34 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-widget-replication",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        scale = 2, shift = {48, -48},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
+    },
+    prerequisites = {"cube-matter-replication"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    order = "1-3-1",
+  },
+  {
+    type = "technology",
     name = "cube-contemplative-replication",
     icons = {
       {
@@ -498,35 +526,7 @@ data:extend({
       "cube-rare-metal-crushing",
     },
     unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
-    order = "1-3-1",
-  },
-  {
-    type = "technology",
-    name = "cube-widget-replication",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {48, -48},
-      },
-    },
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
-    },
-    prerequisites = {"cube-matter-replication"},
-    unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -545,7 +545,7 @@ data:extend({
     },
     prerequisites = {"cube-matter-replication"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -588,7 +588,7 @@ data:extend({
     },
     prerequisites = {"cube-tar-processing"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -655,7 +655,7 @@ data:extend({
       "cube-advanced-electronics",
     },
     unit = {
-      count = 240,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -677,7 +677,7 @@ data:extend({
       "cube-modular-armor",
     },
     unit = {
-      count = 240,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
