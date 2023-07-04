@@ -41,6 +41,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-deep-core-ultradrill",
+    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "extraction-machine",
+    order = "x[0-deep-drill-1]",
+    place_result = "cube-deep-core-ultradrill",
+    stack_size = 10,
+  },
+  {
+    type = "item",
     name = "cube-greenhouse",
     icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     icon_size = 64, icon_mipmaps = 4,

@@ -2,6 +2,10 @@ local resource_autoplace = require("__core__/lualib/resource-autoplace")
 
 data:extend({
   {
+    type = "resource-category",
+    name = "cube-deep-core",
+  },
+  {
     type = "autoplace-control",
     name = "cube-rare-metals",
     localised_name = {"", "[entity=cube-rare-metals]", {"autoplace-control-names.cube-rare-metals"}},

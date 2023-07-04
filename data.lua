@@ -24,6 +24,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: allow voiding calcium to get metal going earlier?
 --       make replication-based widgets depend on something additional?
 --       some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
+--       rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 --       technology allows (cube only) speed/acceleration bonus to work from cargo
 
@@ -48,6 +49,14 @@ require("prototypes.scripts.autoplace")
 -- 1+3: matter repurposings (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
 -- 2+3: cube teleportation (krastorio teleporter graphic?), some equipments
+-- maybe some way of converting power -> more matter?
+--
+-- OK so PLAN
+-- BRANCH 1:
+-- DEEP COAL MINE; CUBE RAIL UPGRADE TECH;
+-- BRANCH 2:
+-- GIN: berries (greenhouse) + essential oils + water -> (distillery?) -> gin
+-- GIN + cube -> emotional synthesis
 --
 -- Requirements/puzzles and interactions:
 -- ?: GIN (need for joy/anguish - grow berries in greenhouse?)
@@ -100,6 +109,7 @@ require("prototypes.tweaks")
 require("prototypes.entities.boiler")
 require("prototypes.entities.chemical_plant")
 require("prototypes.entities.crusher")
+require("prototypes.entities.deep_core_ultradrill")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.explosions")

@@ -1,20 +1,35 @@
 data:extend({
   {
     type = "technology",
-    name = "cube-express-logistics",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/logistics-3.png",
+    name = "cube-tar-reclamation",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/tar.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
     },
-    prerequisites = {
-      "cube-abstract-interrogation-card",
-      "cube-logistics",
-    },
+    prerequisites = {"cube-abstract-interrogation-card"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -37,7 +52,7 @@ data:extend({
       "cube-electric-energy-distribution-1",
     },
     unit = {
-      count = 240,
+      count = 120,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -60,7 +75,7 @@ data:extend({
       "cube-electric-energy-distribution-2",
     },
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -117,33 +132,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-tar-reclamation",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/tar.png",
-        shift = {0, -40},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
-        shift = {-0.866 * 40, 20},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
-        shift = {0.866 * 40, 20},
-      },
-    },
+    name = "cube-deep-core-ultradrill",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
-      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-deep-core-ultradrill"},
     },
-    prerequisites = {"cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-concrete",
+    },
     unit = {
       count = 180,
       ingredients = {
@@ -154,6 +152,31 @@ data:extend({
       time = 30,
     },
     order = "2-1-0",
+  },
+  {
+    type = "technology",
+    name = "cube-express-logistics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/logistics-3.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-logistics",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-2-0",
   },
   {
     type = "technology",
@@ -187,6 +210,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-2-0",
+    order = "2-3-0",
   },
 })

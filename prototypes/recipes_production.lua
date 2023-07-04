@@ -59,6 +59,21 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-deep-core-ultradrill",
+    ingredients = {
+      {"cube-basic-matter-unit", 120},
+      {"cube-advanced-engine", 20},
+      {"cube-advanced-circuit", 20},
+      {"cube-rare-metals", 80},
+      {"concrete", 200},
+    },
+    results = {{"cube-deep-core-ultradrill", 1}},
+    energy_required = 10,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-ultradense-furnace",
     ingredients = {
       {"stone-brick", 100},
