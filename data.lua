@@ -9,7 +9,7 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
---       - tar processing/reclamation icons, + tech graphic
+--       - tar processing/reclamation icons
 --       - emotional synthesis icon + tech graphic
 --       - roboport tech graphic
 --       - concretes tech graphic?
@@ -53,9 +53,9 @@ require("prototypes.scripts.autoplace")
 --
 -- OK so PLAN
 -- BRANCH 1:
--- DEEP COAL MINE; CUBE RAIL UPGRADE TECH;
+-- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; BIGGER CHESTS;
 -- BRANCH 2:
--- GIN: berries (greenhouse) + essential oils + water -> (distillery?) -> gin
+-- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
 -- GIN + cube -> emotional synthesis
 --
 -- Requirements/puzzles and interactions:

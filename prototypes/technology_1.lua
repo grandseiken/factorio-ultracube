@@ -157,8 +157,17 @@ data:extend({
   {
     type = "technology",
     name = "cube-tar-processing",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-oil.png",
+        scale = 0.625,
+      },
+    },
     effects = {
       {type = "unlock-recipe", recipe = "cube-gelatinous-tar"},
       {type = "unlock-recipe", recipe = "cube-tar-processing"},

@@ -155,6 +155,50 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-transitive-ultralocomotion",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-cube.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__base__/graphics/technology/braking-force.png",
+      },
+    },
+    effects = {
+      {
+        type = "nothing",
+        icons = {
+          {
+            icon = "__base__/graphics/icons/locomotive.png",
+            icon_size = 64, icon_mipmaps = 4,
+          },
+          {
+            icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-blueprint.png",
+            icon_size = 64, icon_mipmaps = 2,
+          }
+        },
+        effect_description = {"effect-description.cube-transitive-ultralocomotion"},
+      },
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-railway",
+    },
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-1",
+  },
+  {
+    type = "technology",
     name = "cube-express-logistics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/logistics-3.png",

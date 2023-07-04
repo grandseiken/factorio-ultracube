@@ -5,7 +5,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
-      -- Base game goes up to 1.0.
       {type = "train-braking-force-bonus", modifier = 0.1},
     },
     prerequisites = {"cube-railway"},
@@ -19,6 +18,31 @@ data:extend({
     },
     upgrade = true,
     order = "10-2-0",
+  },
+  {
+    type = "technology",
+    name = "cube-braking-force-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
+    effects = {
+      -- Base game goes up to 1.0.
+      {type = "train-braking-force-bonus", modifier = 0.2},
+    },
+    prerequisites = {
+      "cube-braking-force-1",
+      "cube-transitive-ultralocomotion",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-2-1",
   },
 
   {
@@ -96,7 +120,7 @@ data:extend({
     },
     prerequisites = {
       "cube-mining-productivity-3",
-      "cube-abstract-interrogation-card",
+      "cube-deep-core-ultradrill",
     },
     unit = {
       count = 240,
