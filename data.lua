@@ -18,15 +18,14 @@ require("prototypes.scripts.autoplace")
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
--- TODO: science 3 techs:
---       bigger boxes?
-
--- TODO: allow voiding calcium to get metal going earlier?
---       make replication-based widgets depend on something additional?
---       some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
+-- TODO: bigger boxes at science 3
+-- TODO: try to rework the massive science 3 mic drop of techs a bit
+--       maybe new intermediate at science 3? erudite matter frames/lattices?
+--       or analysis machine that unlocks techs based on finding things in the world
+-- TODO: make transitive ultralocomotion work
+-- TODO: some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
 --       rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
---       technology allows (cube only) speed/acceleration bonus to work from cargo
 
 -- TODO: little things
 --       cliff explosives; landfill; repair packs
@@ -40,6 +39,8 @@ require("prototypes.scripts.autoplace")
 --   - 1: SCALE scale-focused, scale puzzles, maybe
 --   - 2: POWER maybe power / energy / byproducts-focused?
 --   - 3: PUZZLE either - cube logistics puzzles
+
+-- next science names: deep ? card; euridite ? card; ...
 --
 -- Tech unlocks:
 -- 1: modules 1; logistics bots; V4 belts; some equipments
@@ -53,10 +54,12 @@ require("prototypes.scripts.autoplace")
 --
 -- OK so PLAN
 -- BRANCH 1:
--- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; BIGGER CHESTS;
+-- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; BIGGER CHESTS; deep core -> crystal + coal -> better tar recipe, other stuff
 -- BRANCH 2:
 -- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
--- GIN + cube -> emotional synthesis
+-- GIN + cube + cerebral -> emotional synthesis -> split joy/anguish cube -> other stuff
+-- BRANCH 3:
+-- ??? 100 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
 --
 -- Requirements/puzzles and interactions:
 -- ?: GIN (need for joy/anguish - grow berries in greenhouse?)

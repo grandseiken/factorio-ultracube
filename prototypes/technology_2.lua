@@ -137,6 +137,7 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-deep-core-ultradrill"},
+      -- TODO: crushing recipe
     },
     prerequisites = {
       "cube-abstract-interrogation-card",
