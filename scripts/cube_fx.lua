@@ -1,8 +1,31 @@
 require("scripts.lib")
 require("scripts.cube_search")
 
-local ultradense_icon = {type = "item", name = cubes.ultradense}
-local dormant_icon = {type = "item", name = cubes.ultradense}
+local cube_ultradense = cubes.ultradense
+local cube_dormant = cubes.dormant
+local ultradense_icon = {type = "item", name = cube_ultradense}
+local dormant_icon = {type = "item", name = cube_dormant}
+local ultralocomotion_fuel_map = {
+  ["wood"] = "cube-wood-ultralocomotion",
+  ["cube-condensed-fuel"] = "cube-condensed-fuel-ultralocomotion",
+}
+local ultralocomotion_fuel_inverse_map = inverse_map(ultralocomotion_fuel_map)
+local cube_fuel_vehicle_entity_types = make_set({
+  "locomotive", "car", "tank", "spider-vehicle"
+})
+
+local cube_fx_data = nil
+
+function refresh_cube_fx_data()
+  global.cube_fx_data = {
+    last_locomotives = {}
+  }
+  cube_fx_data = global.cube_fx_data
+end
+
+function cube_fx_data_on_load()
+  cube_fx_data = global.cube_fx_data
+end
 
 local function cube_alert(results)
   for _, player in pairs(game.players) do
@@ -68,6 +91,76 @@ local function cube_spark(results)
   end
 end
 
+local function cube_vehicle_mod(results)
+  local new_locomotives = {}
+  local boomed = false
+
+  for i = 1, #results do
+    local result = results[i]
+    local entity = result.entity
+    if result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
+       entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
+       entity.burner.currently_burning.name == cube_ultradense  then
+      local velocity = from_polar_orientation(math.min(2.5, entity.speed), entity.orientation)
+      entity.surface.create_entity {
+        name = "cube-periodic-ultradense-projectile",
+        source = entity,
+        position = entity.position,
+        target = vector_add(entity.position, velocity),
+        speed = vector_length(velocity) / 64,
+        max_range = 0,
+      }
+      boomed = true
+    end
+    if result.item == cube_ultradense and entity.type == "cargo-wagon" then
+      local force = entity.force
+      local train = entity.train
+      if train and force.technologies["cube-transitive-ultralocomotion"] and
+         force.technologies["cube-transitive-ultralocomotion"].researched then
+        for _, a in pairs(train.locomotives) do
+          for j = 1, #a do
+            local locomotive = a[j]
+            if locomotive.burner and locomotive.burner.currently_burning then
+              new_locomotives[locomotive.unit_number] = locomotive
+            end
+          end
+        end
+      end
+    end
+  end
+
+  for _, locomotive in pairs(new_locomotives) do
+    local fuel = locomotive.burner.currently_burning.name
+    local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
+    if ultralocomotion_fuel then
+      locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
+    elseif ultralocomotion_fuel_inverse_map[fuel] and locomotive.speed > 1 / 8 then
+      local velocity = from_polar_orientation(math.min(2.5, locomotive.speed), locomotive.orientation)
+      locomotive.surface.create_entity {
+        name = "cube-periodic-ultradense-projectile",
+        source = locomotive,
+        position = locomotive.position,
+        target = vector_add(locomotive.position, velocity),
+        speed = vector_length(velocity) / 64,
+        max_range = 0,
+      }
+      boomed = true
+    end
+  end
+  for unit_number, locomotive in pairs(cube_fx_data.last_locomotives) do
+    if not new_locomotives[unit_number] and locomotive.burner and
+       locomotive.burner.currently_burning then
+      local ultralocomotion_fuel = locomotive.burner.currently_burning.name
+      local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
+      if normal_fuel then
+        locomotive.burner.currently_burning = game.item_prototypes[normal_fuel]
+      end
+    end
+  end
+  cube_fx_data.last_locomotives = new_locomotives
+  return boomed
+end
+
 function cube_fx_tick(tick)
   local update_tick = tick % 6 == 0
   local alert_tick = update_tick and tick % 24 == 12
@@ -79,6 +172,9 @@ function cube_fx_tick(tick)
   local search_results = cube_search_update(tick)
   if alert_tick then
     cube_alert(search_results)
+  end
+  if cube_vehicle_mod(search_results) then
+    return
   end
   if spark_tick then
     cube_spark(search_results)

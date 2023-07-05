@@ -1,35 +1,20 @@
 data:extend({
   {
     type = "technology",
-    name = "cube-tar-reclamation",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/tar.png",
-        shift = {0, -40},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
-        shift = {-0.866 * 40, 20},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
-        shift = {0.866 * 40, 20},
-      },
-    },
+    name = "cube-express-logistics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/logistics-3.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
-      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-splitter-2"},
     },
-    prerequisites = {"cube-abstract-interrogation-card"},
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-logistics",
+    },
     unit = {
-      count = 180,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -87,11 +72,51 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-radar",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/radar.png",
+    name = "cube-tar-reclamation",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/tar.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-radar"},
+      {type = "unlock-recipe", recipe = "cube-heavy-tar-reclamation"},
+      {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
+    },
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-3",
+  },
+  {
+    type = "technology",
+    name = "cube-sophisticated-matter-unit",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Ultracube__/graphics/sophisticated-matter-unit.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-sophisticated-matter-unit"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
     unit = {
@@ -103,7 +128,27 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-3",
+    order = "2-0-4",
+  },
+  {
+    type = "technology",
+    name = "cube-radar",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-radar.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-radar"},
+    },
+    prerequisites = {"cube-sophisticated-matter-unit"},
+    unit = {
+      count = 120,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-5",
   },
   {
     type = "technology",
@@ -128,7 +173,30 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-4",
+    order = "2-0-6",
+  },
+  {
+    type = "technology",
+    name = "cube-containers",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/containers.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-medium-container"},
+      {type = "unlock-recipe", recipe = "cube-big-container"},
+    },
+    prerequisites = {
+      "cube-sophisticated-matter-unit",
+    },
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-7",
   },
   {
     type = "technology",
@@ -140,7 +208,7 @@ data:extend({
       -- TODO: crushing recipe
     },
     prerequisites = {
-      "cube-abstract-interrogation-card",
+      "cube-sophisticated-matter-unit",
       "cube-concrete",
     },
     unit = {
@@ -197,54 +265,6 @@ data:extend({
       time = 30,
     },
     order = "2-1-1",
-  },
-  {
-    type = "technology",
-    name = "cube-containers",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/containers.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-medium-container"},
-      {type = "unlock-recipe", recipe = "cube-big-container"},
-    },
-    prerequisites = {
-      "cube-abstract-interrogation-card",
-    },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
-    order = "2-1-2",
-  },
-  {
-    type = "technology",
-    name = "cube-express-logistics",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/logistics-3.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-splitter-2"},
-    },
-    prerequisites = {
-      "cube-abstract-interrogation-card",
-      "cube-logistics",
-    },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
-    order = "2-2-0",
   },
   {
     type = "technology",

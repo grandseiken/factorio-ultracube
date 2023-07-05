@@ -6,6 +6,7 @@ require("scripts.tech_unlock")
 
 local function on_load()
   entity_cache_on_load()
+  cube_fx_data_on_load()
   cube_search_data_on_load()
 end
 
@@ -22,6 +23,7 @@ local function on_init()
   end
 
   refresh_entity_cache()
+  refresh_cube_fx_data()
   refresh_cube_search_data()
   for _, force in pairs(game.forces) do
     sync_unlock_technologies(force)

@@ -476,7 +476,7 @@ data:extend({
     type = "recipe",
     name = "cube-radar",
     ingredients = {
-      {"cube-basic-matter-unit", 12},
+      {"cube-sophisticated-matter-unit", 4},
       {"cube-rare-metals", 8},
       {"cube-electronic-circuit", 4},
     },
@@ -509,7 +509,7 @@ data:extend({
     name = "cube-roboport",
     ingredients = {
       {"stone-brick", 60},
-      {"cube-basic-matter-unit", 20},
+      {"cube-sophisticated-matter-unit", 8},
       {"cube-n-dimensional-widget", 1},
       {"cube-advanced-circuit", 2},
       {"radar", 1},
@@ -589,8 +589,8 @@ data:extend({
     type = "recipe",
     name = "cube-medium-container",
     ingredients = {
-      {"cube-basic-matter-unit", 20},
-      {"cube-rare-metals", 20},
+      {"cube-sophisticated-matter-unit", 8},
+      {"cube-rare-metals", 2},
     },
     results = {{"cube-medium-container", 1}},
     energy_required = 2,
@@ -600,8 +600,8 @@ data:extend({
     type = "recipe",
     name = "cube-big-container",
     ingredients = {
-      {"cube-basic-matter-unit", 50},
-      {"cube-rare-metals", 50},
+      {"cube-sophisticated-matter-unit", 20},
+      {"cube-rare-metals", 2},
     },
     results = {{"cube-big-container", 1}},
     energy_required = 4,

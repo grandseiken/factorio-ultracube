@@ -5,7 +5,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
-      {type = "train-braking-force-bonus", modifier = 0.1},
+      {type = "train-braking-force-bonus", modifier = 0.2},
     },
     prerequisites = {"cube-railway"},
     unit = {
@@ -26,7 +26,7 @@ data:extend({
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       -- Base game goes up to 1.0.
-      {type = "train-braking-force-bonus", modifier = 0.2},
+      {type = "train-braking-force-bonus", modifier = 0.3},
     },
     prerequisites = {
       "cube-braking-force-1",
@@ -92,7 +92,7 @@ data:extend({
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       -- Base game goes up to 0.4 (before infinite).
-      {type = "mining-drill-productivity-bonus", modifier = 0.025},
+      {type = "mining-drill-productivity-bonus", modifier = 0.05},
     },
     prerequisites = {
       "cube-mining-productivity-2",
@@ -116,7 +116,7 @@ data:extend({
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       -- Base game goes up to 0.4 (before infinite).
-      {type = "mining-drill-productivity-bonus", modifier = 0.025},
+      {type = "mining-drill-productivity-bonus", modifier = 0.05},
     },
     prerequisites = {
       "cube-mining-productivity-3",
@@ -133,32 +133,6 @@ data:extend({
     },
     upgrade = true,
     order = "10-3-3",
-  },
-
-  {
-    type = "technology",
-    name = "cube-inserter-capacity-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
-    effects = {
-      -- Base game goes up to 3
-      {type = "inserter-stack-size-bonus", modifier = 1},
-    },
-    prerequisites = {
-      "cube-inserters",
-      "cube-abstract-interrogation-card",
-    },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
-    upgrade = true,
-    order = "10-0-0",
   },
 
   {
@@ -189,11 +163,36 @@ data:extend({
 
   {
     type = "technology",
+    name = "cube-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      -- Base game goes up to 3
+      {type = "inserter-stack-size-bonus", modifier = 1},
+    },
+    prerequisites = {
+      "cube-inserters",
+      "cube-containers",  -- TODO.
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-0-0",
+  },
+
+  {
+    type = "technology",
     name = "cube-worker-robot-speed-1",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-speed", modifier = 0.4},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
@@ -214,7 +213,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-speed", modifier = 0.4},
     },
     prerequisites = {
@@ -232,6 +230,31 @@ data:extend({
     upgrade = true,
     order = "10-4-1",
   },
+  {
+    type = "technology",
+    name = "cube-worker-robot-speed-3",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
+    effects = {
+      -- Base game goes up to ~3 before infinite.
+      {type = "worker-robot-speed", modifier = 0.4},
+    },
+    prerequisites = {
+      "cube-worker-robot-speed-2",
+      "cube-roboport",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 20,
+    },
+    upgrade = true,
+    order = "10-4-2",
+  },
 
   {
     type = "technology",
@@ -242,7 +265,7 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-storage", modifier = 1},
     },
-    prerequisites = {"cube-roboport"},
+    prerequisites = {"cube-roboport"},  -- TODO.
     unit = {
       count = 240,
       ingredients = {
@@ -308,7 +331,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/automation-1.png"),
     effects = {},
-    prerequisites = {"cube-abstract-interrogation-card"},
+    prerequisites = {"cube-containers"},
     unit =
     {
       count_formula = "2^(L-7)*1000",

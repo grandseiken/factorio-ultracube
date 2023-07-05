@@ -5,6 +5,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: tech cost review.
+-- TODO: "raw cost" view fixing.
 -- TODO: all items seem to be unlocked in FNEI/signals etc without researching them.
 
 -- TODO: icon reworks
@@ -14,16 +15,13 @@ require("prototypes.scripts.autoplace")
 --       - roboport tech graphic
 --       - concretes tech graphic?
 -- TODO: layered icons look bad when disabled. Bake them.
--- TODO: use krastorio advanced radar graphic for fun?
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: try to rework the massive science 3 mic drop of techs a bit
 --       maybe new intermediate at science 3? erudite matter frames/lattices?
 --       or analysis machine that unlocks techs based on finding things in the world
--- TODO: make transitive ultralocomotion work
--- TODO: some new intermediate from basic matter (for more recipe variety, and to allow more efficient upgrades later)?
---       rework fuel refinery (shouldn't need cube directly, something else instead?)
+-- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 
 -- TODO: little things
@@ -42,9 +40,9 @@ require("prototypes.scripts.autoplace")
 -- next science names: deep ? card; euridite ? card; ...
 --
 -- Tech unlocks:
--- 1: modules 1; logistics bots; V4 belts; some equipments
+-- 1: modules 1; V4 belts; some equipments
 -- 2: fancy power solutions; bigger accumulator; some equipments
--- 3: spidertron; ???
+-- 3: logistics bots; spidertron; ???
 -- 1+2: modules 2; cliff explosives
 -- 1+3: matter repurposings (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
@@ -53,11 +51,11 @@ require("prototypes.scripts.autoplace")
 --
 -- OK so PLAN
 -- BRANCH 1:
--- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; deep core -> crystal + coal -> better tar recipe, other stuff
--- BRANCH 2:
+-- deep core ore (crush) -> crystal + coal -> better tar recipe, other stuff
+-- BRANCH 3:
 -- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
 -- GIN + cube + cerebral -> emotional synthesis -> split joy/anguish cube -> other stuff
--- BRANCH 3:
+-- BRANCH 2:
 -- ??? 100 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
 --
 -- Requirements/puzzles and interactions:

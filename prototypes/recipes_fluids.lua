@@ -10,7 +10,7 @@ data:extend({
       {"wood", 400},
     },
     results = {
-      {type = "fluid", name = "cube-gelatinous-tar", amount = 20000},
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 16000},
     },
     energy_required = 4,
     main_product = "",
@@ -77,7 +77,7 @@ data:extend({
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 320},
     },
-    energy_required = 16,
+    energy_required = 4,
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
@@ -107,7 +107,7 @@ data:extend({
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 360},
     },
-    energy_required = 12,
+    energy_required = 4,
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",

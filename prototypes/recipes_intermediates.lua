@@ -171,4 +171,16 @@ data:extend({
     always_show_made_in = true,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-sophisticated-matter-unit",
+    ingredients = {
+      {"cube-basic-matter-unit", 4},
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 40},
+    },
+    results = {{"cube-sophisticated-matter-unit", 1}},
+    energy_required = 2,
+    category = "cube-fabricator",
+    enabled = false,
+  },
 })

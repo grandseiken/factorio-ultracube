@@ -6,6 +6,14 @@ function make_set(array)
   return r
 end
 
+function inverse_map(map)
+  local r = {}
+  for k, v in pairs(map) do
+    r[v] = k
+  end
+  return r
+end
+
 function from_polar(r, theta)
   return {x = r * math.cos(theta), y = r * math.sin(theta)}
 end

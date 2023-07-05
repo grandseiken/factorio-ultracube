@@ -61,7 +61,7 @@ data:extend({
     type = "recipe",
     name = "cube-deep-core-ultradrill",
     ingredients = {
-      {"cube-basic-matter-unit", 120},
+      {"cube-sophisticated-matter-unit", 120},
       {"cube-advanced-engine", 20},
       {"cube-advanced-circuit", 20},
       {"cube-rare-metals", 80},

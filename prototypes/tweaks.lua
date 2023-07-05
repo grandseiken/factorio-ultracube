@@ -18,6 +18,7 @@ data.raw.item["stone-brick"].subgroup = "cube-furnace"
 data.raw.item["stone-brick"].order = "0[a-brick]"
 data.raw.item["radar"].subgroup = "cube-logistic-machines"
 data.raw.item["radar"].order = "0[radar]"
+data.raw.item["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["sulfur"].subgroup = "cube-chemical-intermediates"
 data.raw.item["sulfur"].order = "0[sulfur]"
@@ -33,3 +34,13 @@ data.raw.car.car.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "c
 data.raw.car.car.burner.burnt_inventory_size = 1
 data.raw.locomotive.locomotive.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
 data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
+
+data.raw.radar["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
+data.raw.radar["radar"].vehicle_impact_sound = {
+  filename = "__base__/sound/car-metal-impact.ogg",
+  volume = 0.65,
+}
+data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png"
+data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png"
+data.raw.radar["radar"].pictures.layers[1].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png"
+data.raw.radar["radar"].pictures.layers[2].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
