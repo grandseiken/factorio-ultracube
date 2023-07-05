@@ -144,7 +144,7 @@ data:extend({
       "cube-concrete",
     },
     unit = {
-      count = 180,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -197,6 +197,29 @@ data:extend({
       time = 30,
     },
     order = "2-1-1",
+  },
+  {
+    type = "technology",
+    name = "cube-containers",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/containers.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-medium-container"},
+      {type = "unlock-recipe", recipe = "cube-big-container"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+    },
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-2",
   },
   {
     type = "technology",

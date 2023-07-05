@@ -287,7 +287,7 @@ data:extend({
     },
     prerequisites = {
       "cube-research-speed-1",
-      "cube-abstract-interrogation-card",
+      "cube-electric-energy-accumulators",
     },
     unit = {
       count = 240,

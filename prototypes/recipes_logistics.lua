@@ -464,7 +464,8 @@ data:extend({
     name = "cube-rail",
     ingredients = {
       {"stone", 4},
-      {"cube-basic-matter-unit", 4},
+      {"cube-basic-matter-unit", 2},
+      {"cube-rare-metals", 2},
     },
     results = {{"rail", 2}},
     energy_required = 1,
@@ -475,8 +476,8 @@ data:extend({
     type = "recipe",
     name = "cube-radar",
     ingredients = {
-      {"cube-basic-matter-unit", 8},
-      {"cube-rare-metals", 4},
+      {"cube-basic-matter-unit", 12},
+      {"cube-rare-metals", 8},
       {"cube-electronic-circuit", 4},
     },
     results = {{"radar", 1}},
@@ -582,5 +583,28 @@ data:extend({
     energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,
+  },
+
+  {
+    type = "recipe",
+    name = "cube-medium-container",
+    ingredients = {
+      {"cube-basic-matter-unit", 20},
+      {"cube-rare-metals", 20},
+    },
+    results = {{"cube-medium-container", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+  },
+  {
+    type = "recipe",
+    name = "cube-big-container",
+    ingredients = {
+      {"cube-basic-matter-unit", 50},
+      {"cube-rare-metals", 50},
+    },
+    results = {{"cube-big-container", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
   },
 })

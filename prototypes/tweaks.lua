@@ -7,6 +7,8 @@ data.raw.character.character.crafting_categories = {
   "cube-synthesizer-handcraft",
   "cube-fabricator-handcraft",
 }
+
+data.raw.container["iron-chest"].inventory_size = 20
 data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
 data.raw.inserter["stack-inserter"].stack_size_bonus = 3
 data.raw.inserter["stack-filter-inserter"].stack_size_bonus = 3

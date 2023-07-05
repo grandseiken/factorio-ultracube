@@ -18,7 +18,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
--- TODO: bigger boxes at science 3
 -- TODO: try to rework the massive science 3 mic drop of techs a bit
 --       maybe new intermediate at science 3? erudite matter frames/lattices?
 --       or analysis machine that unlocks techs based on finding things in the world
@@ -54,7 +53,7 @@ require("prototypes.scripts.autoplace")
 --
 -- OK so PLAN
 -- BRANCH 1:
--- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; BIGGER CHESTS; deep core -> crystal + coal -> better tar recipe, other stuff
+-- DEEP COAL MINE; CUBE RAIL UPGRADE TECH; deep core -> crystal + coal -> better tar recipe, other stuff
 -- BRANCH 2:
 -- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
 -- GIN + cube + cerebral -> emotional synthesis -> split joy/anguish cube -> other stuff
@@ -86,6 +85,7 @@ require("prototypes.fuel_categories")
 require("prototypes.item_groups")
 require("prototypes.items")
 require("prototypes.items_equipment")
+require("prototypes.items_logistics")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
@@ -111,6 +111,7 @@ require("prototypes.tweaks")
 
 require("prototypes.entities.boiler")
 require("prototypes.entities.chemical_plant")
+require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
 require("prototypes.entities.deep_core_ultradrill")
 require("prototypes.entities.electric_furnace")
