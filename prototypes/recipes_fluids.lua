@@ -22,6 +22,37 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-improved-gelatinous-tar",
+    icons = {
+      {
+        icon = "__Ultracube__/graphics/tar.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/icons/coal.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+      },
+    },
+    ingredients = {
+      {type = "fluid", name = "steam", amount = 2000},
+      {"cube-sand", 100},
+      {"wood", 400},
+      {"coal", 400},
+    },
+    results = {
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 40000},
+    },
+    energy_required = 4,
+    main_product = "",
+    category = "cube-ultradense-furnace",
+    subgroup = "cube-tar-input",
+    order = "0[b-tar-2]",
+    always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-tar-processing",
     icons = {
       {
@@ -52,7 +83,7 @@ data:extend({
     energy_required = 6,
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
-    order = "0[b-tar-processing]",
+    order = "0[c-tar-processing]",
     always_show_made_in = true,
     enabled = false,
   },

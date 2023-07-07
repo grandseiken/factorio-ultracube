@@ -188,7 +188,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "a[calcium]",
+    order = "b[calcium]",
     stack_size = 100,
   },
 
@@ -283,5 +283,189 @@ data:extend({
     subgroup = "raw-resource",
     order = "d[0-deep-core-ore]",
     stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "cube-deep-powder",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+    },
+    subgroup = "cube-experimental",
+    order = "x[0-powder]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "cube-deep-crystal",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+          {
+            draw_as_light = true,
+            flags = {"light"},
+            blend_mode = "additive",
+            tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+            size = 64,
+            filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4-light.png",
+            scale = 0.25,
+            mipmap_count = 4,
+          },
+        },
+      },
+    },
+    subgroup = "cube-experimental",
+    order = "x[1-crystal]",
+    stack_size = 50,
   },
 })

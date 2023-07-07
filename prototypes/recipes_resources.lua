@@ -103,6 +103,27 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-deep-core-crushing",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {{"cube-deep-core-ore", 40}},
+    results = {
+      {type = "item", name = "cube-deep-powder", amount_min = 20, amount_max = 30},
+      {type = "item", name = "coal", amount_min = 10, amount_max = 20},
+      {type = "item", name = "stone", amount_min = 5, amount_max = 10},
+    },
+    energy_required = 4,
+    category = "cube-crusher",
+    subgroup = "cube-processing",
+    order = "d[deep-core-crushing]",
+    always_show_made_in = true,
+    always_show_products = true,
+    show_amount_in_title = false,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-sand-dilution",
     icons = {
       {

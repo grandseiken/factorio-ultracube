@@ -1,7 +1,6 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- TODO: useless coal from decorations?
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
 -- TODO: tech cost review.
@@ -51,18 +50,18 @@ require("prototypes.scripts.autoplace")
 --
 -- OK so PLAN
 -- BRANCH 1:
--- deep core ore (crush) -> crystal + coal -> better tar recipe, other stuff
+-- deep core powder -> crystal (? later), other stuff
 -- BRANCH 3:
 -- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
 -- GIN + cube + cerebral -> emotional synthesis -> split joy/anguish cube -> other stuff
 -- BRANCH 2:
 -- ??? 100 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
+
+-- [DONE] 1: something that forces cube to go far away on train
 --
 -- Requirements/puzzles and interactions:
 -- ?: GIN (need for joy/anguish - grow berries in greenhouse?)
 -- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
--- 1: something that forces cube to go far away on train (cube powered miner, basically - how exactly?)
---    1+2: - possibly: re-add coal, but only far away, make a way more efficient coal/wood->tar recipe
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement

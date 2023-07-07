@@ -101,7 +101,7 @@ local function cube_vehicle_mod(results)
     if result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
        entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
        entity.burner.currently_burning.name == cube_ultradense  then
-      local velocity = from_polar_orientation(math.min(2.5, entity.speed), entity.orientation)
+      local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
       entity.surface.create_entity {
         name = "cube-periodic-ultradense-projectile",
         source = entity,
@@ -135,7 +135,7 @@ local function cube_vehicle_mod(results)
     if ultralocomotion_fuel then
       locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
     elseif ultralocomotion_fuel_inverse_map[fuel] and locomotive.speed > 1 / 8 then
-      local velocity = from_polar_orientation(math.min(2.5, locomotive.speed), locomotive.orientation)
+      local velocity = from_polar_orientation(math.min(2, locomotive.speed), locomotive.orientation)
       locomotive.surface.create_entity {
         name = "cube-periodic-ultradense-projectile",
         source = locomotive,

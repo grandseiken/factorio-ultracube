@@ -205,7 +205,7 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-deep-core-ultradrill"},
-      -- TODO: crushing recipe
+      {type = "unlock-recipe", recipe = "cube-deep-core-crushing"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
@@ -221,6 +221,35 @@ data:extend({
       time = 30,
     },
     order = "2-1-0",
+  },
+  {
+    type = "technology",
+    name = "cube-improved-tar-processing",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-coal.png",
+        scale = 0.625,
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-improved-gelatinous-tar"},
+    },
+    prerequisites = {"cube-deep-core-ultradrill"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-1",
   },
   {
     type = "technology",
@@ -264,7 +293,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-1-1",
+    order = "2-1-2",
   },
   {
     type = "technology",
