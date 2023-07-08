@@ -88,6 +88,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
       {type = "unlock-recipe", recipe = "cube-rare-metals"},
+      {type = "unlock-recipe", recipe = "cube-repair-pack"},
     },
     prerequisites = {
       "cube-electric-mining-drill",

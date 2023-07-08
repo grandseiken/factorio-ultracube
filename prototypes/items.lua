@@ -29,27 +29,6 @@ data:extend({
 
   {
     type = "item",
-    name = "cube-construction-robot-0",
-    icon = "__base__/graphics/icons/construction-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "logistic-network",
-    order = "a[robot]-b[construction-robot]",
-    place_result = "cube-construction-robot-0",
-    stack_size = 50,
-  },
-  {
-    type = "item",
-    name = "cube-construction-robot-1",
-    icon = "__base__/graphics/icons/construction-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "logistic-network",
-    order = "a[robot]-b[construction-robot]",
-    place_result = "cube-construction-robot-1",
-    stack_size = 50,
-  },
-
-  {
-    type = "item",
     name = "cube-condensed-fuel",
     icon = "__base__/graphics/icons/rocket-fuel.png",
     icon_size = 64, icon_mipmaps = 4,
@@ -176,8 +155,8 @@ data:extend({
     name = "cube-sophisticated-matter-unit",
     icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "cube-synthesis-basics",
-    order = "0[a-matter-2]",
+    subgroup = "cube-advanced-materials",
+    order = "0[sophisticated]",
     stack_size = 100,
   },
 })

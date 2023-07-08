@@ -94,7 +94,7 @@ data:extend({
     ingredients = {
       {"fast-transport-belt", 8},
       {"cube-basic-motor-unit", 4},
-      {type = "fluid", name = "cube-elbow-grease", amount = 120},
+      {type = "fluid", name = "cube-elbow-grease", amount = 200},
     },
     results = {{"express-transport-belt", 8}},
     energy_required = 4,
@@ -595,6 +595,7 @@ data:extend({
     results = {{"cube-medium-container", 1}},
     energy_required = 2,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
   {
     type = "recipe",
@@ -606,5 +607,6 @@ data:extend({
     results = {{"cube-big-container", 1}},
     energy_required = 4,
     category = "cube-fabricator-handcraft",
+    enabled = false,
   },
 })

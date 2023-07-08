@@ -9,6 +9,12 @@ data.raw.character.character.crafting_categories = {
 }
 
 data.raw.container["iron-chest"].inventory_size = 20
+data.raw["logistic-container"]["logistic-chest-passive-provider"].inventory_size = 20
+data.raw["logistic-container"]["logistic-chest-active-provider"].inventory_size = 20
+data.raw["logistic-container"]["logistic-chest-buffer"].inventory_size = 20
+data.raw["logistic-container"]["logistic-chest-requester"].inventory_size = 20
+data.raw["logistic-container"]["logistic-chest-storage"].inventory_size = 40
+data.raw["repair-tool"]["repair-pack"].subgroup = "cube-repair"
 data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
 data.raw.inserter["stack-inserter"].stack_size_bonus = 3
 data.raw.inserter["stack-filter-inserter"].stack_size_bonus = 3

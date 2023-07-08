@@ -29,7 +29,7 @@ data:extend({
     },
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
-      {"cube-calcium", 40},
+      {"cube-calcium", 20},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
       {type = "fluid", name = "water", amount = 8000},
     },

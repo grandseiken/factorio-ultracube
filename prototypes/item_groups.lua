@@ -58,6 +58,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-advanced-materials",
+    group = "intermediate-products",
+    order = "3",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-components",
     group = "intermediate-products",
     order = "a",
@@ -85,6 +91,13 @@ data:extend({
     name = "cube-science",
     group = "intermediate-products",
     order = "e",
+  },
+
+  {
+    type = "item-subgroup",
+    name = "cube-repair",
+    group = "combat",
+    order = "a"
   },
 
   {

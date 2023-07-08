@@ -17,16 +17,21 @@ require("prototypes.scripts.autoplace")
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
--- TODO: try to rework the massive science 3 mic drop of techs a bit
---       maybe new intermediate at science 3? erudite matter frames/lattices?
---       or analysis machine that unlocks techs based on finding things in the world
+-- TODO: some way to void calcium to get more metal and/or vice versa?
+-- TODO: analysis machine that unlocks techs based on finding things in the world?
 -- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 
+-- TODO: more better recipes:
+-- blast processing: explosives + (unrefined) rare metals -> inefficient but lots at once
+-- still something for matter; or maybe only for sophisticated matter
+-- something for contemplation units?
+
 -- TODO: little things
---       cliff explosives; landfill; repair packs
+--       cliff explosives; landfill
 --       extend upgrade techs
 --       - lab speed + increase times (?)
+--       - toolbelt!
 
 -- TODO: think about reintroducing biters + military?
 -- TODO: storylore tooltips!
