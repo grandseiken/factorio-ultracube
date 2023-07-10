@@ -17,18 +17,19 @@ require("prototypes.scripts.autoplace")
 -- TODO: renames: unstable gas?
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
--- TODO: some way to void calcium to get more metal and/or vice versa?
+-- TODO: important things
+--       advanced engine units + blue belts need to drain more resources
+-- blast processing: explosives + (unrefined) rare metals -> inefficient but lots at once
+--       - also cliff explosives
+-- still something for matter; or maybe only for sophisticated matter
+-- something for contemplation units?
+
 -- TODO: analysis machine that unlocks techs based on finding things in the world?
 -- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 
--- TODO: more better recipes:
--- blast processing: explosives + (unrefined) rare metals -> inefficient but lots at once
--- still something for matter; or maybe only for sophisticated matter
--- something for contemplation units?
-
 -- TODO: little things
---       cliff explosives; landfill
+--       cliff explosives
 --       extend upgrade techs
 --       - lab speed + increase times (?)
 --       - toolbelt!

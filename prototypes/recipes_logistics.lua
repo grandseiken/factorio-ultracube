@@ -20,7 +20,7 @@ data:extend({
     name = "cube-underground-pipe",
     ingredients = {
       {"pipe", 8},
-      {"stone", 4},
+      {"stone", 8},
     },
     results = {{"pipe-to-ground", 2}},
     energy_required = 1,
@@ -173,6 +173,18 @@ data:extend({
     category = "cube-fabricator",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-landfill",
+    ingredients = {
+      {"stone", 10},
+      {"cube-sand", 5},
+    },
+    results = {{"landfill", 1}},
+    energy_required = 8,
+    category = "cube-fabricator",
+    enabled = false,
+  },
 
   {
     type = "recipe",
@@ -199,7 +211,7 @@ data:extend({
     name = "cube-big-electric-pole",
     ingredients = {
       {"cube-basic-matter-unit", 40},
-      {"copper-cable", 4},
+      {"copper-cable", 8},
     },
     results = {{"big-electric-pole", 1}},
     energy_required = 1,
@@ -211,7 +223,7 @@ data:extend({
     name = "cube-substation",
     ingredients = {
       {"big-electric-pole", 1},
-      {"cube-basic-matter-unit", 80},
+      {"cube-sophisticated-matter-unit", 40},
       {"copper-cable", 16},
       {"cube-advanced-circuit", 2},
     },
@@ -401,6 +413,7 @@ data:extend({
     name = "cube-cargo-wagon",
     ingredients = {
       {"cube-basic-matter-unit", 100},
+      {"cube-rare-metals", 20},
     },
     results = {{"cargo-wagon", 1}},
     energy_required = 2,
@@ -412,6 +425,7 @@ data:extend({
     name = "cube-fluid-wagon",
     ingredients = {
       {"cube-basic-matter-unit", 60},
+      {"cube-rare-metals", 20},
       {"storage-tank", 1},
     },
     results = {{"fluid-wagon", 1}},
@@ -602,7 +616,7 @@ data:extend({
     name = "cube-big-container",
     ingredients = {
       {"cube-sophisticated-matter-unit", 20},
-      {"cube-rare-metals", 2},
+      {"cube-rare-metals", 4},
     },
     results = {{"cube-big-container", 1}},
     energy_required = 4,

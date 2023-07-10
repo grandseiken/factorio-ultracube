@@ -42,6 +42,9 @@ data.raw.car.car.burner.burnt_inventory_size = 1
 data.raw.locomotive.locomotive.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
 data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
 
+data.raw.radar["radar"].energy_usage = "200kW"
+data.raw.radar["radar"].energy_per_sector = "5MJ"
+data.raw.radar["radar"].energy_per_nearby_scan = "150kJ"
 data.raw.radar["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
 data.raw.radar["radar"].vehicle_impact_sound = {
   filename = "__base__/sound/car-metal-impact.ogg",

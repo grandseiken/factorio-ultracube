@@ -52,7 +52,7 @@ data:extend({
         scale = 0.25, shift = {8, -8},
       },
     },
-    ingredients = {{"cube-refined-rare-metals", 500}},
+    ingredients = {{"cube-refined-rare-metals", 1000}},
     results = {{"cube-rare-metals", 1000}},
     main_product = "",
     energy_required = 4,
@@ -70,7 +70,7 @@ data:extend({
     name = "cube-rare-metal-crushing",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
     icon_size = 64, icon_mipmaps = 4,
-    ingredients = {{"cube-raw-rare-metals", 20}},
+    ingredients = {{"cube-raw-rare-metals", 40}},
     results = {
       {type = "item", name = "cube-refined-rare-metals", amount_min = 10, amount_max = 20},
       {type = "item", name = "cube-calcium", amount_min = 0, amount_max = 10},

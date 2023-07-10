@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "steam", amount = 1000},
-      {"cube-sand", 50},
+      {"cube-sand", 100},
       {"wood", 400},
     },
     results = {
@@ -36,7 +36,7 @@ data:extend({
     },
     ingredients = {
       {type = "fluid", name = "steam", amount = 2000},
-      {"cube-sand", 100},
+      {"cube-sand", 200},
       {"wood", 400},
       {"coal", 400},
     },
@@ -196,7 +196,7 @@ data:extend({
     },
     results = {{type = "fluid", name = "sulfuric-acid", amount = 60}},
     main_product = "",
-    energy_required = 1,
+    energy_required = 2,
     category = "cube-chemical-plant",
     subgroup = "cube-tar-output",
     order = "c[acid]",

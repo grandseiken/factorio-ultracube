@@ -26,18 +26,19 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-electric-energy-distribution-2",
+    name = "cube-electric-energy-accumulators",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
+    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-substation"},
+      {type = "unlock-recipe", recipe = "cube-accumulator"},
     },
     prerequisites = {
       "cube-abstract-interrogation-card",
       "cube-electric-energy-distribution-1",
+      "cube-battery",
     },
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -49,16 +50,13 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-electric-energy-accumulators",
+    name = "cube-landfill",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    icon = "__base__/graphics/technology/landfill.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-accumulator"},
+      {type = "unlock-recipe", recipe = "cube-landfill"},
     },
-    prerequisites = {
-      "cube-battery",
-      "cube-electric-energy-distribution-2",
-    },
+    prerequisites = {"cube-abstract-interrogation-card"},
     unit = {
       count = 180,
       ingredients = {
@@ -120,7 +118,7 @@ data:extend({
     },
     prerequisites = {"cube-abstract-interrogation-card"},
     unit = {
-      count = 120,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -128,7 +126,30 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-4",
+    order = "2-1-0",
+  },
+  {
+    type = "technology",
+    name = "cube-electric-energy-distribution-2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-substation"},
+    },
+    prerequisites = {
+      "cube-electric-energy-accumulators",
+      "cube-sophisticated-matter-unit",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-1-1",
   },
   {
     type = "technology",
@@ -148,7 +169,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-5",
+    order = "2-1-2",
   },
   {
     type = "technology",
@@ -173,7 +194,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-6",
+    order = "2-1-3",
   },
   {
     type = "technology",
@@ -196,7 +217,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-0-7",
+    order = "2-1-4",
   },
   {
     type = "technology",
@@ -220,36 +241,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-1-0",
-  },
-  {
-    type = "technology",
-    name = "cube-improved-tar-processing",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
-      },
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/matter-coal.png",
-        scale = 0.625,
-      },
-    },
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-improved-gelatinous-tar"},
-    },
-    prerequisites = {"cube-deep-core-ultradrill"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
-    order = "2-1-1",
+    order = "2-1-5",
   },
   {
     type = "technology",
@@ -293,7 +285,36 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-1-2",
+    order = "2-1-6",
+  },
+  {
+    type = "technology",
+    name = "cube-improved-tar-processing",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-coal.png",
+        scale = 0.625,
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-improved-gelatinous-tar"},
+    },
+    prerequisites = {"cube-deep-core-ultradrill"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-2-0",
   },
   {
     type = "technology",

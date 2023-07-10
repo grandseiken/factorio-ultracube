@@ -86,7 +86,7 @@ data:extend({
     type = "recipe",
     name = "cube-intelligent-calcium",
     ingredients = {
-      {"cube-calcium", 1},
+      {"cube-calcium", 2},
       {"cube-basic-contemplation-unit", 1},
     },
     results = {{"cube-intelligent-calcium", 1}},
@@ -99,7 +99,7 @@ data:extend({
     name = "cube-bottled-consciousness",
     ingredients = {
       {"cube-besselheim-flask", 1},
-      {"cube-intelligent-calcium", 2},
+      {"cube-intelligent-calcium", 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 50},
     },
     results = {{"cube-bottled-consciousness", 1}},
@@ -136,7 +136,7 @@ data:extend({
     name = "cube-battery",
     ingredients = {
       {type = "fluid", name = "sulfuric-acid", amount = 40},
-      {"cube-rare-metals", 2},
+      {"cube-rare-metals", 4},
     },
     results = {{"battery", 1}},
     energy_required = 4,

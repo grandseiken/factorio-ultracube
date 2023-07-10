@@ -21,8 +21,8 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      input_flow_limit = "10MW",
-      buffer_capacity = "200MJ",
+      input_flow_limit = "8MW",   -- default 5MW
+      buffer_capacity = "150MJ",  -- default 100MJ
     },
     recharge_minimum = "50MJ",
     energy_usage = "50kW",
