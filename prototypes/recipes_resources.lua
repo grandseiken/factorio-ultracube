@@ -40,6 +40,36 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-explosive-rare-metals",
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/icons/explosives.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+      },
+    },
+    ingredients = {
+      {"cube-raw-rare-metals", 5000},
+      {"explosives", 16},
+    },
+    results = {{"cube-rare-metals", 2000}},
+    main_product = "",
+    energy_required = 4,
+    category = "cube-ultradense-furnace",
+    subgroup = "cube-smelting",
+    order = "0[1-explosive-rate-metal-smelting]",
+    always_show_made_in = true,
+    always_show_products = true,
+    show_amount_in_title = false,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-refined-rare-metals",
     icons = {
       {
@@ -58,7 +88,7 @@ data:extend({
     energy_required = 4,
     category = "cube-ultradense-furnace",
     subgroup = "cube-smelting",
-    order = "0[1-refined-rate-metal-smelting]",
+    order = "0[2-refined-rate-metal-smelting]",
     always_show_made_in = true,
     always_show_products = true,
     show_amount_in_title = false,

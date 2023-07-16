@@ -1,20 +1,15 @@
 data:extend({
   {
     type = "technology",
-    name = "cube-express-logistics",
+    name = "cube-landfill",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/logistics-3.png",
+    icon = "__base__/graphics/technology/landfill.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+      {type = "unlock-recipe", recipe = "cube-landfill"},
     },
-    prerequisites = {
-      "cube-abstract-interrogation-card",
-      "cube-logistics",
-    },
+    prerequisites = {"cube-abstract-interrogation-card"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -26,16 +21,15 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-electric-energy-accumulators",
+    name = "cube-explosives",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    icon = "__base__/graphics/technology/explosives.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-accumulator"},
+      {type = "unlock-recipe", recipe = "cube-explosives"},
     },
     prerequisites = {
       "cube-abstract-interrogation-card",
-      "cube-electric-energy-distribution-1",
-      "cube-battery",
+      "cube-sulfur-processing",
     },
     unit = {
       count = 180,
@@ -50,15 +44,15 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-landfill",
+    name = "cube-cliff-explosives",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/landfill.png",
+    icon = "__base__/graphics/technology/cliff-explosives.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-landfill"},
+      {type = "unlock-recipe", recipe = "cube-cliff-explosives"},
     },
-    prerequisites = {"cube-abstract-interrogation-card"},
+    prerequisites = {"cube-explosives"},
     unit = {
-      count = 180,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -107,6 +101,55 @@ data:extend({
       time = 30,
     },
     order = "2-0-3",
+  },
+  {
+    type = "technology",
+    name = "cube-electric-energy-accumulators",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/electric-energy-acumulators.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-accumulator"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-electric-energy-distribution-1",
+      "cube-battery",
+    },
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-4",
+  },
+  {
+    type = "technology",
+    name = "cube-express-logistics",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/logistics-3.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
+      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-logistics",
+    },
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-0-5",
   },
   {
     type = "technology",
@@ -289,6 +332,35 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-explosive-smelting",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__base__/graphics/technology/explosives.png",
+        scale = 0.625,
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-explosive-rare-metals"},
+    },
+    prerequisites = {"cube-explosives"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-2-0",
+  },
+  {
+    type = "technology",
     name = "cube-improved-tar-processing",
     icons = {
       {
@@ -314,7 +386,7 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-2-0",
+    order = "2-2-1",
   },
   {
     type = "technology",

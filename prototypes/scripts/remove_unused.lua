@@ -46,6 +46,8 @@ local whitelist = make_set({
   "copper-cable",
   "sulfur",
   "battery",
+  "explosives",
+  "cliff-explosives",
   "flying-robot-frame",
   "red-wire",
   "green-wire",

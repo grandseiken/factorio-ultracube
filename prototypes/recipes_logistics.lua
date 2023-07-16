@@ -170,7 +170,7 @@ data:extend({
       {"concrete", 10},
     },
     results = {{"hazard-concrete", 10}},
-    category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -182,7 +182,20 @@ data:extend({
     },
     results = {{"landfill", 1}},
     energy_required = 8,
-    category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-cliff-explosives",
+    ingredients = {
+      {"explosives", 10},
+      {"cube-basic-matter-unit", 4},
+      {"cube-rare-metals", 4},
+    },
+    results = {{"cliff-explosives", 1}},
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
 

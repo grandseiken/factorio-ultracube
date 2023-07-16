@@ -19,8 +19,6 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: important things
 --       advanced engine units + blue belts need to drain more resources
--- blast processing: explosives + (unrefined) rare metals -> inefficient but lots at once
---       - also cliff explosives
 -- still something for matter; or maybe only for sophisticated matter
 -- something for contemplation units?
 
@@ -28,9 +26,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 
--- TODO: little things
---       cliff explosives
---       extend upgrade techs
+-- TODO: extend upgrade techs
 --       - lab speed + increase times (?)
 --       - toolbelt!
 

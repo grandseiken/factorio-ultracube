@@ -151,6 +151,26 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-explosives",
+    ingredients = {
+      {"sulfur", 6},
+      {"copper-cable", 4},
+      {"cube-sand", 2},
+      {type = "fluid", name = "cube-unstable-gas", amount = 200},
+    },
+    results = {{"explosives", 1}},
+    energy_required = 4,
+    category = "cube-chemical-plant",
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.968, g = 0.381, b = 0.259, a = 1.000},
+      secondary = {r = 0.892, g = 0.664, b = 0.534, a = 1.000},
+      tertiary = {r = 1.000, g = 0.978, b = 0.513, a = 1.000},
+      quaternary = {r = 0.210, g = 0.170, b = 0.013, a = 1.000},
+    }
+  },
+  {
+    type = "recipe",
     name = "cube-flying-robot-frame",
     ingredients =
     {
