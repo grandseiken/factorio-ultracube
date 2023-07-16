@@ -62,7 +62,7 @@ data:extend({
     type = "recipe",
     name = "cube-advanced-engine",
     ingredients = {
-      {"cube-basic-matter-unit", 4},
+      {"cube-rare-metals", 8},
       {"cube-basic-motor-unit", 4},
       {"cube-electronic-circuit", 2},
       {type = "fluid", name = "cube-elbow-grease", amount = 100},

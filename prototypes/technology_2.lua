@@ -349,7 +349,7 @@ data:extend({
     },
     prerequisites = {"cube-explosives"},
     unit = {
-      count = 240,
+      count = 180,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},

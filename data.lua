@@ -18,7 +18,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: important things
---       advanced engine units + blue belts need to drain more resources
 -- still something for matter; or maybe only for sophisticated matter
 -- something for contemplation units?
 
@@ -29,6 +28,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: extend upgrade techs
 --       - lab speed + increase times (?)
 --       - toolbelt!
+--       - more armour stuff
 
 -- TODO: think about reintroducing biters + military?
 -- TODO: storylore tooltips!
@@ -38,7 +38,7 @@ require("prototypes.scripts.autoplace")
 --   - 2: POWER maybe power / energy / byproducts-focused?
 --   - 3: PUZZLE either - cube logistics puzzles
 
--- next science names: deep ? card; euridite ? card; ...
+-- next science names: deep ? card; erudite ? card; ...
 --
 -- Tech unlocks:
 -- 1: modules 1; V4 belts; some equipments

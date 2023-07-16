@@ -53,7 +53,7 @@ data:extend({
       },
     },
     ingredients = {
-      {"cube-raw-rare-metals", 5000},
+      {"cube-raw-rare-metals", 6000},
       {"explosives", 16},
     },
     results = {{"cube-rare-metals", 2000}},
@@ -102,7 +102,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{"cube-raw-rare-metals", 40}},
     results = {
-      {type = "item", name = "cube-refined-rare-metals", amount_min = 10, amount_max = 20},
+      {type = "item", name = "cube-refined-rare-metals", amount_min = 15, amount_max = 20},
       {type = "item", name = "cube-calcium", amount_min = 0, amount_max = 10},
       {type = "item", name = "stone", amount_min = 0, amount_max = 5},
     },

@@ -93,8 +93,8 @@ data:extend({
     name = "cube-transport-belt-2",
     ingredients = {
       {"fast-transport-belt", 8},
-      {"cube-basic-motor-unit", 4},
-      {type = "fluid", name = "cube-elbow-grease", amount = 200},
+      {"cube-advanced-engine", 1},
+      {type = "fluid", name = "cube-elbow-grease", amount = 80},
     },
     results = {{"express-transport-belt", 8}},
     energy_required = 4,
@@ -118,7 +118,7 @@ data:extend({
     name = "cube-splitter-2",
     ingredients = {
       {"express-transport-belt", 2},
-      {"cube-basic-motor-unit", 2},
+      {"cube-advanced-engine", 1},
       {"cube-advanced-circuit", 2},
     },
     results = {{"express-splitter", 1}},
