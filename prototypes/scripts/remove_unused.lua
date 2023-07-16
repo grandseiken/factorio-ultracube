@@ -68,6 +68,9 @@ local whitelist = make_set({
   "nixie-tube",
   "nixie-tube-alpha",
   "nixie-tube-small",
+  "check-valve",
+  "overflow-valve",
+  "underflow-valve",
 })
 
 local entity_prototypes = {

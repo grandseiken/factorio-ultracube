@@ -9,7 +9,8 @@
   "dependencies": [
     "base >= 1.1",
     "Krastorio2Assets >= 1.2",
-    "?nixie-tubes"
+    "?nixie-tubes",
+    "?Flow Control"
   ],
   "description": "Unlock the mysteries of the ultradense utility cube in this devious overhaul mod."
 }

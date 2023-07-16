@@ -62,7 +62,7 @@ require("prototypes.scripts.autoplace")
 -- [DONE] 1: something that forces cube to go far away on train
 --
 -- Requirements/puzzles and interactions:
--- ?: GIN (need for joy/anguish - grow berries in greenhouse?)
+-- ?: GIN (need for joy/anguish - grow berries in greenhouse?) -> emotional decomposition -> logistics bots + cube split
 -- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.

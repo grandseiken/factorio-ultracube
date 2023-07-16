@@ -27,6 +27,11 @@ It currently features three science packs and a bunch of interesting puzzles, wi
 
 This is an overhaul mod that removes many standard ingredients from the game, so it's unlikely to be compatible with other mods that add new recipes and haven't been specifically adapted to work with it.
 
+The following minor utility mods are currently supported:
+
+* Nixie Tubes
+* Flow Control
+
 If you would like to contribute support for compatibility with some other mod, you are welcome to open a pull request.
 
 ## Dependencies and credits
