@@ -27,8 +27,7 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: extend upgrade techs
 --       - lab speed + increase times (?)
---       - toolbelt!
---       - more armour stuff
+--       - more armour stuff/more toolbelts?
 
 -- TODO: think about reintroducing biters + military?
 -- TODO: storylore tooltips!

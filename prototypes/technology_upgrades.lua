@@ -1,6 +1,27 @@
 data:extend({
   {
     type = "technology",
+    name = "cube-toolbelt",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/toolbelt.png"),
+    effects = {
+      {type = "character-inventory-slots-bonus", modifier = 10},
+    },
+    prerequisites = {"cube-modular-armor"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+      },
+      time = 20,
+    },
+    upgrade = true,
+    order = "10-0-0",
+  },
+
+  {
+    type = "technology",
     name = "cube-braking-force-1",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
@@ -17,7 +38,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-2-0",
+    order = "10-1-0",
   },
   {
     type = "technology",
@@ -42,7 +63,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-2-1",
+    order = "10-1-1",
   },
 
   {
@@ -60,7 +81,7 @@ data:extend({
       time = 10,
     },
     upgrade = true,
-    order = "10-3-0",
+    order = "10-2-0",
   },
   {
     type = "technology",
@@ -83,7 +104,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-3-1",
+    order = "10-2-1",
   },
   {
     type = "technology",
@@ -107,7 +128,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-3-2",
+    order = "10-2-2",
   },
   {
     type = "technology",
@@ -132,7 +153,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-3-3",
+    order = "10-2-3",
   },
 
   {
@@ -158,7 +179,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-1-0",
+    order = "10-3-0",
   },
 
   {
@@ -184,7 +205,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-0-0",
+    order = "10-4-0",
   },
 
   {
@@ -205,7 +226,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-4-0",
+    order = "10-5-0",
   },
   {
     type = "technology",
@@ -228,7 +249,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-4-1",
+    order = "10-5-1",
   },
   {
     type = "technology",
@@ -253,7 +274,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-4-2",
+    order = "10-5-2",
   },
 
   {
@@ -276,7 +297,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-5-0",
+    order = "10-6-0",
   },
 
   {
@@ -297,7 +318,7 @@ data:extend({
       time = 20,
     },
     upgrade = true,
-    order = "10-6-0",
+    order = "10-7-0",
   },
   {
     type = "technology",
@@ -322,7 +343,7 @@ data:extend({
       time = 30,
     },
     upgrade = true,
-    order = "10-6-1",
+    order = "10-7-1",
   },
 
   {

@@ -271,7 +271,8 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/battery.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-battery"}
+      {type = "unlock-recipe", recipe = "cube-battery"},
+      {type = "unlock-recipe", recipe = "cube-battery-equipment"},
     },
     prerequisites = {"cube-sulfur-processing"},
     unit = {
@@ -656,11 +657,9 @@ data:extend({
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/armor-making.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-modular-armor"},
-      {type = "unlock-recipe", recipe = "cube-battery-equipment"},
       {type = "unlock-recipe", recipe = "cube-solar-panel-equipment"},
     },
     prerequisites = {
-      "cube-battery",
       "cube-advanced-electronics",
     },
     unit = {
@@ -682,8 +681,8 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-personal-roboport-equipment"},
     },
     prerequisites = {
-      "cube-robotics",
       "cube-modular-armor",
+      "cube-battery",
     },
     unit = {
       count = 120,
