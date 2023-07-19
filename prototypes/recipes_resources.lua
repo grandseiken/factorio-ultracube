@@ -201,4 +201,22 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-greenhouse-potato",
+    icon = "__Krastorio2Assets__/icons/items/potato.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {type = "fluid", name = "water", amount = 400},
+    },
+    results = {{"cube-potato", 40}},
+    energy_required = 60,
+    main_product = "",
+    category = "cube-greenhouse",
+    subgroup = "cube-fuel",
+    order = "1[potato]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
 })

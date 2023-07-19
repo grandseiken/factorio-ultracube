@@ -63,6 +63,18 @@ data:extend({
   },
   {
     type = "fluid",
+    name = "cube-vodka",
+    icon = "__Krastorio2Assets__/icons/fluids/biomethanol.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.5, g=0.5, b=0.5, a=0.5},
+    flow_color = {r=0.6, g=0.6, b=0.6, a=0.5},
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    subgroup = "cube-tar-output",
+    order = "a[tar]-f[vodka]"
+  },
+  {
+    type = "fluid",
     name = "cube-matter-replication-gel",
     icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
     icon_size = 64, icon_mipmaps = 4,

@@ -390,6 +390,27 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-ethanol-manufacturing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-greenhouse-potato"},
+      {type = "unlock-recipe", recipe = "cube-vodka"},
+    },
+    prerequisites = {"cube-abstract-interrogation-card"},
+    unit = {
+      count = 180,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-3-0",
+  },
+  {
+    type = "technology",
     name = "cube-emotional-decomposition",
     icons = {
       {
@@ -410,7 +431,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
     },
-    prerequisites = {"cube-abstract-interrogation-card"},
+    prerequisites = {"cube-ethanol-manufacturing"},
     unit = {
       count = 240,
       ingredients = {
@@ -420,6 +441,6 @@ data:extend({
       },
       time = 30,
     },
-    order = "2-3-0",
+    order = "2-3-1",
   },
 })

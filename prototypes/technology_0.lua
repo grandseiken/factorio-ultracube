@@ -213,7 +213,10 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-recovery-bay"},
       {type = "unlock-recipe", recipe = "cube-utility-cube-recharge"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {
+      "cube-electronics",
+      "cube-n-dimensional-widgets"
+    },
     unit = {
       count = 80,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
@@ -229,7 +232,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-synthesizer"},
     },
-    prerequisites = {"cube-n-dimensional-widgets"},
+    prerequisites = {
+      "cube-electronics",
+      "cube-n-dimensional-widgets",
+    },
     unit = {
       count = 80,
       ingredients = {{"cube-basic-contemplation-unit", 1}},

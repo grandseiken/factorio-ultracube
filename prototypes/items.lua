@@ -37,7 +37,7 @@ data:extend({
     fuel_acceleration_multiplier = 1.75,
     fuel_top_speed_multiplier = 1.25,
     subgroup = "cube-fuel",
-    order = "1[a-condensed-fuel]",
+    order = "x[a-condensed-fuel]",
     stack_size = 10,
   },
   {

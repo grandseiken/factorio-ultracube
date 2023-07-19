@@ -10,6 +10,7 @@ require("prototypes.scripts.autoplace")
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons
+--       - ethanol/vodka graphics / tech graphic
 --       - emotional synthesis icon + tech graphic
 --       - roboport tech graphic
 --       - concretes tech graphic?

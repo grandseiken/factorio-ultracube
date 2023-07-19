@@ -468,4 +468,13 @@ data:extend({
     order = "x[1-crystal]",
     stack_size = 50,
   },
+  {
+    type = "item",
+    name = "cube-potato",
+    icon = "__Krastorio2Assets__/icons/items/potato.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-fuel",
+    order = "1[potato]",
+    stack_size = 100,
+  },
 })
