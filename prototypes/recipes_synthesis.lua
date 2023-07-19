@@ -163,7 +163,7 @@ data:extend({
     },
     results = {
       {type = "fluid", name = "cube-matter-replication-gel", amount = 4000},
-      {type = "fluid", name = "steam", amount = 2000, catalyst_amount = 2000},
+      {type = "fluid", name = "steam", amount = 2000, catalyst_amount = 2000, temperature = 215},
       {type = "fluid", name = "water", amount = 4000, catalyst_amount = 2000},
     },
     energy_required = 4,

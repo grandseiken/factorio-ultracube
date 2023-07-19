@@ -117,7 +117,7 @@ data:extend({
     },
     results = {
       {"sulfur", 2},
-      {type = "fluid", name = "steam", amount = 20},
+      {type = "fluid", name = "steam", amount = 20, temperature = 215},
       {type = "fluid", name = "cube-light-tar", amount = 40},
     },
     main_product = "sulfur",
@@ -156,7 +156,7 @@ data:extend({
       {"sulfur", 6},
       {"copper-cable", 4},
       {"cube-sand", 2},
-      {type = "fluid", name = "cube-unstable-gas", amount = 200},
+      {type = "fluid", name = "cube-unstable-gas", amount = 100},
     },
     results = {{"explosives", 1}},
     energy_required = 4,

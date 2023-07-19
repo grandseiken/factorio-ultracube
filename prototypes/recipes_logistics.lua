@@ -189,7 +189,7 @@ data:extend({
     type = "recipe",
     name = "cube-cliff-explosives",
     ingredients = {
-      {"explosives", 10},
+      {"explosives", 8},
       {"cube-basic-matter-unit", 4},
       {"cube-rare-metals", 4},
     },

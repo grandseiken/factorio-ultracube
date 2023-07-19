@@ -36,7 +36,7 @@ data:extend({
     results = {
       {"cube-dormant-utility-cube", 1},
       {"cube-basic-contemplation-unit", 100},
-      {type = "fluid", name = "steam", amount = 8000},
+      {type = "fluid", name = "steam", amount = 8000, temperature = 215},
     },
     energy_required = 1,
     category = "cube-synthesizer",
