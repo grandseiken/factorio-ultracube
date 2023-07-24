@@ -156,6 +156,21 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-distillery",
+    ingredients = {
+      {"cube-electric-furnace", 1},
+      {"storage-tank", 2},
+      {"cube-glass", 20},
+      {"stone-brick", 80},
+      {"pipe", 20},
+    },
+    results = {{"cube-distillery", 1}},
+    energy_required = 8,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-fluid-burner",
     ingredients = {
       {"cube-basic-matter-unit", 20},

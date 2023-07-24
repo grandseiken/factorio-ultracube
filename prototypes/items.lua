@@ -138,7 +138,7 @@ data:extend({
     icon = "__Ultracube__/graphics/flask.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "a[d-besselheim-flask]",
+    order = "b[d-besselheim-flask]",
     stack_size = 50,
   },
   {

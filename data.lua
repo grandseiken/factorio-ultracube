@@ -10,7 +10,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons
---       - ethanol/vodka graphics / tech graphic
 --       - emotional synthesis icon + tech graphic
 --       - roboport tech graphic
 --       - concretes tech graphic?
@@ -23,6 +22,7 @@ require("prototypes.scripts.autoplace")
 -- something for contemplation units?
 
 -- TODO: analysis machine that unlocks techs based on finding things in the world?
+-- TODO: strange device / mystery furnace
 -- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
 --       more with besselheim; twinned logistics robots
 
@@ -63,6 +63,7 @@ require("prototypes.scripts.autoplace")
 --
 -- Requirements/puzzles and interactions:
 -- ?: GIN (need for joy/anguish - grow berries in greenhouse?) -> emotional decomposition -> logistics bots + cube split
+-- rather: vodka (slow, potatos + etc) + cerebral (e.g. 4x what you get in one go) -> enough joy/anguish for a long time
 -- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
@@ -113,6 +114,7 @@ require("prototypes.entities.chemical_plant")
 require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
 require("prototypes.entities.deep_core_ultradrill")
+require("prototypes.entities.distillery")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
 require("prototypes.entities.explosions")

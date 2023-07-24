@@ -56,6 +56,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "cube-distillery",
+    order = "f",
+  },
+  {
+    type = "recipe-category",
     name = "cube-fluid-burner",
     order = "z",
   },

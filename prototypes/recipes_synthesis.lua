@@ -213,15 +213,17 @@ data:extend({
       }
     },
     ingredients = {
-      {type = "fluid", name = "cube-cerebral-substrate", amount = 400},
-      {type = "fluid", name = "cube-unstable-gas", amount = 120},
+      {"cube-ultradense-utility-cube", 1},
+      {type = "fluid", name = "cube-cerebral-substrate", amount = 25000},
+      {type = "fluid", name = "cube-vodka", amount = 2000},
     },
     results = {
-      {type = "fluid", name = "cube-joy", amount = 320},
-      {type = "fluid", name = "cube-anguish", amount = 320},
+      {"cube-dormant-utility-cube", 1},
+      {type = "fluid", name = "cube-joy", amount = 10000},
+      {type = "fluid", name = "cube-anguish", amount = 10000},
     },
     energy_required = 4,
-    category = "cube-chemical-plant",
+    category = "cube-synthesizer",
     subgroup = "cube-synthesis-sentience",
     order = "1[cube-emotional-decomposition]",
     always_show_made_in = true,

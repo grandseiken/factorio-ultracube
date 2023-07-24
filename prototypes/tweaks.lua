@@ -56,3 +56,5 @@ data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/enti
 data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png"
 data.raw.radar["radar"].pictures.layers[1].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png"
 data.raw.radar["radar"].pictures.layers[2].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
+data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
+data.raw.fluid["sulfuric-acid"].order = "a[tar]-b[acid]"

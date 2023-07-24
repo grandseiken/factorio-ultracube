@@ -390,11 +390,13 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-ethanol-manufacturing",
+    name = "cube-distillation",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
+    icon = "__Ultracube__/graphics/distillation.png",
     effects = {
+      {type = "unlock-recipe", recipe = "cube-distillery"},
       {type = "unlock-recipe", recipe = "cube-greenhouse-potato"},
+      {type = "unlock-recipe", recipe = "cube-mash"},
       {type = "unlock-recipe", recipe = "cube-vodka"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
@@ -431,7 +433,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
     },
-    prerequisites = {"cube-ethanol-manufacturing"},
+    prerequisites = {"cube-distillation"},
     unit = {
       count = 240,
       ingredients = {

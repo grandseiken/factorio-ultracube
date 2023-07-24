@@ -191,6 +191,35 @@ data:extend({
     order = "b[calcium]",
     stack_size = 100,
   },
+  {
+    type = "item",
+    name = "cube-mash",
+    icon = "__Ultracube__/graphics/mash-1.png",
+    icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/mash.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/mash-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/mash-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "raw-resource",
+    order = "d[mash]",
+    stack_size = 100,
+  },
 
   {
     type = "item",
