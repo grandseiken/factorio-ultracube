@@ -19,6 +19,31 @@ data:extend({
     upgrade = true,
     order = "10-0-0",
   },
+  {
+    type = "technology",
+    name = "cube-toolbelt-extension-1",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/toolbelt.png"),
+    effects = {
+      {type = "character-inventory-slots-bonus", modifier = 2},
+    },
+    prerequisites = {
+      "cube-toolbelt",
+      "cube-containers",
+    },
+    unit = {
+      count_formula = "2^L*60",
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    max_level = "infinite",
+    upgrade = true,
+    order = "10-0-0",
+  },
 
   {
     type = "technology",
@@ -76,7 +101,7 @@ data:extend({
     },
     prerequisites = {"cube-ultradense-furnace"},
     unit = {
-      count = 120,
+      count = 240,
       ingredients = {{"cube-basic-contemplation-unit", 1}},
       time = 10,
     },
@@ -96,7 +121,7 @@ data:extend({
       "cube-fundamental-comprehension-card",
     },
     unit = {
-      count = 120,
+      count = 240,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -120,7 +145,7 @@ data:extend({
       "cube-rare-metal-crushing",
     },
     unit = {
-      count = 240,
+      count = 480,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -144,7 +169,7 @@ data:extend({
       "cube-deep-core-ultradrill",
     },
     unit = {
-      count = 240,
+      count = 480,
       ingredients = {
         {"cube-basic-contemplation-unit", 1},
         {"cube-fundamental-comprehension-card", 1},
@@ -344,28 +369,5 @@ data:extend({
     },
     upgrade = true,
     order = "10-7-1",
-  },
-
-  {
-    type = "technology",
-    name = "cube-test-technology-1",
-    icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_capacity("__base__/graphics/technology/automation-1.png"),
-    effects = {},
-    prerequisites = {"cube-containers"},
-    unit =
-    {
-      count_formula = "2^(L-7)*1000",
-      ingredients =
-      {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
-    max_level = "infinite",
-    upgrade = true,
-    order = "11-0-0",
   },
 })

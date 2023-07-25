@@ -288,7 +288,8 @@ data:extend({
     name = "cube-power-switch",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-electronic-circuit", 2}
+      {"cube-electronic-circuit", 2},
+      {"copper-cable", 4},
     },
     results = {{"power-switch", 1}},
     energy_required = 2,
@@ -300,7 +301,8 @@ data:extend({
     name = "cube-programmable-speaker",
     ingredients = {
       {"cube-basic-matter-unit", 10},
-      {"cube-electronic-circuit", 2}
+      {"cube-electronic-circuit", 2},
+      {"copper-cable", 2},
     },
     results = {{"programmable-speaker", 1}},
     energy_required = 2,
@@ -503,12 +505,12 @@ data:extend({
     type = "recipe",
     name = "cube-radar",
     ingredients = {
-      {"cube-sophisticated-matter-unit", 4},
+      {"cube-sophisticated-matter-unit", 12},
       {"cube-rare-metals", 8},
       {"cube-electronic-circuit", 4},
     },
     results = {{"radar", 1}},
-    energy_required = 1,
+    energy_required = 4,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
@@ -536,13 +538,13 @@ data:extend({
     name = "cube-roboport",
     ingredients = {
       {"stone-brick", 60},
-      {"cube-sophisticated-matter-unit", 8},
+      {"cube-sophisticated-matter-unit", 20},
       {"cube-n-dimensional-widget", 1},
-      {"cube-advanced-circuit", 2},
+      {"cube-advanced-circuit", 16},
       {"radar", 1},
     },
     results = {{"cube-roboport", 1}},
-    energy_required = 5,
+    energy_required = 8,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },

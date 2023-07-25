@@ -64,8 +64,8 @@ data:extend({
     name = "cube-abstract-interrogation-card",
     ingredients = {
       {"cube-advanced-engine", 1},
+      {"cube-advanced-circuit", 2},
       {"cube-bottled-consciousness", 4},
-      {"cube-advanced-circuit", 4},
     },
     results = {{"cube-abstract-interrogation-card", 2}},
     energy_required = 16,

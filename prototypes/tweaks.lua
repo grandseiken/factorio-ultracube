@@ -25,6 +25,7 @@ data.raw.item["stone-brick"].order = "0[a-brick]"
 data.raw.item["radar"].subgroup = "cube-logistic-machines"
 data.raw.item["radar"].order = "0[radar]"
 data.raw.item["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
+data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["coal"].fuel_category = "cube-fuel-general"
 data.raw.item["sulfur"].subgroup = "cube-chemical-intermediates"

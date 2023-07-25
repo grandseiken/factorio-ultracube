@@ -38,9 +38,9 @@ data:extend({
     name = "cube-advanced-circuit",
     ingredients = {
       {"cube-basic-matter-unit", 2},
-      {"cube-electronic-circuit", 2},
-      {"copper-cable", 4},
-      {type = "fluid", name = "cube-unstable-gas", amount = 80},
+      {"cube-electronic-circuit", 4},
+      {"copper-cable", 8},
+      {type = "fluid", name = "cube-unstable-gas", amount = 160},
     },
     results = {{"cube-advanced-circuit", 1}},
     energy_required = 6,
@@ -207,7 +207,7 @@ data:extend({
     type = "recipe",
     name = "cube-sophisticated-matter-unit",
     ingredients = {
-      {"cube-basic-matter-unit", 4},
+      {"cube-basic-matter-unit", 8},
       {type = "fluid", name = "cube-gelatinous-tar", amount = 40},
     },
     results = {{"cube-sophisticated-matter-unit", 1}},

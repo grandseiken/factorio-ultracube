@@ -223,7 +223,7 @@ data:extend({
     type = "recipe",
     name = "cube-mash",
     ingredients = {{"cube-potato", 20}},
-    results = {{"cube-mash", 4}},
+    results = {{"cube-mash", 8}},
     energy_required = 4,
     category = "cube-crusher",
     subgroup = "cube-processing",
