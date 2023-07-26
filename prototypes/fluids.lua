@@ -111,14 +111,14 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "cube-anguish",
-    icon = "__Ultracube__/graphics/anguish.png",
+    name = "cube-despair",
+    icon = "__Ultracube__/graphics/despair.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.35, g=0.15, b=0.7},
     flow_color = {r=0.4, g=0.2, b=0.75},
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-d[anguish]"
+    order = "b[matter]-d[despair]"
   },
 })

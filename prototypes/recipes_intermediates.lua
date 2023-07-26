@@ -107,6 +107,30 @@ data:extend({
     category = "cube-chemical-plant",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-bottled-euphoria",
+    ingredients = {
+      {"cube-bottled-consciousness", 1},
+      {type = "fluid", name = "cube-joy", amount = 50},
+    },
+    results = {{"cube-bottled-euphoria", 1}},
+    energy_required = 1,
+    category = "cube-chemical-plant",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-bottled-anguish",
+    ingredients = {
+      {"cube-bottled-consciousness", 1},
+      {type = "fluid", name = "cube-despair", amount = 50},
+    },
+    results = {{"cube-bottled-anguish", 1}},
+    energy_required = 1,
+    category = "cube-chemical-plant",
+    enabled = false,
+  },
 
   {
     type = "recipe",

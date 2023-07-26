@@ -535,6 +535,27 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-logistic-robot",
+    icon = "__base__/graphics/icons/logistic-robot.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {"flying-robot-frame", 2},
+      {"cube-advanced-circuit", 2},
+      {"cube-bottled-euphoria", 1},
+      {"cube-bottled-anguish", 1},
+    },
+    results = {
+      {"cube-logistic-robot-0", 1},
+      {"cube-logistic-robot-1", 1},
+    },
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    subgroup = "logistic-network",
+    order = "a[robot]-a[logistic-robot]",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-roboport",
     ingredients = {
       {"stone-brick", 60},

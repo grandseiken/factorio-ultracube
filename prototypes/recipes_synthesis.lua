@@ -207,7 +207,7 @@ data:extend({
         scale = 0.275, shift = {-6, 0},
       },
       {
-        icon = "__Ultracube__/graphics/anguish.png",
+        icon = "__Ultracube__/graphics/despair.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.275, shift = {6, 0},
       }
@@ -220,7 +220,7 @@ data:extend({
     results = {
       {"cube-dormant-utility-cube", 1},
       {type = "fluid", name = "cube-joy", amount = 10000},
-      {type = "fluid", name = "cube-anguish", amount = 10000},
+      {type = "fluid", name = "cube-despair", amount = 10000},
     },
     energy_required = 4,
     category = "cube-synthesizer",

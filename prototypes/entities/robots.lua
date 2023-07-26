@@ -66,55 +66,57 @@ local construction_robot_0 = {
   shadow_working = construction_robot.shadow_working,
 }
 
-local construction_robot_1 = table.deepcopy(construction_robot_0)
-construction_robot_1.name = "cube-construction-robot-1"
-construction_robot_1.minable.result = "cube-construction-robot-1"
-construction_robot_1.speed = 0.03
-construction_robot_1.max_energy = "1.0MJ"
-construction_robot_1.energy_per_tick = "0.01kJ"
-construction_robot_1.speed_multiplier_when_out_of_energy = 0.5
-construction_robot_1.energy_per_move = "1kJ"
+local logistic_robot_0 = {
+  type = "logistic-robot",
+  name = "cube-logistic-robot-0",
+  icon = "__base__/graphics/icons/logistic-robot.png",
+  icon_size = 64, icon_mipmaps = 4,
+  flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
+  minable = {mining_time = 0.1, result = "cube-logistic-robot-0"},
+  resistances = {
+    {
+      type = "fire",
+      percent = 85
+    },
+  },
+  max_health = 100,
+  collision_box = {{0, 0}, {0, 0}},
+  selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
+  hit_visualization_box = {{-0.1, -1.1}, {0.1, -1.0}},
+  damaged_trigger_effect = hit_effects.flying_robot(),
+  dying_explosion = "logistic-robot-explosion",
+  max_payload_size = 1,
+  speed = 0.05,
+  max_energy = "1.5MJ",
+  energy_per_tick = "0.05kJ",
+  speed_multiplier_when_out_of_energy = 0.2,
+  energy_per_move = "5kJ",
+  min_to_charge = 0.2,
+  max_to_charge = 0.95,
+  working_sound = sounds.flying_robot(0.48),
+  cargo_centered = {0.0, 0.2},
+  water_reflection = logistic_robot.water_reflection,
+  idle = logistic_robot.idle,
+  idle_with_cargo = logistic_robot.idle_with_cargo,
+  in_motion = logistic_robot.in_motion,
+  in_motion_with_cargo = logistic_robot.in_motion_with_cargo,
+  shadow_idle = logistic_robot.shadow_idle,
+  shadow_idle_with_cargo = logistic_robot.shadow_idle_with_cargo,
+  shadow_in_motion = logistic_robot.shadow_in_motion,
+  shadow_in_motion_with_cargo = logistic_robot.shadow_in_motion_with_cargo,
+}
+
+local logistic_robot_1 = table.deepcopy(construction_robot_0)
+logistic_robot_1.name = "cube-logistic-robot-1"
+logistic_robot_1.minable.result = "cube-logistic-robot-1"
+logistic_robot_1.speed = 0.015
+logistic_robot_1.max_energy = "1.0MJ"
+logistic_robot_1.energy_per_tick = "0.02kJ"
+logistic_robot_1.speed_multiplier_when_out_of_energy = 0.5
+logistic_robot_1.energy_per_move = "2kJ"
 
 data:extend({
   construction_robot_0,
-  construction_robot_1,
-  {
-    type = "logistic-robot",
-    name = "cube-logistic-robot",
-    icon = "__base__/graphics/icons/logistic-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
-    flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
-    -- minable = {mining_time = 0.1, result = "cube-logistic-robot"},
-    resistances = {
-      {
-        type = "fire",
-        percent = 85
-      },
-    },
-    max_health = 100,
-    collision_box = {{0, 0}, {0, 0}},
-    selection_box = {{-0.5, -1.5}, {0.5, -0.5}},
-    hit_visualization_box = {{-0.1, -1.1}, {0.1, -1.0}},
-    damaged_trigger_effect = hit_effects.flying_robot(),
-    dying_explosion = "logistic-robot-explosion",
-    max_payload_size = 1,
-    speed = 0.05,
-    max_energy = "1.5MJ",
-    energy_per_tick = "0.05kJ",
-    speed_multiplier_when_out_of_energy = 0.2,
-    energy_per_move = "5kJ",
-    min_to_charge = 0.2,
-    max_to_charge = 0.95,
-    working_sound = sounds.flying_robot(0.48),
-    cargo_centered = {0.0, 0.2},
-    water_reflection = logistic_robot.water_reflection,
-    idle = logistic_robot.idle,
-    idle_with_cargo = logistic_robot.idle_with_cargo,
-    in_motion = logistic_robot.in_motion,
-    in_motion_with_cargo = logistic_robot.in_motion_with_cargo,
-    shadow_idle = logistic_robot.shadow_idle,
-    shadow_idle_with_cargo = logistic_robot.shadow_idle_with_cargo,
-    shadow_in_motion = logistic_robot.shadow_in_motion,
-    shadow_in_motion_with_cargo = logistic_robot.shadow_in_motion_with_cargo,
-  },
+  logistic_robot_0,
+  logistic_robot_1,
 })

@@ -426,12 +426,14 @@ data:extend({
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/anguish.png",
+        icon = "__Ultracube__/graphics/despair.png",
         shift = {24, 0},
       },
     },
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
+      {type = "unlock-recipe", recipe = "cube-bottled-euphoria"},
+      {type = "unlock-recipe", recipe = "cube-bottled-anguish"},
     },
     prerequisites = {"cube-distillation"},
     unit = {
@@ -444,5 +446,27 @@ data:extend({
       time = 30,
     },
     order = "2-3-1",
+  },
+  {
+    type = "technology",
+    name = "cube-logistic-robotics",
+    icon = "__base__/graphics/technology/logistic-robotics.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-logistic-robot"},
+      {type = "character-logistic-requests", modifier = true},
+      {type = "character-logistic-trash-slots", modifier = 30},
+    },
+    prerequisites = {"cube-emotional-decomposition"},
+    unit = {
+      count = 240,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    order = "2-3-2",
   },
 })
