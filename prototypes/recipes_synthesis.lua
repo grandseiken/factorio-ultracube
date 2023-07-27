@@ -215,7 +215,7 @@ data:extend({
     ingredients = {
       {"cube-ultradense-utility-cube", 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 25000},
-      {type = "fluid", name = "cube-vodka", amount = 2000},
+      {type = "fluid", name = "cube-ethanol", amount = 2000},
     },
     results = {
       {"cube-dormant-utility-cube", 1},

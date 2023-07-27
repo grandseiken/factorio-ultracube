@@ -63,15 +63,15 @@ data:extend({
   },
   {
     type = "fluid",
-    name = "cube-vodka",
-    icon = "__Ultracube__/graphics/vodka.png",
+    name = "cube-ethanol",
+    icon = "__Ultracube__/graphics/ethanol.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.5, g=0.5, b=0.5, a=0.5},
     flow_color = {r=0.6, g=0.6, b=0.6, a=0.5},
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
-    order = "a[tar]-d[vodka]"
+    order = "a[tar]-d[ethanol]"
   },
   {
     type = "fluid",

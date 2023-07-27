@@ -206,6 +206,30 @@ data:extend({
     upgrade = true,
     order = "10-3-0",
   },
+  {
+    type = "technology",
+    name = "cube-stack-inserter-capacity-bonus-2",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      -- Base game goes up to 12, we start at 4
+      {type = "stack-inserter-capacity-bonus", modifier = 1},
+    },
+    prerequisites = {
+      "cube-stack-inserter-capacity-bonus-1",
+    },
+    unit = {
+      count = 300,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-3-1",
+  },
 
   {
     type = "technology",
@@ -282,7 +306,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-speed", modifier = 0.4},
     },
     prerequisites = {
@@ -296,10 +319,35 @@ data:extend({
         {"cube-fundamental-comprehension-card", 1},
         {"cube-abstract-interrogation-card", 1},
       },
-      time = 20,
+      time = 30,
     },
     upgrade = true,
     order = "10-5-2",
+  },
+  {
+    type = "technology",
+    name = "cube-worker-robot-speed-4",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
+    effects = {
+      -- Base game goes up to ~3 before infinite, so 0.4+0.4+0.4+0.5+0.6+0.7?
+      {type = "worker-robot-speed", modifier = 0.5},
+    },
+    prerequisites = {
+      "cube-worker-robot-speed-3",
+      "cube-logistic-robotics",
+    },
+    unit = {
+      count = 300,
+      ingredients = {
+        {"cube-basic-contemplation-unit", 1},
+        {"cube-fundamental-comprehension-card", 1},
+        {"cube-abstract-interrogation-card", 1},
+      },
+      time = 30,
+    },
+    upgrade = true,
+    order = "10-5-3",
   },
 
   {
@@ -311,7 +359,7 @@ data:extend({
       -- Base game goes up to ~3 before infinite.
       {type = "worker-robot-storage", modifier = 1},
     },
-    prerequisites = {"cube-roboport"},  -- TODO.
+    prerequisites = {"cube-logistic-robotics"},
     unit = {
       count = 240,
       ingredients = {

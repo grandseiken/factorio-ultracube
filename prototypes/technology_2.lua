@@ -397,7 +397,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-distillery"},
       {type = "unlock-recipe", recipe = "cube-greenhouse-potato"},
       {type = "unlock-recipe", recipe = "cube-mash"},
-      {type = "unlock-recipe", recipe = "cube-vodka"},
+      {type = "unlock-recipe", recipe = "cube-ethanol"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
     unit = {

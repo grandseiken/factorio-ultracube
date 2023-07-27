@@ -106,10 +106,11 @@ local logistic_robot_0 = {
   shadow_in_motion_with_cargo = logistic_robot.shadow_in_motion_with_cargo,
 }
 
-local logistic_robot_1 = table.deepcopy(construction_robot_0)
+local logistic_robot_1 = table.deepcopy(logistic_robot_0)
 logistic_robot_1.name = "cube-logistic-robot-1"
 logistic_robot_1.minable.result = "cube-logistic-robot-1"
-logistic_robot_1.speed = 0.015
+logistic_robot_1.speed = 0.03
+logistic_robot_1.max_payload_size = 2
 logistic_robot_1.max_energy = "1.0MJ"
 logistic_robot_1.energy_per_tick = "0.02kJ"
 logistic_robot_1.speed_multiplier_when_out_of_energy = 0.5

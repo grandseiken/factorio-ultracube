@@ -18,7 +18,10 @@ require("prototypes.scripts.autoplace")
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: important things
+-- why don't some items show up in personal logistics? pump; landfill
+--
 -- still something for matter; or maybe only for sophisticated matter
+-- perhaps something with constituents
 -- something for contemplation units?
 
 -- TODO: analysis machine that unlocks techs based on finding things in the world?
@@ -35,7 +38,7 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.
 --   - 1: SCALE scale-focused, scale puzzles, maybe
---   - 2: POWER maybe power / energy / byproducts-focused?
+--   - 2: POWER maybe power / energy / resource / byproducts-focused?
 --   - 3: PUZZLE either - cube logistics puzzles
 
 -- next science names: deep ? card; erudite ? card; ...
@@ -62,8 +65,6 @@ require("prototypes.scripts.autoplace")
 -- [DONE] 1: something that forces cube to go far away on train
 --
 -- Requirements/puzzles and interactions:
--- ?: GIN (need for joy/anguish - grow berries in greenhouse?) -> emotional decomposition -> logistics bots + cube split
--- rather: vodka (slow, potatos + etc) + cerebral (e.g. 4x what you get in one go) -> enough joy/anguish for a long time
 -- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
@@ -78,6 +79,8 @@ require("prototypes.scripts.autoplace")
 --    e.g. quantum decoder; or qbits; every recipe is random with one pair from 6*6 options (so 1/21 chance)
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
+-- One of the very last things to do destroys the cube (e.g. launch in rocket) to produce the final science plus
+-- materials to rebuild it in a long/expensive process.
 
 require("prototypes.equipment")
 require("prototypes.fluids")
