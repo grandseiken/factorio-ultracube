@@ -18,8 +18,6 @@ require("prototypes.scripts.autoplace")
 -- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: important things
--- why don't some items show up in personal logistics? pump; landfill
---
 -- still something for matter; or maybe only for sophisticated matter
 -- perhaps something with constituents
 -- something for contemplation units?
