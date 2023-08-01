@@ -80,6 +80,7 @@ local entity_prototypes = {
   "inserter",
   "transport-belt",
   "underground-belt",
+  "loader-1x1",
   "splitter",
   "furnace",
   "assembling-machine",

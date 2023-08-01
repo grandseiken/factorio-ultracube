@@ -53,37 +53,6 @@ data:extend({
 
   {
     type = "item",
-    name = "cube-fast-loader",
-    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-fast-loader.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "belt",
-    order = "d[loader]-b[fast-loader]",
-    place_result = "cube-fast-loader",
-    stack_size = 20,
-  },
-  {
-    type = "item",
-    name = "cube-express-loader",
-    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-express-loader.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "belt",
-    order = "d[loader]-c[express-loader]",
-    place_result = "cube-express-loader",
-    stack_size = 20,
-  },
-  {
-    type = "item",
-    name = "cube-v4-loader",
-    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-superior-loader.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "belt",
-    order = "d[loader]-d[v4-loader]",
-    place_result = "cube-v4-loader",
-    stack_size = 20,
-  },
-
-  {
-    type = "item",
     name = "cube-construction-robot-0",
     icon = "__base__/graphics/icons/construction-robot.png",
     icon_size = 64, icon_mipmaps = 4,
