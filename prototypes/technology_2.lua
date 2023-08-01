@@ -272,6 +272,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-dimensionality-disruptor",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-dimensionality-disruptor"},
+      {type = "unlock-recipe", recipe = "cube-phantom-ultradense-constituent"},
+    },
+    prerequisites = {
+      "cube-sophisticated-matter-unit",
+      "cube-concrete",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-2-2",
+  },
+  {
+    type = "technology",
     name = "cube-distillation",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Ultracube__/graphics/distillation.png",

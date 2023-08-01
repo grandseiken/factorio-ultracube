@@ -52,6 +52,16 @@ data:extend({
     allow_as_intermediate = false,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-phantom-ultradense-constituent",
+    ingredients = {{"cube-ultradense-utility-cube", 1}},
+    results = {{"cube-phantom-ultradense-constituent", 64}},
+    energy_required = 2,
+    category = "cube-dimensionality-disruptor",
+    always_show_made_in = true,
+    allow_decomposition = false,
+  },
 
   {
     type = "recipe",

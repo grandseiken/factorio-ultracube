@@ -1,65 +1,86 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- TODO: output buffer on rare metals / matter, etc, can it be fixed?
--- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: "raw cost" view fixing?
--- TODO: all items seem to be unlocked in FNEI/signals etc without researching them.
+-- ANNOYING FIX TODOs:
+----------------------
+-- icon reworks
+-- - advanced engine tech graphic + name (?)
+-- - tar processing/reclamation icons
+-- - emotional synthesis icon + tech graphic
+-- - roboport tech graphic?
+-- - concretes tech graphic?
+-- layered icons look bad when disabled. Bake them.
+-- rename: unstable gas?
+-- all items seem to be unlocked in FNEI/signals etc without researching them.
+-- "raw cost" view doesn't seem to work for fluid composites
+-- upgrade graphics for boiler; maybe also pipes/tanks/steam engine?
+-- - and possibly slightly increase base pipe capacity
+-- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 
--- TODO: icon reworks
---       - advanced engine tech graphic + name (?)
---       - tar processing/reclamation icons
---       - emotional synthesis icon + tech graphic
---       - roboport tech graphic?
---       - concretes tech graphic?
--- TODO: layered icons look bad when disabled. Bake them.
--- TODO: renames: unstable gas?
-
--- TODO: important things
+-- IMPORTANT TODOs:
+-------------------
 -- still something for matter; or maybe only for sophisticated matter
 -- perhaps something with constituents
 -- something for contemplation units?
 
--- TODO: analysis machine that unlocks techs based on finding things in the world?
--- TODO: strange device / mystery furnace
--- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
---       more with besselheim
+-- RANDOM THOUGHT TODOs:
+------------------------
+-- analysis machine that unlocks techs based on finding things in the world
+-- strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
+-- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
+-- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
+-- more with besselheim?
+-- unlock bigger tanks
 
--- TODO: extend upgrade techs
---       - more armour stuff/more toolbelts?
+-- LONG-TERM TODOs:
+-------------------
+-- extend upgrade techs
+-- more armour stuff/more toolbelts?
+-- think about reintroducing biters + military?
+-- storylore tooltips
 
--- TODO: think about reintroducing biters + military?
--- TODO: storylore tooltips!
+-- TECH TREE TODOs:
+-------------------
+-- after science 2, split into 2 (or 3) different focus trees that interlink & eventually merge together.
+-- 1. Deep core drilling -> sorta "scale/distance" focused
+-- 2. Cube splitting, in new building (probably antimatter reactor, maybe matter plant) -> various logistics puzzles focused
+-- 3. Something maybe power / energy / resource / byproducts-focused? Possibly distillation / emotional things
+-- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
--- TODO: after science 2, split into 3 (?) different focus trees that interlink & eventually merge together.
---   - 1: SCALE scale-focused, scale puzzles, maybe
---   - 2: POWER maybe power / energy / resource / byproducts-focused?
---   - 3: PUZZLE either - cube logistics puzzles
+-- deep dust -> various uses, e.g. crystal (somehow), components
+-- emotion -> bots (done), other byproduct-y uses
+-- cube split to 64 phantom constituents -> then many different recipes -> dormant constituents (?) + reassembly
 
--- next science names: deep ? card; erudite ? card; ...
---
+-- will need some new intermediate products:
+-- - blue chips
+-- - weird cells or something
+-- - even better engines
+-- use a bunch more metal and a ton more stone (mainly branch 1 (scale)), somehow
+
+-- Main tech
+
 -- Tech unlocks:
--- 1: modules 1; V4 belts; some equipments
--- 2: fancy power solutions; bigger accumulator; some equipments
--- 3: logistics bots; spidertron; ???
--- 1+2: modules 2; cliff explosives
--- 1+3: matter repurposings (convert basic intermediates into others, maybe big scale, but in some way that you still need
+-- Modules (perhaps initially in different parts of the tree)
+-- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
+-- - Possibly start from a common module-base precursor + component for type
+-- - Eventually higher-tier modules
+-- V4 belts
+-- Better armour and equipments; legs early
+-- New power solutions:
+-- - Joy -> steam (not efficient)
+-- - Despair -> some sort of power somehow (lol)
+-- - Dust -> better fuel recipe
+-- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
+-- Somewhere: logistics chest (one more science)
+-- Spidertron
+-- New ways to get matter, and possibly widgets/contemplation
+-- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
--- 2+3: cube teleportation (krastorio teleporter graphic?), some equipments
--- maybe some way of converting power -> more matter?
+-- Cube teleportation (using krastorio teleporter graphic)
+-- Maybe some way of converting power -> more matter?
 --
--- OK so PLAN
--- BRANCH 1:
--- deep core powder -> crystal (? later), other stuff
--- BRANCH 3:
--- split joy/anguish cube (?) -> other stuff
--- BRANCH 2:
--- ??? 64 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
 
--- [DONE] 1: something that forces cube to go far away on train
---
--- Requirements/puzzles and interactions:
--- ?: mechanical circuit network? maybe a secret tech tree you find out in the world?
+-- Random thoughts.
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
@@ -67,14 +88,17 @@ require("prototypes.scripts.autoplace")
 -- ?: some more efficient basic materials but they come out in awkward ways (like
 --    only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
---    basic antimatter unit. Basic dark matter unit. Matter annihilation (matter + antimatter) -> energy!
+--    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
 -- 3: many interlinked recipes with short time and low amounts or
---    (if possible) computation via recipes, crypts and locks, decoder via furnaces with randomized hidden changing recipes?
---    e.g. quantum decoder; or qbits; every recipe is random with one pair from 6*6 options (so 1/21 chance)
+
+-- After science 3/4 or nearby, later ideas...
+-- Quantum decoder; via multi-furnace (quantum computer or research server); qbits;
+-- - every recipe is random with one pair from 6*6 options (so 1/21 chance)
+-- Very last thing to do destroys the cube (e.g. in intergalactic tranceiver) to produce final science plus
+-- materials to rebuild it in a long/expensive process.
+-- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
--- One of the very last things to do destroys the cube (e.g. launch in rocket) to produce the final science plus
--- materials to rebuild it in a long/expensive process.
 
 require("prototypes.equipment")
 require("prototypes.fluids")
@@ -113,6 +137,7 @@ require("prototypes.entities.chemical_plant")
 require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
 require("prototypes.entities.deep_core_ultradrill")
+require("prototypes.entities.dimensionality_disruptor")
 require("prototypes.entities.distillery")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")

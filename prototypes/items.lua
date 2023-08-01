@@ -26,6 +26,18 @@ data:extend({
     order = "0[1-cube]",
     stack_size = 1,
   },
+  {
+    type = "item",
+    name = "cube-phantom-ultradense-constituent",
+    icons = {{
+      icon = "__Ultracube__/graphics/phantom-cube.png",
+      icon_size = 64, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.25},
+    }},
+    subgroup = "cube-synthesis-handling",
+    order = "0[2-cube]",
+    stack_size = 1,
+  },
 
   {
     type = "item",

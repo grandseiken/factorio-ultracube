@@ -11,7 +11,9 @@
     "aai-loaders >= 0.1.4",
     "Krastorio2Assets >= 1.2",
     "?nixie-tubes",
-    "?Flow Control"
+    "?Flow Control",
+    "?PickerDollies",
+    "!Krastorio2"
   ],
   "description": "Unlock the mysteries of the ultradense utility cube in this devious overhaul mod."
 }

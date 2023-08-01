@@ -40,6 +40,8 @@ entity_types = {
     "transport-belt",
     "underground-belt",
     "splitter",
+    "loader-1x1",
+    "loader-1x2",
   }),
   inventory = make_set({
     "reactor",
@@ -189,7 +191,7 @@ function get_chunk_index(surface_index, chunk_x, chunk_y)
 end
 
 function add_entity_cache(entity)
-  if not add_entity_cache_internal(entity, entity_cache, true) then
+  if not entity.unit_number or not add_entity_cache_internal(entity, entity_cache, true) then
     return
   end
 
@@ -209,12 +211,12 @@ function add_entity_cache(entity)
   add_entity_cache_internal(entity, chunk_cache, false)
 end
 
-function remove_entity_cache(entity)
-  if not remove_entity_cache_internal(entity, entity_cache, true) then
+function remove_entity_cache(entity, position)
+  if not entity.unit_number or not remove_entity_cache_internal(entity, entity_cache, true) then
     return
   end
 
-  local chunk_x, chunk_y = get_chunk_position(entity.position)
+  local chunk_x, chunk_y = get_chunk_position(position or entity.position)
   local chunk_index = get_chunk_index(entity.surface_index, chunk_x, chunk_y)
   local chunk_cache = entity_cache.chunk_map[chunk_index]
   if chunk_cache then

@@ -16,7 +16,7 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
-    module_specification = {module_slots = 3},
+    module_specification = {module_slots = 0},
     allowed_effects = {"consumption", "speed", "productivity", "pollution"},
     animation = make_4way_animation_from_spritesheet({
       layers = {

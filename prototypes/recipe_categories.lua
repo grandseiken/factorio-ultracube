@@ -7,12 +7,17 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-synthesizer",
-    order = "1",
+    order = "1a",
   },
   {
     type = "recipe-category",
     name = "cube-synthesizer-handcraft",
-    order = "1",
+    order = "1a",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-dimensionality-disruptor",
+    order = "1b",
   },
   {
     type = "recipe-category",

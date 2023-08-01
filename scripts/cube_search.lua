@@ -355,18 +355,36 @@ local function cube_search_players(result_set)
   return false
 end
 
-local function cube_search_ground(result_set)
-  for _, surface in pairs(game.surfaces) do
-    if surface and surface.valid then
-      local find_result = surface.find_entities_filtered {type = "item-entity"}
-      for _, e in ipairs(find_result) do
-        local item_name = e.stack.name
-        if item_name == cube_ultradense then
-          if add_result(result_set, cube_ultradense, e) then return true end
-        end
-        if item_name == cube_dormant then
-          if add_result(result_set, cube_dormant, e) then return true end
-        end
+local function cube_search_ground(result_set, surface, area)
+  if not surface or not surface.valid then
+    return false
+  end
+
+  local find_result = surface.find_entities_filtered {
+    area = area,
+    type = "item-entity",
+  }
+  for _, e in ipairs(find_result) do
+    local item_name = e.stack.name
+    if item_name == cube_ultradense then
+      if add_result(result_set, cube_ultradense, e) then return true end
+    end
+    if item_name == cube_dormant then
+      if add_result(result_set, cube_dormant, e) then return true end
+    end
+  end
+  find_result = surface.find_entities_filtered {
+    area = area,
+    type = {"construction-robot", "logistic-robot"}
+  }
+  for _, e in ipairs(find_result) do
+    local inventory = e.get_inventory(defines.inventory.robot_cargo)
+    if inventory then
+      if inventory.get_item_count(cube_ultradense) > 0 then
+        if add_result(result_set, cube_ultradense, e) then return true end
+      end
+      if inventory.get_item_count(cube_dormant) > 0 then
+        if add_result(result_set, cube_dormant, e) then return true end
       end
     end
   end
@@ -382,7 +400,9 @@ local function cube_search_full(result_set)
   if cube_search_burners(result_set, cache) then return true end
   if cube_search_inserters(result_set, cache) then return true end
   if cube_search_transport_lines(result_set, cache) then return true end
-  if cube_search_ground(result_set) then return true end
+  for _, surface in pairs(game.surfaces) do
+    if cube_search_ground(result_set, surface) then return true end
+  end
   return false
 end
 
@@ -430,23 +450,11 @@ local function cube_search_local(result_set, surface_index, position)
     if i == 9 and cube_search_vehicles(result_set, cache) then return true end
   end
   local surface = game.surfaces[surface_index]
-  if surface and surface.valid then
-    local find_result = surface.find_entities_filtered {
-      type = "item-entity",
-      area = {left_top = {x = (chunk_x - 1) * chunk_size, y = (chunk_y - 1) * chunk_size},
-              right_bottom = {x = (chunk_x + 2) * chunk_size, y = (chunk_y + 2) * chunk_size}},
-    }
-    for _, e in ipairs(find_result) do
-      local item_name = e.stack.name
-      if item_name == cube_ultradense then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if item_name == cube_dormant then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
-  end
-  return false
+  local area = {
+    left_top = {x = (chunk_x - 1) * chunk_size, y = (chunk_y - 1) * chunk_size},
+    right_bottom = {x = (chunk_x + 2) * chunk_size, y = (chunk_y + 2) * chunk_size},
+  }
+  return cube_search_ground(result_set, surface, area)
 end
 
 local function fill_cube_search_result(result)
@@ -459,6 +467,10 @@ local function fill_cube_search_result(result)
   if entity_type == "character" then
     result.height = 0.5
   end
+  if entity_type == "logistic-robot" or entity_type == "construction-robot" then
+    result.height = 1
+    result.velocity = from_polar_orientation(0.05, entity.orientation)
+  end
   if entity.effective_speed then
     result.velocity = from_polar(entity.effective_speed, entity.orientation)
   end
@@ -469,14 +481,16 @@ local function fill_cube_search_result(result)
     result.velocity = from_polar_orientation(entity.character_running_speed, entity.orientation)
   end
   if entity_type == "transport-belt" or
-  entity_type == "splitter" then
+     entity_type == "splitter" or
+     entity_type == "loader-1x1" then
     result.velocity = from_polar_orientation(entity.prototype.belt_speed, entity.orientation)
   end
   if entity_type == "underground-belt" then
     result.height = -1
   end
   if entity_type == "transport-belt" or
-     entity_type == "underground-belt" then
+     entity_type == "underground-belt" or
+     entity_type == "loader-1x1" then
     local v = from_polar_orientation(0.25, entity.orientation)
     local item = result.item
     for i = 1, entity.get_max_transport_line_index() do

@@ -18,7 +18,8 @@ local cube_fx_data = nil
 
 function refresh_cube_fx_data()
   global.cube_fx_data = {
-    last_locomotives = {}
+    last_locomotives = {},
+    last_energy = 0,
   }
   cube_fx_data = global.cube_fx_data
 end
@@ -98,6 +99,19 @@ local function cube_vehicle_mod(results)
   for i = 1, #results do
     local result = results[i]
     local entity = result.entity
+
+    if entity.type == "construction-robot" or entity.type == "logistic-robot" then
+      local drain = cube_fx_data.last_energy and entity.energy < cube_fx_data.last_energy
+      if drain then
+        if entity.type == "logistic-robot" then
+          entity.energy = math.max(0, entity.energy - 200000)
+        else
+          entity.energy = math.max(0, entity.energy - 20000)
+        end
+      end
+      cube_fx_data.last_energy = entity.energy
+    end
+
     if result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
        entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
        entity.burner.currently_burning.name == cube_ultradense  then
@@ -112,6 +126,7 @@ local function cube_vehicle_mod(results)
       }
       boomed = true
     end
+
     if result.item == cube_ultradense and entity.type == "cargo-wagon" then
       local force = entity.force
       local train = entity.train

@@ -37,7 +37,7 @@ data:extend({
     type = "recipe",
     name = "cube-advanced-circuit",
     ingredients = {
-      {"cube-basic-matter-unit", 2},
+      {"cube-glass", 1},
       {"cube-electronic-circuit", 4},
       {"copper-cable", 8},
       {type = "fluid", name = "cube-unstable-gas", amount = 160},

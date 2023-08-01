@@ -21,19 +21,24 @@ It currently features three science packs and a bunch of interesting puzzles, wi
 
 * **I lost my cube!** Care has been taken to avoid the possibility of the cube being consumed or destroyed, but it's possible there's still some way to do it. If there's no alert visible with the mod setting for cube location alerts enabled, then the game can't find it either and it's likely gone. For now, run `/c game.player.insert("cube-ultradense-utility-cube")` in the console. If you have some idea how it might have gone missing, please file a bug report.
 
-* **My factory isn't producing enough, how can I improve it?** The main production bottleneck will always be processes that require the cube (either as an ingredient or as fuel). Only one of these steps can be running at any given time. Try to think of ways to get the most use out of it, and look in the technology tree for things to help with that.
+* **My factory isn't producing enough, how can I improve it?** The main production bottleneck will always be processes that require the cube (either as an ingredient or as fuel). Only one of these steps can be running at any given time. Try to think of ways to get the most use out of it per unit of time, and look in the technology tree for things to help with that.
 
 ## Compatibility
 
-This is an overhaul mod that removes many standard ingredients from the game, so it's unlikely to be compatible with other mods that add new recipes and haven't been specifically adapted to work with it.
+This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities.
 
-The following minor utility mods are currently supported:
+There is currently built-in support for the following mods:
 
-* Nixie Tubes
-* Flow Control
+* [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) for displaying circuit network values
+* [Flow Control](https://mods.factorio.com/mod/Flow%20Control) for assorted one-way valves
+* [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) for easily rearranging combinators without disconnecting circuit wires (gently recommended)
 
-If you would like to contribute support for compatibility with some other mod, you are welcome to open a pull request.
+Additionally, simple mods like Far Reach or Even Distribtion should work fine.
+
+If you would like to contribute/request support for compatibility with some other mod, you are welcome to open a PR/github issue.
 
 ## Dependencies and credits
 
-This mod depends on [Krastorio2Assets](https://github.com/raiguard/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on [Krastorio2](https://github.com/raiguard/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. Many thanks to the Krastorio 2 developers for their work and for making this possible.
+This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on [Krastorio2](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. Many thanks to the Krastorio 2 developers for their work and for making this possible.
+
+It also incorporates loaders from [AAI Loaders](https://mods.factorio.com/mod/aai-loaders).

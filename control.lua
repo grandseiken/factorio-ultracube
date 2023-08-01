@@ -4,10 +4,19 @@ require("scripts.entity_cache")
 require("scripts.multi_furnace")
 require("scripts.tech_unlock")
 
+local function on_picker_dolly_moved(e)
+  remove_entity_cache(e.moved_entity, e.start_pos)
+  add_entity_cache(e.moved_entity)
+end
+
 local function on_load()
   entity_cache_on_load()
   cube_fx_data_on_load()
   cube_search_data_on_load()
+
+  if remote.interfaces["PickerDollies"] and remote.interfaces["PickerDollies"]["dolly_moved_entity_id"] then
+    script.on_event(remote.call("PickerDollies", "dolly_moved_entity_id"), on_picker_dolly_moved)
+  end
 end
 
 local function on_init()
