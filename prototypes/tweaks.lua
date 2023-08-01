@@ -59,3 +59,7 @@ data.raw.radar["radar"].pictures.layers[1].hr_version.filename = "__Krastorio2As
 data.raw.radar["radar"].pictures.layers[2].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
 data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
 data.raw.fluid["sulfuric-acid"].order = "a[tar]-b[acid]"
+
+data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-transport-belt"
+data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
+data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"

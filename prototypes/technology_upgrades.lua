@@ -174,7 +174,7 @@ data:extend({
       "cube-inserters",
       "cube-containers",  -- TODO.
     },
-    unit = tech_cost_unit("2", 300),
+    unit = tech_cost_unit("x", 300),
     upgrade = true,
     order = "10-4-0",
   },

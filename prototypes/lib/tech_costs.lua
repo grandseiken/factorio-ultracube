@@ -14,7 +14,13 @@ local ingredients = {
     {"cube-basic-contemplation-unit", 1},
     {"cube-fundamental-comprehension-card", 1},
     {"cube-abstract-interrogation-card", 1},
-  }
+  },
+  ["x"] = {
+    {"cube-basic-contemplation-unit", 1},
+    {"cube-fundamental-comprehension-card", 1},
+    {"cube-abstract-interrogation-card", 1},
+    {"cube-unobtainium", 1},
+  },
 }
 
 local time = {
@@ -22,6 +28,8 @@ local time = {
   ["1a"] = 20,
   ["1b"] = 30,
   ["2"] = 40,
+  ["3"] = 60,
+  ["x"] = 600,
 }
 
 function tech_cost_unit(level, count)

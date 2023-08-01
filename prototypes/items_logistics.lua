@@ -22,6 +22,68 @@ data:extend({
 
   {
     type = "item",
+    name = "cube-v4-transport-belt",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "a[transport-belt]-d[v4-transport-belt]",
+    place_result = "cube-v4-transport-belt",
+    stack_size = 100
+  },
+  {
+    type = "item",
+    name = "cube-v4-underground-belt",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "b[underground-belt]-d[v4-underground-belt]",
+    place_result = "cube-v4-underground-belt",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "cube-v4-splitter",
+    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "c[splitter]-d[v4-splitter]",
+    place_result = "cube-v4-splitter",
+    stack_size = 50
+  },
+
+  {
+    type = "item",
+    name = "cube-fast-loader",
+    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-fast-loader.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "d[loader]-b[fast-loader]",
+    place_result = "cube-fast-loader",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "cube-express-loader",
+    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-express-loader.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "d[loader]-c[express-loader]",
+    place_result = "cube-express-loader",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "cube-v4-loader",
+    icon = "__Krastorio2Assets__/icons/entities/loaders/kr-superior-loader.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "belt",
+    order = "d[loader]-d[v4-loader]",
+    place_result = "cube-v4-loader",
+    stack_size = 20,
+  },
+
+  {
+    type = "item",
     name = "cube-construction-robot-0",
     icon = "__base__/graphics/icons/construction-robot.png",
     icon_size = 64, icon_mipmaps = 4,
