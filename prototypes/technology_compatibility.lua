@@ -1,3 +1,5 @@
+require("prototypes.lib.tech_costs")
+
 if mods["nixie-tubes"] then
   data:extend({
     {
@@ -11,14 +13,7 @@ if mods["nixie-tubes"] then
         {type = "unlock-recipe", recipe = "cube-nixie-tube-small"},
       },
       prerequisites = {"cube-crusher"},
-      unit = {
-        count = 60,
-        ingredients = {
-          {"cube-basic-contemplation-unit", 1},
-          {"cube-fundamental-comprehension-card", 1},
-        },
-        time = 20,
-      },
+      unit = tech_cost_unit("1a", 60),
       order = "x-0-0",
     },
   })
@@ -40,14 +35,7 @@ if mods["Flow Control"] then
         "cube-fundamental-comprehension-card",
         "cube-fluid-handling",
       },
-      unit = {
-        count = 120,
-        ingredients = {
-          {"cube-basic-contemplation-unit", 1},
-          {"cube-fundamental-comprehension-card", 1},
-        },
-        time = 20,
-      },
+      unit = tech_cost_unit("1a", 120),
       order = "x-0-1",
     },
   })

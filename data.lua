@@ -3,19 +3,17 @@ require("prototypes.scripts.autoplace")
 
 -- TODO: output buffer on rare metals / matter, etc, can it be fixed?
 -- TODO: upgrade graphics for (particularly) boiler, maybe also pipes/tanks/steam engine?
--- TODO: tech cost review.
--- TODO: "raw cost" view fixing.
+-- TODO: "raw cost" view fixing?
 -- TODO: all items seem to be unlocked in FNEI/signals etc without researching them.
 
 -- TODO: icon reworks
 --       - advanced engine tech graphic + name (?)
 --       - tar processing/reclamation icons
 --       - emotional synthesis icon + tech graphic
---       - roboport tech graphic
+--       - roboport tech graphic?
 --       - concretes tech graphic?
 -- TODO: layered icons look bad when disabled. Bake them.
 -- TODO: renames: unstable gas?
--- TODO: recipe crafting_machine_tint for all chemical-plant
 
 -- TODO: important things
 -- still something for matter; or maybe only for sophisticated matter
@@ -25,10 +23,9 @@ require("prototypes.scripts.autoplace")
 -- TODO: analysis machine that unlocks techs based on finding things in the world?
 -- TODO: strange device / mystery furnace
 -- TODO: rework fuel refinery (shouldn't need cube directly, something else instead?)
---       more with besselheim; twinned logistics robots
+--       more with besselheim
 
 -- TODO: extend upgrade techs
---       - lab speed + increase times (?)
 --       - more armour stuff/more toolbelts?
 
 -- TODO: think about reintroducing biters + military?
@@ -55,10 +52,9 @@ require("prototypes.scripts.autoplace")
 -- BRANCH 1:
 -- deep core powder -> crystal (? later), other stuff
 -- BRANCH 3:
--- GIN: potato (greenhouse) -> (crusher) -> mashed potato -> berries (greenhouse) + essential oils + water -> (distillery?) -> gin
--- GIN + cube + cerebral -> emotional synthesis -> split joy/anguish cube -> other stuff
+-- split joy/anguish cube (?) -> other stuff
 -- BRANCH 2:
--- ??? 100 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
+-- ??? 64 ultradense constituents -> various things you need to choose between -> dormant constituents -> reassembly
 
 -- [DONE] 1: something that forces cube to go far away on train
 --

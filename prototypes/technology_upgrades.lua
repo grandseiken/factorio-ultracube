@@ -1,3 +1,5 @@
+require("prototypes.lib.tech_costs")
+
 data:extend({
   {
     type = "technology",
@@ -8,14 +10,7 @@ data:extend({
       {type = "character-inventory-slots-bonus", modifier = 10},
     },
     prerequisites = {"cube-modular-armor"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     upgrade = true,
     order = "10-0-0",
   },
@@ -31,15 +26,7 @@ data:extend({
       "cube-toolbelt",
       "cube-containers",
     },
-    unit = {
-      count_formula = "2^L*60",
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_formula("2", "2^L*60"),
     max_level = "infinite",
     upgrade = true,
     order = "10-0-0",
@@ -54,14 +41,7 @@ data:extend({
       {type = "train-braking-force-bonus", modifier = 0.2},
     },
     prerequisites = {"cube-railway"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     upgrade = true,
     order = "10-1-0",
   },
@@ -78,15 +58,7 @@ data:extend({
       "cube-braking-force-1",
       "cube-transitive-ultralocomotion",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     upgrade = true,
     order = "10-1-1",
   },
@@ -100,11 +72,7 @@ data:extend({
       {type = "mining-drill-productivity-bonus", modifier = 0.025},
     },
     prerequisites = {"cube-ultradense-furnace"},
-    unit = {
-      count = 240,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 240),
     upgrade = true,
     order = "10-2-0",
   },
@@ -120,14 +88,7 @@ data:extend({
       "cube-mining-productivity-1",
       "cube-fundamental-comprehension-card",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 240),
     upgrade = true,
     order = "10-2-1",
   },
@@ -144,14 +105,7 @@ data:extend({
       "cube-mining-productivity-2",
       "cube-rare-metal-crushing",
     },
-    unit = {
-      count = 480,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 480),
     upgrade = true,
     order = "10-2-2",
   },
@@ -168,15 +122,7 @@ data:extend({
       "cube-mining-productivity-3",
       "cube-deep-core-ultradrill",
     },
-    unit = {
-      count = 480,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 480),
     upgrade = true,
     order = "10-2-3",
   },
@@ -194,15 +140,7 @@ data:extend({
       "cube-stack-inserters",
       "cube-abstract-interrogation-card",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     upgrade = true,
     order = "10-3-0",
   },
@@ -218,15 +156,7 @@ data:extend({
     prerequisites = {
       "cube-stack-inserter-capacity-bonus-1",
     },
-    unit = {
-      count = 300,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 320),
     upgrade = true,
     order = "10-3-1",
   },
@@ -244,15 +174,7 @@ data:extend({
       "cube-inserters",
       "cube-containers",  -- TODO.
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 300),
     upgrade = true,
     order = "10-4-0",
   },
@@ -266,14 +188,7 @@ data:extend({
       {type = "worker-robot-speed", modifier = 0.4},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     upgrade = true,
     order = "10-5-0",
   },
@@ -289,14 +204,7 @@ data:extend({
       "cube-worker-robot-speed-1",
       "cube-construction-robotics",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     upgrade = true,
     order = "10-5-1",
   },
@@ -312,15 +220,7 @@ data:extend({
       "cube-worker-robot-speed-2",
       "cube-roboport",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     upgrade = true,
     order = "10-5-2",
   },
@@ -337,15 +237,7 @@ data:extend({
       "cube-worker-robot-speed-3",
       "cube-logistic-robotics",
     },
-    unit = {
-      count = 300,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 300),
     upgrade = true,
     order = "10-5-3",
   },
@@ -360,15 +252,7 @@ data:extend({
       {type = "worker-robot-storage", modifier = 1},
     },
     prerequisites = {"cube-logistic-robotics"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     upgrade = true,
     order = "10-6-0",
   },
@@ -382,14 +266,7 @@ data:extend({
       {type = "laboratory-speed", modifier = 0.25},
     },
     prerequisites = {"cube-sentience-extraction"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 180),
     upgrade = true,
     order = "10-7-0",
   },
@@ -406,15 +283,7 @@ data:extend({
       "cube-research-speed-1",
       "cube-electric-energy-accumulators",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     upgrade = true,
     order = "10-7-1",
   },

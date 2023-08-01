@@ -86,6 +86,12 @@ data:extend({
     order = "0[c-tar-processing]",
     always_show_made_in = true,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r=  0.1, g = 0.1, b = 0.15},
+      secondary = {r = 0.15, g = 0.15, b = 0.2},
+      tertiary = {r = 0.35, g = 0.3, b = 0.35},
+      quaternary = {r = 0.1, g = 0.125, b = 0.15},
+    },
   },
   {
     type = "recipe",
@@ -115,6 +121,12 @@ data:extend({
     order = "1[a-heavy-reclamation]",
     always_show_made_in = true,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.25, g = 0.125, b = 0.15},
+      secondary = {r = 0.15, g = 0.15, b = 0.2},
+      tertiary = {r = 0.85, g = 0.6, b = 0.3},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15},
+    },
   },
   {
     type = "recipe",
@@ -145,6 +157,12 @@ data:extend({
     order = "1[b-light-reclamation]",
     always_show_made_in = true,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.3, g = 0.25, b = 0.15},
+      secondary = {r = 0.15, g = 0.15, b = 0.2},
+      tertiary = {r = 1, g = 0.73, b = 0.07},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15},
+    },
   },
   {
     type = "recipe",
@@ -165,6 +183,12 @@ data:extend({
     order = "a[gas]",
     always_show_made_in = true,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.25, g = 0.1, b = 0.25},
+      secondary = {r = 0.1, g = 0.1, b = 0.15},
+      tertiary = {r = 0.647, g = 0.471, b = 0.396},
+      quaternary = {r = 1.000, g = 0.395, b = 0.127},
+    },
   },
   {
     type = "recipe",
@@ -183,6 +207,12 @@ data:extend({
     order = "c[grease]",
     always_show_made_in = true,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.268, g = 0.723, b = 0.223},
+      secondary = {r = 0.432, g = 0.793, b = 0.386},
+      tertiary = {r = 0.5, g = 0.45, b = 0.35},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15},
+    },
   },
   {
     type = "recipe",
@@ -226,7 +256,7 @@ data:extend({
       secondary = {r = 1.000, g = 0.852, b = 0.172},
       tertiary = {r = 0.876, g = 0.869, b = 0.597},
       quaternary = {r = 0.969, g = 1.000, b = 0.019},
-    }
+    },
   },
 
   {

@@ -1,3 +1,5 @@
+require("prototypes.lib.tech_costs")
+
 data:extend({
   {
     type = "technology",
@@ -8,15 +10,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-landfill"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-0-0",
   },
   {
@@ -31,15 +25,7 @@ data:extend({
       "cube-abstract-interrogation-card",
       "cube-sulfur-processing",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-0-1",
   },
   {
@@ -51,15 +37,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-cliff-explosives"},
     },
     prerequisites = {"cube-explosives"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-0-2",
   },
   {
@@ -91,15 +69,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-light-tar-reclamation"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-0-3",
   },
   {
@@ -115,15 +85,7 @@ data:extend({
       "cube-electric-energy-distribution-1",
       "cube-battery",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-0-4",
   },
   {
@@ -140,15 +102,7 @@ data:extend({
       "cube-abstract-interrogation-card",
       "cube-logistics",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-0-5",
   },
   {
@@ -160,15 +114,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-sophisticated-matter-unit"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-1-0",
   },
   {
@@ -183,15 +129,7 @@ data:extend({
       "cube-electric-energy-accumulators",
       "cube-sophisticated-matter-unit",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-1-1",
   },
   {
@@ -203,15 +141,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-radar"},
     },
     prerequisites = {"cube-sophisticated-matter-unit"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 120),
     order = "2-1-2",
   },
   {
@@ -228,15 +158,7 @@ data:extend({
       "cube-radar",
       "cube-robotics",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-1-3",
   },
   {
@@ -251,15 +173,7 @@ data:extend({
     prerequisites = {
       "cube-sophisticated-matter-unit",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-1-4",
   },
   {
@@ -275,15 +189,7 @@ data:extend({
       "cube-sophisticated-matter-unit",
       "cube-concrete",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-1-5",
   },
   {
@@ -319,15 +225,7 @@ data:extend({
       "cube-abstract-interrogation-card",
       "cube-railway",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-1-6",
   },
   {
@@ -348,15 +246,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-explosive-rare-metals"},
     },
     prerequisites = {"cube-explosives"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-2-0",
   },
   {
@@ -377,15 +267,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-improved-gelatinous-tar"},
     },
     prerequisites = {"cube-deep-core-ultradrill"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-2-1",
   },
   {
@@ -400,15 +282,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ethanol"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 180),
     order = "2-3-0",
   },
   {
@@ -436,15 +310,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-bottled-anguish"},
     },
     prerequisites = {"cube-distillation"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-3-1",
   },
   {
@@ -458,15 +324,7 @@ data:extend({
       {type = "character-logistic-trash-slots", modifier = 30},
     },
     prerequisites = {"cube-emotional-decomposition"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-        {"cube-abstract-interrogation-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("2", 240),
     order = "2-3-2",
   },
 })

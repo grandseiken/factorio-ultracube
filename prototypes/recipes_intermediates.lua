@@ -106,6 +106,12 @@ data:extend({
     energy_required = 2,
     category = "cube-chemical-plant",
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.55, g = 0.9, b = 0.9},
+      secondary = {r = 0.9, g = 0.9, b = 0.9},
+      tertiary = {r = 0.45, g = 0.8, b = 0.8},
+      quaternary = {r = 0.4, g = 0.35, b = 0.3},
+    },
   },
   {
     type = "recipe",
@@ -118,6 +124,12 @@ data:extend({
     energy_required = 1,
     category = "cube-chemical-plant",
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.95, g = 0.15, b = 0.5},
+      secondary = {r = 0.8, g = 0.8, b = 0.8},
+      tertiary = {r = 0.85, g = 0.1, b = 0.4},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15},
+    },
   },
   {
     type = "recipe",
@@ -130,6 +142,12 @@ data:extend({
     energy_required = 1,
     category = "cube-chemical-plant",
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.4, g = 0.2, b = 0.75},
+      secondary = {r = 0.8, g = 0.8, b = 0.8},
+      tertiary = {r = 0.35, g = 0.15, b = 0.7},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15},
+    },
   },
 
   {
@@ -171,7 +189,7 @@ data:extend({
       secondary = {r = 0.831, g = 0.560, b = 0.222},
       tertiary = {r = 0.728, g = 0.818, b = 0.443},
       quaternary = {r = 0.939, g = 0.763, b = 0.191},
-    }
+    },
   },
   {
     type = "recipe",
@@ -187,11 +205,11 @@ data:extend({
     category = "cube-chemical-plant",
     enabled = false,
     crafting_machine_tint = {
-      primary = {r = 0.968, g = 0.381, b = 0.259, a = 1.000},
-      secondary = {r = 0.892, g = 0.664, b = 0.534, a = 1.000},
-      tertiary = {r = 1.000, g = 0.978, b = 0.513, a = 1.000},
-      quaternary = {r = 0.210, g = 0.170, b = 0.013, a = 1.000},
-    }
+      primary = {r = 0.968, g = 0.381, b = 0.259},
+      secondary = {r = 0.892, g = 0.664, b = 0.534},
+      tertiary = {r = 1.000, g = 0.978, b = 0.513},
+      quaternary = {r = 0.210, g = 0.170, b = 0.013},
+    },
   },
   {
     type = "recipe",

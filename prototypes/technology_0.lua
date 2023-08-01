@@ -1,3 +1,5 @@
+require("prototypes.lib.tech_costs")
+
 data:extend({
   {
     type = "technology",
@@ -9,11 +11,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-long-inserter"},
       {type = "unlock-recipe", recipe = "cube-filter-inserter"},
     },
-    unit = {
-      count = 10,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 10),
     order = "0-0-0",
   },
   {
@@ -26,11 +24,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-underground-belt"},
       {type = "unlock-recipe", recipe = "cube-splitter"},
     },
-    unit = {
-      count = 20,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 20),
     order = "0-0-1",
   },
   {
@@ -41,11 +35,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-electric-mining-drill"},
     },
-    unit = {
-      count = 20,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 20),
     order = "0-1-0"
   },
   {
@@ -57,11 +47,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-electric-furnace"},
       {type = "unlock-recipe", recipe = "cube-stone-brick"},
     },
-    unit = {
-      count = 20,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 10),
     order = "0-1-1",
   },
   {
@@ -73,11 +59,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-stone-wall"},
     },
     prerequisites = {"cube-electric-furnace"},
-    unit = {
-      count = 40,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 40),
     order = "0-1-2",
   },
   {
@@ -94,11 +76,7 @@ data:extend({
       "cube-electric-mining-drill",
       "cube-electric-furnace",
     },
-    unit = {
-      count = 40,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 40),
     order = "0-2-0"
   },
   {
@@ -111,11 +89,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
     },
     prerequisites = {"cube-ultradense-furnace"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 60),
     order = "0-2-1",
   },
   {
@@ -127,11 +101,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
     prerequisites = {"cube-ultradense-furnace"},
-    unit = {
-      count = 80,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 80),
     order = "0-2-2"
   },
   {
@@ -143,11 +113,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-pump"},
     },
     prerequisites = {"cube-electronics"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 60),
     order = "0-2-3"
   },
   {
@@ -159,11 +125,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-lamp"},
     },
     prerequisites = {"cube-electronics"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 60),
     order = "0-2-4",
   },
   {
@@ -181,11 +143,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-power-switch"},
     },
     prerequisites = {"cube-electronics"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 60),
     order = "0-2-5",
   },
   {
@@ -197,11 +155,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-fabricator"},
     },
     prerequisites = {"cube-electronics"},
-    unit = {
-      count = 60,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 60),
     order = "0-2-6",
   },
   {
@@ -217,11 +171,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets"
     },
-    unit = {
-      count = 80,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 80),
     order = "0-3-0",
   },
   {
@@ -236,11 +186,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets",
     },
-    unit = {
-      count = 80,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 80),
     order = "0-3-1",
   },
   {
@@ -269,11 +215,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets",
     },
-    unit = {
-      count = 120,
-      ingredients = {{"cube-basic-contemplation-unit", 1}},
-      time = 10,
-    },
+    unit = tech_cost_unit("0", 120),
     order = "0-4-0",
   },
 })

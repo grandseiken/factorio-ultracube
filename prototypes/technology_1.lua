@@ -1,3 +1,5 @@
+require("prototypes.lib.tech_costs")
+
 data:extend({
   {
     type = "technology",
@@ -8,14 +10,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
-    unit = {
-      count = 60,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 60),
     order = "1-0-0",
   },
   {
@@ -29,14 +24,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-glass"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-0-1",
   },
   {
@@ -68,14 +56,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
     },
     prerequisites = {"cube-crusher"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-1-0",
   },
   {
@@ -91,14 +72,7 @@ data:extend({
       "cube-crusher",
       "cube-optics",
     },
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-1-1",
   },
   {
@@ -111,14 +85,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-besselheim-flask"},
     },
     prerequisites = {"cube-crusher"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-1-2",
   },
   {
@@ -144,14 +111,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-sand-dilution"},
     },
     prerequisites = {"cube-chemical-plant"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-1-3",
   },
   {
@@ -177,14 +137,7 @@ data:extend({
       "cube-greenhouse",
       "cube-chemical-plant",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-1-4",
   },
   {
@@ -196,14 +149,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-elbow-grease"},
     },
     prerequisites = {"cube-tar-processing"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-1-5",
   },
   {
@@ -216,14 +162,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-sulfur"},
       {type = "unlock-recipe", recipe = "cube-sulfuric-acid"},
     },
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-1-6",
   },
   {
@@ -236,14 +175,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
     },
     prerequisites = {"cube-sulfur-processing"},
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     order = "1-1-7",
   },
   {
@@ -255,14 +187,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-fluid-burner"},
     },
     prerequisites = {"cube-tar-processing"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-1-8",
   },
   {
@@ -275,14 +200,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-battery-equipment"},
     },
     prerequisites = {"cube-sulfur-processing"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-1-9",
   },
   {
@@ -299,14 +217,7 @@ data:extend({
       -- {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
     },
     prerequisites = {"cube-rare-metal-crushing"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-2-0",
   },
   {
@@ -318,14 +229,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-gate"},
     },
     prerequisites = {"cube-concrete", "cube-stone-wall"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-2-1",
   },
   {
@@ -337,14 +241,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-advanced-engine"},
     },
     prerequisites = {"cube-elbow-grease"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-2-2",
   },
   {
@@ -356,14 +253,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-car"},
     },
     prerequisites = {"cube-advanced-engine"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-2-3",
   },
   {
@@ -378,14 +268,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-train-stop"},
     },
     prerequisites = {"cube-advanced-engine"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-2-4",
   },
   {
@@ -400,14 +283,7 @@ data:extend({
       "cube-railway",
       "cube-fluid-handling",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-2-5",
   },
   {
@@ -420,14 +296,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-chain-signal"},
     },
     prerequisites = {"cube-railway"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-2-6",
   },
   {
@@ -443,14 +312,7 @@ data:extend({
       "cube-inserters",
       "cube-advanced-engine",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     order = "1-2-7",
   },
   {
@@ -476,14 +338,7 @@ data:extend({
       "cube-synthesizer",
       "cube-fundamental-comprehension-card",
     },
-    unit = {
-      count = 60,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 60),
     order = "1-3-0",
   },
   {
@@ -504,14 +359,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-1"},
     },
     prerequisites = {"cube-matter-replication"},
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-3-1",
   },
   {
@@ -535,14 +383,7 @@ data:extend({
       "cube-matter-replication",
       "cube-rare-metal-crushing",
     },
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 180),
     order = "1-3-2",
   },
   {
@@ -554,14 +395,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
     },
     prerequisites = {"cube-matter-replication"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 180),
     order = "1-4-0",
   },
   {
@@ -578,14 +412,7 @@ data:extend({
       "cube-rare-metal-crushing",
       "cube-sentience-extraction",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     order = "1-4-1",
   },
   {
@@ -597,14 +424,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-advanced-circuit"},
     },
     prerequisites = {"cube-tar-processing"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 180),
     order = "1-4-2",
   },
   {
@@ -616,14 +436,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-flying-robot-frame"},
     },
     prerequisites = {"cube-battery"},
-    unit = {
-      count = 180,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 180),
     order = "1-5-0",
   },
   {
@@ -640,14 +453,7 @@ data:extend({
       "cube-advanced-electronics",
       "cube-bottled-consciousness",
     },
-    unit = {
-      count = 240,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1b", 240),
     order = "1-5-1",
   },
   {
@@ -662,14 +468,7 @@ data:extend({
     prerequisites = {
       "cube-advanced-electronics",
     },
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-5-2",
   },
   {
@@ -684,14 +483,7 @@ data:extend({
       "cube-modular-armor",
       "cube-battery",
     },
-    unit = {
-      count = 120,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 20,
-    },
+    unit = tech_cost_unit("1a", 120),
     order = "1-5-3",
   },
   {
@@ -721,14 +513,7 @@ data:extend({
       "cube-advanced-electronics",
       "cube-bottled-consciousness",
     },
-    unit = {
-      count = 320,
-      ingredients = {
-        {"cube-basic-contemplation-unit", 1},
-        {"cube-fundamental-comprehension-card", 1},
-      },
-      time = 30,
-    },
+    unit = tech_cost_unit("1b", 300),
     order = "1-6-0",
   },
 })

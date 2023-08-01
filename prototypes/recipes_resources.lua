@@ -181,6 +181,12 @@ data:extend({
     show_amount_in_title = false,
     allow_decomposition = false,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.35, g = 0.525, b = 0.65},
+      secondary = {r = 0.4, g = 0.5, b = 0.525},
+      tertiary = {r = 0.4, g = 0.35, b = 0.3, a = 0.65},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15, a = 0.65},
+    },
   },
 
   {
