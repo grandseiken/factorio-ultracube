@@ -34,8 +34,8 @@ require("prototypes.scripts.autoplace")
 
 -- LONG-TERM TODOs:
 -------------------
--- extend upgrade techs
--- more armour stuff/more toolbelts?
+-- rearrange upgrade techs; some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
+-- more armour stuff
 -- think about reintroducing biters + military?
 -- storylore tooltips
 
@@ -126,7 +126,8 @@ require("prototypes.resources")
 require("prototypes.technology_0")
 require("prototypes.technology_1")
 require("prototypes.technology_2")
-require("prototypes.technology_3")
+require("prototypes.technology_3_4")
+require("prototypes.technology_5")
 require("prototypes.technology_compatibility")
 require("prototypes.technology_upgrades")
 require("prototypes.tweaks")

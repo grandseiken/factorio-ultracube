@@ -78,7 +78,7 @@ data:extend({
     ingredients = {{"cube-glass", 2}},
     results = {{"cube-besselheim-flask", 1}},
     energy_required = 1,
-    category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
     always_show_made_in = true,
     enabled = false,
   },
@@ -91,7 +91,7 @@ data:extend({
     },
     results = {{"cube-intelligent-calcium", 1}},
     energy_required = 2,
-    category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {

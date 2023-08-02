@@ -136,7 +136,7 @@ data:extend({
     },
     results = {{"cube-v4-transport-belt", 4}},
     energy_required = 4,
-    category = "cube-fabricator",
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {

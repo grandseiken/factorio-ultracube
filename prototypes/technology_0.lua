@@ -196,20 +196,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-fundamental-comprehension-card"},
-      {
-        type = "nothing",
-        icons = {
-          {
-            icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-            icon_size = 64, icon_mipmaps = 4,
-          },
-          {
-            icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
-            icon_size = 64, icon_mipmaps = 2,
-          }
-        },
-        effect_description = {"effect-description.cube-technology-unlock"},
-      },
+      tech_unlock_effect(),
     },
     prerequisites = {
       "cube-electronics",

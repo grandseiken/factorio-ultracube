@@ -339,8 +339,40 @@ data:extend({
       {type = "character-logistic-requests", modifier = true},
       {type = "character-logistic-trash-slots", modifier = 30},
     },
-    prerequisites = {"cube-emotional-decomposition"},
+    prerequisites = {
+      "cube-robotics",
+      "cube-emotional-decomposition",
+    },
     unit = tech_cost_unit("2", 240),
     order = "2-3-2",
+  },
+  {
+    type = "technology",
+    name = "cube-deep-introspection-card",
+    icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-deep-introspection-card"},
+      tech_unlock_effect(),
+    },
+    prerequisites = {
+      "cube-deep-core-ultradrill",
+      "cube-emotional-decomposition",
+    },
+    unit = tech_cost_unit("2x", 300),
+    order = "2-9-0",
+  },
+  {
+    type = "technology",
+    name = "cube-erudite-interpretation-card",
+    icon = "__Krastorio2Assets__/technologies/optimization-tech-card.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-erudite-interpretation-card"},
+      tech_unlock_effect(),
+    },
+    prerequisites = {"cube-dimensionality-disruptor"},
+    unit = tech_cost_unit("2x", 300),
+    order = "2-9-1",
   },
 })

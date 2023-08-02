@@ -61,6 +61,7 @@ data:extend({
     category = "cube-dimensionality-disruptor",
     always_show_made_in = true,
     allow_decomposition = false,
+    enabled = false,
   },
 
   {

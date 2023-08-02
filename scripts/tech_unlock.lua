@@ -1,19 +1,17 @@
-local unlock_trigger_technologies = {
-  ["cube-basic-contemplation-unit"] = 0,
-  ["cube-fundamental-comprehension-card"] = 1,
-  ["cube-abstract-interrogation-card"] = 2,
-}
+local unlock_trigger_technologies = make_set({
+  "cube-basic-contemplation-unit",
+  "cube-fundamental-comprehension-card",
+  "cube-abstract-interrogation-card",
+  "cube-deep-introspection-card",
+  "cube-erudite-interpretation-card",
+})
 
-local function get_unlocks_for_technology(technology_name)
-  local unlock_index = unlock_trigger_technologies[technology_name]
-  if not unlock_index then
-    return {}
-  end
+local function get_unlocks_for_technology(force, technology_name)
   local filters = {
     {filter = "research-unit-ingredient", ingredient = technology_name, mode = "and"},
   }
-  for name, index in pairs(unlock_trigger_technologies) do
-    if index > unlock_index then
+  for name, _ in pairs(unlock_trigger_technologies) do
+    if force.technologies[name] and not force.technologies[name].researched then
       filters[#filters + 1] = {
         filter = "research-unit-ingredient",
         ingredient = name, invert = true, mode = "and",
@@ -24,7 +22,20 @@ local function get_unlocks_for_technology(technology_name)
 end
 
 function unlock_technologies(force, technology_name, unlocked)
-  for name, _ in pairs(get_unlocks_for_technology(technology_name)) do
+  if not unlock_trigger_technologies[technology_name] then
+    return
+  end
+  local technologies = nil
+  if unlocked then
+    technologies = get_unlocks_for_technology(force, technology_name)
+  else
+    technologies = game.get_filtered_technology_prototypes {{
+      filter = "research-unit-ingredient",
+      ingredient = technology_name,
+      mode = "and",
+    }}
+  end
+  for name, _ in pairs(technologies) do
     force.technologies[name].enabled = unlocked
   end
 end

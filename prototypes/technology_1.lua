@@ -216,7 +216,10 @@ data:extend({
       -- {type = "unlock-recipe", recipe = "cube-refined-concrete"},
       -- {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
     },
-    prerequisites = {"cube-rare-metal-crushing"},
+    prerequisites = {
+      "cube-fabricator",
+      "cube-rare-metal-crushing",
+    },
     unit = tech_cost_unit("1a", 120),
     order = "1-2-0",
   },
@@ -240,7 +243,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-engine"},
     },
-    prerequisites = {"cube-elbow-grease"},
+    prerequisites = {
+      "cube-fabricator",
+      "cube-elbow-grease",
+    },
     unit = tech_cost_unit("1a", 180),
     order = "1-2-2",
   },
@@ -423,7 +429,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-circuit"},
     },
-    prerequisites = {"cube-tar-processing"},
+    prerequisites = {
+      "cube-fabricator",
+      "cube-tar-processing",
+    },
     unit = tech_cost_unit("1b", 180),
     order = "1-4-2",
   },
@@ -493,20 +502,7 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-abstract-interrogation-card"},
-      {
-        type = "nothing",
-        icons = {
-          {
-            icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-            icon_size = 64, icon_mipmaps = 4,
-          },
-          {
-            icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
-            icon_size = 64, icon_mipmaps = 2,
-          }
-        },
-        effect_description = {"effect-description.cube-technology-unlock"},
-      },
+      tech_unlock_effect(),
     },
     prerequisites = {
       "cube-advanced-engine",
