@@ -165,7 +165,7 @@ data:extend({
       -- audible_distance_modifier = 10,
     },
     crafting_speed = 1.0,
-    energy_usage = "100MW",
+    energy_usage = "200MW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -175,11 +175,11 @@ data:extend({
 
     ingredient_count = 2,
     module_specification = {
-      module_slots = 0,
+      module_slots = 2,
       module_info_icon_shift = {0, 1.8},
       module_info_icon_scale = 0.6,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = {"consumption", "pollution"},
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
   },

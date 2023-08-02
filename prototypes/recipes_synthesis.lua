@@ -13,8 +13,12 @@ data:extend({
         scale = 0.375, shift = {8, 8},
       },
     },
-    ingredients = {{"cube-dormant-utility-cube", 1}},
-    results = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
     main_product = "",
     energy_required = 10,
     category = "crafting",
@@ -38,8 +42,12 @@ data:extend({
         icon_size = 64, icon_mipmaps = 2,
       },
     },
-    ingredients = {{"cube-dormant-utility-cube", 1}},
-    results = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
     main_product = "",
     energy_required = 2,
     category = "cube-recovery-bay",
@@ -55,7 +63,9 @@ data:extend({
   {
     type = "recipe",
     name = "cube-phantom-ultradense-constituent",
-    ingredients = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
     results = {{"cube-phantom-ultradense-constituent", 64}},
     energy_required = 2,
     category = "cube-dimensionality-disruptor",
@@ -67,9 +77,11 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-matter-unit-0",
-    ingredients = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
     results = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-basic-matter-unit", 100},
     },
     main_product = "cube-basic-matter-unit",
@@ -93,12 +105,12 @@ data:extend({
       },
     },
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
       {type = "fluid", name = "steam", amount = 2000},
     },
     results = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-basic-matter-unit", 1000},
     },
     energy_required = 1,
@@ -114,11 +126,11 @@ data:extend({
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-rare-metals", 50},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-n-dimensional-widget", 5},
     },
     main_product = "cube-n-dimensional-widget",
@@ -143,13 +155,13 @@ data:extend({
       },
     },
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-rare-metals", 200},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
       {type = "fluid", name = "steam", amount = 1000},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-n-dimensional-widget", 50},
       {type = "fluid", name = "water", amount = 1000},
     },
@@ -190,11 +202,11 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/fluids/matter.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 8000},
     },
     energy_required = 2,
@@ -224,12 +236,12 @@ data:extend({
       }
     },
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 25000},
       {type = "fluid", name = "cube-ethanol", amount = 2000},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-joy", amount = 10000},
       {type = "fluid", name = "cube-despair", amount = 10000},
     },

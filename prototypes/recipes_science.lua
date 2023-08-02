@@ -2,9 +2,11 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-0",
-    ingredients = {{"cube-ultradense-utility-cube", 1}},
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
     results = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-basic-contemplation-unit", 10},
     },
     main_product = "cube-basic-contemplation-unit",
@@ -28,13 +30,13 @@ data:extend({
       }
     },
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-calcium", 50},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
       {type = "fluid", name = "water", amount = 8000},
     },
     results = {
-      {"cube-dormant-utility-cube", 1},
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-basic-contemplation-unit", 100},
       {type = "fluid", name = "steam", amount = 8000, temperature = 215},
     },

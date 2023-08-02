@@ -231,12 +231,12 @@ data:extend({
     type = "recipe",
     name = "cube-condensed-fuel",
     ingredients = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"sulfur", 20},
       {type = "fluid", name = "cube-unstable-gas", amount = 4000},
     },
     results = {
-      {"cube-ultradense-utility-cube", 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-condensed-fuel", 50}
     },
     main_product = "cube-condensed-fuel",

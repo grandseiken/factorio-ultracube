@@ -16,6 +16,8 @@ require("prototypes.scripts.autoplace")
 -- upgrade graphics for boiler; maybe also pipes/tanks/steam engine?
 -- - and possibly slightly increase base pipe capacity
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
+-- - particularly important w.r.t any hope of productivity modules working
+-- module graphics/tech graphics
 
 -- IMPORTANT TODOs:
 -------------------
@@ -62,7 +64,7 @@ require("prototypes.scripts.autoplace")
 -- Tech unlocks:
 -- Modules (perhaps initially in different parts of the tree)
 -- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
--- - Possibly start from a common module-base precursor + component for type
+-- - Possibly start from a common module-base precursor (nodule?) + component for type
 -- - Eventually higher-tier modules
 -- V4 belts
 -- Better armour and equipments; legs early
@@ -71,20 +73,18 @@ require("prototypes.scripts.autoplace")
 -- - Despair -> some sort of power somehow (lol)
 -- - Dust -> better fuel recipe
 -- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
--- Somewhere: logistics chest (one more science)
--- Spidertron
 -- New ways to get matter, and possibly widgets/contemplation
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
 -- Cube teleportation (using krastorio teleporter graphic)
 -- Maybe some way of converting power -> more matter?
---
 
 -- Random thoughts.
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
 -- 2+3: blue chips
+-- ? drills v2
 -- ?: some more efficient basic materials but they come out in awkward ways (like
 --    only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
@@ -107,6 +107,7 @@ require("prototypes.item_groups")
 require("prototypes.items")
 require("prototypes.items_equipment")
 require("prototypes.items_logistics")
+require("prototypes.items_modules")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
@@ -118,6 +119,7 @@ require("prototypes.recipes_equipment")
 require("prototypes.recipes_fluids")
 require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
+require("prototypes.recipes_modules")
 require("prototypes.recipes_production")
 require("prototypes.recipes_resources")
 require("prototypes.recipes_science")

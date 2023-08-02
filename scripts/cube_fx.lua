@@ -103,6 +103,7 @@ local function cube_vehicle_mod(results)
     if entity.type == "construction-robot" or entity.type == "logistic-robot" then
       local drain = cube_fx_data.last_energy and entity.energy < cube_fx_data.last_energy
       if drain then
+        -- TODO: measure speed and scale drain by speed.
         if entity.type == "logistic-robot" then
           entity.energy = math.max(0, entity.energy - 200000)
         else

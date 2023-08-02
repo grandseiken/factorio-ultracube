@@ -394,8 +394,12 @@ data:extend({
 
     energy_usage = "250MW",
     ingredient_count = 6,
-    module_specification = {module_slots = 0, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1},
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = {
+      module_slots = 4,
+      module_info_icon_shift = {0, 1.7},
+      module_info_icon_scale = 1,
+    },
+    allowed_effects = {"speed", "consumption"},
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

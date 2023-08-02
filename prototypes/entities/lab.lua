@@ -280,10 +280,10 @@ data:extend({
       "cube-fundamental-comprehension-card",
       "cube-abstract-interrogation-card",
     },
-    module_specification =
-    {
+    module_specification = {
       module_slots = 0,
       module_info_icon_shift = {0, 0.9}
-    }
+    },
+    allowed_effects = {},
   },
 })

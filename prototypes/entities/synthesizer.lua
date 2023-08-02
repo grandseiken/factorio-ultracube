@@ -240,7 +240,7 @@ data:extend({
       module_info_icon_shift = {0, 1.8},
       module_info_icon_scale = 0.6,
     },
-    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_effects = {"productivity", "consumption", "pollution"},
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

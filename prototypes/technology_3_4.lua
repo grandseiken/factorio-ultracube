@@ -67,11 +67,33 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/spidertron.png",
     effects = {},
-    prerequisites = {
-      "cube-erudite-interpretation-card",
-    },
+    prerequisites = {"cube-erudite-interpretation-card"},
     unit = tech_cost_unit("4", 300),
     order = "3-0-3",
+  },
+  {
+    type = "technology",
+    name = "cube-compression-module",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/speed-module-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-compression-module"},
+    },
+    prerequisites = {"cube-deep-introspection-card"},
+    unit = tech_cost_unit("3", 300),
+    order = "3-1-0",
+  },
+  {
+    type = "technology",
+    name = "cube-inductance-module",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/effectivity-module-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-inductance-module"},
+    },
+    prerequisites = {"cube-erudite-interpretation-card"},
+    unit = tech_cost_unit("4", 300),
+    order = "3-1-1",
   },
   {
     type = "technology",
