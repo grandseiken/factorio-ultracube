@@ -68,10 +68,10 @@ data.raw["item"]["aai-loader"].subgroup = "inserter"
 data.raw["item"]["aai-v2-loader"].subgroup = "inserter"
 data.raw["item"]["aai-v3-loader"].subgroup = "inserter"
 data.raw["item"]["aai-v4-loader"].subgroup = "inserter"
-data.raw["item"]["aai-loader"].order = "x[1-loader]"
-data.raw["item"]["aai-v2-loader"].order = "x[2-loader]"
-data.raw["item"]["aai-v3-loader"].order = "x[3-loader]"
-data.raw["item"]["aai-v4-loader"].order = "x[4-loader]"
+data.raw["item"]["aai-loader"].order = "0[1-loader]"
+data.raw["item"]["aai-v2-loader"].order = "1[2-loader]"
+data.raw["item"]["aai-v3-loader"].order = "2[3-loader]"
+data.raw["item"]["aai-v4-loader"].order = "3[4-loader]"
 
 data.raw["item"]["aai-loader"].localised_description = nil
 data.raw["item"]["aai-v2-loader"].localised_description = nil

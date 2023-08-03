@@ -157,9 +157,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-synthesis-fluids",
+    name = "cube-distillation",
     group = "fluids",
     order = "h",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-synthesis-fluids",
+    group = "fluids",
+    order = "i",
   },
   {
     type = "item-subgroup",

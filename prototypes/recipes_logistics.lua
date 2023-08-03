@@ -494,6 +494,7 @@ data:extend({
     name = "cube-spidertron",
     ingredients = {
       {"exoskeleton-equipment", 4},
+      -- TODO: ?
       -- {"fusion-reactor-equipment", 2},
       -- {"rocket-launcher", 4},
       {"cube-processing-unit", 40},

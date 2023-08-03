@@ -18,7 +18,7 @@ require("prototypes.scripts.autoplace")
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working
 -- module graphics/tech graphics
--- deep fuel tech graphic
+-- deep fuel/deep crystal/deep plate tech graphics
 
 -- IMPORTANT TODOs:
 -------------------
@@ -38,6 +38,7 @@ require("prototypes.scripts.autoplace")
 -- LONG-TERM TODOs:
 -------------------
 -- rearrange upgrade techs; some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
+-- maybe pickaxe/mining upgrades?
 -- more armour stuff
 -- think about reintroducing biters + military?
 -- storylore tooltips
@@ -50,8 +51,7 @@ require("prototypes.scripts.autoplace")
 -- 3. Something maybe power / energy / resource / byproducts-focused? Possibly distillation / emotional things
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
--- deep dust -> various uses, e.g. crystal (somehow), components
--- emotion -> bots (done), other byproduct-y uses
+-- emotion -> other byproduct-y uses
 -- cube split to 64 phantom constituents -> then many different recipes -> dormant constituents (?) + reassembly
 
 -- will need some new intermediate products:
@@ -59,8 +59,6 @@ require("prototypes.scripts.autoplace")
 -- - weird cells or something
 -- - even better engines
 -- use a bunch more metal and a ton more STONE (mainly branch 1 (scale)), somehow
--- make deep crystals more interesting, some multistep feedback loop process - and make it use a ton of stone
--- and / or flasks somehow
 
 -- Main tech unlocks:
 -- Modules (perhaps initially in different parts of the tree)

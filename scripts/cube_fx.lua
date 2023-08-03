@@ -19,7 +19,6 @@ local cube_fx_data = nil
 function refresh_cube_fx_data()
   global.cube_fx_data = {
     last_locomotives = {},
-    last_energy = 0,
   }
   cube_fx_data = global.cube_fx_data
 end
@@ -94,6 +93,7 @@ end
 
 local function cube_vehicle_mod(results)
   local new_locomotives = {}
+  local new_last_robot = false
   local boomed = false
 
   for i = 1, #results do
@@ -101,16 +101,20 @@ local function cube_vehicle_mod(results)
     local entity = result.entity
 
     if entity.type == "construction-robot" or entity.type == "logistic-robot" then
-      local drain = cube_fx_data.last_energy and entity.energy < cube_fx_data.last_energy
-      if drain then
-        -- TODO: measure speed and scale drain by speed.
+      local last_robot = cube_fx_data.last_robot
+      if last_robot and entity.energy < last_robot.energy then
+        local drain = 1
         if entity.type == "logistic-robot" then
-          entity.energy = math.max(0, entity.energy - 200000)
-        else
-          entity.energy = math.max(0, entity.energy - 20000)
+          drain = 10
         end
+        drain = 15000 * drain * vector_length(vector_sub(entity.position, last_robot.position))
+        entity.energy = math.max(0, entity.energy - drain)
       end
-      cube_fx_data.last_energy = entity.energy
+      cube_fx_data.last_robot = {
+        position = entity.position,
+        energy = entity.energy,
+      }
+      new_last_robot = true
     end
 
     if result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
@@ -143,6 +147,10 @@ local function cube_vehicle_mod(results)
         end
       end
     end
+  end
+
+  if not new_last_robot then
+    cube_fx_data.last_robot = nil
   end
 
   for _, locomotive in pairs(new_locomotives) do

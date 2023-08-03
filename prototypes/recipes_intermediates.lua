@@ -243,10 +243,12 @@ data:extend({
     type = "recipe",
     name = "cube-deep-crystal",
     ingredients = {
-      {type = "fluid", name = "sulfuric-acid", amount = 80},
-      {"cube-deep-powder", 20},
+      {type = "fluid", name = "cube-deep-solution", amount = 100},
+      {"cube-deep-powder", 10},
+      {"cube-calcium", 10},
     },
     results = {
+      {type = "fluid", name = "cube-mineral-water", amount = 80},
       {"cube-deep-crystal", 1},
     },
     main_product = "cube-deep-crystal",

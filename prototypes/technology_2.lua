@@ -360,16 +360,52 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-deep-core-processing",
+    name = "cube-resplendent-plate",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
+    icon = "__Krastorio2Assets__/technologies/imersium-processing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-resplendent-plate"},
-      {type = "unlock-recipe", recipe = "cube-deep-crystal"},
     },
     prerequisites = {"cube-deep-core-ultradrill"},
     unit = tech_cost_unit("2", 240),
     order = "2-4-0",
+  },
+  {
+    type = "technology",
+    name = "cube-deep-crystallization",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-deep-solution"},
+      {type = "unlock-recipe", recipe = "cube-deep-powder-separation"},
+      {type = "unlock-recipe", recipe = "cube-deep-crystal"},
+    },
+    prerequisites = {"cube-deep-core-ultradrill"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-1",
+  },
+  {
+    type = "technology",
+    name = "cube-deep-crystal-distillation",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-deep-crystal-distillation"},
+    },
+    prerequisites = {
+      "cube-deep-crystallization",
+      "cube-distillation",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-2",
   },
   {
     type = "technology",
@@ -384,7 +420,7 @@ data:extend({
       "cube-deep-core-ultradrill",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-4-1",
+    order = "2-4-2",
   },
   {
     type = "technology",
@@ -408,8 +444,9 @@ data:extend({
       tech_unlock_effect(),
     },
     prerequisites = {
-      "cube-deep-core-processing",
-      "cube-emotional-decomposition",
+      "cube-resplendent-plate",
+      "cube-deep-crystallization",
+      "cube-explosives",
     },
     unit = tech_cost_unit("2x", 300),
     order = "2-9-0",
@@ -423,7 +460,11 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-erudite-interpretation-card"},
       tech_unlock_effect(),
     },
-    prerequisites = {"cube-processing-unit"},
+    prerequisites = {
+      "cube-processing-unit",
+      "cube-emotional-decomposition",
+      "cube-battery",
+    },
     unit = tech_cost_unit("2x", 300),
     order = "2-9-1",
   },

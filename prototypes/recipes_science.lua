@@ -79,6 +79,9 @@ data:extend({
     name = "cube-deep-introspection-card",
     ingredients = {
       {"cube-deep-crystal", 1},
+      {"cube-resplendent-plate", 1}, -- Or something from it
+      {"explosives", 1}, -- Maybe?
+      {"concrete", 10}, -- Definitely.
       {"cube-unobtainium", 1},
     },
     results = {{"cube-deep-introspection-card", 1}},
@@ -91,6 +94,9 @@ data:extend({
     name = "cube-erudite-interpretation-card",
     ingredients = {
       {"cube-processing-unit", 1},
+      {"battery", 1},  -- Or something from it.
+      {"cube-n-dimensional-widget", 1},  -- Maybe?
+      {"cube-bottled-anguish", 1},  -- Or something from it.
       {"cube-unobtainium", 1},
     },
     results = {{"cube-erudite-interpretation-card", 1}},

@@ -26,6 +26,10 @@ function vector_add(v, u)
   return {x = v.x + u.x, y = v.y + u.y}
 end
 
+function vector_sub(v, u)
+  return {x = v.x - u.x, y = v.y - u.y}
+end
+
 function vector_length(v)
   return math.sqrt(v.x * v.x + v.y * v.y)
 end

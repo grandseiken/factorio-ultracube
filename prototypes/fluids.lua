@@ -47,7 +47,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
-    order = "a[tar]-a[unstable-gas]"
+    order = "a[tar]-a[unstable-gas]",
   },
   {
     type = "fluid",
@@ -70,8 +70,8 @@ data:extend({
     flow_color = {r=0.6, g=0.6, b=0.6, a=0.5},
     default_temperature = 25,
     heat_capacity = "0.1KJ",
-    subgroup = "cube-tar-output",
-    order = "a[tar]-d[ethanol]"
+    subgroup = "cube-distillation",
+    order = "1[ethanol]",
   },
   {
     type = "fluid",
@@ -83,7 +83,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-a[gel]"
+    order = "b[matter]-a[gel]",
   },
   {
     type = "fluid",
@@ -95,7 +95,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-b[cerebral]"
+    order = "b[matter]-b[cerebral]",
   },
   {
     type = "fluid",
@@ -107,7 +107,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-c[joy]"
+    order = "b[matter]-c[joy]",
   },
   {
     type = "fluid",
@@ -119,6 +119,29 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-d[despair]"
+    order = "b[matter]-d[despair]",
+  },
+  {
+    type = "fluid",
+    name = "cube-mineral-water",
+    icon = "__Krastorio2Assets__/icons/fluids/mineral-water.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.15, g=0.1, b=0.4},
+    flow_color = {r=0.5, g=0.5, b=0.75},
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    order = "a[fluid]-b[mineral-water]",
+  },
+  {
+    type = "fluid",
+    name = "cube-deep-solution",
+    icon = "__Ultracube__/graphics/deep-solution.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.7, g=0.55, b=0.8},
+    flow_color = {r=0.75, g=0.6, b=0.85},
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    subgroup = "cube-distillation",
+    order = "0[deep-solution]",
   },
 })
