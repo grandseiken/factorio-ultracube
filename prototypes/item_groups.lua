@@ -9,6 +9,25 @@ data:extend({
     icon_mipmaps = 4,
   },
   {
+    type = "item-group",
+    name = "cube-tools",
+    order = "d",
+    icons = {
+      {
+        icon = "__base__/graphics/technology/power-armor-mk2.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
+      },
+      {
+        icon = "__base__/graphics/technology/module.png",
+        icon_size = 256,
+        icon_mipmaps = 4,
+        scale = 0.8,
+      },
+    },
+  },
+
+  {
     type = "item-subgroup",
     name = "cube-synthesis-handling",
     group = "cube-synthesis",
@@ -52,7 +71,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-furnace",
+    name = "cube-processed-materials",
     group = "intermediate-products",
     order = "2",
   },
@@ -96,8 +115,14 @@ data:extend({
   {
     type = "item-subgroup",
     name = "cube-repair",
-    group = "combat",
+    group = "cube-tools",
     order = "a"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-modules",
+    group = "cube-tools",
+    order = "x"
   },
 
   {

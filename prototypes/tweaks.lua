@@ -8,6 +8,11 @@ data.raw.character.character.crafting_categories = {
   "cube-fabricator-handcraft",
 }
 
+data.raw["item-subgroup"]["armor"].group = "cube-tools"
+data.raw["item-subgroup"]["equipment"].group = "cube-tools"
+data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"
+data.raw["item-subgroup"]["transport"].group = "cube-tools"
+
 data.raw.container["iron-chest"].inventory_size = 20
 data.raw["logistic-container"]["logistic-chest-passive-provider"].inventory_size = 20
 data.raw["logistic-container"]["logistic-chest-active-provider"].inventory_size = 20
@@ -20,7 +25,7 @@ data.raw.inserter["stack-inserter"].stack_size_bonus = 3
 data.raw.inserter["stack-filter-inserter"].stack_size_bonus = 3
 data.raw.item["copper-cable"].subgroup = "cube-components"
 data.raw.item["copper-cable"].order = "0[b-conductive-wire]"
-data.raw.item["stone-brick"].subgroup = "cube-furnace"
+data.raw.item["stone-brick"].subgroup = "cube-processed-materials"
 data.raw.item["stone-brick"].order = "0[a-brick]"
 data.raw.item["radar"].subgroup = "cube-logistic-machines"
 data.raw.item["radar"].order = "0[radar]"
@@ -29,7 +34,7 @@ data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["coal"].fuel_category = "cube-fuel-general"
 data.raw.item["sulfur"].subgroup = "cube-chemical-intermediates"
-data.raw.item["sulfur"].order = "0[sulfur]"
+data.raw.item["sulfur"].order = "0[a-sulfur]"
 data.raw.item["explosives"].subgroup = "cube-chemical-intermediates"
 data.raw.item["explosives"].order = "1[explosives]"
 data.raw.item["battery"].subgroup = "cube-chemical-intermediates"

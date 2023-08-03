@@ -79,7 +79,6 @@ data:extend({
     results = {{"cube-besselheim-flask", 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
-    always_show_made_in = true,
     enabled = false,
   },
   {
@@ -226,6 +225,27 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-deep-crystal",
+    ingredients = {
+      {type = "fluid", name = "sulfuric-acid", amount = 80},
+      {"cube-deep-powder", 20},
+    },
+    results = {
+      {"cube-deep-crystal", 1},
+    },
+    main_product = "cube-deep-crystal",
+    energy_required = 6,
+    category = "cube-chemical-plant",
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.525, g = 0.15, b = 0.60},
+      secondary = {r = 0.95, g = 0.6, b = 1.0},
+      tertiary = {r = 0.75, g = 0.50, b = 0.9},
+      quaternary = {r = 0.210, g = 0.170, b = 0.013},
+    },
+  },
 
   {
     type = "recipe",
@@ -247,6 +267,37 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-deeply-condensed-fuel",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/rocket-fuel.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, 8},
+      },
+    },
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"sulfur", 100},
+      {"cube-deep-powder", 200},
+      {type = "fluid", name = "cube-unstable-gas", amount = 8000},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"cube-condensed-fuel", 200}
+    },
+    category = "cube-fuel-refinery",
+    subgroup = "cube-fuel",
+    order = "x[b-deeply-condensed-fuel]",
+    energy_required = 2,
+    always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-sophisticated-matter-unit",
     ingredients = {
       {"cube-basic-matter-unit", 8},
@@ -255,6 +306,19 @@ data:extend({
     results = {{"cube-sophisticated-matter-unit", 1}},
     energy_required = 2,
     category = "cube-fabricator",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-resplendent-plate",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 1},
+      {"cube-rare-metals", 16},
+      {"cube-deep-powder", 16},
+    },
+    results = {{"cube-resplendent-plate", 2}},
+    energy_required = 12,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
 })

@@ -348,6 +348,34 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-deep-core-processing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-resplendent-plate"},
+      {type = "unlock-recipe", recipe = "cube-deep-crystal"},
+    },
+    prerequisites = {"cube-deep-core-ultradrill"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-0",
+  },
+  {
+    type = "technology",
+    name = "cube-deep-fuel-refining",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-deeply-condensed-fuel"},
+    },
+    prerequisites = {
+      "cube-fuel-refinery",
+      "cube-deep-core-ultradrill",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-1",
+  },
+  {
+    type = "technology",
     name = "cube-deep-introspection-card",
     icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
@@ -356,7 +384,7 @@ data:extend({
       tech_unlock_effect(),
     },
     prerequisites = {
-      "cube-deep-core-ultradrill",
+      "cube-deep-core-processing",
       "cube-emotional-decomposition",
     },
     unit = tech_cost_unit("2x", 300),

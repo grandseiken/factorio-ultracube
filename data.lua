@@ -18,6 +18,7 @@ require("prototypes.scripts.autoplace")
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working
 -- module graphics/tech graphics
+-- deep fuel tech graphic
 
 -- IMPORTANT TODOs:
 -------------------
@@ -80,6 +81,7 @@ require("prototypes.scripts.autoplace")
 -- Maybe some way of converting power -> more matter?
 
 -- Random thoughts.
+-- Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
