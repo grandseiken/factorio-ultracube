@@ -49,6 +49,20 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-processing-unit",
+    ingredients = {
+      {"cube-glass", 1},
+      {"cube-advanced-circuit", 6},
+      {"copper-cable", 8},
+      {"cube-unobtainium", 8},
+    },
+    results = {{"cube-processing-unit", 1}},
+    energy_required = 10,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-basic-motor-unit",
     ingredients = {
       {"pipe", 2},

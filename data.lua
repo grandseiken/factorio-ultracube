@@ -58,27 +58,26 @@ require("prototypes.scripts.autoplace")
 -- - blue chips
 -- - weird cells or something
 -- - even better engines
--- use a bunch more metal and a ton more stone (mainly branch 1 (scale)), somehow
+-- use a bunch more metal and a ton more STONE (mainly branch 1 (scale)), somehow
+-- make deep crystals more interesting, some multistep feedback loop process - and make it use a ton of stone
+-- and / or flasks somehow
 
--- Main tech
-
--- Tech unlocks:
+-- Main tech unlocks:
 -- Modules (perhaps initially in different parts of the tree)
 -- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
 -- - Possibly start from a common module-base precursor (nodule?) + component for type
 -- - Eventually higher-tier modules
 -- V4 belts
--- Better armour and equipments; legs early
+-- Better armour / equipments
 -- New power solutions:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol)
--- - Dust -> better fuel recipe
 -- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
 -- New ways to get matter, and possibly widgets/contemplation
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
+----- Or: maybe some way of converting like this, but high power cost, e.g. power -> more matter?
 -- Cube teleportation (using krastorio teleporter graphic)
--- Maybe some way of converting power -> more matter?
 
 -- Random thoughts.
 -- Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split

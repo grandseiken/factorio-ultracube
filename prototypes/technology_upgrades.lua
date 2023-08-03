@@ -442,9 +442,9 @@ data:extend({
     },
     prerequisites = {
       "cube-worker-robot-speed-4",
-      "cube-logistic-system",
+      "cube-deep-introspection-card",
     },
-    unit = tech_cost_unit("4", 300),
+    unit = tech_cost_unit("3", 300),
     upgrade = true,
     order = "10-5-4",
   },
@@ -458,7 +458,7 @@ data:extend({
     },
     prerequisites = {
       "cube-worker-robot-speed-5",
-      "cube-deep-introspection-card",
+      "cube-logistic-system",
     },
     unit = tech_cost_unit("5", 360),
     upgrade = true,
@@ -505,9 +505,9 @@ data:extend({
     },
     prerequisites = {
       "cube-worker-robot-storage-1",
-      "cube-deep-introspection-card",
+      "cube-logistic-system",
     },
-    unit = tech_cost_unit("3", 300),
+    unit = tech_cost_unit("4", 300),
     upgrade = true,
     order = "10-6-1",
   },
@@ -521,7 +521,7 @@ data:extend({
     },
     prerequisites = {
       "cube-worker-robot-storage-2",
-      "cube-logistic-system",
+      "cube-deep-introspection-card",
     },
     unit = tech_cost_unit("5", 360),
     upgrade = true,

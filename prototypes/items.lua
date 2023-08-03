@@ -146,6 +146,15 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-processing-unit",
+    icon = "__Krastorio2Assets__/icons/items/processing-unit.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-components",
+    order = "0[e-processing-unit]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
     name = "cube-besselheim-flask",
     icon = "__Ultracube__/graphics/flask.png",
     icon_size = 64, icon_mipmaps = 4,

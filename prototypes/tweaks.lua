@@ -68,3 +68,5 @@ data.raw.fluid["sulfuric-acid"].order = "a[tar]-b[acid]"
 data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-transport-belt"
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
 data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
+
+data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"cube-armor"}

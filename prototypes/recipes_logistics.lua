@@ -132,7 +132,7 @@ data:extend({
     ingredients = {
       {"express-transport-belt", 4},
       {"cube-advanced-engine", 1},
-      {"cube-deep-powder", 16},
+      {"cube-resplendent-plate", 4},
     },
     results = {{"cube-v4-transport-belt", 4}},
     energy_required = 4,
@@ -144,7 +144,7 @@ data:extend({
     name = "cube-underground-belt-3",
     ingredients = {
       {"cube-v4-transport-belt", 12},
-      {"cube-deep-powder", 16},
+      {"cube-resplendent-plate", 4},
     },
     results = {{"cube-v4-underground-belt", 2}},
     energy_required = 4,
@@ -157,8 +157,7 @@ data:extend({
     ingredients = {
       {"cube-v4-transport-belt", 2},
       {"cube-advanced-engine", 1},
-      {"cube-advanced-circuit", 2},
-      {"cube-deep-powder", 16},
+      {"cube-processing-unit", 2},
     },
     results = {{"cube-v4-splitter", 1}},
     energy_required = 4,
@@ -199,7 +198,7 @@ data:extend({
     ingredients = {
       {"aai-v3-loader", 1},
       {"cube-v4-transport-belt", 1},
-      {"cube-deep-powder", 20},
+      {"cube-processing-unit", 20},
       {"cube-advanced-engine", 20},
     },
     results = {{"aai-v4-loader", 1}},
@@ -490,6 +489,38 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-spidertron",
+    ingredients = {
+      {"exoskeleton-equipment", 4},
+      -- {"fusion-reactor-equipment", 2},
+      -- {"rocket-launcher", 4},
+      {"cube-processing-unit", 40},
+      {"cube-advanced-engine", 20},
+      {"cube-sophisticated-matter-unit", 100},
+      {"cube-inductance-module", 10},
+      {"radar", 2},
+      {"raw-fish", 1},
+    },
+    results = {{"spidertron", 1}},
+    energy_required = 20,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-spidertron-remote",
+    ingredients = {
+      {"processing-unit", 1},
+      {"radar", 1},
+    },
+    results = {{"spidertron-remote", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+
   {
     type = "recipe",
     name = "cube-locomotive",

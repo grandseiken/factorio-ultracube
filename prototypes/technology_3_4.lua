@@ -12,8 +12,9 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-splitter-3"},
     },
     prerequisites = {
-      "cube-express-logistics",
       "cube-deep-introspection-card",
+      "cube-express-logistics",
+      "cube-processing-unit",
     },
     unit = tech_cost_unit("3", 300),
     order = "3-0-0",
@@ -63,16 +64,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-spidertron",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/spidertron.png",
-    effects = {},
-    prerequisites = {"cube-erudite-interpretation-card"},
-    unit = tech_cost_unit("4", 300),
-    order = "3-0-3",
-  },
-  {
-    type = "technology",
     name = "cube-compression-module",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-1.png",
@@ -118,5 +109,22 @@ data:extend({
     },
     unit = tech_cost_unit("4", 300),
     order = "3-1-0",
+  },
+  {
+    type = "technology",
+    name = "cube-spidertron",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/spidertron.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-spidertron"},
+      {type = "unlock-recipe", recipe = "cube-spidertron-remote"},
+    },
+    prerequisites = {
+      "cube-exoskeleton-equipment",
+      "cube-inductance-module",
+      "cube-radar",
+    },
+    unit = tech_cost_unit("4", 300),
+    order = "3-2-0",
   },
 })

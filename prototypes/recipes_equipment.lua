@@ -40,6 +40,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-exoskeleton-equipment",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 10},
+      {"cube-advanced-circuit", 20},
+      {"cube-advanced-engine", 20},
+      {"copper-cable", 40}
+    },
+    results = {{"exoskeleton-equipment", 1}},
+    energy_required = 10,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-personal-roboport-equipment",
     ingredients = {
       {"battery", 4},

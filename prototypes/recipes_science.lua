@@ -77,7 +77,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-introspection-card",
-    ingredients = {{"cube-unobtainium", 1}},
+    ingredients = {
+      {"cube-deep-crystal", 1},
+      {"cube-unobtainium", 1},
+    },
     results = {{"cube-deep-introspection-card", 1}},
     energy_required = 12,
     category = "cube-fabricator-handcraft",
@@ -86,7 +89,10 @@ data:extend({
   {
     type = "recipe",
     name = "cube-erudite-interpretation-card",
-    ingredients = {{"cube-unobtainium", 1}},
+    ingredients = {
+      {"cube-processing-unit", 1},
+      {"cube-unobtainium", 1},
+    },
     results = {{"cube-erudite-interpretation-card", 1}},
     energy_required = 12,
     category = "cube-fabricator-handcraft",

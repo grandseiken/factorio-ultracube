@@ -230,6 +230,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-exoskeleton-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
+    },
+    prerequisites = {"cube-sophisticated-matter-unit"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-1-7",
+  },
+  {
+    type = "technology",
     name = "cube-explosive-smelting",
     icons = {
       {
@@ -376,6 +388,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-processing-unit",
+    icon = "__base__/graphics/technology/advanced-electronics-2.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-processing-unit"},
+    },
+    prerequisites = {"cube-dimensionality-disruptor"},
+    unit = tech_cost_unit("2x", 240),
+    order = "2-5-0",
+  },
+  {
+    type = "technology",
     name = "cube-deep-introspection-card",
     icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
@@ -399,7 +423,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-erudite-interpretation-card"},
       tech_unlock_effect(),
     },
-    prerequisites = {"cube-dimensionality-disruptor"},
+    prerequisites = {"cube-processing-unit"},
     unit = tech_cost_unit("2x", 300),
     order = "2-9-1",
   },
