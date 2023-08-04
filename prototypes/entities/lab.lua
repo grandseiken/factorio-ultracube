@@ -279,6 +279,8 @@ data:extend({
       "cube-basic-contemplation-unit",
       "cube-fundamental-comprehension-card",
       "cube-abstract-interrogation-card",
+      "cube-deep-introspection-card",
+      "cube-erudite-interpretation-card",
     },
     module_specification = {
       module_slots = 0,

@@ -436,6 +436,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-power-armor",
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/power-armor.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-power-armor"},
+    },
+    prerequisites = {
+      "cube-resplendent-plate",
+      "cube-processing-unit",
+    },
+    unit = tech_cost_unit("2", 300),
+    order = "2-5-1",
+  },
+  {
+    type = "technology",
     name = "cube-deep-introspection-card",
     icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,

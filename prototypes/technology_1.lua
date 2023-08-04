@@ -236,6 +236,8 @@ data:extend({
     order = "1-2-1",
   },
   {
+    -- TODO: merging elbow grease and advanced engine into one technology seems
+    -- to make the tech tree a lot cleaner. Revisit later?
     type = "technology",
     name = "cube-advanced-engine",
     icon_size = 256, icon_mipmaps = 4,
@@ -482,6 +484,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-night-vision-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/night-vision-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-night-vision-equipment"},
+    },
+    prerequisites = {"cube-modular-armor"},
+    unit = tech_cost_unit("1a", 120),
+    order = "1-5-3",
+  },
+  {
+    type = "technology",
     name = "cube-personal-roboport-equipment",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-equipment.png"),
@@ -493,7 +507,7 @@ data:extend({
       "cube-battery",
     },
     unit = tech_cost_unit("1a", 120),
-    order = "1-5-3",
+    order = "1-5-4",
   },
   {
     type = "technology",

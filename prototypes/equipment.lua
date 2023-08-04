@@ -7,8 +7,22 @@ data:extend({
   {
     type = "equipment-grid",
     name = "cube-small-equipment-grid",
-    width = 4,
-    height = 4,
+    width = 5,
+    height = 5,
+    equipment_categories = {"cube-armor"}
+  },
+  {
+    type = "equipment-grid",
+    name = "cube-medium-equipment-grid",
+    width = 7,
+    height = 7,
+    equipment_categories = {"cube-armor"}
+  },
+  {
+    type = "equipment-grid",
+    name = "cube-huge-equipment-grid",
+    width = 9,
+    height = 9,
     equipment_categories = {"cube-armor"}
   },
   {

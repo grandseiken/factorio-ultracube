@@ -69,4 +69,11 @@ data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-tra
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
 data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 
+data.raw.armor["power-armor"].inventory_size_bonus = 0
+data.raw.armor["power-armor"].equipment_grid = "cube-medium-equipment-grid"
+data.raw.armor["power-armor-mk2"].inventory_size_bonus = 0
+data.raw.armor["power-armor-mk2"].equipment_grid = "cube-huge-equipment-grid"
+data.raw["night-vision-equipment"]["night-vision-equipment"].shape.height = 1
+data.raw["night-vision-equipment"]["night-vision-equipment"].categories = {"cube-armor"}
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"cube-armor"}
+data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
