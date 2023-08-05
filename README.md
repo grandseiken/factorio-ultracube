@@ -4,14 +4,22 @@ A work-in-progress overhaul mod for Factorio.
 
 This mod is a bit more difficult than vanilla Factorio, but in a way that I hope feels fairly unique.
 
-It doesn't add huge numbers of intermediate products or incredibly complex recipe chains.
-
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps.
 
-As a result, substantial portions of the factory resist copy-paste expansion, and can be made more efficient only by solving logistical problems, making design improvements, or unlocking new technologies. At any given level of technological progress, there exists some upper bound on the productivity of your factory. Getting close to the limit will be tricky: you'll need to intelligently route the cube where it's needed,
-deal with sporadically-running high-throughput machines, and probably invest in a fair amount of circuit network trickery.
+As a result, substantial portions of the factory resist copy-paste expansion, and can be made more efficient only by solving logistical problems, making design improvements, or unlocking new technologies.
 
-It currently features three levels of science and a bunch of interesting puzzles, with more content on the way.
+At any given level of technological progress, there exists some theoretical upper bound on the possible output of your factory. Getting close to the limit will be tricky: you'll need to intelligently route the cube where it's needed, deal with sporadically-running high-throughput machines, and probably invest in a decent amount of circuit network trickery.
+
+It doesn't introduce huge numbers of intermediate products or incredibly complex recipe chains. The aim is to have (roughly) comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
+
+The technology tree has been rebuilt from scratch. A few production chains share similarities with vanilla equivalents, but there's usually some kind of twist. There's a bit more fluid and byproduct handling, but nothing overly masochistic. Some big traditional staples are totally gone.
+
+It currently features three levels of science and an assortment of devious puzzles, with more content on the way.
+
+## Screenshots
+
+![Early-game spaghetti](screenshots/spaghetti.jpg)
+(Relatively) early-game spaghetti.
 
 ## Frequently asked questions
 
