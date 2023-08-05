@@ -36,7 +36,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-electric-mining-drill"},
     },
     unit = tech_cost_unit("0", 20),
-    order = "0-1-0"
+    order = "0-1-0",
   },
   {
     type = "technology",

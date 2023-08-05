@@ -172,6 +172,7 @@ data:extend({
       {"fast-transport-belt", 1},
       {"cube-electronic-circuit", 20},
       {"cube-basic-motor-unit", 20},
+      {"cube-processing-unit", 1},
     },
     results = {{"aai-v2-loader", 1}},
     energy_required = 8,

@@ -41,6 +41,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-electric-mining-drill-mk2",
+    icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "extraction-machine",
+    order = "d[0-drill-2]",
+    place_result = "cube-electric-mining-drill-mk2",
+    stack_size = 20,
+  },
+  {
+    type = "item",
     name = "cube-deep-core-ultradrill",
     icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
     icon_size = 64, icon_mipmaps = 4,

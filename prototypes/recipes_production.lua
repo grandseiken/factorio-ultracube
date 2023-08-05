@@ -59,10 +59,23 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-electric-mining-drill-mk2",
+    ingredients = {
+      {"cube-electric-mining-drill", 1},
+      {"cube-advanced-engine", 10},
+      {"cube-resplendent-plate", 20},
+    },
+    results = {{"cube-electric-mining-drill-mk2", 1}},
+    energy_required = 16,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-deep-core-ultradrill",
     ingredients = {
       {"cube-sophisticated-matter-unit", 200},
-      {"cube-advanced-engine", 20},
+      {"cube-advanced-engine", 40},
       {"cube-advanced-circuit", 20},
       {"cube-rare-metals", 200},
       {"concrete", 400},

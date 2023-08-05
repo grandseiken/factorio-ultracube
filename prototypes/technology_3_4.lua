@@ -3,6 +3,18 @@ require("prototypes.lib.tech_costs")
 data:extend({
   {
     type = "technology",
+    name = "cube-coal-liquefaction",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/coal-liquefaction.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-coal-liquefaction"},
+    },
+    prerequisites = {"cube-deep-introspection-card"},
+    unit = tech_cost_unit("3", 240),
+    order = "3-0-0"
+  },
+  {
+    type = "technology",
     name = "cube-v4-logistics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/logistics-5.png",
@@ -17,30 +29,6 @@ data:extend({
       "cube-processing-unit",
     },
     unit = tech_cost_unit("3", 300),
-    order = "3-0-0",
-  },
-  {
-    type = "technology",
-    name = "cube-loader",
-    icons = {
-      {
-        icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png",
-        icon_size = 256
-      },
-      {
-        icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
-        icon_size = 256,
-        tint = {255, 24, 38},
-      },
-    },
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-v2-loader"},
-    },
-    prerequisites = {
-      "cube-logistics",
-      "cube-erudite-interpretation-card",
-    },
-    unit = tech_cost_unit("4", 240),
     order = "3-0-1",
   },
   {
@@ -104,6 +92,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-v3-loader"},
     },
     prerequisites = {
+      "cube-erudite-interpretation-card",
       "cube-express-logistics",
       "cube-loader",
     },

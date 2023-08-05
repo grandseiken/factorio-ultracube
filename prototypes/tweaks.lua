@@ -9,7 +9,6 @@ data.raw.character.character.crafting_categories = {
 }
 
 data.raw["item-subgroup"]["armor"].group = "cube-tools"
-data.raw["item-subgroup"]["equipment"].group = "cube-tools"
 data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"
 data.raw["item-subgroup"]["transport"].group = "cube-tools"
 
@@ -69,6 +68,8 @@ data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-tra
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
 data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 
+data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"
+data.raw.item["exoskeleton-equipment"].subgroup = "cube-equipment"
 data.raw.armor["power-armor"].inventory_size_bonus = 0
 data.raw.armor["power-armor"].equipment_grid = "cube-medium-equipment-grid"
 data.raw.armor["power-armor-mk2"].inventory_size_bonus = 0

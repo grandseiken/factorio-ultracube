@@ -40,6 +40,18 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-solar-panel-equipment-mk2",
+    ingredients = {
+      {"cube-solar-panel-equipment", 6},
+      {"cube-resplendent-plate", 16},
+    },
+    results = {{"cube-solar-panel-equipment-mk2", 1}},
+    energy_required = 20,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-power-armor",
     ingredients = {
       {"cube-modular-armor", 1},

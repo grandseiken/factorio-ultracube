@@ -51,14 +51,18 @@ require("prototypes.scripts.autoplace")
 -- 3. Something maybe power / energy / resource / byproducts-focused? Possibly distillation / emotional things
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
--- emotion -> other byproduct-y uses
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
--- - only real options seem like fabricator or scaled-down matter plant
+-- - options: fabricator; scaled-down matter plant; OR the unpacker could convert a synthesizer into a mini-synthesizer...
+-- tweak loader v1 position/recipe
+-- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 
 -- will need some new intermediate products:
--- - blue chips
--- - weird cells or something
--- - even better engines
+-- - 1 more weird new product on the deep branch - from plate
+-- - what's the new ingredient for processing units?
+-- - at least 1 other new thing on the splitting side:
+-- - some kind of weird better battery / power cell type thing. Made from battery; used for battery equipment v2 + science
+-- - probably something else too
+-- - even better engines? maybe not
 -- use a bunch more metal and a ton more STONE (mainly branch 1 (scale)), somehow
 
 -- Main tech unlocks:
@@ -66,14 +70,12 @@ require("prototypes.scripts.autoplace")
 -- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
 -- - Possibly start from a common module-base precursor (nodule?) + component for type??
 -- - Eventually higher-tier modules
--- Better armour / equipments (battery v2, advanced solar panel, roboport v2)
--- replendent plate -> mining drill mk3
+-- Better armour / equipments (battery v2, roboport v2, both on erudite tree)
+-- emotion -> other byproduct-y uses
 -- New power solutions:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol)
 -- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
--- OR: voiding joy/anguish requires phantom constituents, e.g.:
--- - 100 joy + dormant phantom -> phantom; 100 anguish + phantom -> dormant phantom
 -- New ways to get matter, and possibly widgets/contemplation
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)

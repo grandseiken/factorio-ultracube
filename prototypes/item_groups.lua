@@ -35,7 +35,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-synthesis-intermediates",
+    name = "cube-synthesis-phantom",
     group = "cube-synthesis",
     order = "1",
   },
@@ -113,9 +113,15 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-science",
+    name = "cube-flasks",
     group = "intermediate-products",
     order = "e",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-science",
+    group = "intermediate-products",
+    order = "f",
   },
 
   {
@@ -123,6 +129,18 @@ data:extend({
     name = "cube-repair",
     group = "cube-tools",
     order = "a"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-equipment-power",
+    group = "cube-tools",
+    order = "e"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-equipment",
+    group = "cube-tools",
+    order = "f"
   },
   {
     type = "item-subgroup",
@@ -148,6 +166,12 @@ data:extend({
     name = "cube-logistic-machines",
     group = "production",
     order = "z",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-tar-furnace",
+    group = "fluids",
+    order = "e",
   },
   {
     type = "item-subgroup",

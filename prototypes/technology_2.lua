@@ -376,6 +376,30 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-solar-panel-equipment-mk2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-solar-panel.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-solar-panel-equipment-mk2"},
+    },
+    prerequisites = {"cube-resplendent-plate", "cube-modular-armor"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-1",
+  },
+  {
+    type = "technology",
+    name = "cube-electric-mining-drill-mk2",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk3.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-electric-mining-drill-mk2"},
+    },
+    prerequisites = {"cube-resplendent-plate"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-2",
+  },
+  {
+    type = "technology",
     name = "cube-deep-crystallization",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
@@ -386,7 +410,7 @@ data:extend({
     },
     prerequisites = {"cube-deep-core-ultradrill"},
     unit = tech_cost_unit("2", 240),
-    order = "2-4-1",
+    order = "2-4-3",
   },
   {
     type = "technology",
@@ -409,7 +433,7 @@ data:extend({
       "cube-distillation",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-4-2",
+    order = "2-4-4",
   },
   {
     type = "technology",
@@ -424,7 +448,7 @@ data:extend({
       "cube-deep-core-ultradrill",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-4-2",
+    order = "2-4-5",
   },
   {
     type = "technology",
@@ -444,7 +468,38 @@ data:extend({
     effects = {},
     prerequisites = {"cube-dimensionality-unpacker"},
     unit = tech_cost_unit("2", 240),
-    order = "2-4-3",
+    order = "2-4-6",
+  },
+  {
+    type = "technology",
+    name = "cube-phantom-cube-emotion",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.25},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/joy.png",
+        shift = {-24, 0},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/despair.png",
+        shift = {24, 0},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-phantom-constituent-emotional-recharge"},
+      {type = "unlock-recipe", recipe = "cube-phantom-constituent-emotional-discharge"},
+    },
+    prerequisites = {
+      "cube-dimensionality-unpacker",
+      "cube-emotional-decomposition",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-7",
   },
   {
     type = "technology",
@@ -472,6 +527,30 @@ data:extend({
     },
     unit = tech_cost_unit("2", 300),
     order = "2-5-1",
+  },
+  {
+    type = "technology",
+    name = "cube-loader",
+    icons = {
+      {
+        icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png",
+        icon_size = 256
+      },
+      {
+        icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
+        icon_size = 256,
+        tint = {255, 24, 38},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-v2-loader"},
+    },
+    prerequisites = {
+      "cube-logistics",
+      "cube-processing-unit",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-5-2",
   },
   {
     type = "technology",

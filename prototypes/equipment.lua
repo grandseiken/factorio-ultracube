@@ -54,6 +54,34 @@ data:extend({
     categories = {"cube-armor"},
   },
   {
+    type = "solar-panel-equipment",
+    name = "cube-solar-panel-equipment-mk2",
+    sprite = {
+      filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel.png",
+      width = 140,
+      height = 140,
+      priority = "medium",
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/advanced-solar-panel/hr-advanced-solar-panel.png",
+        width = 280,
+        height = 280,
+        priority = "medium",
+        scale = 0.5,
+      },
+    },
+    shape = {
+      width = 2,
+      height = 2,
+      type = "full",
+    },
+    energy_source = {
+      type = "electric",
+      usage_priority = "primary-output",
+    },
+    power = "480kW",
+    categories = {"cube-armor"},
+  },
+  {
     type = "battery-equipment",
     name = "cube-battery-equipment",
     sprite = {
