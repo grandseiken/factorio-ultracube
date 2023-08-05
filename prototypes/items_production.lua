@@ -151,12 +151,12 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-dimensionality-disruptor",
+    name = "cube-dimensionality-unpacker",
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128, icon_mipmaps = 4,
     subgroup = "cube-production-machines",
     order = "1[2-disruptor]",
-    place_result = "cube-dimensionality-disruptor",
+    place_result = "cube-dimensionality-unpacker",
     stack_size = 5,
   },
   {

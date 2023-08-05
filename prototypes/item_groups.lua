@@ -59,6 +59,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-basic-products",
+    group = "intermediate-products",
+    order = "0",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-smelting",
     group = "intermediate-products",
     order = "0",

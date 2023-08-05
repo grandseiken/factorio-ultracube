@@ -227,7 +227,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-dimensionality-disruptor",
+    name = "cube-dimensionality-unpacker",
     ingredients = {
       {"concrete", 160},
       {"cube-sophisticated-matter-unit", 100},
@@ -235,7 +235,7 @@ data:extend({
       {"cube-advanced-circuit", 40},
       {"battery", 40},
     },
-    results = {{"cube-dimensionality-disruptor", 1}},
+    results = {{"cube-dimensionality-unpacker", 1}},
     energy_required = 40,
     category = "cube-fabricator-handcraft",
     enabled = false,

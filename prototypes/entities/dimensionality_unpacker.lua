@@ -4,8 +4,8 @@ local sounds = require("__base__/prototypes/entity/sounds")
 data:extend({
   {
     type = "corpse",
-    name = "cube-dimensionality-disruptor-remnant",
-    localised_name = {"remnant-name", {"entity-name.cube-dimensionality-disruptor"}},
+    name = "cube-dimensionality-unpacker-remnant",
+    localised_name = {"remnant-name", {"entity-name.cube-dimensionality-unpacker"}},
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128, icon_mipmaps = 4,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
@@ -39,14 +39,14 @@ data:extend({
   },
   {
     type = "assembling-machine",
-    name = "cube-dimensionality-disruptor",
+    name = "cube-dimensionality-unpacker",
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128, icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
-    minable = {mining_time = 2, result = "cube-dimensionality-disruptor"},
+    minable = {mining_time = 2, result = "cube-dimensionality-unpacker"},
     max_health = 2000,
     damaged_trigger_effect = hit_effects.entity(),
-    corpse = "cube-dimensionality-disruptor-remnant",
+    corpse = "cube-dimensionality-unpacker-remnant",
     dying_explosion = "cube-matter-explosion-s",
     collision_box = {{-4.75, -4.75}, {4.75, 4.75}},
     selection_box = {{-4.95, -4.95}, {4.95, 4.95}},
@@ -152,7 +152,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = {"cube-dimensionality-disruptor"},
+    crafting_categories = {"cube-dimensionality-unpacker"},
     scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {

@@ -284,12 +284,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-dimensionality-disruptor",
+    name = "cube-dimensionality-unpacker",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-dimensionality-disruptor"},
+      {type = "unlock-recipe", recipe = "cube-dimensionality-unpacker"},
       {type = "unlock-recipe", recipe = "cube-phantom-ultradense-constituent"},
+      {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube-phantom"},
+      {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge"},
+      {type = "unlock-recipe", recipe = "cube-basic-matter-unit-phantom"},
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-phantom"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
@@ -424,13 +428,33 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-phantom-cube-next",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.25},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        scale = 2, shift = {24, -24},
+      },
+    },
+    effects = {},
+    prerequisites = {"cube-dimensionality-unpacker"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-3",
+  },
+  {
+    type = "technology",
     name = "cube-processing-unit",
     icon = "__base__/graphics/technology/advanced-electronics-2.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-processing-unit"},
     },
-    prerequisites = {"cube-dimensionality-disruptor"},
+    prerequisites = {"cube-phantom-cube-next"},
     unit = tech_cost_unit("2x", 240),
     order = "2-5-0",
   },

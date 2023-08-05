@@ -112,8 +112,8 @@ data:extend({
         mipmap_count = 4,
       },
     },
-    subgroup = "cube-smelting",
-    order = "c[0-rare-metals]",
+    subgroup = "cube-basic-products",
+    order = "0[rare-metals]",
     stack_size = 100,
   },
 

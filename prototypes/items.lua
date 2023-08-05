@@ -38,6 +38,18 @@ data:extend({
     order = "0[2-cube]",
     stack_size = 1,
   },
+  {
+    type = "item",
+    name = "cube-dormant-phantom-constituent",
+    icons = {{
+      icon = "__base__/graphics/icons/solid-fuel.png",
+      icon_size = 64, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.25},
+    }},
+    subgroup = "cube-synthesis-handling",
+    order = "0[3-cube]",
+    stack_size = 1,
+  },
 
   {
     type = "item",
@@ -94,8 +106,8 @@ data:extend({
     name = "cube-basic-matter-unit",
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "cube-synthesis-basics",
-    order = "0[a-matter-0]",
+    subgroup = "cube-basic-products",
+    order = "1[matter]",
     stack_size = 200,
   },
   {
@@ -103,8 +115,8 @@ data:extend({
     name = "cube-n-dimensional-widget",
     icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "cube-synthesis-advanced",
-    order = "0[b-widget-0]",
+    subgroup = "cube-basic-products",
+    order = "2[widget]",
     stack_size = 50,
   },
 

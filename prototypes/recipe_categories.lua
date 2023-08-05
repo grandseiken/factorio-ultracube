@@ -16,7 +16,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-dimensionality-disruptor",
+    name = "cube-dimensionality-unpacker",
     order = "1b",
   },
   {

@@ -33,7 +33,7 @@ require("prototypes.scripts.autoplace")
 -- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
 -- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
 -- more with besselheim?
--- unlock bigger tanks
+-- SOON: unlock bigger tanks!!!
 
 -- LONG-TERM TODOs:
 -------------------
@@ -52,7 +52,8 @@ require("prototypes.scripts.autoplace")
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
 -- emotion -> other byproduct-y uses
--- cube split to 64 phantom constituents -> then many different recipes -> dormant constituents (?) + reassembly
+-- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
+-- - only real options seem like fabricator or scaled-down matter plant
 
 -- will need some new intermediate products:
 -- - blue chips
@@ -63,14 +64,16 @@ require("prototypes.scripts.autoplace")
 -- Main tech unlocks:
 -- Modules (perhaps initially in different parts of the tree)
 -- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
--- - Possibly start from a common module-base precursor (nodule?) + component for type
+-- - Possibly start from a common module-base precursor (nodule?) + component for type??
 -- - Eventually higher-tier modules
--- V4 belts
--- Better armour / equipments
+-- Better armour / equipments (battery v2, advanced solar panel, roboport v2)
+-- replendent plate -> mining drill mk3
 -- New power solutions:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol)
 -- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
+-- OR: voiding joy/anguish requires phantom constituents, e.g.:
+-- - 100 joy + dormant phantom -> phantom; 100 anguish + phantom -> dormant phantom
 -- New ways to get matter, and possibly widgets/contemplation
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
@@ -83,7 +86,6 @@ require("prototypes.scripts.autoplace")
 -- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
 -- 2+3: blue chips
--- ? drills v2
 -- ?: some more efficient basic materials but they come out in awkward ways (like
 --    only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
@@ -139,7 +141,7 @@ require("prototypes.entities.chemical_plant")
 require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
 require("prototypes.entities.deep_core_ultradrill")
-require("prototypes.entities.dimensionality_disruptor")
+require("prototypes.entities.dimensionality_unpacker")
 require("prototypes.entities.distillery")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")

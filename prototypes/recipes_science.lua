@@ -2,6 +2,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-0",
+    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+    icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
     },
@@ -9,9 +11,11 @@ data:extend({
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"cube-basic-contemplation-unit", 10},
     },
-    main_product = "cube-basic-contemplation-unit",
+    main_product = "",
     energy_required = 1,
     category = "cube-synthesizer",
+    subgroup = "cube-synthesis-advanced",
+    order = "0[b-contemplation-0]",
     always_show_made_in = true,
     allow_decomposition = false,
   },
