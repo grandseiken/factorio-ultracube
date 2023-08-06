@@ -24,7 +24,7 @@ data:extend({
     localised_description = {"item-description.cube-replication-module"},
     icon = "__base__/graphics/icons/productivity-module.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "module",
+    subgroup = "cube-modules",
     category = "cube-replication",
     tier = 1,
     order = "a[1]",
@@ -55,6 +55,7 @@ data:extend({
       primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
       secondary = {r = 0.388, g = 0.976, b = 1.000, a = 1.000}, -- #63f8ffff
     },
+    flags = {"hidden"},  -- Until we work out how to make it work.
     art_style = "vanilla",
     requires_beacon_alt_mode = false
   },

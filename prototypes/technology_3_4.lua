@@ -52,6 +52,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-personal-roboport-mk2-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-mk2-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-personal-roboport-mk2-equipment"},
+    },
+    prerequisites = {
+      "cube-personal-roboport-equipment",
+      "cube-erudite-interpretation-card",
+    },
+    unit = tech_cost_unit("4", 240),
+    order = "3-0-3",
+  },
+  {
+    type = "technology",
     name = "cube-compression-module",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-1.png",

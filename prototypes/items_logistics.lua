@@ -5,7 +5,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-container.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
-    order = "a[items]-x[medium-chest]",
+    order = "a[items]-w[medium-chest]",
     place_result = "cube-medium-container",
     stack_size = 20,
   },
@@ -15,8 +15,28 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-container.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
-    order = "a[items]-y[big-chest]",
+    order = "a[items]-x[big-chest]",
     place_result = "cube-big-container",
+    stack_size = 10,
+  },
+  {
+    type = "item",
+    name = "cube-fluid-storage-1",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-1.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "storage",
+    order = "z[tanks]-y[medium]",
+    place_result = "cube-fluid-storage-1",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "cube-fluid-storage-2",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "storage",
+    order = "z[tanks]-z[big]",
+    place_result = "cube-fluid-storage-2",
     stack_size = 10,
   },
 
@@ -28,7 +48,7 @@ data:extend({
     subgroup = "belt",
     order = "a[transport-belt]-d[v4-transport-belt]",
     place_result = "cube-v4-transport-belt",
-    stack_size = 100
+    stack_size = 100,
   },
   {
     type = "item",
@@ -38,7 +58,7 @@ data:extend({
     subgroup = "belt",
     order = "b[underground-belt]-d[v4-underground-belt]",
     place_result = "cube-v4-underground-belt",
-    stack_size = 50
+    stack_size = 50,
   },
   {
     type = "item",
@@ -48,7 +68,7 @@ data:extend({
     subgroup = "belt",
     order = "c[splitter]-d[v4-splitter]",
     place_result = "cube-v4-splitter",
-    stack_size = 50
+    stack_size = 50,
   },
 
   {

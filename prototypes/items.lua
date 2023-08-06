@@ -54,7 +54,7 @@ data:extend({
   {
     type = "item",
     name = "cube-condensed-fuel",
-    icon = "__base__/graphics/icons/rocket-fuel.png",
+    icon = "__base__/graphics/icons/flamethrower-ammo.png",
     icon_size = 64, icon_mipmaps = 4,
     fuel_category = "cube-fuel-canister",
     fuel_value = "100MJ",
@@ -85,7 +85,7 @@ data:extend({
   {
     type = "item",
     name = "cube-condensed-fuel-ultralocomotion",
-    icon = "__base__/graphics/icons/rocket-fuel.png",
+    icon = "__base__/graphics/icons/flamethrower-ammo.png",
     icon_size = 64, icon_mipmaps = 4,
     fuel_category = "cube-fuel-canister",
     fuel_value = "100MJ",

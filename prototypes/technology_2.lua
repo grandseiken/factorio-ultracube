@@ -178,6 +178,19 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-fluid-storage",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/steel-fluid-tanks.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fluid-storage-1"},
+      {type = "unlock-recipe", recipe = "cube-fluid-storage-2"},
+    },
+    prerequisites = {"cube-sophisticated-matter-unit"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-1-5",
+  },
+  {
+    type = "technology",
     name = "cube-deep-core-ultradrill",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/quarry-drill.png",
@@ -190,7 +203,7 @@ data:extend({
       "cube-concrete",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-1-5",
+    order = "2-1-6",
   },
   {
     type = "technology",
@@ -226,7 +239,7 @@ data:extend({
       "cube-railway",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-1-6",
+    order = "2-1-7",
   },
   {
     type = "technology",
@@ -238,7 +251,7 @@ data:extend({
     },
     prerequisites = {"cube-sophisticated-matter-unit"},
     unit = tech_cost_unit("2", 240),
-    order = "2-1-7",
+    order = "2-1-8",
   },
   {
     type = "technology",

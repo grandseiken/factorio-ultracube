@@ -14,6 +14,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-power-armor",
+    ingredients = {
+      {"cube-modular-armor", 1},
+      {"cube-resplendent-plate", 100},
+      {"cube-processing-unit", 40},
+      {"cube-advanced-engine", 10},
+    },
+    results = {{"power-armor", 1}},
+    energy_required = 40,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-battery-equipment",
     ingredients = {
       {"battery", 4},
@@ -43,24 +56,12 @@ data:extend({
     name = "cube-solar-panel-equipment-mk2",
     ingredients = {
       {"cube-solar-panel-equipment", 6},
+      {"cube-advanced-circuit", 4},
       {"cube-resplendent-plate", 16},
     },
     results = {{"cube-solar-panel-equipment-mk2", 1}},
     energy_required = 20,
     category = "cube-fabricator-handcraft",
-    enabled = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-power-armor",
-    ingredients = {
-      {"cube-modular-armor", 1},
-      {"cube-resplendent-plate", 80},
-      {"cube-processing-unit", 40},
-      {"cube-advanced-engine", 10},
-    },
-    results = {{"power-armor", 1}},
-    energy_required = 30,
     enabled = false,
   },
   {
@@ -98,6 +99,19 @@ data:extend({
     },
     results = {{"cube-personal-roboport-equipment", 1}},
     energy_required = 15,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-personal-roboport-mk2-equipment",
+    ingredients = {
+      {"cube-personal-roboport-equipment", 1},
+      {"cube-sophisticated-matter-unit", 20},
+      {"cube-processing-unit", 80},
+    },
+    results = {{"personal-roboport-mk2-equipment", 1}},
+    energy_required = 25,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },

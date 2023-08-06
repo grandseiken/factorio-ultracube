@@ -25,15 +25,17 @@ require("prototypes.scripts.autoplace")
 -- still something for matter; or maybe only for sophisticated matter
 -- perhaps something with constituents
 -- something for contemplation units?
+-- need to make sure fps doesn't bug out during cube split
+-- - need an emergency way to retrieve all phantoms?
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
+-- reintroduce start cutscene
 -- analysis machine that unlocks techs based on finding things in the world
 -- strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
 -- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
 -- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
--- more with besselheim?
--- SOON: unlock bigger tanks!!!
+-- more with besselheim? some kind of flask recycling?
 
 -- LONG-TERM TODOs:
 -------------------
@@ -55,41 +57,43 @@ require("prototypes.scripts.autoplace")
 -- - options: fabricator; scaled-down matter plant; OR the unpacker could convert a synthesizer into a mini-synthesizer...
 -- tweak loader v1 position/recipe
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
+-- module recipes: make from common precursor + relevant thing (crystal/battery)
 
 -- will need some new intermediate products:
 -- - 1 more weird new product on the deep branch - from plate
 -- - what's the new ingredient for processing units?
 -- - at least 1 other new thing on the splitting side:
 -- - some kind of weird better battery / power cell type thing. Made from battery; used for battery equipment v2 + science
+-- - !! Charged widget !!
 -- - probably something else too
 -- - even better engines? maybe not
 -- use a bunch more metal and a ton more STONE (mainly branch 1 (scale)), somehow
+-- potential icons: energy shield equipment; slowdown capsule; rockets; improved pollution filter; antimatter fuel cell, dt fuel,
+-- unobtainium
 
 -- Main tech unlocks:
--- Modules (perhaps initially in different parts of the tree)
--- - Careful about what modules can go in what machines, might need dedicated types for cube-machines
--- - Possibly start from a common module-base precursor (nodule?) + component for type??
--- - Eventually higher-tier modules
--- Better armour / equipments (battery v2, roboport v2, both on erudite tree)
+-- Better armour / equipments (battery v2, both on erudite tree)
 -- emotion -> other byproduct-y uses
--- New power solutions:
+-- New power solutions!?
 -- - Joy -> steam (not efficient)
--- - Despair -> some sort of power somehow (lol)
--- - (Much later) matter/antimatter; nuclear; or other better power (you should need to combine multiple)
+-- - Despair -> some sort of power somehow (lol), better if it can use flasks (or require flask recycling) stygian power plant?
 -- New ways to get matter, and possibly widgets/contemplation
+
+-- Things to unlock from level 3/4+:
+-- Matter/antimatter; nuclear; or other better power (should need to combine multiple)
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
 ----- Or: maybe some way of converting like this, but high power cost, e.g. power -> more matter?
--- Cube teleportation (using krastorio teleporter graphic)
+-- Cube teleportation (implement, + teleportation gps module)
+-- Even better equipment
+-- Higher-level modules, perhaps non-cube (e.g. fabricator) modules, beacon!?
 
 -- Random thoughts.
 -- Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split
 -- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- 1+3: something where cube splits in 2 (joy + anguish?), which are used for different things, then recombined.
+-- 1+3: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
 --      can have some recipes that make old things e.g. matter units, but not strict replacement
--- 2+3: blue chips
--- ?: some more efficient basic materials but they come out in awkward ways (like
---    only make matter+tar at the same time or something, etc)
+-- ?: some more efficient basic materials but they come out in awkward ways (like only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
 --    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
 -- 3: many interlinked recipes with short time and low amounts or
@@ -97,8 +101,10 @@ require("prototypes.scripts.autoplace")
 -- After science 3/4 or nearby, later ideas...
 -- Quantum decoder; via multi-furnace (quantum computer or research server); qbits;
 -- - every recipe is random with one pair from 6*6 options (so 1/21 chance)
+-- Few other things with combining the earlier trees
 -- Very last thing to do destroys the cube (e.g. in intergalactic tranceiver) to produce final science plus
--- materials to rebuild it in a long/expensive process.
+-- materials to rebuild it in a long/expensive process. Maybe like 1 iron plate just for jokes.
+-- And maybe that's ~it!?
 -- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.

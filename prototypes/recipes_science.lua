@@ -85,7 +85,7 @@ data:extend({
       {"cube-deep-crystal", 1},
       {"cube-resplendent-plate", 1}, -- Except something from it.
       {"explosives", 1}, -- Except something from it.
-      {"concrete", 10},
+      {"concrete", 10}, -- Or refined concrete?
     },
     results = {{"cube-deep-introspection-card", 1}},
     energy_required = 12,
@@ -97,9 +97,9 @@ data:extend({
     name = "cube-erudite-interpretation-card",
     ingredients = {
       {"cube-processing-unit", 1},
-      {"battery", 1},  -- Or something from it. Perhaps: big battery.
-      {"cube-n-dimensional-widget", 1},  -- Maybe?
-      {"cube-bottled-anguish", 1},  -- Or something from it.
+      {"battery", 1},  -- Or something from it. Perhaps: big battery. Robot frame?
+      {"cube-n-dimensional-widget", 1},  -- Maybe? Or something made from it?
+      {"cube-bottled-anguish", 1},  -- Or something from it. Or euphoria. But it's very expensive.
       {"cube-unobtainium", 1},
     },
     results = {{"cube-erudite-interpretation-card", 1}},
