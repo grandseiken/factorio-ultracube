@@ -123,6 +123,12 @@ data:extend({
     group = "intermediate-products",
     order = "f",
   },
+  {
+    type = "item-subgroup",
+    name = "cube-combinator-extra",
+    group = "logistics",
+    order = "h-a",
+  },
 
   {
     type = "item-subgroup",
