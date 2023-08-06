@@ -2,6 +2,8 @@
 
 A work-in-progress overhaul mod for Factorio.
 
+![Thumbnail](thumbnail.png)
+
 This mod is a bit more difficult than vanilla Factorio, but in a way that I hope feels fairly unique.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps.
