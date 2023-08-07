@@ -292,7 +292,7 @@ data:extend({
       {
         icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
         icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, 8},
+        scale = 0.25, shift = {8, -8},
       },
     },
     ingredients = {

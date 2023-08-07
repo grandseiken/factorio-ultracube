@@ -144,4 +144,16 @@ data:extend({
     subgroup = "cube-distillation",
     order = "0[deep-solution]",
   },
+  {
+    type = "fluid",
+    name = "cube-ectoplasm",
+    icon = "__Ultracube__/graphics/ectoplasm.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.175, g=0.30, b=0.25, a=0.65},
+    flow_color = {r=0.65, g=0.9, b=0.8},
+    default_temperature = 25,
+    heat_capacity = "0.1KJ",
+    subgroup = "cube-synthesis-fluids",
+    order = "c[ghost]-d[ectoplasm]",
+  },
 })

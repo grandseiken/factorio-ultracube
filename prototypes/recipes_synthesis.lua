@@ -139,7 +139,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-phantom-constituent-emotional-recharge",
+    name = "cube-phantom-constituent-recharge-euphoria",
     icons = {
       {
         icon = "__Ultracube__/graphics/phantom-cube.png",
@@ -150,6 +150,10 @@ data:extend({
         icon = "__Ultracube__/graphics/bottled-euphoria.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
+      },
+      {
+        icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-movement-speed.png",
+        icon_size = 64, icon_mipmaps = 2,
       },
     },
     ingredients = {
@@ -163,41 +167,7 @@ data:extend({
     energy_required = 1,
     category = "cube-fabricator",
     subgroup = "cube-synthesis-phantom",
-    order = "y[0-phantom-recharge]",
-    always_show_made_in = true,
-    allow_inserter_overload = false,
-    allow_decomposition = false,
-    allow_intermediates = false,
-    allow_as_intermediate = false,
-    enabled = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-phantom-constituent-emotional-discharge",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/solid-fuel.png",
-        icon_size = 64, icon_mipmaps = 4,
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-      {
-        icon = "__Ultracube__/graphics/bottled-anguish.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
-    ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {"cube-bottled-anguish", 1},
-    },
-    results = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
-    },
-    main_product = "",
-    energy_required = 1,
-    category = "cube-fabricator",
-    subgroup = "cube-synthesis-phantom",
-    order = "y[1-phantom-discharge]",
+    order = "x[3-phantom-recharge]",
     always_show_made_in = true,
     allow_inserter_overload = false,
     allow_decomposition = false,
@@ -455,6 +425,32 @@ data:extend({
     subgroup = "cube-synthesis-sentience",
     order = "1[cube-emotional-decomposition]",
     always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-phantom-constituent-ectoplasm",
+    icon = "__Ultracube__/graphics/ectoplasm.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "cube-ectoplasm", amount = 100},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5, catalyst_amount = 1},
+    },
+    main_product = "",
+    energy_required = 1,
+    category = "cube-fabricator",
+    subgroup = "cube-synthesis-sentience",
+    order = "2[ectoplasm]",
+    always_show_made_in = true,
+    allow_inserter_overload = false,
+    allow_decomposition = false,
+    allow_intermediates = false,
+    allow_as_intermediate = false,
     enabled = false,
   },
 })

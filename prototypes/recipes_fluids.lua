@@ -326,9 +326,10 @@ data:extend({
       {type = "item", name = "cube-sand", amount = 200},
     },
     results = {
-      {type = "fluid", name = "cube-deep-solution", amount = 750},
+      {type = "fluid", name = "cube-deep-solution", amount = 500},
       {type = "fluid", name = "cube-mineral-water", amount = 1000},
       {type = "fluid", name = "water", amount = 250},
+      {type = "item", name = "cube-deep-powder", amount = 50},
     },
     main_product = "",
     energy_required = 60,

@@ -18,7 +18,7 @@ require("prototypes.scripts.autoplace")
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working
 -- module graphics/tech graphics
--- deep fuel/deep crystal/deep plate tech graphics
+-- deep fuel/deep crystal/deep plate tech graphics, phantom handling tech graphics
 
 -- IMPORTANT TODOs:
 -------------------
@@ -26,7 +26,7 @@ require("prototypes.scripts.autoplace")
 -- perhaps something with constituents
 -- something for contemplation units?
 -- need to make sure fps doesn't bug out during cube split
--- - need an emergency way to retrieve all phantoms?
+-- - need an emergency way to retrieve all phantoms? unless search works
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
@@ -44,6 +44,7 @@ require("prototypes.scripts.autoplace")
 -- more armour stuff
 -- think about reintroducing biters + military?
 -- storylore tooltips
+-- move some current techs later and add earlier-game shit versions of things? e.g. miners, fabricator, perhaps even synthesizer
 
 -- TECH TREE TODOs:
 -------------------
@@ -58,26 +59,41 @@ require("prototypes.scripts.autoplace")
 -- tweak loader v1 position/recipe
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- module recipes: make from common precursor + relevant thing (crystal/battery)
+-- more loops in deep crystals -> also get powder back from distillation
 
 -- will need some new intermediate products:
--- - 1 more weird new product on the deep branch - from plate
--- - what's the new ingredient for processing units?
--- - at least 1 other new thing on the splitting side:
--- - some kind of weird better battery / power cell type thing. Made from battery; used for battery equipment v2 + science
--- - !! Charged widget !!
--- - probably something else too
--- - even better engines? maybe not
--- use a bunch more metal and a ton more STONE (mainly branch 1 (scale)), somehow
+-- DEEP BRANCH:
+-- - 1 more weird new product? - from plate!
+-- GHOST BRANCH:
+-- - 1 thing (fluid, ectoplasm, ghost acid, w/some oil product) you don't need much of, for processing units (e.g. 1cube -> enough for 10 or 20)
+-- - 1 thing (item, ghost cell???) you need a bit more of, for something battery/power-cell-related, probably more involved; used for battery equipment v2 + science
+-- - haunted energy cells??
+-- - perhaps thing 2 can be made inefficiently from thing 1, but better directly
+-- - some item byproduct (flasks???)
+-- -- base game: 20 circuit + 2 advanced circuit + sulfuric acid -> processing unit
+-- - something that makes an absolute ton in volume of intermediate? (ghost wire?)
 -- potential icons: energy shield equipment; slowdown capsule; rockets; improved pollution filter; antimatter fuel cell, dt fuel,
 -- unobtainium
 
 -- Main tech unlocks:
--- Better armour / equipments (battery v2, both on erudite tree)
+-- Better armour / equipments (battery v2 on erudite tree)
 -- emotion -> other byproduct-y uses
--- New power solutions!?
+-- New power solutions!? maybe:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol), better if it can use flasks (or require flask recycling) stygian power plant?
 -- New ways to get matter, and possibly widgets/contemplation
+
+-- Random thoughts.
+-- Ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split
+-- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
+-- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
+-- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
+-- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
+-- ?: some more efficient basic materials but they come out in awkward ways (like only make matter+tar at the same time or something, etc)
+-- 2: some cube process that outputs random / multiple products.
+--    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
+-- 3: many interlinked recipes with short time and low amounts or
 
 -- Things to unlock from level 3/4+:
 -- Matter/antimatter; nuclear; or other better power (should need to combine multiple)
@@ -87,16 +103,6 @@ require("prototypes.scripts.autoplace")
 -- Cube teleportation (implement, + teleportation gps module)
 -- Even better equipment
 -- Higher-level modules, perhaps non-cube (e.g. fabricator) modules, beacon!?
-
--- Random thoughts.
--- Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split
--- 1+2: ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- 1+3: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
---      can have some recipes that make old things e.g. matter units, but not strict replacement
--- ?: some more efficient basic materials but they come out in awkward ways (like only make matter+tar at the same time or something, etc)
--- 2: some cube process that outputs random / multiple products.
---    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
--- 3: many interlinked recipes with short time and low amounts or
 
 -- After science 3/4 or nearby, later ideas...
 -- Quantum decoder; via multi-furnace (quantum computer or research server); qbits;

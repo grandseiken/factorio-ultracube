@@ -504,8 +504,8 @@ data:extend({
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-phantom-constituent-emotional-recharge"},
-      {type = "unlock-recipe", recipe = "cube-phantom-constituent-emotional-discharge"},
+      {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge-euphoria"},
+      {type = "unlock-recipe", recipe = "cube-phantom-constituent-ectoplasm"},
     },
     prerequisites = {
       "cube-dimensionality-unpacker",

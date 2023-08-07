@@ -510,6 +510,12 @@ function cube_search_hint_entity(entity)
   end
 end
 
+-- TODO: try to make this work with multiple items. May as well go for it with 64 phantoms and see
+-- how bad it is:
+-- - Update add_result() to finish only when we have all cubes.
+-- - Change to grid search rooted at all cells previously containing an item, expanding one step
+--   at a time without checking a cell twice.
+-- - Probably add a debug message if search doesn't complete to report bug.
 function cube_search_update(tick)
   if cube_search_data.last_tick and tick <= cube_search_data.last_tick then
     return cube_search_data.search_results
