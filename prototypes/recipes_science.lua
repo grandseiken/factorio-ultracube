@@ -35,14 +35,14 @@ data:extend({
     },
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-calcium", 50},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
       {type = "fluid", name = "water", amount = 8000},
+      {"cube-calcium", 50},
     },
     results = {
       {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-basic-contemplation-unit", 100},
       {type = "fluid", name = "steam", amount = 8000, temperature = 215},
+      {"cube-basic-contemplation-unit", 100},
     },
     energy_required = 1,
     category = "cube-synthesizer",
@@ -94,15 +94,14 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-erudite-interpretation-card",
+    name = "cube-synthetic-premonition-card",
     ingredients = {
-      {"cube-processing-unit", 1},
+      {"cube-spectral-processor", 1},
       {"battery", 1},  -- Or something from it. Perhaps: big battery. Robot frame?
       {"cube-n-dimensional-widget", 1},  -- Maybe? Or something made from it?
-      {"cube-bottled-anguish", 1},  -- Or something from it. Or euphoria. But it's very expensive.
       {"cube-unobtainium", 1},
     },
-    results = {{"cube-erudite-interpretation-card", 1}},
+    results = {{"cube-synthetic-premonition-card", 1}},
     energy_required = 12,
     category = "cube-fabricator-handcraft",
     enabled = false,

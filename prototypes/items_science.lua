@@ -41,7 +41,7 @@ data:extend({
   },
   {
     type = "tool",
-    name = "cube-erudite-interpretation-card",
+    name = "cube-synthetic-premonition-card",
     icon = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-science",

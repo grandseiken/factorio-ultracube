@@ -31,37 +31,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-utility-cube-recharge",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-movement-speed.png",
-        icon_size = 64, icon_mipmaps = 2,
-      },
-    },
-    ingredients = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
-    },
-    results = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-    },
-    main_product = "",
-    energy_required = 2,
-    category = "cube-recovery-bay",
-    subgroup = "cube-synthesis-handling",
-    order = "x[1-recharge]",
-    always_show_made_in = true,
-    allow_inserter_overload = false,
-    allow_decomposition = false,
-    allow_intermediates = false,
-    allow_as_intermediate = false,
-    enabled = false,
-  },
-  {
-    type = "recipe",
     name = "cube-phantom-ultradense-constituent",
     icons = {{
       icon = "__Ultracube__/graphics/phantom-cube.png",
@@ -103,6 +72,37 @@ data:extend({
     order = "0[1-phantom]",
     always_show_made_in = true,
     allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-utility-cube-recharge",
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-movement-speed.png",
+        icon_size = 64, icon_mipmaps = 2,
+      },
+    },
+    ingredients = {
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    main_product = "",
+    energy_required = 2,
+    category = "cube-recovery-bay",
+    subgroup = "cube-synthesis-handling",
+    order = "x[1-recharge]",
+    always_show_made_in = true,
+    allow_inserter_overload = false,
+    allow_decomposition = false,
+    allow_intermediates = false,
+    allow_as_intermediate = false,
     enabled = false,
   },
   {
@@ -165,7 +165,7 @@ data:extend({
     },
     main_product = "",
     energy_required = 1,
-    category = "cube-fabricator",
+    category = "cube-chemical-plant",
     subgroup = "cube-synthesis-phantom",
     order = "x[3-phantom-recharge]",
     always_show_made_in = true,
@@ -198,38 +198,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-basic-matter-unit-phantom",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/plastic-bar.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-    },
-    ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "cube-matter-replication-gel", amount = 40},
-    },
-    results = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {"cube-basic-matter-unit", 100},
-    },
-    main_product = "",
-    energy_required = 1,
-    category = "cube-synthesizer",
-    subgroup = "cube-synthesis-basics",
-    order = "0[a-matter-1]",
-    always_show_made_in = true,
-    allow_decomposition = false,
-    enabled = false,
-  },
-  {
-    type = "recipe",
     name = "cube-basic-matter-unit-1",
     icons = {
       {
@@ -259,6 +227,38 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-basic-matter-unit-phantom",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/plastic-bar.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+        tint = {r = 1, g = 1, b = 1, a = 0.25},
+      },
+    },
+    ingredients = {
+      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 50},
+    },
+    results = {
+      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {"cube-basic-matter-unit", 100},
+    },
+    main_product = "",
+    energy_required = 1,
+    category = "cube-synthesizer",
+    subgroup = "cube-synthesis-basics",
+    order = "0[a-matter-1]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
 
   {
     type = "recipe",
@@ -271,39 +271,6 @@ data:extend({
     },
     results = {
       {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-n-dimensional-widget", 5},
-    },
-    main_product = "",
-    energy_required = 1,
-    category = "cube-synthesizer",
-    subgroup = "cube-synthesis-advanced",
-    order = "0[b-widget-0]",
-    always_show_made_in = true,
-    allow_decomposition = false,
-    enabled = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-n-dimensional-widget-phantom",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-    },
-    ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "cube-matter-replication-gel", amount = 20},
-      {"cube-rare-metals", 50},
-    },
-    results = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
       {"cube-n-dimensional-widget", 5},
     },
     main_product = "",
@@ -344,6 +311,48 @@ data:extend({
     category = "cube-synthesizer",
     subgroup = "cube-synthesis-advanced",
     order = "0[b-widget-1]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-phantom-components",
+    icons = {
+      {
+        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon_size = 64, icon_mipmaps = 4,
+        tint = {r = 1, g = 1, b = 1, a = 0.25},
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, 8},
+      },
+    },
+    ingredients = {
+      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "cube-matter-replication-gel", amount = 50},
+      {type = "fluid", name = "steam", amount = 100},
+      {"cube-rare-metals", 50},
+      {"cube-calcium", 5},
+    },
+    results = {
+      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "water", amount = 100},
+      {"cube-n-dimensional-widget", 5},
+      {"cube-basic-contemplation-unit", 5},
+    },
+    main_product = "",
+    energy_required = 1,
+    category = "cube-synthesizer",
+    subgroup = "cube-synthesis-advanced",
+    order = "1[b-widget-contemplation]",
     always_show_made_in = true,
     allow_decomposition = false,
     enabled = false,
@@ -429,21 +438,50 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-phantom-constituent-ectoplasm",
+    name = "cube-ghost-crystal",
+    icons = {{
+      icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+      icon_size = 64, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.5},
+    }},
+    ingredients = {
+      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      -- TODO: ???
+    },
+    results = {
+      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ghost-crystal", amount = 50},
+    },
+    main_product = "",
+    energy_required = 1,
+    category = "cube-synthesizer",
+    subgroup = "cube-synthesis-phantom",
+    order = "x[crystal]",
+    always_show_made_in = true,
+    allow_inserter_overload = false,
+    allow_decomposition = false,
+    allow_intermediates = false,
+    allow_as_intermediate = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-ectoplasm",
     icon = "__Ultracube__/graphics/ectoplasm.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
       {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "cube-unstable-gas", amount = 100},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "cube-ectoplasm", amount = 100},
+      {type = "fluid", name = "cube-ectoplasm", amount = 200},
       {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5, catalyst_amount = 1},
     },
     main_product = "",
     energy_required = 1,
-    category = "cube-fabricator",
+    category = "cube-synthesizer",
     subgroup = "cube-synthesis-sentience",
     order = "2[ectoplasm]",
     always_show_made_in = true,

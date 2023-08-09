@@ -280,7 +280,7 @@ data:extend({
       "cube-fundamental-comprehension-card",
       "cube-abstract-interrogation-card",
       "cube-deep-introspection-card",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     module_specification = {
       module_slots = 0,

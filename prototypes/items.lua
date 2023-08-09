@@ -158,9 +158,12 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-processing-unit",
-    icon = "__Krastorio2Assets__/icons/items/processing-unit.png",
-    icon_size = 64, icon_mipmaps = 4,
+    name = "cube-spectral-processor",
+    icons = {{
+      icon = "__Krastorio2Assets__/icons/items/processing-unit.png",
+      icon_size = 64, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.75},
+    }},
     subgroup = "cube-components",
     order = "0[e-processing-unit]",
     stack_size = 100,

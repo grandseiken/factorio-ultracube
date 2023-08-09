@@ -306,7 +306,6 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube-phantom"},
       {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge"},
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-phantom"},
-      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-phantom"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
@@ -451,8 +450,17 @@ data:extend({
   {
     type = "technology",
     name = "cube-deep-fuel-refining",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
+        scale = 0.625,
+      },
+    },
     effects = {
       {type = "unlock-recipe", recipe = "cube-deeply-condensed-fuel"},
     },
@@ -465,65 +473,115 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-phantom-cube-next",
+    name = "cube-phantom-components",
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Ultracube__/graphics/phantom-cube-technology.png",
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
+        tint = {r = 1, g = 1, b = 1, a = 0.0},
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {24, -24},
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/energy-control-unit.png",
+        scale = 0.65,
+        shift = {-32, -32},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+        scale = 0.65,
+        shift = {32, 32},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
     },
-    effects = {},
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-phantom-components"},
+    },
     prerequisites = {"cube-dimensionality-unpacker"},
     unit = tech_cost_unit("2", 240),
     order = "2-4-6",
   },
   {
     type = "technology",
-    name = "cube-phantom-cube-emotion",
+    name = "cube-phantom-electronics",
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Ultracube__/graphics/phantom-cube-technology.png",
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
+        tint = {r = 1, g = 1, b = 1, a = 0.0},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/silicon-processing.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.5},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.5},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-ghost-crystal"},
+      {type = "unlock-recipe", recipe = "cube-shadowglass"},
+    },
+    prerequisites = {"cube-dimensionality-unpacker"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-4-7",
+  },
+  {
+    type = "technology",
+    name = "cube-phantom-emotion",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/joy.png",
-        shift = {-24, 0},
+        icon = "__Ultracube__/graphics/bottled-euphoria.png",
+        shift = {-32, 0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/despair.png",
-        shift = {24, 0},
+        icon = "__Ultracube__/graphics/bottled-anguish.png",
+        shift = {32, 0},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
     },
     effects = {
       {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge-euphoria"},
-      {type = "unlock-recipe", recipe = "cube-phantom-constituent-ectoplasm"},
+      {type = "unlock-recipe", recipe = "cube-ectoplasm"},
     },
     prerequisites = {
       "cube-dimensionality-unpacker",
       "cube-emotional-decomposition",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-4-7",
+    order = "2-4-8",
   },
   {
     type = "technology",
-    name = "cube-processing-unit",
-    icon = "__base__/graphics/technology/advanced-electronics-2.png",
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-spectral-processor",
+    icons = {{
+      icon = "__base__/graphics/technology/advanced-electronics-2.png",
+      icon_size = 256, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.75},
+    }},
     effects = {
-      {type = "unlock-recipe", recipe = "cube-processing-unit"},
+      {type = "unlock-recipe", recipe = "cube-spectral-processor"},
     },
-    prerequisites = {"cube-phantom-cube-next"},
-    unit = tech_cost_unit("2x", 240),
+    prerequisites = {"cube-phantom-electronics"},
+    unit = tech_cost_unit("2", 240),
     order = "2-5-0",
   },
   {
@@ -536,7 +594,7 @@ data:extend({
     },
     prerequisites = {
       "cube-resplendent-plate",
-      "cube-processing-unit",
+      "cube-spectral-processor",
     },
     unit = tech_cost_unit("2", 300),
     order = "2-5-1",
@@ -560,7 +618,7 @@ data:extend({
     },
     prerequisites = {
       "cube-logistics",
-      "cube-processing-unit",
+      "cube-spectral-processor",
     },
     unit = tech_cost_unit("2", 240),
     order = "2-5-2",
@@ -584,16 +642,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-erudite-interpretation-card",
+    name = "cube-synthetic-premonition-card",
     icon = "__Krastorio2Assets__/technologies/optimization-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
-      {type = "unlock-recipe", recipe = "cube-erudite-interpretation-card"},
+      {type = "unlock-recipe", recipe = "cube-synthetic-premonition-card"},
       tech_unlock_effect(),
     },
     prerequisites = {
-      "cube-processing-unit",
-      "cube-emotional-decomposition",
+      "cube-spectral-processor",
+      "cube-phantom-emotion",
       "cube-battery",
     },
     unit = tech_cost_unit("2x", 300),

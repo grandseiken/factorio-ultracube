@@ -270,7 +270,7 @@ data:extend({
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
       "cube-stack-inserter-capacity-bonus-4",
     },
     unit = tech_cost_unit("5", 360),
@@ -331,7 +331,7 @@ data:extend({
     },
     prerequisites = {
       "cube-inserters",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
     upgrade = true,
@@ -584,7 +584,7 @@ data:extend({
     },
     prerequisites = {
       "cube-research-speed-2",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
     upgrade = true,

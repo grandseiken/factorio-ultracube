@@ -157,7 +157,7 @@ data:extend({
     ingredients = {
       {"cube-v4-transport-belt", 2},
       {"cube-advanced-engine", 1},
-      {"cube-processing-unit", 2},
+      {"cube-spectral-processor", 2},
     },
     results = {{"cube-v4-splitter", 1}},
     energy_required = 4,
@@ -172,7 +172,7 @@ data:extend({
       {"fast-transport-belt", 1},
       {"cube-electronic-circuit", 20},
       {"cube-basic-motor-unit", 20},
-      {"cube-processing-unit", 1},
+      {"cube-spectral-processor", 1},
     },
     results = {{"aai-v2-loader", 1}},
     energy_required = 8,
@@ -199,7 +199,7 @@ data:extend({
     ingredients = {
       {"aai-v3-loader", 1},
       {"cube-v4-transport-belt", 1},
-      {"cube-processing-unit", 20},
+      {"cube-spectral-processor", 20},
       {"cube-advanced-engine", 20},
     },
     results = {{"aai-v4-loader", 1}},
@@ -498,7 +498,7 @@ data:extend({
       -- TODO: ?
       -- {"fusion-reactor-equipment", 2},
       -- {"rocket-launcher", 4},
-      {"cube-processing-unit", 40},
+      {"cube-spectral-processor", 40},
       {"cube-advanced-engine", 20},
       {"cube-sophisticated-matter-unit", 100},
       {"cube-inductance-module", 10},
@@ -514,7 +514,7 @@ data:extend({
     type = "recipe",
     name = "cube-spidertron-remote",
     ingredients = {
-      {"processing-unit", 1},
+      {"cube-spectral-processor", 1},
       {"radar", 1},
     },
     results = {{"spidertron-remote", 1}},

@@ -18,7 +18,7 @@ data:extend({
     ingredients = {
       {"cube-modular-armor", 1},
       {"cube-resplendent-plate", 100},
-      {"cube-processing-unit", 40},
+      {"cube-spectral-processor", 40},
       {"cube-advanced-engine", 10},
     },
     results = {{"power-armor", 1}},
@@ -108,7 +108,7 @@ data:extend({
     ingredients = {
       {"cube-personal-roboport-equipment", 1},
       {"cube-sophisticated-matter-unit", 20},
-      {"cube-processing-unit", 80},
+      {"cube-spectral-processor", 80},
     },
     results = {{"personal-roboport-mk2-equipment", 1}},
     energy_required = 25,

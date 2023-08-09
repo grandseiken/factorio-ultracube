@@ -165,12 +165,12 @@ data:extend({
       -- audible_distance_modifier = 10,
     },
     crafting_speed = 1.0,
-    energy_usage = "200MW",
+    energy_usage = "250MW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 100,
-      drain = "100KW",
+      drain = "200KW",
     },
 
     ingredient_count = 2,

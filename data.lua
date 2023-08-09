@@ -18,7 +18,7 @@ require("prototypes.scripts.autoplace")
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working
 -- module graphics/tech graphics
--- deep fuel/deep crystal/deep plate tech graphics, phantom handling tech graphics
+-- resplendent plate tech graphics, phantom handling tech graphics
 
 -- IMPORTANT TODOs:
 -------------------
@@ -36,6 +36,7 @@ require("prototypes.scripts.autoplace")
 -- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
 -- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
 -- more with besselheim? some kind of flask recycling?
+-- ghost effects spooky player
 
 -- LONG-TERM TODOs:
 -------------------
@@ -55,23 +56,20 @@ require("prototypes.scripts.autoplace")
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
--- - options: fabricator; scaled-down matter plant; OR the unpacker could convert a synthesizer into a mini-synthesizer...
+-- - but probably almost definitely the unpacker could convert a synthesizer into a mini-synthesizer...
 -- tweak loader v1 position/recipe
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
--- module recipes: make from common precursor + relevant thing (crystal/battery)
--- more loops in deep crystals -> also get powder back from distillation
+-- module recipes: make from common precursor + relevant thing (crystal/battery); make non-cube v1 prod/speed modules at science 2
+
 
 -- will need some new intermediate products:
 -- DEEP BRANCH:
 -- - 1 more weird new product? - from plate!
 -- GHOST BRANCH:
--- - 1 thing (fluid, ectoplasm, ghost acid, w/some oil product) you don't need much of, for processing units (e.g. 1cube -> enough for 10 or 20)
--- - 1 thing (item, ghost cell???) you need a bit more of, for something battery/power-cell-related, probably more involved; used for battery equipment v2 + science
--- - haunted energy cells??
--- - perhaps thing 2 can be made inefficiently from thing 1, but better directly
--- - some item byproduct (flasks???)
--- -- base game: 20 circuit + 2 advanced circuit + sulfuric acid -> processing unit
--- - something that makes an absolute ton in volume of intermediate? (ghost wire?)
+-- - some other byproducts, ingredients etc in ghost material chain
+-- - shadowglass (naming?) -> ghost wire
+-- - spectral processor graphic; seance tech graphic
+-- - ectoplasm -> haunted battery ?
 -- potential icons: energy shield equipment; slowdown capsule; rockets; improved pollution filter; antimatter fuel cell, dt fuel,
 -- unobtainium
 
@@ -81,14 +79,14 @@ require("prototypes.scripts.autoplace")
 -- New power solutions!? maybe:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol), better if it can use flasks (or require flask recycling) stygian power plant?
--- New ways to get matter, and possibly widgets/contemplation
 
 -- Random thoughts.
 -- Ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split
+-- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split (loopback)
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
 -- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
+-- - how about this: deep crushing has tiny% chance to produce diamond or something
 -- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
 -- ?: some more efficient basic materials but they come out in awkward ways (like only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.

@@ -19,6 +19,16 @@ data:extend({
     always_show_made_in = true,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-shadowglass",
+    category = "cube-furnace",
+    energy_required = 8,
+    ingredients = {{"cube-ghost-crystal", 4}},
+    results = {{"cube-shadowglass", 1}},
+    always_show_made_in = true,
+    enabled = false,
+  },
 
   {
     type = "recipe",

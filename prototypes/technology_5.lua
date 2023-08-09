@@ -34,7 +34,7 @@ data:extend({
     effects = {},
     prerequisites = {
       "cube-deep-introspection-card",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("5", 420),
     order = "5-0-1",
@@ -49,7 +49,7 @@ data:extend({
     },
     prerequisites = {
       "cube-deep-introspection-card",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("x", 600),
     order = "5-9-0",

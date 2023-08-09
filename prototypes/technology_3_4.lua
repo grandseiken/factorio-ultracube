@@ -26,7 +26,7 @@ data:extend({
     prerequisites = {
       "cube-deep-introspection-card",
       "cube-express-logistics",
-      "cube-processing-unit",
+      "cube-spectral-processor",
     },
     unit = tech_cost_unit("3", 300),
     order = "3-0-1",
@@ -45,7 +45,7 @@ data:extend({
     prerequisites = {
       -- TODO ???: "cube-roboport",
       "cube-logistic-robotics",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
     order = "3-0-2",
@@ -60,7 +60,7 @@ data:extend({
     },
     prerequisites = {
       "cube-personal-roboport-equipment",
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 240),
     order = "3-0-3",
@@ -85,7 +85,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-inductance-module"},
     },
-    prerequisites = {"cube-erudite-interpretation-card"},
+    prerequisites = {"cube-synthetic-premonition-card"},
     unit = tech_cost_unit("4", 300),
     order = "3-1-1",
   },
@@ -107,7 +107,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-v3-loader"},
     },
     prerequisites = {
-      "cube-erudite-interpretation-card",
+      "cube-synthetic-premonition-card",
       "cube-express-logistics",
       "cube-loader",
     },

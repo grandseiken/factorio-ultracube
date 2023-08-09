@@ -3,7 +3,7 @@ local unlock_trigger_technologies = make_set({
   "cube-fundamental-comprehension-card",
   "cube-abstract-interrogation-card",
   "cube-deep-introspection-card",
-  "cube-erudite-interpretation-card",
+  "cube-synthetic-premonition-card",
 })
 
 local function get_unlocks_for_technology(force, technology_name)
