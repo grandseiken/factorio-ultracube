@@ -140,11 +140,23 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-ghost-wire",
+    icons = {{
+      icon = "__Ultracube__/graphics/ghost-wire.png",
+      icon_size = 64, icon_mipmaps = 4,
+      tint = {r = 1, g = 1, b = 1, a = 0.5},
+    }},
+    subgroup = "cube-components",
+    order = "1[b-ghost-wire]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
     name = "cube-electronic-circuit",
     icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "0[c-electronic-circuit]",
+    order = "2[a-electronic-circuit]",
     stack_size = 100,
   },
   {
@@ -153,19 +165,19 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/advanced-circuit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "0[d-advanced-circuit]",
+    order = "2[b-advanced-circuit]",
     stack_size = 100,
   },
   {
     type = "item",
     name = "cube-spectral-processor",
     icons = {{
-      icon = "__Krastorio2Assets__/icons/items/processing-unit.png",
+      icon = "__Ultracube__/graphics/spectral-processor.png",
       icon_size = 64, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.75},
     }},
     subgroup = "cube-components",
-    order = "0[e-processing-unit]",
+    order = "2[c-processing-unit]",
     stack_size = 100,
   },
   {

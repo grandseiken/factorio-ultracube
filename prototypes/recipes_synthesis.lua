@@ -471,8 +471,8 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "cube-unstable-gas", amount = 100},
+      {type = "item", name = "cube-bottled-anguish", amount = 2, catalyst_amount = 1},
+      {type = "fluid", name = "cube-unstable-gas", amount = 50},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},

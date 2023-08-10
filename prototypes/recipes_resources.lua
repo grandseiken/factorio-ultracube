@@ -21,11 +21,11 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-shadowglass",
+    name = "cube-spectralite",
     category = "cube-furnace",
     energy_required = 8,
     ingredients = {{"cube-ghost-crystal", 4}},
-    results = {{"cube-shadowglass", 1}},
+    results = {{"cube-spectralite", 1}},
     always_show_made_in = true,
     enabled = false,
   },

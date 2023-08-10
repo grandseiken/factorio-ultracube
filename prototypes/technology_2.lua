@@ -527,7 +527,8 @@ data:extend({
     },
     effects = {
       {type = "unlock-recipe", recipe = "cube-ghost-crystal"},
-      {type = "unlock-recipe", recipe = "cube-shadowglass"},
+      {type = "unlock-recipe", recipe = "cube-spectralite"},
+      {type = "unlock-recipe", recipe = "cube-ghost-wire"},
     },
     prerequisites = {"cube-dimensionality-unpacker"},
     unit = tech_cost_unit("2", 240),

@@ -66,9 +66,8 @@ require("prototypes.scripts.autoplace")
 -- DEEP BRANCH:
 -- - 1 more weird new product? - from plate!
 -- GHOST BRANCH:
--- - some other byproducts, ingredients etc in ghost material chain
--- - shadowglass (naming?) -> ghost wire
--- - spectral processor graphic; seance tech graphic
+-- - some other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
+-- - seance tech graphic; shadowglass naming
 -- - ectoplasm -> haunted battery ?
 -- potential icons: energy shield equipment; slowdown capsule; rockets; improved pollution filter; antimatter fuel cell, dt fuel,
 -- unobtainium

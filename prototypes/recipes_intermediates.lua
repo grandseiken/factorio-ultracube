@@ -22,6 +22,17 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-ghost-wire",
+    ingredients = {
+      {"cube-spectralite", 2},
+    },
+    results = {{"cube-ghost-wire", 20}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-electronic-circuit",
     ingredients = {
       {"cube-basic-matter-unit", 2},
@@ -53,7 +64,8 @@ data:extend({
     ingredients = {
       {"cube-electronic-circuit", 8},
       {"cube-advanced-circuit", 2},
-      {"cube-shadowglass", 12},
+      {"cube-glass", 1},
+      {"cube-ghost-wire", 80},
     },
     results = {{"cube-spectral-processor", 1}},
     energy_required = 10,

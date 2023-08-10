@@ -551,7 +551,7 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-shadowglass",
+    name = "cube-spectralite",
     icons = {{
       icon = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
       icon_size = 64,
@@ -582,7 +582,7 @@ data:extend({
       },
     },
     subgroup = "cube-processed-materials",
-    order = "5[shadowglass]",
+    order = "5[spectralite]",
     stack_size = 100,
   },
 })
