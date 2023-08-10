@@ -83,8 +83,8 @@ data:extend({
     name = "cube-deep-introspection-card",
     ingredients = {
       {"cube-deep-crystal", 1},
-      {"cube-resplendent-plate", 1}, -- Except something from it.
-      {"explosives", 1}, -- Except something from it.
+      {"cube-resplendent-plate", 1}, -- Except something from it?
+      {"explosives", 1}, -- Except something from it. Or diamond?
       {"concrete", 10}, -- Or refined concrete?
     },
     results = {{"cube-deep-introspection-card", 1}},
@@ -97,8 +97,8 @@ data:extend({
     name = "cube-synthetic-premonition-card",
     ingredients = {
       {"cube-spectral-processor", 1},
-      {"battery", 1},  -- Or something from it. Perhaps: big battery. Robot frame?
-      {"cube-n-dimensional-widget", 1},  -- Maybe? Or something made from it?
+      {"cube-haunted-battery", 1},
+      {"cube-n-dimensional-widget", 1},  -- Maybe? Or something made from it? Or something with vodka?
       {"cube-unobtainium", 1},
     },
     results = {{"cube-synthetic-premonition-card", 1}},

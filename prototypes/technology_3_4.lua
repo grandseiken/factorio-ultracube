@@ -3,6 +3,20 @@ require("prototypes.lib.tech_costs")
 data:extend({
   {
     type = "technology",
+    name = "cube-refined-concrete",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/concrete.png",
+    effects =
+    {
+      {type = "unlock-recipe", recipe = "cube-refined-concrete"},
+      {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
+    },
+    prerequisites = {"cube-deep-introspection-card"},
+    unit = tech_cost_unit("3", 180),
+    order = "3-0-0",
+  },
+  {
+    type = "technology",
     name = "cube-coal-liquefaction",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/coal-liquefaction.png",
@@ -11,7 +25,7 @@ data:extend({
     },
     prerequisites = {"cube-deep-introspection-card"},
     unit = tech_cost_unit("3", 240),
-    order = "3-0-0"
+    order = "3-0-1"
   },
   {
     type = "technology",
@@ -29,7 +43,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("3", 300),
-    order = "3-0-1",
+    order = "3-0-2",
   },
   {
     type = "technology",
@@ -48,7 +62,7 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
-    order = "3-0-2",
+    order = "3-0-3",
   },
   {
     type = "technology",
@@ -63,7 +77,7 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 240),
-    order = "3-0-3",
+    order = "3-0-4",
   },
   {
     type = "technology",

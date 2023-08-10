@@ -212,9 +212,6 @@ data:extend({
     {
       {type = "unlock-recipe", recipe = "cube-concrete"},
       {type = "unlock-recipe", recipe = "cube-hazard-concrete"},
-      -- TODO: other tech?
-      -- {type = "unlock-recipe", recipe = "cube-refined-concrete"},
-      -- {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
     },
     prerequisites = {
       "cube-fabricator",

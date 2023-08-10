@@ -348,4 +348,23 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-haunted-battery",
+    ingredients = {
+      {type = "fluid", name = "cube-ectoplasm", amount = 40},
+      {"battery", 2},
+      -- TODO: something?
+    },
+    results = {{"cube-haunted-battery", 1}},
+    energy_required = 4,
+    category = "cube-chemical-plant",
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.338, g = 0.482, b = 0.965},
+      secondary = {r = 0.222, g = 0.560, b = 0.831},
+      tertiary = {r = 0.443, g = 0.818, b = 0.728},
+      quaternary = {r = 0.191, g = 0.763, b = 0.939},
+    },
+  },
 })

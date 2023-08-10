@@ -146,8 +146,8 @@ data:extend({
       icon_size = 64, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
-    subgroup = "cube-components",
-    order = "1[b-ghost-wire]",
+    subgroup = "cube-processed-materials",
+    order = "6[ghostwire]",
     stack_size = 200,
   },
   {
@@ -230,8 +230,35 @@ data:extend({
     name = "cube-resplendent-plate",
     icon = "__Krastorio2Assets__/icons/items/imersium-plate.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/imersium-plate.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/imersium-plate-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-processed-materials",
     order = "3[plate]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-haunted-battery",
+    icon = "__base__/graphics/icons/battery-mk2-equipment.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-chemical-intermediates",
+    order = "3[haunted-battery]",
     stack_size = 100,
   },
 })

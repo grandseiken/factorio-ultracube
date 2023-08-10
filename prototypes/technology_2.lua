@@ -107,6 +107,23 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-refined-concrete",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/concrete.png",
+    effects =
+    {
+      {type = "unlock-recipe", recipe = "cube-refined-concrete"},
+      {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
+    },
+    prerequisites = {
+      "cube-abstract-interrogation-card",
+      "cube-concrete",
+    },
+    unit = tech_cost_unit("2", 180),
+    order = "2-0-6",
+  },
+  {
+    type = "technology",
     name = "cube-sophisticated-matter-unit",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Ultracube__/graphics/sophisticated-matter-unit.png",
@@ -587,6 +604,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-haunted-battery",
+    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-haunted-battery"},
+    },
+    prerequisites = {
+      "cube-phantom-emotion",
+      "cube-battery",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-5-1",
+  },
+  {
+    type = "technology",
     name = "cube-power-armor",
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/power-armor.png"),
     icon_size = 256, icon_mipmaps = 4,
@@ -598,7 +630,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("2", 300),
-    order = "2-5-1",
+    order = "2-5-2",
   },
   {
     type = "technology",
@@ -619,10 +651,10 @@ data:extend({
     },
     prerequisites = {
       "cube-logistics",
-      "cube-spectral-processor",
+      "cube-phantom-electronics",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-5-2",
+    order = "2-5-3",
   },
   {
     type = "technology",
@@ -652,8 +684,7 @@ data:extend({
     },
     prerequisites = {
       "cube-spectral-processor",
-      "cube-phantom-emotion",
-      "cube-battery",
+      "cube-haunted-battery",
     },
     unit = tech_cost_unit("2x", 300),
     order = "2-9-1",

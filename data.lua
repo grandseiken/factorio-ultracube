@@ -18,7 +18,7 @@ require("prototypes.scripts.autoplace")
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working
 -- module graphics/tech graphics
--- resplendent plate tech graphics, phantom handling tech graphics
+-- resplendent plate tech graphics, phantom handling tech graphics, seance tech graphic
 
 -- IMPORTANT TODOs:
 -------------------
@@ -57,24 +57,19 @@ require("prototypes.scripts.autoplace")
 
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
 -- - but probably almost definitely the unpacker could convert a synthesizer into a mini-synthesizer...
--- tweak loader v1 position/recipe
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- module recipes: make from common precursor + relevant thing (crystal/battery); make non-cube v1 prod/speed modules at science 2
 
-
--- will need some new intermediate products:
--- DEEP BRANCH:
--- - 1 more weird new product? - from plate!
--- GHOST BRANCH:
--- - some other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
--- - seance tech graphic; shadowglass naming
--- - ectoplasm -> haunted battery ?
--- potential icons: energy shield equipment; slowdown capsule; rockets; improved pollution filter; antimatter fuel cell, dt fuel,
--- unobtainium
+-- TODOs:
+-- Deep branch product from resplendent plate
+-- Deep branch product from explosive/ethanol maybe
+-- Other emotion uses/power uses (euphoria->steam?)
+-- Other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
+-- Haunted battery icon; should it need like 1x deep powder? maybe not be a tech ingredient?
 
 -- Main tech unlocks:
 -- Better armour / equipments (battery v2 on erudite tree)
--- emotion -> other byproduct-y uses
+-- accumulator v2 (plate + ghost battery etc)
 -- New power solutions!? maybe:
 -- - Joy -> steam (not efficient)
 -- - Despair -> some sort of power somehow (lol), better if it can use flasks (or require flask recycling) stygian power plant?
@@ -100,6 +95,7 @@ require("prototypes.scripts.autoplace")
 -- Cube teleportation (implement, + teleportation gps module)
 -- Even better equipment
 -- Higher-level modules, perhaps non-cube (e.g. fabricator) modules, beacon!?
+-- unobtainium?
 
 -- After science 3/4 or nearby, later ideas...
 -- Quantum decoder; via multi-furnace (quantum computer or research server); qbits;

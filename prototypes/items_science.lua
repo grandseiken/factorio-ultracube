@@ -4,6 +4,24 @@ data:extend({
     name = "cube-basic-contemplation-unit",
     icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/energy-control-unit-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-science",
     order = "0[contemplation]",
     stack_size = 100,
@@ -14,6 +32,24 @@ data:extend({
     name = "cube-fundamental-comprehension-card",
     icon = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = { "light" },
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-science",
     order = "1[comprehension]",
     stack_size = 100,
@@ -24,6 +60,24 @@ data:extend({
     name = "cube-abstract-interrogation-card",
     icon = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = { "light" },
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/matter-tech-card-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-science",
     order = "2[interrogation]",
     stack_size = 100,
@@ -34,6 +88,24 @@ data:extend({
     name = "cube-deep-introspection-card",
     icon = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = { "light" },
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-science",
     order = "3[introspection]",
     stack_size = 100,
@@ -45,7 +117,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-science",
-    order = "4[interpretation]",
+    order = "4[premonition]",
     stack_size = 100,
     durability = 1,
   },
@@ -54,6 +126,24 @@ data:extend({
     name = "cube-unobtainium",
     icon = "__Krastorio2Assets__/icons/items/tritium.png",
     icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/tritium.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
     subgroup = "cube-science",
     order = "x[a-unobtainium]",
     stack_size = 100,
