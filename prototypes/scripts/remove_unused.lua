@@ -1,4 +1,4 @@
-require("scripts.lib")
+require("__Ultracube__/scripts/lib")
 
 -- Disable all default items (except for whitelisted), recipes and technologies.
 local whitelist = make_set({

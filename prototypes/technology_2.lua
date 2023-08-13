@@ -107,23 +107,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-refined-concrete",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/concrete.png",
-    effects =
-    {
-      {type = "unlock-recipe", recipe = "cube-refined-concrete"},
-      {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
-    },
-    prerequisites = {
-      "cube-abstract-interrogation-card",
-      "cube-concrete",
-    },
-    unit = tech_cost_unit("2", 180),
-    order = "2-0-6",
-  },
-  {
-    type = "technology",
     name = "cube-sophisticated-matter-unit",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Ultracube__/graphics/sophisticated-matter-unit.png",

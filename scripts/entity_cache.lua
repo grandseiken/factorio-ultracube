@@ -1,5 +1,5 @@
-require("scripts.lib")
-require("scripts.cube_management")
+require("__Ultracube__/scripts/lib")
+require("__Ultracube__/scripts/cube_management")
 
 entity_cache_chunk_size = 8
 local cube_defines = cube_defines

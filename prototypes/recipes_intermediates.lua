@@ -24,9 +24,9 @@ data:extend({
     type = "recipe",
     name = "cube-ghost-wire",
     ingredients = {
-      {"cube-spectralite", 2},
+      {"cube-spectralite", 1},
     },
-    results = {{"cube-ghost-wire", 20}},
+    results = {{"cube-ghost-wire", 16}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,
@@ -62,10 +62,11 @@ data:extend({
     type = "recipe",
     name = "cube-spectral-processor",
     ingredients = {
-      {"cube-electronic-circuit", 8},
+      {"cube-electronic-circuit", 4},
       {"cube-advanced-circuit", 2},
       {"cube-glass", 1},
-      {"cube-ghost-wire", 80},
+      {"cube-spectralite", 1},
+      {"cube-ghost-wire", 400},
     },
     results = {{"cube-spectral-processor", 1}},
     energy_required = 10,
@@ -353,8 +354,8 @@ data:extend({
     name = "cube-haunted-battery",
     ingredients = {
       {type = "fluid", name = "cube-ectoplasm", amount = 40},
+      {"cube-sophisticated-matter-unit", 1},
       {"battery", 2},
-      -- TODO: something?
     },
     results = {{"cube-haunted-battery", 1}},
     energy_required = 4,

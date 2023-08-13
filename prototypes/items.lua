@@ -84,6 +84,24 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-coal-ultralocomotion",
+    icon = "__base__/graphics/icons/coal.png",
+    icon_size = 64, icon_mipmaps = 4,
+    fuel_category = "cube-fuel-general",
+    fuel_value = "4MJ",
+    fuel_acceleration_multiplier = 10,
+    fuel_top_speed_multiplier = 4,
+    subgroup = "cube-fuel",
+    order = "x[1]",
+    stack_size = 1,
+    flags = {
+      "hidden",
+      "hide-from-bonus-gui",
+      "hide-from-fuel-tooltip",
+    },
+  },
+  {
+    type = "item",
     name = "cube-condensed-fuel-ultralocomotion",
     icon = "__base__/graphics/icons/flamethrower-ammo.png",
     icon_size = 64, icon_mipmaps = 4,
@@ -92,7 +110,7 @@ data:extend({
     fuel_acceleration_multiplier = 10.75,
     fuel_top_speed_multiplier = 4.25,
     subgroup = "cube-fuel",
-    order = "x[1]",
+    order = "x[2]",
     stack_size = 1,
     flags = {
       "hidden",

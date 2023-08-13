@@ -1,5 +1,5 @@
-require("scripts.lib")
-require("scripts.entity_cache")
+require("__Ultracube__/scripts/lib")
+require("__Ultracube__/scripts/entity_cache")
 
 local cube_ultradense = cubes.ultradense
 local cube_dormant = cubes.dormant

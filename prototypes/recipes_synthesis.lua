@@ -450,7 +450,7 @@ data:extend({
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-ghost-crystal", amount = 50},
+      {type = "item", name = "cube-ghost-crystal", amount = 100},
     },
     main_product = "",
     energy_required = 1,
@@ -471,7 +471,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-bottled-anguish", amount = 2, catalyst_amount = 1},
+      {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-unstable-gas", amount = 50},
     },
     results = {

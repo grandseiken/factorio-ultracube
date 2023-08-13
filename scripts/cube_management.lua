@@ -1,4 +1,4 @@
-require("scripts.lib")
+require("__Ultracube__/scripts/lib")
 
 cube_defines = {
   ultradense = "cube-ultradense-utility-cube",
@@ -76,9 +76,10 @@ function player_cube_data(player)
 end
 
 function update_player_cube_status(player_index)
-  -- TODO: same for logistics bots.
   local player = game.players[player_index]
-  player.character_running_speed_modifier = -1.0 + 0.5^player_cube_data(player).total
+  if player.controller_type == defines.controllers.character then
+    player.character_running_speed_modifier = -1.0 + 0.5^player_cube_data(player).total
+  end
 end
 
 function is_entity_burning_fuel(entity, fuel_item)

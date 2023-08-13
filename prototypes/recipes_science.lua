@@ -98,8 +98,7 @@ data:extend({
     ingredients = {
       {"cube-spectral-processor", 1},
       {"cube-haunted-battery", 1},
-      {"cube-n-dimensional-widget", 1},  -- Maybe? Or something made from it? Or something with vodka?
-      {"cube-unobtainium", 1},
+      {"cube-bottled-anguish", 1},
     },
     results = {{"cube-synthetic-premonition-card", 1}},
     energy_required = 12,

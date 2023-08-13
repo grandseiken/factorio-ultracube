@@ -1,5 +1,5 @@
-require("scripts.lib")
-require("scripts.cube_search")
+require("__Ultracube__/scripts/lib")
+require("__Ultracube__/scripts/cube_search")
 
 local cube_ultradense = cubes.ultradense
 local cube_dormant = cubes.dormant
@@ -7,6 +7,7 @@ local ultradense_icon = {type = "item", name = cube_ultradense}
 local dormant_icon = {type = "item", name = cube_dormant}
 local ultralocomotion_fuel_map = {
   ["wood"] = "cube-wood-ultralocomotion",
+  ["coal"] = "cube-coal-ultralocomotion",
   ["cube-condensed-fuel"] = "cube-condensed-fuel-ultralocomotion",
 }
 local ultralocomotion_fuel_inverse_map = inverse_map(ultralocomotion_fuel_map)

@@ -1,8 +1,15 @@
-require("scripts.cube_fx")
-require("scripts.cube_management")
-require("scripts.entity_cache")
-require("scripts.multi_furnace")
-require("scripts.tech_unlock")
+do
+  local modloader = remote.interfaces["modloader"]
+  if modloader and modloader[script.mod_name] then
+    return
+  end
+end
+
+require("__Ultracube__/scripts/cube_fx")
+require("__Ultracube__/scripts/cube_management")
+require("__Ultracube__/scripts/entity_cache")
+require("__Ultracube__/scripts/multi_furnace")
+require("__Ultracube__/scripts/tech_unlock")
 
 local function on_picker_dolly_moved(e)
   remove_entity_cache(e.moved_entity, e.start_pos)

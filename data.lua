@@ -65,7 +65,7 @@ require("prototypes.scripts.autoplace")
 -- Deep branch product from explosive/ethanol maybe
 -- Other emotion uses/power uses (euphoria->steam?)
 -- Other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
--- Haunted battery icon; should it need like 1x deep powder? maybe not be a tech ingredient?
+-- Haunted battery icon + extra ingredient?
 
 -- Main tech unlocks:
 -- Better armour / equipments (battery v2 on erudite tree)
@@ -121,6 +121,7 @@ require("prototypes.items_production")
 require("prototypes.items_science")
 require("prototypes.mechanical_network.data")
 require("prototypes.mechanical_network.entities")
+require("prototypes.menu_simulations")
 require("prototypes.recipe_categories")
 require("prototypes.recipes_compatibility")
 require("prototypes.recipes_equipment")
