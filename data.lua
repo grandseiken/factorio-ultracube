@@ -107,6 +107,7 @@ require("prototypes.scripts.autoplace")
 -- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
+require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")
 require("prototypes.fluids")
@@ -121,7 +122,6 @@ require("prototypes.items_production")
 require("prototypes.items_science")
 require("prototypes.mechanical_network.data")
 require("prototypes.mechanical_network.entities")
-require("prototypes.menu_simulations")
 require("prototypes.recipe_categories")
 require("prototypes.recipes_compatibility")
 require("prototypes.recipes_equipment")
