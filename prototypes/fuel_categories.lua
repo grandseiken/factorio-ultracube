@@ -14,4 +14,9 @@ data:extend({
     name = "cube-fuel-general",
     order = "2",
   },
+  {
+    type = "fuel-category",
+    name = "cube-haunted-energy",
+    order = "3",
+  },
 })

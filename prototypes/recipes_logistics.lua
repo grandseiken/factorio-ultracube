@@ -262,7 +262,7 @@ data:extend({
     ingredients = {
       {"concrete", 20},
       {"stone-brick", 6},
-      {"cube-refined-rare-metals", 1},
+      {"cube-refined-rare-metals", 4},
       {"cube-calcium", 2},
       {type = "fluid", name = "water", amount = 100},
     },

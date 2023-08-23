@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-0",
-    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+    icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -24,13 +24,13 @@ data:extend({
     name = "cube-basic-contemplation-unit-1",
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+        icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
+        scale = 0.25, shift = {8, 8},
       }
     },
     ingredients = {
@@ -97,10 +97,14 @@ data:extend({
     name = "cube-synthetic-premonition-card",
     ingredients = {
       {"cube-spectral-processor", 1},
-      {"cube-haunted-battery", 1},
+      {"cube-haunted-energy-cell", 1},
       {"cube-bottled-anguish", 1},
     },
-    results = {{"cube-synthetic-premonition-card", 1}},
+    results = {
+      {"cube-synthetic-premonition-card", 1},
+      {type = "item", name = "cube-residual-tendrils", amount_min = 4, amount_max = 16},
+    },
+    main_product = "cube-synthetic-premonition-card",
     energy_required = 12,
     category = "cube-fabricator-handcraft",
     enabled = false,

@@ -41,7 +41,7 @@ data:extend({
     results = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
     main_product = "",
     energy_required = 2,
-    category = "cube-dimensionality-unpacker",
+    category = "cube-dimension-folding-engine",
     subgroup = "cube-synthesis-phantom",
     order = "0[0-phantom]",
     always_show_made_in = true,
@@ -67,7 +67,7 @@ data:extend({
     results = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
     main_product = "",
     energy_required = 2,
-    category = "cube-dimensionality-unpacker",
+    category = "cube-dimension-folding-engine",
     subgroup = "cube-synthesis-phantom",
     order = "0[1-phantom]",
     always_show_made_in = true,
@@ -162,6 +162,7 @@ data:extend({
     },
     results = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.75, catalyst_amount = 1},
     },
     main_product = "",
     energy_required = 1,
@@ -263,7 +264,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
-    icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+    icon = "__Krastorio2Assets__/icons/items/automation-core.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -287,13 +288,13 @@ data:extend({
     name = "cube-n-dimensional-widget-1",
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+        icon = "__Krastorio2Assets__/icons/items/automation-core.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
+        scale = 0.25, shift = {8, 8},
       },
     },
     ingredients = {
@@ -325,12 +326,12 @@ data:extend({
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
       {
-        icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+        icon = "__Krastorio2Assets__/icons/items/automation-core.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
       },
       {
-        icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+        icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, 8},
       },
@@ -445,8 +446,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
     ingredients = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
-      -- TODO: ???
+      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
@@ -472,6 +472,7 @@ data:extend({
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
       {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ghost-crystal", amount = 1},
       {type = "fluid", name = "cube-unstable-gas", amount = 50},
     },
     results = {
@@ -489,6 +490,30 @@ data:extend({
     allow_decomposition = false,
     allow_intermediates = false,
     allow_as_intermediate = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-residual-tendrils",
+    icons = {{
+      icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+      icon_size = 64, icon_mipmaps = 4,
+    }},
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-residual-tendrils", amount = 20000},
+    },
+    results = {
+      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-residual-tendrils", amount_min = 4800, amount_max = 6400, catalyst_amount = 10000},
+    },
+    main_product = "",
+    energy_required = 2,
+    category = "cube-dimension-folding-engine",
+    subgroup = "cube-synthesis-phantom",
+    order = "z[0-tendrils]",
+    always_show_made_in = true,
+    allow_decomposition = false,
     enabled = false,
   },
 })

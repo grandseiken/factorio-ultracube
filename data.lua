@@ -61,22 +61,25 @@ require("prototypes.scripts.autoplace")
 -- module recipes: make from common precursor + relevant thing (crystal/battery); make non-cube v1 prod/speed modules at science 2
 
 -- TODOs:
+-- Extremely long-handed inserter.
+-- Tendril expulsion tech graphic; possibly ... require something from other branch in recipe? Maybe for more efficient?
+-- Perhaps premonition card just made from ectoplasm, not haunted cell? Not sure.
+-- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
+
 -- Deep branch product from resplendent plate
--- Deep branch product from explosive/ethanol maybe
--- Other emotion uses/power uses (euphoria->steam?)
+-- Deep branch product from explosive/ethanol maybe (?)
+-- Maybe some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
 -- Other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
--- Haunted battery icon + extra ingredient?
+-- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- Main tech unlocks:
--- Better armour / equipments (battery v2 on erudite tree)
+-- Better armour / equipments (battery v2 on erudite tree) - maybe modules?
 -- accumulator v2 (plate + ghost battery etc)
--- New power solutions!? maybe:
--- - Joy -> steam (not efficient)
--- - Despair -> some sort of power somehow (lol), better if it can use flasks (or require flask recycling) stygian power plant?
 
 -- Random thoughts.
 -- Ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
--- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split (loopback)
+-- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split (loopback);
+-- - New dormant -> dormant phantom cube recipe for something - perhaps cerebral substrate, perhaps something else?
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
 -- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
@@ -149,7 +152,7 @@ require("prototypes.entities.chemical_plant")
 require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
 require("prototypes.entities.deep_core_ultradrill")
-require("prototypes.entities.dimensionality_unpacker")
+require("prototypes.entities.dimension_folding_engine")
 require("prototypes.entities.distillery")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
@@ -158,12 +161,14 @@ require("prototypes.entities.fabricator")
 require("prototypes.entities.fluid_burner")
 require("prototypes.entities.fuel_refinery")
 require("prototypes.entities.greenhouse")
+require("prototypes.entities.heavy_turbine")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
 require("prototypes.entities.roboport")
 require("prototypes.entities.robots")
+require("prototypes.entities.stygian_energy_lab")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
 

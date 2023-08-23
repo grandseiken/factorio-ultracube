@@ -35,9 +35,9 @@ data:extend({
       },
     },
     ingredients = {
-      {type = "fluid", name = "steam", amount = 2000},
+      {type = "fluid", name = "steam", amount = 4000},
       {"cube-sand", 200},
-      {"wood", 400},
+      {"wood", 800},
       {"coal", 400},
     },
     results = {

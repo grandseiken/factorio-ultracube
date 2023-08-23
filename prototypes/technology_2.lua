@@ -22,7 +22,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-explosives"},
     },
     prerequisites = {
-      "cube-abstract-interrogation-card",
+      "cube-distillation",
       "cube-sulfur-processing",
     },
     unit = tech_cost_unit("2", 180),
@@ -297,15 +297,16 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-dimensionality-unpacker",
+    name = "cube-dimension-folding-engine",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-dimensionality-unpacker"},
+      {type = "unlock-recipe", recipe = "cube-dimension-folding-engine"},
       {type = "unlock-recipe", recipe = "cube-phantom-ultradense-constituent"},
       {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube-phantom"},
       {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge"},
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-phantom"},
+      {type = "unlock-recipe", recipe = "cube-ghost-crystal"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
@@ -482,13 +483,13 @@ data:extend({
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/energy-control-unit.png",
+        icon = "__Krastorio2Assets__/technologies/military-tech-card.png",
         scale = 0.65,
         shift = {-32, -32},
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+        icon = "__Krastorio2Assets__/technologies/automation-core.png",
         scale = 0.65,
         shift = {32, 32},
       },
@@ -501,7 +502,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-phantom-components"},
     },
-    prerequisites = {"cube-dimensionality-unpacker"},
+    prerequisites = {"cube-dimension-folding-engine"},
     unit = tech_cost_unit("2", 240),
     order = "2-4-6",
   },
@@ -511,26 +512,15 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
-        tint = {r = 1, g = 1, b = 1, a = 0.0},
-      },
-      {
-        icon_size = 256, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/technologies/silicon-processing.png",
-        tint = {r = 1, g = 1, b = 1, a = 0.5},
-      },
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-ghost-crystal"},
       {type = "unlock-recipe", recipe = "cube-spectralite"},
       {type = "unlock-recipe", recipe = "cube-ghost-wire"},
     },
-    prerequisites = {"cube-dimensionality-unpacker"},
+    prerequisites = {"cube-dimension-folding-engine"},
     unit = tech_cost_unit("2", 240),
     order = "2-4-7",
   },
@@ -564,7 +554,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ectoplasm"},
     },
     prerequisites = {
-      "cube-dimensionality-unpacker",
+      "cube-dimension-folding-engine",
       "cube-emotional-decomposition",
     },
     unit = tech_cost_unit("2", 240),
@@ -587,11 +577,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-haunted-battery",
-    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    name = "cube-haunted-energy-cell",
+    icon = "__Ultracube__/graphics/haunted-energy-cell-technology.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
-      {type = "unlock-recipe", recipe = "cube-haunted-battery"},
+      {type = "unlock-recipe", recipe = "cube-haunted-energy-cell"},
     },
     prerequisites = {
       "cube-phantom-emotion",
@@ -599,6 +589,34 @@ data:extend({
     },
     unit = tech_cost_unit("2", 240),
     order = "2-5-1",
+  },
+  {
+    type = "technology",
+    name = "cube-residual-tendrils",
+    icon = "__Ultracube__/graphics/haunted-energy-cell-technology.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-residual-tendrils"},
+    },
+    prerequisites = {"cube-haunted-energy-cell"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-5-2",
+  },
+  {
+    type = "technology",
+    name = "cube-stygian-energy-lab",
+    icon = "__Krastorio2Assets__/technologies/bio-lab.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-stygian-energy-lab"},
+      {type = "unlock-recipe", recipe = "cube-heavy-turbine"},
+    },
+    prerequisites = {
+      "cube-haunted-energy-cell",
+      "cube-phantom-electronics",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-5-3",
   },
   {
     type = "technology",
@@ -613,7 +631,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("2", 300),
-    order = "2-5-2",
+    order = "2-5-4",
   },
   {
     type = "technology",
@@ -637,7 +655,7 @@ data:extend({
       "cube-phantom-electronics",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-5-3",
+    order = "2-5-5",
   },
   {
     type = "technology",
@@ -667,7 +685,7 @@ data:extend({
     },
     prerequisites = {
       "cube-spectral-processor",
-      "cube-haunted-battery",
+      "cube-haunted-energy-cell",
     },
     unit = tech_cost_unit("2x", 300),
     order = "2-9-1",

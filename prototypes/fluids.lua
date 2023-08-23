@@ -156,4 +156,16 @@ data:extend({
     subgroup = "cube-synthesis-fluids",
     order = "c[ghost]-d[ectoplasm]",
   },
+  {
+    type = "fluid",
+    name = "cube-void-wind",
+    icon = "__Ultracube__/graphics/void-wind.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.0, g=0.0, b=0.0, a=1},
+    flow_color = {r=0.1, g=0.1, b=0.1, a=0.85},
+    default_temperature = 0,
+    fuel_value = "50KJ",
+    subgroup = "cube-synthesis-fluids",
+    order = "c[ghost]-e[void-wind]",
+  },
 })

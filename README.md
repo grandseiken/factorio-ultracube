@@ -18,12 +18,20 @@ The technology tree has been rebuilt from scratch. A few production chains share
 
 It currently features three levels of science and an assortment of devious puzzles, with more content on the way.
 
-## Screenshots
+## You might like this mod if:
+
+* Fill in.
+
+## You might not like this mod if:
+
+* Fill in.
+
+# Screenshots
 
 ![Early-game spaghetti](screenshots/spaghetti.jpg)
 (Relatively) early-game spaghetti.
 
-## Frequently asked questions
+# Frequently asked questions
 
 * **Why am I moving so slowly?** Take a look at the descriptions of the items in your inventory.
 
@@ -37,7 +45,7 @@ It currently features three levels of science and an assortment of devious puzzl
 
 * **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is [an issue with the way factorio determines when a machine's output is full](https://forums.factorio.com/viewtopic.php?f=7&t=101436). The only way to fix this right now would be to give certain items ridiculous stack sizes (many thousands), so you'll just have to work around it for now.
 
-## Compatibility
+# Compatibility
 
 This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities.
 
@@ -52,7 +60,7 @@ Additionally, simple mods like Far Reach or Even Distribution should work fine.
 
 If you would like to contribute/request support for compatibility with some other mod, you are welcome to open a pull request or github issue.
 
-## Dependencies and credits
+# Dependencies and credits
 
 This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on [Krastorio2](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. Many thanks to the Krastorio 2 developers for their work and for making this possible.
 

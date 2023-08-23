@@ -16,7 +16,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-dimensionality-unpacker",
+    name = "cube-dimension-folding-engine",
     order = "1b",
   },
   {
@@ -63,6 +63,11 @@ data:extend({
     type = "recipe-category",
     name = "cube-distillery",
     order = "f",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-stygian-energy-lab",
+    order = "y",
   },
   {
     type = "recipe-category",

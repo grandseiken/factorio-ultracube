@@ -113,7 +113,7 @@ data:extend({
       },
     },
     subgroup = "cube-basic-products",
-    order = "0[rare-metals]",
+    order = "1[rare-metals]",
     stack_size = 100,
   },
 
@@ -182,9 +182,59 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+        icon = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.3125, shift = {0, -4},
+      },
+    },
+    pictures = {
+      {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
+            scale = 0.25,
+            size = 64,
+            mipmap_count = 4,
+          },
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
+            scale = 0.5 * 0.3125, shift = {0, -4 / 64},
+            size = 64,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
+            scale = 0.25,
+            size = 64,
+            mipmap_count = 4,
+          },
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
+            scale = 0.5 * 0.3125, shift = {0, -4 / 64},
+            size = 64,
+            mipmap_count = 4,
+          },
+        },
+      },
+      {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
+            scale = 0.25,
+            size = 64,
+            mipmap_count = 4,
+          },
+          {
+            filename = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
+            scale = 0.5 * 0.3125, shift = {0, -4 / 64},
+            size = 64,
+            mipmap_count = 4,
+          },
+        },
       },
     },
     subgroup = "cube-experimental",
@@ -583,6 +633,35 @@ data:extend({
     },
     subgroup = "cube-processed-materials",
     order = "5[spectralite]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-residual-tendrils",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+    icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-processing",
+    order = "x[0-tendrils]",
     stack_size = 100,
   },
 })

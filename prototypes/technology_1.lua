@@ -331,7 +331,7 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 1, shift = {24, -24},
+        scale = 1, shift = {24, 24},
       },
     },
     effects = {
@@ -352,12 +352,12 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+        icon = "__Krastorio2Assets__/technologies/automation-core.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {48, -48},
+        scale = 2, shift = {48, 48},
       },
     },
     effects = {
@@ -373,12 +373,12 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/energy-control-unit.png",
+        icon = "__Krastorio2Assets__/technologies/military-tech-card.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {48, -48},
+        scale = 2, shift = {48, 48},
       },
     },
     effects = {

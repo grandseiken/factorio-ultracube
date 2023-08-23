@@ -125,13 +125,13 @@ data:extend({
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
-    order = "1[matter]",
+    order = "0[matter]",
     stack_size = 200,
   },
   {
     type = "item",
     name = "cube-n-dimensional-widget",
-    icon = "__Krastorio2Assets__/icons/items/matter-stabilizer.png",
+    icon = "__Krastorio2Assets__/icons/items/automation-core.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
     order = "2[widget]",
@@ -272,11 +272,32 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-haunted-battery",
-    icon = "__base__/graphics/icons/battery-mk2-equipment.png",
+    name = "cube-haunted-energy-cell",
+    icon = "__Ultracube__/graphics/haunted-energy-cell.png",
     icon_size = 64, icon_mipmaps = 4,
-    subgroup = "cube-chemical-intermediates",
-    order = "3[haunted-battery]",
-    stack_size = 100,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Ultracube__/graphics/haunted-energy-cell.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Ultracube__/graphics/haunted-energy-cell-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
+    subgroup = "cube-fuel",
+    order = "y[haunted-energy-cell]",
+    fuel_category = "cube-haunted-energy",
+    -- TODO: may need tweaking with actual practice.
+    fuel_value = "250MJ",
+    stack_size = 50,
   },
 })

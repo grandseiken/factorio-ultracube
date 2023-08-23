@@ -96,7 +96,7 @@ data:extend({
     type = "technology",
     name = "cube-n-dimensional-widgets",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/matter-processing.png",
+    icon = "__Krastorio2Assets__/technologies/automation-core.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },

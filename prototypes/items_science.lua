@@ -2,13 +2,13 @@ data:extend({
   {
     type = "tool",
     name = "cube-basic-contemplation-unit",
-    icon = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+    icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/energy-control-unit.png",
+          filename = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -16,7 +16,7 @@ data:extend({
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/energy-control-unit-light.png",
+          filename = "__Krastorio2Assets__/icons/cards/military-tech-card-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },

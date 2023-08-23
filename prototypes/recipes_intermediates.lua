@@ -223,7 +223,8 @@ data:extend({
       {"sulfur", 6},
       {"copper-cable", 4},
       {"cube-sand", 2},
-      {type = "fluid", name = "cube-unstable-gas", amount = 100},
+      {type = "fluid", name = "cube-unstable-gas", amount = 40},
+      {type = "fluid", name = "cube-ethanol", amount = 20},
     },
     results = {{"explosives", 1}},
     energy_required = 4,
@@ -315,7 +316,7 @@ data:extend({
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-condensed-fuel", 200}
+      {"cube-condensed-fuel", 160}
     },
     category = "cube-fuel-refinery",
     subgroup = "cube-fuel",
@@ -351,13 +352,13 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-haunted-battery",
+    name = "cube-haunted-energy-cell",
     ingredients = {
       {type = "fluid", name = "cube-ectoplasm", amount = 40},
       {"cube-sophisticated-matter-unit", 1},
       {"battery", 2},
     },
-    results = {{"cube-haunted-battery", 1}},
+    results = {{"cube-haunted-energy-cell", 1}},
     energy_required = 4,
     category = "cube-chemical-plant",
     enabled = false,
