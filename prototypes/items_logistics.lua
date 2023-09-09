@@ -70,6 +70,16 @@ data:extend({
     place_result = "cube-v4-splitter",
     stack_size = 50,
   },
+  {
+    type = "item",
+    name = "cube-extremely-long-inserter",
+    icon = "__Ultracube__/graphics/extremely-long-inserter.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "inserter",
+    order = "x[extremely-long-inserter]",
+    place_result = "cube-extremely-long-inserter",
+    stack_size = 50,
+  },
 
   {
     type = "item",

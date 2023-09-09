@@ -175,6 +175,12 @@ data:extend({
     allow_intermediates = false,
     allow_as_intermediate = false,
     enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.95, g = 0.15, b = 0.5, a = 0.75},
+      secondary = {r = 0.8, g = 0.8, b = 0.8, a = 0.75},
+      tertiary = {r = 0.85, g = 0.1, b = 0.4, a = 0.75},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15, a = 0.75},
+    },
   },
 
   {

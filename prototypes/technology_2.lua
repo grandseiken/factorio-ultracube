@@ -593,8 +593,32 @@ data:extend({
   {
     type = "technology",
     name = "cube-residual-tendrils",
-    icon = "__Ultracube__/graphics/haunted-energy-cell-technology.png",
-    icon_size = 256, icon_mipmaps = 4,
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/antimatter-reactor.png",
+        tint = {r=1, g=1, b=1, a=0.625},
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+        shift = {0, -40},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
+        shift = {-0.866 * 40, 20},
+      },
+      {
+        icon_size = 64, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
+        shift = {0.866 * 40, 20},
+      },
+    },
     effects = {
       {type = "unlock-recipe", recipe = "cube-residual-tendrils"},
     },
@@ -656,6 +680,21 @@ data:extend({
     },
     unit = tech_cost_unit("2", 240),
     order = "2-5-5",
+  },
+  {
+    type = "technology",
+    name = "cube-extremely-long-inserter",
+    icon = "__Ultracube__/graphics/extremely-long-inserter-technology.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-extremely-long-inserter"},
+    },
+    prerequisites = {
+      "cube-resplendent-plate",
+      "cube-inserters",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-5-6",
   },
   {
     type = "technology",

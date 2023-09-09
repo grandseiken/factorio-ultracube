@@ -61,15 +61,13 @@ require("prototypes.scripts.autoplace")
 -- module recipes: make from common precursor + relevant thing (crystal/battery); make non-cube v1 prod/speed modules at science 2
 
 -- TODOs:
--- Extremely long-handed inserter.
--- Tendril expulsion tech graphic; possibly ... require something from other branch in recipe? Maybe for more efficient?
+-- Tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient?
 -- Perhaps premonition card just made from ectoplasm, not haunted cell? Not sure.
 -- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
 
 -- Deep branch product from resplendent plate
 -- Deep branch product from explosive/ethanol maybe (?)
--- Maybe some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
--- Other byproducts, ingredients etc in ghost material chain: ingredient or something for ghost crystal, or byproduct with shadowglass
+-- Some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- Main tech unlocks:
@@ -77,7 +75,7 @@ require("prototypes.scripts.autoplace")
 -- accumulator v2 (plate + ghost battery etc)
 
 -- Random thoughts.
--- Ultradense constituent and reassembly. Something with weird ratios. Need to recharge many constituents at once?
+-- Ultradense constituent and reassembly: Something with weird ratios. Need to recharge many constituents at once?
 -- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split (loopback);
 -- - New dormant -> dormant phantom cube recipe for something - perhaps cerebral substrate, perhaps something else?
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
@@ -162,6 +160,7 @@ require("prototypes.entities.fluid_burner")
 require("prototypes.entities.fuel_refinery")
 require("prototypes.entities.greenhouse")
 require("prototypes.entities.heavy_turbine")
+require("prototypes.entities.inserters")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
 require("prototypes.entities.recovery_bay")

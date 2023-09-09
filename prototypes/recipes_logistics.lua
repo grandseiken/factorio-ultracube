@@ -503,6 +503,20 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-extremely-long-inserter",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 4},
+      {"cube-resplendent-plate", 4},
+      {"cube-advanced-engine", 1},
+      {"decider-combinator", 1},
+    },
+    results = {{"cube-extremely-long-inserter", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 
   {
     type = "recipe",
