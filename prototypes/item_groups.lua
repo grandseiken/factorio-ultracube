@@ -150,6 +150,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-module-intermediates",
+    group = "cube-tools",
+    order = "w"
+  },
+  {
+    type = "item-subgroup",
     name = "cube-modules",
     group = "cube-tools",
     order = "x"

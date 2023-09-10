@@ -202,7 +202,7 @@ data:extend({
       "cube-sophisticated-matter-unit",
       "cube-concrete",
     },
-    unit = tech_cost_unit("2", 240),
+    unit = tech_cost_unit("2", 300),
     order = "2-1-6",
   },
   {
@@ -240,6 +240,38 @@ data:extend({
     },
     unit = tech_cost_unit("2", 240),
     order = "2-1-7",
+  },
+  {
+    type = "technology",
+    name = "cube-modular-casing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Ultracube__/graphics/modular-casing-technology.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-modular-casing"},
+    },
+    prerequisites = {"cube-sophisticated-matter-unit"},
+    unit = tech_cost_unit("2", 180),
+    order = "2-1-8",
+  },
+  {
+    type = "technology",
+    name = "cube-burnt-out-modular-casing",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/modular-casing-technology.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/recycling.png",
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
+    },
+    prerequisites = {"cube-modular-casing"},
+    unit = tech_cost_unit("2", 180),
+    order = "2-1-9",
   },
   {
     type = "technology",
@@ -312,7 +344,7 @@ data:extend({
       "cube-sophisticated-matter-unit",
       "cube-concrete",
     },
-    unit = tech_cost_unit("2", 240),
+    unit = tech_cost_unit("2", 300),
     order = "2-2-2",
   },
   {

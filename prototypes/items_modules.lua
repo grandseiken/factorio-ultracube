@@ -16,6 +16,25 @@ data:extend({
   },
 
   {
+    type = "item",
+    name = "cube-modular-casing",
+    icon = "__Ultracube__/graphics/modular-casing.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-module-intermediates",
+    order = "a[modular-casing]",
+    stack_size = 50,
+  },
+  {
+    type = "item",
+    name = "cube-burnt-out-modular-casing",
+    icon = "__Ultracube__/graphics/burnt-out-modular-casing.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-module-intermediates",
+    order = "b[burnt-out-modular-casing]",
+    stack_size = 50,
+  },
+
+  {
     -- TODO: module effect breaks the output full thing even more, since
     -- cube can't even be removed / second craft cannot continue until
     -- the machine is completely full.
@@ -34,6 +53,7 @@ data:extend({
       productivity = {bonus = 0.25},
       consumption = {bonus = 0.5},
     },
+    flags = {"hidden"},  -- Until we work out how to make it work.
   },
   {
     type = "module",
@@ -55,7 +75,6 @@ data:extend({
       primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
       secondary = {r = 0.388, g = 0.976, b = 1.000, a = 1.000}, -- #63f8ffff
     },
-    flags = {"hidden"},  -- Until we work out how to make it work.
     art_style = "vanilla",
     requires_beacon_alt_mode = false
   },

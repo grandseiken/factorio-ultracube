@@ -87,7 +87,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-compression-module"},
     },
-    prerequisites = {"cube-deep-introspection-card"},
+    prerequisites = {
+      "cube-modular-casing",
+      "cube-deep-introspection-card",
+    },
     unit = tech_cost_unit("3", 300),
     order = "3-1-0",
   },
@@ -99,7 +102,10 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-inductance-module"},
     },
-    prerequisites = {"cube-synthetic-premonition-card"},
+    prerequisites = {
+      "cube-modular-casing",
+      "cube-synthetic-premonition-card",
+    },
     unit = tech_cost_unit("4", 300),
     order = "3-1-1",
   },

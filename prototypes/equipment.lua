@@ -6,6 +6,13 @@ data:extend({
   },
   {
     type = "equipment-grid",
+    name = "cube-tiny-equipment-grid",
+    width = 4,
+    height = 4,
+    equipment_categories = {"cube-armor"}
+  },
+  {
+    type = "equipment-grid",
     name = "cube-small-equipment-grid",
     width = 5,
     height = 5,

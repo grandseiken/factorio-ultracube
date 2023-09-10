@@ -289,4 +289,24 @@ data:extend({
     allow_decomposition = true,
     enabled = false,
   },
+
+  {
+    type = "recipe",
+    name = "cube-stygian-power-generation",
+    icon = "__Ultracube__/graphics/void-wind.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {},
+    results = {
+      {type = "fluid", name = "cube-void-wind", amount = 400},
+      {type = "item", name = "cube-residual-tendrils", amount_min = 1, amount_max = 4},
+    },
+    energy_required = 2,
+    category = "cube-stygian-energy-lab",
+    subgroup = "cube-synthesis-fluids",
+    order = "c[ghost]-e[void-wind]",
+    hide_from_player_crafting = true,
+    always_show_products = false,
+    show_amount_in_title = false,
+    enabled = false,
+  },
 })

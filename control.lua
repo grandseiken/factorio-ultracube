@@ -55,7 +55,7 @@ local function on_player_created(e)
   end
 
   local inventory = player.get_inventory(defines.inventory.character_armor)
-  inventory.insert("cube-modular-armor")
+  inventory.insert("cube-regulation-armor")
   local grid = inventory[1].grid
   grid.put {name = "cube-personal-roboport-equipment"}
   grid.put {name = "cube-battery-equipment"}

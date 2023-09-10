@@ -3,7 +3,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 data:extend({
   {
-    type = "furnace",
+    type = "assembling-machine",
     name = "cube-electric-furnace",
     icon = "__base__/graphics/icons/electric-furnace.png",
     icon_size = 64, icon_mipmaps = 4,

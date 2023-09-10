@@ -347,7 +347,7 @@ data:extend({
     },
     results = {{"cube-resplendent-plate", 2}},
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    category = "cube-furnace",
     enabled = false,
   },
   {

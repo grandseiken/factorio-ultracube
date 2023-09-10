@@ -26,9 +26,9 @@ local construction_robot_0 = {
   max_payload_size = 1,
   speed = 0.06,
   max_energy = "1.5MJ",
-  energy_per_tick = "0.05kJ",
+  energy_per_tick = "0.02kJ",
   speed_multiplier_when_out_of_energy = 0.2,
-  energy_per_move = "5kJ",
+  energy_per_move = "2kJ",
   min_to_charge = 0.2,
   max_to_charge = 0.95,
   --working_light = {intensity = 0.8, size = 3, color = {r = 0.8, g = 0.8, b = 0.8}},
@@ -88,9 +88,9 @@ local logistic_robot_0 = {
   max_payload_size = 1,
   speed = 0.05,
   max_energy = "1.5MJ",
-  energy_per_tick = "0.05kJ",
+  energy_per_tick = "0.1kJ",
   speed_multiplier_when_out_of_energy = 0.2,
-  energy_per_move = "5kJ",
+  energy_per_move = "10kJ",
   min_to_charge = 0.2,
   max_to_charge = 0.95,
   working_sound = sounds.flying_robot(0.48),
@@ -112,9 +112,9 @@ logistic_robot_1.minable.result = "cube-logistic-robot-1"
 logistic_robot_1.speed = 0.025
 logistic_robot_1.max_payload_size = 2
 logistic_robot_1.max_energy = "1.0MJ"
-logistic_robot_1.energy_per_tick = "0.02kJ"
+logistic_robot_1.energy_per_tick = "0.05kJ"
 logistic_robot_1.speed_multiplier_when_out_of_energy = 0.5
-logistic_robot_1.energy_per_move = "2kJ"
+logistic_robot_1.energy_per_move = "5kJ"
 
 data:extend({
   construction_robot_0,

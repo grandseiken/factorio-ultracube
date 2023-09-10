@@ -42,7 +42,6 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- rearrange upgrade techs; some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
 -- maybe pickaxe/mining upgrades?
--- more armour stuff
 -- think about reintroducing biters + military?
 -- storylore tooltips
 -- move some current techs later and add earlier-game shit versions of things? e.g. miners, fabricator, perhaps even synthesizer
@@ -50,23 +49,19 @@ require("prototypes.scripts.autoplace")
 -- TECH TREE TODOs:
 -------------------
 -- after science 2, split into 2 (or 3) different focus trees that interlink & eventually merge together.
--- 1. Deep core drilling -> sorta "scale/distance" focused
--- 2. Cube splitting, in new building (probably antimatter reactor, maybe matter plant) -> various logistics puzzles focused
--- 3. Something maybe power / energy / resource / byproducts-focused? Possibly distillation / emotional things
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
--- - but probably almost definitely the unpacker could convert a synthesizer into a mini-synthesizer...
--- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
--- module recipes: make from common precursor + relevant thing (crystal/battery); make non-cube v1 prod/speed modules at science 2
-
--- TODOs:
--- Tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient?
+-- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
+-- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
 -- Perhaps premonition card just made from ectoplasm, not haunted cell? Not sure.
+-- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
+-- Module recipes: lvl 2+ should be gambling chance based maybe
 
--- Deep branch product from resplendent plate
--- Deep branch product from explosive/ethanol maybe (?)
+-- Science ingredients:
+-- - deep branch - product from resplendent plate (?)
+-- - ghost branch - third/fourth ingredient, maybe not just another anguish?
 -- Some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 

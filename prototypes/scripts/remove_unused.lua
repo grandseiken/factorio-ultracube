@@ -67,8 +67,6 @@ local whitelist = make_set({
   "filter-inserter",
   "stack-inserter",
   "stack-filter-inserter",
-  "power-armor",
-  "power-armor-mk2",
   "exoskeleton-equipment",
   -- Compatibility.
   "nixie-tube",

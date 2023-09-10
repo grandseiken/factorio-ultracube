@@ -21,7 +21,7 @@ data:extend({
       {"cube-spectral-processor", 40},
       {"cube-advanced-engine", 10},
     },
-    results = {{"power-armor", 1}},
+    results = {{"cube-power-armor", 1}},
     energy_required = 40,
     enabled = false,
   },
