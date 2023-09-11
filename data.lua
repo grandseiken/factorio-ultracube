@@ -57,7 +57,7 @@ require("prototypes.scripts.autoplace")
 -- Perhaps premonition card just made from ectoplasm, not haunted cell? Not sure.
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
--- Module recipes: lvl 2+ should be gambling chance based maybe
+-- Module recipes, colours and naming: charged/overcharged etc.
 
 -- Science ingredients:
 -- - deep branch - product from resplendent plate (?)
@@ -68,6 +68,8 @@ require("prototypes.scripts.autoplace")
 -- Main tech unlocks:
 -- Better armour / equipments (battery v2 on erudite tree) - maybe modules?
 -- accumulator v2 (plate + ghost battery etc)
+-- Exoskeleton w/ speed module (??) but then how spider? Speed module just dust, and crystal for v2?
+-- recolour modules...; add productivity, and check what all machine/recipes it could go in.
 
 -- Random thoughts.
 -- Ultradense constituent and reassembly: Something with weird ratios. Need to recharge many constituents at once?

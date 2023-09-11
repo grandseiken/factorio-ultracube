@@ -255,38 +255,6 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-burnt-out-modular-casing",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/modular-casing-technology.png",
-      },
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
-      },
-    },
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
-    },
-    prerequisites = {"cube-modular-casing"},
-    unit = tech_cost_unit("2", 180),
-    order = "2-1-9",
-  },
-  {
-    type = "technology",
-    name = "cube-exoskeleton-equipment",
-    icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png"),
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
-    },
-    prerequisites = {"cube-sophisticated-matter-unit"},
-    unit = tech_cost_unit("2", 240),
-    order = "2-1-8",
-  },
-  {
-    type = "technology",
     name = "cube-explosive-smelting",
     icons = {
       {
@@ -727,6 +695,48 @@ data:extend({
     },
     unit = tech_cost_unit("2", 240),
     order = "2-5-6",
+  },
+  {
+    type = "technology",
+    name = "cube-compression-module",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/speed-module-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-compression-module"},
+    },
+    prerequisites = {
+      "cube-modular-casing",
+      "cube-deep-crystallization",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-6-0",
+  },
+  {
+    type = "technology",
+    name = "cube-inductance-module",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/effectivity-module-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-inductance-module"},
+    },
+    prerequisites = {
+      "cube-modular-casing",
+      "cube-phantom-electronics",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-6-1",
+  },
+  {
+    type = "technology",
+    name = "cube-exoskeleton-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
+    },
+    prerequisites = {"cube-sophisticated-matter-unit"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-6-2",
   },
   {
     type = "technology",

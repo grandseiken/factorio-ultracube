@@ -22,7 +22,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "a[modular-casing]",
-    stack_size = 50,
+    stack_size = 20,
   },
   {
     type = "item",
@@ -31,7 +31,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "b[burnt-out-modular-casing]",
-    stack_size = 50,
+    stack_size = 20,
   },
 
   {
@@ -55,6 +55,7 @@ data:extend({
     },
     flags = {"hidden"},  -- Until we work out how to make it work.
   },
+
   {
     type = "module",
     name = "cube-compression-module",
@@ -67,8 +68,8 @@ data:extend({
     order = "b[1]",
     stack_size = 20,
     effect = {
-      speed = {bonus = 0.25},
-      consumption = {bonus = 0.25},
+      speed = {bonus = 0.2},
+      consumption = {bonus = 0.2},
     },
     beacon_tint =
     {
@@ -78,6 +79,53 @@ data:extend({
     art_style = "vanilla",
     requires_beacon_alt_mode = false
   },
+  {
+    type = "module",
+    name = "cube-compression-module-v2",
+    localised_description = {"item-description.cube-compression-module"},
+    icon = "__base__/graphics/icons/speed-module-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-modules",
+    category = "cube-compression",
+    tier = 2,
+    order = "b[2]",
+    stack_size = 20,
+    effect = {
+      speed = {bonus = 0.3},
+      consumption = {bonus = 0.3},
+    },
+    beacon_tint =
+    {
+      primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
+      secondary = {r = 0.388, g = 0.976, b = 1.000, a = 1.000}, -- #63f8ffff
+    },
+    art_style = "vanilla",
+    requires_beacon_alt_mode = false
+  },
+  {
+    type = "module",
+    name = "cube-compression-module-v3",
+    localised_description = {"item-description.cube-compression-module"},
+    icon = "__base__/graphics/icons/speed-module-3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-modules",
+    category = "cube-compression",
+    tier = 3,
+    order = "b[3]",
+    stack_size = 20,
+    effect = {
+      speed = {bonus = 0.5},
+      consumption = {bonus = 0.5},
+    },
+    beacon_tint =
+    {
+      primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
+      secondary = {r = 0.388, g = 0.976, b = 1.000, a = 1.000}, -- #63f8ffff
+    },
+    art_style = "vanilla",
+    requires_beacon_alt_mode = false
+  },
+
   {
     type = "module",
     name = "cube-inductance-module",
@@ -90,8 +138,54 @@ data:extend({
     order = "c[1]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.2},
-      pollution = {bonus = -0.2},
+      consumption = {bonus = -0.15},
+      pollution = {bonus = -0.15},
+    },
+    beacon_tint =
+    {
+      primary = { 0, 1, 0 },
+      secondary = {r = 0.370, g = 1.000, b = 0.370, a = 1.000}, -- #5eff5eff
+    },
+    art_style = "vanilla",
+    requires_beacon_alt_mode = false
+  },
+  {
+    type = "module",
+    name = "cube-inductance-module-v2",
+    localised_description = {"item-description.cube-inductance-module"},
+    icon = "__base__/graphics/icons/effectivity-module-2.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-modules",
+    category = "cube-inductance",
+    tier = 2,
+    order = "c[2]",
+    stack_size = 20,
+    effect = {
+      consumption = {bonus = -0.25},
+      pollution = {bonus = -0.25},
+    },
+    beacon_tint =
+    {
+      primary = { 0, 1, 0 },
+      secondary = {r = 0.370, g = 1.000, b = 0.370, a = 1.000}, -- #5eff5eff
+    },
+    art_style = "vanilla",
+    requires_beacon_alt_mode = false
+  },
+  {
+    type = "module",
+    name = "cube-inductance-module-v3",
+    localised_description = {"item-description.cube-inductance-module"},
+    icon = "__base__/graphics/icons/effectivity-module-3.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-modules",
+    category = "cube-inductance",
+    tier = 3,
+    order = "c[3]",
+    stack_size = 20,
+    effect = {
+      consumption = {bonus = -0.4},
+      pollution = {bonus = -0.4},
     },
     beacon_tint =
     {
