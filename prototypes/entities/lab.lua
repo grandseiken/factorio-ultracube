@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -283,9 +284,9 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     module_specification = {
-      module_slots = 0,
+      module_slots = 2,
       module_info_icon_shift = {0, 0.9}
     },
-    allowed_effects = {},
+    allowed_effects = module_effects.all,
   },
 })

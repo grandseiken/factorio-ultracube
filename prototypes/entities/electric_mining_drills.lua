@@ -3,6 +3,7 @@ require("__base__/prototypes/entity/assemblerpipes")
 
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 local electric_drill_animation_speed = 0.4
 local electric_drill_animation_sequence = {
@@ -2385,9 +2386,8 @@ data:extend({
     energy_usage = "200kW",
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -1.85},
-    module_specification = {
-      module_slots = 3,
-    },
+    module_specification = {module_slots = 2},
+    allowed_effects = module_effects.all,
     radius_visualisation_picture = {
       filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",
       width = 10,
@@ -4412,9 +4412,8 @@ data:extend({
     energy_usage = "400kW",
     resource_searching_radius = 4.49,
     vector_to_place_result = {0, -1.85},
-    module_specification = {
-      module_slots = 4,
-    },
+    module_specification = {module_slots = 4},
+    allowed_effects = module_effects.all,
     radius_visualisation_picture = {
       filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",
       width = 10,

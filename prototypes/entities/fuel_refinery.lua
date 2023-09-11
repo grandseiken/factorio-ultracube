@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -17,7 +18,7 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
     module_specification = {module_slots = 0},
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = module_effects.none,
     animation = make_4way_animation_from_spritesheet({
       layers = {
         {

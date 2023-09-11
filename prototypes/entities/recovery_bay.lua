@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -132,7 +133,7 @@ data:extend({
       module_info_max_icons_per_row = 4,
       module_info_icon_shift = {0, 0.6},
     },
-    allowed_effects = {"speed", "consumption", "pollution"},
+    allowed_effects = module_effects.speed_efficiency,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 circuit_connector_definitions["cube-deep-core-ultradrill"] = circuit_connector_definitions.create(universal_connector_template, {
   {
@@ -45,8 +46,8 @@ data:extend({
     dying_explosion = "big-explosion",
     collision_box = {{-3.3, -3.3}, {3.3, 3.3}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    module_specification = {module_slots = 0},
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = {module_slots = 4},
+    allowed_effects = module_effects.speed_productivity,
     energy_source = {
       type = "burner",
       fuel_categories = {"cube-cube"},

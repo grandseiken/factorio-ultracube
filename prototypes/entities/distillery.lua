@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -16,9 +17,9 @@ data:extend({
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box = {{-2.5, -2.8}, {2.5, 2.5}},
-    module_specification = {module_slots = 0},
     scale_entity_info_icon = true,
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = {module_slots = 0},
+    allowed_effects = module_effects.none,
     crafting_categories = {"cube-distillery"},
     crafting_speed = 1,
     energy_source =

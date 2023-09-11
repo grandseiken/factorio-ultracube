@@ -543,7 +543,7 @@ data:extend({
       {"cube-spectral-processor", 40},
       {"cube-advanced-engine", 20},
       {"cube-sophisticated-matter-unit", 100},
-      {"cube-inductance-module", 10},
+      {"cube-inductance-module-v2", 4},
       {"radar", 2},
       {"raw-fish", 1},
     },

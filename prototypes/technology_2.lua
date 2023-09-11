@@ -644,6 +644,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-battery-mk2-equipment",
+    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-battery-mk2-equipment"},
+    },
+    prerequisites = {"cube-haunted-energy-cell"},
+    unit = tech_cost_unit("2", 180),
+    order = "2-5-4",
+  },
+  {
+    type = "technology",
     name = "cube-power-armor",
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/power-armor.png"),
     icon_size = 256, icon_mipmaps = 4,
@@ -655,7 +667,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("2", 300),
-    order = "2-5-4",
+    order = "2-5-5",
   },
   {
     type = "technology",
@@ -679,7 +691,7 @@ data:extend({
       "cube-phantom-electronics",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-5-5",
+    order = "2-5-6",
   },
   {
     type = "technology",
@@ -694,7 +706,7 @@ data:extend({
       "cube-inserters",
     },
     unit = tech_cost_unit("2", 240),
-    order = "2-5-6",
+    order = "2-5-7",
   },
   {
     type = "technology",
@@ -706,7 +718,7 @@ data:extend({
     },
     prerequisites = {
       "cube-modular-casing",
-      "cube-deep-crystallization",
+      "cube-deep-core-ultradrill",
     },
     unit = tech_cost_unit("2", 240),
     order = "2-6-0",
@@ -728,15 +740,27 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-productivity-module",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/productivity-module-1.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-productivity-module"},
+    },
+    prerequisites = {"cube-modular-casing"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-6-2",
+  },
+  {
+    type = "technology",
     name = "cube-exoskeleton-equipment",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
     },
-    prerequisites = {"cube-sophisticated-matter-unit"},
+    prerequisites = {"cube-compression-module"},
     unit = tech_cost_unit("2", 240),
-    order = "2-6-2",
+    order = "2-6-3",
   },
   {
     type = "technology",

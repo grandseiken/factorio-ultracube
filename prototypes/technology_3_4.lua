@@ -134,7 +134,7 @@ data:extend({
       "cube-loader",
     },
     unit = tech_cost_unit("4", 300),
-    order = "3-1-0",
+    order = "3-1-3",
   },
   {
     type = "technology",
@@ -147,7 +147,7 @@ data:extend({
     },
     prerequisites = {
       "cube-exoskeleton-equipment",
-      "cube-inductance-module",
+      "cube-inductance-module-v2",
       "cube-radar",
     },
     unit = tech_cost_unit("4", 300),

@@ -2,6 +2,7 @@ local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 require("__Ultracube__/scripts/lib")
 
 local function stygian_smoke()
@@ -63,9 +64,9 @@ data:extend({
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "cube-stygian-energy-lab",
     module_specification = {
-      module_slots = 0,
+      module_slots = 2,
     },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = module_effects.fuel_speed_only,
     animation = {
       layers = {
         {

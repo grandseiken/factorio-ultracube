@@ -18,7 +18,7 @@ data:extend({
     ingredients = {
       {"cube-modular-armor", 1},
       {"cube-resplendent-plate", 100},
-      {"cube-spectral-processor", 40},
+      {"cube-spectral-processor", 80},
       {"cube-advanced-engine", 10},
     },
     results = {{"cube-power-armor", 1}},
@@ -34,6 +34,19 @@ data:extend({
       {"cube-basic-matter-unit", 8},
     },
     results = {{"cube-battery-equipment", 1}},
+    energy_required = 10,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-battery-mk2-equipment",
+    ingredients = {
+      {"cube-battery-equipment", 4},
+      {"cube-sophisticated-matter-unit", 10},
+      {"cube-haunted-energy-cell", 4},
+    },
+    results = {{"battery-mk2-equipment", 1}},
     energy_required = 10,
     category = "cube-fabricator-handcraft",
     enabled = false,
@@ -81,7 +94,7 @@ data:extend({
     name = "cube-exoskeleton-equipment",
     ingredients = {
       {"cube-sophisticated-matter-unit", 10},
-      {"cube-advanced-circuit", 20},
+      {"cube-compression-module", 4},
       {"cube-advanced-engine", 20},
       {"copper-cable", 40}
     },
@@ -106,9 +119,9 @@ data:extend({
     type = "recipe",
     name = "cube-personal-roboport-mk2-equipment",
     ingredients = {
-      {"cube-personal-roboport-equipment", 1},
+      {"cube-personal-roboport-equipment", 2},
       {"cube-sophisticated-matter-unit", 20},
-      {"cube-spectral-processor", 80},
+      {"cube-spectral-processor", 40},
     },
     results = {{"personal-roboport-mk2-equipment", 1}},
     energy_required = 25,

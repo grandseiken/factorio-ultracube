@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -179,7 +180,7 @@ data:extend({
       module_info_icon_shift = {0, 1.8},
       module_info_icon_scale = 0.6,
     },
-    allowed_effects = {"consumption", "pollution"},
+    allowed_effects = module_effects.speed_efficiency,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
   },

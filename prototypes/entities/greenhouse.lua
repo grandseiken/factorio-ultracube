@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 require("__Ultracube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -34,10 +35,8 @@ data:extend({
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "kr-greenhouse",
-    module_specification = {
-      module_slots = 3,
-    },
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = {module_slots = 2},
+    allowed_effects = module_effects.speed_efficiency,
     animation = {
       layers = {
         {

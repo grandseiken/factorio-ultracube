@@ -5,28 +5,31 @@ require("prototypes.scripts.autoplace")
 ----------------------
 -- icon reworks
 -- - advanced engine tech graphic + name (?)
--- - tar processing/reclamation icons
 -- - emotional synthesis icon + tech graphic
 -- - roboport tech graphic?
 -- - concretes tech graphic?
 -- layered icons look bad when disabled. Bake them.
 -- rename: unstable gas?
--- all items seem to be unlocked in FNEI/signals etc without researching them.
--- "raw cost" view doesn't seem to work for fluid composites
 -- upgrade graphics for boiler; maybe also pipes/tanks/steam engine?
 -- - and possibly slightly increase base pipe capacity
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
--- - particularly important w.r.t any hope of productivity modules working
+-- - particularly important w.r.t any hope of productivity modules working in cubethings
 -- module graphics/tech graphics
 -- resplendent plate tech graphics, phantom handling tech graphics, seance tech graphic
 
--- IMPORTANT TODOs:
+-- RELEASE BLOCKERS
 -------------------
--- still something for matter; or maybe only for sophisticated matter
--- perhaps something with constituents
--- something for contemplation units?
--- need to make sure fps doesn't bug out during cube split
+-- Finish modules
+-- Uranium power
+-- Endgame antimatter power
+-- Teleporter
+-- Phantom cubesearch - make sure fps doesn't bug out during cube split
 -- - need an emergency way to retrieve all phantoms? unless search works
+-- Quantum decoder + unobtainium + science 6
+-- Cube destruction/rebuild + forbidden + science 7
+-- Constant-rate flexible thing
+-- Late-game raw material swapping of some kind
+-- World events? (ghost/forest/daylight)
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
@@ -40,7 +43,7 @@ require("prototypes.scripts.autoplace")
 
 -- LONG-TERM TODOs:
 -------------------
--- rearrange upgrade techs; some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
+-- rearrange upgrade techs? some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
 -- maybe pickaxe/mining upgrades?
 -- think about reintroducing biters + military?
 -- storylore tooltips
@@ -48,7 +51,6 @@ require("prototypes.scripts.autoplace")
 
 -- TECH TREE TODOs:
 -------------------
--- after science 2, split into 2 (or 3) different focus trees that interlink & eventually merge together.
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
 
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
@@ -66,10 +68,10 @@ require("prototypes.scripts.autoplace")
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- Main tech unlocks:
--- Better armour / equipments (battery v2 on erudite tree) - maybe modules?
 -- accumulator v2 (plate + ghost battery etc)
--- Exoskeleton w/ speed module (??) but then how spider? Speed module just dust, and crystal for v2?
--- recolour modules...; add productivity, and check what all machine/recipes it could go in.
+-- power armor v2
+-- rename / recolour modules? check ingredients (esp lvl3) - battery somewhere?
+-- - check all module_effects.none and productivity filter list
 
 -- Random thoughts.
 -- Ultradense constituent and reassembly: Something with weird ratios. Need to recharge many constituents at once?
@@ -137,6 +139,7 @@ require("prototypes.technology_1")
 require("prototypes.technology_2")
 require("prototypes.technology_3_4")
 require("prototypes.technology_5")
+require("prototypes.technology_6")
 require("prototypes.technology_compatibility")
 require("prototypes.technology_upgrades")
 require("prototypes.tweaks")

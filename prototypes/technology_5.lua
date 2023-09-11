@@ -41,33 +41,20 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-compression-module-v3",
+    name = "cube-productivity-module-v2",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/speed-module-3.png",
+    icon = "__base__/graphics/technology/productivity-module-2.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-compression-module-v3"},
-    },
-    prerequisites = {
-      "cube-synthetic-premonition-card",
-      "cube-compression-module-v2",
-    },
-    unit = tech_cost_unit("5", 420),
-    order = "5-1-0",
-  },
-  {
-    type = "technology",
-    name = "cube-inductance-module-v3",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/effectivity-module-3.png",
-    effects = {
-      {type = "unlock-recipe", recipe = "cube-inductance-module-v3"},
+      {type = "unlock-recipe", recipe = "cube-productivity-module-v2"},
+      {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
-      "cube-inductance-module-v2",
+      "cube-synthetic-premonition-card",
+      "cube-productivity-module",
     },
-    unit = tech_cost_unit("5", 420),
-    order = "5-1-1",
+    unit = tech_cost_unit("5", 300),
+    order = "5-1-0",
   },
   {
     type = "technology",

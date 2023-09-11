@@ -77,8 +77,8 @@ data:extend({
       {"cube-spectral-processor", 1},
     },
     results = {
-      {type = "item", name = "cube-inductance-module-v3", amount = 1, probability = 0.01},
-      {type = "item", name = "cube-inductance-module-v2", amount = 1, probability = 0.09},
+      {type = "item", name = "cube-inductance-module-v3", amount = 1, probability = 0.05},
+      {type = "item", name = "cube-inductance-module-v2", amount = 1, probability = 0.05},
       {type = "item", name = "cube-inductance-module", amount = 1, probability = 0.2},
       {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
       {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.5},
@@ -94,7 +94,7 @@ data:extend({
     name = "cube-compression-module",
     ingredients = {
       {"cube-modular-casing", 1},
-      {"cube-deep-crystal", 5},
+      {"cube-deep-powder", 10},
     },
     results = {
       {type = "item", name = "cube-compression-module", amount = 1, probability = 0.25},
@@ -110,8 +110,8 @@ data:extend({
     name = "cube-compression-module-v2",
     ingredients = {
       {"cube-compression-module", 1},
-      {"cube-deep-crystal", 5},
-      {"cube-resplendent-plate", 1},
+      {"cube-deep-powder", 10},
+      {"cube-deep-crystal", 1},
     },
     results = {
       {type = "item", name = "cube-compression-module-v2", amount = 1, probability = 0.1},
@@ -129,17 +129,73 @@ data:extend({
     name = "cube-compression-module-v3",
     ingredients = {
       {"cube-compression-module-v2", 1},
-      {"cube-deep-crystal", 5},
-      {"cube-resplendent-plate", 1},
+      {"cube-deep-powder", 10},
+      {"cube-deep-crystal", 1},
     },
     results = {
-      {type = "item", name = "cube-compression-module-v3", amount = 1, probability = 0.01},
-      {type = "item", name = "cube-compression-module-v2", amount = 1, probability = 0.09},
+      {type = "item", name = "cube-compression-module-v3", amount = 1, probability = 0.05},
+      {type = "item", name = "cube-compression-module-v2", amount = 1, probability = 0.05},
       {type = "item", name = "cube-compression-module", amount = 1, probability = 0.2},
       {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
       {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.5},
     },
     main_product = "cube-compression-module-v3",
+    energy_required = 12,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+
+  {
+    type = "recipe",
+    name = "cube-productivity-module",
+    ingredients = {
+      {"cube-modular-casing", 1},
+      {"cube-rare-metals", 10},
+    },
+    results = {
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.25},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.75},
+    },
+    main_product = "cube-productivity-module",
+    energy_required = 4,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-productivity-module-v2",
+    ingredients = {
+      {"cube-productivity-module", 1},
+      {"cube-rare-metals", 10},
+      {"cube-advanced-engine", 1},
+    },
+    results = {
+      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = 0.1},
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.4},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.3},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.2},
+    },
+    main_product = "cube-productivity-module-v2",
+    energy_required = 8,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-productivity-module-v3",
+    ingredients = {
+      {"cube-productivity-module-v2", 1},
+      {"cube-rare-metals", 10},
+      {"cube-advanced-engine", 1},
+    },
+    results = {
+      {type = "item", name = "cube-productivity-module-v3", amount = 1, probability = 0.05},
+      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = 0.05},
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.2},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.5},
+    },
+    main_product = "cube-productivity-module-v3",
     energy_required = 12,
     category = "cube-fabricator-handcraft",
     enabled = false,

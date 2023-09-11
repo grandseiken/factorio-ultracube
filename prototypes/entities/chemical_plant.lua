@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -17,8 +18,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
     module_specification = {module_slots = 0},
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
-
+    allowed_effects = module_effects.none,
     animation = data.raw["assembling-machine"]["chemical-plant"].animation,
     working_visualisations = data.raw["assembling-machine"]["chemical-plant"].working_visualisations,
     vehicle_impact_sound = sounds.generic_impact,

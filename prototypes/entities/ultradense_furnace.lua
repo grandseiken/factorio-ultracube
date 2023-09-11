@@ -131,6 +131,7 @@ end
 local smoke_animations = require("__base__/prototypes/entity/smoke-animations")
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   smoke_animations.trivial_smoke {
@@ -399,7 +400,7 @@ data:extend({
       module_info_icon_shift = {0, 1.7},
       module_info_icon_scale = 1,
     },
-    allowed_effects = {"speed", "consumption"},
+    allowed_effects = module_effects.fuel_speed_only,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },
