@@ -19,7 +19,7 @@ data:extend({
     light = {
       intensity = 0.8,
       size = 4,
-      color = { r = 255, g = 255, b = 255 },
+      color = {r = 255, g = 255, b = 255},
     },
     on_animation = {
       layers = {

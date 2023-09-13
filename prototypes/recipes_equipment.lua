@@ -94,7 +94,7 @@ data:extend({
     name = "cube-exoskeleton-equipment",
     ingredients = {
       {"cube-sophisticated-matter-unit", 10},
-      {"cube-compression-module", 4},
+      {"cube-speed-module", 4},
       {"cube-advanced-engine", 20},
       {"copper-cable", 40}
     },

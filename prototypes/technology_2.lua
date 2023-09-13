@@ -675,7 +675,7 @@ data:extend({
     icons = {
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png",
-        icon_size = 256
+        icon_size = 256,
       },
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
@@ -710,11 +710,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-compression-module",
+    name = "cube-speed-module",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-1.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-compression-module"},
+      {type = "unlock-recipe", recipe = "cube-speed-module"},
     },
     prerequisites = {
       "cube-modular-casing",
@@ -725,11 +725,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-inductance-module",
+    name = "cube-efficiency-module",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/effectivity-module-1.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-inductance-module"},
+      {type = "unlock-recipe", recipe = "cube-efficiency-module"},
     },
     prerequisites = {
       "cube-modular-casing",
@@ -758,7 +758,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
     },
-    prerequisites = {"cube-compression-module"},
+    prerequisites = {"cube-speed-module"},
     unit = tech_cost_unit("2", 240),
     order = "2-6-3",
   },
@@ -776,7 +776,7 @@ data:extend({
       "cube-deep-crystallization",
       "cube-explosives",
     },
-    unit = tech_cost_unit("2x", 300),
+    unit = tech_cost_unit("2", 300),
     order = "2-9-0",
   },
   {
@@ -792,7 +792,7 @@ data:extend({
       "cube-spectral-processor",
       "cube-haunted-energy-cell",
     },
-    unit = tech_cost_unit("2x", 300),
+    unit = tech_cost_unit("2", 300),
     order = "2-9-1",
   },
 })

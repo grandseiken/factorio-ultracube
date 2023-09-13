@@ -81,32 +81,32 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-compression-module-v2",
+    name = "cube-speed-module-v2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-2.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-compression-module-v2"},
+      {type = "unlock-recipe", recipe = "cube-speed-module-v2"},
       {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
-      "cube-compression-module",
+      "cube-speed-module",
     },
     unit = tech_cost_unit("3", 300),
     order = "3-1-0",
   },
   {
     type = "technology",
-    name = "cube-inductance-module-v2",
+    name = "cube-efficiency-module-v2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/effectivity-module-2.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-inductance-module-v2"},
+      {type = "unlock-recipe", recipe = "cube-efficiency-module-v2"},
       {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
     },
     prerequisites = {
       "cube-synthetic-premonition-card",
-      "cube-inductance-module",
+      "cube-efficiency-module",
     },
     unit = tech_cost_unit("4", 300),
     order = "3-1-1",
@@ -117,7 +117,7 @@ data:extend({
     icons = {
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png",
-        icon_size = 256
+        icon_size = 256,
       },
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
@@ -147,7 +147,7 @@ data:extend({
     },
     prerequisites = {
       "cube-exoskeleton-equipment",
-      "cube-inductance-module-v2",
+      "cube-efficiency-module-v2",
       "cube-radar",
     },
     unit = tech_cost_unit("4", 300),

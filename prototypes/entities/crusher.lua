@@ -92,8 +92,12 @@ data:extend({
     },
 
     energy_usage = "250KW",
-    module_specification = {module_slots = 0, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1},
-    allowed_effects = module_effects.none,
+    module_specification = {
+      module_slots = 2,
+      module_info_icon_shift = {0, 1.7},
+      module_info_icon_scale = 1,
+    },
+    allowed_effects = module_effects.all,
     --open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.75},
     --close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75}
   },

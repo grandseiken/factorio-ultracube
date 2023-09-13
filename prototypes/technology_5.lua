@@ -3,11 +3,26 @@ require("prototypes.lib.tech_costs")
 data:extend({
   {
     type = "technology",
+    name = "cube-arcane-drive",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/advanced-additional-engine.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-arcane-drive"},
+    },
+    prerequisites = {
+      "cube-deep-introspection-card",
+      "cube-synthetic-premonition-card",
+    },
+    unit = tech_cost_unit("5", 240),
+    order = "5-0-0",
+  },
+  {
+    type = "technology",
     name = "cube-v4-loader",
     icons = {
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon.png",
-        icon_size = 256
+        icon_size = 256,
       },
       {
         icon = "__aai-loaders__/graphics/technology/loader-tech-icon_mask.png",
@@ -21,6 +36,7 @@ data:extend({
     prerequisites = {
       "cube-v4-logistics",
       "cube-express-loader",
+      "cube-arcane-drive",
     },
     unit = tech_cost_unit("5", 360),
     order = "5-0-0",
@@ -30,12 +46,9 @@ data:extend({
     name = "cube-experimental-teleporter",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/planetary-teleporter.png",
-    -- TODO: should probably be in tech level 6.
+    -- TODO: should maybe be in tech level 6, or near it.
     effects = {},
-    prerequisites = {
-      "cube-deep-introspection-card",
-      "cube-synthetic-premonition-card",
-    },
+    prerequisites = {"cube-arcane-drive"},
     unit = tech_cost_unit("5", 420),
     order = "5-0-1",
   },
@@ -49,8 +62,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},
     },
     prerequisites = {
-      "cube-deep-introspection-card",
-      "cube-synthetic-premonition-card",
+      "cube-arcane-drive",
       "cube-productivity-module",
     },
     unit = tech_cost_unit("5", 300),

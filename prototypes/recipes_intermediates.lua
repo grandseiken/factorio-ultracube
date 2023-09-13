@@ -100,6 +100,20 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-arcane-drive",
+    ingredients = {
+      {"cube-advanced-engine", 1},
+      {"cube-resplendent-plate", 1},
+      {"cube-spectral-processor", 1},
+      {type = "fluid", name = "cube-ectoplasm", amount = 20},
+    },
+    results = {{"cube-arcane-drive", 1}},
+    energy_required = 12,
+    category = "cube-fabricator",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-besselheim-flask",
     ingredients = {{"cube-glass", 2}},
     results = {{"cube-besselheim-flask", 1}},
@@ -185,7 +199,7 @@ data:extend({
     results = {
       {"sulfur", 2},
       {type = "fluid", name = "steam", amount = 20, temperature = 215},
-      {type = "fluid", name = "cube-light-tar", amount = 40},
+      {type = "fluid", name = "cube-light-tar", amount = 32},
     },
     main_product = "sulfur",
     energy_required = 2,

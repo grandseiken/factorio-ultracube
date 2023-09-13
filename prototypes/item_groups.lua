@@ -156,9 +156,21 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-modules",
+    name = "cube-speed-modules",
     group = "cube-tools",
     order = "x"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-efficiency-modules",
+    group = "cube-tools",
+    order = "y"
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-productivity-modules",
+    group = "cube-tools",
+    order = "z"
   },
 
   {

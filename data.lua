@@ -51,27 +51,22 @@ require("prototypes.scripts.autoplace")
 
 -- TECH TREE TODOs:
 -------------------
--- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...
+-- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...?
 
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
 -- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
--- Perhaps premonition card just made from ectoplasm, not haunted cell? Not sure.
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
--- Module recipes, colours and naming: charged/overcharged etc.
 
--- Science ingredients:
--- - deep branch - product from resplendent plate (?)
--- - ghost branch - third/fourth ingredient, maybe not just another anguish?
+-- Arcane drive production should be somehow more interesting??
+-- Need more things that feedback loop into the cubestuff instead of just being extraneous?
+-- Module recipes (esp lvl3) - battery somewhere
 -- Some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- Main tech unlocks:
--- accumulator v2 (plate + ghost battery etc)
--- power armor v2
--- rename / recolour modules? check ingredients (esp lvl3) - battery somewhere?
--- - check all module_effects.none and productivity filter list
+-- accumulator v2 (plate + ghost battery etc); power armor v2
 
 -- Random thoughts.
 -- Ultradense constituent and reassembly: Something with weird ratios. Need to recharge many constituents at once?

@@ -158,6 +158,15 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-arcane-drive",
+    icon = "__Krastorio2Assets__/icons/equipments/vehicle/advanced-additional-engine.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-components",
+    order = "0[c-advanced-engine]",
+    stack_size = 50,
+  },
+  {
+    type = "item",
     name = "cube-ghost-wire",
     icons = {{
       icon = "__Ultracube__/graphics/ghost-wire.png",

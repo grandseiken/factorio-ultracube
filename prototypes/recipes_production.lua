@@ -285,7 +285,7 @@ data:extend({
     type = "recipe",
     name = "cube-heavy-turbine",
     ingredients = {
-      {"cube-sophisticated-matter-unit", 80},
+      {"cube-sophisticated-matter-unit", 40},
       {"cube-advanced-engine", 20},
       {"pipe", 20},
     },
