@@ -184,8 +184,8 @@ data:extend({
     order = "c[1]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.15},
-      pollution = {bonus = -0.15},
+      consumption = {bonus = -0.2},
+      pollution = {bonus = -0.2},
     },
     beacon_tint = {
       primary = {0, 1, 0},
@@ -206,8 +206,8 @@ data:extend({
     order = "c[2]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.25},
-      pollution = {bonus = -0.25},
+      consumption = {bonus = -0.4},
+      pollution = {bonus = -0.4},
     },
     beacon_tint = {
       primary = {0, 1, 0},
@@ -228,8 +228,8 @@ data:extend({
     order = "c[3]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.4},
-      pollution = {bonus = -0.4},
+      consumption = {bonus = -0.6},
+      pollution = {bonus = -0.6},
     },
     beacon_tint = {
       primary = {0, 1, 0},

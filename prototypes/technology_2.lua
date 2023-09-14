@@ -353,6 +353,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
       {type = "unlock-recipe", recipe = "cube-bottled-euphoria"},
       {type = "unlock-recipe", recipe = "cube-bottled-anguish"},
+      {type = "unlock-recipe", recipe = "cube-euphoric-release"},
     },
     prerequisites = {"cube-distillation"},
     unit = tech_cost_unit("2", 240),
@@ -663,6 +664,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-power-armor"},
     },
     prerequisites = {
+      "cube-modular-armor",
       "cube-resplendent-plate",
       "cube-spectral-processor",
     },

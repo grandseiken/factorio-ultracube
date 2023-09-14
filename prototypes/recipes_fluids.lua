@@ -339,6 +339,41 @@ data:extend({
     always_show_made_in = true,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-euphoric-release",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/fluid/steam.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Ultracube__/graphics/bottled-euphoria.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+      },
+    },
+    ingredients = {
+      {type = "item", name = "cube-bottled-euphoria", amount = 1},
+    },
+    results = {
+      {type = "fluid", name = "steam", amount = 250, temperature = 215},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5},
+    },
+    main_product = "",
+    energy_required = 2,
+    category = "cube-chemical-plant",
+    subgroup = "cube-tar-furnace",
+    order = "x[euphoric-release]",
+    always_show_made_in = true,
+    enabled = false,
+    crafting_machine_tint = {
+      primary = {r = 0.95, g = 0.15, b = 0.5, a = 0.75},
+      secondary = {r = 0.8, g = 0.8, b = 0.8, a = 0.75},
+      tertiary = {r = 0.85, g = 0.1, b = 0.4, a = 0.75},
+      quaternary = {r = 0.2, g = 0.175, b = 0.15, a = 0.75},
+    },
+  },
 
   {
     type = "recipe",
@@ -429,5 +464,25 @@ data:extend({
     hide_from_player_crafting = true,
     always_show_products = false,
     show_amount_in_title = false,
+  },
+
+  {
+    type = "recipe",
+    name = "cube-stygian-power-generation",
+    icon = "__Ultracube__/graphics/void-wind.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {},
+    results = {
+      {type = "fluid", name = "cube-void-wind", amount = 400},
+      {type = "item", name = "cube-residual-tendrils", amount_min = 1, amount_max = 4},
+    },
+    energy_required = 2,
+    category = "cube-stygian-energy-lab",
+    subgroup = "cube-synthesis-fluids",
+    order = "c[ghost]-e[void-wind]",
+    hide_from_player_crafting = true,
+    always_show_products = false,
+    show_amount_in_title = false,
+    enabled = false,
   },
 })

@@ -100,20 +100,6 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-arcane-drive",
-    ingredients = {
-      {"cube-advanced-engine", 1},
-      {"cube-resplendent-plate", 1},
-      {"cube-spectral-processor", 1},
-      {type = "fluid", name = "cube-ectoplasm", amount = 20},
-    },
-    results = {{"cube-arcane-drive", 1}},
-    energy_required = 12,
-    category = "cube-fabricator",
-    enabled = false,
-  },
-  {
-    type = "recipe",
     name = "cube-besselheim-flask",
     ingredients = {{"cube-glass", 2}},
     results = {{"cube-besselheim-flask", 1}},

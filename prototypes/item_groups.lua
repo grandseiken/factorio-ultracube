@@ -49,6 +49,12 @@ data:extend({
     type = "item-subgroup",
     name = "cube-synthesis-advanced",
     group = "cube-synthesis",
+    order = "x",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-synthesis-ethereal",
+    group = "cube-synthesis",
     order = "y",
   },
   {

@@ -29,6 +29,27 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-cerebral-substrate-phantom",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.25},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-cerebral-substrate-phantom"},
+    },
+    prerequisites = {"cube-synthetic-premonition-card"},
+    unit = tech_cost_unit("4", 240),
+    order = "3-0-2",
+  },
+  {
+    type = "technology",
     name = "cube-v4-logistics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/logistics-5.png",
@@ -43,7 +64,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("3", 300),
-    order = "3-0-2",
+    order = "3-0-3",
   },
   {
     type = "technology",
@@ -62,7 +83,7 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
-    order = "3-0-3",
+    order = "3-0-4",
   },
   {
     type = "technology",
@@ -77,7 +98,7 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 240),
-    order = "3-0-4",
+    order = "3-0-5",
   },
   {
     type = "technology",

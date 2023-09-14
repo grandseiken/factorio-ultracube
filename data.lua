@@ -56,31 +56,26 @@ require("prototypes.scripts.autoplace")
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
 -- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
--- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
-
--- Arcane drive production should be somehow more interesting??
--- Need more things that feedback loop into the cubestuff instead of just being extraneous?
--- Module recipes (esp lvl3) - battery somewhere
--- Some other use of euphoria? e.g. Joy -> steam (not efficient)? (seems important)
+-- some new power solution: requires tons of accumulators, because it makes power directly from cube time
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
+
+-- All new things from now on should be interesting somehow, not just slap shit together
+-- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
+-- Module recipes (lvl3)
 
 -- Main tech unlocks:
 -- accumulator v2 (plate + ghost battery etc); power armor v2
 
 -- Random thoughts.
--- Ultradense constituent and reassembly: Something with weird ratios. Need to recharge many constituents at once?
--- - Something where cube an output from cube split has to be processed (long time) and fed back in to a different cube split (loopback);
--- - New dormant -> dormant phantom cube recipe for something - perhaps cerebral substrate, perhaps something else?
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
 -- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
 -- - how about this: deep crushing has tiny% chance to produce diamond or something
 -- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
--- ?: some more efficient basic materials but they come out in awkward ways (like only make matter+tar at the same time or something, etc)
 -- 2: some cube process that outputs random / multiple products.
 --    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
--- 3: many interlinked recipes with short time and low amounts or
+-- 3: many interlinked recipes with short time and low amounts or...
 
 -- Things to unlock from level 3/4+:
 -- Matter/antimatter; nuclear; or other better power (should need to combine multiple)

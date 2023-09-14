@@ -584,7 +584,7 @@ data:extend({
     },
     prerequisites = {
       "cube-research-speed-2",
-      "cube-synthetic-premonition-card",
+      "cube-cerebral-substrate-phantom",
     },
     unit = tech_cost_unit("4", 300),
     upgrade = true,

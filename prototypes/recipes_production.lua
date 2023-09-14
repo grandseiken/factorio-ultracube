@@ -294,6 +294,4 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
-
-
 })
