@@ -3,6 +3,8 @@ require("__Ultracube__/scripts/entity_cache")
 
 local cube_ultradense = cubes.ultradense
 local cube_dormant = cubes.dormant
+local cube_ultradense_phantom = cubes.ultradense_phantom
+local cube_dormant_phantom = cubes.dormant_phantom
 
 local transport_line_entity_types = entity_types.transport_line
 local inventory_entity_types = entity_types.inventory
@@ -12,7 +14,13 @@ local is_cube_crafter = is_cube_crafter
 local is_cube_burner = is_cube_burner
 
 local cube_search_data = nil
-local max_search_result_count = 1
+local max_search_result_weight = 64
+local search_result_weight = {
+  [cube_ultradense] = 64,
+  [cube_dormant] = 64,
+  [cube_ultradense_phantom] = 1,
+  [cube_dormant_phantom] = 1,
+}
 
 function refresh_cube_search_data()
   global.cube_search_data = {
@@ -29,14 +37,76 @@ function cube_search_data_on_load()
   cube_search_data = global.cube_search_data
 end
 
-local function add_result(result_set, item, entity)
+local function add_result(result_set, item, count, entity)
+  local total_weight = count * search_result_weight[item]
+  if #result_set > 0 then
+    total_weight = total_weight + result_set[#result_set].total_weight
+  end
   result_set[#result_set + 1] = {
     item = item,
+    count = count,
     entity = entity,
     unit_number = entity.unit_number,
+    total_weight = total_weight,
   }
-  if #result_set >= max_search_result_count then
+  if total_weight >= max_search_result_weight then
     return true
+  end
+  return false
+end
+
+local function check_ingredients(entity, ingredients, result_set)
+  local count = ingredients[cube_ultradense]
+  if count > 0 then
+    if add_result(result_set, cube_ultradense, count, entity) then return true end
+  end
+  count = ingredients[cube_dormant]
+  if count > 0 then
+    if add_result(result_set, cube_dormant, count, entity) then return true end
+  end
+  return false
+end
+
+local function check_inventory(entity, inventory, result_set)
+  local count = inventory.get_item_count(cube_ultradense)
+  if count > 0 then
+    if add_result(result_set, cube_ultradense, count, entity) then return true end
+  end
+  count = inventory.get_item_count(cube_dormant)
+  if count > 0 then
+    if add_result(result_set, cube_dormant, count, entity) then return true end
+  end
+  return false
+end
+
+local function check_stack(entity, stack, result_set)
+  local item = stack.name
+  if item == cube_ultradense then
+    if add_result(result_set, cube_ultradense, stack.count, entity) then return true end
+  end
+  if item == cube_dormant then
+    if add_result(result_set, cube_dormant, stack.count, entity) then return true end
+  end
+  return false
+end
+
+local function check_burner(entity, result_set)
+  if is_entity_burning_fuel(entity, cube_ultradense) then
+    if add_result(result_set, cube_ultradense, 1, entity) then return true end
+  end
+  local inventory = entity.get_fuel_inventory()
+  if inventory then
+    local count = inventory.get_item_count(cube_ultradense)
+    if count > 0 then
+      if add_result(result_set, cube_ultradense, count, entity) then return true end
+    end
+  end
+  inventory = entity.get_burnt_result_inventory()
+  if inventory then
+    local count = inventory.get_item_count(cube_dormant)
+    if count > 0 then
+      if add_result(result_set, cube_dormant, count, entity) then return true end
+    end
   end
   return false
 end
@@ -46,44 +116,18 @@ local function cube_check_entity(entity, result_set)
   if entity_type == "character" then
     local player = entity.player
     if entity.player then
-      local ingredients = player_cube_data(player).ingredients
-      if ingredients[cube_ultradense] > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if ingredients[cube_dormant] > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
+      if check_ingredients(entity, player_cube_data(player).ingredients, result_set) then return true end
     end
   end
 
   if transport_line_entity_types[entity_type] then
     for i = 1, entity.get_max_transport_line_index() do
-      local line = entity.get_transport_line(i)
-      if line.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if line.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
+      if check_inventory(entity, entity.get_transport_line(i), result_set) then return true end
     end
   end
 
-  if entity_type == "inserter" then
-    if entity.held_stack.valid_for_read then
-      local held_item = entity.held_stack.name
-      if held_item == cube_ultradense then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if held_item == cube_dormant then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+  if entity_type == "inserter" and entity.held_stack.valid_for_read and check_stack(entity, entity.held_stack, result_set) then
+    return true
   end
 
   if vehicle_entity_types[entity_type] then
@@ -95,122 +139,41 @@ local function cube_check_entity(entity, result_set)
     elseif entity_type == "spider-vehicle" then
       inventory = entity.get_inventory(defines.inventory.spider_trunk)
     end
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+    if check_inventory(entity, inventory, result_set) then return true end
   end
 
   if is_cube_crafter(entity) then
     local recipes = cube_recipes()
     if entity.is_crafting() then
       local recipe_data = recipes[entity.get_recipe().name]
-      if recipe_data then
-        if recipe_data.ingredients[cube_ultradense] > 0 then
-          add_result(result_set, cube_ultradense, entity)
-          return true
-        end
-        if recipe_data.ingredients[cube_dormant] > 0 then
-          add_result(result_set, cube_dormant, entity)
-          return true
-        end
-      end
+      if recipe_data and check_ingredients(entity, recipe_data.ingredients, result_set) then return true end
     end
     local inventory = entity.get_inventory(defines.inventory.furnace_source)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+    if inventory and check_inventory(entity, inventory, result_set) then return true end
     inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+    if inventory and check_inventory(entity, inventory, result_set) then return true end
     inventory = entity.get_output_inventory()
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+    if inventory and check_inventory(entity, inventory, result_set) then return true end
   end
 
-  if is_cube_burner(entity) or
-     (vehicle_entity_types[entity_type] and entity_type ~= "cargo-wagon") then
-    local fuel_inventory = entity.get_fuel_inventory()
-    if is_entity_burning_fuel(entity, cube_ultradense) or
-       (fuel_inventory and fuel_inventory.get_item_count(cube_ultradense) > 0) then
-      add_result(result_set, cube_ultradense, entity)
-      return true
-    end
-    local burnt_result_inventory = entity.get_burnt_result_inventory()
-    if burnt_result_inventory and burnt_result_inventory.get_item_count(cube_dormant) > 0 then
-      add_result(result_set, cube_dormant, entity)
-      return true
-    end
+  if (is_cube_burner(entity) or (vehicle_entity_types[entity_type] and entity_type ~= "cargo-wagon")) and
+     check_burner(entity, result_set) then
+    return true
   end
 
   if inventory_entity_types[entity_type] then
     local inventory = entity.get_inventory(defines.inventory.chest)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        add_result(result_set, cube_ultradense, entity)
-        return true
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        add_result(result_set, cube_dormant, entity)
-        return true
-      end
-    end
+    if inventory and check_inventory(entity, inventory, result_set) then return true end
   end
 
-  if entity_type == "item-entity" then
-    local item_name = entity.stack.name
-    if item_name == cube_ultradense then
-      add_result(result_set, cube_ultradense, entity)
-      return true
-    end
-    if item_name == cube_dormant then
-      add_result(result_set, cube_dormant, entity)
-      return true
-    end
-  end
-
+  if entity_type == "item-entity" and check_stack(entity, entity.stack, result_set) then return true end
   return false
 end
 
 local function cube_search_transport_lines(result_set, cache)
   for _, e in pairs(cache.transport_lines) do
     for i = 1, e.get_max_transport_line_index() do
-      local line = e.get_transport_line(i)
-      if line.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if line.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
+      if check_inventory(e, e.get_transport_line(i), result_set) then return true end
     end
   end
   return false
@@ -219,14 +182,7 @@ end
 local function cube_search_inventories(result_set, cache)
   for _, e in pairs(cache.inventories) do
     local inventory = e.get_inventory(defines.inventory.chest)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
   end
   return false
 end
@@ -236,71 +192,29 @@ local function cube_search_crafters(result_set, cache)
   for _, e in pairs(cache.cube_crafters) do
     if e.is_crafting() then
       local recipe_data = recipes[e.get_recipe().name]
-      if recipe_data then
-        if recipe_data.ingredients[cube_ultradense] > 0 then
-          if add_result(result_set, cube_ultradense, e) then return true end
-        end
-        if recipe_data.ingredients[cube_dormant] > 0 then
-          if add_result(result_set, cube_dormant, e) then return true end
-        end
-      end
+      if recipe_data and check_ingredients(e, recipe_data.ingredients, result_set) then return true end
     end
     local inventory = e.get_inventory(defines.inventory.furnace_source)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
     inventory = e.get_inventory(defines.inventory.assembling_machine_input)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
     inventory = e.get_output_inventory()
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
   end
   return false
 end
 
 local function cube_search_burners(result_set, cache)
   for _, e in pairs(cache.cube_burners) do
-    local fuel_inventory = e.get_fuel_inventory()
-    if is_entity_burning_fuel(e, cube_ultradense) or
-      (fuel_inventory and fuel_inventory.get_item_count(cube_ultradense) > 0) then
-      if add_result(result_set, cube_ultradense, e) then return true end
-    end
-    local burnt_result_inventory = e.get_burnt_result_inventory()
-    if burnt_result_inventory and burnt_result_inventory.get_item_count(cube_dormant) > 0 then
-      if add_result(result_set, cube_dormant, e) then return true end
-    end
+    if check_burner(e, result_set) then return true end
   end
   return false
 end
 
 local function cube_search_inserters(result_set, cache)
   for _, e in pairs(cache.inserters) do
-    if e.held_stack.valid_for_read then
-      local held_item = e.held_stack.name
-      if held_item == cube_ultradense then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if held_item == cube_dormant then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
+    if e.held_stack.valid_for_read and check_stack(e, e.held_stack, result_set) then
+      return true
     end
   end
   return false
@@ -317,25 +231,8 @@ local function cube_search_vehicles(result_set, cache)
     elseif entity_type == "spider-vehicle" then
       inventory = e.get_inventory(defines.inventory.spider_trunk)
     end
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
-    if entity_type ~= "cargo-wagon" then
-      local fuel_inventory = e.get_fuel_inventory()
-      if is_entity_burning_fuel(e, cube_ultradense) or
-        (fuel_inventory and fuel_inventory.get_item_count(cube_ultradense) > 0) then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      local burnt_result_inventory = e.get_burnt_result_inventory()
-      if burnt_result_inventory and burnt_result_inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
+    if entity_type ~= "cargo-wagon" and check_burner(e, result_set) then return true end
   end
   return false
 end
@@ -343,13 +240,7 @@ end
 local function cube_search_players(result_set)
   for _, player in pairs(game.players) do
     if player.character then
-      local ingredients = player_cube_data(player).ingredients
-      if ingredients[cube_ultradense] > 0 then
-        if add_result(result_set, cube_ultradense, player.character) then return true end
-      end
-      if ingredients[cube_dormant] > 0 then
-        if add_result(result_set, cube_dormant, player.character) then return true end
-      end
+      if check_ingredients(player.character, player_cube_data(player).ingredients, result_set) then return true end
     end
   end
   return false
@@ -365,13 +256,7 @@ local function cube_search_ground(result_set, surface, area)
     type = "item-entity",
   }
   for _, e in ipairs(find_result) do
-    local item_name = e.stack.name
-    if item_name == cube_ultradense then
-      if add_result(result_set, cube_ultradense, e) then return true end
-    end
-    if item_name == cube_dormant then
-      if add_result(result_set, cube_dormant, e) then return true end
-    end
+    if check_stack(e, e.stack, result_set) then return true end
   end
   find_result = surface.find_entities_filtered {
     area = area,
@@ -379,14 +264,7 @@ local function cube_search_ground(result_set, surface, area)
   }
   for _, e in ipairs(find_result) do
     local inventory = e.get_inventory(defines.inventory.robot_cargo)
-    if inventory then
-      if inventory.get_item_count(cube_ultradense) > 0 then
-        if add_result(result_set, cube_ultradense, e) then return true end
-      end
-      if inventory.get_item_count(cube_dormant) > 0 then
-        if add_result(result_set, cube_dormant, e) then return true end
-      end
-    end
+    if inventory and check_inventory(e, inventory, result_set) then return true end
   end
   return false
 end

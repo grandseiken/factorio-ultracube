@@ -39,7 +39,7 @@ local function cube_alert(results)
     for _, player in pairs(game.players) do
       if player.controller_type == defines.controllers.character and
          player.mod_settings["cube-show-cube-alerts"].value and
-         player_cube_data(player).total == 0 then
+         player_cube_data(player).total_weight == 0 then
         player.add_custom_alert(result.entity, {type = "item", name = result.item},
                                 {"alert-description.cube-alert"}, true)
       end
@@ -102,7 +102,8 @@ local function cube_vehicle_mod(results)
     local result = results[i]
     local entity = result.entity
 
-    if entity.type == "construction-robot" or entity.type == "logistic-robot" then
+    if (result.item == cube_ultradense or result.item == cube_dormant) and
+       (entity.type == "construction-robot" or entity.type == "logistic-robot") then
       local last_robot = cube_fx_data.last_robot
       if last_robot and entity.energy < last_robot.energy then
         local drain = 1

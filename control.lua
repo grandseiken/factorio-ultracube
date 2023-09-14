@@ -48,7 +48,7 @@ local function on_init()
 end
 
 local function on_player_created(e)
-  local player = game.players[e.player_index]
+  local player = game.get_player(e.player_index)
   if not global.cube_given then
     global.cube_given = true
     player.insert(cubes.ultradense)
@@ -96,6 +96,14 @@ script.on_event(
   function(e)
     update_player_cube_status(e.player_index)
     cube_search_hint_entity(e.entity)
+  end)
+
+script.on_event(
+  {
+    defines.events.on_pre_player_left_game,
+  },
+  function(e)
+    drop_cubes_before_leaving(e.player_index)
   end)
 
 -- TODO: does fast replace leave broken entries in cache?
