@@ -86,6 +86,10 @@ function player_cube_data(player)
   end
   for _, item in pairs(cubes) do
     local count = player.get_item_count(item)
+    local trash = player.get_inventory(defines.inventory.character_trash)
+    if trash then
+      count = count + trash.get_item_count(item)
+    end
     data.total_weight = data.total_weight + count * cube_weight[item]
     data.ingredients[item] = data.ingredients[item] + count
   end

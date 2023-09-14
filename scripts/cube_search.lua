@@ -25,9 +25,7 @@ local search_result_weight = {
 function refresh_cube_search_data()
   global.cube_search_data = {
     last_tick = nil,
-    last_entity = nil,
-    last_position = nil,
-    last_surface_index = nil,
+    last_entities = nil,
     search_results = {},
   }
   cube_search_data = global.cube_search_data
@@ -38,21 +36,17 @@ function cube_search_data_on_load()
 end
 
 local function add_result(result_set, item, count, entity)
-  local total_weight = count * search_result_weight[item]
-  if #result_set > 0 then
-    total_weight = total_weight + result_set[#result_set].total_weight
+  if result_set.exclude[entity.unit_number] then
+    return false
   end
-  result_set[#result_set + 1] = {
+  result_set.total_weight = result_set.total_weight + count * search_result_weight[item]
+  result_set.entries[#result_set.entries + 1] = {
     item = item,
     count = count,
     entity = entity,
     unit_number = entity.unit_number,
-    total_weight = total_weight,
   }
-  if total_weight >= max_search_result_weight then
-    return true
-  end
-  return false
+  return result_set.total_weight >= max_search_result_weight
 end
 
 local function check_ingredients(entity, ingredients, result_set)
@@ -63,6 +57,14 @@ local function check_ingredients(entity, ingredients, result_set)
   count = ingredients[cube_dormant]
   if count > 0 then
     if add_result(result_set, cube_dormant, count, entity) then return true end
+  end
+  count = ingredients[cube_ultradense_phantom]
+  if count > 0 then
+    if add_result(result_set, cube_ultradense_phantom, count, entity) then return true end
+  end
+  count = ingredients[cube_dormant_phantom]
+  if count > 0 then
+    if add_result(result_set, cube_dormant_phantom, count, entity) then return true end
   end
   return false
 end
@@ -76,6 +78,14 @@ local function check_inventory(entity, inventory, result_set)
   if count > 0 then
     if add_result(result_set, cube_dormant, count, entity) then return true end
   end
+  count = inventory.get_item_count(cube_ultradense_phantom)
+  if count > 0 then
+    if add_result(result_set, cube_ultradense_phantom, count, entity) then return true end
+  end
+  count = inventory.get_item_count(cube_dormant_phantom)
+  if count > 0 then
+    if add_result(result_set, cube_dormant_phantom, count, entity) then return true end
+  end
   return false
 end
 
@@ -83,9 +93,12 @@ local function check_stack(entity, stack, result_set)
   local item = stack.name
   if item == cube_ultradense then
     if add_result(result_set, cube_ultradense, stack.count, entity) then return true end
-  end
-  if item == cube_dormant then
+  elseif item == cube_dormant then
     if add_result(result_set, cube_dormant, stack.count, entity) then return true end
+  elseif item == cube_ultradense_phantom then
+    if add_result(result_set, cube_ultradense_phantom, stack.count, entity) then return true end
+  elseif item == cube_dormant_phantom then
+    if add_result(result_set, cube_dormant_phantom, stack.count, entity) then return true end
   end
   return false
 end
@@ -140,6 +153,10 @@ local function cube_check_entity(entity, result_set)
       inventory = entity.get_inventory(defines.inventory.spider_trunk)
     end
     if check_inventory(entity, inventory, result_set) then return true end
+    if entity_type == "spider-vehicle" then
+      inventory = entity.get_inventory(defines.inventory.spider_trash)
+      if inventory and check_inventory(entity, inventory, result_set) then return true end
+    end
   end
 
   if is_cube_crafter(entity) then
@@ -233,6 +250,10 @@ local function cube_search_vehicles(result_set, cache)
     end
     if inventory and check_inventory(e, inventory, result_set) then return true end
     if entity_type ~= "cargo-wagon" and check_burner(e, result_set) then return true end
+    if entity_type == "spider-vehicle" then
+      inventory = e.get_inventory(defines.inventory.spider_trash)
+      if inventory and check_inventory(e, inventory, result_set) then return true end
+    end
   end
   return false
 end
@@ -240,7 +261,9 @@ end
 local function cube_search_players(result_set)
   for _, player in pairs(game.players) do
     if player.character then
-      if check_ingredients(player.character, player_cube_data(player).ingredients, result_set) then return true end
+      local done = check_ingredients(player.character, player_cube_data(player).ingredients, result_set)
+      result_set.exclude[player.character.unit_number] = true
+      if done then return true end
     end
   end
   return false
@@ -303,36 +326,66 @@ local local_search_offsets = {
   {x = 0, y = -2},
 }
 
-local function get_local_search_chunk_index(surface_index, x, y, i)
-  local offset = local_search_offsets[i]
-  return get_chunk_index(surface_index, x + offset.x, y + offset.y)
-end
-
-local function cube_search_local(result_set, surface_index, position)
+local function cube_search_local(result_set, last_entities)
   if cube_search_players(result_set) then return true end
-
+  local initial_chunks = {}
+  local surface_map = {}
+  for i = 1, #last_entities do
+    local e = last_entities[i]
+    local chunk_x, chunk_y = get_chunk_position(e.position)
+    local chunk_index = get_chunk_index(e.surface_index, chunk_x, chunk_y)
+    initial_chunks[chunk_index] = {
+      surface_index = e.surface_index,
+      chunk_x = chunk_x,
+      chunk_y = chunk_y,
+    }
+    local surface_entry = surface_map[e.surface_index]
+    if surface_entry then
+      surface_entry.x_min = math.min(surface_entry.x_min, chunk_x)
+      surface_entry.x_max = math.max(surface_entry.x_max, chunk_x)
+      surface_entry.y_min = math.min(surface_entry.y_min, chunk_y)
+      surface_entry.y_max = math.max(surface_entry.y_max, chunk_y)
+    else
+      surface_entry = {
+        x_min = chunk_x,
+        x_max = chunk_x,
+        y_min = chunk_y,
+        y_max = chunk_y
+      }
+      surface_map[e.surface_index] = surface_entry
+    end
+  end
   local cache = get_entity_cache()
   local chunk_map = cache.chunk_map
-  local chunk_x, chunk_y = get_chunk_position(position)
+  local visited_chunks = {}
 
   for i = 1, #local_search_offsets do
-    local chunk_index = get_local_search_chunk_index(surface_index, chunk_x, chunk_y, i)
-    local chunk_cache = chunk_map[chunk_index]
-    if chunk_cache then
-      if cube_search_transport_lines(result_set, chunk_cache) then return true end
-      if cube_search_inserters(result_set, chunk_cache) then return true end
-      if cube_search_crafters(result_set, chunk_cache) then return true end
-      if cube_search_burners(result_set, chunk_cache) then return true end
-      if cube_search_inventories(result_set, chunk_cache) then return true end
+    local offset = local_search_offsets[i]
+    for _, chunk_data in pairs(initial_chunks) do
+      local chunk_index = get_chunk_index(chunk_data.surface_index, chunk_data.chunk_x + offset.x, chunk_data.chunk_y + offset.y)
+      if not visited_chunks[chunk_index] then
+        visited_chunks[chunk_index] = true
+        local chunk_cache = chunk_map[chunk_index]
+        if chunk_cache then
+          if cube_search_transport_lines(result_set, chunk_cache) then return true end
+          if cube_search_inserters(result_set, chunk_cache) then return true end
+          if cube_search_crafters(result_set, chunk_cache) then return true end
+          if cube_search_burners(result_set, chunk_cache) then return true end
+          if cube_search_inventories(result_set, chunk_cache) then return true end
+        end
+      end
     end
     if i == 9 and cube_search_vehicles(result_set, cache) then return true end
   end
-  local surface = game.surfaces[surface_index]
-  local area = {
-    left_top = {x = (chunk_x - 1) * chunk_size, y = (chunk_y - 1) * chunk_size},
-    right_bottom = {x = (chunk_x + 2) * chunk_size, y = (chunk_y + 2) * chunk_size},
-  }
-  return cube_search_ground(result_set, surface, area)
+
+  for surface_index, surface_entry in pairs(surface_map) do
+    local surface = game.surfaces[surface_index]
+    local area = {
+      left_top = {x = (surface_entry.x_min - 1) * chunk_size, y = (surface_entry.y_min - 1) * chunk_size},
+      right_bottom = {x = (surface_entry.x_max + 2) * chunk_size, y = (surface_entry.y_max + 2) * chunk_size},
+    }
+    return cube_search_ground(result_set, surface, area)
+  end
 end
 
 local function fill_cube_search_result(result)
@@ -380,62 +433,81 @@ local function fill_cube_search_result(result)
 end
 
 function cube_search_hint_entity(entity)
-  if cube_check_entity(entity, {}) then
-    cube_search_data.last_tick = nil
-    cube_search_data.last_entity = entity
-    cube_search_data.last_position = entity.position
-    cube_search_data.last_surface_index = entity.surface_index
+  if not cube_search_data.last_entities then
+    cube_search_data.last_entities = {}
   end
+  cube_search_data.last_entities[#cube_search_data.last_entities] = {
+    entity = entity,
+    position = entity.position,
+    surface_index = entity.surface_index,
+  }
 end
 
--- TODO: try to make this work with multiple items. May as well go for it with 64 phantoms and see
--- how bad it is:
--- - Update add_result() to finish only when we have all cubes.
--- - Change to grid search rooted at all cells previously containing an item, expanding one step
---   at a time without checking a cell twice.
--- - Probably add a debug message if search doesn't complete to report bug.
 function cube_search_update(tick)
   if cube_search_data.last_tick and tick <= cube_search_data.last_tick then
     return cube_search_data.search_results
   end
-  local result_set = {}
-  local done = false
-  cube_search_data.search_results = result_set
-
-  local last_entity = cube_search_data.last_entity
-  if last_entity and last_entity.valid then
-    done = cube_check_entity(last_entity, result_set)
-    -- TODO: could check transport belt line outputs; inserter (etc) drop target, etc.
+  for _, player in pairs(game.players) do
+    if player.opened and player.opened.unit_number then
+      cube_search_hint_entity(player.opened)
+    end
   end
 
-  if not done then
-    cube_search_data.last_entity = nil
-    local last_surface_index = cube_search_data.last_surface_index
-    local last_position = cube_search_data.last_position
-    if last_surface_index and last_position then
-      done = cube_search_local(result_set, last_surface_index, last_position)
+  local result_set = {total_weight = 0, exclude = {}, entries = {}}
+  cube_search_data.search_results = result_set.entries
+  local done = false
+
+  if cube_search_data.last_entities then
+    for i = 1, #cube_search_data.last_entities do
+      local e = cube_search_data.last_entities[i]
+      if e and e.valid then
+        -- TODO: could check transport belt line outputs; inserter (etc) drop target, etc.
+        done = cube_check_entity(e, result_set)
+        result_set.exclude[e.unit_number] = true
+        if done then break end
+      end
     end
   end
 
   if not done then
-    cube_search_data.last_surface_index = nil
-    cube_search_data.last_position = nil
+    done = cube_search_local(result_set, cube_search_data.last_entities or {})
+  end
+
+  if done and cube_search_data.report_timer then
+    cube_search_data.report_timer = cube_search_data.report_timer - 1
+    if cube_search_data.report_timer == 0 then
+      cube_search_data.report_timer = nil
+    end
+  end
+
+  if not done then
+    if not cube_search_data.report_timer then
+      game.print("Ultracube warning: optimized cube control routines failed. This is either due to compatibility issues with another mod, or a bug that should be reported.")
+      cube_search_data.report_timer = 600
+    end
+    result_set = {total_weight = 0, exclude = {}, entries = {}}
+    cube_search_data.search_results = result_set.entries
     done = cube_search_full(result_set)
   end
 
-  for i = 1, #result_set do
-    local result = result_set[i]
+  cube_search_data.last_entities = {}
+  for i = 1, #result_set.entries do
+    local result = result_set.entries[i]
     local entity = result.entity
     fill_cube_search_result(result)
-    cube_search_data.last_entity = entity
-    cube_search_data.last_position = entity.position
-    cube_search_data.last_surface_index = entity.surface_index
+    cube_search_data.last_entities[#cube_search_data.last_entities + 1] = {
+      entity = entity,
+      position = entity.position,
+      surface_index = entity.surface_index,
+    }
   end
 
   if done then
     cube_search_data.last_tick = tick
   else
-    cube_search_data.last_tick = tick + 240
+    game.print("Ultracube warning: cannot find the ultradense cube. This may be due to compatibility issues with another mod, or a bug that should be reported.")
+    game.print("If the cube is really gone, you fix it with the following console command: /c game.player.insert(\"cube-ultradense-utility-cube\")")
+    cube_search_data.last_tick = tick + 600
   end
-  return result_set
+  return result_set.entries
 end

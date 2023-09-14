@@ -211,13 +211,13 @@ function add_entity_cache(entity)
   add_entity_cache_internal(entity, chunk_cache, false)
 end
 
-function remove_entity_cache(entity, position)
+function remove_entity_cache(entity, surface_index, position)
   if not entity.unit_number or not remove_entity_cache_internal(entity, entity_cache, true) then
     return
   end
 
   local chunk_x, chunk_y = get_chunk_position(position or entity.position)
-  local chunk_index = get_chunk_index(entity.surface_index, chunk_x, chunk_y)
+  local chunk_index = get_chunk_index(surface_index or entity.surface_index, chunk_x, chunk_y)
   local chunk_cache = entity_cache.chunk_map[chunk_index]
   if chunk_cache then
     remove_entity_cache_internal(entity, chunk_cache, false)

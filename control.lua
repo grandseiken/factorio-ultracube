@@ -12,7 +12,7 @@ require("__Ultracube__/scripts/multi_furnace")
 require("__Ultracube__/scripts/tech_unlock")
 
 local function on_picker_dolly_moved(e)
-  remove_entity_cache(e.moved_entity, e.start_pos)
+  remove_entity_cache(e.moved_entity, nil, e.start_pos)
   add_entity_cache(e.moved_entity)
 end
 
@@ -79,10 +79,11 @@ script.on_event(defines.events.on_player_created, on_player_created)
 script.on_event(
   {
     defines.events.on_player_main_inventory_changed,
+    defines.events.on_player_trash_inventory_changed,
     defines.events.on_player_cancelled_crafting,
     defines.events.on_player_crafted_item,
     defines.events.on_player_cursor_stack_changed,
-    defines.events.on_pre_player_crafted_item
+    defines.events.on_pre_player_crafted_item,
   },
   function(e)
     update_player_cube_status(e.player_index)
@@ -110,7 +111,7 @@ script.on_event(
 script.on_event(
   {
     defines.events.on_built_entity,
-    defines.events.on_robot_built_entity
+    defines.events.on_robot_built_entity,
   },
   function(e)
     add_entity_cache(e.created_entity)
@@ -124,9 +125,28 @@ script.on_event(
   end)
 
 script.on_event(
+  defines.events.script_raised_built,
+  function(e)
+    add_entity_cache(e.entity)
+  end)
+
+script.on_event(
+  defines.events.script_raised_destroy,
+  function(e)
+    remove_entity_cache(e.entity)
+  end)
+
+script.on_event(
+  defines.events.script_raised_teleported,
+  function(e)
+    remove_entity_cache(e.entity, e.old_surface_index, e.old_position)
+    add_entity_cache(e.entity)
+  end)
+
+script.on_event(
   {
     defines.events.on_player_mined_entity,
-    defines.events.on_robot_mined_entity
+    defines.events.on_robot_mined_entity,
   },
   function(e)
     return_cube_fuel(e.entity, e.buffer)

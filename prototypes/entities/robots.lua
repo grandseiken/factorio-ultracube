@@ -88,9 +88,9 @@ local logistic_robot_0 = {
   max_payload_size = 1,
   speed = 0.05,
   max_energy = "1.5MJ",
-  energy_per_tick = "0.1kJ",
+  energy_per_tick = "0.05kJ",
   speed_multiplier_when_out_of_energy = 0.2,
-  energy_per_move = "10kJ",
+  energy_per_move = "5kJ",
   min_to_charge = 0.2,
   max_to_charge = 0.95,
   working_sound = sounds.flying_robot(0.48),
@@ -114,7 +114,7 @@ logistic_robot_1.max_payload_size = 2
 logistic_robot_1.max_energy = "1.0MJ"
 logistic_robot_1.energy_per_tick = "0.05kJ"
 logistic_robot_1.speed_multiplier_when_out_of_energy = 0.5
-logistic_robot_1.energy_per_move = "5kJ"
+logistic_robot_1.energy_per_move = "2.5kJ"
 
 data:extend({
   construction_robot_0,
