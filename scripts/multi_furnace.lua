@@ -49,6 +49,7 @@ function multi_furnace_tick(tick)
 
     if transition then
       remove_entity_cache(e)
+      remove_entity_search(e.entity)
       local opened_players = {}
       for k, player in pairs(game.players) do
         if player.opened == e then

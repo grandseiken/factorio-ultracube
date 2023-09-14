@@ -5,6 +5,7 @@ do
   end
 end
 
+require("__Ultracube__/scripts/profiler")
 require("__Ultracube__/scripts/cube_fx")
 require("__Ultracube__/scripts/cube_management")
 require("__Ultracube__/scripts/entity_cache")
@@ -13,6 +14,7 @@ require("__Ultracube__/scripts/tech_unlock")
 
 local function on_picker_dolly_moved(e)
   remove_entity_cache(e.moved_entity, nil, e.start_pos)
+  remove_entity_search(e.entity)
   add_entity_cache(e.moved_entity)
 end
 
@@ -114,32 +116,50 @@ script.on_event(
     defines.events.on_robot_built_entity,
   },
   function(e)
+    if not e.created_entity.unit_number then
+      return
+    end
     add_entity_cache(e.created_entity)
   end)
 
 script.on_event(
   defines.events.on_entity_died,
   function(e)
+    if not e.entity.unit_number then
+      return
+    end
     return_cube_fuel(e.entity, e.loot)
     remove_entity_cache(e.entity)
+    remove_entity_search(e.entity)
   end)
 
 script.on_event(
   defines.events.script_raised_built,
   function(e)
+    if not e.entity.unit_number then
+      return
+    end
     add_entity_cache(e.entity)
   end)
 
 script.on_event(
   defines.events.script_raised_destroy,
   function(e)
+    if not e.entity.unit_number then
+      return
+    end
     remove_entity_cache(e.entity)
+    remove_entity_search(e.entity)
   end)
 
 script.on_event(
   defines.events.script_raised_teleported,
   function(e)
+    if not e.entity.unit_number then
+      return
+    end
     remove_entity_cache(e.entity, e.old_surface_index, e.old_position)
+    remove_entity_search(e.entity)
     add_entity_cache(e.entity)
   end)
 
@@ -149,8 +169,12 @@ script.on_event(
     defines.events.on_robot_mined_entity,
   },
   function(e)
+    if not e.entity.unit_number then
+      return
+    end
     return_cube_fuel(e.entity, e.buffer)
     remove_entity_cache(e.entity)
+    remove_entity_search(e.entity)
   end)
 
 script.on_event(

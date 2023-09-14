@@ -3,8 +3,14 @@ require("__Ultracube__/scripts/cube_search")
 
 local cube_ultradense = cubes.ultradense
 local cube_dormant = cubes.dormant
+local cube_ultradense_phantom = cubes.ultradense_phantom
+local cube_dormant_phantom = cubes.dormant_phantom
+
 local ultradense_icon = {type = "item", name = cube_ultradense}
 local dormant_icon = {type = "item", name = cube_dormant}
+local ultradense_phantom_icon = {type = "item", name = cube_ultradense_phantom}
+local dormant_phantom_icon = {type = "item", name = cube_dormant_phantom}
+
 local ultralocomotion_fuel_map = {
   ["wood"] = "cube-wood-ultralocomotion",
   ["coal"] = "cube-coal-ultralocomotion",
@@ -28,77 +34,81 @@ function cube_fx_data_on_load()
   cube_fx_data = global.cube_fx_data
 end
 
-local function cube_alert(results)
+local custom_alert = {type = "item"}
+local custom_alert_text = {"alert-description.cube-alert"}
+local function cube_alert(size, results)
   for _, player in pairs(game.players) do
     player.remove_alert {type = defines.alert_type.custom, ultradense_icon}
     player.remove_alert {type = defines.alert_type.custom, dormant_icon}
-  end
+    player.remove_alert {type = defines.alert_type.custom, ultradense_phantom_icon}
+    player.remove_alert {type = defines.alert_type.custom, dormant_phantom_icon}
 
-  for i = 1, #results do
-    local result = results[i]
-    for _, player in pairs(game.players) do
-      if player.controller_type == defines.controllers.character and
-         player.mod_settings["cube-show-cube-alerts"].value and
-         player_cube_data(player).total_weight == 0 then
-        player.add_custom_alert(result.entity, {type = "item", name = result.item},
-                                {"alert-description.cube-alert"}, true)
+    if player.controller_type == defines.controllers.character and
+       player.mod_settings["cube-show-cube-alerts"].value and
+       player_cube_data(player).total_weight == 0 then
+      for i = 1, size do
+        local result = results[i]
+        custom_alert.name = result.item
+        player.add_custom_alert(result.entity, custom_alert, custom_alert_text, true)
       end
     end
   end
 end
 
-local function cube_boom(results)
-  for i = 1, #results do
+local dormant_explosion = {name = "cube-periodic-dormant-explosion"}
+local ultradense_explosion = {name = "cube-periodic-ultradense-explosion"}
+local ultradense_projectile = {
+  name = "cube-periodic-ultradense-projectile",
+  max_range = 0,
+  target = {},
+}
+local function cube_boom(size, results)
+  for i = 1, size do
     local result = results[i]
-    if result.item == cubes.dormant then
-      result.entity.surface.create_entity {
-        name = "cube-periodic-dormant-explosion",
-        source = result.entity,
-        position = result.position,
-        target = result.position,
-      }
+    if result.item == cubes.dormant or result.item == cubes.dormant_phantom then
+      dormant_explosion.source = result.entity
+      dormant_explosion.position = result.position
+      dormant_explosion.target = result.position
+      result.entity.surface.create_entity(dormant_explosion)
+    elseif result.velocity then
+      local position = result.position
+      local velocity = result.velocity
+      ultradense_projectile.source = result.entity
+      ultradense_projectile.position = position
+      ultradense_projectile.target.x = position.x + velocity.x
+      ultradense_projectile.target.y = position.y + velocity.y
+      ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
+      result.entity.surface.create_entity(ultradense_projectile)
     else
-      if result.velocity then
-        result.entity.surface.create_entity {
-          name = "cube-periodic-ultradense-projectile",
-          source = result.entity,
-          position = result.position,
-          target = vector_add(result.position, result.velocity),
-          speed = vector_length(result.velocity) / 8,
-          max_range = 0,
-        }
-      else
-        result.entity.surface.create_entity {
-          name = "cube-periodic-ultradense-explosion",
-          source = result.entity,
-          position = result.position,
-          target = result.position,
-        }
-      end
+      ultradense_explosion.source = result.entity
+      ultradense_explosion.position = result.position
+      ultradense_explosion.target = result.position
+      result.entity.surface.create_entity(ultradense_explosion)
     end
   end
 end
 
-local function cube_spark(results)
-  for i = 1, #results do
+local spark_high = {name = "cube-periodic-ultradense-high-spark"}
+local spark_low = {name = "cube-periodic-ultradense-low-spark"}
+local function cube_spark(size, results)
+  for i = 1, size do
     local result = results[i]
-    if result.height >= 0 and result.item ~= cubes.dormant then
-      result.entity.surface.create_entity {
-        name = result.height > 0 and "cube-periodic-ultradense-high-spark" or "cube-periodic-ultradense-low-spark",
-        source = result.entity,
-        position = result.position,
-        target = result.position,
-      }
+    if result.height >= 0 and result.item ~= cubes.dormant and result.items ~= cubes.dormant_phantom then
+      local spark = result.height > 0 and spark_high or spark_low
+      spark.source = result.entity
+      spark.position = result.position
+      spark.target = result.position
+      result.entity.surface.create_entity(spark)
     end
   end
 end
 
-local function cube_vehicle_mod(results)
+local function cube_vehicle_mod(size, results)
   local new_locomotives = {}
   local new_last_robot = false
   local boomed = false
 
-  for i = 1, #results do
+  for i = 1, size do
     local result = results[i]
     local entity = result.entity
 
@@ -196,17 +206,17 @@ function cube_fx_tick(tick)
   if not update_tick then
     return
   end
-  local search_results = cube_search_update(tick)
+  local size, results = cube_search_update(tick)
   if alert_tick then
-    cube_alert(search_results)
+    cube_alert(size, results)
   end
-  if cube_vehicle_mod(search_results) then
+  if cube_vehicle_mod(size, results) then
     return
   end
   if spark_tick then
-    cube_spark(search_results)
+    cube_spark(size, results)
   end
   if boom_tick then
-    cube_boom(search_results)
+    cube_boom(size, results)
   end
 end
