@@ -212,6 +212,11 @@ local function cube_check_entity(entity)
     return false
   end
 
+  if entity_type == construction_robot_t or entity_type == logistic_robot_t then
+    local inventory = entity.get_inventory(defines.inventory.robot_cargo)
+    return inventory and check_inventory(entity, inventory)
+  end
+
   if vehicle_entity_types[entity_type] then
     local inventory = nil
     if entity_type == cargo_wagon_t then
@@ -496,14 +501,16 @@ local function cube_search_graph(last_entities_size, last_entities)
 
   for i = 1, cube_search_data.last_entities_size do
     local e = last_entities[i].entity
-    if e and e.valid and not target_queued[e.unit_number] then
-      target_queue_end = target_queue_end + 1
-      local q = target_queue[target_queue_end]
-      q.entity = e
-      q.depth = 0
-      q.belt = false
+    if e and e.valid then
       local en = e.unit_number
-      if en then target_queued[en] = true end
+      if not en or not target_queued[en] then
+        target_queue_end = target_queue_end + 1
+        local q = target_queue[target_queue_end]
+        q.entity = e
+        q.depth = 0
+        q.belt = false
+        if en then target_queued[en] = true end
+      end
     end
   end
 

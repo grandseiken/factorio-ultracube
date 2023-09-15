@@ -5,7 +5,6 @@ do
   end
 end
 
-require("__Ultracube__/scripts/profiler")
 require("__Ultracube__/scripts/cube_fx")
 require("__Ultracube__/scripts/cube_management")
 require("__Ultracube__/scripts/entity_cache")

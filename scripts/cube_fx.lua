@@ -57,6 +57,7 @@ end
 
 local dormant_explosion = {name = "cube-periodic-dormant-explosion"}
 local ultradense_explosion = {name = "cube-periodic-ultradense-explosion"}
+local phantom_explosion = {name = "cube-periodic-phantom-explosion"}
 local ultradense_projectile = {
   name = "cube-periodic-ultradense-projectile",
   max_range = 0,
@@ -70,6 +71,11 @@ local function cube_boom(size, results)
       dormant_explosion.position = result.position
       dormant_explosion.target = result.position
       result.entity.surface.create_entity(dormant_explosion)
+    elseif result.item == cubes.ultradense_phantom then
+      phantom_explosion.source = result.entity
+      phantom_explosion.position = result.position
+      phantom_explosion.target = result.position
+      result.entity.surface.create_entity(phantom_explosion)
     elseif result.velocity then
       local position = result.position
       local velocity = result.velocity
@@ -90,15 +96,25 @@ end
 
 local spark_high = {name = "cube-periodic-ultradense-high-spark"}
 local spark_low = {name = "cube-periodic-ultradense-low-spark"}
+local puff_high = {name = "cube-periodic-phantom-high-puff"}
+local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.height >= 0 and result.item ~= cubes.dormant and result.items ~= cubes.dormant_phantom then
-      local spark = result.height > 0 and spark_high or spark_low
-      spark.source = result.entity
-      spark.position = result.position
-      spark.target = result.position
-      result.entity.surface.create_entity(spark)
+    if result.height >= 0 then
+      if result.item == cubes.ultradense then
+        local spark = result.height > 0 and spark_high or spark_low
+        spark.source = result.entity
+        spark.position = result.position
+        spark.target = result.position
+        result.entity.surface.create_entity(spark)
+      elseif result.item == cubes.ultradense_phantom then
+        local puff = result.height > 0 and puff_high or puff_low
+        puff.source = result.entity
+        puff.position = result.position
+        puff.target = result.position
+        result.entity.surface.create_entity(puff)
+      end
     end
   end
 end

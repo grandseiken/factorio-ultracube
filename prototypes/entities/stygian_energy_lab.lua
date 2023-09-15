@@ -133,14 +133,18 @@ data:extend({
     scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg",
-      volume = 0.5,
+      sound = {
+        filename = "__Ultracube__/graphics/stygian-energy-lab.ogg",
+        volume = 0.8,
+      },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       aggregation = {
         max_count = 4,
         remove = false,
         count_already_playing = true,
       },
+      fade_in_ticks = 10,
+      fade_out_ticks = 10,
     },
     crafting_speed = 1,
     return_ingredients_on_change = true,

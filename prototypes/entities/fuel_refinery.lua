@@ -184,6 +184,8 @@ data:extend({
         volume = 0.6,
       },
       apparent_volume = 1.5,
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
     },
     crafting_speed = 1,
     energy_source = {

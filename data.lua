@@ -33,7 +33,7 @@ require("prototypes.scripts.autoplace")
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
--- reintroduce start cutscene
+-- reintroduce start cutscene / edit start message
 -- analysis machine that unlocks techs based on finding things in the world
 -- strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
 -- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
@@ -53,19 +53,28 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...?
 
+-- PHANTOM FX:
+-- - Sound design
+-- - Replace "aura" graphics
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
 -- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
--- Figure out another awkward deep branch power solution w/uranium. Maybe use temperature mechanics properly, with crazy heating mixing.
+-- Figure out another awkward deep branch power solution w/uranium.
+-- - Require involving some cube process to manage uranium levels that does multiple/random outputs (235/238).
+-- - Sulphuric acid in, sand out? May well need a third nuclear ingredient to manage levels of (e.g. radioactive sludge)
+-- - Comes out of ore processing; needed (in different ratio than it comes) for kovarex; cube process to balance but it's random
+-- - but need to work out the interactions
+-- - plus steam out or water in or some whatever
+-- - u234 (!) - naturally 0.01%ish; radioactive sludge; maybe two cube processes to balance things
+-- - potentiably: 0.01% 234, and kovarex 40x235+5x238+1x234 -> 41 + 2 + 3?? then what sludge? centrifuge has no pipes...
+-- Maybe use temperature mechanics properly somewhere, with crazy heating mixing.
 -- some new power solution: requires tons of accumulators, because it makes power directly from cube time
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- All new things from now on should be interesting somehow, not just slap shit together
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Module recipes (lvl3)
-
--- Main tech unlocks:
--- accumulator v2 (plate + ghost battery etc); power armor v2
+-- accumulator v2 (plate + ghost battery etc); power armor v2 (??? - haunted furnace?)
 
 -- Random thoughts.
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
@@ -73,8 +82,7 @@ require("prototypes.scripts.autoplace")
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
 -- - how about this: deep crushing has tiny% chance to produce diamond or something
 -- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
--- 2: some cube process that outputs random / multiple products.
---    basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
+-- basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
 -- 3: many interlinked recipes with short time and low amounts or...
 
 -- Things to unlock from level 3/4+:

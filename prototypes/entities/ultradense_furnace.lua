@@ -347,13 +347,17 @@ data:extend({
     scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      filename = "__Krastorio2Assets__/sounds/buildings/advanced-furnace.ogg",
-      volume = 0.50,
-      aggregation = {
-        max_count = 2,
-        remove = false,
-        count_already_playing = true,
+      sound = {
+        filename = "__Krastorio2Assets__/sounds/buildings/advanced-furnace.ogg",
+        volume = 0.50,
+        aggregation = {
+          max_count = 2,
+          remove = false,
+          count_already_playing = true,
+        },
       },
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
     },
     idle_sound = {filename = "__base__/sound/idle1.ogg"},
     crafting_speed = 1,
