@@ -113,21 +113,27 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-experimental",
+    name = "cube-uranium",
     group = "intermediate-products",
     order = "d",
   },
   {
     type = "item-subgroup",
-    name = "cube-flasks",
+    name = "cube-experimental",
     group = "intermediate-products",
     order = "e",
   },
   {
     type = "item-subgroup",
-    name = "cube-science",
+    name = "cube-flasks",
     group = "intermediate-products",
     order = "f",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-science",
+    group = "intermediate-products",
+    order = "g",
   },
   {
     type = "item-subgroup",

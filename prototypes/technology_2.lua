@@ -766,6 +766,55 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-uranium-processing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/uranium-processing.png",
+    effects =
+    {
+      -- {type = "unlock-recipe", recipe = "centrifuge"},
+      -- {type = "unlock-recipe", recipe = "uranium-processing"},
+      -- {type = "unlock-recipe", recipe = "uranium-fuel-cell"},
+    },
+    prerequisites = {
+      "cube-electric-mining-drill-mk2",
+      "cube-concrete",
+    },
+    unit = tech_cost_unit("2", 240),
+    order = "2-7-0",
+  },
+  {
+    type = "technology",
+    name = "cube-nuclear-power",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/nuclear-power.png",
+    effects =
+    {
+      -- {type = "unlock-recipe", recipe = "nuclear-reactor"},
+      -- {type = "unlock-recipe", recipe = "heat-exchanger"},
+      -- {type = "unlock-recipe", recipe = "heat-pipe"},
+      -- {type = "unlock-recipe", recipe = "steam-turbine"},
+      -- {type = "unlock-recipe", recipe = "nuclear-fuel-reprocessing"},
+    },
+    prerequisites = {"cube-uranium-processing"},
+    unit = tech_cost_unit("2", 240),
+    order = "2-7-1",
+  },
+  {
+    type = "technology",
+    name = "cube-kovarex-enrichment-process",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/kovarex-enrichment-process.png",
+    effects =
+    {
+      -- {type = "unlock-recipe", recipe = "kovarex-enrichment-process"},
+      -- {type = "unlock-recipe", recipe = "nuclear-fuel"},
+    },
+    prerequisites = {"cube-uranium-processing"},
+    unit = tech_cost_unit("2", 300),
+    order = "2-7-2",
+  },
+  {
+    type = "technology",
     name = "cube-deep-introspection-card",
     icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,

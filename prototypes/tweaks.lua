@@ -49,6 +49,12 @@ data.raw.car.car.burner.burnt_inventory_size = 1
 data.raw.locomotive.locomotive.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
 data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
 
+data.raw.item["uranium-235"].subgroup = "cube-uranium"
+data.raw.item["uranium-235"].order = "a[0]"
+data.raw.item["uranium-238"].subgroup = "cube-uranium"
+data.raw.item["uranium-238"].order = "a[2]"
+data.raw.resource["uranium-ore"].category = "cube-uranium"
+
 data.raw.radar["radar"].energy_usage = "200kW"
 data.raw.radar["radar"].energy_per_sector = "5MJ"
 data.raw.radar["radar"].energy_per_nearby_scan = "150kJ"

@@ -2412,7 +2412,10 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-electric-mining-drill-mk2"},
     max_health = 400,
-    resource_categories = {"basic-solid"},
+    resource_categories = {
+      "basic-solid",
+      "cube-uranium",
+    },
     corpse = "electric-mining-drill-remnants",
     dying_explosion = "electric-mining-drill-explosion",
     damaged_trigger_effect = hit_effects.entity(),

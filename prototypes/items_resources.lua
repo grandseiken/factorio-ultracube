@@ -1,5 +1,9 @@
 data:extend({
   {
+    type = "resource-category",
+    name = "cube-uranium",
+  },
+  {
     type = "item",
     name = "cube-raw-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
@@ -662,6 +666,34 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "x[0-tendrils]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-uranium-234",
+    icon = "__Ultracube__/graphics/uranium-234.png",
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Ultracube__/graphics/uranium-234.png",
+          scale = 0.25,
+          mipmap_count = 4
+        },
+        {
+          draw_as_light = true,
+          blend_mode = "additive",
+          size = 64,
+          filename = "__Ultracube__/graphics/uranium-234.png",
+          scale = 0.25,
+          tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
+          mipmap_count = 4,
+        }
+      }
+    },
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-uranium",
+    order = "a[1]",
     stack_size = 100,
   },
 })
