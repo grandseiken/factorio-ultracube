@@ -61,12 +61,15 @@ require("prototypes.scripts.autoplace")
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
 -- Figure out another awkward deep branch power solution w/uranium.
 -- - Require involving some cube process to manage uranium levels that does multiple/random outputs (235/238).
--- - Sulphuric acid in, sand out? May well need a third nuclear ingredient to manage levels of (e.g. radioactive sludge)
+-- - Sulphuric acid/water in, sand/steam/water out? May well need a third nuclear ingredient to manage levels of (e.g. radioactive sludge)
 -- - Comes out of ore processing; needed (in different ratio than it comes) for kovarex; cube process to balance but it's random
--- - but need to work out the interactions
--- - plus steam out or water in or some whatever
--- - u234 (!) - naturally 0.01%ish; radioactive sludge; maybe two cube processes to balance things
--- - potentiably: 0.01% 234, and kovarex 40x235+5x238+1x234 -> 41 + 2 + 3?? then what sludge? centrifuge has no pipes...
+-- - but need to work out the interactions; maybe two cube processes to balance things
+-- - potentiably: 0.01% 234, and kovarex 40x235+5x238+1x234 -> 41 + 2 + 3??
+-- - then: furnace 238 + 234 -> randomly less 234, more 238 (but sometimes reversed!), plus sludge/slag
+-- - sludge/slag + 234 + 238 -> 235 + more/less sludge/slag
+-- - balance it so the latter gets you more per 238, and then make the fuel cell recipe way worse
+-- - fuel cells made in fuel refinery
+-- - or something like this??
 -- Maybe use temperature mechanics properly somewhere, with crazy heating mixing.
 -- some new power solution: requires tons of accumulators, because it makes power directly from cube time
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)

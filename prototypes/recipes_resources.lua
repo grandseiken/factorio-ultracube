@@ -289,4 +289,21 @@ data:extend({
     allow_decomposition = true,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-uranium-processing",
+    icon = "__base__/graphics/icons/uranium-processing.png",
+    icon_size = 64, icon_mipmaps = 4,
+    energy_required = 10,
+    category = "centrifuging",
+    ingredients = {{"uranium-ore", 10}},
+    results = {
+      {name = "cube-uranium-234", probability = 0.0001, amount = 1},
+      {name = "uranium-235", probability = 0.007, amount = 1},
+      {name = "uranium-238", probability = 0.993, amount = 1},
+    },
+    subgroup = "cube-processing",
+    order = "z[uranium-processing]",
+    enabled = false,
+  },
 })

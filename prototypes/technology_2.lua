@@ -771,8 +771,8 @@ data:extend({
     icon = "__base__/graphics/technology/uranium-processing.png",
     effects =
     {
-      -- {type = "unlock-recipe", recipe = "centrifuge"},
-      -- {type = "unlock-recipe", recipe = "uranium-processing"},
+      {type = "unlock-recipe", recipe = "cube-centrifuge"},
+      {type = "unlock-recipe", recipe = "cube-uranium-processing"},
       -- {type = "unlock-recipe", recipe = "uranium-fuel-cell"},
     },
     prerequisites = {
@@ -789,10 +789,10 @@ data:extend({
     icon = "__base__/graphics/technology/nuclear-power.png",
     effects =
     {
-      -- {type = "unlock-recipe", recipe = "nuclear-reactor"},
-      -- {type = "unlock-recipe", recipe = "heat-exchanger"},
-      -- {type = "unlock-recipe", recipe = "heat-pipe"},
-      -- {type = "unlock-recipe", recipe = "steam-turbine"},
+      {type = "unlock-recipe", recipe = "cube-nuclear-reactor"},
+      {type = "unlock-recipe", recipe = "cube-heat-exchanger"},
+      {type = "unlock-recipe", recipe = "cube-heat-pipe"},
+      {type = "unlock-recipe", recipe = "cube-heavy-turbine"},
       -- {type = "unlock-recipe", recipe = "nuclear-fuel-reprocessing"},
     },
     prerequisites = {"cube-uranium-processing"},

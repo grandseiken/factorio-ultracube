@@ -187,7 +187,19 @@ data:extend({
 
   {
     type = "item-subgroup",
+    name = "cube-advanced-power",
+    group = "production",
+    order = "b",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-processing-machines",
+    group = "production",
+    order = "w",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-chemical-machines",
     group = "production",
     order = "x",
   },

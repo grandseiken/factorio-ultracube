@@ -27,7 +27,7 @@ data.raw.item["copper-cable"].order = "1[a-conductive-wire]"
 data.raw.item["stone-brick"].subgroup = "cube-processed-materials"
 data.raw.item["stone-brick"].order = "0[a-brick]"
 data.raw.item["radar"].subgroup = "cube-logistic-machines"
-data.raw.item["radar"].order = "0[radar]"
+data.raw.item["radar"].order = "1[radar]"
 data.raw.item["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
 data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
@@ -48,6 +48,13 @@ data.raw.car.car.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "c
 data.raw.car.car.burner.burnt_inventory_size = 1
 data.raw.locomotive.locomotive.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
 data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
+
+data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
+data.raw.item["centrifuge"].order = "1[0-centrifuge]"
+data.raw.item["centrifuge"].stack_size = "20"
+data.raw.item["nuclear-reactor"].subgroup = "cube-advanced-power"
+data.raw.item["heat-pipe"].subgroup = "cube-advanced-power"
+data.raw.item["heat-exchanger"].subgroup = "cube-advanced-power"
 
 data.raw.item["uranium-235"].subgroup = "cube-uranium"
 data.raw.item["uranium-235"].order = "a[0]"
