@@ -296,6 +296,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-hulking-energy-frame",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 8},
+      {"accumulator", 4},
+      {"cube-resplendent-plate", 8},
+      {"cube-haunted-energy-cell", 12},
+    },
+    energy_required = 20,
+    results = {{"cube-hulking-energy-frame", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-centrifuge",
     ingredients = {
       {"concrete", 100},
@@ -304,7 +317,7 @@ data:extend({
       {"cube-advanced-circuit", 80},
     },
     results = {{"centrifuge", 1}},
-    energy_required = 6,
+    energy_required = 8,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },

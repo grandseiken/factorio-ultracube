@@ -40,6 +40,7 @@ local productivity_module_limitation = {
   "cube-sulfur",
   -- Also a loop, but should be OK.
   "cube-deep-crystal",
+  "cube-uranium-processing",
 }
 
 data:extend({

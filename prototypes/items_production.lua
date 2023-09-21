@@ -210,4 +210,15 @@ data:extend({
     place_result = "cube-roboport",
     stack_size = 20,
   },
+  {
+    type = "item",
+    name = "cube-hulking-energy-frame",
+    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "energy",
+    order = "z[energy-frame]",
+    place_result = "cube-hulking-energy-frame",
+    stack_size = 20,
+  },
 })

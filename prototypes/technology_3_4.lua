@@ -50,6 +50,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-hulking-energy-frame",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/energy-storage.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-hulking-energy-frame"},
+    },
+    prerequisites = {
+      "cube-electric-energy-distribution-2",
+      "cube-synthetic-premonition-card",
+      "cube-resplendent-plate",
+    },
+    unit = tech_cost_unit("4", 300),
+    order = "3-0-3",
+  },
+  {
+    type = "technology",
     name = "cube-v4-logistics",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/logistics-5.png",

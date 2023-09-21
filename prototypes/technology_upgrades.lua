@@ -568,7 +568,7 @@ data:extend({
     },
     prerequisites = {
       "cube-research-speed-1",
-      "cube-electric-energy-accumulators",
+      "cube-abstract-interrogation-card",
     },
     unit = tech_cost_unit("2", 240),
     upgrade = true,

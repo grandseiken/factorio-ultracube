@@ -81,7 +81,6 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-accumulator"},
     },
     prerequisites = {
-      "cube-abstract-interrogation-card",
       "cube-electric-energy-distribution-1",
       "cube-battery",
     },

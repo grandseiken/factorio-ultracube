@@ -189,7 +189,7 @@ data:extend({
     type = "item-subgroup",
     name = "cube-advanced-power",
     group = "production",
-    order = "b",
+    order = "c",
   },
   {
     type = "item-subgroup",
