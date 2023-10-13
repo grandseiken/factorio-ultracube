@@ -52,7 +52,6 @@ data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "1[0-centrifuge]"
 data.raw.item["centrifuge"].stack_size = "20"
-data.raw.item["nuclear-reactor"].subgroup = "cube-advanced-power"
 data.raw.item["heat-pipe"].subgroup = "cube-advanced-power"
 data.raw.item["heat-exchanger"].subgroup = "cube-advanced-power"
 
@@ -81,14 +80,24 @@ data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-tra
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
 data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 
+data.raw.item["uranium-fuel-cell"].stack_size = 10
+data.raw.item["uranium-fuel-cell"].fuel_value = "6GJ"
+data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
+
+data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/graphics/battery-mk2-equipment.png"
 data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"
 data.raw.item["exoskeleton-equipment"].subgroup = "cube-equipment"
 data.raw.item["personal-roboport-mk2-equipment"].subgroup = "cube-equipment"
 data.raw.item["battery-mk2-equipment"].subgroup = "cube-equipment-power"
 data.raw.item["battery-mk2-equipment"].order = "b[battery]-b[battery-mk2-equipment]"
+data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/graphics/battery-mk2-equipment.png"
+data.raw.item["fusion-reactor-equipment"].subgroup = "cube-equipment-power"
+data.raw.item["fusion-reactor-equipment"].order = "0[reactor]-a[reactor-equipment]"
+data.raw.item["fusion-reactor-equipment"].power = "800kW"
 data.raw["night-vision-equipment"]["night-vision-equipment"].shape.height = 1
 data.raw["night-vision-equipment"]["night-vision-equipment"].categories = {"cube-armor"}
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"cube-armor"}
 data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].categories = {"cube-armor"}
+data.raw["generator-equipment"]["fusion-reactor-equipment"].categories = {"cube-armor"}
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}

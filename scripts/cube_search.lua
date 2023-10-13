@@ -45,6 +45,7 @@ function refresh_cube_search_data()
     last_entities = nil,
     search_results = nil,
     pickups = nil,
+    was_refreshed = true,
   }
   cube_search_data = global.cube_search_data
 end
@@ -762,7 +763,7 @@ function cube_search_update(tick)
     return result_set.entries_size, result_set.entries
   end
   for _, player in pairs(game.players) do
-    if player.opened and player.opened.unit_number then
+    if player.opened_gui_type == defines.gui_type.entity and player.opened and player.opened.unit_number then
       cube_search_hint_entity(player.opened)
     end
     if player.selected and player.selected.unit_number then
@@ -797,8 +798,12 @@ function cube_search_update(tick)
 
   if not done then
     if not cube_search_data.report_timer then
-      game.print("Ultracube warning: optimized cube control routines failed. This is either due to compatibility issues with another mod, or a bug that should be reported.")
-      cube_search_data.report_timer = 600
+      if cube_search_data.was_refreshed then
+        cube_search_data.was_refresh = false
+      else
+        game.print("Ultracube warning: optimized cube control routines failed. This may be due to compatibility issues with another mod, or a bug that should be reported.")
+        cube_search_data.report_timer = 600
+      end
     end
     clear_result_set()
     done = cube_search_full()

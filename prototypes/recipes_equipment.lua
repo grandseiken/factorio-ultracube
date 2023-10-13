@@ -79,6 +79,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-fusion-reactor-equipment",
+    ingredients = {
+      {"uranium-fuel-cell", 20},
+      {"cube-sophisticated-matter-unit", 100},
+      {"cube-spectral-processor", 100},
+    },
+    results = {{"fusion-reactor-equipment", 1}},
+    energy_required = 20,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-night-vision-equipment",
     ingredients = {
       {"cube-advanced-circuit", 10},
@@ -99,7 +112,20 @@ data:extend({
       {"copper-cable", 40}
     },
     results = {{"exoskeleton-equipment", 1}},
-    energy_required = 20,
+    energy_required = 15,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-exoskeleton-equipment-mk2",
+    ingredients = {
+      {"exoskeleton-equipment", 1},
+      {"cube-speed-module-v2", 4},
+      {"cube-arcane-drive", 8},
+      {"cube-ghost-wire", 40},
+    },
+    results = {{"cube-exoskeleton-equipment-mk2", 1}},
+    energy_required = 25,
     enabled = false,
   },
   {

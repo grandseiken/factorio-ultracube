@@ -22,7 +22,38 @@ local reset_table = {
   ["cube-mechanical-network-xor-gate-1"] = "cube-mechanical-network-xor-gate",
 }
 
-function multi_furnace_tick(tick)
+local function fast_replace(e, name, spill)
+  remove_entity_cache(e)
+  remove_entity_search(e)
+  local opened_players = {}
+  for k, player in pairs(game.players) do
+    if player.opened == e then
+      player.opened = nil
+      opened_players[k] = player
+    end
+  end
+  local new_entity = e.surface.create_entity {
+    name = name,
+    position = e.position,
+    direction = e.direction,
+    force = e.force,
+    fast_replace = true,
+    spill = spill,
+    create_build_effect_smoke = false,
+  }
+  if new_entity then
+    for _, player in pairs(opened_players) do
+      player.opened = new_entity
+    end
+    return new_entity
+  elseif e.valid then
+    return e
+  end
+  return nil
+end
+
+function transition_tick(tick)
+  local new_entities = {}
   local cache = get_entity_cache()
   for _, e in pairs(cache.multi_furnaces) do
     local name = e.name
@@ -48,30 +79,25 @@ function multi_furnace_tick(tick)
     end
 
     if transition then
-      remove_entity_cache(e)
-      remove_entity_search(e.entity)
-      local opened_players = {}
-      for k, player in pairs(game.players) do
-        if player.opened == e then
-          player.opened = nil
-          opened_players[k] = player
-        end
-      end
-      local new_entity = e.surface.create_entity {
-        name = transition,
-        position = e.position,
-        direction = e.direction,
-        force = e.force,
-        fast_replace = true,
-        spill = false,
-        create_build_effect_smoke = false,
-      }
+      local new_entity = fast_replace(e, transition, false)
       if new_entity then
-        add_entity_cache(new_entity)
-        for _, player in pairs(opened_players) do
-          player.opened = new_entity
-        end
+        new_entities[#new_entities + 1] = new_entity
       end
     end
+  end
+
+  for _, e in pairs(cache.reactors) do
+    local new_entity = nil
+    if e.name == "cube-nuclear-reactor" and e.temperature > 100 and not e.burner.currently_burning then
+      new_entity = fast_replace(e, "cube-nuclear-reactor-online", true)
+    elseif e.name == "cube-nuclear-reactor-online" and e.temperature < 100 and not e.burner.currently_burning then
+      new_entity = fast_replace(e, "cube-nuclear-reactor", true)
+    end
+    if new_entity then
+      new_entities[#new_entities + 1] = new_entity
+    end
+  end
+  for _, e in ipairs(new_entities) do
+    add_entity_cache(e)
   end
 end

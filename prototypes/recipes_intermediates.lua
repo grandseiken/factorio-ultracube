@@ -327,6 +327,50 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-uranium-fuel-cell",
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"cube-rare-metals", 100},
+      {"uranium-235", 10},
+      {"uranium-238", 190},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "uranium-fuel-cell", amount = 100},
+    },
+    energy_required = 2,
+    main_product = "uranium-fuel-cell",
+    category = "cube-fuel-refinery",
+    subgroup = "cube-uranium-processing",
+    order = "d[uranium-processing]",
+    always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-nuclear-fuel-reprocessing",
+    icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"used-up-uranium-fuel-cell", 100},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"uranium-238", 30},
+      {"cube-uranium-234", 10},
+    },
+    energy_required = 2,
+    main_product = "",
+    category = "cube-fuel-refinery",
+    subgroup = "cube-uranium-processing",
+    order = "e[uranium-reprocessing]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-sophisticated-matter-unit",
     ingredients = {
       {"cube-basic-matter-unit", 8},
@@ -342,6 +386,7 @@ data:extend({
     name = "cube-resplendent-plate",
     ingredients = {
       {"cube-sophisticated-matter-unit", 1},
+      {"cube-glass", 2},
       {"cube-rare-metals", 16},
       {"cube-deep-powder", 16},
     },

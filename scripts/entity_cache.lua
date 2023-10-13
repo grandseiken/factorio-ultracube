@@ -15,6 +15,7 @@ function refresh_entity_cache()
     cube_burners = {},
     inserters = {},
     vehicles = {},
+    reactors = {},
     multi_furnaces = {},
   }
   entity_cache = global.entity_cache
@@ -74,6 +75,10 @@ entity_types = {
     "cargo-wagon",
     "spider-vehicle",
   }),
+  reactor = make_set({
+    "cube-nuclear-reactor",
+    "cube-nuclear-reactor-online",
+  }),
   multi_furnace = make_set({
     "cube-mechanical-network-and-gate",
     "cube-mechanical-network-and-gate-0",
@@ -92,6 +97,7 @@ local inventory_entity_types = entity_types.inventory
 local cube_crafter_entity_types = entity_types.cube_crafter
 local cube_burner_entity_types = entity_types.cube_burner
 local vehicle_entity_types = entity_types.vehicle
+local reactor_entities = entity_types.reactor
 local multi_furnace_entities = entity_types.multi_furnace
 
 function is_cube_crafter(entity)
@@ -108,7 +114,7 @@ end
 
 function is_cube_burner(entity)
   return cube_burner_entity_types[entity.type] and entity.prototype.burner_prototype and
-         entity.prototype.burner_prototype.fuel_categories[cube_defines.fuel_category]
+         entity.prototype.burner_prototype.burnt_inventory_size > 0
 end
 
 local is_cube_crafter = is_cube_crafter
@@ -139,6 +145,10 @@ local function add_entity_cache_internal(entity, cache, is_global)
   end
   if vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = entity
+    needs_chunk_cache = false
+  end
+  if entity_type == "reactor" and reactor_entities[entity.name] then
+    cache.reactors[entity.unit_number] = entity
     needs_chunk_cache = false
   end
   if entity_type == "furnace" and multi_furnace_entities[entity.name] then
@@ -173,6 +183,10 @@ local function remove_entity_cache_internal(entity, cache, is_global)
   end
   if vehicle_entity_types[entity_type] then
     cache.vehicles[entity.unit_number] = nil
+    needs_chunk_cache = false
+  end
+  if entity_type == "reactor" and reactor_entities[entity.name] then
+    cache.reactors[entity.unit_number] = nil
     needs_chunk_cache = false
   end
   if entity_type == "furnace" and multi_furnace_entities[entity.name] then

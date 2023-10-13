@@ -296,7 +296,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-hulking-energy-frame",
+    name = "cube-energy-bulkframe",
     ingredients = {
       {"cube-sophisticated-matter-unit", 8},
       {"accumulator", 4},
@@ -304,7 +304,7 @@ data:extend({
       {"cube-haunted-energy-cell", 12},
     },
     energy_required = 20,
-    results = {{"cube-hulking-energy-frame", 1}},
+    results = {{"cube-energy-bulkframe", 1}},
     enabled = false,
   },
   {
@@ -331,7 +331,7 @@ data:extend({
       {"cube-sophisticated-matter-unit", 500},
     },
     energy_required = 30,
-    results = {{"nuclear-reactor", 1}},
+    results = {{"cube-nuclear-reactor", 1}},
     requester_paste_multiplier = 1,
     enabled = false,
   },

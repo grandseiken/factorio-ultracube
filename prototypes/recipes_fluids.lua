@@ -473,7 +473,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {},
     results = {
-      {type = "fluid", name = "cube-void-wind", amount = 400},
+      {type = "fluid", name = "cube-void-wind", amount = 400, temperature = 425},
       {type = "item", name = "cube-residual-tendrils", amount_min = 1, amount_max = 4},
     },
     energy_required = 2,

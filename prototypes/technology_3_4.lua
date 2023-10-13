@@ -50,11 +50,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-hulking-energy-frame",
+    name = "cube-energy-bulkframe",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/energy-storage.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-hulking-energy-frame"},
+      {type = "unlock-recipe", recipe = "cube-energy-bulkframe"},
     },
     prerequisites = {
       "cube-electric-energy-distribution-2",
@@ -80,7 +80,7 @@ data:extend({
       "cube-spectral-processor",
     },
     unit = tech_cost_unit("3", 300),
-    order = "3-0-3",
+    order = "3-0-4",
   },
   {
     type = "technology",
@@ -99,7 +99,54 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 300),
-    order = "3-0-4",
+    order = "3-0-5",
+  },
+  {
+    type = "technology",
+    name = "cube-kovarex-enrichment-process",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/kovarex-enrichment-process.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-kovarex-enrichment-process"},
+      {type = "unlock-recipe", recipe = "cube-kovarex-redemption-process"},
+    },
+    prerequisites = {
+      "cube-deep-introspection-card",
+      "cube-uranium-processing",
+    },
+    unit = tech_cost_unit("3", 240),
+    order = "3-0-6",
+  },
+  {
+    type = "technology",
+    name = "cube-nuclear-fuel-reprocessing",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/nuclear-fuel-reprocessing.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-nuclear-fuel-reprocessing"},
+    },
+    prerequisites = {
+      "cube-deep-introspection-card",
+      "cube-nuclear-power",
+    },
+    unit = tech_cost_unit("3", 240),
+    order = "3-0-7",
+  },
+  {
+    type = "technology",
+    name = "cube-fusion-reactor-equipment",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fusion-reactor-equipment.png"),
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fusion-reactor-equipment"},
+    },
+    prerequisites = {
+      "cube-deep-introspection-card",
+      "cube-power-armor",
+      "cube-uranium-processing",
+    },
+    unit = tech_cost_unit("3", 240),
+    order = "3-0-8",
   },
   {
     type = "technology",
@@ -114,7 +161,7 @@ data:extend({
       "cube-synthetic-premonition-card",
     },
     unit = tech_cost_unit("4", 240),
-    order = "3-0-5",
+    order = "3-0-9",
   },
   {
     type = "technology",

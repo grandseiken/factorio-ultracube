@@ -85,8 +85,37 @@ data:extend({
       type = "electric",
       usage_priority = "primary-output",
     },
-    power = "480kW",
+    power = "320kW",
     categories = {"cube-armor"},
+  },
+  {
+    type = "movement-bonus-equipment",
+    name = "cube-exoskeleton-equipment-mk2",
+    categories = {"cube-armor"},
+    energy_consumption = "300kW",
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-input",
+    },
+    movement_bonus = 0.4,
+    shape = {
+      width = 2,
+      height = 4,
+      type = "full",
+    },
+    sprite = {
+      filename = "__Krastorio2Assets__/equipments/character/advanced-exoskeleton-equipment.png",
+      width = 64,
+      height = 128,
+      priority = "medium",
+      hr_version = {
+        filename = "__Krastorio2Assets__/equipments/character/hr-advanced-exoskeleton-equipment.png",
+        width = 128,
+        height = 256,
+        priority = "medium",
+        scale = 0.5,
+      },
+    },
   },
   {
     type = "battery-equipment",

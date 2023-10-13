@@ -59,25 +59,16 @@ require("prototypes.scripts.autoplace")
 -- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
 -- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
--- Figure out another awkward deep branch power solution w/uranium.
--- - Require involving some cube process to manage uranium levels that does multiple/random outputs (235/238).
--- - Sulphuric acid/water in, sand/steam/water out? May well need a third nuclear ingredient to manage levels of (e.g. radioactive sludge)
--- - Comes out of ore processing; needed (in different ratio than it comes) for kovarex; cube process to balance but it's random
--- - but need to work out the interactions; maybe two cube processes to balance things
--- - potentiably: 0.01% 234, and kovarex 40x235+5x238+1x234 -> 41 + 2 + 3??
--- - then: furnace 238 + 234 -> randomly less 234, more 238 (but sometimes reversed!), plus sludge/slag
--- - sludge/slag + 234 + 238 -> 235 + more/less sludge/slag
--- - balance it so the latter gets you more per 238, and then make the fuel cell recipe way worse
--- - fuel cells made in fuel refinery
--- - or something like this??
+-- Kovarex redemption: extra fluid ingredients/results? Another nuclear ingredient to manage levels of (e.g. radioactive sludge)?
+-- Make sure reactor fast-replace is working (seemed odd when picked up) plus 2 burnt result slots
 -- Maybe use temperature mechanics properly somewhere, with crazy heating mixing.
--- some new power solution: requires tons of accumulators, because it makes power directly from cube time
+-- idea for (final) power solution: requires tons of accumulators, because it makes power directly from cube time
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- All new things from now on should be interesting somehow, not just slap shit together
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Module recipes (lvl3)
--- accumulator v2 (plate + ghost battery etc); power armor v2 (??? - haunted furnace?)
+-- power armor v2 (??? - haunted furnace?)
 
 -- Random thoughts.
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
@@ -96,6 +87,7 @@ require("prototypes.scripts.autoplace")
 -- Cube teleportation (implement, + teleportation gps module)
 -- Even better equipment
 -- Higher-level modules, perhaps non-cube (e.g. fabricator) modules, beacon!?
+-- if we have beacons, they should be powered by ghosts
 -- unobtainium?
 
 -- After science 3/4 or nearby, later ideas...
@@ -108,6 +100,8 @@ require("prototypes.scripts.autoplace")
 -- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
+-- World events
+-- Legendary iron plate
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")
@@ -155,16 +149,17 @@ require("prototypes.entities.dimension_folding_engine")
 require("prototypes.entities.distillery")
 require("prototypes.entities.electric_furnace")
 require("prototypes.entities.electric_mining_drills")
+require("prototypes.entities.energy_bulkframe")
 require("prototypes.entities.explosions")
 require("prototypes.entities.fabricator")
 require("prototypes.entities.fluid_burner")
 require("prototypes.entities.fuel_refinery")
 require("prototypes.entities.greenhouse")
 require("prototypes.entities.heavy_turbine")
-require("prototypes.entities.hulking_energy_frame")
 require("prototypes.entities.inserters")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
+require("prototypes.entities.nuclear_reactor")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
 require("prototypes.entities.roboport")

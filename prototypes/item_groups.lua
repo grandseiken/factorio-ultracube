@@ -77,33 +77,39 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-processing",
+    name = "cube-uranium-processing",
     group = "intermediate-products",
     order = "1",
   },
   {
     type = "item-subgroup",
-    name = "cube-processed-materials",
+    name = "cube-fuel",
     group = "intermediate-products",
     order = "2",
   },
   {
     type = "item-subgroup",
-    name = "cube-advanced-materials",
+    name = "cube-processing",
     group = "intermediate-products",
     order = "3",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-processed-materials",
+    group = "intermediate-products",
+    order = "4",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-advanced-materials",
+    group = "intermediate-products",
+    order = "5",
   },
   {
     type = "item-subgroup",
     name = "cube-components",
     group = "intermediate-products",
     order = "a",
-  },
-  {
-    type = "item-subgroup",
-    name = "cube-fuel",
-    group = "intermediate-products",
-    order = "b",
   },
   {
     type = "item-subgroup",

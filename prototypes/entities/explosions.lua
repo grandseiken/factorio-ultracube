@@ -32,7 +32,8 @@ local function make_spark_explosion(name, height)
         max_count = 1,
         remove = true
       },
-      audible_distance_modifier = 0.75,
+      audible_distance_modifier = 1,
+      -- TODO: needs to be manually lowered in volume or distance falloff goes odd.
       variations = {
         {filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
         {filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},

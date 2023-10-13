@@ -302,8 +302,8 @@ data:extend({
         },
       },
     },
-    subgroup = "cube-fuel",
-    order = "y[haunted-energy-cell]",
+    subgroup = "cube-chemical-intermediates",
+    order = "z[haunted-energy-cell]",
     fuel_category = "cube-haunted-energy",
     -- TODO: may need tweaking with actual practice.
     fuel_value = "250MJ",

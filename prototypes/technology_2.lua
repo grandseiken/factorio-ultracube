@@ -645,7 +645,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-battery-mk2-equipment",
-    icon = "__base__/graphics/technology/battery-mk2-equipment.png",
+    icon = "__Ultracube__/graphics/battery-mk2-equipment-technology.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-battery-mk2-equipment"},
@@ -772,7 +772,7 @@ data:extend({
     {
       {type = "unlock-recipe", recipe = "cube-centrifuge"},
       {type = "unlock-recipe", recipe = "cube-uranium-processing"},
-      -- {type = "unlock-recipe", recipe = "uranium-fuel-cell"},
+      {type = "unlock-recipe", recipe = "cube-uranium-fuel-cell"},
     },
     prerequisites = {
       "cube-electric-mining-drill-mk2",
@@ -797,20 +797,6 @@ data:extend({
     prerequisites = {"cube-uranium-processing"},
     unit = tech_cost_unit("2", 240),
     order = "2-7-1",
-  },
-  {
-    type = "technology",
-    name = "cube-kovarex-enrichment-process",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/kovarex-enrichment-process.png",
-    effects =
-    {
-      -- {type = "unlock-recipe", recipe = "kovarex-enrichment-process"},
-      -- {type = "unlock-recipe", recipe = "nuclear-fuel"},
-    },
-    prerequisites = {"cube-uranium-processing"},
-    unit = tech_cost_unit("2", 300),
-    order = "2-7-2",
   },
   {
     type = "technology",

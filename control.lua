@@ -8,8 +8,8 @@ end
 require("__Ultracube__/scripts/cube_fx")
 require("__Ultracube__/scripts/cube_management")
 require("__Ultracube__/scripts/entity_cache")
-require("__Ultracube__/scripts/multi_furnace")
 require("__Ultracube__/scripts/tech_unlock")
+require("__Ultracube__/scripts/transition")
 
 local function on_picker_dolly_moved(e)
   remove_entity_cache(e.moved_entity, nil, e.start_pos)
@@ -194,5 +194,5 @@ script.on_event(
 script.on_event(defines.events.on_tick,
   function(e)
     cube_fx_tick(e.tick)
-    multi_furnace_tick(e.tick)
+    transition_tick(e.tick)
   end)

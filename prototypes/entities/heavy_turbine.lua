@@ -24,7 +24,7 @@ data:extend({
     alert_icon_shift = util.by_pixel(0, -12),
     effectivity = 1,
     fluid_usage_per_tick = 1,
-    burns_fluid = true,
+    burns_fluid = false,
     maximum_temperature = 1000,
     fast_replaceable_group = "steam-engine",
     collision_box = {{-1.25, -2.35}, {1.25, 2.35}},
@@ -42,8 +42,9 @@ data:extend({
         { type = "input-output", position = {0, -3} }
       },
       production_type = "input-output",
-      filter = "cube-void-wind",
+      minimum_temperature = 100.0,
     },
+    max_power_output = "6MW",
     energy_source =
     {
       type = "electric",
