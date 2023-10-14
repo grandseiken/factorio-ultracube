@@ -14,22 +14,20 @@ require("prototypes.scripts.autoplace")
 -- - and possibly slightly increase base pipe capacity
 -- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
 -- - particularly important w.r.t any hope of productivity modules working in cubethings
--- module graphics/tech graphics
 -- resplendent plate tech graphics, phantom handling tech graphics, seance tech graphic
 
 -- RELEASE BLOCKERS
 -------------------
 -- Finish modules
--- Uranium power
 -- Endgame antimatter power
 -- Teleporter
--- Phantom cubesearch - make sure fps doesn't bug out during cube split
--- - need an emergency way to retrieve all phantoms? unless search works
+-- Fix deep core ore generation
 -- Quantum decoder + unobtainium + science 6
 -- Cube destruction/rebuild + forbidden + science 7
 -- Constant-rate flexible thing
 -- Late-game raw material swapping of some kind
 -- World events? (ghost/forest/daylight)
+-- Legendary iron plate
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
@@ -100,8 +98,6 @@ require("prototypes.scripts.autoplace")
 -- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
 -- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
--- World events
--- Legendary iron plate
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")
