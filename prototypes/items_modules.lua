@@ -42,6 +42,7 @@ local productivity_module_limitation = {
   "cube-deep-crystal",
   "cube-uranium-processing",
   "cube-kovarex-enrichment-process",
+  "cube-qubit",
 }
 
 data:extend({

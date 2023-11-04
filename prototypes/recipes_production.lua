@@ -355,4 +355,24 @@ data:extend({
     results = {{"heat-exchanger", 1}},
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-particle-phase-aligner",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 20},
+    },
+    energy_required = 8,
+    results = {{"cube-particle-phase-aligner", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-quantum-decoder",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 60},
+    },
+    energy_required = 20,
+    results = {{"cube-quantum-decoder", 1}},
+    enabled = false,
+  },
 })

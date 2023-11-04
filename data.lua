@@ -21,11 +21,11 @@ require("prototypes.scripts.autoplace")
 -- Finish modules
 -- Endgame antimatter power
 -- Teleporter
--- Fix deep core ore generation
--- Quantum decoder + unobtainium + science 6
+-- Fix deep core ore generation (?)
+-- Constant-rate flexible thing (from deep ore science)
+-- Quantum decoder (from ghost science) + unobtainium (?) + science 6
 -- Cube destruction/rebuild + forbidden + science 7
--- Constant-rate flexible thing
--- Late-game raw material swapping of some kind
+-- Late-game raw material swapping of some kind (?)
 -- World events? (ghost/forest/daylight)
 -- Legendary iron plate
 
@@ -66,10 +66,13 @@ require("prototypes.scripts.autoplace")
 -- All new things from now on should be interesting somehow, not just slap shit together
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
 -- Module recipes (lvl3)
+-- More uses for ghost/deep crystal (in teleportation fuel at least?)
 -- power armor v2 (??? - haunted furnace?)
 
 -- Random thoughts.
 -- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
+-- - maybe: 1 can be used as fuel, one can be used as something else?
+-- - Or 1 fuel-only; 32 phantoms?
 -- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
 -- - how about this: deep crushing has tiny% chance to produce diamond or something
@@ -156,6 +159,8 @@ require("prototypes.entities.inserters")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
 require("prototypes.entities.nuclear_reactor")
+require("prototypes.entities.particle_phase_aligner")
+require("prototypes.entities.quantum_decoder")
 require("prototypes.entities.recovery_bay")
 require("prototypes.entities.remnants")
 require("prototypes.entities.roboport")

@@ -66,6 +66,16 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "cube-particle-phase-aligner",
+    order = "g",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-quantum-decoder",
+    order = "h",
+  },
+  {
+    type = "recipe-category",
     name = "cube-stygian-energy-lab",
     order = "y",
   },

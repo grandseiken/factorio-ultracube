@@ -30,28 +30,25 @@ data:extend({
     collision_box = {{-1.25, -2.35}, {1.25, 2.35}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    fluid_box =
-    {
+    fluid_box = {
       base_area = 1,
       height = 2,
       base_level = -1,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        { type = "input-output", position = {0, 3} },
-        { type = "input-output", position = {0, -3} }
+        {type = "input-output", position = {0, 3}},
+        {type = "input-output", position = {0, -3}}
       },
       production_type = "input-output",
       minimum_temperature = 100.0,
     },
     max_power_output = "6MW",
-    energy_source =
-    {
+    energy_source = {
       type = "electric",
       usage_priority = "secondary-output"
     },
-    horizontal_animation =
-    {
+    horizontal_animation = {
       layers =
       {
         {
@@ -100,10 +97,8 @@ data:extend({
         }
       }
     },
-    vertical_animation =
-    {
-    layers =
-    {
+    vertical_animation = {
+      layers = {
         {
           filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
           width = 108,
@@ -150,8 +145,7 @@ data:extend({
         }
       }
     },
-    smoke =
-    {
+    smoke = {
       {
         name = "cube-void-wind-smoke",
         north_position = {0.0, -1.0},
@@ -167,8 +161,7 @@ data:extend({
     close_sound = sounds.machine_close,
     working_sound =
     {
-      sound =
-      {
+      sound = {
         filename = "__base__/sound/steam-turbine.ogg",
         volume = 0.67
       },
@@ -180,10 +173,8 @@ data:extend({
     },
     min_perceived_performance = 0.25,
     performance_to_sound_speedup = 0.5,
-    water_reflection =
-    {
-      pictures =
-      {
+    water_reflection = {
+      pictures = {
         filename = "__base__/graphics/entity/steam-turbine/steam-turbine-reflection.png",
         priority = "extra-high",
         width = 40,
