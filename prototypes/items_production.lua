@@ -229,7 +229,7 @@ data:extend({
     subgroup = "cube-advanced-power",
     order = "f[nuclear-energy]-a[reactor]",
     place_result = "cube-nuclear-reactor",
-    stack_size = 10,
+    stack_size = 5,
   },
   {
     type = "item",
@@ -239,7 +239,7 @@ data:extend({
     subgroup = "cube-advanced-machines",
     order = "a[aligner]",
     place_result = "cube-particle-phase-aligner",
-    stack_size = 20,
+    stack_size = 10,
   },
   {
     type = "item",
@@ -249,6 +249,17 @@ data:extend({
     subgroup = "cube-advanced-machines",
     order = "b[decoder]",
     place_result = "cube-quantum-decoder",
-    stack_size = 10,
+    stack_size = 5,
+  },
+  {
+    type = "item",
+    name = "cube-experimental-teleporter",
+    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-logistic-machines",
+    order = "3[teleporter]",
+    place_result = "cube-experimental-teleporter",
+    stack_size = 5,
   },
 })

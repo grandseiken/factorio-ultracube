@@ -360,6 +360,9 @@ data:extend({
     name = "cube-particle-phase-aligner",
     ingredients = {
       {"cube-sophisticated-matter-unit", 20},
+      {"cube-glass", 10},
+      {"cube-ghost-wire", 10},
+      {"cube-spectral-processor", 10},
     },
     energy_required = 8,
     results = {{"cube-particle-phase-aligner", 1}},
@@ -370,9 +373,26 @@ data:extend({
     name = "cube-quantum-decoder",
     ingredients = {
       {"cube-sophisticated-matter-unit", 60},
+      {"cube-ghost-crystal", 10},
+      {"cube-glass", 20},
+      {"cube-spectral-processor", 80},
     },
     energy_required = 20,
     results = {{"cube-quantum-decoder", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-experimental-teleporter",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 60},
+      {"cube-arcane-drive", 6},
+      {"cube-spectral-processor", 20},
+      {"cube-ghost-wire", 80},
+      {"cube-quantum-research-data", 40},
+    },
+    energy_required = 30,
+    results = {{"cube-experimental-teleporter", 1}},
     enabled = false,
   },
 })

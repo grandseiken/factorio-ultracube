@@ -78,9 +78,14 @@ data:extend({
     name = "cube-experimental-teleporter",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/planetary-teleporter.png",
-    -- TODO: should maybe be in tech level 6, or near it.
-    effects = {},
-    prerequisites = {"cube-arcane-drive"},
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-experimental-teleporter"},
+      {type = "unlock-recipe", recipe = "cube-teleportation-control-module"},
+    },
+    prerequisites = {
+      "cube-arcane-drive",
+      "cube-quantum-decoder",
+    },
     unit = tech_cost_unit("5", 420),
     order = "5-2-0",
   },

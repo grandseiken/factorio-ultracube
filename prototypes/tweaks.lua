@@ -82,7 +82,9 @@ data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 
 data.raw.item["uranium-fuel-cell"].stack_size = 10
 data.raw.item["uranium-fuel-cell"].fuel_value = "6GJ"
+data.raw.item["uranium-fuel-cell"].subgroup = "cube-uranium"
 data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
+data.raw.item["used-up-uranium-fuel-cell"].subgroup = "cube-uranium"
 
 data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/graphics/battery-mk2-equipment.png"
 data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"

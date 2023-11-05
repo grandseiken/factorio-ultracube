@@ -121,6 +121,18 @@ data:extend({
     stack_size = 100,
     durability = 1,
   },
+
+  {
+    type = "item",
+    name = "cube-quantum-research-data",
+    icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-experimental",
+    order = "z[quantum-research-data]",
+    stack_size = 100,
+  },
+
   {
     type = "tool",
     name = "cube-unobtainium",
