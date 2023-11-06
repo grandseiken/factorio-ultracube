@@ -2,6 +2,15 @@
 
 A work-in-progress overhaul mod for Factorio.
 
+Features include:
+* Many unique logistic challenges.
+* Assorted devious puzzles.
+* 200+ new recipes.
+* Five tiers of science, with two more planned.
+* A unique endgame goal (planned).
+
+## Overview
+
 ![Thumbnail](thumbnail.png)
 
 This mod is a bit more difficult than vanilla Factorio, but in a way that should feel fairly unique.
@@ -16,7 +25,7 @@ There aren't huge numbers of intermediate products or incredibly involved recipe
 
 The technology tree has been rebuilt from scratch. Some production chains share similarities with vanilla equivalents, but there's usually some kind of twist. Many traditional staples are totally gone.
 
-The aim is to have (roughly) comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges. It currently features five levels of science and an assortment of devious puzzles, with more content on the way.
+The aim is to have (roughly) comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
 
 However, it probably isn't for everyone.
 
@@ -24,17 +33,17 @@ However, it probably isn't for everyone.
 
 * You're open to a fundamentally different take on the Factorio experience.
 * You enjoy solving automation and logistical puzzles, analyzing and improving on complex setups which probably won't be perfect the first time.
-* You've ever wished for a more dynamic factory, where different sections activate at different times, and not every belt tends towards either completely empty or completely backed-up.
-* You're looking for an excuse to experiment with Factorio's core mechanics in unusual ways.
+* You've interested in a more dynamic factory, with different sections turning on at different times, and not every belt tends towards either completely empty or completely backed-up.
+* You'd like an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
 
 ## You might not like this mod if:
 
 * You're looking for a "vanilla plus" experience.
 * You require compatibility with other large/overhaul mods.
-* You can't live without megabasing. It's not really a thing at the moment, and seems fairly incompatible with the core conceit of this mod.
-* You're not prepared to experiment at least a little bit with combinators and circuit conditions. While it might prove foolish to claim their use is mandatory (the factorio community is an endless source of novel and unexpected solutions), they're certainly the most obvious answer to some of the problems you'll encounter.
-* The idea of being unable to calculate exact throughput numbers for each production chain sounds horrifying.
+* You can't live without megabasing. It's not really a thing here yet, and it seems tricky to make it coexist with the core conceit.
+* You're not ready to experiment at least a little bit with combinators and circuit conditions. While it might prove unwise to say they are mandatory (Factorio players are great at coming up with unexpected solutions), they're definitely the most obvious answer to some of the problems you'll encounter.
+* The idea of being unable to calculate exact throughput numbers for production chains sounds horrifying.
 
 # Screenshots
 

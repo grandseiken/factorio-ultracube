@@ -19,11 +19,11 @@ require("prototypes.scripts.autoplace")
 -- RELEASE BLOCKERS
 -------------------
 -- Finish modules
+-- Quantum decoder (from ghost science) + unobtainium (? maybe involve 234?) + science 6
 -- Endgame antimatter power
--- Teleporter
+-- Teleporter (how do we do it with entities?)
 -- Fix deep core ore generation (?)
 -- Constant-rate flexible thing (from deep ore science)
--- Quantum decoder (from ghost science) + unobtainium (?) + science 6
 -- Cube destruction/rebuild + forbidden + science 7
 -- Late-game raw material swapping of some kind (?)
 -- World events? (ghost/forest/daylight)
@@ -124,6 +124,7 @@ require("prototypes.recipes_intermediates")
 require("prototypes.recipes_logistics")
 require("prototypes.recipes_modules")
 require("prototypes.recipes_production")
+require("prototypes.recipes_quantum")
 require("prototypes.recipes_resources")
 require("prototypes.recipes_science")
 require("prototypes.recipes_synthesis")
