@@ -1,5 +1,6 @@
 require("__Ultracube__/scripts/lib")
 require("__Ultracube__/scripts/cube_management")
+local transition_table = require("__Ultracube__/scripts/transition_table")
 
 entity_cache_chunk_size = 8
 local cube_defines = cube_defines
@@ -79,17 +80,7 @@ entity_types = {
     "cube-nuclear-reactor",
     "cube-nuclear-reactor-online",
   }),
-  multi_furnace = make_set({
-    "cube-mechanical-network-and-gate",
-    "cube-mechanical-network-and-gate-0",
-    "cube-mechanical-network-and-gate-1",
-    "cube-mechanical-network-or-gate",
-    "cube-mechanical-network-or-gate-0",
-    "cube-mechanical-network-or-gate-1",
-    "cube-mechanical-network-xor-gate",
-    "cube-mechanical-network-xor-gate-0",
-    "cube-mechanical-network-xor-gate-1",
-  }),
+  multi_furnace = transition_table,
 }
 
 local transport_line_entity_types = entity_types.transport_line

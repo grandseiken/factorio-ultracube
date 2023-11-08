@@ -1,26 +1,4 @@
-local transition_table = {
-  ["cube-mechanical-network-and-gate"] = {
-    ["cube-mechanical-network-bit-0"] = "cube-mechanical-network-and-gate-0",
-    ["cube-mechanical-network-bit-1"] = "cube-mechanical-network-and-gate-1",
-  },
-  ["cube-mechanical-network-or-gate"] = {
-    ["cube-mechanical-network-bit-0"] = "cube-mechanical-network-or-gate-0",
-    ["cube-mechanical-network-bit-1"] = "cube-mechanical-network-or-gate-1",
-  },
-  ["cube-mechanical-network-xor-gate"] = {
-    ["cube-mechanical-network-bit-0"] = "cube-mechanical-network-xor-gate-0",
-    ["cube-mechanical-network-bit-1"] = "cube-mechanical-network-xor-gate-1",
-  },
-}
-
-local reset_table = {
-  ["cube-mechanical-network-and-gate-0"] = "cube-mechanical-network-and-gate",
-  ["cube-mechanical-network-and-gate-1"] = "cube-mechanical-network-and-gate",
-  ["cube-mechanical-network-or-gate-0"] = "cube-mechanical-network-or-gate",
-  ["cube-mechanical-network-or-gate-1"] = "cube-mechanical-network-or-gate",
-  ["cube-mechanical-network-xor-gate-0"] = "cube-mechanical-network-xor-gate",
-  ["cube-mechanical-network-xor-gate-1"] = "cube-mechanical-network-xor-gate",
-}
+local transition_table = require("__Ultracube__/scripts/transition_table")
 
 local function fast_replace(e, name, spill)
   remove_entity_cache(e)
@@ -56,34 +34,54 @@ function transition_tick(tick)
   local new_entities = {}
   local cache = get_entity_cache()
   for _, e in pairs(cache.multi_furnaces) do
-    local name = e.name
+    local table = transition_table[e.name]
+    if not table then goto continue end
+
+    local current_recipe = e.get_recipe()
+    local previous_recipe = e.previous_recipe
+    if current_recipe then current_recipe = current_recipe.name end
+    if previous_recipe then previous_recipe = previous_recipe.name end
+
     local transition = nil
-    local reset_target = reset_table[name]
-    if reset_target then
-      if e.products_finished > 0 then
-        transition = reset_target
-      end
-    else
-      local transition_items = transition_table[name]
-      local inventory = e.get_inventory(defines.inventory.furnace_source)
-      if transition_items and inventory then
-        for item, count in pairs(inventory.get_contents()) do
-          local result = transition_items[item]
-          if count > 0 and result then
-            transition = result
-            inventory.clear()
-            break
-          end
+    local transitions = nil
+    for _, entry in pairs(table) do
+      local type = entry.type
+      local recipe = entry.recipe
+      -- TODO: previous_recipe is set only when not crafting. Need to store data till next
+      -- frame and swap then.
+      if type == "construction" or
+          (type == "immediate" and
+          ((not recipe and current_recipe) or (recipe and recipe == current_recipe))) or
+          (type == "completion" and e.products_finished > 0 and
+          (not recipe or (recipe and recipe == previous_recipe))) then
+        transition = entry.transition
+        transitions = entry.transitions
+        if transition or transitions then
+          break
         end
       end
     end
 
+    if transitions then
+      transition = transitions[math.random(#transitions)]
+    end
     if transition then
+      local ingredients = {}
+      local recipe = e.get_recipe()
+      if recipe then ingredients = recipe.ingredients end
       local new_entity = fast_replace(e, transition, false)
       if new_entity then
         new_entities[#new_entities + 1] = new_entity
+        for _, v in ipairs(ingredients) do
+          if ingredients.type == "item" then
+            new_entity.insert({name = v.name, count = v.amount})
+          elseif ingredients.type == "fluid" then
+            new_entity.insert_fluid(v)
+          end
+        end
       end
     end
+    ::continue::
   end
 
   for _, e in pairs(cache.reactors) do
