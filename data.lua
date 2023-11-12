@@ -20,6 +20,8 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- Finish modules
 -- Quantum decoder (from ghost science) + unobtainium (? maybe involve 234?) + science 6
+-- - Quantum decoder should be a collisionless dummy entity with other spawned on top to
+-- - make undo etc work properly.
 -- Endgame antimatter power
 -- Teleporter (how do we do it with entities?)
 -- Fix deep core ore generation (?)

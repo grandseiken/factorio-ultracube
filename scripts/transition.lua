@@ -35,32 +35,45 @@ end
 local transition = {}
 
 function transition.tick(tick)
-  local new_entities = {}
+  local state = global.transition_state
+  if not state then
+    global.transition_state = {}
+    state = global.transition_state
+  end
+
   local cache = entity_cache.get()
+  for k, _ in pairs(state) do
+    if not cache.multi_furnaces[k] then
+      state[k] = nil
+    end
+  end
+
+  local new_entities = {}
   for _, e in pairs(cache.multi_furnaces) do
     local table = transition_table[e.name]
     if not table then goto continue end
 
-    local current_recipe = e.get_recipe()
-    local previous_recipe = e.previous_recipe
-    if current_recipe then current_recipe = current_recipe.name end
-    if previous_recipe then previous_recipe = previous_recipe.name end
+    local e_state = state[e.unit_number]
+    local crafts = e.products_finished
+    local recipe = e.get_recipe()
+    if recipe then recipe = recipe.name end
 
     local transition = nil
     local transitions = nil
+    local type = nil
     for _, entry in pairs(table) do
-      local type = entry.type
-      local recipe = entry.recipe
-      -- TODO: previous_recipe is set only when not crafting. Need to store data till next
-      -- frame and swap then.
+      type = entry.type
+      local transition_recipe = entry.recipe
+      -- TODO: rewrite all this to just store state in lua and insert products manually into the output.
       if type == "construction" or
-          (type == "immediate" and
-          ((not recipe and current_recipe) or (recipe and recipe == current_recipe))) or
-          (type == "completion" and e.products_finished > 0 and
-          (not recipe or (recipe and recipe == previous_recipe))) then
+          (type == "immediate" and e.crafting_progress > 0.5 and
+          ((not transition_recipe and recipe) or (transition_recipe and recipe == transition_recipe))) or
+          (type == "completion" and e_state and crafts > e_state.crafts and
+          (not transition_recipe or (transition_recipe and e_state.recipe == transition_recipe))) then
         transition = entry.transition
         transitions = entry.transitions
         if transition or transitions then
+          state[e.unit_number] = nil
           break
         end
       end
@@ -70,20 +83,23 @@ function transition.tick(tick)
       transition = transitions[math.random(#transitions)]
     end
     if transition then
+      state[e.unit_number] = nil
       local ingredients = {}
       local recipe = e.get_recipe()
-      if recipe then ingredients = recipe.ingredients end
+      if recipe and type == "completion" then ingredients = recipe.ingredients end
       local new_entity = fast_replace(e, transition, false)
       if new_entity then
         new_entities[#new_entities + 1] = new_entity
         for _, v in ipairs(ingredients) do
-          if ingredients.type == "item" then
-            new_entity.insert({name = v.name, count = v.amount})
-          elseif ingredients.type == "fluid" then
+          if ingredients.type == "fluid" then
             new_entity.insert_fluid(v)
+          else
+            new_entity.insert({name = v.name, count = v.amount})
           end
         end
       end
+    else
+      state[e.unit_number] = {recipe = recipe, crafts = crafts}
     end
     ::continue::
   end

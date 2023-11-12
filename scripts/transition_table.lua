@@ -83,13 +83,13 @@ end
 local function base_transition_entry(base_name, i, j, k)
   if i == k or j == k then
     return {
-      type = "immediate",
+      type = "completion",
       recipe = "cube-qubit-step-" .. k,
       transition = base_name .. "-" .. k,
     }
   else
     return {
-      type = "immediate",
+      type = "completion",
       recipe = "cube-qubit-step-" .. k,
       transition = base_name .. "-null",
     }
