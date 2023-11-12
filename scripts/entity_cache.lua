@@ -1,13 +1,15 @@
 require("__Ultracube__/scripts/lib")
-require("__Ultracube__/scripts/cube_management")
+local cube_management = require("__Ultracube__/scripts/cube_management")
 local transition_table = require("__Ultracube__/scripts/transition_table")
 
-entity_cache_chunk_size = 8
-local cube_defines = cube_defines
-local entity_cache = nil
-local chunk_size = entity_cache_chunk_size
+local chunk_size = 8
+local cache = nil
 
-function refresh_entity_cache()
+local entity_cache = {
+  chunk_size = chunk_size,
+}
+
+function entity_cache.refresh()
   global.entity_cache = {
     chunk_map = {},
     transport_lines = {},
@@ -19,22 +21,22 @@ function refresh_entity_cache()
     reactors = {},
     multi_furnaces = {},
   }
-  entity_cache = global.entity_cache
+  cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
     if surface and surface.valid then
       for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
-        add_entity_cache(entity)
+        entity_cache.add(entity)
       end
     end
   end
 end
 
-function entity_cache_on_load()
-  entity_cache = global.entity_cache
+function entity_cache.on_load()
+  cache = global.entity_cache
 end
 
-function get_entity_cache()
-  return entity_cache
+function entity_cache.get()
+  return cache
 end
 
 entity_types = {
@@ -91,8 +93,8 @@ local vehicle_entity_types = entity_types.vehicle
 local reactor_entities = entity_types.reactor
 local multi_furnace_entities = entity_types.multi_furnace
 
-function is_cube_crafter(entity)
-  local categories = cube_recipe_categories()
+function entity_cache.is_cube_crafter(entity)
+  local categories = cube_management.recipe_categories()
   if cube_crafter_entity_types[entity.type] and entity.prototype.crafting_categories then
     for category, _ in pairs(entity.prototype.crafting_categories) do
       if categories[category] then
@@ -103,15 +105,15 @@ function is_cube_crafter(entity)
   return false
 end
 
-function is_cube_burner(entity)
+function entity_cache.is_cube_burner(entity)
   return cube_burner_entity_types[entity.type] and entity.prototype.burner_prototype and
          entity.prototype.burner_prototype.burnt_inventory_size > 0
 end
 
-local is_cube_crafter = is_cube_crafter
-local is_cube_burner = is_cube_burner
+local is_cube_crafter = entity_cache.is_cube_crafter
+local is_cube_burner = entity_cache.is_cube_burner
 
-local function add_entity_cache_internal(entity, cache, is_global)
+local function add_internal(entity, cache, is_global)
   local entity_type = entity.type
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
@@ -149,7 +151,7 @@ local function add_entity_cache_internal(entity, cache, is_global)
   return needs_chunk_cache
 end
 
-local function remove_entity_cache_internal(entity, cache, is_global)
+local function remove_internal(entity, cache, is_global)
   local entity_type = entity.type
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
@@ -195,14 +197,14 @@ function get_chunk_index(surface_index, chunk_x, chunk_y)
   return surface_index .. "_" .. chunk_x .. "_" .. chunk_y
 end
 
-function add_entity_cache(entity)
-  if not entity.unit_number or not add_entity_cache_internal(entity, entity_cache, true) then
+function entity_cache.add(entity)
+  if not entity.unit_number or not add_internal(entity, cache, true) then
     return
   end
 
   local chunk_x, chunk_y = get_chunk_position(entity.position)
   local chunk_index = get_chunk_index(entity.surface_index, chunk_x, chunk_y)
-  local chunk_cache = entity_cache.chunk_map[chunk_index]
+  local chunk_cache = cache.chunk_map[chunk_index]
   if not chunk_cache then
     chunk_cache = {
       transport_lines = {},
@@ -211,28 +213,30 @@ function add_entity_cache(entity)
       cube_burners = {},
       inserters = {},
     }
-    entity_cache.chunk_map[chunk_index] = chunk_cache
+    cache.chunk_map[chunk_index] = chunk_cache
   end
-  add_entity_cache_internal(entity, chunk_cache, false)
+  add_internal(entity, chunk_cache, false)
 end
 
-function remove_entity_cache(entity, surface_index, position)
-  if not entity.unit_number or not remove_entity_cache_internal(entity, entity_cache, true) then
+function entity_cache.remove(entity, surface_index, position)
+  if not entity.unit_number or not remove_internal(entity, cache, true) then
     return
   end
 
   local chunk_x, chunk_y = get_chunk_position(position or entity.position)
   local chunk_index = get_chunk_index(surface_index or entity.surface_index, chunk_x, chunk_y)
-  local chunk_cache = entity_cache.chunk_map[chunk_index]
+  local chunk_cache = cache.chunk_map[chunk_index]
   if chunk_cache then
-    remove_entity_cache_internal(entity, chunk_cache, false)
+    remove_internal(entity, chunk_cache, false)
     local next = next
     if next(chunk_cache.transport_lines) == nil and
        next(chunk_cache.inventories) == nil and
        next(chunk_cache.cube_crafters) == nil and
        next(chunk_cache.cube_burners) == nil and
        next(chunk_cache.inserters) == nil then
-      entity_cache.chunk_map[chunk_index] = nil
+        cache.chunk_map[chunk_index] = nil
     end
   end
 end
+
+return entity_cache

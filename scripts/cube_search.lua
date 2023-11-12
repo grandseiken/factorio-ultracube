@@ -1,16 +1,17 @@
 require("__Ultracube__/scripts/lib")
-require("__Ultracube__/scripts/entity_cache")
+local cube_management = require("__Ultracube__/scripts/cube_management")
+local entity_cache = require("__Ultracube__/scripts/entity_cache")
 
-local cube_ultradense = cubes.ultradense
-local cube_dormant = cubes.dormant
-local cube_ultradense_phantom = cubes.ultradense_phantom
-local cube_dormant_phantom = cubes.dormant_phantom
+local cube_ultradense = cube_management.cubes.ultradense
+local cube_dormant = cube_management.cubes.dormant
+local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
+local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 
 local inventory_entity_types = entity_types.inventory
 local vehicle_entity_types = entity_types.vehicle
 
-local is_cube_crafter = is_cube_crafter
-local is_cube_burner = is_cube_burner
+local is_cube_crafter = entity_cache.is_cube_crafter
+local is_cube_burner = entity_cache.is_cube_burner
 
 local inserter_t = "inserter"
 local belt_t = "transport-belt"
@@ -39,7 +40,9 @@ local search_result_weight = {
   [cube_dormant_phantom] = 1,
 }
 
-function refresh_cube_search_data()
+local cube_search = {}
+
+function cube_search.refresh()
   global.cube_search_data = {
     last_tick = nil,
     last_entities = nil,
@@ -50,7 +53,7 @@ function refresh_cube_search_data()
   cube_search_data = global.cube_search_data
 end
 
-function cube_search_data_on_load()
+function cube_search.on_load()
   cube_search_data = global.cube_search_data
 end
 
@@ -172,7 +175,7 @@ local function check_stack(entity, stack)
 end
 
 local function check_burner(entity)
-  if is_entity_burning_fuel(entity, cube_ultradense) then
+  if cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
     if add_result(cube_ultradense, 1, entity) then return true end
   end
   local inventory = entity.get_fuel_inventory()
@@ -208,7 +211,7 @@ local function cube_check_entity(entity)
   if entity_type == character_t then
     local player = entity.player
     if entity.player then
-      if check_ingredients(entity, player_cube_data(player).ingredients) then return true end
+      if check_ingredients(entity, cube_management.player_data(player).ingredients) then return true end
     end
     return false
   end
@@ -233,7 +236,7 @@ local function cube_check_entity(entity)
   end
 
   if is_cube_crafter(entity) then
-    local recipes = cube_recipes()
+    local recipes = cube_management.recipes()
     if entity.is_crafting() then
       local recipe_data = recipes[entity.get_recipe().name]
       if recipe_data and check_ingredients(entity, recipe_data.ingredients) then return true end
@@ -284,7 +287,7 @@ local function cube_search_inventories(cache)
 end
 
 local function cube_search_crafters(cache)
-  local recipes = cube_recipes()
+  local recipes = cube_management.recipes()
   for _, e in pairs(cache.cube_crafters) do
     if e.is_crafting() then
       local recipe_data = recipes[e.get_recipe().name]
@@ -341,7 +344,7 @@ end
 local function cube_search_players()
   for _, player in pairs(game.players) do
     if player.character then
-      local done = check_ingredients(player.character, player_cube_data(player).ingredients)
+      local done = check_ingredients(player.character, cube_management.player_data(player).ingredients)
       result_set.exclude[player.character.unit_number] = true
       if done then return true end
     end
@@ -373,7 +376,7 @@ local function cube_search_ground(surface, area)
 end
 
 local function cube_search_full()
-  local cache = get_entity_cache()
+  local cache = entity_cache.get()
   if cube_search_players() then return true end
   if cube_search_vehicles(cache) then return true end
   if cube_search_inventories(cache) then return true end
@@ -389,7 +392,7 @@ end
 
 local get_chunk_position = get_chunk_position
 local get_chunk_index = get_chunk_index
-local chunk_size = entity_cache_chunk_size
+local chunk_size = entity_cache.chunk_size
 local local_search_offsets = {
   {x = 0, y = 0},
   {x = 1, y = 0},
@@ -449,7 +452,7 @@ local function cube_search_local(last_entities_size, last_entities)
       surface_map[e.surface_index] = surface_entry
     end
   end
-  local cache = get_entity_cache()
+  local cache = entity_cache.get()
   local chunk_map = cache.chunk_map
 
   for i = 1, #local_search_offsets do
@@ -612,7 +615,7 @@ local function cube_search_graph(last_entities_size, last_entities)
   return false
 end
 
-local function fill_cube_search_result(result)
+local function fill_result(result)
   local entity = result.entity
   local entity_type = entity.type
 
@@ -693,7 +696,7 @@ local function fill_cube_search_result(result)
   end
 end
 
-function process_cube_search_results()
+local function process_results()
   local pickups = cube_search_data.pickups
   while cube_search_data.last_entities_capacity < result_set.entries_size do
     local capacity = cube_search_data.last_entities_capacity + 1
@@ -703,7 +706,7 @@ function process_cube_search_results()
   for i = 1, result_set.entries_size do
     local result = result_set.entries[i]
     local entity = result.entity
-    fill_cube_search_result(result)
+    fill_result(result)
     local e = cube_search_data.last_entities[i]
     e.entity = entity
     e.position = entity.position
@@ -732,7 +735,7 @@ function process_cube_search_results()
   cube_search_data.last_entities_size = result_set.entries_size
 end
 
-function cube_search_hint_entity(entity)
+function cube_search.hint_entity(entity)
   if not cube_search_data.last_entities then
     cube_search_data.last_entities = {}
     cube_search_data.last_entities_size = 0
@@ -751,23 +754,23 @@ function cube_search_hint_entity(entity)
   cube_search_data.last_entities_size = size
 end
 
-function remove_entity_search(entity)
+function cube_search.remove_entity(entity)
   local pickups = cube_search_data.pickups
   if pickups then
     pickups[entity.unit_number] = nil
   end
 end
 
-function cube_search_update(tick)
+function cube_search.update(tick)
   if cube_search_data.last_tick and tick <= cube_search_data.last_tick then
     return result_set.entries_size, result_set.entries
   end
   for _, player in pairs(game.players) do
     if player.opened_gui_type == defines.gui_type.entity and player.opened and player.opened.unit_number then
-      cube_search_hint_entity(player.opened)
+      cube_search.hint_entity(player.opened)
     end
     if player.selected and player.selected.unit_number then
-      cube_search_hint_entity(player.selected)
+      cube_search.hint_entity(player.selected)
     end
   end
   clear_result_set()
@@ -809,7 +812,7 @@ function cube_search_update(tick)
     done = cube_search_full()
   end
 
-  process_cube_search_results()
+  process_results()
   if done then
     cube_search_data.last_tick = tick
   else
@@ -819,3 +822,5 @@ function cube_search_update(tick)
   end
   return result_set.entries_size, result_set.entries
 end
+
+return cube_search

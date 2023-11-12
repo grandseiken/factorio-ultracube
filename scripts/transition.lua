@@ -1,8 +1,10 @@
 local transition_table = require("__Ultracube__/scripts/transition_table")
+local cube_search = require("__Ultracube__/scripts/cube_search")
+local entity_cache = require("__Ultracube__/scripts/entity_cache")
 
 local function fast_replace(e, name, spill)
-  remove_entity_cache(e)
-  remove_entity_search(e)
+  entity_cache.remove(e)
+  cube_search.remove_entity(e)
   local opened_players = {}
   for k, player in pairs(game.players) do
     if player.opened == e then
@@ -30,9 +32,11 @@ local function fast_replace(e, name, spill)
   return nil
 end
 
-function transition_tick(tick)
+local transition = {}
+
+function transition.tick(tick)
   local new_entities = {}
-  local cache = get_entity_cache()
+  local cache = entity_cache.get()
   for _, e in pairs(cache.multi_furnaces) do
     local table = transition_table[e.name]
     if not table then goto continue end
@@ -96,6 +100,8 @@ function transition_tick(tick)
     end
   end
   for _, e in ipairs(new_entities) do
-    add_entity_cache(e)
+    entity_cache.add(e)
   end
 end
+
+return transition

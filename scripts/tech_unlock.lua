@@ -21,7 +21,9 @@ local function get_unlocks_for_technology(force, technology_name)
   return game.get_filtered_technology_prototypes(filters)
 end
 
-function unlock_technologies(force, technology_name, unlocked)
+local tech_unlock = {}
+
+function tech_unlock.trigger(force, technology_name, unlocked)
   if not unlock_trigger_technologies[technology_name] then
     return
   end
@@ -40,10 +42,11 @@ function unlock_technologies(force, technology_name, unlocked)
   end
 end
 
-function sync_unlock_technologies(force)
+function tech_unlock.sync(force)
   for name, _ in pairs(unlock_trigger_technologies) do
     local unlocked = not force.technologies[name] or force.technologies[name].researched
-    unlock_technologies(force, name, unlocked)
+    tech_unlock.trigger(force, name, unlocked)
   end
 end
 
+return tech_unlock

@@ -1,10 +1,11 @@
 require("__Ultracube__/scripts/lib")
-require("__Ultracube__/scripts/cube_search")
+local cube_search = require("__Ultracube__/scripts/cube_search")
+local cube_management = require("__Ultracube__/scripts/cube_management")
 
-local cube_ultradense = cubes.ultradense
-local cube_dormant = cubes.dormant
-local cube_ultradense_phantom = cubes.ultradense_phantom
-local cube_dormant_phantom = cubes.dormant_phantom
+local cube_ultradense = cube_management.cubes.ultradense
+local cube_dormant = cube_management.cubes.dormant
+local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
+local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 
 local ultradense_icon = {type = "item", name = cube_ultradense}
 local dormant_icon = {type = "item", name = cube_dormant}
@@ -22,15 +23,16 @@ local cube_fuel_vehicle_entity_types = make_set({
 })
 
 local cube_fx_data = nil
+local cube_fx = {}
 
-function refresh_cube_fx_data()
+function cube_fx.refresh()
   global.cube_fx_data = {
     last_locomotives = {},
   }
   cube_fx_data = global.cube_fx_data
 end
 
-function cube_fx_data_on_load()
+function cube_fx.on_load()
   cube_fx_data = global.cube_fx_data
 end
 
@@ -45,7 +47,7 @@ local function cube_alert(size, results)
 
     if player.controller_type == defines.controllers.character and
        player.mod_settings["cube-show-cube-alerts"].value and
-       player_cube_data(player).total_weight == 0 then
+       cube_management.player_data(player).total_weight == 0 then
       for i = 1, size do
         local result = results[i]
         custom_alert.name = result.item
@@ -66,12 +68,12 @@ local ultradense_projectile = {
 local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.item == cubes.dormant or result.item == cubes.dormant_phantom then
+    if result.item == cube_dormant or result.item == cube_dormant_phantom then
       dormant_explosion.source = result.entity
       dormant_explosion.position = result.position
       dormant_explosion.target = result.position
       result.entity.surface.create_entity(dormant_explosion)
-    elseif result.item == cubes.ultradense_phantom then
+    elseif result.item == cube_ultradense_phantom then
       phantom_explosion.source = result.entity
       phantom_explosion.position = result.position
       phantom_explosion.target = result.position
@@ -102,13 +104,13 @@ local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
     if result.height >= 0 then
-      if result.item == cubes.ultradense then
+      if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity
         spark.position = result.position
         spark.target = result.position
         result.entity.surface.create_entity(spark)
-      elseif result.item == cubes.ultradense_phantom then
+      elseif result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
         puff.source = result.entity
         puff.position = result.position
@@ -214,7 +216,7 @@ local function cube_vehicle_mod(size, results)
   return boomed
 end
 
-function cube_fx_tick(tick)
+function cube_fx.tick(tick)
   local update_tick = tick % 6 == 0
   local alert_tick = update_tick and tick % 24 == 12
   local spark_tick = update_tick and tick % 240 >= 120 and tick % 240 < 234
@@ -222,7 +224,7 @@ function cube_fx_tick(tick)
   if not update_tick then
     return
   end
-  local size, results = cube_search_update(tick)
+  local size, results = cube_search.update(tick)
   if alert_tick then
     cube_alert(size, results)
   end
@@ -236,3 +238,5 @@ function cube_fx_tick(tick)
     cube_boom(size, results)
   end
 end
+
+return cube_fx

@@ -1,6 +1,6 @@
 require("__Ultracube__/scripts/lib")
 
-cube_defines = {
+local cube_defines = {
   ultradense = "cube-ultradense-utility-cube",
   dormant = "cube-dormant-utility-cube",
   ultradense_phantom = "cube-phantom-ultradense-constituent",
@@ -22,6 +22,12 @@ cube_info = make_set({
   cubes.dormant_phantom,
 })
 
+local cube_management = {
+  cube_defines = cube_defines,
+  cubes = cubes,
+  cube_info = cube_info,
+}
+
 local cubes = cubes
 local cube_info = cube_info
 local cube_weight = {
@@ -32,7 +38,7 @@ local cube_weight = {
 }
 
 local cube_recipes_cache = nil
-function cube_recipes()
+function cube_management.recipes()
   if not cube_recipes_cache then
     cube_recipes_cache = {}
     for name, recipe in pairs(game.recipe_prototypes) do
@@ -57,22 +63,22 @@ function cube_recipes()
 end
 
 local cube_recipe_categories_cache = nil
-function cube_recipe_categories()
+function cube_management.recipe_categories()
   if not cube_recipe_categories_cache then
     cube_recipe_categories_cache = {}
-    for _, data in pairs(cube_recipes()) do
+    for _, data in pairs(cube_management.recipes()) do
       cube_recipe_categories_cache[data.recipe.category] = true
     end
   end
   return cube_recipe_categories_cache
 end
 
-function player_cube_data(player)
+function cube_management.player_data(player)
   local data = {total_weight = 0, ingredients = {}}
   for _, item in pairs(cubes) do
     data.ingredients[item] = 0
   end
-  local recipes = cube_recipes()
+  local recipes = cube_management.recipes()
   if player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
@@ -96,27 +102,27 @@ function player_cube_data(player)
   return data
 end
 
-function update_player_cube_status(player_index)
+function cube_management.update_player(player_index)
   local player = game.get_player(player_index)
   if player.controller_type == defines.controllers.character then
-    player.character_running_speed_modifier = -1.0 + 0.5^player_cube_data(player).total_weight
+    player.character_running_speed_modifier = -1.0 + 0.5^cube_management.player_data(player).total_weight
   end
 end
 
-function is_entity_burning_fuel(entity, fuel_item)
+function cube_management.is_entity_burning_fuel(entity, fuel_item)
   return entity.burner and entity.burner.currently_burning and
          entity.burner.currently_burning.name == fuel_item
 end
 
-function return_cube_fuel(entity, inventory)
-  if is_entity_burning_fuel(entity, cubes.ultradense) then
+function cube_management.return_cube_fuel(entity, inventory)
+  if cube_management.is_entity_burning_fuel(entity, cubes.ultradense) then
     inventory.insert(cubes.dormant)
   end
 end
 
-function drop_cubes_before_leaving(player_index)
+function cube_management.drop_before_leaving(player_index)
   local player = game.get_player(player_index)
-  local recipes = cube_recipes()
+  local recipes = cube_management.recipes()
   if player.crafting_queue then
     local keep_going = true
     while keep_going do
@@ -143,3 +149,5 @@ function drop_cubes_before_leaving(player_index)
     end
   end
 end
+
+return cube_management

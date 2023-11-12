@@ -5,22 +5,23 @@ do
   end
 end
 
-require("__Ultracube__/scripts/cube_fx")
-require("__Ultracube__/scripts/cube_management")
-require("__Ultracube__/scripts/entity_cache")
-require("__Ultracube__/scripts/tech_unlock")
-require("__Ultracube__/scripts/transition")
+local cube_fx = require("__Ultracube__/scripts/cube_fx")
+local cube_search = require("__Ultracube__/scripts/cube_search")
+local cube_management = require("__Ultracube__/scripts/cube_management")
+local entity_cache = require("__Ultracube__/scripts/entity_cache")
+local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
+local transition = require("__Ultracube__/scripts/transition")
 
 local function on_picker_dolly_moved(e)
-  remove_entity_cache(e.moved_entity, nil, e.start_pos)
-  remove_entity_search(e.entity)
-  add_entity_cache(e.moved_entity)
+  entity_cache.add(e.moved_entity, nil, e.start_pos)
+  cube_search.remove_entity(e.entity)
+  entity_cache.add(e.moved_entity)
 end
 
 local function on_load()
-  entity_cache_on_load()
-  cube_fx_data_on_load()
-  cube_search_data_on_load()
+  entity_cache.on_load()
+  cube_fx.on_load()
+  cube_search.on_load()
 
   if remote.interfaces["PickerDollies"] and remote.interfaces["PickerDollies"]["dolly_moved_entity_id"] then
     script.on_event(remote.call("PickerDollies", "dolly_moved_entity_id"), on_picker_dolly_moved)
@@ -39,11 +40,11 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
-  refresh_entity_cache()
-  refresh_cube_fx_data()
-  refresh_cube_search_data()
+  entity_cache.refresh()
+  cube_fx.refresh()
+  cube_search.refresh()
   for _, force in pairs(game.forces) do
-    sync_unlock_technologies(force)
+    tech_unlock.sync(force)
   end
   on_load()
 end
@@ -52,7 +53,7 @@ local function on_player_created(e)
   local player = game.get_player(e.player_index)
   if not global.cube_given then
     global.cube_given = true
-    player.insert(cubes.ultradense)
+    player.insert(cube_management.cubes.ultradense)
   end
 
   local inventory = player.get_inventory(defines.inventory.character_armor)
@@ -87,7 +88,7 @@ script.on_event(
     defines.events.on_pre_player_crafted_item,
   },
   function(e)
-    update_player_cube_status(e.player_index)
+    cube_management.update_player(e.player_index)
   end)
 
 script.on_event(
@@ -96,8 +97,8 @@ script.on_event(
     defines.events.on_player_fast_transferred,
   },
   function(e)
-    update_player_cube_status(e.player_index)
-    cube_search_hint_entity(e.entity)
+    cube_management.update_player(e.player_index)
+    cube_search.hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -105,7 +106,7 @@ script.on_event(
     defines.events.on_pre_player_left_game,
   },
   function(e)
-    drop_cubes_before_leaving(e.player_index)
+    cube_management.drop_before_leaving(e.player_index)
   end)
 
 -- TODO: does fast replace leave broken entries in cache?
@@ -118,7 +119,7 @@ script.on_event(
     if not e.created_entity.unit_number then
       return
     end
-    add_entity_cache(e.created_entity)
+    entity_cache.add(e.created_entity)
   end)
 
 script.on_event(
@@ -127,9 +128,9 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    return_cube_fuel(e.entity, e.loot)
-    remove_entity_cache(e.entity)
-    remove_entity_search(e.entity)
+    cube_management.return_cube_fuel(e.entity, e.loot)
+    entity_cache.remove(e.entity)
+    cube_search.remove_entity(e.entity)
   end)
 
 script.on_event(
@@ -138,7 +139,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    add_entity_cache(e.entity)
+    entity_cache.add(e.entity)
   end)
 
 script.on_event(
@@ -147,8 +148,8 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    remove_entity_cache(e.entity)
-    remove_entity_search(e.entity)
+    entity_cache.remove(e.entity)
+    cube_search.remove_entity(e.entity)
   end)
 
 script.on_event(
@@ -157,9 +158,9 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    remove_entity_cache(e.entity, e.old_surface_index, e.old_position)
-    remove_entity_search(e.entity)
-    add_entity_cache(e.entity)
+    entity_cache.remove(e.entity, e.old_surface_index, e.old_position)
+    cube_search.remove_entity(e.entity)
+    entity_cache.add(e.entity)
   end)
 
 script.on_event(
@@ -171,9 +172,9 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    return_cube_fuel(e.entity, e.buffer)
-    remove_entity_cache(e.entity)
-    remove_entity_search(e.entity)
+    cube_management.return_cube_fuel(e.entity, e.buffer)
+    entity_cache.remove(e.entity)
+    cube_search.remove_entity(e.entity)
   end)
 
 script.on_event(
@@ -182,17 +183,17 @@ script.on_event(
     defines.events.on_surface_deleted,
   },
   function(e)
-    refresh_entity_cache()
+    entity_cache.refresh()
   end)
 
 script.on_event(
   defines.events.on_research_finished,
   function(e)
-    unlock_technologies(e.research.force, e.research.name, true)
+    tech_unlock.trigger(e.research.force, e.research.name, true)
   end)
 
 script.on_event(defines.events.on_tick,
   function(e)
-    cube_fx_tick(e.tick)
-    transition_tick(e.tick)
+    cube_fx.tick(e.tick)
+    transition.tick(e.tick)
   end)
