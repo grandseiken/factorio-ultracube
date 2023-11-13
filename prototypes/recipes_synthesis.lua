@@ -28,6 +28,7 @@ data:extend({
     allow_decomposition = false,
     allow_intermediates = false,
     allow_as_intermediate = false,
+    always_show_made_in = true,
   },
   {
     type = "recipe",

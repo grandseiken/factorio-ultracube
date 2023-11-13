@@ -19,9 +19,8 @@ require("prototypes.scripts.autoplace")
 -- RELEASE BLOCKERS
 -------------------
 -- Finish modules
--- Quantum decoder (from ghost science) + unobtainium (? maybe involve 234?) + science 6
--- - Quantum decoder should be a collisionless dummy entity with other spawned on top to
--- - make undo etc work properly.
+-- Phantom cube manual reassembly? (unless theres a way to recover already)
+-- Unobtainium (? maybe involve 234?) + science 6
 -- Endgame antimatter power
 -- Teleporter (how do we do it with entities?)
 -- Fix deep core ore generation (?)

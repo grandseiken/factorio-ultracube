@@ -51,7 +51,7 @@ data:extend({
     results = {{"cube-qubit", 1}},
     energy_required = 3.2,
     main_product = "",
-    category = "cube-quantum-decoder",
+    category = "cube-quantum-decoder-dummy",
     subgroup = "cube-qubits-io",
     order = "z[0]",
     enabled = false,
@@ -65,27 +65,29 @@ data:extend({
     results = {{"cube-quantum-research-data", 10}},
     energy_required = 3.2,
     main_product = "",
-    category = "cube-quantum-decoder",
+    category = "cube-quantum-decoder-dummy",
     subgroup = "cube-qubits-io",
     order = "z[0]",
     enabled = false,
   },
+
   {
     type = "recipe-category",
-    name = "cube-qubit-step",
+    name = "cube-quantum-decoder",
+    order = "zz",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-quantum-decoder-dummy",
     order = "zz",
   },
 })
 
-local failure_dummy = data.raw.recipe["cube-qubits-failure-dummy"]
-local success_dummy = data.raw.recipe["cube-qubits-success-dummy"]
+local dummy = data.raw.recipe["cube-qubits-success-dummy"]
 
 for i = 0, 5 do
   local qubit = "cube-qubit-" .. i
   local qubit_next = "cube-qubit-" .. ((1 + i) % 6)
-  local step_recipe = "cube-qubit-step-" .. i
-  local failure_recipe = "cube-qubit-failure-" .. i
-  local success_recipe = "cube-qubit-success-" .. i
   local icon = "__Ultracube__/graphics/qubit-" .. i .. ".png"
 
   data:extend({
@@ -127,56 +129,18 @@ for i = 0, 5 do
     },
 
     {
-      type = "recipe-category",
-      name = failure_recipe,
-      order = "zz",
-    },
-    {
-      type = "recipe-category",
-      name = success_recipe,
-      order = "zz",
-    },
-
-    {
       type = "recipe",
-      name = step_recipe,
+      name = "cube-qubit-consume-" .. i,
       localised_name = {"recipe-name.cube-qubit-recipe-hidden"},
       icon = icon,
       icon_size = 64, icon_mipmaps = 4,
       ingredients = {{qubit, 1}},
-      results = {},
-      energy_required = (47 / 48) * success_dummy.energy_required / 2,
-      category = "cube-qubit-step",
-      subgroup = "cube-qubits",
-      order = "z[" .. i .. "]",
-      enabled = true,
-      hide_from_player_crafting = true,
-    },
-    {
-      type = "recipe",
-      name = failure_recipe,
-      localised_name = {"recipe-name.cube-qubit-recipe-hidden"},
-      icon = icon,
-      icon_size = 64, icon_mipmaps = 4,
-      ingredients = {{qubit, 1}},
-      results = failure_dummy.results,
-      energy_required = (47 / 48) * failure_dummy.energy_required / 2,
-      category = failure_recipe,
-      subgroup = "cube-qubits",
-      order = "z[" .. i .. "]",
-      enabled = true,
-      hide_from_player_crafting = true,
-    },
-    {
-      type = "recipe",
-      name = success_recipe,
-      localised_name = {"recipe-name.cube-qubit-recipe-hidden"},
-      icon = icon,
-      icon_size = 64, icon_mipmaps = 4,
-      ingredients = {{qubit, 1}},
-      results = success_dummy.results,
-      energy_required = (47 / 48) * success_dummy.energy_required / 2,
-      category = success_recipe,
+      results = {
+        {"cube-qubit", 0},
+        {"cube-quantum-research-data", 0},
+      },
+      energy_required = data.raw.recipe["cube-qubits-success-dummy"].energy_required / 2,
+      category = "cube-quantum-decoder",
       subgroup = "cube-qubits",
       order = "z[" .. i .. "]",
       enabled = true,

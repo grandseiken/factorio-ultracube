@@ -32,6 +32,20 @@ local function fast_replace(e, name, spill)
   return nil
 end
 
+local function get_products(entry)
+  if not entry then
+    return nil
+  end
+  if entry.product then
+    return {entry.product}
+  elseif entry.products then
+    return entry.products
+  elseif entry.product_recipe then
+    return game.recipe_prototypes[entry.product_recipe].products
+  end
+  return nil
+end
+
 local transition = {}
 
 function transition.tick(tick)
@@ -48,62 +62,67 @@ function transition.tick(tick)
     end
   end
 
-  local new_entities = {}
   for _, e in pairs(cache.multi_furnaces) do
     local table = transition_table[e.name]
     if not table then goto continue end
 
     local e_state = state[e.unit_number]
+    if not e_state then
+      e_state = {}
+      state[e.unit_number] = e_state
+    end
+    if not e_state.state then
+      if table.initial_state then
+        e_state.state = table.initial_state
+      elseif table.initial_states then
+        e_state.state = table.initial_states[math.random(#table.initial_states)]
+      end
+    end
+
+    table = table.transitions[e_state.state]
+    if not table then goto continue end
     local crafts = e.products_finished
     local recipe = e.get_recipe()
     if recipe then recipe = recipe.name end
 
-    local transition = nil
-    local transitions = nil
-    local type = nil
-    for _, entry in pairs(table) do
-      type = entry.type
-      local transition_recipe = entry.recipe
-      -- TODO: rewrite all this to just store state in lua and insert products manually into the output.
-      if type == "construction" or
-          (type == "immediate" and e.crafting_progress > 0.5 and
-          ((not transition_recipe and recipe) or (transition_recipe and recipe == transition_recipe))) or
-          (type == "completion" and e_state and crafts > e_state.crafts and
-          (not transition_recipe or (transition_recipe and e_state.recipe == transition_recipe))) then
-        transition = entry.transition
-        transitions = entry.transitions
-        if transition or transitions then
-          state[e.unit_number] = nil
-          break
+    local products = nil
+    if e_state.crafts and e_state.recipe and crafts > e_state.crafts then
+      local t = table[e_state.recipe]
+      if t then
+        if t.state then
+          e_state.state = t.state
+        elseif t.states then
+          e_state.state = t.states[math.random(#t.states)]
         end
+        products = get_products(t)
       end
-    end
-
-    if transitions then
-      transition = transitions[math.random(#transitions)]
-    end
-    if transition then
-      state[e.unit_number] = nil
-      local ingredients = {}
-      local recipe = e.get_recipe()
-      if recipe and type == "completion" then ingredients = recipe.ingredients end
-      local new_entity = fast_replace(e, transition, false)
-      if new_entity then
-        new_entities[#new_entities + 1] = new_entity
-        for _, v in ipairs(ingredients) do
-          if ingredients.type == "fluid" then
-            new_entity.insert_fluid(v)
-          else
-            new_entity.insert({name = v.name, count = v.amount})
+    elseif e_state.recipe and e.crafting_progress >= 1 then
+      local potential_products = get_products(table[e_state.recipe])
+      local active = true
+      if potential_products then
+        local inventory = e.get_output_inventory()
+        for _, product in pairs(potential_products) do
+          if not inventory.can_insert({name = product.name, count = product.amount}) then
+            active = false
+            break
           end
         end
       end
-    else
-      state[e.unit_number] = {recipe = recipe, crafts = crafts}
+      e.active = active
+    end
+    e_state.crafts = crafts
+    e_state.recipe = recipe
+
+    if products then
+      local inventory = e.get_output_inventory()
+      for _, product in pairs(products) do
+        inventory.insert({name = product.name, count = product.amount})
+      end
     end
     ::continue::
   end
 
+  local new_entities = {}
   for _, e in pairs(cache.reactors) do
     local new_entity = nil
     if e.name == "cube-nuclear-reactor" and e.temperature > 100 and not e.burner.currently_burning then

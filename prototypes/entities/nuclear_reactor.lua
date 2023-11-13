@@ -71,6 +71,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "cube-nuclear-reactor"},
+    placeable_by = {item = "cube-nuclear-reactor", count = 1},
     fast_replaceable_group = "cube-nuclear-reactor",
     max_health = 500,
     corpse = "nuclear-reactor-remnants",

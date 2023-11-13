@@ -110,11 +110,7 @@ local working_visualisations = {
   },
 }
 
-local function make_quantum_decoder(name, hidden, crafting_categories)
-  local flags = {"placeable-neutral", "placeable-player", "player-creation"}
-  if hidden then
-    flags[#flags+1] = "hidden"
-  end
+local function make_quantum_decoder(name)
   return {
     type = "furnace",
     name = name,
@@ -123,7 +119,7 @@ local function make_quantum_decoder(name, hidden, crafting_categories)
     icon = "__Krastorio2Assets__/icons/entities/quantum-computer.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = flags,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     fast_replaceable_group = "cube-quantum-decoder",
     minable = {mining_time = 0.75, result = "cube-quantum-decoder"},
     damaged_trigger_effect = hit_effects.entity(),
@@ -133,9 +129,9 @@ local function make_quantum_decoder(name, hidden, crafting_categories)
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
     selection_box = {{-2.95, -2.95}, {2.95, 2.95}},
     animation = animation,
-    crafting_categories = crafting_categories,
+    crafting_categories = {name},
     source_inventory_size = 1,
-    result_inventory_size = 1,
+    result_inventory_size = 2,
     crafting_speed = 1,
     energy_source = {
       type = "electric",
@@ -160,35 +156,7 @@ local function make_quantum_decoder(name, hidden, crafting_categories)
   }
 end
 
-data:extend({make_quantum_decoder("cube-quantum-decoder", false, {"cube-quantum-decoder"})})
-
-local function make_success_categories(k)
-  local result = {}
-  for i = 0, 5 do
-    if i == k then
-      result[#result + 1] = "cube-qubit-success-" .. i
-    else
-      result[#result + 1] = "cube-qubit-failure-" .. i
-    end
-  end
-  return result
-end
-local failure_categories = make_success_categories(nil)
-
-for i = 0, 5 do
-  local name = "cube-quantum-decoder-" .. i .. "-" .. i
-  data:extend({
-    make_quantum_decoder(name, true, {"cube-qubit-step"}),
-    make_quantum_decoder(name .. "-null", true, failure_categories),
-    make_quantum_decoder(name .. "-" .. i, true, make_success_categories(i)),
-  })
-  for j = i + 1, 5 do
-    local name = "cube-quantum-decoder-" .. i .. "-" .. j
-    data:extend({
-      make_quantum_decoder(name, true, {"cube-qubit-step"}),
-      make_quantum_decoder(name .. "-null", true, failure_categories),
-      make_quantum_decoder(name .. "-" .. i, true, make_success_categories(j)),
-      make_quantum_decoder(name .. "-" .. j, true, make_success_categories(i)),
-    })
-  end
-end
+data:extend({
+  make_quantum_decoder("cube-quantum-decoder"),
+  make_quantum_decoder("cube-quantum-decoder-dummy"),
+})
