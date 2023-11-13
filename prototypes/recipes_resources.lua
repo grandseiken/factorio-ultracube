@@ -303,7 +303,7 @@ data:extend({
     energy_required = 10,
     category = "centrifuging",
     subgroup = "cube-uranium-processing",
-    order = "c[uranium-processing]",
+    order = "a[uranium-processing]",
     enabled = false,
   },
   {
@@ -345,7 +345,7 @@ data:extend({
     energy_required = 4,
     category = "cube-ultradense-furnace",
     subgroup = "cube-uranium-processing",
-    order = "a[kovarex-reclamation]",
+    order = "c[kovarex-reclamation]",
     allow_decomposition = false,
     enabled = false,
   },

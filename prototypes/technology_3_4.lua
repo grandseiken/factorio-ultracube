@@ -103,6 +103,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-fusion-blender",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Ultracube__/graphics/fusion-blender-technology.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-fusion-blender"},
+    },
+    prerequisites = {
+      "cube-refined-concrete",
+      "cube-phantom-electronics",
+    },
+    unit = tech_cost_unit("3", 300),
+    order = "3-0-5",
+  },
+  {
+    type = "technology",
     name = "cube-quantum-decoder",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/quantum-computer.png",

@@ -357,6 +357,20 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-fusion-blender",
+    ingredients = {
+      {"refined-concrete", 200},
+      {"cube-resplendent-plate", 120},
+      {"cube-advanced-engine", 20},
+      {"cube-advanced-circuit", 20},
+      {"cube-spectralite", 100},
+    },
+    energy_required = 12,
+    results = {{"cube-fusion-blender", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-particle-phase-aligner",
     ingredients = {
       {"cube-sophisticated-matter-unit", 20},

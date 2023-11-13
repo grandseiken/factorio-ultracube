@@ -71,8 +71,13 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-quantum-decoder",
+    name = "cube-fusion-blender",
     order = "h",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-quantum-decoder",
+    order = "i",
   },
   {
     type = "recipe-category",
