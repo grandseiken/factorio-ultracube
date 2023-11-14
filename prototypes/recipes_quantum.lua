@@ -25,10 +25,14 @@ data:extend({
     ingredients = {
       {"cube-sophisticated-matter-unit", 1},
       {"cube-bottled-consciousness", 1},
-      {"cube-spectralite", 2},
-      {type = "fluid", name = "cube-deep-solution", amount = 10},
+      {"cube-spectralite", 1},
+      {type = "fluid", name = "cube-deep-solution", amount = 4},
     },
-    results = {{"cube-qubit", 1}},
+    results = {
+      {"cube-qubit", 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.75},
+    },
+    main_product = "cube-qubit",
     energy_required = 4,
     category = "cube-fabricator",
     enabled = false,

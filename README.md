@@ -50,9 +50,7 @@ However, it probably isn't for everyone.
 ![Early-game spaghetti](screenshots/spaghetti.jpg)
 Relatively early-game spaghetti.
 
-# Frequently asked questions
-
-* **Why am I moving so slowly?** Take a look at the descriptions of the items in your inventory.
+# FAQ
 
 * **Where are the biters?** Currently, there are no military technologies and biters are disabled. This decision might be revisited if it seems like there could be a good place for biters in the mod, but right now the priority is to get the main production mechanics right.
 

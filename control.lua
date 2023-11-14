@@ -12,6 +12,29 @@ local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local transition = require("__Ultracube__/scripts/transition")
 
+local function create_initial_cube(player)
+  local surface = player.surface
+  local chest = nil
+  for _ = 1, 100 do
+    local v = vector_add(player.position, from_polar(16 + 8 * math.random(), 2 * math.pi * math.random()))
+    chest = surface.create_entity {
+      name = "iron-chest",
+      position = v,
+      force = player.force,
+    }
+    if chest then
+      break
+    end
+  end
+  if chest then
+    chest.insert(cubes.ultradense)
+    entity_cache.add(chest)
+    cube_search.hint_entity(chest)
+  else
+    error("Couldn't find suitable location to place starting entities.")
+  end
+end
+
 local function on_picker_dolly_moved(e)
   entity_cache.add(e.moved_entity, nil, e.start_pos)
   cube_search.remove_entity(e.entity)
@@ -32,6 +55,7 @@ local function on_init()
   -- Disable starting things.
   if remote.interfaces.freeplay then
     remote.call("freeplay", "set_disable_crashsite", true)
+    remote.call("freeplay", "set_custom_intro_message", {"cube-msg-intro"})
     remote.call("freeplay", "set_created_items", {
       ["cube-synthesizer"] = 1,
       ["cube-fabricator"] = 1,
@@ -53,7 +77,7 @@ local function on_player_created(e)
   local player = game.get_player(e.player_index)
   if not global.cube_given then
     global.cube_given = true
-    player.insert(cube_management.cubes.ultradense)
+    create_initial_cube(player)
   end
 
   local inventory = player.get_inventory(defines.inventory.character_armor)
@@ -109,7 +133,6 @@ script.on_event(
     cube_management.drop_before_leaving(e.player_index)
   end)
 
--- TODO: does fast replace leave broken entries in cache?
 script.on_event(
   {
     defines.events.on_built_entity,

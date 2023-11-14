@@ -12,20 +12,37 @@ require("prototypes.scripts.autoplace")
 
 -- RELEASE BLOCKERS
 -------------------
--- Finish modules
--- Unobtainium (? maybe involve 234?) + science 6
--- Endgame antimatter power?
--- Potentially ghost furnace fueled by phantom cubes
 -- Teleporter (how do we do it with entities?)
--- Fix deep core ore generation (?)
 -- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
--- Cube destruction/rebuild + forbidden + science 7
+-- Potentially ghost furnace fueled by phantom cubes
+-- Finish modules
+-- Last science
+-- - Cube destruction/rebuild
+-- - In the tranceiver (forbidden ziggurat?)
+-- - Research it (lots of science)
+-- - Unlocks trigger tech: construct forbidden ziggurat
+-- - Unlocks tech (more science): resonance cascade
+-- - Requirements:
+-- - - 1x Cube
+-- - - Quantum research data
+-- - - Ethanol
+-- - - Unobtainium or something from deep tree
+-- - - A lot of power
+-- - Products
+-- - - 1x legendary iron gear?
+-- - - 1000x basic antimatter unit
+-- - - e.g. 4096x ephemeral uncube particle
+-- - antimatter + quantum data + ? -> final science
+-- - antimatter + matter unit -> endgame antimatter power
+-- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient -> 1x cube
+-- - Endgame antimatter power unlocked by final science
+-- Fix deep core ore generation (?)
 -- World events? (ghost/forest/daylight)
--- Legendary iron plate
+-- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- Legendary iron gear made from a bunch of ridiculous stuff or involved in endgame somehow
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
--- reintroduce start cutscene / edit start message
 -- analysis machine that unlocks techs based on finding things in the world
 -- strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
 -- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
