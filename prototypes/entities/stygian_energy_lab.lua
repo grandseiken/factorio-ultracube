@@ -159,7 +159,7 @@ data:extend({
       emissions_per_minute = 20,
       smoke = stygian_smoke(),
     },
-    energy_usage = "10MW",
+    energy_usage = "16MW",
     ingredient_count = 4,
   },
 })

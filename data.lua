@@ -3,30 +3,23 @@ require("prototypes.scripts.autoplace")
 
 -- ANNOYING FIX TODOs:
 ----------------------
--- icon reworks
+-- layered icons look bad when disabled, bake them?
+-- barreling recipes
+-- if machine output buffer on bulk recipes can ever be fixed, we could allow prod modules
+-- tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
 -- - advanced engine tech graphic + name (?)
 -- - emotional synthesis icon + tech graphic
--- - roboport tech graphic?
--- - concretes tech graphic?
--- layered icons look bad when disabled. Bake them.
--- rename: unstable gas?
--- upgrade graphics for boiler; maybe also pipes/tanks/steam engine?
--- - and possibly slightly increase base pipe capacity
--- output buffer issue on rare metals / matter bulk processes, etc, can it be fixed?
--- - particularly important w.r.t any hope of productivity modules working in cubethings
--- resplendent plate tech graphics, phantom handling tech graphics, seance tech graphic
 
 -- RELEASE BLOCKERS
 -------------------
 -- Finish modules
--- Phantom cube manual reassembly? (unless theres a way to recover already)
 -- Unobtainium (? maybe involve 234?) + science 6
--- Endgame antimatter power
+-- Endgame antimatter power?
+-- Potentially ghost furnace fueled by phantom cubes
 -- Teleporter (how do we do it with entities?)
 -- Fix deep core ore generation (?)
--- Constant-rate flexible thing (from deep ore science)
+-- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- Cube destruction/rebuild + forbidden + science 7
--- Late-game raw material swapping of some kind (?)
 -- World events? (ghost/forest/daylight)
 -- Legendary iron plate
 

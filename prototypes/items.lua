@@ -37,6 +37,11 @@ data:extend({
     subgroup = "cube-synthesis-handling",
     order = "0[2-cube]",
     stack_size = 1,
+
+    fuel_category = "cube-phantom",
+    fuel_value = "250MJ",
+    fuel_glow_color = {0.5, 0.5, 1, 1},
+    burnt_result = "cube-dormant-phantom-constituent",
   },
   {
     type = "item",
@@ -306,7 +311,7 @@ data:extend({
     order = "z[haunted-energy-cell]",
     fuel_category = "cube-haunted-energy",
     -- TODO: may need tweaking with actual practice.
-    fuel_value = "250MJ",
+    fuel_value = "400MJ",
     stack_size = 50,
   },
   {

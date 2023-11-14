@@ -29,13 +29,13 @@ data:extend({
 
   {
     type = "item-subgroup",
-    name = "cube-synthesis-handling",
+    name = "cube-synthesis-manual",
     group = "cube-synthesis",
     order = "0",
   },
   {
     type = "item-subgroup",
-    name = "cube-synthesis-phantom",
+    name = "cube-synthesis-handling",
     group = "cube-synthesis",
     order = "1",
   },

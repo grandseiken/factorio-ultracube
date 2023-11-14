@@ -59,8 +59,17 @@ data:extend({
   {
     type = "recipe",
     name = "cube-qubits-success-dummy",
-    icon = "__Ultracube__/graphics/qubits-success.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icons = {
+      {
+        icon = "__Ultracube__/graphics/qubits-success.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, -8},
+      },
+    },
     ingredients = {{"cube-qubits", 2}},
     results = {{"cube-quantum-research-data", 10}},
     energy_required = 3.2,

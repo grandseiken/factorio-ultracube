@@ -306,6 +306,8 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-phantom-constituent-recharge"},
       {type = "unlock-recipe", recipe = "cube-basic-matter-unit-phantom"},
       {type = "unlock-recipe", recipe = "cube-ghost-crystal"},
+      {type = "unlock-recipe", recipe = "cube-phantom-cube-manual-discharge"},
+      {type = "unlock-recipe", recipe = "cube-phantom-cube-manual-reassembly"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
