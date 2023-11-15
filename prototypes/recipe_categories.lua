@@ -81,6 +81,11 @@ data:extend({
   },
   {
     type = "recipe-category",
+    name = "cube-forbidden-ziggurat",
+    order = "j",
+  },
+  {
+    type = "recipe-category",
     name = "cube-stygian-energy-lab",
     order = "y",
   },

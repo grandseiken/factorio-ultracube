@@ -409,4 +409,18 @@ data:extend({
     results = {{"cube-experimental-teleporter", 1}},
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-forbidden-ziggurat",
+    ingredients = {
+      {"concrete", 800},
+      {"cube-resplendent-plate", 400},
+      {"cube-arcane-drive", 64},
+      {"cube-haunted-energy-cell", 128},
+      {"cube-quantum-research-data", 400},
+    },
+    energy_required = 300,
+    results = {{"cube-forbidden-ziggurat", 1}},
+    enabled = false,
+  },
 })

@@ -15,6 +15,9 @@ require("prototypes.scripts.autoplace")
 -- Teleporter (how do we do it with entities?)
 -- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- Potentially ghost furnace fueled by phantom cubes
+-- Last armor/equipments
+-- Nuclear fuel and/or regular fuel
+-- More use for deep crystal
 -- Finish modules
 -- Last science
 -- - Cube destruction/rebuild
@@ -71,7 +74,7 @@ require("prototypes.scripts.autoplace")
 -- Kovarex redemption: extra fluid ingredients/results? Another nuclear ingredient to manage levels of (e.g. radioactive sludge)?
 -- Make sure reactor fast-replace is working (seemed odd when picked up) plus 2 burnt result slots
 -- Maybe use temperature mechanics properly somewhere, with crazy heating mixing.
--- idea for (final) power solution: requires tons of accumulators, because it makes power directly from cube time
+-- idea for (final) power solution: requires tons of accumulators, because it makes power directly from cube time?
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
 -- All new things from now on should be interesting somehow, not just slap shit together
@@ -164,6 +167,7 @@ require("prototypes.entities.energy_bulkframe")
 require("prototypes.entities.experimental_teleporter")
 require("prototypes.entities.explosions")
 require("prototypes.entities.fabricator")
+require("prototypes.entities.forbidden_ziggurat")
 require("prototypes.entities.fluid_burner")
 require("prototypes.entities.fuel_refinery")
 require("prototypes.entities.fusion_blender")

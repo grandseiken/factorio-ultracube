@@ -91,6 +91,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-forbidden-ziggurat",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-forbidden-ziggurat"},
+      tech_unlock_effect(),
+    },
+    prerequisites = {
+      "cube-arcane-drive",
+      "cube-quantum-decoder",
+    },
+    unit = tech_cost_unit("5", 1200),
+    order = "5-2-0",
+  },
+  {
+    type = "technology",
     name = "cube-unobtainium",
     icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
     icon_size = 256, icon_mipmaps = 4,

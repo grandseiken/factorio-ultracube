@@ -272,4 +272,16 @@ data:extend({
     place_result = "cube-experimental-teleporter",
     stack_size = 5,
   },
+  {
+    type = "item",
+    name = "cube-forbidden-ziggurat",
+    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-final-machines",
+    order = "0[ziggurat]",
+    place_result = "cube-forbidden-ziggurat",
+    stack_size = 1,
+    flags = {"not-stackable"},
+  },
 })
