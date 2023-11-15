@@ -103,11 +103,11 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-fusion-blender",
+    name = "cube-molecular-blender",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/graphics/fusion-blender-technology.png",
+    icon = "__Ultracube__/graphics/molecular-blender-technology.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fusion-blender"},
+      {type = "unlock-recipe", recipe = "cube-molecular-blender"},
     },
     prerequisites = {
       "cube-refined-concrete",

@@ -313,8 +313,8 @@ data:extend({
     ingredients = {
       {"concrete", 100},
       {"cube-rare-metals", 80},
-      {"cube-advanced-engine", 40},
-      {"cube-advanced-circuit", 80},
+      {"cube-advanced-engine", 20},
+      {"cube-advanced-circuit", 40},
     },
     results = {{"centrifuge", 1}},
     energy_required = 8,
@@ -357,7 +357,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-fusion-blender",
+    name = "cube-molecular-blender",
     ingredients = {
       {"refined-concrete", 200},
       {"cube-resplendent-plate", 120},
@@ -366,7 +366,7 @@ data:extend({
       {"cube-spectralite", 100},
     },
     energy_required = 12,
-    results = {{"cube-fusion-blender", 1}},
+    results = {{"cube-molecular-blender", 1}},
     enabled = false,
   },
   {

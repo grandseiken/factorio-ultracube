@@ -65,7 +65,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-fusion-blender",
+    name = "cube-molecular-blender",
     group = "cube-synthesis",
     order = "x",
   },

@@ -13,13 +13,15 @@ local ultradense_phantom_icon = {type = "item", name = cube_ultradense_phantom}
 local dormant_phantom_icon = {type = "item", name = cube_dormant_phantom}
 
 local ultralocomotion_fuel_map = {
-  ["wood"] = "cube-wood-ultralocomotion",
-  ["coal"] = "cube-coal-ultralocomotion",
+  ["wood"] = "wood-ultralocomotion",
+  ["coal"] = "coal-ultralocomotion",
   ["cube-condensed-fuel"] = "cube-condensed-fuel-ultralocomotion",
+  ["cube-vehicle-fuel"] = "cube-vehicle-fuel-ultralocomotion",
+  ["cube-nuclear-fuel"] = "cube-nuclear-fuel-ultralocomotion",
 }
 local ultralocomotion_fuel_inverse_map = inverse_map(ultralocomotion_fuel_map)
 local cube_fuel_vehicle_entity_types = make_set({
-  "locomotive", "car", "tank", "spider-vehicle"
+  "locomotive", "car", "tank", "spider-vehicle",
 })
 
 local cube_fx_data = nil

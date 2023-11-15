@@ -173,6 +173,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
       {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
+      {type = "unlock-recipe", recipe = "cube-vehicle-fuel"},
     },
     prerequisites = {"cube-sulfur-processing"},
     unit = tech_cost_unit("1b", 240),

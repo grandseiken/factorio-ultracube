@@ -775,9 +775,11 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-centrifuge"},
       {type = "unlock-recipe", recipe = "cube-uranium-processing"},
       {type = "unlock-recipe", recipe = "cube-uranium-fuel-cell"},
+      {type = "unlock-recipe", recipe = "cube-nuclear-fuel"},
     },
     prerequisites = {
       "cube-electric-mining-drill-mk2",
+      "cube-fuel-refinery",
       "cube-concrete",
     },
     unit = tech_cost_unit("2", 240),

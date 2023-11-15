@@ -71,7 +71,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-fusion-blender",
+    name = "cube-molecular-blender",
     order = "h",
   },
   {

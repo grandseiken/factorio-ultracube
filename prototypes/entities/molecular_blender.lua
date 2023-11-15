@@ -5,7 +5,7 @@ require("__Ultracube__/prototypes/entities/lib/pipe")
 data:extend({
   {
     type = "corpse",
-    name = "cube-fusion-blender-remnant",
+    name = "cube-molecular-blender-remnant",
     localised_name = {"remnant-name", {"entity-name.kr-matter-plant"}},
     icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128,
@@ -39,14 +39,14 @@ data:extend({
   },
   {
     type = "assembling-machine",
-    name = "cube-fusion-blender",
+    name = "cube-molecular-blender",
     icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128, icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
-    minable = {mining_time = 1, result = "cube-fusion-blender"},
+    minable = {mining_time = 1, result = "cube-molecular-blender"},
     max_health = 1200,
     damaged_trigger_effect = hit_effects.entity(),
-    corpse = "cube-fusion-blender-remnant",
+    corpse = "cube-molecular-blender-remnant",
     dying_explosion = "cube-medium-matter-explosion",
     fluid_boxes = {
       {
@@ -206,7 +206,7 @@ data:extend({
         },
       },
     },
-    crafting_categories = {"cube-fusion-blender"},
+    crafting_categories = {"cube-molecular-blender"},
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {filename = "__Krastorio2Assets__/sounds/buildings/matter-plant.ogg"},

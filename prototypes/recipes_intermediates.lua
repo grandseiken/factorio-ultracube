@@ -278,6 +278,33 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-vehicle-fuel",
+    ingredients = {
+      {"sulfur", 1},
+      {"cube-calcium", 1},
+      {type = "fluid", name = "cube-unstable-gas", amount = 80},
+    },
+    results = {{"cube-vehicle-fuel", 1}},
+    category = "cube-fuel-refinery",
+    energy_required = 12,
+    always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-nuclear-fuel",
+    ingredients = {
+      {"cube-vehicle-fuel", 1},
+      {"uranium-235", 1},
+    },
+    results = {{"cube-nuclear-fuel", 1}},
+    category = "cube-fuel-refinery",
+    energy_required = 20,
+    always_show_made_in = true,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-condensed-fuel",
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -320,7 +347,7 @@ data:extend({
     },
     category = "cube-fuel-refinery",
     subgroup = "cube-fuel",
-    order = "x[b-deeply-condensed-fuel]",
+    order = "z[b-deeply-condensed-fuel]",
     energy_required = 2,
     always_show_made_in = true,
     enabled = false,
