@@ -260,7 +260,7 @@ data:extend({
       module_info_icon_shift = {0, 1.8},
       module_info_icon_scale = 0.6,
     },
-    allowed_effects = module_effects.speed_efficiency,
+    allowed_effects = module_effects.all,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

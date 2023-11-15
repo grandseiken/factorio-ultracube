@@ -132,6 +132,18 @@ data:extend({
     order = "z[quantum-research-data]",
     stack_size = 100,
   },
+  {
+    type = "tool",
+    name = "cube-construct-forbidden-ziggurat-dummy",
+    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    subgroup = "cube-final-machines",
+    order = "z[construct]",
+    stack_size = 1,
+    flags = {"hidden"},
+    durability = 1,
+  },
 
   {
     type = "tool",

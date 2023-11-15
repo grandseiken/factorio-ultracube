@@ -9,22 +9,20 @@ require("prototypes.scripts.autoplace")
 -- tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
 -- - advanced engine tech graphic + name (?)
 -- - emotional synthesis icon + tech graphic
+-- make cube sparks aligned per-machine?
 
 -- RELEASE BLOCKERS
 -------------------
 -- Teleporter (how do we do it with entities?)
 -- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
--- Potentially ghost furnace fueled by phantom cubes
+-- Mystery furnace fueled by phantom cubes
 -- Last armor/equipments
--- Nuclear fuel and/or regular fuel
 -- More use for deep crystal
 -- Finish modules
+-- Infinite technologies
+-- Text plate compatibility
 -- Last science
 -- - Cube destruction/rebuild
--- - In the tranceiver (forbidden ziggurat?)
--- - Research it (lots of science)
--- - Unlocks trigger tech: construct forbidden ziggurat
--- - Unlocks tech (more science): resonance cascade
 -- - Requirements:
 -- - - 1x Cube
 -- - - Quantum research data
@@ -32,17 +30,15 @@ require("prototypes.scripts.autoplace")
 -- - - Unobtainium or something from deep tree
 -- - - A lot of power
 -- - Products
--- - - 1x legendary iron gear?
+-- - - 1x legendary iron plate?
 -- - - 1000x basic antimatter unit
 -- - - e.g. 4096x ephemeral uncube particle
 -- - antimatter + quantum data + ? -> final science
 -- - antimatter + matter unit -> endgame antimatter power
--- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient -> 1x cube
+-- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient + iron plate -> 1x cube
 -- - Endgame antimatter power unlocked by final science
 -- Fix deep core ore generation (?)
--- World events? (ghost/forest/daylight)
 -- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
--- Legendary iron gear made from a bunch of ridiculous stuff or involved in endgame somehow
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
@@ -55,8 +51,9 @@ require("prototypes.scripts.autoplace")
 
 -- LONG-TERM TODOs:
 -------------------
+-- World events? (ghost/forest/daylight)
 -- rearrange upgrade techs? some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
--- maybe pickaxe/mining upgrades?
+-- maybe pickaxe/mining upgrades? Or just make character mine faster
 -- think about reintroducing biters + military?
 -- storylore tooltips
 -- move some current techs later and add earlier-game shit versions of things? e.g. miners, fabricator, perhaps even synthesizer

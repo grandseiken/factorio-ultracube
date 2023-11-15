@@ -142,6 +142,7 @@ script.on_event(
     if not e.created_entity.unit_number then
       return
     end
+    tech_unlock.constructed(e.created_entity)
     entity_cache.add(e.created_entity)
   end)
 
@@ -162,6 +163,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
+    tech_unlock.constructed(e.entity)
     entity_cache.add(e.entity)
   end)
 

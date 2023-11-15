@@ -103,21 +103,51 @@ data:extend({
       "cube-quantum-decoder",
     },
     unit = tech_cost_unit("5", 1200),
-    order = "5-2-0",
+    order = "5-3-0",
   },
   {
     type = "technology",
-    name = "cube-unobtainium",
-    icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-construct-forbidden-ziggurat",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png",
+      },
+    },
     effects = {
       tech_unlock_effect(),
     },
-    prerequisites = {
-      "cube-deep-introspection-card",
-      "cube-synthetic-premonition-card",
+    prerequisites = {"cube-forbidden-ziggurat"},
+    unit = {
+      count = 1,
+      time = 1 / 1024,
+      ingredients = {{"cube-construct-forbidden-ziggurat-dummy", 1}},
     },
-    unit = tech_cost_unit("x", 600),
-    order = "5-9-0",
+    order = "5-3-1",
+  },
+  {
+    type = "technology",
+    name = "cube-resonance-cascade",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-cube.png",
+        tint = {r = 1, g = 1, b = 1, a = 0.5},
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-resonance-cascade"},
+    },
+    prerequisites = {"cube-construct-forbidden-ziggurat"},
+    unit = tech_cost_unit("5", 1200),
+    order = "5-3-2",
   },
 })

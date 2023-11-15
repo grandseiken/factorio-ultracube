@@ -658,4 +658,25 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
   },
+
+  {
+    type = "recipe",
+    name = "cube-resonance-cascade",
+    icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {"cube-legendary-iron-plate", 1},
+    },
+    main_product = "",
+    energy_required = 16,
+    category = "cube-forbidden-ziggurat",
+    subgroup = "cube-synthesis-forbidden",
+    order = "0[0]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
 })

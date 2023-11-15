@@ -3,6 +3,20 @@ require("prototypes.lib.tech_costs")
 data:extend({
   {
     type = "technology",
+    name = "cube-unobtainium",
+    icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      tech_unlock_effect(),
+    },
+    prerequisites = {
+      "cube-resonance-cascade",
+    },
+    unit = tech_cost_unit("x", 600),
+    order = "5-9-0",
+  },
+  {
+    type = "technology",
     name = "cube-speed-module-v3",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-3.png",

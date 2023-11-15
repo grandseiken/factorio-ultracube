@@ -51,7 +51,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
-      {type = "train-braking-force-bonus", modifier = 0.3},
+      {type = "train-braking-force-bonus", modifier = 0.25},
     },
     prerequisites = {
       "cube-braking-force-1",
@@ -67,7 +67,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
-      {type = "train-braking-force-bonus", modifier = 0.3},
+      {type = "train-braking-force-bonus", modifier = 0.25},
     },
     prerequisites = {
       "cube-braking-force-2",
@@ -86,7 +86,7 @@ data:extend({
       {type = "train-braking-force-bonus", modifier = 0.3},
     },
     prerequisites = {"cube-braking-force-3"},
-    unit = tech_cost_unit("3", 360),
+    unit = tech_cost_unit("3", 420),
     upgrade = true,
     order = "10-1-3",
   },
@@ -97,13 +97,14 @@ data:extend({
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       -- Base game goes up to 1.0.
-      {type = "train-braking-force-bonus", modifier = 0.4},
+      {type = "train-braking-force-bonus", modifier = 0.35},
     },
     prerequisites = {
       "cube-braking-force-4",
-      "cube-unobtainium",
+      "cube-arcane-drive",
     },
-    unit = tech_cost_unit("x", 360),
+    unit = tech_cost_formula("5", "2^(L-2)*60"),
+    max_level = "infinite",
     upgrade = true,
     order = "10-1-4",
   },

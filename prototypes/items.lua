@@ -55,6 +55,16 @@ data:extend({
     order = "0[3-cube]",
     stack_size = 1,
   },
+  {
+    type = "item",
+    name = "cube-legendary-iron-plate",
+    icon = "__base__/graphics/icons/iron-plate.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-synthesis-forbidden",
+    order = "0[0-plate]",
+    stack_size = 1,
+    flags = {"not-stackable"},
+  },
 
   {
     type = "item",
