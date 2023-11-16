@@ -88,6 +88,7 @@ local whitelist = make_set({
   "check-valve",
   "overflow-valve",
   "underflow-valve",
+  "pushbutton",
 })
 
 local entity_prototypes = {

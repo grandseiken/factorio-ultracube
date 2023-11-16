@@ -72,6 +72,7 @@ There is currently built-in support for the following mods:
 * [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) for displaying circuit network values
 * [Pushbutton](https://mods.factorio.com/mod/pushbutton) for manual input of circuit signals
 * [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) for easily rearranging combinators without disconnecting circuit wires (gently recommended)
+* [Textplates](https://mods.factorio.com/mod/textplates) for annotating your factory
 
 Additionally, simple mods like Far Reach or Even Distribution should work fine.
 

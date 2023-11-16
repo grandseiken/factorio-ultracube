@@ -20,7 +20,6 @@ require("prototypes.scripts.autoplace")
 -- More use for deep crystal
 -- Finish modules
 -- Infinite technologies
--- Text plate compatibility
 -- Last science
 -- - Cube destruction/rebuild
 -- - Requirements:

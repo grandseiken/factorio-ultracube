@@ -12,9 +12,11 @@
     "Krastorio2Assets >= 1.2",
     "simhelper >= 1.1.4",
     "?nixie-tubes",
+    "?Honk",
     "?Flow Control",
     "?PickerDollies",
     "?pushbutton",
+    "?textplates",
     "!Krastorio2"
   ],
   "description": "Unlock the mysteries of the ultradense utility cube in this devious overhaul mod."
