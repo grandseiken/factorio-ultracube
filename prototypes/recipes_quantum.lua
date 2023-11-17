@@ -69,7 +69,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Krastorio2Assets__/icons/cards/matter-research-data.png",
+        icon = "__Krastorio2Assets__/icons/cards/biters-research-data.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
       },

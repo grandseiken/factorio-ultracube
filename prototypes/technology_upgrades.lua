@@ -192,16 +192,33 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
-      -- TODO: base game goes up to 0.4 (before infinite). Need (one?) more of these!
       {type = "mining-drill-productivity-bonus", modifier = 0.1},
     },
     prerequisites = {
       "cube-mining-productivity-5",
-      "cube-unobtainium",
+      "cube-synthetic-premonition-card",
     },
-    unit = tech_cost_unit("x", 720),
+    unit = tech_cost_unit("5", 800),
     upgrade = true,
     order = "10-2-5",
+  },
+  {
+    type = "technology",
+    name = "cube-mining-productivity-7",
+    icon_size = 256, icon_mipmaps = 4,
+    icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
+    effects = {
+      -- Base game goes up to ~0.4 before infinite.
+      -- TODO: make infinite.
+      {type = "mining-drill-productivity-bonus", modifier = 0.1},
+    },
+    prerequisites = {
+      "cube-mining-productivity-6",
+      "cube-complete-annihilation-card",
+    },
+    unit = tech_cost_unit("6", 800),
+    upgrade = true,
+    order = "10-2-6",
   },
 
   {
@@ -301,9 +318,9 @@ data:extend({
     },
     prerequisites = {
       "cube-stack-inserter-capacity-bonus-6",
-      "cube-unobtainium",
+      "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("x", 420),
+    unit = tech_cost_unit("6", 420),
     upgrade = true,
     order = "10-3-6",
   },
@@ -314,10 +331,11 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       -- Base game goes up to 12, we start at 4
+      -- TODO: make infinite.
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {"cube-stack-inserter-capacity-bonus-7"},
-    unit = tech_cost_unit("x", 480),
+    unit = tech_cost_unit("6", 480),
     upgrade = true,
     order = "10-3-7",
   },
@@ -365,9 +383,9 @@ data:extend({
     },
     prerequisites = {
       "cube-inserter-capacity-bonus-2",
-      "cube-unobtainium",
+      "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("x", 360),
+    unit = tech_cost_unit("6", 360),
     upgrade = true,
     order = "10-4-2",
   },
@@ -472,13 +490,14 @@ data:extend({
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       -- Base game goes up to ~3 before infinite.
+      -- TODO: make infinite.
       {type = "worker-robot-speed", modifier = 0.6},
     },
     prerequisites = {
       "cube-worker-robot-speed-6",
-      "cube-unobtainium",
+      "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("x", 420),
+    unit = tech_cost_unit("6", 420),
     upgrade = true,
     order = "10-5-6",
   },
@@ -539,9 +558,9 @@ data:extend({
     },
     prerequisites = {
       "cube-worker-robot-storage-3",
-      "cube-unobtainium",
+      "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("x", 420),
+    unit = tech_cost_unit("6", 420),
     upgrade = true,
     order = "10-6-3",
   },
@@ -602,9 +621,9 @@ data:extend({
     },
     prerequisites = {
       "cube-research-speed-3",
-      "cube-unobtainium",
+      "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("x", 300),
+    unit = tech_cost_unit("6", 420),
     upgrade = true,
     order = "10-7-3",
   },

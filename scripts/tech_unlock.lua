@@ -4,7 +4,7 @@ local unlock_trigger_technologies = make_set({
   "cube-abstract-interrogation-card",
   "cube-deep-introspection-card",
   "cube-synthetic-premonition-card",
-  "cube-unobtainium",
+  "cube-complete-annihilation-card",
 })
 
 local special_condition_technologies = make_set({
@@ -53,7 +53,7 @@ function tech_unlock.trigger(force, technology_name, unlocked)
   end
   if technology_name == "cube-construct-forbidden-ziggurat" then
     force.technologies["cube-resonance-cascade"].enabled = unlocked
-    force.technologies["cube-unobtainium"].enabled = unlocked
+    force.technologies["cube-complete-annihilation-card"].enabled = unlocked
   end
 end
 

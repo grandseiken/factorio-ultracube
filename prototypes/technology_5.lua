@@ -147,7 +147,20 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-resonance-cascade"},
     },
     prerequisites = {"cube-construct-forbidden-ziggurat"},
-    unit = tech_cost_unit("5", 1200),
+    unit = tech_cost_unit("5", 800),
     order = "5-3-2",
+  },
+  {
+    type = "technology",
+    name = "cube-complete-annihilation-card",
+    icon = "__Krastorio2Assets__/technologies/advanced-tech-card.png",
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-complete-annihilation-card"},
+      tech_unlock_effect(),
+    },
+    prerequisites = {"cube-resonance-cascade"},
+    unit = tech_cost_unit("5", 1200),
+    order = "5-3-3",
   },
 })

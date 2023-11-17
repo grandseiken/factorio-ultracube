@@ -109,4 +109,18 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-complete-annihilation-card",
+    ingredients = {
+      {"cube-singularity-research-data", 1},
+      {"cube-quantum-research-data", 1},
+    },
+    results = {
+      {"cube-complete-annihilation-card", 1},
+    },
+    energy_required = 20,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 })

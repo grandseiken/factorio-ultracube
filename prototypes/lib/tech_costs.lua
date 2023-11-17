@@ -15,12 +15,6 @@ local ingredients = {
     {"cube-fundamental-comprehension-card", 1},
     {"cube-abstract-interrogation-card", 1},
   },
-  ["2x"] = {
-    {"cube-basic-contemplation-unit", 1},
-    {"cube-fundamental-comprehension-card", 1},
-    {"cube-abstract-interrogation-card", 1},
-    {"cube-unobtainium", 1},
-  },
   ["3"] = {
     {"cube-basic-contemplation-unit", 1},
     {"cube-fundamental-comprehension-card", 1},
@@ -40,12 +34,21 @@ local ingredients = {
     {"cube-deep-introspection-card", 1},
     {"cube-synthetic-premonition-card", 1},
   },
+  ["6"] = {
+    {"cube-basic-contemplation-unit", 1},
+    {"cube-fundamental-comprehension-card", 1},
+    {"cube-abstract-interrogation-card", 1},
+    {"cube-deep-introspection-card", 1},
+    {"cube-synthetic-premonition-card", 1},
+    {"cube-complete-annihilation-card", 1},
+  },
   ["x"] = {
     {"cube-basic-contemplation-unit", 1},
     {"cube-fundamental-comprehension-card", 1},
     {"cube-abstract-interrogation-card", 1},
     {"cube-deep-introspection-card", 1},
     {"cube-synthetic-premonition-card", 1},
+    {"cube-complete-annihilation-card", 1},
     {"cube-unobtainium", 1},
   },
 }
@@ -55,10 +58,10 @@ local time = {
   ["1a"] = 20,
   ["1b"] = 30,
   ["2"] = 40,
-  ["2x"] = 40,
   ["3"] = 60,
   ["4"] = 60,
   ["5"] = 90,
+  ["6"] = 120,
   ["x"] = 600,
 }
 
