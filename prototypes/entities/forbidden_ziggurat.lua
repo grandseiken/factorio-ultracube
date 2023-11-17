@@ -256,7 +256,7 @@ data:extend({
     working_sound = ziggurat_working_sound,
     audible_distance_modifier = 30,
     module_specification = {
-      module_slots = 16,
+      module_slots = 10,
       module_info_icon_shift = {0, 1.8},
       module_info_icon_scale = 0.6,
     },

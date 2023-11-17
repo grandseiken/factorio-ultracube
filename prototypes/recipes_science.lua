@@ -115,6 +115,7 @@ data:extend({
     ingredients = {
       {"cube-singularity-research-data", 1},
       {"cube-quantum-research-data", 1},
+      {"cube-basic-antimatter-unit", 1},
     },
     results = {
       {"cube-complete-annihilation-card", 1},

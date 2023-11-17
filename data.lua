@@ -25,16 +25,24 @@ require("prototypes.scripts.autoplace")
 -- - Requirements:
 -- - - 1x Cube
 -- - - Quantum research data
--- - - Ethanol
 -- - - Unobtainium or something from deep tree
 -- - - A lot of power
 -- - Products
 -- - - 1x legendary iron plate?
 -- - - 1000x basic antimatter unit
 -- - - e.g. 4096x ephemeral uncube particle
+-- - - regret? unobtainium?
 -- - antimatter + quantum data + ? -> final science
 -- - antimatter + matter unit -> endgame antimatter power
 -- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient + iron plate -> 1x cube
+-- - Maybe
+-- - - 256 enriched iron
+-- - - -> (crusher) x16 -> 4096 lithium chloride
+-- - - -> ? (furnace), (distillery), (chemical), (fabricator) ...
+-- - - -> + matter units, metal, n-dim widgets, ethanol, spectralite, deep crystal
+-- - - -> (dimension folding engine) -> 1x cube
+-- - - -- byproducts somewhere
+-- - - -- is there a way to have a loopback loop somehow without it being uncompletable?
 -- - Endgame antimatter power unlocked by final science
 -- Fix deep core ore generation (?)
 -- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
@@ -102,15 +110,9 @@ require("prototypes.scripts.autoplace")
 -- unobtainium?
 
 -- After science 3/4 or nearby, later ideas...
--- Quantum decoder; via multi-furnace (quantum computer or research server); qbits;
--- - every recipe is random with one pair from 6*6 options (so 1/21 chance)
 -- Few other things with combining the earlier trees
--- Very last thing to do destroys the cube (e.g. in intergalactic tranceiver) to produce final science plus
--- materials to rebuild it in a long/expensive process. Maybe like 1 iron plate just for jokes.
--- And maybe that's ~it!?
 -- ?: something to do with mechanical circuit network?
 -- ?: some sort of weird biter farmer spawning synthesis.
--- ?: late game forbidden tech. Experiments on cube. Suffering. Regret.
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")

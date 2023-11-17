@@ -112,7 +112,16 @@ data:extend({
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
-    order = "0[matter]",
+    order = "0[a-matter]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "cube-basic-antimatter-unit",
+    icon = "__Ultracube__/graphics/basic-antimatter-unit.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-basic-products",
+    order = "0[b-matter]",
     stack_size = 200,
   },
   {
@@ -323,6 +332,89 @@ data:extend({
     subgroup = "cube-experimental",
     order = "z[teleportation-control-module]",
     stack_size = 10,
+  },
+
+  {
+    type = "item",
+    name = "cube-teleportation-control-module",
+    icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
+    subgroup = "cube-experimental",
+    order = "z[teleportation-control-module]",
+    stack_size = 10,
+  },
+  {
+    type = "item",
+    name = "cube-ultradense-debris",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-synthesis-forbidden",
+    order = "1[step-0]",
+    stack_size = 64,
+  },
+  {
+    type = "item",
+    name = "cube-ultradense-powder",
+    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-synthesis-forbidden",
+    order = "2[step-1]",
+    stack_size = 200,
   },
 })
 

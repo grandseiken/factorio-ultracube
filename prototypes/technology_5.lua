@@ -145,6 +145,7 @@ data:extend({
     },
     effects = {
       {type = "unlock-recipe", recipe = "cube-resonance-cascade"},
+      {type = "unlock-recipe", recipe = "cube-ultradense-powder"},
     },
     prerequisites = {"cube-construct-forbidden-ziggurat"},
     unit = tech_cost_unit("5", 800),

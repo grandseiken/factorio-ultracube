@@ -66,8 +66,11 @@ end
 
 function tech_unlock.constructed(entity)
   if entity.name == "cube-forbidden-ziggurat" then
-    entity.force.technologies["cube-construct-forbidden-ziggurat"].researched = true
-    game.print({"cube-msg-project-completed"})
+    local technology = entity.force.technologies["cube-construct-forbidden-ziggurat"]
+    if not technology.researched then
+      technology.researched = true
+      game.print({"cube-msg-project-completed"})
+    end
   end
 end
 

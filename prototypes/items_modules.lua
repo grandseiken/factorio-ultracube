@@ -43,6 +43,8 @@ local productivity_module_limitation = {
   "cube-uranium-processing",
   "cube-kovarex-enrichment-process",
   "cube-qubit",
+  -- Is it OK?
+  "cube-resonance-cascade",
 }
 
 data:extend({
