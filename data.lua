@@ -10,6 +10,7 @@ require("prototypes.scripts.autoplace")
 -- - advanced engine tech graphic + name (?)
 -- - emotional synthesis icon + tech graphic
 -- make cube sparks aligned per-machine?
+-- make nuclear reactor a dummy so copy/paste undo works properly
 
 -- RELEASE BLOCKERS
 -------------------
@@ -17,6 +18,8 @@ require("prototypes.scripts.autoplace")
 -- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- Mystery furnace fueled by phantom cubes
 -- Last armor/equipments
+-- - How to get singularity data
+-- - Temperature mixing?
 -- More use for deep crystal
 -- Finish modules
 -- Infinite technologies
@@ -36,7 +39,7 @@ require("prototypes.scripts.autoplace")
 -- - antimatter + matter unit -> endgame antimatter power
 -- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient + iron plate -> 1x cube
 -- - Maybe
--- - - 256 enriched iron
+-- - - 256 enriched iron -> crusher x16 -> 4096 lithium chloride
 -- - - -> (crusher) x16 -> 4096 lithium chloride
 -- - - -> ? (furnace), (distillery), (chemical), (fabricator) ...
 -- - - -> + matter units, metal, n-dim widgets, ethanol, spectralite, deep crystal
@@ -44,6 +47,7 @@ require("prototypes.scripts.autoplace")
 -- - - -- byproducts somewhere
 -- - - -- is there a way to have a loopback loop somehow without it being uncompletable?
 -- - Endgame antimatter power unlocked by final science
+-- - Maybe a way to turn energy -> antimatter
 -- Fix deep core ore generation (?)
 -- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 

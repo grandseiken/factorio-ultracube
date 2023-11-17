@@ -115,12 +115,12 @@ data:extend({
     ingredients = {
       {"cube-singularity-research-data", 1},
       {"cube-quantum-research-data", 1},
-      {"cube-basic-antimatter-unit", 1},
+      {"cube-basic-antimatter-unit", 2},
     },
     results = {
-      {"cube-complete-annihilation-card", 1},
+      {"cube-complete-annihilation-card", 2},
     },
-    energy_required = 20,
+    energy_required = 30,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },

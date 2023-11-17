@@ -32,17 +32,17 @@ However, it probably isn't for everyone.
 ## You might like this mod if:
 
 * You're open to a fundamentally different take on the Factorio experience.
-* You enjoy solving automation and logistical puzzles, analyzing and improving on complex setups which probably won't be perfect the first time.
-* You've interested in a more dynamic factory, with different sections turning on at different times, and not every belt tends towards either completely empty or completely backed-up.
+* You enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
+* You like the idea of a more dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You'd like an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
 
 ## You might not like this mod if:
 
 * You're looking for a "vanilla plus" experience.
-* You require compatibility with other large/overhaul mods.
-* You can't live without megabasing. It's not really a thing here yet, and it seems tricky to make it coexist with the core conceit.
-* You're not ready to experiment at least a little bit with combinators and circuit conditions. While it might prove unwise to say they are mandatory (Factorio players are great at coming up with unexpected solutions), they're definitely the most obvious answer to some of the problems you'll encounter.
+* You need compatibility with other large/overhaul mods.
+* You can't live without the ability to scale up a megabase indefinitely. (There are still reasons to go big, but you can't really just stamp down more production in the same way.)
+* You're not willing to experiment at least a little bit with combinators and circuit conditions. (It could be interpreted as a challenge if I said they're mandatory, but they're certainly the most obvious answer to some of the problems you'll encounter.)
 * The idea of being unable to calculate exact throughput numbers for production chains sounds horrifying.
 
 # Screenshots
@@ -60,7 +60,7 @@ Relatively early-game spaghetti.
 
 * **My factory isn't producing enough, how can I improve it?** The main production bottleneck will always be processes that require the cube as a catalyst. At most one of these steps can be running at any given time. Try to think of ways to get the most use out of it per unit of time and ensure it never gets stuck anywhere. Look in the technology tree for things that could help.
 
-* **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is [an issue with the way factorio determines when a machine's output is full](https://forums.factorio.com/viewtopic.php?f=7&t=101436). The only way to fix this right now would be to give certain items ridiculous stack sizes (many thousands), so you'll just have to work around it for now.
+* **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is [an issue with the way factorio determines when a machine's output is full](https://forums.factorio.com/viewtopic.php?f=7&t=101436). It seems that it will be fixed with the DLC release. Until then, the only way to fix this would be to give certain items ridiculous stack sizes (many thousands), so you'll just have to work around it. (This bug is also the reason productivity modules aren't allowed in cube-powered bulk machines: bonus outputs block progress, get the cube stuck and make things worse.)
 
 # Compatibility
 

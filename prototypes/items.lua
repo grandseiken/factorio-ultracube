@@ -416,6 +416,51 @@ data:extend({
     order = "2[step-1]",
     stack_size = 200,
   },
+  {
+    type = "item",
+    name = "cube-ultradense-mineral",
+    icon = "__Ultracube__/graphics/ultradense-mineral.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    pictures = {
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/ultradense-mineral.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/ultradense-mineral-1.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/ultradense-mineral-2.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+      {
+        size = 64,
+        filename = "__Ultracube__/graphics/ultradense-mineral-3.png",
+        scale = 0.25,
+        mipmap_count = 4,
+      },
+    },
+    subgroup = "cube-synthesis-forbidden",
+    order = "3[step-2]",
+    stack_size = 200,
+  },
+  {
+    type = "item",
+    name = "cube-ultradense-matter-unit",
+    icon = "__Ultracube__/graphics/ultradense-matter-unit.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-synthesis-forbidden",
+    order = "4[step-3]",
+    stack_size = 100,
+  },
 })
 
 local cube_item = data.raw.item["cube-ultradense-utility-cube"]
