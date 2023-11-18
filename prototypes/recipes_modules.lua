@@ -72,7 +72,7 @@ data:extend({
     name = "cube-efficiency-module-v3",
     ingredients = {
       {"cube-efficiency-module-v2", 1},
-      {"cube-unobtainium", 1},
+      {"cube-basic-antimatter-unit", 1},
     },
     results = {
       {type = "item", name = "cube-efficiency-module-v3", amount = 1, probability = 0.05},
@@ -126,7 +126,7 @@ data:extend({
     name = "cube-speed-module-v3",
     ingredients = {
       {"cube-speed-module-v2", 1},
-      {"cube-unobtainium", 1},
+      {"cube-basic-antimatter-unit", 1},
     },
     results = {
       {type = "item", name = "cube-speed-module-v3", amount = 1, probability = 0.05},
@@ -180,7 +180,7 @@ data:extend({
     name = "cube-productivity-module-v3",
     ingredients = {
       {"cube-productivity-module-v2", 1},
-      {"cube-unobtainium", 1},
+      {"cube-basic-antimatter-unit", 1},
     },
     results = {
       {type = "item", name = "cube-productivity-module-v3", amount = 1, probability = 0.05},

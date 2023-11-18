@@ -257,7 +257,7 @@ data:extend({
     stack_size = 20,
     effect = {
       productivity = {bonus = 0.05},
-      consumption = {bonus = 0.25},
+      consumption = {bonus = 0.2},
       speed = {bonus = -0.05},
     },
     limitation = productivity_module_limitation,
@@ -275,8 +275,8 @@ data:extend({
     order = "d[2]",
     stack_size = 20,
     effect = {
-      productivity = {bonus = 0.075},
-      consumption = {bonus = 0.5},
+      productivity = {bonus = 0.08},
+      consumption = {bonus = 0.4},
       speed = {bonus = -0.1},
     },
     limitation = productivity_module_limitation,
@@ -294,8 +294,8 @@ data:extend({
     order = "d[3]",
     stack_size = 20,
     effect = {
-      productivity = {bonus = 0.125},
-      consumption = {bonus = 0.75},
+      productivity = {bonus = 0.12},
+      consumption = {bonus = 0.6},
       speed = {bonus = -0.15},
     },
     limitation = productivity_module_limitation,

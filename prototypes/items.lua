@@ -450,7 +450,7 @@ data:extend({
     },
     subgroup = "cube-synthesis-forbidden",
     order = "3[step-2]",
-    stack_size = 200,
+    stack_size = 100,
   },
   {
     type = "item",
@@ -459,7 +459,16 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "4[step-3]",
-    stack_size = 100,
+    stack_size = 50,
+  },
+  {
+    type = "item",
+    name = "cube-ultradense-composite",
+    icon = "__Ultracube__/graphics/ultradense-composite.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-synthesis-forbidden",
+    order = "5[step-4]",
+    stack_size = 10,
   },
 })
 

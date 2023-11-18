@@ -16,63 +16,40 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- Teleporter (how do we do it with entities?)
 -- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- - Cubetime can increase the rate?
 -- Mystery furnace fueled by phantom cubes
+-- - strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
 -- Last armor/equipments
 -- - How to get singularity data
--- - Temperature mixing?
--- More use for deep crystal
--- Finish modules
+-- - Maybe use temperature mechanics with crazy heating mixing?
+-- More use for deep crystal, unobtainium?
 -- Infinite technologies
--- Last science
--- - Cube destruction/rebuild
--- - Requirements:
--- - - 1x Cube
--- - - Quantum research data
--- - - Unobtainium or something from deep tree
--- - - A lot of power
--- - Products
--- - - 1x legendary iron plate?
--- - - 1000x basic antimatter unit
--- - - e.g. 4096x ephemeral uncube particle
--- - - regret? unobtainium?
--- - antimatter + quantum data + ? -> final science
--- - antimatter + matter unit -> endgame antimatter power
--- - 4096x ephemeral uncube particle + -> ?5 stages each 4:1 with some ingredient + iron plate -> 1x cube
--- - Maybe
--- - - 256 enriched iron -> crusher x16 -> 4096 lithium chloride
--- - - -> (crusher) x16 -> 4096 lithium chloride
--- - - -> ? (furnace), (distillery), (chemical), (fabricator) ...
--- - - -> + matter units, metal, n-dim widgets, ethanol, spectralite, deep crystal
--- - - -> (dimension folding engine) -> 1x cube
--- - - -- byproducts somewhere
--- - - -- is there a way to have a loopback loop somehow without it being uncompletable?
+-- antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
 -- - Maybe a way to turn energy -> antimatter
+-- cascade: byproducts somewhere
+-- - is there a way to have a loopback loop somehow without it being uncompletable?
 -- Fix deep core ore generation (?)
+-- Beacons? (!?)
+-- Barreling?
 -- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
 -- analysis machine that unlocks techs based on finding things in the world
--- strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
--- maybe a secret tech tree you find out in the world? (e.g. mechanical network)
+-- - or a secret tech tree you find out in the world?
 -- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
--- more with besselheim? some kind of flask recycling?
 -- ghost effects spooky player
 
 -- LONG-TERM TODOs:
 -------------------
 -- World events? (ghost/forest/daylight)
--- rearrange upgrade techs? some 3/4-level techs could be on the way to 3/4 instead (e.g. loaders or logistic chests maybe)
--- maybe pickaxe/mining upgrades? Or just make character mine faster
 -- think about reintroducing biters + military?
 -- storylore tooltips
 -- move some current techs later and add earlier-game shit versions of things? e.g. miners, fabricator, perhaps even synthesizer
 
 -- TECH TREE TODOs:
 -------------------
--- Next science names: deep/erudite contemplation/introspection/reflection card; annihillation card...?
-
 -- PHANTOM FX:
 -- - Sound design
 -- - Replace "aura" graphics
@@ -81,13 +58,11 @@ require("prototypes.scripts.autoplace")
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
 -- Kovarex redemption: extra fluid ingredients/results? Another nuclear ingredient to manage levels of (e.g. radioactive sludge)?
 -- Make sure reactor fast-replace is working (seemed odd when picked up) plus 2 burnt result slots
--- Maybe use temperature mechanics properly somewhere, with crazy heating mixing.
 -- idea for (final) power solution: requires tons of accumulators, because it makes power directly from cube time?
 -- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
 
--- All new things from now on should be interesting somehow, not just slap shit together
+-- All new things from now on should be interesting somehow
 -- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
--- Module recipes (lvl3)
 -- More uses for ghost/deep crystal (in teleportation fuel at least?)
 -- power armor v2 (??? - haunted furnace?)
 
@@ -99,20 +74,14 @@ require("prototypes.scripts.autoplace")
 -- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
 -- - how about this: deep crushing has tiny% chance to produce diamond or something
 -- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
--- basic antimatter unit. Matter annihilation (matter + antimatter) -> energy!
--- 3: many interlinked recipes with short time and low amounts or...
 
 -- Things to unlock from level 3/4+:
--- Matter/antimatter; nuclear; or other better power (should need to combine multiple)
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
 ----- Or: maybe some way of converting like this, but high power cost, e.g. power -> more matter?
 -- Cube teleportation (implement, + teleportation gps module)
 -- Even better equipment
--- Higher-level modules, perhaps non-cube (e.g. fabricator) modules, beacon!?
--- if we have beacons, they should be powered by ghosts
 -- unobtainium?
-
 -- After science 3/4 or nearby, later ideas...
 -- Few other things with combining the earlier trees
 -- ?: something to do with mechanical circuit network?
