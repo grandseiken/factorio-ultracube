@@ -5,21 +5,37 @@ local cube_defines = {
   dormant = "cube-dormant-utility-cube",
   ultradense_phantom = "cube-phantom-ultradense-constituent",
   dormant_phantom = "cube-dormant-phantom-constituent",
+  legendary_iron_plate = "cube-legendary-iron-plate",
   fuel_category = "cube-cube",
 }
 
-cubes = {
+local cubes = {
   ultradense = cube_defines.ultradense,
   ultradense_phantom = cube_defines.ultradense_phantom,
   dormant = cube_defines.dormant,
   dormant_phantom = cube_defines.dormant_phantom,
+  legendary_iron_plate = cube_defines.legendary_iron_plate,
 }
 
-cube_info = make_set({
+local cube_info = make_set({
   cubes.ultradense,
   cubes.dormant,
   cubes.ultradense_phantom,
   cubes.dormant_phantom,
+  cubes.legendary_iron_plate,
+})
+
+local cube_drop = make_set({
+  cubes.ultradense,
+  cubes.dormant,
+  cubes.ultradense_phantom,
+  cubes.dormant_phantom,
+  cubes.legendary_iron_plate,
+  "cube-ultradense-debris",
+  "cube-ultradense-powder",
+  "cube-ultradense-mineral",
+  "cube-ultradense-matter-unit",
+  "cube-ultradense-composite",
 })
 
 local cube_management = {
@@ -35,6 +51,7 @@ local cube_weight = {
   [cubes.dormant] = 1,
   [cubes.ultradense_phantom] = 0,
   [cubes.dormant_phantom] = 0,
+  [cubes.legendary_iron_plate] = 0,
 }
 
 local cube_recipes_cache = nil
@@ -140,7 +157,7 @@ function cube_management.drop_before_leaving(player_index)
   local keep_going = true
   while keep_going do
     keep_going = false
-    for _, item in pairs(cubes) do
+    for _, item in pairs(cube_drop) do
       local removed = player.remove_item(item)
       if removed > 0 then
         player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)

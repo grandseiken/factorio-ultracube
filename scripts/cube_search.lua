@@ -6,6 +6,7 @@ local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
+local legendary_iron_plate = cube_management.cubes.legendary_iron_plate
 
 local inventory_entity_types = entity_types.inventory
 local vehicle_entity_types = entity_types.vehicle
@@ -38,6 +39,7 @@ local search_result_weight = {
   [cube_dormant] = 64,
   [cube_ultradense_phantom] = 1,
   [cube_dormant_phantom] = 1,
+  [legendary_iron_plate] = 64,
 }
 
 local cube_search = {}
@@ -126,6 +128,10 @@ local function check_ingredients(entity, ingredients)
   if count > 0 then
     if add_result(cube_dormant_phantom, count, entity) then return true end
   end
+  count = ingredients[legendary_iron_plate]
+  if count > 0 then
+    if add_result(legendary_iron_plate, count, entity) then return true end
+  end
   return false
 end
 
@@ -157,6 +163,10 @@ local function check_inventory(entity, inventory)
   if count > 0 then
     if add_result(cube_dormant_phantom, count, entity) then return true end
   end
+  count = inventory.get_item_count(legendary_iron_plate)
+  if count > 0 then
+    if add_result(legendary_iron_plate, count, entity) then return true end
+  end
   return false
 end
 
@@ -170,6 +180,8 @@ local function check_stack(entity, stack)
     if add_result(cube_ultradense_phantom, stack.count, entity) then return true end
   elseif item == cube_dormant_phantom then
     if add_result(cube_dormant_phantom, stack.count, entity) then return true end
+  elseif item == legendary_iron_plate then
+    if add_result(legendary_iron_plate, stack.count, entity) then return true end
   end
   return false
 end

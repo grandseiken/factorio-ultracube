@@ -27,7 +27,7 @@ local function create_initial_cube(player)
     end
   end
   if chest then
-    chest.insert(cubes.ultradense)
+    chest.insert(cube_management.cubes.ultradense)
     entity_cache.add(chest)
     cube_search.hint_entity(chest)
   else
