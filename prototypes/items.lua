@@ -449,7 +449,7 @@ data:extend({
       },
     },
     subgroup = "cube-synthesis-forbidden",
-    order = "3[step-2]",
+    order = "3[step-2a]",
     stack_size = 100,
   },
   {

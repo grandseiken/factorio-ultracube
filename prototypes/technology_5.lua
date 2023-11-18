@@ -147,6 +147,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-resonance-cascade"},
       {type = "unlock-recipe", recipe = "cube-ultradense-powder"},
       {type = "unlock-recipe", recipe = "cube-ultradense-mineral"},
+      {type = "unlock-recipe", recipe = "cube-ultradense-sap"},
       {type = "unlock-recipe", recipe = "cube-ultradense-matter-unit"},
       {type = "unlock-recipe", recipe = "cube-ultradense-composite"},
       {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube"},

@@ -27,8 +27,7 @@ require("prototypes.scripts.autoplace")
 -- antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
 -- - Maybe a way to turn energy -> antimatter
--- cascade: byproducts somewhere
--- - is there a way to have a loopback loop somehow without it being uncompletable?
+-- cascade: fix cubesearch
 -- Fix deep core ore generation (?)
 -- Beacons? (!?)
 -- Barreling?

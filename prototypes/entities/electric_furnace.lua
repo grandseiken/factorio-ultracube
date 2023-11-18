@@ -16,6 +16,18 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
+    fluid_boxes = {
+      {
+        production_type = "input",
+        pipe_picture = assembler2pipepictures(),
+        pipe_covers = pipecoverspictures(),
+        base_area = 10,
+        base_level = -1,
+        pipe_connections = {{type = "input", position = {0, -2}}},
+        secondary_draw_orders = {north = -1},
+      },
+      off_when_no_fluid_recipe = true,
+    },
     module_specification =
     {
       module_slots = 2,
