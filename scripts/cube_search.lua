@@ -78,7 +78,7 @@ local function clear_result_set()
 end
 
 local function add_result(item, count, entity)
-  if result_set.exclude[entity.unit_number] then
+  if entity and result_set.exclude[entity.unit_number] then
     return false
   end
   result_set.total_weight = result_set.total_weight + count * search_result_weight[item]
@@ -92,7 +92,9 @@ local function add_result(item, count, entity)
   entry.item = item
   entry.count = count
   entry.entity = entity
-  entry.unit_number = entity.unit_number
+  if entity then
+    entry.unit_number = entity.unit_number
+  end
   result_set.entries_size = size
   if item == cube_dormant_phantom or item == cube_ultradense_phantom then
     result_set.has_phantom = true
@@ -355,9 +357,13 @@ end
 
 local function cube_search_players()
   for _, player in pairs(game.players) do
+    local ingredients = cube_management.player_data(player).ingredients
     if player.character then
-      local done = check_ingredients(player.character, cube_management.player_data(player).ingredients)
+      local done = check_ingredients(player.character, ingredients)
       result_set.exclude[player.character.unit_number] = true
+      if done then return true end
+    else
+      local done = check_ingredients(nil, ingredients)
       if done then return true end
     end
   end
@@ -441,27 +447,29 @@ local function cube_search_local(last_entities_size, last_entities)
 
   for i = 1, last_entities_size do
     local e = last_entities[i]
-    local chunk_x, chunk_y = get_chunk_position(e.position)
-    local chunk_index = get_chunk_index(e.surface_index, chunk_x, chunk_y)
-    initial_chunks[chunk_index] = {
-      surface_index = e.surface_index,
-      chunk_x = chunk_x,
-      chunk_y = chunk_y,
-    }
-    local surface_entry = surface_map[e.surface_index]
-    if surface_entry then
-      surface_entry.x_min = math.min(surface_entry.x_min, chunk_x)
-      surface_entry.x_max = math.max(surface_entry.x_max, chunk_x)
-      surface_entry.y_min = math.min(surface_entry.y_min, chunk_y)
-      surface_entry.y_max = math.max(surface_entry.y_max, chunk_y)
-    else
-      surface_entry = {
-        x_min = chunk_x,
-        x_max = chunk_x,
-        y_min = chunk_y,
-        y_max = chunk_y,
+    if e.entity then
+      local chunk_x, chunk_y = get_chunk_position(e.position)
+      local chunk_index = get_chunk_index(e.surface_index, chunk_x, chunk_y)
+      initial_chunks[chunk_index] = {
+        surface_index = e.surface_index,
+        chunk_x = chunk_x,
+        chunk_y = chunk_y,
       }
-      surface_map[e.surface_index] = surface_entry
+      local surface_entry = surface_map[e.surface_index]
+      if surface_entry then
+        surface_entry.x_min = math.min(surface_entry.x_min, chunk_x)
+        surface_entry.x_max = math.max(surface_entry.x_max, chunk_x)
+        surface_entry.y_min = math.min(surface_entry.y_min, chunk_y)
+        surface_entry.y_max = math.max(surface_entry.y_max, chunk_y)
+      else
+        surface_entry = {
+          x_min = chunk_x,
+          x_max = chunk_x,
+          y_min = chunk_y,
+          y_max = chunk_y,
+        }
+        surface_map[e.surface_index] = surface_entry
+      end
     end
   end
   local cache = entity_cache.get()
@@ -718,29 +726,31 @@ local function process_results()
   for i = 1, result_set.entries_size do
     local result = result_set.entries[i]
     local entity = result.entity
-    fill_result(result)
     local e = cube_search_data.last_entities[i]
     e.entity = entity
-    e.position = entity.position
-    e.surface_index = entity.surface_index
+    if entity then
+      fill_result(result)
+      e.position = entity.position
+      e.surface_index = entity.surface_index
 
-    local pickup_target = nil
-    if entity.type == inserter_t then
-      pickup_target = entity.pickup_target
-    end
-    if entity.type == loader_t and entity.loader_type == output_t then
-      pickup_target = entity.loader_container
-    end
-    local en = entity.unit_number
-    if en and pickup_target then
-      local pn = pickup_target.unit_number
-      if pn then
-        local pickup_set = pickups[pn]
-        if not pickup_set then
-          pickup_set = {}
-          pickups[pn] = pickup_set
+      local pickup_target = nil
+      if entity.type == inserter_t then
+        pickup_target = entity.pickup_target
+      end
+      if entity.type == loader_t and entity.loader_type == output_t then
+        pickup_target = entity.loader_container
+      end
+      local en = entity.unit_number
+      if en and pickup_target then
+        local pn = pickup_target.unit_number
+        if pn then
+          local pickup_set = pickups[pn]
+          if not pickup_set then
+            pickup_set = {}
+            pickups[pn] = pickup_set
+          end
+          pickup_set[en] = entity
         end
-        pickup_set[en] = entity
       end
     end
   end
@@ -814,7 +824,7 @@ function cube_search.update(tick)
   if not done then
     if not cube_search_data.report_timer then
       if cube_search_data.was_refreshed then
-        cube_search_data.was_refresh = false
+        cube_search_data.was_refreshed = false
       else
         game.print("Ultracube warning: optimized cube control routines failed. This may be due to compatibility issues with another mod, or a bug that should be reported.")
         cube_search_data.report_timer = 600

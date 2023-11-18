@@ -81,12 +81,14 @@ local function on_player_created(e)
   end
 
   local inventory = player.get_inventory(defines.inventory.character_armor)
-  inventory.insert("cube-regulation-armor")
-  local grid = inventory[1].grid
-  grid.put {name = "cube-personal-roboport-equipment"}
-  grid.put {name = "cube-battery-equipment"}
-  grid.put {name = "cube-solar-panel-equipment"}
-  grid.put {name = "cube-solar-panel-equipment"}
+  if inventory then
+    inventory.insert("cube-regulation-armor")
+    local grid = inventory[1].grid
+    grid.put {name = "cube-personal-roboport-equipment"}
+    grid.put {name = "cube-battery-equipment"}
+    grid.put {name = "cube-solar-panel-equipment"}
+    grid.put {name = "cube-solar-panel-equipment"}
+  end
 end
 
 script.on_load(on_load)

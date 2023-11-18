@@ -40,7 +40,7 @@ data:extend({
       {"cube-calcium", 50},
     },
     results = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "steam", amount = 8000, temperature = 215},
       {"cube-basic-contemplation-unit", 100},
     },

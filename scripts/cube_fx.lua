@@ -70,30 +70,32 @@ local ultradense_projectile = {
 local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.item == cube_dormant or result.item == cube_dormant_phantom then
-      dormant_explosion.source = result.entity
-      dormant_explosion.position = result.position
-      dormant_explosion.target = result.position
-      result.entity.surface.create_entity(dormant_explosion)
-    elseif result.item == cube_ultradense_phantom then
-      phantom_explosion.source = result.entity
-      phantom_explosion.position = result.position
-      phantom_explosion.target = result.position
-      result.entity.surface.create_entity(phantom_explosion)
-    elseif result.velocity then
-      local position = result.position
-      local velocity = result.velocity
-      ultradense_projectile.source = result.entity
-      ultradense_projectile.position = position
-      ultradense_projectile.target.x = position.x + velocity.x
-      ultradense_projectile.target.y = position.y + velocity.y
-      ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
-      result.entity.surface.create_entity(ultradense_projectile)
-    else
-      ultradense_explosion.source = result.entity
-      ultradense_explosion.position = result.position
-      ultradense_explosion.target = result.position
-      result.entity.surface.create_entity(ultradense_explosion)
+    if result.entity then
+      if result.item == cube_dormant or result.item == cube_dormant_phantom then
+        dormant_explosion.source = result.entity
+        dormant_explosion.position = result.position
+        dormant_explosion.target = result.position
+        result.entity.surface.create_entity(dormant_explosion)
+      elseif result.item == cube_ultradense_phantom then
+        phantom_explosion.source = result.entity
+        phantom_explosion.position = result.position
+        phantom_explosion.target = result.position
+        result.entity.surface.create_entity(phantom_explosion)
+      elseif result.velocity then
+        local position = result.position
+        local velocity = result.velocity
+        ultradense_projectile.source = result.entity
+        ultradense_projectile.position = position
+        ultradense_projectile.target.x = position.x + velocity.x
+        ultradense_projectile.target.y = position.y + velocity.y
+        ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
+        result.entity.surface.create_entity(ultradense_projectile)
+      else
+        ultradense_explosion.source = result.entity
+        ultradense_explosion.position = result.position
+        ultradense_explosion.target = result.position
+        result.entity.surface.create_entity(ultradense_explosion)
+      end
     end
   end
 end
@@ -105,7 +107,7 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.height >= 0 then
+    if result.height >= 0 and result.entity then
       if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity
@@ -132,7 +134,7 @@ local function cube_vehicle_mod(size, results)
     local result = results[i]
     local entity = result.entity
 
-    if (result.item == cube_ultradense or result.item == cube_dormant) and
+    if result.entity and (result.item == cube_ultradense or result.item == cube_dormant) and
        (entity.type == "construction-robot" or entity.type == "logistic-robot") then
       local last_robot = cube_fx_data.last_robot
       if last_robot and entity.energy < last_robot.energy then
@@ -150,9 +152,9 @@ local function cube_vehicle_mod(size, results)
       new_last_robot = true
     end
 
-    if result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
+    if result.entity and result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
        entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
-       entity.burner.currently_burning.name == cube_ultradense  then
+       entity.burner.currently_burning.name == cube_ultradense then
       local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
       entity.surface.create_entity {
         name = "cube-periodic-ultradense-projectile",
@@ -165,7 +167,7 @@ local function cube_vehicle_mod(size, results)
       boomed = true
     end
 
-    if result.item == cube_ultradense and entity.type == "cargo-wagon" then
+    if result.entity and result.item == cube_ultradense and entity.type == "cargo-wagon" then
       local force = entity.force
       local train = entity.train
       if train and force.technologies["cube-transitive-ultralocomotion"] and

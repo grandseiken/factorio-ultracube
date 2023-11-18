@@ -96,7 +96,8 @@ function cube_management.player_data(player)
     data.ingredients[item] = 0
   end
   local recipes = cube_management.recipes()
-  if player.crafting_queue then
+  if (player.controller_type == defines.controllers.character or
+      player.controller_type == defines.controllers.god) and player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
       if recipe then
