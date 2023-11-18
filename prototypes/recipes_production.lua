@@ -423,4 +423,17 @@ data:extend({
     results = {{"cube-forbidden-ziggurat", 1}},
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-antimatter-reactor",
+    ingredients = {
+      {"refined-concrete", 800},
+      {"cube-sophisticated-matter-unit", 800},
+      {"cube-spectralite", 800},
+      {"cube-singularity-research-data", 400},
+    },
+    energy_required = 300,
+    results = {{"cube-antimatter-reactor", 1}},
+    enabled = false,
+  },
 })

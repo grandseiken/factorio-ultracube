@@ -81,8 +81,13 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-forbidden-ziggurat",
+    name = "cube-antimatter-reactor",
     order = "j",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-forbidden-ziggurat",
+    order = "k",
   },
   {
     type = "recipe-category",

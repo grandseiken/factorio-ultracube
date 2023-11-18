@@ -13,7 +13,7 @@ Features include:
 
 ![Thumbnail](thumbnail.png)
 
-This mod is a bit more difficult than vanilla Factorio, but in a way that should feel fairly unique.
+This mod is more difficult than vanilla Factorio, but in a way that should feel fairly unique.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps.
 
@@ -64,9 +64,9 @@ Relatively early-game spaghetti.
 
 # Compatibility
 
-This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities.
+This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities. Simple mods like Far Reach or Even Distribution should work fine.
 
-There is currently built-in support for the following mods:
+There is currently built-in support for the following optional mods:
 
 * [Flow Control](https://mods.factorio.com/mod/Flow%20Control) for assorted one-way valves
 * [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) for displaying circuit network values
@@ -74,12 +74,10 @@ There is currently built-in support for the following mods:
 * [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) for easily rearranging combinators without disconnecting circuit wires (gently recommended)
 * [Textplates](https://mods.factorio.com/mod/textplates) for annotating your factory
 
-Additionally, simple mods like Far Reach or Even Distribution should work fine.
+[AAI Loaders](https://mods.factorio.com/mod/aai-loaders) is also a integrated as a required dependency.
 
 If you would like to contribute/request support for compatibility with some other mod, you are welcome to open a pull request or github issue.
 
 # Dependencies and credits
 
-This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on [Krastorio2](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. Many thanks to the Krastorio 2 developers for their work and for making this possible.
-
-It also incorporates loaders from [AAI Loaders](https://mods.factorio.com/mod/aai-loaders).
+This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on [Krastorio2](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 team, since this mod wouldn't have happened without their work.

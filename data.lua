@@ -14,23 +14,26 @@ require("prototypes.scripts.autoplace")
 
 -- RELEASE BLOCKERS
 -------------------
--- Teleporter (how do we do it with entities?)
--- Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- 1. Teleporter (how do we do it with entities?)
+-- 2. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
--- Mystery furnace fueled by phantom cubes
+-- 3. Mystery furnace fueled by phantom cubes
 -- - strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
--- Last armor/equipments
+-- 4. Last armor/equipments/upgrades
 -- - How to get singularity data
 -- - Maybe use temperature mechanics with crazy heating mixing?
--- More use for deep crystal, unobtainium?
--- Infinite technologies
--- antimatter + matter unit (+cube?) -> endgame antimatter power
+-- - Infinite technologies
+-- 5. antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
 -- - Maybe a way to turn energy -> antimatter
--- Fix deep core ore generation (?)
--- Beacons? (!?)
--- Barreling?
--- Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- - power directly from cubetime? (accumulators)
+-- 6. Various
+-- - Phantom FX.
+-- - More use for deep crystal, unobtainium?
+-- - Fix deep core ore generation (?)
+-- - Beacons? (!?)
+-- - Barreling?
+-- 7. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
@@ -56,12 +59,6 @@ require("prototypes.scripts.autoplace")
 -- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
 -- Kovarex redemption: extra fluid ingredients/results? Another nuclear ingredient to manage levels of (e.g. radioactive sludge)?
 -- Make sure reactor fast-replace is working (seemed odd when picked up) plus 2 burnt result slots
--- idea for (final) power solution: requires tons of accumulators, because it makes power directly from cube time?
--- Some other thing where you only get 1 item per set amount of time no matter what somehow (!!!)
-
--- All new things from now on should be interesting somehow
--- possibly some level 2 techs may need to go behind science cards 3/4 - there's not much there yet
--- More uses for ghost/deep crystal (in teleportation fuel at least?)
 -- power armor v2 (??? - haunted furnace?)
 
 -- Random thoughts.
@@ -77,8 +74,6 @@ require("prototypes.scripts.autoplace")
 -- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
 --                           original recipes occasionally - how exactly? and/or without conversion, reagents)
 ----- Or: maybe some way of converting like this, but high power cost, e.g. power -> more matter?
--- Cube teleportation (implement, + teleportation gps module)
--- Even better equipment
 -- unobtainium?
 -- After science 3/4 or nearby, later ideas...
 -- Few other things with combining the earlier trees
@@ -122,6 +117,7 @@ require("prototypes.technology_compatibility")
 require("prototypes.technology_upgrades")
 require("prototypes.tweaks")
 
+require("prototypes.entities.antimatter_reactor")
 require("prototypes.entities.belts")
 require("prototypes.entities.boiler")
 require("prototypes.entities.chemical_plant")

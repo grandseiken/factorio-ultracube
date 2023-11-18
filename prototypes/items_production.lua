@@ -282,4 +282,15 @@ data:extend({
     stack_size = 1,
     flags = {"not-stackable"},
   },
+  {
+    type = "item",
+    name = "cube-antimatter-reactor",
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-final-machines",
+    order = "1[reactor]",
+    place_result = "cube-antimatter-reactor",
+    stack_size = 1,
+    flags = {"not-stackable"},
+  },
 })

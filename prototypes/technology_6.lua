@@ -48,6 +48,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-antimatter-reactor",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-antimatter-reactor"},
+    },
+    prerequisites = {
+      "cube-complete-annihilation-card",
+      "cube-refined-concrete",
+    },
+    unit = tech_cost_unit("6", 600),
+    order = "6-1-0",
+  },
+  {
+    type = "technology",
     name = "cube-unobtainium",
     icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
     icon_size = 256, icon_mipmaps = 4,
@@ -56,6 +71,6 @@ data:extend({
     },
     prerequisites = {"cube-complete-annihilation-card"},
     unit = tech_cost_unit("x", 600),
-    order = "5-9-0",
+    order = "6-1-1",
   },
 })
