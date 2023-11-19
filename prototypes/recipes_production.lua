@@ -357,6 +357,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-mystery-furnace",
+    ingredients = {
+      {"concrete", 10},
+      {"pipe", 2},
+      {"cube-rare-metals", 16},
+      {"cube-ghost-crystal", 12},
+    },
+    energy_required = 12,
+    results = {{"cube-mystery-furnace", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-molecular-blender",
     ingredients = {
       {"refined-concrete", 200},

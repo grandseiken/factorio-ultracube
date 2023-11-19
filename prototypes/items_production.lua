@@ -263,6 +263,16 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-mystery-furnace",
+    icon = "__base__/graphics/icons/steel-furnace.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-advanced-machines",
+    order = "d[mystery]",
+    place_result = "cube-mystery-furnace",
+    stack_size = 20,
+  },
+  {
+    type = "item",
     name = "cube-experimental-teleporter",
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
     icon_size = 64, icon_mipmaps = 4,

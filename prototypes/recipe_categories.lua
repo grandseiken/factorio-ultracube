@@ -76,18 +76,23 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-quantum-decoder",
+    name = "cube-mystery-furnace",
     order = "i",
   },
   {
     type = "recipe-category",
-    name = "cube-antimatter-reactor",
+    name = "cube-quantum-decoder",
     order = "j",
   },
   {
     type = "recipe-category",
-    name = "cube-forbidden-ziggurat",
+    name = "cube-antimatter-reactor",
     order = "k",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-forbidden-ziggurat",
+    order = "l",
   },
   {
     type = "recipe-category",

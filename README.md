@@ -8,7 +8,7 @@ An overhaul mod for Factorio featuring:
 
 ## Overview
 
-This is a mod that makes Factorio significantly more difficult, but in a way that should feel fairly unique.
+This mod makes Factorio significantly more difficult, but in a way that should feel fairly unique.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps.
 
@@ -22,7 +22,7 @@ The technology tree has been rebuilt from scratch. Some production chains share 
 
 The aim is to have roughly comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
 
-## You might like this mod if:
+### You might like this mod if:
 
 * You're open to a very different take on the Factorio experience.
 * You enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
@@ -30,7 +30,7 @@ The aim is to have roughly comparable scope to the base game in terms of raw vol
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
 
-## You might not like this mod if:
+### You might not like this mod if:
 
 * You're looking for a "vanilla plus" experience.
 * You need compatibility with other large/overhaul mods.
@@ -38,14 +38,13 @@ The aim is to have roughly comparable scope to the base game in terms of raw vol
 * You're not willing to experiment at least a little bit with combinators and circuit conditions.
 * The idea of being unable to calculate exact throughput numbers for production chains sounds horrifying.
 
-# Screenshots
+### Development status
 
-![Early-game spaghetti](screenshots/spaghetti.jpg)
-Relatively early-game spaghetti.
+Endgame is not quite finished. Subject to balancing. Feedback welcome.
 
-# FAQ
+## FAQ
 
-* **Where are the biters?** Currently, there are no military technologies and biters are disabled. This decision might be revisited later.
+* **Where are the biters?** Currently there are no military technologies and biters are disabled. This decision might be revisited later.
 
 * **Where are all the technologies?** Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science.
 
@@ -59,7 +58,7 @@ Relatively early-game spaghetti.
 
 * **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is an [issue with Factorio's assembling machine logic](https://forums.factorio.com/viewtopic.php?f=7&t=101436). It seems that it will be fixed with the DLC release. Until then, you'll just have to work around it. (This bug is also the reason productivity modules aren't allowed in cube-powered recipes: bonus outputs block progress, get the cube stuck and make things worse.)
 
-# Compatibility
+## Compatibility
 
 This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities. Simple mods like Far Reach or Even Distribution should work fine.
 
@@ -75,6 +74,6 @@ There is currently built-in support for the following optional mods:
 
 If you would like to contribute/request support for compatibility with some other mod, you are welcome to open a pull request or github issue.
 
-# Dependencies and credits
+## Dependencies and credits
 
 This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am very grateful to the Krastorio 2 team, since this mod wouldn't have happened without their work.

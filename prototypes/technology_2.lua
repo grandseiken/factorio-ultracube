@@ -780,7 +780,6 @@ data:extend({
     prerequisites = {
       "cube-electric-mining-drill-mk2",
       "cube-fuel-refinery",
-      "cube-concrete",
     },
     unit = tech_cost_unit("2", 240),
     order = "2-7-0",

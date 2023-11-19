@@ -214,6 +214,12 @@ data:extend({
     group = "cube-tools",
     order = "z"
   },
+  {
+    type = "item-subgroup",
+    name = "cube-mystery",
+    group = "cube-tools",
+    order = "zz",
+  },
 
   {
     type = "item-subgroup",

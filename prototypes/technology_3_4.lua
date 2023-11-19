@@ -234,6 +234,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-mystery-furnace",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__base__/graphics/technology/advanced-material-processing.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-mystery-furnace"},
+    },
+    prerequisites = {"cube-synthetic-premonition-card"},
+    unit = tech_cost_unit("4", 240),
+    order = "3-1-5",
+  },
+  {
+    type = "technology",
     name = "cube-quantum-decoder",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/quantum-computer.png",
@@ -256,7 +268,7 @@ data:extend({
       "cube-deep-crystallization",
     },
     unit = tech_cost_unit("4", 300),
-    order = "3-1-5",
+    order = "3-1-6",
   },
   {
     type = "technology",

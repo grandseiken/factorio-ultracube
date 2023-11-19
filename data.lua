@@ -141,6 +141,7 @@ require("prototypes.entities.inserters")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
 require("prototypes.entities.molecular_blender")
+require("prototypes.entities.mystery_furnace")
 require("prototypes.entities.nuclear_reactor")
 require("prototypes.entities.particle_phase_aligner")
 require("prototypes.entities.quantum_decoder")
@@ -152,6 +153,7 @@ require("prototypes.entities.stygian_energy_lab")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
 
+require("prototypes.recipes_mystery")
 for _, t in pairs(data.raw.technology) do
   t.enabled = false
 end
