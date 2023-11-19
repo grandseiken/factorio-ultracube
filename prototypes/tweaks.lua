@@ -32,6 +32,7 @@ data.raw.item["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-rada
 data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["coal"].fuel_category = "cube-fuel-general"
+data.raw.item["coal"].order = "f[2-coal]"
 data.raw.item["sulfur"].subgroup = "cube-chemical-intermediates"
 data.raw.item["sulfur"].order = "0[a-sulfur]"
 data.raw.item["explosives"].subgroup = "cube-chemical-intermediates"

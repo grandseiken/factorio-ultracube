@@ -158,6 +158,7 @@ for i = 0, 5 do
       order = "z[" .. i .. "]",
       enabled = true,
       hide_from_player_crafting = true,
+      unlock_results = false,
     },
   })
 end

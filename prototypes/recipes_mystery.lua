@@ -85,6 +85,7 @@ local function add_mystery(a, b, c, d, e)
       subgroup = "cube-mystery",
       hidden = true,
       hide_from_player_crafting = true,
+      unlock_results = false,
     }
   })
 end

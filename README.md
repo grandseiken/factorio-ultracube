@@ -6,9 +6,9 @@ An overhaul mod for Factorio featuring:
 * Six tiers of science and a new endgame goal.
 * Multiplayer compatibility.
 
-## Overview
+# Overview
 
-This mod makes Factorio significantly more difficult, but in a way that should feel fairly unique.
+This mod makes Factorio quite a bit more difficult, but in a way that should feel fairly unique.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps. Everything from research to power generation ultimately depends on it.
 
@@ -18,29 +18,62 @@ At any given level of technological progress, there will exist some theoretical 
 
 The technology tree has been carefully rebuilt from scratch to fit, and there are some new tools to play with, too.
 
-There aren't huge numbers of intermediate products or incredibly involved recipe chains. There's more fluid and byproduct handling, but hopefully nothing masochistic. Additional complexity and difficulty lies largely in logistics and macro-level interactions.
-
-The aim is to have roughly comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
-
-### You might like this mod if:
+## You might like this mod if:
 
 * You enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
 * You like the idea of a dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
 
-### You might not like this mod if:
+## You might not like this mod if:
 
 * You're looking for a "vanilla plus" experience.
 * You need compatibility with other large/overhaul mods.
 * You can't live without the ability to scale up a base arbitrarily. While there are still benefits in going big, you can't always just stamp down more production in the usual way here.
 * You're not willing to experiment at least a little bit with combinators and circuit conditions.
 
-### Development status
+## Comparison to other overhaul mods
+
+There aren't huge numbers of intermediate products or incredibly involved recipe chains. There's more fluid and byproduct handling, but hopefully nothing masochistic. Additional complexity and difficulty lies largely in logistics and macro-level interactions.
+
+The aim is to have roughly comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
+
+# Development status
 
 Endgame is not quite finished. Subject to balancing. Feedback welcome.
 
-## FAQ
+# Compatibility
+
+This is an overhaul mod that removes most standard resources, ingredients, technologies and entities from the game.
+
+As you might expect, compatibility with other large overhaul mods that make their own drastic changes to the technology tree is unlikely.
+
+Quality-of-life mods without new technologies or recipes like [Far Reach](https://mods.factorio.com/mod/far-reach) or [Even Distribution](https://mods.factorio.com/mod/even-distribution) should mostly work just fine.
+
+Mods that add new recipes or technologies must be specifically adapted to work with Ultracube. Technologies need to be changed to fit into the Ultracube tech tree with appropriate prerequisites, and be researched with Ultracube science cards. Recipes need to be changed to have Ultracube ingredients. Support can be added with either conditional logic in Ultracube code to check for the presence of the other mod and make the necessary adjustments, or the other way around.
+
+Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items at all times (necessary for various UX and technical reasons) in a UPS-friendly manner.
+
+Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints is likely to result in something that doesn't make a whole lot of sense.
+
+## Compatible mods
+
+The following mods have been adapted to work with Ultracube:
+
+* [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) (integrated as standard)
+* [Flow Control](https://mods.factorio.com/mod/Flow%20Control)
+* [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes)
+* [Pushbutton](https://mods.factorio.com/mod/pushbutton)
+* [Picker Dollies](https://mods.factorio.com/mod/PickerDollies)
+* [Textplates](https://mods.factorio.com/mod/textplates)
+
+This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
+
+## Compatibility guide
+
+TODO: make it easy to for other mod authors to add compatibility for their mod and describe here how to do so.
+
+# FAQ
 
 * **Where are the biters?** Currently there are no military technologies and biters are disabled. This decision might be revisited later.
 
@@ -56,22 +89,6 @@ Endgame is not quite finished. Subject to balancing. Feedback welcome.
 
 * **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is an [issue with Factorio's assembling machine logic](https://forums.factorio.com/viewtopic.php?f=7&t=101436). It seems that it will be fixed with the DLC release. Until then, you'll just have to work around it. (This bug is also the reason productivity modules aren't allowed in cube-powered recipes: bonus outputs block progress, get the cube stuck and make things worse.)
 
-## Compatibility
-
-This is an overhaul mod that removes many standard ingredients and entities from the game. It's unlikely to be compatible with other mods that haven't been specifically adapted to work with it, unless they don't depend on any vanilla items or entities. Simple mods like Far Reach or Even Distribution should work fine.
-
-There is currently built-in support for the following optional mods:
-
-* [Flow Control](https://mods.factorio.com/mod/Flow%20Control) for assorted one-way valves
-* [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) for displaying circuit network values
-* [Pushbutton](https://mods.factorio.com/mod/pushbutton) for manual input of circuit signals
-* [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) for easily rearranging combinators without disconnecting circuit wires (gently recommended)
-* [Textplates](https://mods.factorio.com/mod/textplates) for annotating your factory
-
-[AAI Loaders](https://mods.factorio.com/mod/aai-loaders) is also a integrated as a required dependency.
-
-If you would like to contribute/request support for compatibility with some other mod, you are welcome to open a pull request or github issue.
-
-## Dependencies and credits
+# Dependencies and credits
 
 This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.

@@ -29,7 +29,11 @@ require("prototypes.scripts.autoplace")
 -- - Maybe a way to turn energy -> antimatter
 -- - power directly from cubetime? (accumulators)
 -- 6. Various
--- - Fix filter-option unlocking etc (+signals?)
+-- - Fix filter-option unlocking etc:
+-- - - armor mk2; unobtainium; maybe all the hidden lvl1 stuff from mystery furnace? raw resources?
+-- - - with dummy recipe/technologies that get researched by script to show things?
+-- - - can signals be hidden?
+-- - Reorganise compatibility to make other mods easier.
 -- - Phantom FX.
 -- - More use for deep crystal, unobtainium?
 -- - Fix deep core ore generation (?)

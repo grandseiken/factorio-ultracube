@@ -36,7 +36,7 @@ local function create_initial_cube(player)
 end
 
 local function on_picker_dolly_moved(e)
-  entity_cache.add(e.moved_entity, nil, e.start_pos)
+  entity_cache.remove(e.moved_entity, nil, e.start_pos)
   cube_search.remove_entity(e.entity)
   entity_cache.add(e.moved_entity)
 end

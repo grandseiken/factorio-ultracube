@@ -35,7 +35,7 @@ data:extend({
       },
     },
     subgroup = "raw-resource",
-    order = "x[0-raw-rare-metals]",
+    order = "e[0-raw-rare-metals]",
     stack_size = 100,
   },
   {
@@ -364,7 +364,7 @@ data:extend({
       },
     },
     subgroup = "raw-resource",
-    order = "x[1-deep-core-ore]",
+    order = "f[1-deep-core-ore]",
     stack_size = 200,
   },
   {
