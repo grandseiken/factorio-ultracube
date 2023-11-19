@@ -185,7 +185,7 @@ data:extend({
     icon = "__base__/graphics/icons/steam-turbine.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "energy",
-    order = "x[1-turbine]",
+    order = "b[steam-power]-c[heavy-turbine]",
     place_result = "cube-heavy-turbine",
     stack_size = 10,
   },

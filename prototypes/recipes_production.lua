@@ -327,8 +327,8 @@ data:extend({
     ingredients = {
       {"concrete", 500},
       {"cube-rare-metals", 500},
-      {"cube-advanced-circuit", 500},
-      {"cube-sophisticated-matter-unit", 500},
+      {"cube-advanced-circuit", 200},
+      {"cube-sophisticated-matter-unit", 400},
     },
     energy_required = 30,
     results = {{"cube-nuclear-reactor", 1}},
@@ -444,6 +444,7 @@ data:extend({
       {"cube-sophisticated-matter-unit", 800},
       {"cube-spectralite", 800},
       {"cube-singularity-research-data", 400},
+      {"cube-spectral-processor", 200},
     },
     energy_required = 300,
     results = {{"cube-antimatter-reactor", 1}},

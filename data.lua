@@ -10,18 +10,19 @@ require("prototypes.scripts.autoplace")
 -- - advanced engine tech graphic + name (?)
 -- - emotional synthesis icon + tech graphic
 -- make cube sparks aligned per-machine?
--- make nuclear reactor a dummy so copy/paste undo works properly
+-- make nuclear reactor a dummy so copy/paste undo works properly?
+-- - except then its description won't show up as a reactor...?
 
 -- RELEASE BLOCKERS
 -------------------
 -- 1. Teleporter (how do we do it with entities?)
--- 2. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- 2. Deep techs
+-- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
--- 3. Mystery furnace fueled by phantom cubes
--- - strange device / mystery furnace (downgrades items, gives you potatoes, but some secret good things)
--- 4. Last armor/equipments/upgrades
 -- - How to get singularity data
 -- - Maybe use temperature mechanics with crazy heating mixing?
+-- 3. Finish mystery furnace
+-- 4. Last armor/equipments/upgrades
 -- - Infinite technologies
 -- 5. antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
