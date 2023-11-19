@@ -1,30 +1,29 @@
 ![Thumbnail](thumbnail.png)
 
 An overhaul mod for Factorio featuring:
-* Completely new tech tree and recipes.
+* Completely reworked tech tree and recipes.
 * Unique logistic challenges and assorted devious automation puzzles.
-* Six tiers of science and a different endgame goal.
+* Six tiers of science and a new endgame goal.
 * Multiplayer compatibility.
 
 ## Overview
 
 This mod makes Factorio significantly more difficult, but in a way that should feel fairly unique.
 
-The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps.
+The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps. Everything from research to power generation ultimately depends on it.
 
 As a result, substantial portions of the factory resist copy-paste expansion, and can be made more efficient only by solving logistical problems, making design improvements, or unlocking new technologies.
 
 At any given level of technological progress, there will exist some theoretical upper bound on the potential output of your factory. Getting close to the limit will be tricky: you'll need to set up automation to intelligently route the cube where it's needed, deal with sporadically-running high-throughput machines, and probably invest in a fair amount of circuit network trickery.
 
-There aren't huge numbers of intermediate products or incredibly involved recipe chains. There's more fluid and byproduct handling, but hopefully nothing masochistic. Additional complexity and difficulty lies mostly in logistics and macro-level interactions.
+The technology tree has been carefully rebuilt from scratch to fit, and there are some new tools to play with, too.
 
-The technology tree has been rebuilt from scratch. Some production chains share similarities with vanilla equivalents, but there's usually some kind of twist. Several traditional staples are absent.
+There aren't huge numbers of intermediate products or incredibly involved recipe chains. There's more fluid and byproduct handling, but hopefully nothing masochistic. Additional complexity and difficulty lies largely in logistics and macro-level interactions.
 
 The aim is to have roughly comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
 
 ### You might like this mod if:
 
-* You're open to a very different take on the Factorio experience.
 * You enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
 * You like the idea of a dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
@@ -34,9 +33,8 @@ The aim is to have roughly comparable scope to the base game in terms of raw vol
 
 * You're looking for a "vanilla plus" experience.
 * You need compatibility with other large/overhaul mods.
-* You can't live without the ability to scale up a base arbitrarily. While there are still benefits in going big, in this mod you can't always just stamp down more production.
+* You can't live without the ability to scale up a base arbitrarily. While there are still benefits in going big, you can't always just stamp down more production in the usual way here.
 * You're not willing to experiment at least a little bit with combinators and circuit conditions.
-* The idea of being unable to calculate exact throughput numbers for production chains sounds horrifying.
 
 ### Development status
 
@@ -76,4 +74,4 @@ If you would like to contribute/request support for compatibility with some othe
 
 ## Dependencies and credits
 
-This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am very grateful to the Krastorio 2 team, since this mod wouldn't have happened without their work.
+This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.

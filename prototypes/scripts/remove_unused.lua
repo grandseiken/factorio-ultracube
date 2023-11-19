@@ -81,6 +81,7 @@ local whitelist = make_set({
   "exoskeleton-equipment",
   "battery-mk2-equipment",
   "personal-roboport-mk2-equipment",
+  "fusion-reactor-equipment",
   -- Compatibility.
   "nixie-tube",
   "nixie-tube-alpha",

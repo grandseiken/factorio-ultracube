@@ -29,6 +29,7 @@ require("prototypes.scripts.autoplace")
 -- - Maybe a way to turn energy -> antimatter
 -- - power directly from cubetime? (accumulators)
 -- 6. Various
+-- - Fix filter-option unlocking etc (+signals?)
 -- - Phantom FX.
 -- - More use for deep crystal, unobtainium?
 -- - Fix deep core ore generation (?)

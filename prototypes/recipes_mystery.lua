@@ -48,7 +48,16 @@
 ---------------------
 ---------------------
 
-local item_prototypes = {"item", "tool", "item-with-entity-data", "capsule", "rail-planner"}
+local item_prototypes = {
+  "item",
+  "tool",
+  "armor",
+  "module",
+  "item-with-entity-data",
+  "capsule",
+  "rail-planner",
+  "spidertron-remote",
+}
 local function add_mystery(a, b, c, d, e)
   local item = nil
   for _, t in ipairs(item_prototypes) do
@@ -252,7 +261,7 @@ add_mystery(4, "cube-fabricator", "cube-basic-motor-unit")
 add_mystery(8, "cube-molecular-blender", "cube-advanced-engine")
 add_mystery(4, "cube-quantum-decoder", "cube-spectral-processor")
 add_mystery(2, "cube-particle-phase-aligner", "cube-spectral-processor")
-add_mystery(32, "cube-mystery-furnace", "cube-potato")
+add_mystery(16, "cube-mystery-furnace", "cube-potato")
 
 add_mystery(2, "cube-lab", "cube-basic-contemplation-unit")
 add_mystery(4, "radar", "cube-electronic-circuit")
@@ -261,3 +270,48 @@ add_mystery(4, "cube-experimental-teleporter", "cube-teleportation-control-modul
 
 add_mystery(16, "cube-forbidden-ziggurat", "spidertron")
 add_mystery(16, "cube-antimatter-reactor", "cube-basic-matter-unit")
+
+add_mystery(1, "cube-basic-matter-unit", "cube-potato")
+add_mystery(1, "cube-basic-antimatter-unit", "cube-basic-matter-unit")
+add_mystery(1, "cube-rare-metals", "cube-basic-matter-unit")
+add_mystery(1, "wood", "coal")
+add_mystery(1, "cube-n-dimensional-widget", "cube-rare-metals")
+
+add_mystery(2, "cube-regulation-armor", "cube-modular-armor")
+add_mystery(4, "cube-modular-armor", "cube-power-armor")
+add_mystery(8, "cube-power-armor", "cube-power-armor-mk2")
+add_mystery(16, "cube-power-armor-mk2", "cube-potato")
+
+add_mystery(4, "fusion-reactor-equipment", "uranium-fuel-cell")
+add_mystery(1, "cube-solar-panel-equipment", "cube-advanced-circuit")
+add_mystery(2, "cube-solar-panel-equipment-mk2", "cube-solar-panel-equipment")
+add_mystery(1, "cube-battery-equipment", "battery")
+add_mystery(2, "battery-mk2-equipment", "cube-battery-equipment")
+
+add_mystery(2, "exoskeleton-equipment", "cube-speed-module")
+add_mystery(4, "cube-exoskeleton-equipment-mk2", "cube-speed-module-v2")
+add_mystery(2, "cube-personal-roboport-equipment", "cube-advanced-circuit")
+add_mystery(4, "personal-roboport-mk2-equipment", "cube-personal-roboport-equipment")
+add_mystery(1, "night-vision-equipment", "small-lamp")
+
+add_mystery(2, "car", "cube-advanced-engine")
+add_mystery(4, "spidertron", "raw-fish")
+add_mystery(1, "spidertron-remote", "raw-fish")
+
+add_mystery(1, "stone-wall", "stone-brick")
+add_mystery(1, "gate", "stone-wall")
+
+add_mystery(1, "cube-modular-casing", "cube-burnt-out-modular-casing")
+add_mystery(1, "cube-burnt-out-modular-casing", "cube-potato")
+
+add_mystery(1, "cube-speed-module", "cube-modular-casing")
+add_mystery(1, "cube-productivity-module", "cube-modular-casing")
+add_mystery(1, "cube-efficiency-module", "cube-modular-casing")
+
+add_mystery(1, "cube-speed-module-v2", "cube-speed-module")
+add_mystery(1, "cube-productivity-module-v2", "cube-productivity-module")
+add_mystery(1, "cube-efficiency-module-v2", "cube-efficiency-module")
+
+add_mystery(1, "cube-speed-module-v3", "cube-speed-module-v2")
+add_mystery(1, "cube-productivity-module-v3", "cube-productivity-module-v2")
+add_mystery(1, "cube-efficiency-module-v3", "cube-efficiency-module-v2")

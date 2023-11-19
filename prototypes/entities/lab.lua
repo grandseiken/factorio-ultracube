@@ -282,6 +282,7 @@ data:extend({
       "cube-abstract-interrogation-card",
       "cube-deep-introspection-card",
       "cube-synthetic-premonition-card",
+      "cube-complete-annihilation-card",
     },
     module_specification = {
       module_slots = 2,
