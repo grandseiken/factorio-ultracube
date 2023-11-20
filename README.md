@@ -8,7 +8,7 @@ An overhaul mod for Factorio featuring:
 
 # Overview
 
-This mod makes Factorio quite a bit more difficult, but in a way that should feel fairly unique.
+This mod overhauls Factorio in a way that should hopefully feel fairly unique.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps. Everything from research to power generation ultimately depends on it.
 
@@ -29,18 +29,24 @@ The technology tree has been carefully rebuilt from scratch to fit, and there ar
 
 * You're looking for a "vanilla plus" experience.
 * You need compatibility with other large/overhaul mods.
-* You can't live without the ability to scale up a base arbitrarily. While there are still benefits in going big, you can't always just stamp down more production in the usual way here.
+* You can't live without the ability to scale up production arbitrarily. (There are still benefits in going big, and ways to do so, but you can't always just stamp down more machines in the usual way.)
 * You're not willing to experiment at least a little bit with combinators and circuit conditions.
 
 ## Comparison to other overhaul mods
 
-There aren't huge numbers of intermediate products or incredibly involved recipe chains. There's more fluid and byproduct handling, but hopefully nothing masochistic. Additional complexity and difficulty lies largely in logistics and macro-level interactions.
+In terms of raw volume of content, Ultracube probably lies somewhere between the base game and Krastorio 2. Playtime might vary, but the scope isn't excessive.
 
-The aim is to have roughly comparable scope to the base game in terms of raw volume of content, but to frequently present new and interesting challenges.
+As for difficulty, it's trickier to compare. Ultracube mostly avoids the long, complicated recipe chains with many intermediate products often found in overhaul mods. There are only a handful of raw resources, and many recipes are fairly simple. There's a bit more fluid and byproduct handling, but nothing masochistic.
 
-# Development status
+Instead, additional complexity comes largely from logistics and macro-level interactions. While individual recipes might not seem complicated on the surface, it'll be difficult to make them all run efficiently together. Other processes might need a bit of careful planning or lateral thinking to get working at all, even if they only have a few steps.
 
-Endgame is not quite finished. Subject to balancing. Feedback welcome.
+Progression should be relatively clear, without too much hunting around in the tech tree for what's next, but at the same frequently presenting new and interesting challenges.
+
+The overall feel is probably closer to something like Freight Forwarding (but maybe a bit more radical) than other overhauls.
+
+## Development status and roadmap
+
+Endgame is not quite finished, and especially the latter half or so of the mod will likely be subject to some balance passes after further playtesting. Feedback is welcome!
 
 # Compatibility
 
