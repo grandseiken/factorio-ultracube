@@ -282,7 +282,7 @@ data:extend({
     ingredients = {
       {"sulfur", 1},
       {"cube-calcium", 1},
-      {type = "fluid", name = "cube-unstable-gas", amount = 80},
+      {type = "fluid", name = "cube-unstable-gas", amount = 25},
     },
     results = {{"cube-vehicle-fuel", 1}},
     category = "cube-fuel-refinery",

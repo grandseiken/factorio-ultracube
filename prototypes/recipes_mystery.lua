@@ -48,6 +48,36 @@
 ---------------------
 ---------------------
 
+local function add_mystery_dummy(name, item)
+  data:extend({
+    {
+      type = "recipe",
+      name = name,
+      icon = "__base__/graphics/icons/steel-furnace.png",
+      icon_size = 64, icon_mipmaps = 4,
+      localised_name = {"recipe-name.cube-mystery"},
+      ingredients = {},
+      results = {{item, 1}},
+      energy_required = 1,
+      category = "cube-uncraftable",
+      subgroup = "cube-mystery",
+      enabled = false,
+      hidden = true,
+      hide_from_player_crafting = true,
+      unlock_results = true,
+    }
+  })
+end
+
+add_mystery_dummy("cube-mystery-furnace-dummy-0", "cube-power-armor-mk2")
+add_mystery_dummy("cube-mystery-furnace-dummy-1", "cube-spoiled-potato")
+add_mystery_dummy("cube-mystery-furnace-dummy-2", "transport-belt")
+add_mystery_dummy("cube-mystery-furnace-dummy-3", "underground-belt")
+add_mystery_dummy("cube-mystery-furnace-dummy-4", "splitter")
+add_mystery_dummy("cube-mystery-furnace-dummy-5", "aai-loader")
+add_mystery_dummy("cube-mystery-furnace-dummy-6", "inserter")
+add_mystery_dummy("cube-mystery-furnace-dummy-7", "small-electric-pole")
+
 local item_prototypes = {
   "item",
   "tool",
@@ -206,10 +236,6 @@ add_mystery(1, "refined-hazard-concrete", "refined-concrete")
 add_mystery(1, "landfill", "stone")
 add_mystery(1, "cliff-explosives", "explosives")
 
-add_mystery(2, "uranium-238", "cube-uranium-234")
-add_mystery(2, "uranium-235", "cube-uranium-234")
-add_mystery(2, "cube-uranium-234", "cube-uranium-234", 1, 2)
-
 if mods["textplates"] then
   add_mystery(1, "textplate-small-plastic", "cube-basic-matter-unit")
   add_mystery(1, "textplate-large-plastic", "cube-basic-matter-unit")
@@ -272,11 +298,79 @@ add_mystery(4, "cube-experimental-teleporter", "cube-teleportation-control-modul
 add_mystery(16, "cube-forbidden-ziggurat", "spidertron")
 add_mystery(16, "cube-antimatter-reactor", "cube-basic-matter-unit")
 
-add_mystery(1, "cube-basic-matter-unit", "cube-potato")
+add_mystery(4, "cube-basic-matter-unit", "cube-potato", 10, 1)
 add_mystery(1, "cube-basic-antimatter-unit", "cube-basic-matter-unit")
-add_mystery(1, "cube-rare-metals", "cube-basic-matter-unit")
-add_mystery(1, "wood", "coal")
+add_mystery(1, "cube-rare-metals", "cube-basic-matter-unit", 2, 1)
 add_mystery(1, "cube-n-dimensional-widget", "cube-rare-metals")
+
+add_mystery(2, "wood", "coal", 2, 1)
+add_mystery(1, "cube-potato", "cube-spoiled-potato")
+add_mystery(4, "cube-spoiled-potato", "cube-residual-tendrils", 1, 666)
+add_mystery(1, "cube-vehicle-fuel", "sulfur")
+add_mystery(1, "cube-nuclear-fuel", "cube-vehicle-fuel")
+add_mystery(1, "cube-condensed-fuel", "cube-vehicle-fuel")
+
+add_mystery(1, "cube-refined-rare-metals", "cube-raw-rare-metals")
+add_mystery(1, "cube-mash", "cube-spoiled-potato")
+add_mystery(1, "cube-sand", "cube-residual-tendrils")
+add_mystery(1, "cube-deep-powder", "coal", 2, 1)
+add_mystery(1, "cube-residual-tendrils", "cube-residual-tendrils", 1, 4)
+
+add_mystery(1, "stone-brick", "stone")
+add_mystery(1, "cube-glass", "stone-brick")
+add_mystery(2, "cube-sophisticated-matter-unit", "cube-basic-matter-unit")
+add_mystery(4, "cube-resplendent-plate", "cube-sophisticated-matter-unit")
+add_mystery(1, "cube-spectralite", "cube-ghost-crystal")
+add_mystery(1, "cube-ghost-wire", "cube-residual-tendrils")
+
+add_mystery(1, "cube-basic-motor-unit", "pipe")
+add_mystery(2, "cube-advanced-engine", "cube-basic-motor-unit")
+add_mystery(4, "cube-arcane-drive", "cube-advanced-engine")
+add_mystery(2, "copper-cable", "cube-electronic-circuit", 8, 1)
+add_mystery(1, "cube-electronic-circuit", "cube-basic-matter-unit")
+add_mystery(1, "cube-advanced-circuit", "cube-electronic-circuit")
+add_mystery(1, "cube-spectral-processor", "cube-advanced-circuit")
+
+add_mystery(1, "stone", "cube-raw-rare-metals", 2, 1)
+add_mystery(1, "cube-raw-rare-metals", "stone", 2, 1)
+add_mystery(1, "cube-deep-core-ore", "cube-deep-powder")
+add_mystery(1, "coal", "wood", 1, 1)
+add_mystery(2, "uranium-ore", "cube-uranium-234", 10, 1)
+add_mystery(4, "raw-fish", "cube-spectralite", 2, 1)
+
+add_mystery(1, "sulfur", "cube-residual-tendrils")
+add_mystery(1, "cube-deep-crystal", "sulfur")
+add_mystery(1, "cube-ghost-crystal", "sulfur")
+add_mystery(1, "explosives", "sulfur")
+add_mystery(1, "battery", "cube-rare-metals")
+add_mystery(2, "flying-robot-frame", "cube-electronic-circuit")
+add_mystery(4, "cube-haunted-energy-cell", "cube-residual-tendrils", 1, 40)
+
+add_mystery(2, "uranium-238", "cube-uranium-234")
+add_mystery(2, "uranium-235", "cube-uranium-234")
+add_mystery(2, "cube-uranium-234", "cube-uranium-234", 1, 2)
+add_mystery(2, "uranium-fuel-cell", "used-up-uranium-fuel-cell")
+add_mystery(1, "used-up-uranium-fuel-cell", "uranium-ore")
+
+add_mystery(1, "cube-calcium", "cube-sand")
+add_mystery(1, "cube-intelligent-calcium", "cube-calcium")
+-- TODO: check once we know how to actually make this.
+add_mystery(1, "cube-singularity-research-data", "cube-deep-crystal")
+add_mystery(1, "cube-quantum-research-data", "cube-qubit")
+add_mystery(1, "cube-teleportation-control-module", "cube-spectral-processor")
+
+add_mystery(1, "cube-besselheim-flask", "cube-glass")
+add_mystery(1, "cube-bottled-consciousness", "cube-besselheim-flask")
+add_mystery(1, "cube-bottled-euphoria", "cube-bottled-consciousness")
+add_mystery(1, "cube-bottled-anguish", "cube-bottled-consciousness")
+
+add_mystery(1, "cube-basic-contemplation-unit", "raw-fish")
+add_mystery(1, "cube-fundamental-comprehension-card", "cube-basic-contemplation-unit")
+add_mystery(1, "cube-abstract-interrogation-card", "cube-basic-contemplation-unit")
+add_mystery(1, "cube-deep-introspection-card", "cube-basic-contemplation-unit")
+add_mystery(1, "cube-synthetic-premonition-card", "cube-basic-contemplation-unit")
+add_mystery(1, "cube-complete-annihilation-card", "cube-basic-contemplation-unit")
+add_mystery(1, "cube-unobtainium", "cube-unobtainium")
 
 add_mystery(2, "cube-regulation-armor", "cube-modular-armor")
 add_mystery(4, "cube-modular-armor", "cube-power-armor")

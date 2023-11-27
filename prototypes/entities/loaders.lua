@@ -34,13 +34,6 @@ AAILoaders.make_tier{
   localise = false,
 }
 
-local function add_hidden_flag(t)
-  if not t.flags then
-    t.flags = {}
-  end
-  t.flags[#t.flags + 1] = "hidden"
-end
-
 local function add_energy_source(t, energy_scale)
   t.energy_per_item = "5KJ"
   t.energy_source = {
@@ -52,8 +45,6 @@ local function add_energy_source(t, energy_scale)
   }
 end
 
-add_hidden_flag(data.raw["loader-1x1"]["aai-loader"])
-add_hidden_flag(data.raw["item"]["aai-loader"])
 add_energy_source(data.raw["loader-1x1"]["aai-loader"], 1)
 add_energy_source(data.raw["loader-1x1"]["aai-v2-loader"], 2)
 add_energy_source(data.raw["loader-1x1"]["aai-v3-loader"], 3)

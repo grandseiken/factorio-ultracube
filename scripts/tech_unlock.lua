@@ -48,6 +48,9 @@ function tech_unlock.trigger(force, technology_name, unlocked)
       end
     end
   end
+  if technology_name == "cube-mystery-furnace" then
+    force.technologies["cube-mystery-furnace-dummy"].researched = unlocked
+  end
   if technology_name == "cube-forbidden-ziggurat" then
     force.technologies["cube-construct-forbidden-ziggurat"].enabled = unlocked
   end

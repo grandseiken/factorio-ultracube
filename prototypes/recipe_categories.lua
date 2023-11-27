@@ -97,11 +97,16 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-stygian-energy-lab",
-    order = "y",
+    order = "x",
   },
   {
     type = "recipe-category",
     name = "cube-fluid-burner",
+    order = "y",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-uncraftable",
     order = "z",
   },
 })

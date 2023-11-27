@@ -4,7 +4,7 @@ require("prototypes.scripts.autoplace")
 -- ANNOYING FIX TODOs:
 ----------------------
 -- layered icons look bad when disabled, bake them?
--- barreling recipes
+-- barreling recipes (+ mystery furnace)
 -- if machine output buffer on bulk recipes can ever be fixed, we could allow prod modules
 -- tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
 -- - advanced engine tech graphic + name (?)
@@ -19,27 +19,21 @@ require("prototypes.scripts.autoplace")
 -- 2. Deep techs
 -- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
--- - How to get singularity data
--- - Maybe use temperature mechanics with crazy heating mixing?
--- 3. Finish mystery furnace
--- 4. Last armor/equipments/upgrades
+-- - How to get singularity data? (deep core crystal is currently the mystery furance output)
+-- 3. Last armor/equipments/upgrades
 -- - Infinite technologies
--- 5. antimatter + matter unit (+cube?) -> endgame antimatter power
+-- 4. antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
 -- - Maybe a way to turn energy -> antimatter
 -- - power directly from cubetime? (accumulators)
--- 6. Various
--- - Fix filter-option unlocking etc:
--- - - armor mk2; unobtainium; maybe all the hidden lvl1 stuff from mystery furnace? raw resources?
--- - - with dummy recipe/technologies that get researched by script to show things?
--- - - can signals be hidden?
--- - Reorganise compatibility to make other mods easier.
+-- 5. Various
+-- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
 -- - Phantom FX.
 -- - More use for deep crystal, unobtainium?
 -- - Fix deep core ore generation (?)
 -- - Beacons? (!?)
 -- - Barreling?
--- 7. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 6. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- RANDOM THOUGHT TODOs:
 ------------------------
