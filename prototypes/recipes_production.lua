@@ -442,12 +442,25 @@ data:extend({
     ingredients = {
       {"refined-concrete", 800},
       {"cube-sophisticated-matter-unit", 800},
-      {"cube-spectralite", 800},
+      {"cube-spectralite", 400},
       {"cube-singularity-research-data", 400},
       {"cube-spectral-processor", 200},
     },
     energy_required = 300,
     results = {{"cube-antimatter-reactor", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-annihilation-chamber",
+    ingredients = {
+      {"cube-sophisticated-matter-unit", 200},
+      {"cube-resplendent-plate", 200},
+      {"cube-quantum-research-data", 100},
+      {"cube-arcane-drive", 80},
+    },
+    energy_required = 60,
+    results = {{"cube-annihilation-chamber", 1}},
     enabled = false,
   },
 })

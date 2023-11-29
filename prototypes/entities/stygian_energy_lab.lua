@@ -156,7 +156,7 @@ data:extend({
       },
       fuel_categories = {"cube-haunted-energy"},
       fuel_inventory_size = 1,
-      emissions_per_minute = 20,
+      emissions_per_minute = 0,
       smoke = stygian_smoke(),
     },
     energy_usage = "16MW",

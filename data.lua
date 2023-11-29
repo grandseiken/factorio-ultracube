@@ -15,17 +15,21 @@ require("prototypes.scripts.autoplace")
 
 -- RELEASE BLOCKERS
 -------------------
--- 1. Teleporter (how do we do it with entities?)
+-- 1. Teleporter (how do we do it with entities? -- ROCKET SILO might work.)
 -- 2. Deep techs
 -- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
 -- - How to get singularity data? (deep core crystal is currently the mystery furance output)
+-- - - Something where the cube must go in several machines in an odd/timed/awkward pattern?
+-- - - e.g. because machine must recharge, or its output expires/cools somehow, or numbers are weird/loop
 -- 3. Last armor/equipments/upgrades
 -- - Infinite technologies
 -- 4. antimatter + matter unit (+cube?) -> endgame antimatter power
 -- - Endgame antimatter power unlocked by final science
 -- - Maybe a way to turn energy -> antimatter
 -- - power directly from cubetime? (accumulators)
+-- - advanced turbine: matter+anti -> into reactor -> cubetime -> power direct
+-- - with some additional complication (byproduct?)
 -- 5. Various
 -- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
 -- - Phantom FX.

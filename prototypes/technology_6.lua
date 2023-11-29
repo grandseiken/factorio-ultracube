@@ -53,6 +53,7 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-antimatter-reactor"},
+      {type = "unlock-recipe", recipe = "cube-annihilation-chamber"},
     },
     prerequisites = {
       "cube-complete-annihilation-card",

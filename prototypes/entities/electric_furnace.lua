@@ -44,7 +44,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 1,
+      emissions_per_minute = 0,
     },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,

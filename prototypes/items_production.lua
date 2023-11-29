@@ -303,4 +303,14 @@ data:extend({
     stack_size = 1,
     flags = {"not-stackable"},
   },
+  {
+    type = "item",
+    name = "cube-annihilation-chamber",
+    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-final-machines",
+    order = "2[chamber]",
+    place_result = "cube-annihilation-chamber",
+    stack_size = 5,
+  },
 })

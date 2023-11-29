@@ -26,7 +26,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 6
+      emissions_per_minute = 0,
     },
     energy_usage = "400kW",
     vehicle_impact_sound = sounds.generic_impact,

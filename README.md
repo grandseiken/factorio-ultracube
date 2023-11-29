@@ -8,19 +8,19 @@ An overhaul mod for Factorio featuring:
 
 # Overview
 
-This mod overhauls Factorio in a way that should hopefully feel fairly unique.
+Sure, it's nice if the factory grows. But in this mod the factory must also be _optimized_.
 
 The player starts with a single extremely useful cube (additional copies cannot be crafted), required as a catalyst in various large bulk-processing steps. Everything from research to power generation ultimately depends on it.
 
-As a result, substantial portions of the factory resist copy-paste expansion, and can be made more efficient only by solving logistical problems, making design improvements, or unlocking new technologies.
+Because of this, substantial portions of the factory cannot be scaled up with simple copy-paste expansion. Instead, they can be made more efficient only by solving logistical problems, making design improvements, or unlocking new technologies.
 
 At any given level of technological progress, there will exist some theoretical upper bound on the potential output of your factory. Getting close to the limit will be tricky: you'll need to set up automation to intelligently route the cube where it's needed, deal with sporadically-running high-throughput machines, and probably invest in a fair amount of circuit network trickery.
 
-The technology tree has been carefully rebuilt from scratch to fit, and there are some new tools to play with, too.
+The technology tree has been carefully rebuilt from scratch to fit, and there are a few new tools to play with, too.
 
 ## You might like this mod if:
 
-* You enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
+* You particularly like the "optimization problem" aspect of Factorio, and enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
 * You like the idea of a dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
@@ -60,7 +60,7 @@ Mods that add new recipes or technologies must be specifically adapted to work w
 
 Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items at all times (necessary for various UX and technical reasons) in a UPS-friendly manner.
 
-Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints is likely to result in something that doesn't make a whole lot of sense.
+Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
 ## Compatible mods
 

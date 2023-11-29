@@ -54,7 +54,7 @@ data:extend({
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 60,
+      emissions_per_minute = 0,
       smoke = {
         {
           name = "cube-ultradense-furnace-smoke",

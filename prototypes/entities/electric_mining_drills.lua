@@ -2379,7 +2379,7 @@ data:extend({
     mining_speed = 2,
     energy_source = {
       type = "electric",
-      emissions_per_minute = 10,
+      emissions_per_minute = 0,
       usage_priority = "secondary-input",
       drain = "20KW",
     },
@@ -4408,7 +4408,7 @@ data:extend({
     mining_speed = 4,
     energy_source = {
       type = "electric",
-      emissions_per_minute = 15,
+      emissions_per_minute = 0,
       usage_priority = "secondary-input",
       drain = "20KW",
     },

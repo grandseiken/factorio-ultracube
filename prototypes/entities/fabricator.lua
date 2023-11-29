@@ -315,7 +315,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 5,
+      emissions_per_minute = 0,
       drain = "10KW",
     },
     energy_usage = "150KW",
