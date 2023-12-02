@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 data:extend({
   {
@@ -140,7 +141,7 @@ data:extend({
     energy_usage = "200KW",
     ingredient_count = 1,
     module_specification = {module_slots = 0},
-    allowed_effects = {},
+    allowed_effects = module_effects.none,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
   },

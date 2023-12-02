@@ -1,5 +1,87 @@
 require("__Ultracube__/prototypes/entities/lib/pipe")
 
+local chamber_animation_horizontal = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-H.png",
+      width = 235,
+      height = 134,
+      frame_count = 6,
+      shift = {0, -0.2},
+      line_length = 2,
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-H.png",
+        width = 469,
+        height = 270,
+        frame_count = 6,
+        shift = {0, -0.2},
+        line_length = 2,
+        scale = 0.5,
+      },
+    },
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
+      width = 258,
+      height = 113,
+      frame_count = 6,
+      shift = {0.575, 0.25},
+      line_length = 3,
+      draw_as_shadow = true,
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-H.png",
+        width = 514,
+        height = 225,
+        frame_count = 6,
+        shift = {0.575, 0.25},
+        line_length = 3,
+        scale = 0.5,
+        draw_as_shadow = true,
+      },
+    },
+  },
+}
+
+local chamber_animation_vertical = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-V.png",
+      width = 165,
+      height = 250,
+      frame_count = 6,
+      line_length = 6,
+      shift = {0.26, 0},
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-V.png",
+        width = 330,
+        height = 500,
+        frame_count = 6,
+        line_length = 6,
+        shift = {0.26, 0},
+        scale = 0.5,
+      },
+    },
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
+      width = 175,
+      height = 213,
+      frame_count = 6,
+      line_length = 6,
+      shift = {0.48, 0.36},
+      draw_as_shadow = true,
+      hr_version = {
+        filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-V.png",
+        width = 350,
+        height = 425,
+        frame_count = 6,
+        line_length = 6,
+        shift = {0.48, 0.36},
+        scale = 0.5,
+        draw_as_shadow = true,
+      },
+    },
+  },
+}
+
 data:extend({
   {
     type = "corpse",
@@ -51,11 +133,6 @@ data:extend({
     dying_explosion = "medium-explosion",
     -- fixed_recipe = "cube-antimatter",
     show_recipe_icon = false,
-    resistances = {
-      {type = "physical", percent = 60},
-      {type = "fire", percent = 95},
-      {type = "impact", percent = 95},
-    },
     fluid_boxes = {
       {
         production_type = "input",
@@ -292,7 +369,7 @@ data:extend({
   },
 
   {
-    type = "generator",
+    type = "assembling-machine",
     name = "cube-annihilation-chamber",
     icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
     icon_size = 64,
@@ -303,133 +380,60 @@ data:extend({
     corpse = "cube-medium-random-pipes-remnant",
     dying_explosion = "medium-explosion",
     alert_icon_shift = util.by_pixel(0, -12),
-    effectivity = 2.1,
-    fluid_usage_per_tick = 5 / 3,
-    maximum_temperature = 975,
-    burns_fluid = false,
     collision_box = {{-2.25, -3.25}, {2.25, 3.25}},
     selection_box = {{-2.5, -3.5}, {2.5, 3.5}},
-    fluid_box = {
-      base_area = 5,
-      height = 2,
-      base_level = -1,
-      pipe_covers = pipecoverspictures(),
-      pipe_connections = {
-        {type = "input-output", position = {0, 4}},
-        {type = "input-output", position = {0, -4}},
+    fluid_boxes = {
+      {
+        base_area = 5,
+        height = 50,
+        base_level = 1,
+        pipe_covers = pipecoverspictures(),
+        pipe_connections = {
+          {type = "output", position = {0, -4}},
+        },
+        production_type = "output",
       },
-      production_type = "input-output",
-      filter = "steam",
-      minimum_temperature = 950.0,
+      {
+        base_area = 5,
+        height = 50,
+        base_level = 1,
+        pipe_covers = pipecoverspictures(),
+        pipe_connections = {
+          {type = "output", position = {0, 4}},
+        },
+        production_type = "output",
+      },
     },
     energy_source = {
       type = "electric",
-      usage_priority = "secondary-output",
+      usage_priority = "secondary-input",
+      emissions_per_minute = 0,
     },
-    horizontal_animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-H.png",
-          width = 235,
-          height = 134,
-          frame_count = 6,
-          shift = {0, -0.2},
-          line_length = 2,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-H.png",
-            width = 469,
-            height = 270,
-            frame_count = 6,
-            shift = {0, -0.2},
-            line_length = 2,
-            scale = 0.5,
-          },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
-          width = 258,
-          height = 113,
-          frame_count = 6,
-          shift = {0.575, 0.25},
-          line_length = 3,
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-H.png",
-            width = 514,
-            height = 225,
-            frame_count = 6,
-            shift = {0.575, 0.25},
-            line_length = 3,
-            scale = 0.5,
-            draw_as_shadow = true,
-          },
-        },
-      },
+    animation = {
+      north = chamber_animation_vertical,
+      south = chamber_animation_vertical,
+      east = chamber_animation_horizontal,
+      west = chamber_animation_horizontal,
     },
-    vertical_animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-V.png",
-          width = 165,
-          height = 250,
-          frame_count = 6,
-          line_length = 6,
-          shift = {0.26, 0},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-V.png",
-            width = 330,
-            height = 500,
-            frame_count = 6,
-            line_length = 6,
-            shift = {0.26, 0},
-            scale = 0.5,
-          },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
-          width = 175,
-          height = 213,
-          frame_count = 6,
-          line_length = 6,
-          shift = {0.48, 0.36},
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/hr-advanced-steam-turbine-sh-V.png",
-            width = 350,
-            height = 425,
-            frame_count = 6,
-            line_length = 6,
-            shift = {0.48, 0.36},
-            scale = 0.5,
-            draw_as_shadow = true,
-          },
-        },
-      },
-    },
-    smoke = {
-      {
-        name = "turbine-smoke",
-        north_position = {2, -2.6},
-        east_position = {2.75, 1.0},
-        frequency = 10 / 32,
-        starting_vertical_speed = 0.08,
-        slow_down_factor = 1,
-        starting_frame_deviation = 60,
-      },
-    },
+    energy_usage = "250MW",
+    ingredient_count = 2,
+    crafting_speed = 1,
+    crafting_categories = {"cube-annihilation-chamber"},
+    fixed_recipe = "cube-annihilation",
+    show_recipe_icon = false,
     vehicle_impact_sound = {
       filename = "__base__/sound/car-metal-impact.ogg",
       volume = 0.65,
     },
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/advanced-steam-turbine.ogg",
-        volume = 1.2,
+        filename = "__Ultracube__/graphics/annihilation-chamber.ogg",
+        volume = 0.9,
       },
-      match_speed_to_activity = true,
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
     },
-    min_perceived_performance = 0.5,
-    performance_to_sound_speedup = 0.75,
-    max_power_output = "100MW",
+    open_sound = {filename = "__base__/sound/machine-open.ogg"},
+    close_sound = {filename = "__base__/sound/machine-close.ogg"},
   },
 })

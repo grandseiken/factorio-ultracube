@@ -12,6 +12,7 @@ require("prototypes.scripts.autoplace")
 -- make cube sparks aligned per-machine?
 -- make nuclear reactor a dummy so copy/paste undo works properly?
 -- - except then its description won't show up as a reactor...?
+-- - but it could be really a reactor modded to be inoperable somehow
 
 -- RELEASE BLOCKERS
 -------------------

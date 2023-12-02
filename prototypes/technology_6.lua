@@ -54,6 +54,8 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-antimatter-reactor"},
       {type = "unlock-recipe", recipe = "cube-annihilation-chamber"},
+      {type = "unlock-recipe", recipe = "cube-annihilation"},
+      {type = "unlock-recipe", recipe = "cube-gamma-waste-containment"},
     },
     prerequisites = {
       "cube-complete-annihilation-card",

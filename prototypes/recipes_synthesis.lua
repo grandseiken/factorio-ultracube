@@ -119,7 +119,7 @@ data:extend({
     ingredients = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
     results = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
     main_product = "",
-    energy_required = 2,
+    energy_required = 4,
     category = "cube-dimension-folding-engine",
     subgroup = "cube-synthesis-handling",
     order = "0[0-phantom]",
@@ -145,7 +145,7 @@ data:extend({
     ingredients = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
     results = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
     main_product = "",
-    energy_required = 2,
+    energy_required = 4,
     category = "cube-dimension-folding-engine",
     subgroup = "cube-synthesis-handling",
     order = "0[1-phantom]",
@@ -616,14 +616,14 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {"cube-advanced-engine", 4},
-      {"cube-resplendent-plate", 4},
-      {"cube-spectral-processor", 4},
-      {type = "fluid", name = "cube-ectoplasm", amount = 80},
+      {"cube-advanced-engine", 1},
+      {"cube-resplendent-plate", 1},
+      {"cube-spectral-processor", 1},
+      {type = "fluid", name = "cube-ectoplasm", amount = 20},
     },
     results = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {"cube-arcane-drive", 4}
+      {"cube-arcane-drive", 1}
     },
     main_product = "",
     energy_required = 1,
@@ -637,10 +637,17 @@ data:extend({
   {
     type = "recipe",
     name = "cube-residual-tendrils",
-    icons = {{
-      icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
-      icon_size = 64, icon_mipmaps = 4,
-    }},
+    icons = {
+      {
+        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+        icon_size = 64, icon_mipmaps = 4,
+      },
+      {
+        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+        icon_size = 64, icon_mipmaps = 4,
+        scale = 0.25, shift = {8, 8},
+      },
+    },
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {name = "cube-residual-tendrils", amount = 20000},

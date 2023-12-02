@@ -295,6 +295,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-energy-fluids",
+    group = "fluids",
+    order = "j",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-fluid-burner",
     group = "fluids",
     order = "z",

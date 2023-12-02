@@ -160,9 +160,11 @@ data:extend({
       sound = {
         {
           filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg",
-          volume = 1.25,
+          volume = 1,
         },
       },
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
       -- audible_distance_modifier = 10,
     },
     crafting_speed = 1.0,

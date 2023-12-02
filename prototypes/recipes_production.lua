@@ -413,7 +413,7 @@ data:extend({
     name = "cube-experimental-teleporter",
     ingredients = {
       {"cube-sophisticated-matter-unit", 60},
-      {"cube-arcane-drive", 6},
+      {"cube-arcane-drive", 12},
       {"cube-spectral-processor", 20},
       {"cube-ghost-wire", 80},
       {"cube-quantum-research-data", 40},
@@ -428,7 +428,7 @@ data:extend({
     ingredients = {
       {"concrete", 800},
       {"cube-resplendent-plate", 400},
-      {"cube-arcane-drive", 64},
+      {"cube-arcane-drive", 128},
       {"cube-haunted-energy-cell", 128},
       {"cube-quantum-research-data", 400},
     },

@@ -131,6 +131,7 @@ data:extend({
     fixed_recipe = "cube-stygian-power-generation",
     crafting_categories = {"cube-stygian-energy-lab"},
     scale_entity_info_icon = true,
+    show_recipe_icon = false,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {

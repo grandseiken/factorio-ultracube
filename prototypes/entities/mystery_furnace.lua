@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/module_effects")
 
 local function stygian_smoke()
   local smoke = {}
@@ -64,6 +65,8 @@ data:extend({
       },
       smoke = stygian_smoke(),
     },
+    module_specification = {module_slots = 0},
+    allowed_effects = module_effects.none,
     animation = {
       layers = {
         {

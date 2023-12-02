@@ -97,6 +97,11 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-stygian-energy-lab",
+    order = "w",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-annihilation-chamber",
     order = "x",
   },
   {
