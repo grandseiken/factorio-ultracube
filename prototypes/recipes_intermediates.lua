@@ -324,17 +324,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deeply-condensed-fuel",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/flamethrower-ammo.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/deeply-condensed-fuel.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"sulfur", 100},

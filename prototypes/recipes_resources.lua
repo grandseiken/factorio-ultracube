@@ -51,17 +51,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-explosive-rare-metals",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/icons/explosives.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/explosive-smelting.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {"cube-raw-rare-metals", 6000},
       {"explosives", 16},
@@ -81,17 +72,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-refined-rare-metals",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/refined-smelting.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {{"cube-refined-rare-metals", 1000}},
     results = {{"cube-rare-metals", 1000}},
     main_product = "",
@@ -165,17 +147,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-sand-dilution",
-    icons = {
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/assets/icons/sand-01.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/water.png",
-        scale = 0.3125, shift = {0, -4},
-      },
-    },
+    icon_size = 128, icon_mipmaps = 2,
+    icon = "__Ultracube__/assets/icons/recipe/sand-dilution.png",
     ingredients = {
       {type = "fluid", name = "water", amount = 200, catalyst_amount = 200},
       {"cube-sand", 4},
@@ -201,17 +174,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-powder-separation",
-    icons = {
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/icons/fluids/mineral-water.png",
-        scale = 0.3125, shift = {0, -4},
-      },
-    },
+    icon_size = 128, icon_mipmaps = 2,
+    icon = "__Ultracube__/assets/icons/recipe/deep-powder-separation.png",
     ingredients = {
       {type = "fluid", name = "cube-mineral-water", amount = 400},
     },

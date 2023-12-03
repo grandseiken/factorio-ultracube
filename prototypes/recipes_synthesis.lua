@@ -2,17 +2,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-utility-cube-manual-reboot",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__core__/graphics/icons/tooltips/tooltip-category-debug.png",
-        icon_size = 40, icon_mipmaps = 2,
-        scale = 0.375, shift = {8, 8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/utility-cube-manual-reboot.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
     },
@@ -33,18 +24,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-phantom-cube-manual-discharge",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/solid-fuel.png",
-        icon_size = 64, icon_mipmaps = 4,
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-      {
-        icon = "__core__/graphics/icons/tooltips/tooltip-category-debug.png",
-        icon_size = 40, icon_mipmaps = 2,
-        scale = 0.375, shift = {8, 8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/phantom-cube-manual-discharge.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
     },
@@ -66,23 +47,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-phantom-cube-manual-reassembly",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/solid-fuel.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/icons/solid-fuel.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-      {
-        icon = "__core__/graphics/icons/tooltips/tooltip-category-debug.png",
-        icon_size = 40, icon_mipmaps = 2,
-        scale = 0.375, shift = {8, 8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/phantom-cube-manual-reassembly.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {name = "cube-dormant-phantom-constituent", amount = 64, catalyst_amount = 64},
     },
@@ -104,18 +70,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-phantom-ultradense-constituent",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/phantom-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-        tint = {r = 1, g = 1, b = 1, a = 0.25},
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/phantom-ultradense-constituent.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
     results = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
     main_product = "",

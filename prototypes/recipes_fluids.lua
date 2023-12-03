@@ -23,17 +23,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-improved-gelatinous-tar",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/tar.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/icons/coal.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/improved-gelatinous-tar.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {type = "fluid", name = "steam", amount = 4000},
       {"cube-sand", 200},
@@ -95,17 +86,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-heavy-tar-reclamation",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/tar.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/heavy-tar-reclamation.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 400},
       {type = "fluid", name = "steam", amount = 100},
@@ -130,18 +112,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-light-tar-reclamation",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/tar.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
-    icon_size = 64, icon_mipmaps = 2,
+    icon = "__Ultracube__/assets/icons/recipe/light-tar-reclamation.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {type = "fluid", name = "cube-light-tar", amount = 400},
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
@@ -308,17 +280,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-crystal-distillation",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/deep-solution.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/mineral-water.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/deep-crystal-distillation.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {type = "fluid", name = "cube-mineral-water", amount = 2000},
       {type = "fluid", name = "sulfuric-acid", amount = 200},
@@ -341,17 +304,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-euphoric-release",
-    icons = {
-      {
-        icon = "__base__/graphics/icons/fluid/steam.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, -8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/euphoric-release.png",
+    icon_size = 128, icon_mipmaps = 2,
     ingredients = {
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },

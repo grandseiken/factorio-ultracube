@@ -180,17 +180,8 @@ data:extend({
   {
     type = "item",
     name = "cube-intelligent-calcium",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items-with-variations/blank-tech-card/blank-tech-card-1.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.3125, shift = {0, -4},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/intelligent-calcium.png",
+    icon_size = 128, icon_mipmaps = 5,
     pictures = {
       {
         layers = {
