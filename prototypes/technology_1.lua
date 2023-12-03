@@ -33,7 +33,7 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
+        icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
@@ -94,11 +94,11 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
+        icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/sand-01.png",
+        icon = "__Ultracube__/assets/icons/sand-01.png",
         shift = {0, 32},
       },
       {

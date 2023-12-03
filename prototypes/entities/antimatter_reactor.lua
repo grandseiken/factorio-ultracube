@@ -427,7 +427,7 @@ data:extend({
     },
     working_sound = {
       sound = {
-        filename = "__Ultracube__/graphics/annihilation-chamber.ogg",
+        filename = "__Ultracube__/assets/sounds/annihilation-chamber.ogg",
         volume = 0.9,
       },
       fade_in_ticks = 5,

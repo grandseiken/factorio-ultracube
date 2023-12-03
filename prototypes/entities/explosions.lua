@@ -130,7 +130,7 @@ data:extend({
     fade_away_duration = 16,
     render_layer = "higher-object-above",
     pictures = {
-      filename = "__Ultracube__/graphics/phantom-puff.png",
+      filename = "__Ultracube__/assets/effects/phantom-puff.png",
       priority = "high",
       flags = {"smoke"},
       line_length = 4,
@@ -143,7 +143,7 @@ data:extend({
       tint = {1.0, 1.0, 1.0, 0.5},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Ultracube__/graphics/phantom-puff.png",
+        filename = "__Ultracube__/assets/effects/phantom-puff.png",
         priority = "high",
         flags = {"smoke"},
         line_length = 4,
@@ -158,7 +158,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Ultracube__/graphics/phantom-puff.png",
+      filename = "__Ultracube__/assets/effects/phantom-puff.png",
       priority = "high",
       flags = {"smoke"},
       line_length = 4,
@@ -170,7 +170,7 @@ data:extend({
       scale = 1.0 / 8,
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Ultracube__/graphics/phantom-puff.png",
+        filename = "__Ultracube__/assets/effects/phantom-puff.png",
         priority = "high",
         flags = {"smoke"},
         line_length = 4,
@@ -193,7 +193,7 @@ data:extend({
     fade_away_duration = 60,
     render_layer = "higher-object-above",
     pictures = {
-      filename = "__Ultracube__/graphics/phantom-aura.png",
+      filename = "__Ultracube__/assets/effects/phantom-aura.png",
       priority = "high",
       line_length = 8,
       width = 128,
@@ -206,7 +206,7 @@ data:extend({
       tint = {1.0, 1.0, 1.0, 1.0},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Ultracube__/graphics/phantom-aura.png",
+        filename = "__Ultracube__/assets/effects/phantom-aura.png",
         priority = "high",
         line_length = 8,
         width = 128,
@@ -221,7 +221,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Ultracube__/graphics/phantom-aura.png",
+      filename = "__Ultracube__/assets/effects/phantom-aura.png",
       priority = "high",
       line_length = 8,
       width = 128,
@@ -233,7 +233,7 @@ data:extend({
       shift = {0, -0.5},
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Ultracube__/graphics/phantom-aura.png",
+        filename = "__Ultracube__/assets/effects/phantom-aura.png",
         priority = "high",
         line_length = 8,
         width = 128,
@@ -375,7 +375,7 @@ data:extend({
     render_layer = "higher-object-above",
     animations = {
       {
-        filename = "__Ultracube__/graphics/cube-medium-explosion-1.png",
+        filename = "__Ultracube__/assets/effects/cube-medium-explosion-1.png",
         draw_as_glow = true,
         priority = "high",
         width = 62,
@@ -386,7 +386,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-1.png",
+          filename = "__Ultracube__/assets/effects/hr-cube-medium-explosion-1.png",
           draw_as_glow = true,
           priority = "high",
           width = 124,
@@ -399,7 +399,7 @@ data:extend({
         }
       },
       {
-        filename = "__Ultracube__/graphics/cube-medium-explosion-2.png",
+        filename = "__Ultracube__/assets/effects/cube-medium-explosion-2.png",
         draw_as_glow = true,
         priority = "high",
         width = 78,
@@ -410,7 +410,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-2.png",
+          filename = "__Ultracube__/assets/effects/hr-cube-medium-explosion-2.png",
           draw_as_glow = true,
           priority = "high",
           width = 154,
@@ -423,7 +423,7 @@ data:extend({
         }
       },
       {
-        filename = "__Ultracube__/graphics/cube-medium-explosion-3.png",
+        filename = "__Ultracube__/assets/effects/cube-medium-explosion-3.png",
         draw_as_glow = true,
         priority = "high",
         width = 64,
@@ -434,7 +434,7 @@ data:extend({
         animation_speed = 0.5,
         hr_version =
         {
-          filename = "__Ultracube__/graphics/hr-cube-medium-explosion-3.png",
+          filename = "__Ultracube__/assets/effects/hr-cube-medium-explosion-3.png",
           draw_as_glow = true,
           priority = "high",
           width = 126,
@@ -558,7 +558,7 @@ data:extend({
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Ultracube__/graphics/cube-shockwave-1.png",
+      filename = "__Ultracube__/assets/effects/cube-shockwave-1.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -572,7 +572,7 @@ data:extend({
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-cube-shockwave-1.png",
+        filename = "__Ultracube__/assets/effects/hr-cube-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -588,7 +588,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Ultracube__/graphics/cube-shockwave-1.png",
+      filename = "__Ultracube__/assets/effects/cube-shockwave-1.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -601,7 +601,7 @@ data:extend({
       shift = util.by_pixel(-1, 0),
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-cube-shockwave-1.png",
+        filename = "__Ultracube__/assets/effects/hr-cube-shockwave-1.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -624,7 +624,7 @@ data:extend({
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Ultracube__/graphics/cube-shockwave-2.png",
+      filename = "__Ultracube__/assets/effects/cube-shockwave-2.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -638,7 +638,7 @@ data:extend({
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-cube-shockwave-2.png",
+        filename = "__Ultracube__/assets/effects/hr-cube-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,
@@ -654,7 +654,7 @@ data:extend({
       },
     },
     shadows = {
-      filename = "__Ultracube__/graphics/cube-shockwave-2.png",
+      filename = "__Ultracube__/assets/effects/cube-shockwave-2.png",
       priority = "high",
       flags = { "smoke" },
       line_length = 8,
@@ -667,7 +667,7 @@ data:extend({
       shift = util.by_pixel(-1, 0),
       tint = {0, 0, 0, 0.5},
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-cube-shockwave-2.png",
+        filename = "__Ultracube__/assets/effects/hr-cube-shockwave-2.png",
         priority = "high",
         flags = { "smoke" },
         line_length = 8,

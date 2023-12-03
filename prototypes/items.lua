@@ -30,7 +30,7 @@ data:extend({
     type = "item",
     name = "cube-phantom-ultradense-constituent",
     icons = {{
-      icon = "__Ultracube__/graphics/phantom-cube.png",
+      icon = "__Ultracube__/assets/icons/phantom-cube.png",
       icon_size = 64, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.25},
     }},
@@ -118,7 +118,7 @@ data:extend({
   {
     type = "item",
     name = "cube-basic-antimatter-unit",
-    icon = "__Ultracube__/graphics/basic-antimatter-unit.png",
+    icon = "__Ultracube__/assets/icons/basic-antimatter-unit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
     order = "0[b-matter]",
@@ -165,7 +165,7 @@ data:extend({
     type = "item",
     name = "cube-ghost-wire",
     icons = {{
-      icon = "__Ultracube__/graphics/ghost-wire.png",
+      icon = "__Ultracube__/assets/icons/ghost-wire.png",
       icon_size = 64, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
@@ -195,7 +195,7 @@ data:extend({
     type = "item",
     name = "cube-spectral-processor",
     icons = {{
-      icon = "__Ultracube__/graphics/spectral-processor.png",
+      icon = "__Ultracube__/assets/icons/spectral-processor.png",
       icon_size = 64, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.75},
     }},
@@ -206,7 +206,7 @@ data:extend({
   {
     type = "item",
     name = "cube-besselheim-flask",
-    icon = "__Ultracube__/graphics/flask.png",
+    icon = "__Ultracube__/assets/icons/flask.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "b[d-besselheim-flask]",
@@ -224,7 +224,7 @@ data:extend({
   {
     type = "item",
     name = "cube-bottled-euphoria",
-    icon = "__Ultracube__/graphics/bottled-euphoria.png",
+    icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "b[f-besselheim-flask]",
@@ -233,7 +233,7 @@ data:extend({
   {
     type = "item",
     name = "cube-bottled-anguish",
-    icon = "__Ultracube__/graphics/bottled-anguish.png",
+    icon = "__Ultracube__/assets/icons/bottled-anguish.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "b[g-besselheim-flask]",
@@ -278,13 +278,13 @@ data:extend({
   {
     type = "item",
     name = "cube-haunted-energy-cell",
-    icon = "__Ultracube__/graphics/haunted-energy-cell.png",
+    icon = "__Ultracube__/assets/icons/haunted-energy-cell.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Ultracube__/graphics/haunted-energy-cell.png",
+          filename = "__Ultracube__/assets/icons/haunted-energy-cell.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -292,7 +292,7 @@ data:extend({
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Ultracube__/graphics/haunted-energy-cell-light.png",
+          filename = "__Ultracube__/assets/icons/haunted-energy-cell-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
@@ -419,31 +419,31 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-mineral",
-    icon = "__Ultracube__/graphics/ultradense-mineral.png",
+    icon = "__Ultracube__/assets/icons/ultradense-mineral.png",
     icon_size = 64,
     icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = "__Ultracube__/graphics/ultradense-mineral.png",
+        filename = "__Ultracube__/assets/icons/ultradense-mineral.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Ultracube__/graphics/ultradense-mineral-1.png",
+        filename = "__Ultracube__/assets/icons/ultradense-mineral-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Ultracube__/graphics/ultradense-mineral-2.png",
+        filename = "__Ultracube__/assets/icons/ultradense-mineral-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Ultracube__/graphics/ultradense-mineral-3.png",
+        filename = "__Ultracube__/assets/icons/ultradense-mineral-3.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -455,7 +455,7 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-matter-unit",
-    icon = "__Ultracube__/graphics/ultradense-matter-unit.png",
+    icon = "__Ultracube__/assets/icons/ultradense-matter-unit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "4[step-3]",
@@ -464,7 +464,7 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-composite",
-    icon = "__Ultracube__/graphics/ultradense-composite.png",
+    icon = "__Ultracube__/assets/icons/ultradense-composite.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "5[step-4]",

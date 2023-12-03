@@ -15,7 +15,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-burnt-out-modular-casing",
-    icon = "__Ultracube__/graphics/burnt-out-modular-casing.png",
+    icon = "__Ultracube__/assets/icons/burnt-out-modular-casing.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{"cube-burnt-out-modular-casing", 1}},
     results = {

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "cube-qubit",
-    icon = "__Ultracube__/graphics/qubit.png",
+    icon = "__Ultracube__/assets/icons/qubit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-qubits-io",
     order = "0",
@@ -11,7 +11,7 @@ data:extend({
   {
     type = "item",
     name = "cube-qubits",
-    icon = "__Ultracube__/graphics/qubits.png",
+    icon = "__Ultracube__/assets/icons/recipe/qubits.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-qubits-io",
     order = "x[0]",
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-qubits-failure-dummy",
-    icon = "__Ultracube__/graphics/qubits-failure.png",
+    icon = "__Ultracube__/assets/icons/recipe/qubits-failure.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{"cube-qubits", 2}},
     results = {{"cube-qubit", 1}},
@@ -65,7 +65,7 @@ data:extend({
     name = "cube-qubits-success-dummy",
     icons = {
       {
-        icon = "__Ultracube__/graphics/qubits-success.png",
+        icon = "__Ultracube__/assets/icons/recipe/qubits-success.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -101,7 +101,7 @@ local dummy = data.raw.recipe["cube-qubits-success-dummy"]
 for i = 0, 5 do
   local qubit = "cube-qubit-" .. i
   local qubit_next = "cube-qubit-" .. ((1 + i) % 6)
-  local icon = "__Ultracube__/graphics/qubit-" .. i .. ".png"
+  local icon = "__Ultracube__/assets/icons/qubit-" .. i .. ".png"
 
   data:extend({
     {
@@ -121,7 +121,7 @@ for i = 0, 5 do
             draw_as_light = true,
             flags = {"light"},
             size = 64,
-            filename = "__Ultracube__/graphics/qubit-light.png",
+            filename = "__Ultracube__/assets/icons/qubit-light.png",
             scale = 0.25,
             mipmap_count = 4,
           },

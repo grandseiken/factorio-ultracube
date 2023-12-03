@@ -106,7 +106,7 @@ data:extend({
     name = "cube-phantom-ultradense-constituent",
     icons = {
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
@@ -136,7 +136,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
         tint = {r = 1, g = 1, b = 1, a = 0.25},
@@ -189,7 +189,7 @@ data:extend({
     name = "cube-phantom-constituent-recharge",
     icons = {
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
@@ -221,12 +221,12 @@ data:extend({
     name = "cube-phantom-constituent-recharge-euphoria",
     icons = {
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
       {
-        icon = "__Ultracube__/graphics/bottled-euphoria.png",
+        icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
       },
@@ -322,7 +322,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
         tint = {r = 1, g = 1, b = 1, a = 0.25},
@@ -406,7 +406,7 @@ data:extend({
     name = "cube-phantom-components",
     icons = {
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
@@ -495,7 +495,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Ultracube__/graphics/phantom-cube.png",
+        icon = "__Ultracube__/assets/icons/phantom-cube.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
         tint = {r = 1, g = 1, b = 1, a = 0.25},
@@ -527,12 +527,12 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Ultracube__/graphics/joy.png",
+        icon = "__Ultracube__/assets/icons/joy.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.275, shift = {-6, 0},
       },
       {
-        icon = "__Ultracube__/graphics/despair.png",
+        icon = "__Ultracube__/assets/icons/despair.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.275, shift = {6, 0},
       }
@@ -584,7 +584,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-ectoplasm",
-    icon = "__Ultracube__/graphics/ectoplasm.png",
+    icon = "__Ultracube__/assets/icons/ectoplasm.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},

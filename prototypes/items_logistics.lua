@@ -73,7 +73,7 @@ data:extend({
   {
     type = "item",
     name = "cube-extremely-long-inserter",
-    icon = "__Ultracube__/graphics/extremely-long-inserter.png",
+    icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "inserter",
     order = "x[extremely-long-inserter]",

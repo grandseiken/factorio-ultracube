@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-gelatinous-tar",
-    icon = "__Ultracube__/graphics/tar.png",
+    icon = "__Ultracube__/assets/icons/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "steam", amount = 1000},
@@ -25,7 +25,7 @@ data:extend({
     name = "cube-improved-gelatinous-tar",
     icons = {
       {
-        icon = "__Ultracube__/graphics/tar.png",
+        icon = "__Ultracube__/assets/icons/tar.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -56,7 +56,7 @@ data:extend({
     name = "cube-tar-processing",
     icons = {
       {
-        icon = "__Ultracube__/graphics/tar.png",
+        icon = "__Ultracube__/assets/icons/tar.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.325, shift = {0, 0},
       },
@@ -71,7 +71,6 @@ data:extend({
         scale = 0.25, shift = {6, 2},
       },
     },
-    icon = "__Ultracube__/graphics/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 400},
@@ -98,7 +97,7 @@ data:extend({
     name = "cube-heavy-tar-reclamation",
     icons = {
       {
-        icon = "__Ultracube__/graphics/tar.png",
+        icon = "__Ultracube__/assets/icons/tar.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -133,7 +132,7 @@ data:extend({
     name = "cube-light-tar-reclamation",
     icons = {
       {
-        icon = "__Ultracube__/graphics/tar.png",
+        icon = "__Ultracube__/assets/icons/tar.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -245,7 +244,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-ethanol",
-    icon = "__Ultracube__/graphics/ethanol.png",
+    icon = "__Ultracube__/assets/icons/ethanol.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "item", name = "cube-mash", amount = 200},
@@ -289,7 +288,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-solution",
-    icon = "__Ultracube__/graphics/deep-solution.png",
+    icon = "__Ultracube__/assets/icons/deep-solution.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {"cube-deep-powder", 2000},
@@ -311,7 +310,7 @@ data:extend({
     name = "cube-deep-crystal-distillation",
     icons = {
       {
-        icon = "__Ultracube__/graphics/deep-solution.png",
+        icon = "__Ultracube__/assets/icons/deep-solution.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -348,7 +347,7 @@ data:extend({
         icon_size = 64, icon_mipmaps = 4,
       },
       {
-        icon = "__Ultracube__/graphics/bottled-euphoria.png",
+        icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, -8},
       },
@@ -378,7 +377,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-gelatinous-tar-void",
-    icon = "__Ultracube__/graphics/tar.png",
+    icon = "__Ultracube__/assets/icons/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{type = "fluid", name = "cube-gelatinous-tar", amount = 100}},
     results = {},
@@ -453,7 +452,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-ethanol-void",
-    icon = "__Ultracube__/graphics/ethanol.png",
+    icon = "__Ultracube__/assets/icons/ethanol.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{type = "fluid", name = "cube-ethanol", amount = 100}},
     results = {},
@@ -469,7 +468,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-stygian-power-generation",
-    icon = "__Ultracube__/graphics/void-wind.png",
+    icon = "__Ultracube__/assets/icons/void-wind.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {},
     results = {
@@ -490,7 +489,7 @@ data:extend({
     name = "cube-annihilation",
     icons = {
       {
-        icon = "__Ultracube__/graphics/ionized-annihilation-stream.png",
+        icon = "__Ultracube__/assets/icons/ionized-annihilation-stream.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {
@@ -499,7 +498,7 @@ data:extend({
         scale = 0.25, shift = {8, 8},
       },
       {
-        icon = "__Ultracube__/graphics/basic-antimatter-unit.png",
+        icon = "__Ultracube__/assets/icons/basic-antimatter-unit.png",
         icon_size = 64, icon_mipmaps = 4,
         scale = 0.25, shift = {8, 8},
       },
@@ -526,7 +525,7 @@ data:extend({
     name = "cube-gamma-waste-containment",
     icons = {
       {
-        icon = "__Ultracube__/graphics/gamma-waste-stream.png",
+        icon = "__Ultracube__/assets/icons/gamma-waste-stream.png",
         icon_size = 64, icon_mipmaps = 4,
       },
       {

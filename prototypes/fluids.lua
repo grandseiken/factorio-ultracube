@@ -2,7 +2,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-gelatinous-tar",
-    icon = "__Ultracube__/graphics/tar.png",
+    icon = "__Ultracube__/assets/icons/tar.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.1, g=0.1, b=0.15},
     flow_color = {r=0.15, g=0.15, b=0.20},
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-ethanol",
-    icon = "__Ultracube__/graphics/ethanol.png",
+    icon = "__Ultracube__/assets/icons/ethanol.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.5, g=0.5, b=0.5, a=0.5},
     flow_color = {r=0.6, g=0.6, b=0.6, a=0.5},
@@ -100,7 +100,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-joy",
-    icon = "__Ultracube__/graphics/joy.png",
+    icon = "__Ultracube__/assets/icons/joy.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.85, g=0.1, b=0.4},
     flow_color = {r=0.95, g=0.15, b=0.5},
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-despair",
-    icon = "__Ultracube__/graphics/despair.png",
+    icon = "__Ultracube__/assets/icons/despair.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.35, g=0.15, b=0.7},
     flow_color = {r=0.4, g=0.2, b=0.75},
@@ -135,7 +135,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-deep-solution",
-    icon = "__Ultracube__/graphics/deep-solution.png",
+    icon = "__Ultracube__/assets/icons/deep-solution.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.7, g=0.55, b=0.8},
     flow_color = {r=0.75, g=0.6, b=0.85},
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-ectoplasm",
-    icon = "__Ultracube__/graphics/ectoplasm.png",
+    icon = "__Ultracube__/assets/icons/ectoplasm.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.175, g=0.30, b=0.25, a=0.65},
     flow_color = {r=0.65, g=0.9, b=0.8},
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-ultradense-sap",
-    icon = "__Ultracube__/graphics/ultradense-sap.png",
+    icon = "__Ultracube__/assets/icons/ultradense-sap.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.075, g=0.25, b=0.35},
     flow_color = {r=0.7, g=1, b=1},
@@ -171,7 +171,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-void-wind",
-    icon = "__Ultracube__/graphics/void-wind.png",
+    icon = "__Ultracube__/assets/icons/void-wind.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.0, g=0.0, b=0.0, a=1},
     flow_color = {r=0.1, g=0.1, b=0.1, a=0.85},
@@ -184,7 +184,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-ionized-annihilation-stream",
-    icon = "__Ultracube__/graphics/ionized-annihilation-stream.png",
+    icon = "__Ultracube__/assets/icons/ionized-annihilation-stream.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.5, g=0.7, b=0.8, a=1},
     flow_color = {r=0.75, g=0.85, b=0.9, a=1},
@@ -195,7 +195,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-gamma-waste-stream",
-    icon = "__Ultracube__/graphics/gamma-waste-stream.png",
+    icon = "__Ultracube__/assets/icons/gamma-waste-stream.png",
     icon_size = 64, icon_mipmaps = 4,
     base_color = {r=0.1, g=0.075, b=0.25, a=1},
     flow_color = {r=0.45, g=0.1, b=0.2, a=1},

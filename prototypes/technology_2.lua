@@ -46,11 +46,11 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
+        icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/tar.png",
+        icon = "__Ultracube__/assets/icons/tar.png",
         shift = {0, -40},
       },
       {
@@ -144,7 +144,7 @@ data:extend({
     type = "technology",
     name = "cube-sophisticated-matter-unit",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/graphics/sophisticated-matter-unit.png",
+    icon = "__Ultracube__/assets/icons/sophisticated-matter-unit.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-sophisticated-matter-unit"},
     },
@@ -244,7 +244,7 @@ data:extend({
     type = "technology",
     name = "cube-modular-casing",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/graphics/modular-casing-technology.png",
+    icon = "__Ultracube__/assets/technology/modular-casing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-modular-casing"},
     },
@@ -320,7 +320,7 @@ data:extend({
     type = "technology",
     name = "cube-distillation",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/graphics/distillation.png",
+    icon = "__Ultracube__/assets/technology/distillation.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-distillery"},
       {type = "unlock-recipe", recipe = "cube-greenhouse-potato"},
@@ -341,12 +341,12 @@ data:extend({
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/joy.png",
+        icon = "__Ultracube__/assets/icons/joy.png",
         shift = {-24, 0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/despair.png",
+        icon = "__Ultracube__/assets/icons/despair.png",
         shift = {24, 0},
       },
     },
@@ -437,7 +437,7 @@ data:extend({
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
+        icon = "__Ultracube__/assets/technology/recycling.png",
       },
     },
     effects = {
@@ -480,7 +480,7 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.0},
       },
       {
@@ -497,7 +497,7 @@ data:extend({
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
     },
@@ -532,22 +532,22 @@ data:extend({
     icons = {
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/bottled-euphoria.png",
+        icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
         shift = {-32, 0},
       },
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/bottled-anguish.png",
+        icon = "__Ultracube__/assets/icons/bottled-anguish.png",
         shift = {32, 0},
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
     },
@@ -580,7 +580,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-haunted-energy-cell",
-    icon = "__Ultracube__/graphics/haunted-energy-cell-technology.png",
+    icon = "__Ultracube__/assets/technology/haunted-energy-cell.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-haunted-energy-cell"},
@@ -603,7 +603,7 @@ data:extend({
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/recycling.png",
+        icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
@@ -647,7 +647,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-battery-mk2-equipment",
-    icon = "__Ultracube__/graphics/battery-mk2-equipment-technology.png",
+    icon = "__Ultracube__/assets/technology/battery-mk2-equipment.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-battery-mk2-equipment"},
@@ -699,7 +699,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-extremely-long-inserter",
-    icon = "__Ultracube__/graphics/extremely-long-inserter-technology.png",
+    icon = "__Ultracube__/assets/technology/extremely-long-inserter.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       {type = "unlock-recipe", recipe = "cube-extremely-long-inserter"},

@@ -5,7 +5,7 @@ data:extend({
     type = "technology",
     name = "cube-molecular-blender",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/graphics/molecular-blender-technology.png",
+    icon = "__Ultracube__/assets/technology/molecular-blender.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-molecular-blender"},
     },
@@ -181,7 +181,7 @@ data:extend({
       },
       {
         icon_size = 256, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/phantom-cube-technology.png",
+        icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.25},
       },
     },

@@ -168,7 +168,7 @@ data:extend({
     icons = {
       {
         icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/graphics/sand-01.png",
+        icon = "__Ultracube__/assets/icons/sand-01.png",
       },
       {
         icon_size = 64, icon_mipmaps = 4,
@@ -331,7 +331,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-kovarex-redemption-process",
-    icon = "__Ultracube__/graphics/kovarex-redemption-process.png",
+    icon = "__Ultracube__/assets/icons/recipe/kovarex-redemption-process.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "item", name = "cube-uranium-234", amount = 40},

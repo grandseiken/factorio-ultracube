@@ -6,7 +6,7 @@ data:extend({
     type = "corpse",
     name = "cube-extremely-long-inserter-remnants",
     localised_name = {"remnant-name", {"entity-name.cube-extremely-long-inserter"}},
-    icon = "__Ultracube__/graphics/extremely-long-inserter.png",
+    icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -45,7 +45,7 @@ data:extend({
   {
     type = "inserter",
     name = "cube-extremely-long-inserter",
-    icon = "__Ultracube__/graphics/extremely-long-inserter.png",
+    icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
@@ -72,12 +72,12 @@ data:extend({
     working_sound = sounds.inserter_fast,
     hand_size = 2.625,
     hand_base_picture = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-base.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base.png",
       priority = "extra-high",
       width = 8,
       height = 68,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-base.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base.png",
         priority = "extra-high",
         width = 32,
         height = 272,
@@ -85,12 +85,12 @@ data:extend({
       },
     },
     hand_closed_picture = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-closed.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed.png",
       priority = "extra-high",
       width = 18,
       height = 82,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-closed.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed.png",
         priority = "extra-high",
         width = 72,
         height = 328,
@@ -98,12 +98,12 @@ data:extend({
       },
     },
     hand_open_picture = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-open.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open.png",
       priority = "extra-high",
       width = 18,
       height = 82,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-open.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open.png",
         priority = "extra-high",
         width = 72,
         height = 328,
@@ -111,12 +111,12 @@ data:extend({
       },
     },
     hand_base_shadow = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-base-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base-shadow.png",
       priority = "extra-high",
       width = 8,
       height = 66,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-base-shadow.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base-shadow.png",
         priority = "extra-high",
         width = 32,
         height = 272,
@@ -124,12 +124,12 @@ data:extend({
       },
     },
     hand_closed_shadow = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-closed-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 18,
       height = 82,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-closed-shadow.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed-shadow.png",
         priority = "extra-high",
         width = 72,
         height = 328,
@@ -137,12 +137,12 @@ data:extend({
       },
     },
     hand_open_shadow = {
-      filename = "__Ultracube__/graphics/extremely-long-inserter-hand-open-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 18,
       height = 82,
       hr_version = {
-        filename = "__Ultracube__/graphics/hr-extremely-long-inserter-hand-open-shadow.png",
+        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open-shadow.png",
         priority = "extra-high",
         width = 72,
         height = 328,

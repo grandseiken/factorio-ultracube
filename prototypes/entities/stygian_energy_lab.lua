@@ -135,7 +135,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Ultracube__/graphics/stygian-energy-lab.ogg",
+        filename = "__Ultracube__/assets/sounds/stygian-energy-lab.ogg",
         volume = 0.8,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},

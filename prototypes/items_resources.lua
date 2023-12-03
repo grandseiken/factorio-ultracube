@@ -124,12 +124,12 @@ data:extend({
   {
     type = "item",
     name = "cube-sand",
-    icon = "__Ultracube__/graphics/sand-01.png",
+    icon = "__Ultracube__/assets/icons/sand-01.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = "__Ultracube__/graphics/sand-01.png",
+        filename = "__Ultracube__/assets/icons/sand-01.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -248,24 +248,24 @@ data:extend({
   {
     type = "item",
     name = "cube-mash",
-    icon = "__Ultracube__/graphics/mash-1.png",
+    icon = "__Ultracube__/assets/icons/mash-1.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       {
         size = 64,
-        filename = "__Ultracube__/graphics/mash.png",
+        filename = "__Ultracube__/assets/icons/mash.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Ultracube__/graphics/mash-1.png",
+        filename = "__Ultracube__/assets/icons/mash-1.png",
         scale = 0.25,
         mipmap_count = 4,
       },
       {
         size = 64,
-        filename = "__Ultracube__/graphics/mash-2.png",
+        filename = "__Ultracube__/assets/icons/mash-2.png",
         scale = 0.25,
         mipmap_count = 4,
       },
@@ -680,12 +680,12 @@ data:extend({
   {
     type = "item",
     name = "cube-uranium-234",
-    icon = "__Ultracube__/graphics/uranium-234.png",
+    icon = "__Ultracube__/assets/icons/uranium-234.png",
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Ultracube__/graphics/uranium-234.png",
+          filename = "__Ultracube__/assets/icons/uranium-234.png",
           scale = 0.25,
           mipmap_count = 4
         },
@@ -693,7 +693,7 @@ data:extend({
           draw_as_light = true,
           blend_mode = "additive",
           size = 64,
-          filename = "__Ultracube__/graphics/uranium-234.png",
+          filename = "__Ultracube__/assets/icons/uranium-234.png",
           scale = 0.25,
           tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
           mipmap_count = 4,

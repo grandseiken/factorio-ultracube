@@ -72,7 +72,7 @@ data:extend({
   {
     type = "item",
     name = "cube-modular-casing",
-    icon = "__Ultracube__/graphics/modular-casing.png",
+    icon = "__Ultracube__/assets/icons/modular-casing.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "a[modular-casing]",
@@ -81,7 +81,7 @@ data:extend({
   {
     type = "item",
     name = "cube-burnt-out-modular-casing",
-    icon = "__Ultracube__/graphics/burnt-out-modular-casing.png",
+    icon = "__Ultracube__/assets/icons/burnt-out-modular-casing.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "b[burnt-out-modular-casing]",
