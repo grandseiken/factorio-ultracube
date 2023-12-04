@@ -325,7 +325,7 @@ data:extend({
     type = "recipe",
     name = "cube-deeply-condensed-fuel",
     icon = "__Ultracube__/assets/icons/recipe/deeply-condensed-fuel.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {"sulfur", 100},

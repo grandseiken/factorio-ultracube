@@ -3,12 +3,9 @@ require("prototypes.scripts.autoplace")
 
 -- ANNOYING FIX TODOs:
 ----------------------
--- layered icons look bad when disabled, bake them?
--- barreling recipes (+ mystery furnace)
--- if machine output buffer on bulk recipes can ever be fixed, we could allow prod modules
+-- allow prod modules on some bulk recipes once 2.0 is out with stack size fix
 -- tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
 -- - advanced engine tech graphic + name (?)
--- - emotional synthesis icon + tech graphic
 -- make cube sparks aligned per-machine?
 -- make nuclear reactor a dummy so copy/paste undo works properly?
 -- - except then its description won't show up as a reactor...?
@@ -18,26 +15,24 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- 1. Teleporter (how do we do it with entities? -- ROCKET SILO might work.)
 -- 2. Deep techs
--- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- - (a) Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
--- - How to get singularity data? (deep core crystal is currently the mystery furance output)
+-- - Or could involve an cube-compatible alternative fuel
+-- - (b) How to get singularity data? (deep core crystal is currently the mystery furance output)
 -- - - Something where the cube must go in several machines in an odd/timed/awkward pattern?
 -- - - e.g. because machine must recharge, or its output expires/cools somehow, or numbers are weird/loop
 -- 3. Last armor/equipments/upgrades
 -- - Infinite technologies
 -- 4. antimatter + matter unit (+cube?) -> endgame antimatter power
--- - Endgame antimatter power unlocked by final science
+-- - Gamma handling could be in the blender (?)
 -- - Maybe a way to turn energy -> antimatter
--- - power directly from cubetime? (accumulators)
--- - advanced turbine: matter+anti -> into reactor -> cubetime -> power direct
--- - with some additional complication (byproduct?)
 -- 5. Various
 -- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
 -- - Phantom FX.
 -- - More use for deep crystal, unobtainium?
 -- - Fix deep core ore generation (?)
--- - Beacons? (!?)
--- - Barreling?
+-- - Beacons? (!?): Small, effective, one per machine, powered by fluid
+-- barreling recipes (+ mystery furnace)
 -- 6. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- RANDOM THOUGHT TODOs:

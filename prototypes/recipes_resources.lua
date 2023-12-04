@@ -52,7 +52,7 @@ data:extend({
     type = "recipe",
     name = "cube-explosive-rare-metals",
     icon = "__Ultracube__/assets/icons/recipe/explosive-smelting.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {"cube-raw-rare-metals", 6000},
       {"explosives", 16},
@@ -73,7 +73,7 @@ data:extend({
     type = "recipe",
     name = "cube-refined-rare-metals",
     icon = "__Ultracube__/assets/icons/recipe/refined-smelting.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {{"cube-refined-rare-metals", 1000}},
     results = {{"cube-rare-metals", 1000}},
     main_product = "",
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-sand-dilution",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     icon = "__Ultracube__/assets/icons/recipe/sand-dilution.png",
     ingredients = {
       {type = "fluid", name = "water", amount = 200, catalyst_amount = 200},
@@ -174,7 +174,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-powder-separation",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     icon = "__Ultracube__/assets/icons/recipe/deep-powder-separation.png",
     ingredients = {
       {type = "fluid", name = "cube-mineral-water", amount = 400},

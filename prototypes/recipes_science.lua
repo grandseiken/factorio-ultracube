@@ -22,17 +22,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-1",
-    icons = {
-      {
-        icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, 8},
-      }
-    },
+    icon = "__Ultracube__/assets/icons/recipe/contemplative-replication.png",
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},

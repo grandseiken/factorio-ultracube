@@ -334,22 +334,8 @@ data:extend({
   {
     type = "technology",
     name = "cube-emotional-decomposition",
-    icons = {
-      {
-        icon_size = 256, icon_mipmaps = 4,
-        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/assets/icons/joy.png",
-        shift = {-24, 0},
-      },
-      {
-        icon_size = 64, icon_mipmaps = 4,
-        icon = "__Ultracube__/assets/icons/despair.png",
-        shift = {24, 0},
-      },
-    },
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Ultracube__/assets/technology/emotional-decomposition.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
       {type = "unlock-recipe", recipe = "cube-bottled-euphoria"},

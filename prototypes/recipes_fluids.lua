@@ -24,7 +24,7 @@ data:extend({
     type = "recipe",
     name = "cube-improved-gelatinous-tar",
     icon = "__Ultracube__/assets/icons/recipe/improved-gelatinous-tar.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "steam", amount = 4000},
       {"cube-sand", 200},
@@ -45,24 +45,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-tar-processing",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/tar.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.325, shift = {0, 0},
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {-6, 2},
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {6, 2},
-      },
-    },
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__Ultracube__/assets/icons/recipe/tar-processing.png",
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 400},
     },
@@ -87,7 +71,7 @@ data:extend({
     type = "recipe",
     name = "cube-heavy-tar-reclamation",
     icon = "__Ultracube__/assets/icons/recipe/heavy-tar-reclamation.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 400},
       {type = "fluid", name = "steam", amount = 100},
@@ -113,7 +97,7 @@ data:extend({
     type = "recipe",
     name = "cube-light-tar-reclamation",
     icon = "__Ultracube__/assets/icons/recipe/light-tar-reclamation.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "cube-light-tar", amount = 400},
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
@@ -281,7 +265,7 @@ data:extend({
     type = "recipe",
     name = "cube-deep-crystal-distillation",
     icon = "__Ultracube__/assets/icons/recipe/deep-crystal-distillation.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "cube-mineral-water", amount = 2000},
       {type = "fluid", name = "sulfuric-acid", amount = 200},
@@ -305,7 +289,7 @@ data:extend({
     type = "recipe",
     name = "cube-euphoric-release",
     icon = "__Ultracube__/assets/icons/recipe/euphoric-release.png",
-    icon_size = 128, icon_mipmaps = 2,
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
@@ -441,22 +425,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-annihilation",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/ionized-annihilation-stream.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/icons/plastic-bar.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, 8},
-      },
-      {
-        icon = "__Ultracube__/assets/icons/basic-antimatter-unit.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, 8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/annihilation.png",
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {"cube-basic-matter-unit", 1},
       {"cube-basic-antimatter-unit", 1},
@@ -477,17 +447,8 @@ data:extend({
   {
     type = "recipe",
     name = "cube-gamma-waste-containment",
-    icons = {
-      {
-        icon = "__Ultracube__/assets/icons/gamma-waste-stream.png",
-        icon_size = 64, icon_mipmaps = 4,
-      },
-      {
-        icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-        icon_size = 64, icon_mipmaps = 4,
-        scale = 0.25, shift = {8, 8},
-      },
-    },
+    icon = "__Ultracube__/assets/icons/recipe/gamma-waste-containment.png",
+    icon_size = 128, icon_mipmaps = 5,
     ingredients = {
       {type = "fluid", name = "cube-gamma-waste-stream", amount = 80000},
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},

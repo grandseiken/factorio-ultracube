@@ -235,6 +235,7 @@ data:extend({
     minable = {mining_time = 10, result = "cube-forbidden-ziggurat"},
     placeable_by = {item = "cube-forbidden-ziggurat", count = 1},
     corpse = "cube-big-random-pipes-remnant",
+    draw_recipe_icon = false,
     dying_explosion = "nuclear-reactor-explosion",
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-5.75, -5.25}, {5.75, 5.25}},
