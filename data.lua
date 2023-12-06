@@ -1,84 +1,82 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- ANNOYING FIX TODOs:
-----------------------
--- allow prod modules on some bulk recipes once 2.0 is out with stack size fix
--- tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
--- - advanced engine tech graphic + name (?)
--- make cube sparks aligned per-machine?
--- make nuclear reactor a dummy so copy/paste undo works properly?
--- - except then its description won't show up as a reactor...?
--- - but it could be really a reactor modded to be inoperable somehow
-
--- RELEASE BLOCKERS
+-- Antimatter notes
 -------------------
--- 1. Teleporter (how do we do it with entities? -- ROCKET SILO might work.)
--- 2. Deep techs
--- - (a) Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- Can't disable animation layers when not working, or add light
+-- Doesn't consume fluid even when not working (maybe manually with script?)
+-- Above two may be fixable with combined crafting machine + electric energy interface
+-- With current design 1 antimatter should be worth >= 10GJ (say 16GJ)
+-- So 4/s ~= 64GW
+-- But this amount of power currently requires ~25k bulkframes per second just to load up
+-- SOLUTION:
+-- - Make reactor an ElectricEnergyInterface with spawned destroy_fluid generator ports
+-- - Make cubetime low (ideally do not require recharging) so it contains too fast to
+--   encourage using multiple ports, and reduce the total output correspondingly
+-- - Probably still increase bulkframe inflow/capacity a bit
+-- Containment should either take water and output steam or the reverse?
+
+-- RELEASE BLOCKERS (v0.2)
+-------------------
+-- 1. Deep techs (NEEDS THINK)
+-- 1a. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
 -- - Cubetime can increase the rate?
 -- - Or could involve an cube-compatible alternative fuel
--- - (b) How to get singularity data? (deep core crystal is currently the mystery furance output)
+-- 1b. How to get singularity data? (deep core crystal is currently the mystery furance output)
 -- - - Something where the cube must go in several machines in an odd/timed/awkward pattern?
 -- - - e.g. because machine must recharge, or its output expires/cools somehow, or numbers are weird/loop
--- 3. Last armor/equipments/upgrades
--- - Infinite technologies
--- 4. antimatter + matter unit (+cube?) -> endgame antimatter power
--- - Gamma handling could be in the blender (?)
+-- - - recharge seems best, but what machine? 2-3 steps then card should be enough
+-- - - - maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
+-- 2. Finish antimatter power (mostly just DEPENDS ON 1a/b probably for gamma recipe)
+-- - Gamma handling could be in the blender (?) -> and could make water (?)
 -- - Maybe a way to turn energy -> antimatter
--- 5. Various
--- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
--- - Phantom FX.
--- - More use for deep crystal, unobtainium?
--- - Fix deep core ore generation (?)
--- - Beacons? (!?): Small, effective, one per machine, powered by fluid
--- barreling recipes (+ mystery furnace)
--- 6. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 3. Teleporter (NEEDS EXPERIMENT)
+-- - how do we do it with entities? -- ROCKET SILO might work.
+-- 4. Beacons? (!?) (ONLY POSSIBLE WITH SHENANNIGANS)
+-- - Small, effective, one per machine, powered by fluid (maybe deep crystal + something)
+-- 5. Various (BASICALLY KNOWN)
+-- 5a. Phantom FX (sound design, aura graphics)
+-- 5b. Fix deep core ore generation (?)
+-- 5c. Infinite technologies, any more last equipments/armor
+-- 5d. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 5e. Should refined concrete use mineral water?
 
--- RANDOM THOUGHT TODOs:
-------------------------
--- analysis machine that unlocks techs based on finding things in the world
+-- v0.3+
+-------------------
+-- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
+-- - More use for deep crystal etc
+-- - Barreling recipes (+ mystery furnace)
+-- - make cube sparks aligned per-machine
+-- - make nuclear reactor a dummy so copy/paste undo works properly (and check it generally)
+-- - - except then its description won't show up as a reactor...?
+-- - - but it could be really a reactor modded to be inoperable somehow
+-- - tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
+-- - - advanced engine tech graphic + name (?)
+-- - Check phantom handling isn't too unwieldy, potentially have an alternative smaller synthesizer?
+-- - allow prod modules on some bulk recipes once 2.0 is out with stack size fix
+-- - Uranium processing, could it use a sludge fluid or something
+-- - Optional compatibility with alien biomes/worldgen mod (as a lib)
+
+-- v.later
+-------------------
+-- analysis machine that unlocks techs based on finding things in the world?
 -- - or a secret tech tree you find out in the world?
 -- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
--- ghost effects spooky player
-
--- LONG-TERM TODOs:
--------------------
 -- World events? (ghost/forest/daylight)
--- think about reintroducing biters + military?
+-- - ghost effects spooky player
+-- think about reintroducing biters + military? or biter farming?
 -- storylore tooltips
--- move some current techs later and add earlier-game shit versions of things? e.g. miners, fabricator, perhaps even synthesizer
-
--- TECH TREE TODOs:
--------------------
--- PHANTOM FX:
--- - Sound design
--- - Replace "aura" graphics
--- should phantom constituent synthesis be done in a smaller machine...? it could be quite unwieldy atm o_o need to test
--- - maybe the dimensional engine could convert a synthesizer into a mini-synthesizer... !?
--- tendril expulsion: possibly ... require something from other branch in recipe? Maybe for more efficient version?
--- Kovarex redemption: extra fluid ingredients/results? Another nuclear ingredient to manage levels of (e.g. radioactive sludge)?
--- Make sure reactor fast-replace is working (seemed odd when picked up) plus 2 burnt result slots
--- power armor v2 (??? - haunted furnace?)
-
--- Random thoughts.
--- ?: something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
+-- something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
 -- - maybe: 1 can be used as fuel, one can be used as something else?
 -- - Or 1 fuel-only; 32 phantoms?
--- alternatively: something where cube has random chance to turn into red cube or blue cube. or maybe both
--- some exponential feedback loop that starts extremely slow somewhere (ala gardens or nuclear)
--- - how about this: deep crushing has tiny% chance to produce diamond or something
--- ?: can have some recipes that make old things e.g. matter units, but not strict replacement
+-- - Or random chance for different subcubes?
+-- - Slow-start feedback loop from e.g. tiny chance of diamond while (e.g. deep) crushing
+-- Other resource/intermediate conversions, or more efficient recipes but that still require the originals somehow
+-- - Or high power cost?
+-- Unobtainium?
+-- Revisit tendril expulsion (better recipe)?
+-- Local-only solar panels?
 
--- Things to unlock from level 3/4+:
--- Matter repurposings? (convert basic intermediates into others, maybe big scale, but in some way that you still need
---                           original recipes occasionally - how exactly? and/or without conversion, reagents)
------ Or: maybe some way of converting like this, but high power cost, e.g. power -> more matter?
--- unobtainium?
--- After science 3/4 or nearby, later ideas...
--- Few other things with combining the earlier trees
--- ?: something to do with mechanical circuit network?
--- ?: some sort of weird biter farmer spawning synthesis.
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")

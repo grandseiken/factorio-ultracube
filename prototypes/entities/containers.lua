@@ -246,7 +246,7 @@ data:extend({
     collision_box = {{-2.35, -2.35}, {2.35, 2.35}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     fluid_box = {
-      base_area = 2000,
+      base_area = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {position = {-3, -1}},

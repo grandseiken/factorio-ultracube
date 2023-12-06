@@ -5,10 +5,12 @@ do
   end
 end
 
+local antimatter_reactor = require("__Ultracube__/scripts/antimatter_reactor")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
+local entity_combine = require("__Ultracube__/scripts/entity_combine")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local transition = require("__Ultracube__/scripts/transition")
 
@@ -146,6 +148,7 @@ script.on_event(
     end
     tech_unlock.constructed(e.created_entity)
     entity_cache.add(e.created_entity)
+    entity_combine.created(e.created_entity)
   end)
 
 script.on_event(
@@ -155,6 +158,7 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.loot)
+    entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
   end)
@@ -167,6 +171,7 @@ script.on_event(
     end
     tech_unlock.constructed(e.entity)
     entity_cache.add(e.entity)
+    entity_combine.created(e.entity)
   end)
 
 script.on_event(
@@ -175,6 +180,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
+    entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
   end)
@@ -185,9 +191,11 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
+    entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity, e.old_surface_index, e.old_position)
     cube_search.remove_entity(e.entity)
     entity_cache.add(e.entity)
+    entity_combine.created(e.entity)
   end)
 
 script.on_event(
@@ -200,6 +208,7 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.buffer)
+    entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
   end)
@@ -223,4 +232,5 @@ script.on_event(defines.events.on_tick,
   function(e)
     cube_fx.tick(e.tick)
     transition.tick(e.tick)
+    antimatter_reactor.tick(e.tick)
   end)

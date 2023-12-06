@@ -20,6 +20,7 @@ function entity_cache.refresh()
     vehicles = {},
     reactors = {},
     multi_furnaces = {},
+    antimatter_reactors = {},
   }
   cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
@@ -142,11 +143,12 @@ local function add_internal(entity, cache, is_global)
   end
   if entity_type == "reactor" and reactor_entities[entity.name] then
     cache.reactors[entity.unit_number] = entity
-    needs_chunk_cache = false
   end
   if entity_type == "furnace" and multi_furnace_entities[entity.name] then
     cache.multi_furnaces[entity.unit_number] = entity
-    needs_chunk_cache = false
+  end
+  if entity.name == "cube-antimatter-reactor" then
+    cache.antimatter_reactors[entity.unit_number] = entity
   end
   return needs_chunk_cache
 end
@@ -180,11 +182,12 @@ local function remove_internal(entity, cache, is_global)
   end
   if entity_type == "reactor" and reactor_entities[entity.name] then
     cache.reactors[entity.unit_number] = nil
-    needs_chunk_cache = false
   end
   if entity_type == "furnace" and multi_furnace_entities[entity.name] then
     cache.multi_furnaces[entity.unit_number] = nil
-    needs_chunk_cache = false
+  end
+  if entity.name == "cube-antimatter-reactor" then
+    cache.antimatter_reactors[entity.unit_number] = nil
   end
   return needs_chunk_cache
 end
