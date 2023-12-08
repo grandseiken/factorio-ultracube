@@ -3,18 +3,19 @@ require("prototypes.scripts.autoplace")
 
 -- Antimatter notes
 -------------------
--- Can't disable animation layers when not working, or add light
--- Doesn't consume fluid even when not working (maybe manually with script?)
--- Above two may be fixable with combined crafting machine + electric energy interface
--- With current design 1 antimatter should be worth >= 10GJ (say 16GJ)
--- So 4/s ~= 64GW
--- But this amount of power currently requires ~25k bulkframes per second just to load up
+-- STILL TODOS:
+-- - Animation is on all the time
+-- - - Solution: dynamically spawn an animation on top?
+-- - Generators are uselessly connected to network
+-- - - Solution: try to hide or disconnect them somehow. If that fails, backup plan
+-- - - could be to... just leave it?
+-- With current design 1 antimatter should be worth >= 6GJ (say 12GJ), so 4/s ~= 48GW
+-- But this amount of power currently requires thousands of bulkframes just to load up (per second!)
 -- SOLUTION:
 -- - Make reactor an ElectricEnergyInterface with spawned destroy_fluid generator ports
--- - Make cubetime low (ideally do not require recharging) so it contains too fast to
+-- - Make cubetime (even) lower? (ideally do not require recharging) so it contains too fast to
 --   encourage using multiple ports, and reduce the total output correspondingly
 -- - Probably still increase bulkframe inflow/capacity a bit
--- Containment should either take water and output steam or the reverse?
 
 -- RELEASE BLOCKERS (v0.2)
 -------------------
@@ -28,7 +29,8 @@ require("prototypes.scripts.autoplace")
 -- - - recharge seems best, but what machine? 2-3 steps then card should be enough
 -- - - - maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
 -- 2. Finish antimatter power (mostly just DEPENDS ON 1a/b probably for gamma recipe)
--- - Gamma handling could be in the blender (?) -> and could make water (?)
+-- - Gamma handling could be in the blender (?) -> and could make/consume water/steam (?)
+-- - Descriptions
 -- - Maybe a way to turn energy -> antimatter
 -- 3. Teleporter (NEEDS EXPERIMENT)
 -- - how do we do it with entities? -- ROCKET SILO might work.

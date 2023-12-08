@@ -3,7 +3,30 @@ local entity_combine = {}
 local combine_definitions = {
   ["cube-antimatter-reactor"] = {
     {name = "cube-antimatter-reactor-interface"},
-    {name = "cube-antimatter-reactor-port"},
+    {
+      -- name = "cube-antimatter-reactor-generator",
+      name = "cube-antimatter-reactor-port",
+      direction = defines.direction.north,
+      offset = {0, -5},
+    },
+    {
+      -- name = "cube-antimatter-reactor-generator-flip",
+      name = "cube-antimatter-reactor-port-flip",
+      direction = defines.direction.south,
+      offset = {0, 5},
+    },
+    {
+      -- name = "cube-antimatter-reactor-generator",
+      name = "cube-antimatter-reactor-port",
+      direction = defines.direction.east,
+      offset = {5, 0},
+    },
+    {
+      -- name = "cube-antimatter-reactor-generator-flip",
+      name = "cube-antimatter-reactor-port-flip",
+      direction = defines.direction.west,
+      offset = {-5, 0},
+    },
   },
 }
 
@@ -32,10 +55,15 @@ function entity_combine.created(entity)
     combine_table[entity.unit_number] = linked_entries
   end
   for _, entry in ipairs(entries) do
+    local position = entity.position
+    if entry.offset then
+      position.x = position.x + entry.offset[1]
+      position.y = position.y + entry.offset[2]
+    end
     local new_entity = entity.surface.create_entity {
       name = entry.name,
-      position = entity.position,
-      direction = entity.direction,
+      position = position,
+      direction = entry.direction or entity.direction,
       force = entity.force,
       player = entity.last_user,
       spill = false,

@@ -258,6 +258,111 @@ local reactor_animation = {
   },
 }
 
+
+local function make_reactor_generator(flip)
+  local pipe_position = {0, -3}
+  local name = "cube-antimatter-reactor-generator"
+  if flip then
+    pipe_position = {0, 3}
+    name = name .. "-flip"
+  end
+  return {
+    type = "generator",
+    name = name,
+    localised_name = {"entity-name.cube-antimatter-reactor-generator"},
+    localised_description = {"entity-description.cube-antimatter-reactor-generator"},
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {"placeable-neutral", "placeable-player", "hidden",
+            "not-repairable", "not-blueprintable", "not-deconstructable"},
+    max_health = 1000,
+    collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    selection_priority = 100,
+    allow_copy_paste = false,
+
+    fluid_box = {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = pipe_path,
+      base_area = 10,
+      base_height = 24,
+      base_level = -25,
+      pipe_connections = {
+        {type = "input", position = pipe_position},
+      },
+      filter = "cube-ionized-annihilation-stream",
+    },
+    energy_source = {
+      type = "electric",
+      buffer_capacity = "200MJ",  -- Production / 60.
+      usage_priority = "primary-output",
+      input_flow_limit = "0W",
+      emissions_per_minute = 0,
+    },
+
+    effectivity = 1,
+    maximum_temperature = 25,
+    destroy_non_fuel_fluid = true,
+    burns_fluid = true,
+    scale_fluid_usage = false,
+    fluid_usage_per_tick = 400,
+  }
+end
+
+local function make_reactor_port(flip)
+  local pipe_position = {0, -3}
+  local name = "cube-antimatter-reactor-port"
+  if flip then
+    pipe_position = {0, 3}
+    name = name .. "-flip"
+  end
+  return {
+    type = "generator",
+    name = name,
+    localised_name = {"entity-name.cube-antimatter-reactor-port"},
+    localised_description = {"entity-description.cube-antimatter-reactor-port"},
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {"placeable-neutral", "placeable-player", "hidden",
+             "not-repairable", "not-blueprintable", "not-deconstructable"},
+    max_health = 1000,
+    collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    selection_priority = 100,
+    allow_copy_paste = false,
+
+    fluid_box = {
+      production_type = "input",
+      pipe_covers = pipecoverspictures(),
+      pipe_picture = pipe_path,
+      base_area = 500,
+      base_height = 50,
+      base_level = -25,
+      pipe_connections = {
+        {type = "input", position = pipe_position},
+      },
+      filter = "cube-ionized-annihilation-stream",
+    },
+    energy_source = {
+      type = "electric",
+      usage_priority = "secondary-output",
+      output_flow_limit = "0W",
+      buffer_capacity = "200MJ",
+      emissions_per_minute = 0,
+    },
+
+    effectivity = 1,
+    maximum_temperature = 25,
+    destroy_non_fuel_fluid = true,
+    burns_fluid = true,
+    scale_fluid_usage = false,
+    fluid_usage_per_tick = 400,
+  }
+end
+
 data:extend({
   {
     type = "corpse",
@@ -340,6 +445,8 @@ data:extend({
     max_health = 6000,
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+    allow_copy_paste = false,
+    selectable_in_game = false,
 
     energy_production = "0GW",
     energy_usage = "0W",
@@ -349,10 +456,11 @@ data:extend({
       usage_priority = "primary-output",
       input_flow_limit = "0W",
       emissions_per_minute = 0,
+      render_no_power_icon = false,
     },
     light = {
-      intensity = 0.25,
-      size = 2,
+      intensity = 0.5,
+      size = 12,
       shift = {0, 0},
       color = {r = 0.95, g = 0.75, b = 0.5},
     },
@@ -373,48 +481,10 @@ data:extend({
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 0.85},
   },
 
-  {
-    type = "generator",
-    name = "cube-antimatter-reactor-port",
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"placeable-neutral", "placeable-player", "hidden",
-             "not-repairable", "not-blueprintable", "not-deconstructable"},
-    max_health = 1000,
-    collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
-    selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
-
-    fluid_box = {
-      production_type = "input",
-      pipe_covers = pipecoverspictures(),
-      pipe_picture = pipe_path,
-      base_area = 500,
-      base_height = 50,
-      base_level = -25,
-      pipe_connections = {
-        {type = "input", position = {0, -8}},
-        {type = "input", position = {0, 8}},
-        {type = "input", position = {-8, 0}},
-        {type = "input", position = {8, 0}},
-      },
-      filter = "cube-ionized-annihilation-stream",
-    },
-    energy_source = {
-      type = "electric",
-      usage_priority = "secondary-output",
-      output_flow_limit = "0W",
-      buffer_capacity = "800MJ",
-      emissions_per_minute = 0,
-    },
-
-    effectivity = 1,
-    maximum_temperature = 25,
-    destroy_non_fuel_fluid = true,
-    burns_fluid = true,
-    scale_fluid_usage = false,
-    fluid_usage_per_tick = 1600,
-  },
+  make_reactor_port(false),
+  make_reactor_port(true),
+  make_reactor_generator(false),
+  make_reactor_generator(true),
 
   {
     type = "assembling-machine",
