@@ -4,8 +4,6 @@ require("prototypes.scripts.autoplace")
 -- Antimatter notes
 -------------------
 -- STILL TODOS:
--- - Animation is on all the time
--- - - Solution: dynamically spawn an animation on top?
 -- - Generators are uselessly connected to network
 -- - - Solution: try to hide or disconnect them somehow. If that fails, backup plan
 -- - - could be to... just leave it?
@@ -46,6 +44,8 @@ require("prototypes.scripts.autoplace")
 -- v0.3+
 -------------------
 -- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
+-- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
+--   interesting late-game storage solution
 -- - More use for deep crystal etc
 -- - Barreling recipes (+ mystery furnace)
 -- - make cube sparks aligned per-machine

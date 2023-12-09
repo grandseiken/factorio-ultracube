@@ -119,39 +119,42 @@ local reactor_picture = {
 }
 
 local reactor_animation = {
-  -- Animation speeds must be divided by power output (in J/tick).
-  layers = {
-    {
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
       height = 81,
       frame_count = 60,
-      animation_speed = 0.5 * (1 / 200000000),
+      animation_speed = 0.5,
       max_advance = 1,
       scale = 0.75,
       shift = {-4.25, -5.35},
       blend_mode = "additive",
       flags = {"smoke"},
       fadeout = true,
-    },
-    {
+    }
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
       height = 81,
       frame_count = 60,
-      animation_speed = 0.5 * (1 / 200000000),
+      animation_speed = 0.5,
       max_advance = 1,
       scale = 0.5,
       shift = {-5.25, -1.35},
       blend_mode = "additive",
       flags = {"smoke"},
       fadeout = true,
-    },
-    {
+    }
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-glow.png",
       priority = "high",
       line_length = 6,
@@ -159,7 +162,7 @@ local reactor_animation = {
       height = 344,
       frame_count = 12,
       repeat_count = 5,
-      animation_speed = 0.75 * (1 / 200000000),
+      animation_speed = 0.75,
       max_advance = 1,
       shift = {2.18, -2.358},
       draw_as_glow = true,
@@ -172,15 +175,17 @@ local reactor_animation = {
         height = 688,
         frame_count = 12,
         repeat_count = 5,
-        animation_speed = 0.75 * (1 / 200000000),
+        animation_speed = 0.75,
         max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
         draw_as_glow = true,
         blend_mode = "additive",
       },
-    },
-    {
+    }
+  },
+  {
+    animation = {
       draw_as_light = true,
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
       line_length = 6,
@@ -188,7 +193,7 @@ local reactor_animation = {
       height = 344,
       frame_count = 12,
       repeat_count = 5,
-      animation_speed = 0.75 * (1 / 200000000),
+      animation_speed = 0.75,
       max_advance = 1,
       shift = {2.18, -2.358},
       hr_version = {
@@ -199,13 +204,15 @@ local reactor_animation = {
         height = 688,
         frame_count = 12,
         repeat_count = 5,
-        animation_speed = 0.75 * (1 / 200000000),
+        animation_speed = 0.75,
         max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
       },
-    },
-    {
+    }
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-light.png",
       priority = "high",
       width = 550,
@@ -231,15 +238,17 @@ local reactor_animation = {
         draw_as_light = true,
         blend_mode = "additive-soft",
       },
-    },
-    {
+    }
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation.png",
       line_length = 6,
       width = 313,
       height = 344,
       frame_count = 12,
       repeat_count = 5,
-      animation_speed = 0.75 * (1 / 200000000),
+      animation_speed = 0.75,
       max_advance = 1,
       shift = {2.18, -2.358},
       hr_version = {
@@ -249,7 +258,7 @@ local reactor_animation = {
         height = 688,
         frame_count = 12,
         repeat_count = 5,
-        animation_speed = 0.75 * (1 / 200000000),
+        animation_speed = 0.75,
         max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
@@ -257,7 +266,6 @@ local reactor_animation = {
     },
   },
 }
-
 
 local function make_reactor_generator(flip)
   local pipe_position = {0, -3}
@@ -274,8 +282,7 @@ local function make_reactor_generator(flip)
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "placeable-player", "hidden",
-            "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
     collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
@@ -312,10 +319,12 @@ local function make_reactor_generator(flip)
 end
 
 local function make_reactor_port(flip)
-  local pipe_position = {0, -3}
+  local pipe_position = {0, -1}
+  local selection_box = {{-2.5, -0.5}, {2.5, 2.5}}
   local name = "cube-antimatter-reactor-port"
   if flip then
-    pipe_position = {0, 3}
+    pipe_position = {0, 1}
+    selection_box = {{-2.5, -2.5}, {2.5, 0.5}}
     name = name .. "-flip"
   end
   return {
@@ -326,11 +335,11 @@ local function make_reactor_port(flip)
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "placeable-player", "hidden",
-             "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
-    collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    drawing_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
+    selection_box = selection_box,
     selection_priority = 100,
     allow_copy_paste = false,
 
@@ -338,7 +347,7 @@ local function make_reactor_port(flip)
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       pipe_picture = pipe_path,
-      base_area = 500,
+      base_area = 250,
       base_height = 50,
       base_level = -25,
       pipe_connections = {
@@ -352,6 +361,8 @@ local function make_reactor_port(flip)
       output_flow_limit = "0W",
       buffer_capacity = "200MJ",
       emissions_per_minute = 0,
+      render_no_power_icon = false,
+      render_no_network_icon = false,
     },
 
     effectivity = 1,
@@ -433,6 +444,32 @@ data:extend({
   },
 
   {
+    type = "assembling-machine",
+    name = "cube-antimatter-reactor-animation",
+    localised_name = {"entity-name.cube-antimatter-reactor"},
+    localised_description = {"entity-description.cube-antimatter-reactor"},
+    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon_size = 64,
+    icon_mipmaps = 4,
+    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    max_health = 1000,
+    collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
+    selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
+    allow_copy_paste = false,
+    selectable_in_game = false,
+    show_recipe_icon = false,
+    match_animation_speed_to_activity = false,
+
+    picture = util.empty_sprite(),
+    crafting_categories = {"cube-uncraftable"},
+    crafting_speed = 1,
+    fixed_recipe = "cube-uncraftable-dummy-recipe",
+    energy_usage = "1W",
+    energy_source = {type = "void"},
+    working_visualisations = reactor_animation,
+  },
+
+  {
     type = "electric-energy-interface",
     name = "cube-antimatter-reactor-interface",
     localised_name = {"entity-name.cube-antimatter-reactor"},
@@ -440,8 +477,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-neutral", "placeable-player", "hidden",
-             "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 6000,
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
@@ -465,7 +501,7 @@ data:extend({
       color = {r = 0.95, g = 0.75, b = 0.5},
     },
 
-    animation = reactor_animation,
+    animation = util.empty_sprite(),
     working_sound = {
       sound = {
         filename = "__Krastorio2Assets__/sounds/buildings/fusion-reactor.ogg",
@@ -475,6 +511,8 @@ data:extend({
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       apparent_volume = 1.5,
       audible_distance_modifier = 1,
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
     },
 
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},

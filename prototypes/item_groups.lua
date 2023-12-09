@@ -303,6 +303,12 @@ data:extend({
     type = "item-subgroup",
     name = "cube-fluid-burner",
     group = "fluids",
+    order = "y",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-uncraftable",
+    group = "fluids",
     order = "z",
   },
 })

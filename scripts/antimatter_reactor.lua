@@ -8,10 +8,11 @@ function antimatter_reactor.tick(tick)
   for _, e in pairs(cache.antimatter_reactors) do
     local linked = entity_combine.get_linked(e)
     local interface = linked[1]
+    local animation = linked[2]
     if interface and interface.valid then
       local energy = 0
       for i = 1, 4 do
-        local port = linked[1 + i]
+        local port = linked[2 + i]
         if port and port.valid then
           energy = energy + port.energy
           port.energy = 0
@@ -19,6 +20,9 @@ function antimatter_reactor.tick(tick)
       end
       interface.power_production = energy
       interface.electric_buffer_size = energy
+      if animation and animation.valid then
+        animation.active = energy > 0
+      end
     end
     -- for i = 1, 4 do
     --   local generator = linked[i]

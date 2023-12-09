@@ -59,7 +59,7 @@ local function add_mystery_dummy(name, item)
       ingredients = {},
       results = {{item, 1}},
       energy_required = 1,
-      category = "cube-uncraftable",
+      category = "cube-mystery-furnace",
       subgroup = "cube-mystery",
       enabled = false,
       hidden = true,

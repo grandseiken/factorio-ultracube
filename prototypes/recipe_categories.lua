@@ -97,16 +97,21 @@ data:extend({
   {
     type = "recipe-category",
     name = "cube-stygian-energy-lab",
-    order = "w",
+    order = "v",
   },
   {
     type = "recipe-category",
     name = "cube-annihilation-chamber",
-    order = "x",
+    order = "w",
   },
   {
     type = "recipe-category",
     name = "cube-fluid-burner",
+    order = "x",
+  },
+  {
+    type = "recipe-category",
+    name = "cube-mystery-furnace",
     order = "y",
   },
   {

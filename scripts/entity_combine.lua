@@ -3,29 +3,30 @@ local entity_combine = {}
 local combine_definitions = {
   ["cube-antimatter-reactor"] = {
     {name = "cube-antimatter-reactor-interface"},
+    {name = "cube-antimatter-reactor-animation"},
     {
       -- name = "cube-antimatter-reactor-generator",
       name = "cube-antimatter-reactor-port",
       direction = defines.direction.north,
-      offset = {0, -5},
+      offset = {0, -7},
     },
     {
       -- name = "cube-antimatter-reactor-generator-flip",
       name = "cube-antimatter-reactor-port-flip",
       direction = defines.direction.south,
-      offset = {0, 5},
+      offset = {0, 7},
     },
     {
       -- name = "cube-antimatter-reactor-generator",
       name = "cube-antimatter-reactor-port",
       direction = defines.direction.east,
-      offset = {5, 0},
+      offset = {7, 0},
     },
     {
       -- name = "cube-antimatter-reactor-generator-flip",
       name = "cube-antimatter-reactor-port-flip",
       direction = defines.direction.west,
-      offset = {-5, 0},
+      offset = {-7, 0},
     },
   },
 }
