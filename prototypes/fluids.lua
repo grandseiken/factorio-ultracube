@@ -189,7 +189,7 @@ data:extend({
     base_color = {r=0.5, g=0.7, b=0.8, a=1},
     flow_color = {r=0.75, g=0.85, b=0.9, a=1},
     default_temperature = 25,
-    fuel_value = "500KJ",
+    fuel_value = "250KJ",
     subgroup = "cube-energy-fluids",
     order = "x[ion-stream]",
   },

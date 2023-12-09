@@ -432,10 +432,10 @@ data:extend({
       {"cube-basic-antimatter-unit", 1},
     },
     results = {
-      {type = "fluid", name = "cube-ionized-annihilation-stream", amount = 24000},
-      {type = "fluid", name = "cube-gamma-waste-stream", amount = 18000},
+      {type = "fluid", name = "cube-ionized-annihilation-stream", amount = 48000},
+      {type = "fluid", name = "cube-gamma-waste-stream", amount = 48000},
     },
-    energy_required = 1,
+    energy_required = 2,
     main_product = "",
     category = "cube-annihilation-chamber",
     subgroup = "cube-energy-fluids",
@@ -450,7 +450,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/gamma-waste-containment.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {type = "fluid", name = "cube-gamma-waste-stream", amount = 18000},
+      {type = "fluid", name = "cube-gamma-waste-stream", amount = 72000},
     },
     results = {},
     energy_required = 0.25,

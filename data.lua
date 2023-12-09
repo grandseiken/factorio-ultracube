@@ -1,36 +1,26 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
 
--- Antimatter notes
--------------------
--- STILL TODOS:
--- - Generators are uselessly connected to network
--- - - Seems like there is no way to hide them other than convert to fluid-energy-source
---     fixed-recipe assemblers and measure things manually. Not great.
--- With current design 1 antimatter should be worth >= 6GJ (say 12GJ), so 4/s ~= 48GW
--- But this amount of power currently requires thousands of bulkframes just to load up (per second!)
--- SOLUTION:
--- - Make reactor an ElectricEnergyInterface with spawned destroy_fluid generator ports
--- - Make cubetime (even) lower? (ideally do not require recharging) so it contains too fast to
---   encourage using multiple ports, and reduce the total output correspondingly
--- - Probably still increase bulkframe inflow/capacity a bit
--- - Consider providing some energy as steam in waste containment
--- - Consider increasing chamber crafting time (not sure how this affects things?)
-
 -- RELEASE BLOCKERS (v0.2)
 -------------------
 -- 1. Deep techs (NEEDS THINK)
 -- 1a. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- - Just use e.g. advanced chemical plant, electrolysis machine, condenser
 -- - Cubetime can increase the rate?
 -- - Or could involve an cube-compatible alternative fuel
 -- 1b. How to get singularity data? (deep core crystal is currently the mystery furance output)
+-- - - Molecular blender
 -- - - Something where the cube must go in several machines in an odd/timed/awkward pattern?
 -- - - e.g. because machine must recharge, or its output expires/cools somehow, or numbers are weird/loop
 -- - - recharge seems best, but what machine? 2-3 steps then card should be enough
 -- - - - maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
--- 2. Finish antimatter power (mostly just DEPENDS ON 1a/b probably for gamma recipe)
--- - Gamma handling could be in the blender (?) -> and could make/consume water/steam (?)
--- - Maybe a way to turn energy -> antimatter
+-- 2. Finish gamma handling
+-- - Current numbers seem good, but cube usage is too awkward - hard to buffer enough to avoid
+--   it getting stuck - can we maintain overall cubetime while making it different somehow?
+-- - - Ideally full cubetime should ~exactly process 4 ports. Currently ~8, but increasing seems to imply
+--     we should produce more power (maybe it is just fine)
+-- - Could be in the blender (?) -> and could make/consume water/steam (?)
+-- - Could provide some energy as steam instead
 -- 3. Teleporter (NEEDS EXPERIMENT)
 -- - how do we do it with entities? -- ROCKET SILO might work.
 -- 4. Beacons? (!?) (ONLY POSSIBLE WITH SHENANNIGANS)
@@ -47,7 +37,10 @@ require("prototypes.scripts.autoplace")
 -- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
 -- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
 --   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
--- - Revisit tendril expulsion (better recipe)?
+-- - - Related to: revisit tendril expulsion (better recipe)?
+-- - Is there a way to avoid antimatter ports showing up on power stats
+-- - - Apparently not other than converting to fixed-recipe fluid-powered assemblers and
+--     measuring manually, but that means no power bars (unless they can be modded back in?)
 -- - More use for deep crystal etc
 -- - Barreling recipes (+ mystery furnace)
 -- - make cube sparks aligned per-machine

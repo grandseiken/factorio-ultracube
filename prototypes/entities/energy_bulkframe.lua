@@ -18,11 +18,13 @@ data:extend({
     selection_box = {{-3, -3}, {3, 3}},
     drawing_box = {{-3, -3}, {3, 3}},
     energy_source = {
+      -- TODO: numbers (particularly input flow) tweaked upwards to handle antimatter power.
+      -- Perhaps tweak down a bit if we add some other super-endgame storage solution.
       type = "electric",
-      buffer_capacity = "250MJ",
+      buffer_capacity = "400MJ",
       usage_priority = "tertiary",
-      input_flow_limit = "2.5MW",
-      output_flow_limit = "20MW",
+      input_flow_limit = "50MW",
+      output_flow_limit = "10MW",
     },
     picture = {
       layers = {

@@ -118,7 +118,7 @@ local reactor_picture = {
   },
 }
 
-local reactor_animation = {
+local reactor_working_visualizations = {
   {
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
@@ -128,13 +128,12 @@ local reactor_animation = {
       height = 81,
       frame_count = 60,
       animation_speed = 0.5,
-      max_advance = 1,
       scale = 0.75,
       shift = {-4.25, -5.35},
       blend_mode = "additive",
       flags = {"smoke"},
       fadeout = true,
-    }
+    },
   },
   {
     animation = {
@@ -145,13 +144,12 @@ local reactor_animation = {
       height = 81,
       frame_count = 60,
       animation_speed = 0.5,
-      max_advance = 1,
       scale = 0.5,
       shift = {-5.25, -1.35},
       blend_mode = "additive",
       flags = {"smoke"},
       fadeout = true,
-    }
+    },
   },
   {
     animation = {
@@ -161,9 +159,7 @@ local reactor_animation = {
       width = 313,
       height = 344,
       frame_count = 12,
-      repeat_count = 5,
       animation_speed = 0.75,
-      max_advance = 1,
       shift = {2.18, -2.358},
       draw_as_glow = true,
       blend_mode = "additive",
@@ -174,42 +170,35 @@ local reactor_animation = {
         width = 626,
         height = 688,
         frame_count = 12,
-        repeat_count = 5,
         animation_speed = 0.75,
-        max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
         draw_as_glow = true,
         blend_mode = "additive",
       },
-    }
+    },
   },
   {
+    draw_as_light = true,
     animation = {
-      draw_as_light = true,
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
       line_length = 6,
       width = 313,
       height = 344,
       frame_count = 12,
-      repeat_count = 5,
       animation_speed = 0.75,
-      max_advance = 1,
       shift = {2.18, -2.358},
       hr_version = {
-        draw_as_light = true,
         filename = "__Krastorio2Assets__/entities/fusion-reactor/hr-fusion-reactor-animation-light.png",
         line_length = 6,
         width = 626,
         height = 688,
         frame_count = 12,
-        repeat_count = 5,
         animation_speed = 0.75,
-        max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
       },
-    }
+    },
   },
   {
     animation = {
@@ -219,8 +208,7 @@ local reactor_animation = {
       height = 550,
       line_length = 1,
       frame_count = 1,
-      repeat_count = 60,
-      max_advance = 1,
+      repeat_count = 12,
       shift = {1.01, 0},
       draw_as_light = true,
       blend_mode = "additive-soft",
@@ -232,13 +220,12 @@ local reactor_animation = {
         scale = 0.5,
         line_length = 1,
         frame_count = 1,
-        repeat_count = 60,
-        max_advance = 1,
+        repeat_count = 12,
         shift = {1.01, 0},
         draw_as_light = true,
         blend_mode = "additive-soft",
       },
-    }
+    },
   },
   {
     animation = {
@@ -247,9 +234,7 @@ local reactor_animation = {
       width = 313,
       height = 344,
       frame_count = 12,
-      repeat_count = 5,
       animation_speed = 0.75,
-      max_advance = 1,
       shift = {2.18, -2.358},
       hr_version = {
         filename = "__Krastorio2Assets__/entities/fusion-reactor/hr-fusion-reactor-animation.png",
@@ -257,23 +242,29 @@ local reactor_animation = {
         width = 626,
         height = 688,
         frame_count = 12,
-        repeat_count = 5,
         animation_speed = 0.75,
-        max_advance = 1,
         scale = 0.5,
         shift = {2.18, -2.358},
       },
+    },
+  },
+  {
+    light = {
+      intensity = 0.25,
+      size = 4,
+      shift = {0, 0},
+      color = {r = 0.95, g = 0.75, b = 0.5},
     },
   },
 }
 
 local function make_reactor_port(flip)
   local pipe_position = {0, -1}
-  local selection_box = {{-2.5, -0.5}, {2.5, 2.5}}
+  local selection_box = {{-2.5, -0.5}, {2.5, 3.5}}
   local name = "cube-antimatter-reactor-port"
   if flip then
     pipe_position = {0, 1}
-    selection_box = {{-2.5, -2.5}, {2.5, 0.5}}
+    selection_box = {{-2.5, -3.5}, {2.5, 0.5}}
     name = name .. "-flip"
   end
   return {
@@ -308,7 +299,7 @@ local function make_reactor_port(flip)
       type = "electric",
       usage_priority = "secondary-output",
       output_flow_limit = "0W",
-      buffer_capacity = "200MJ",
+      buffer_capacity = "100MJ",
       emissions_per_minute = 0,
       render_no_power_icon = false,
       render_no_network_icon = false,
@@ -415,7 +406,7 @@ data:extend({
     fixed_recipe = "cube-uncraftable-dummy-recipe",
     energy_usage = "1W",
     energy_source = {type = "void"},
-    working_visualisations = reactor_animation,
+    working_visualisations = reactor_working_visualizations,
   },
 
   make_reactor_port(false),
@@ -439,17 +430,11 @@ data:extend({
     energy_usage = "0W",
     energy_source = {
       type = "electric",
-      buffer_capacity = "800MJ",  -- Production / 60.
+      buffer_capacity = "400MJ",  -- Production / 60.
       usage_priority = "primary-output",
       input_flow_limit = "0W",
       emissions_per_minute = 0,
       render_no_power_icon = false,
-    },
-    light = {
-      intensity = 0.5,
-      size = 12,
-      shift = {0, 0},
-      color = {r = 0.95, g = 0.75, b = 0.5},
     },
 
     animation = util.empty_sprite(),
@@ -517,7 +502,7 @@ data:extend({
       east = chamber_animation_horizontal,
       west = chamber_animation_horizontal,
     },
-    energy_usage = "250MW",
+    energy_usage = "150MW",
     ingredient_count = 2,
     crafting_speed = 1,
     crafting_categories = {"cube-annihilation-chamber"},

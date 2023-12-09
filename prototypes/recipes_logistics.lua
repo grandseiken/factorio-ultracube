@@ -821,7 +821,7 @@ data:extend({
     type = "recipe",
     name = "cube-fluid-storage-1",
     ingredients = {
-      {"cube-sophisticated-matter-unit", 20},
+      {"cube-sophisticated-matter-unit", 12},
       {"pipe", 8},
     },
     results = {{"cube-fluid-storage-1", 1}},
@@ -833,7 +833,7 @@ data:extend({
     type = "recipe",
     name = "cube-fluid-storage-2",
     ingredients = {
-      {"cube-sophisticated-matter-unit", 40},
+      {"cube-sophisticated-matter-unit", 48},
       {"pipe", 24},
     },
     results = {{"cube-fluid-storage-2", 1}},
