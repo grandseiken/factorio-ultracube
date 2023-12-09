@@ -71,7 +71,7 @@ data:extend({
   },
   {
     type = "recipe-category",
-    name = "cube-molecular-blender",
+    name = "cube-cyclotron",
     order = "h",
   },
   {

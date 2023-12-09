@@ -5,15 +5,13 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- 1. Deep techs (NEEDS THINK)
 -- 1a. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
--- - Just use e.g. advanced chemical plant, electrolysis machine, condenser
+-- - Just use e.g. advanced chemical plant, electrolysis machine, condenser.
+-- - Krastorio 1 might have something interesting!
 -- - Cubetime can increase the rate?
 -- - Or could involve an cube-compatible alternative fuel
 -- 1b. How to get singularity data? (deep core crystal is currently the mystery furance output)
--- - - Molecular blender
--- - - Something where the cube must go in several machines in an odd/timed/awkward pattern?
--- - - e.g. because machine must recharge, or its output expires/cools somehow, or numbers are weird/loop
--- - - recharge seems best, but what machine? 2-3 steps then card should be enough
--- - - - maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
+-- - - Cyclotron: cube must go in several in odd/timed/awkward pattern, numbers are weird/loop
+-- - - 2-3 steps for card should be enough, maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
 -- 2. Finish gamma handling
 -- - Current numbers seem good, but cube usage is too awkward - hard to buffer enough to avoid
 --   it getting stuck - can we maintain overall cubetime while making it different somehow?
@@ -38,6 +36,7 @@ require("prototypes.scripts.autoplace")
 -- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
 --   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
 -- - - Related to: revisit tendril expulsion (better recipe)?
+-- - Icons in tooltips?
 -- - Is there a way to avoid antimatter ports showing up on power stats
 -- - - Apparently not other than converting to fixed-recipe fluid-powered assemblers and
 --     measuring manually, but that means no power bars (unless they can be modded back in?)
@@ -117,6 +116,7 @@ require("prototypes.entities.boiler")
 require("prototypes.entities.chemical_plant")
 require("prototypes.entities.containers")
 require("prototypes.entities.crusher")
+require("prototypes.entities.cyclotron")
 require("prototypes.entities.deep_core_ultradrill")
 require("prototypes.entities.dimension_folding_engine")
 require("prototypes.entities.distillery")
@@ -134,7 +134,6 @@ require("prototypes.entities.heavy_turbine")
 require("prototypes.entities.inserters")
 require("prototypes.entities.lab")
 require("prototypes.entities.loaders")
-require("prototypes.entities.molecular_blender")
 require("prototypes.entities.mystery_furnace")
 require("prototypes.entities.nuclear_reactor")
 require("prototypes.entities.particle_phase_aligner")

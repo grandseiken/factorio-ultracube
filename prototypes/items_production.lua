@@ -233,12 +233,12 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-molecular-blender",
+    name = "cube-cyclotron",
     icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128, icon_mipmaps = 4,
     subgroup = "cube-advanced-machines",
     order = "a[decoder]",
-    place_result = "cube-molecular-blender",
+    place_result = "cube-cyclotron",
     stack_size = 5,
   },
   {

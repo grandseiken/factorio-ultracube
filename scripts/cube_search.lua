@@ -8,8 +8,8 @@ local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 local legendary_iron_plate = cube_management.cubes.legendary_iron_plate
 
-local inventory_entity_types = entity_types.inventory
-local vehicle_entity_types = entity_types.vehicle
+local inventory_entity_types = entity_cache.types.inventory
+local vehicle_entity_types = entity_cache.types.vehicle
 
 local is_cube_crafter = entity_cache.is_cube_crafter
 local is_cube_burner = entity_cache.is_cube_burner

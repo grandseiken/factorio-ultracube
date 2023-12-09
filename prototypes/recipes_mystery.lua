@@ -285,7 +285,7 @@ add_mystery(8, "cube-synthesizer", "cube-n-dimensional-widget")
 add_mystery(8, "cube-dimension-folding-engine", "cube-n-dimensional-widget")
 add_mystery(4, "cube-fabricator", "cube-basic-motor-unit")
 
-add_mystery(8, "cube-molecular-blender", "cube-advanced-engine")
+add_mystery(8, "cube-cyclotron", "cube-advanced-engine")
 add_mystery(4, "cube-quantum-decoder", "cube-spectral-processor")
 add_mystery(2, "cube-particle-phase-aligner", "cube-spectral-processor")
 add_mystery(16, "cube-mystery-furnace", "cube-potato")

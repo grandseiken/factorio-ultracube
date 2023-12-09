@@ -65,7 +65,7 @@ data:extend({
   },
   {
     type = "item-subgroup",
-    name = "cube-molecular-blender",
+    name = "cube-cyclotron",
     group = "cube-synthesis",
     order = "w",
   },

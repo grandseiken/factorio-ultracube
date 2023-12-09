@@ -1,6 +1,9 @@
 local entity_combine = {}
 
 local combine_definitions = {
+  ["cube-cyclotron"] = {
+    {name = "cube-cyclotron-interface"},
+  },
   ["cube-antimatter-reactor"] = {
     {name = "cube-antimatter-reactor-interface"},
     {name = "cube-antimatter-reactor-animation"},

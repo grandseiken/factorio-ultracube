@@ -20,7 +20,7 @@ function entity_cache.refresh()
     vehicles = {},
     reactors = {},
     multi_furnaces = {},
-    antimatter_reactors = {},
+    by_name = {},
   }
   cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
@@ -40,7 +40,7 @@ function entity_cache.get()
   return cache
 end
 
-entity_types = {
+local entity_types = {
   transport_line = make_set({
     "transport-belt",
     "underground-belt",
@@ -84,8 +84,13 @@ entity_types = {
     "cube-nuclear-reactor-online",
   }),
   multi_furnace = transition_table,
+  by_name = make_set({
+    "cube-cyclotron",
+    "cube-antimatter-reactor",
+  })
 }
 
+entity_cache.types = entity_types
 local transport_line_entity_types = entity_types.transport_line
 local inventory_entity_types = entity_types.inventory
 local cube_crafter_entity_types = entity_types.cube_crafter
@@ -93,6 +98,7 @@ local cube_burner_entity_types = entity_types.cube_burner
 local vehicle_entity_types = entity_types.vehicle
 local reactor_entities = entity_types.reactor
 local multi_furnace_entities = entity_types.multi_furnace
+local by_name_entities = entity_types.by_name
 
 function entity_cache.is_cube_crafter(entity)
   local categories = cube_management.recipe_categories()
@@ -116,6 +122,7 @@ local is_cube_burner = entity_cache.is_cube_burner
 
 local function add_internal(entity, cache, is_global)
   local entity_type = entity.type
+  local entity_name = entity.name
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = entity
@@ -141,20 +148,26 @@ local function add_internal(entity, cache, is_global)
     cache.vehicles[entity.unit_number] = entity
     needs_chunk_cache = false
   end
-  if entity_type == "reactor" and reactor_entities[entity.name] then
+  if is_global and entity_type == "reactor" and reactor_entities[entity.name] then
     cache.reactors[entity.unit_number] = entity
   end
-  if entity_type == "furnace" and multi_furnace_entities[entity.name] then
+  if is_global and entity_type == "furnace" and multi_furnace_entities[entity.name] then
     cache.multi_furnaces[entity.unit_number] = entity
   end
-  if entity.name == "cube-antimatter-reactor" then
-    cache.antimatter_reactors[entity.unit_number] = entity
+  if is_global and by_name_entities[entity_name] then
+    local map = cache.by_name[entity_name]
+    if not map then
+      map = {}
+      cache.by_name[entity_name] = map
+    end
+    map[entity.unit_number] = entity
   end
   return needs_chunk_cache
 end
 
 local function remove_internal(entity, cache, is_global)
   local entity_type = entity.type
+  local entity_name = entity.name
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
     cache.transport_lines[entity.unit_number] = nil
@@ -180,14 +193,17 @@ local function remove_internal(entity, cache, is_global)
     cache.vehicles[entity.unit_number] = nil
     needs_chunk_cache = false
   end
-  if entity_type == "reactor" and reactor_entities[entity.name] then
+  if is_global and entity_type == "reactor" and reactor_entities[entity_name] then
     cache.reactors[entity.unit_number] = nil
   end
-  if entity_type == "furnace" and multi_furnace_entities[entity.name] then
+  if is_global and entity_type == "furnace" and multi_furnace_entities[entity_name] then
     cache.multi_furnaces[entity.unit_number] = nil
   end
-  if entity.name == "cube-antimatter-reactor" then
-    cache.antimatter_reactors[entity.unit_number] = nil
+  if is_global and by_name_entities[entity_name] then
+    local map = cache.by_name[entity_name]
+    if map then
+      map[entity.unit_number] = nil
+    end
   end
   return needs_chunk_cache
 end

@@ -370,16 +370,16 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-molecular-blender",
+    name = "cube-cyclotron",
     ingredients = {
-      {"refined-concrete", 200},
-      {"cube-resplendent-plate", 120},
+      {"concrete", 200},
+      {"cube-resplendent-plate", 40},
       {"cube-advanced-engine", 20},
       {"cube-advanced-circuit", 20},
       {"cube-spectralite", 100},
     },
     energy_required = 12,
-    results = {{"cube-molecular-blender", 1}},
+    results = {{"cube-cyclotron", 1}},
     enabled = false,
   },
   {

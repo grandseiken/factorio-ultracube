@@ -272,7 +272,7 @@ local function make_reactor_port(flip)
     name = name,
     localised_name = {"entity-name.cube-antimatter-reactor-port"},
     localised_description = {"entity-description.cube-antimatter-reactor-port"},
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon = "__base__/graphics/icons/pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},

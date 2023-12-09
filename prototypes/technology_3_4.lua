@@ -3,14 +3,15 @@ require("prototypes.lib.tech_costs")
 data:extend({
   {
     type = "technology",
-    name = "cube-molecular-blender",
+    name = "cube-cyclotron",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Ultracube__/assets/technology/molecular-blender.png",
+    icon = "__Ultracube__/assets/technology/cyclotron.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-molecular-blender"},
+      {type = "unlock-recipe", recipe = "cube-cyclotron"},
+      {type = "unlock-recipe", recipe = "cube-singularity-research-data"},
     },
     prerequisites = {
-      "cube-refined-concrete",
+      "cube-deep-introspection-card",
       "cube-phantom-electronics",
     },
     unit = tech_cost_unit("3", 300),

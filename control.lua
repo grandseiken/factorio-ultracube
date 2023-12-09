@@ -5,12 +5,12 @@ do
   end
 end
 
-local antimatter_reactor = require("__Ultracube__/scripts/antimatter_reactor")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
+local linked_entities = require("__Ultracube__/scripts/linked_entities")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local transition = require("__Ultracube__/scripts/transition")
 
@@ -232,5 +232,5 @@ script.on_event(defines.events.on_tick,
   function(e)
     cube_fx.tick(e.tick)
     transition.tick(e.tick)
-    antimatter_reactor.tick(e.tick)
+    linked_entities.tick(e.tick)
   end)

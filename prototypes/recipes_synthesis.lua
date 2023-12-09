@@ -504,6 +504,25 @@ data:extend({
     allow_decomposition = false,
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-singularity-research-data",
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"cube-singularity-research-data", 10},
+    },
+    main_product = "cube-singularity-research-data",
+    energy_required = 2,
+    category = "cube-cyclotron",
+    subgroup = "cube-cyclotron",
+    order = "0[data]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
 
   {
     type = "recipe",

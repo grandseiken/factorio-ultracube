@@ -99,6 +99,7 @@ data:extend({
       tech_unlock_effect(),
     },
     prerequisites = {
+      "cube-cyclotron",
       "cube-arcane-drive",
       "cube-quantum-decoder",
     },
