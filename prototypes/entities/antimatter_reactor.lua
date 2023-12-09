@@ -267,57 +267,6 @@ local reactor_animation = {
   },
 }
 
-local function make_reactor_generator(flip)
-  local pipe_position = {0, -3}
-  local name = "cube-antimatter-reactor-generator"
-  if flip then
-    pipe_position = {0, 3}
-    name = name .. "-flip"
-  end
-  return {
-    type = "generator",
-    name = name,
-    localised_name = {"entity-name.cube-antimatter-reactor-generator"},
-    localised_description = {"entity-description.cube-antimatter-reactor-generator"},
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
-    max_health = 1000,
-    collision_box = {{-2.25, -2.25}, {2.25, 2.25}},
-    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    selection_priority = 100,
-    allow_copy_paste = false,
-
-    fluid_box = {
-      production_type = "input",
-      pipe_covers = pipecoverspictures(),
-      pipe_picture = pipe_path,
-      base_area = 10,
-      base_height = 24,
-      base_level = -25,
-      pipe_connections = {
-        {type = "input", position = pipe_position},
-      },
-      filter = "cube-ionized-annihilation-stream",
-    },
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "200MJ",  -- Production / 60.
-      usage_priority = "primary-output",
-      input_flow_limit = "0W",
-      emissions_per_minute = 0,
-    },
-
-    effectivity = 1,
-    maximum_temperature = 25,
-    destroy_non_fuel_fluid = true,
-    burns_fluid = true,
-    scale_fluid_usage = false,
-    fluid_usage_per_tick = 400,
-  }
-end
-
 local function make_reactor_port(flip)
   local pipe_position = {0, -1}
   local selection_box = {{-2.5, -0.5}, {2.5, 2.5}}
@@ -469,6 +418,8 @@ data:extend({
     working_visualisations = reactor_animation,
   },
 
+  make_reactor_port(false),
+  make_reactor_port(true),
   {
     type = "electric-energy-interface",
     name = "cube-antimatter-reactor-interface",
@@ -518,11 +469,6 @@ data:extend({
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 0.85},
   },
-
-  make_reactor_port(false),
-  make_reactor_port(true),
-  make_reactor_generator(false),
-  make_reactor_generator(true),
 
   {
     type = "assembling-machine",

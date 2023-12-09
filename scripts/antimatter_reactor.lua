@@ -24,12 +24,6 @@ function antimatter_reactor.tick(tick)
         animation.active = energy > 0
       end
     end
-    -- for i = 1, 4 do
-    --   local generator = linked[i]
-    --   if generator and generator.valid then
-    --     generator.energy = 0
-    --   end
-    -- end
   end
 end
 

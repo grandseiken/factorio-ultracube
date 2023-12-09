@@ -5,25 +5,21 @@ local combine_definitions = {
     {name = "cube-antimatter-reactor-interface"},
     {name = "cube-antimatter-reactor-animation"},
     {
-      -- name = "cube-antimatter-reactor-generator",
       name = "cube-antimatter-reactor-port",
       direction = defines.direction.north,
       offset = {0, -7},
     },
     {
-      -- name = "cube-antimatter-reactor-generator-flip",
       name = "cube-antimatter-reactor-port-flip",
       direction = defines.direction.south,
       offset = {0, 7},
     },
     {
-      -- name = "cube-antimatter-reactor-generator",
       name = "cube-antimatter-reactor-port",
       direction = defines.direction.east,
       offset = {7, 0},
     },
     {
-      -- name = "cube-antimatter-reactor-generator-flip",
       name = "cube-antimatter-reactor-port-flip",
       direction = defines.direction.west,
       offset = {-7, 0},

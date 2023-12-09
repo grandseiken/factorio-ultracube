@@ -5,8 +5,8 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- STILL TODOS:
 -- - Generators are uselessly connected to network
--- - - Solution: try to hide or disconnect them somehow. If that fails, backup plan
--- - - could be to... just leave it?
+-- - - Seems like there is no way to hide them other than convert to fluid-energy-source
+--     fixed-recipe assemblers and measure things manually. Not great.
 -- With current design 1 antimatter should be worth >= 6GJ (say 12GJ), so 4/s ~= 48GW
 -- But this amount of power currently requires thousands of bulkframes just to load up (per second!)
 -- SOLUTION:
@@ -14,6 +14,8 @@ require("prototypes.scripts.autoplace")
 -- - Make cubetime (even) lower? (ideally do not require recharging) so it contains too fast to
 --   encourage using multiple ports, and reduce the total output correspondingly
 -- - Probably still increase bulkframe inflow/capacity a bit
+-- - Consider providing some energy as steam in waste containment
+-- - Consider increasing chamber crafting time (not sure how this affects things?)
 
 -- RELEASE BLOCKERS (v0.2)
 -------------------
@@ -28,7 +30,6 @@ require("prototypes.scripts.autoplace")
 -- - - - maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
 -- 2. Finish antimatter power (mostly just DEPENDS ON 1a/b probably for gamma recipe)
 -- - Gamma handling could be in the blender (?) -> and could make/consume water/steam (?)
--- - Descriptions
 -- - Maybe a way to turn energy -> antimatter
 -- 3. Teleporter (NEEDS EXPERIMENT)
 -- - how do we do it with entities? -- ROCKET SILO might work.
@@ -45,7 +46,8 @@ require("prototypes.scripts.autoplace")
 -------------------
 -- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
 -- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
---   interesting late-game storage solution
+--   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
+-- - Revisit tendril expulsion (better recipe)?
 -- - More use for deep crystal etc
 -- - Barreling recipes (+ mystery furnace)
 -- - make cube sparks aligned per-machine
@@ -76,7 +78,6 @@ require("prototypes.scripts.autoplace")
 -- Other resource/intermediate conversions, or more efficient recipes but that still require the originals somehow
 -- - Or high power cost?
 -- Unobtainium?
--- Revisit tendril expulsion (better recipe)?
 -- Local-only solar panels?
 
 require("menu_simulations.menu_simulations")
