@@ -87,6 +87,7 @@ local entity_types = {
   by_name = make_set({
     "cube-cyclotron",
     "cube-antimatter-reactor",
+    "cube-experimental-teleporter",
   })
 }
 
@@ -107,6 +108,9 @@ function entity_cache.is_cube_crafter(entity)
       if categories[category] then
         return true
       end
+    end
+    if entity.type == "rocket-silo" then
+      return true
     end
   end
   return false

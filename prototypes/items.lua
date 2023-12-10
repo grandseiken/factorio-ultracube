@@ -309,8 +309,7 @@ data:extend({
     type = "item",
     name = "cube-teleportation-control-module",
     icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 4,
     pictures = {
       layers = {
         {
@@ -330,8 +329,18 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "z[teleportation-control-module]",
+    order = "z[0-teleportation-control-module]",
+    stack_size = 20,
+  },
+  {
+    type = "item",
+    name = "cube-teleporter-activation",
+    icon = "__Krastorio2Assets__/icons/signals/power_on.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-experimental",
+    order = "z[1-teleporter-activation]",
     stack_size = 10,
+    flags = {"hidden"},
   },
 
   {

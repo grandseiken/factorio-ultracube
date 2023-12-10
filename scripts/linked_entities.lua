@@ -10,22 +10,19 @@ function linked_entities.tick(tick)
   if antimatter_reactors then
     for _, e in pairs(antimatter_reactors) do
       local linked = entity_combine.get_linked(e)
-      local interface = linked[1]
-      local animation = linked[2]
-      if interface and interface.valid then
-        local energy = 0
-        for i = 1, 4 do
-          local port = linked[2 + i]
-          if port and port.valid then
-            energy = energy + port.energy
-            port.energy = 0
-          end
+      local animation = linked[1]
+      local energy = 0
+      for i = 1, 4 do
+        local port = linked[1 + i]
+        if port and port.valid then
+          energy = energy + port.energy
+          port.energy = 0
         end
-        interface.power_production = energy
-        interface.electric_buffer_size = energy
-        if animation and animation.valid then
-          animation.active = energy > 0
-        end
+      end
+      e.power_production = energy
+      e.electric_buffer_size = energy
+      if animation and animation.valid then
+        animation.active = energy > 0
       end
     end
   end

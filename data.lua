@@ -29,6 +29,7 @@ require("prototypes.scripts.autoplace")
 -- 5c. Infinite technologies, any more last equipments/armor
 -- 5d. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 -- 5e. Should refined concrete use mineral water?
+-- 5f. Victory (see silo script)
 
 -- v0.3+
 -------------------

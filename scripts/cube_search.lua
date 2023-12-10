@@ -26,6 +26,7 @@ local car_t = "car"
 local cargo_wagon_t = "cargo-wagon"
 local spider_vehicle_t = "spider-vehicle"
 local furnace_t = "furnace"
+local rocket_silo_t = "rocket-silo"
 local item_entity_t = "item-entity"
 local ghost_t = "entity-ghost"
 local input_t = "input"
@@ -264,6 +265,10 @@ local function cube_check_entity(entity)
     if inventory and check_inventory(entity, inventory) then return true end
     inventory = entity.get_output_inventory()
     if inventory and check_inventory(entity, inventory) then return true end
+    if entity_type == rocket_silo_t then
+      inventory = entity.get_inventory(defines.inventory.rocket_silo_rocket)
+      if inventory and check_inventory(entity, inventory) then return true end
+    end
     return false
   end
 
@@ -316,6 +321,10 @@ local function cube_search_crafters(cache)
     if inventory and check_inventory(e, inventory) then return true end
     inventory = e.get_output_inventory()
     if inventory and check_inventory(e, inventory) then return true end
+    if e.type == rocket_silo_t then
+      inventory = e.get_inventory(defines.inventory.rocket_silo_rocket)
+      if inventory and check_inventory(e, inventory) then return true end
+    end
   end
   return false
 end

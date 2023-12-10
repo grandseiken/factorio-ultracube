@@ -2,10 +2,12 @@ local entity_combine = {}
 
 local combine_definitions = {
   ["cube-cyclotron"] = {
-    {name = "cube-cyclotron-interface"},
+    {
+      name = "cube-cyclotron-interface",
+      inoperable = true,
+    },
   },
   ["cube-antimatter-reactor"] = {
-    {name = "cube-antimatter-reactor-interface"},
     {name = "cube-antimatter-reactor-animation"},
     {
       name = "cube-antimatter-reactor-port",
@@ -72,6 +74,9 @@ function entity_combine.created(entity)
     }
     if new_entity then
       new_entity.destructible = false
+      if entry.inoperable then
+        new_entity.operable = false
+      end
       linked_entries[#linked_entries + 1] = new_entity
     end
   end

@@ -353,7 +353,7 @@ data:extend({
   },
 
   {
-    type = "simple-entity-with-owner",
+    type = "electric-energy-interface",
     name = "cube-antimatter-reactor",
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
@@ -365,7 +365,18 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
-    secondary_draw_order = -1,
+
+    energy_production = "24GW",
+    energy_usage = "0W",
+    energy_source = {
+      type = "electric",
+      buffer_capacity = "400MJ",  -- Production / 60.
+      usage_priority = "primary-output",
+      input_flow_limit = "0W",
+      emissions_per_minute = 0,
+      render_no_power_icon = false,
+    },
+
     picture = reactor_picture,
     water_reflection = {
       pictures = {
@@ -381,6 +392,21 @@ data:extend({
       orientation_to_variation = false,
     },
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
+    working_sound = {
+      sound = {
+        filename = "__Krastorio2Assets__/sounds/buildings/fusion-reactor.ogg",
+        volume = 1.5,
+        audible_distance_modifier = 10,
+      },
+      idle_sound = {filename = "__base__/sound/idle1.ogg"},
+      apparent_volume = 1.5,
+      audible_distance_modifier = 1,
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
+    },
+
+    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 0.85},
   },
 
   {
@@ -411,49 +437,6 @@ data:extend({
 
   make_reactor_port(false),
   make_reactor_port(true),
-  {
-    type = "electric-energy-interface",
-    name = "cube-antimatter-reactor-interface",
-    localised_name = {"entity-name.cube-antimatter-reactor"},
-    localised_description = {"entity-description.cube-antimatter-reactor"},
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
-    max_health = 6000,
-    collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
-    selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
-    allow_copy_paste = false,
-    selectable_in_game = false,
-
-    energy_production = "0GW",
-    energy_usage = "0W",
-    energy_source = {
-      type = "electric",
-      buffer_capacity = "400MJ",  -- Production / 60.
-      usage_priority = "primary-output",
-      input_flow_limit = "0W",
-      emissions_per_minute = 0,
-      render_no_power_icon = false,
-    },
-
-    animation = util.empty_sprite(),
-    working_sound = {
-      sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/fusion-reactor.ogg",
-        volume = 1.5,
-        audible_distance_modifier = 10,
-      },
-      idle_sound = {filename = "__base__/sound/idle1.ogg"},
-      apparent_volume = 1.5,
-      audible_distance_modifier = 1,
-      fade_in_ticks = 5,
-      fade_out_ticks = 5,
-    },
-
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 0.85},
-  },
 
   {
     type = "assembling-machine",

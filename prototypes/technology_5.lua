@@ -81,6 +81,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-experimental-teleporter"},
       {type = "unlock-recipe", recipe = "cube-teleportation-control-module"},
+      {type = "unlock-recipe", recipe = "cube-teleporter-activation"},
     },
     prerequisites = {
       "cube-arcane-drive",

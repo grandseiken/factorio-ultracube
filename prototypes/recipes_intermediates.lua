@@ -447,4 +447,14 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-teleporter-activation",
+    ingredients = {{"cube-teleportation-control-module", 1}},
+    results = {{"cube-teleporter-activation", 1}},
+    energy_required = 4,
+    category = "cube-experimental-teleporter",
+    enabled = false,
+    hidden = true,
+  },
 })

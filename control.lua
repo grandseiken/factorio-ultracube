@@ -12,6 +12,7 @@ local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 local linked_entities = require("__Ultracube__/scripts/linked_entities")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
+local teleport = require("__Ultracube__/scripts/teleport")
 local transition = require("__Ultracube__/scripts/transition")
 
 local function create_initial_cube(player)
@@ -64,6 +65,9 @@ local function on_init()
       ["cube-construction-robot-0"] = 5,
     })
     remote.call("freeplay", "set_respawn_items", {})
+  end
+  if remote.interfaces.silo_script then
+    remote.call("silo_script", "set_no_victory", true)
   end
 
   entity_cache.refresh()
@@ -227,6 +231,9 @@ script.on_event(
   function(e)
     tech_unlock.trigger(e.research.force, e.research.name, true)
   end)
+
+script.on_event(
+  defines.events.on_rocket_launched, teleport.on_teleport)
 
 script.on_event(defines.events.on_tick,
   function(e)
