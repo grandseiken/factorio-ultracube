@@ -63,7 +63,7 @@ The mod is more or less feature-complete, but especially the latter half or so w
 
 Planned improvements include:
 
-* More in-game help using tips or informatron.
+* More in-game help using tips or the informatron.
 * Reintroduction of beacons (in some form).
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
@@ -87,12 +87,14 @@ Regardless of technical obstacles, practical considerations could make some othe
 
 The following mods are known to have been adapted to work with Ultracube:
 
-* [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) (integrated as standard)
-* [Flow Control](https://mods.factorio.com/mod/Flow%20Control)
-* [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes)
-* [Pushbutton](https://mods.factorio.com/mod/pushbutton)
-* [Picker Dollies](https://mods.factorio.com/mod/PickerDollies)
-* [Textplates](https://mods.factorio.com/mod/textplates)
+| Mod | Notes |
+| --- | ----- |
+| [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
+| [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
+| [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
+| [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
+| [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | very helpful for tweaking combinator layouts |
+| [Textplates](https://mods.factorio.com/mod/textplates) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 
@@ -102,19 +104,15 @@ TODO: make it easy to for other mod authors to add compatibility for their mod a
 
 # FAQ
 
-* **Where are the biters?** Currently there are no military technologies and biters are disabled. This decision might be revisited later.
-
-* **Where are all the technologies?** Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science.
-
-* **So do I have to manually hand-feed this cube all the time or what?** You will likely need to do a few things manually in the short early-game section. Technologies will soon allow for automation.
-
-* **Can I really automate this?** Everything can be automated, and there is probably more than one way to do it.
-
-* **I lost my cube!** Its location will show up on the minimap. If you somehow manage to destroy the cube and the game can't find it, you'll see a warning message. In that case please file a bug report.
-
-* **My factory isn't producing enough, how can I improve it?** The main production bottleneck will always be processes that require the cube as a catalyst. At most one of these steps can be running at any given time. Try to think of ways to get the most use out of it per unit of time and ensure it never gets stuck anywhere. Look in the technology tree for things that could help.
-
-* **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** This is an [issue with Factorio's assembling machine logic](https://forums.factorio.com/viewtopic.php?f=7&t=101436). It seems that it will be fixed with the DLC release. Until then, you'll just have to work around it. (This bug is also the reason productivity modules aren't allowed in cube-powered recipes: bonus outputs block progress, get the cube stuck and make things worse.)
+| Q | A |
+| - | - |
+| **Where are the biters?** | Currently there are no military technologies and biters are disabled. This decision might be revisited later. |
+| **Where are all the technologies?** | Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science. |
+| **So do I have to manually hand-feed this cube all the time, or what?** | You will likely need to do a few things manually in the short early-game section. Technologies will soon allow for automation. |
+| **Can I really automate this?** | Everything can be automated, and there is probably more than one way to do it. |
+| **I lost my cube!** | Its location will show up on the minimap. If you somehow manage to destroy the cube and the game can't find it, you'll see a warning message. In that case please file a bug report. |
+| **My factory isn't producing enough, how can I improve it?** | The main production bottleneck will always be processes that require the cube as a catalyst. At most one of these steps can be running at any given time. Try to think of ways to get the most use out of it per unit of time and ensure it never gets stuck anywhere. Look in the technology tree for things that could help. |
+| **Bulk-processing machines sometimes won't accept ingredients even though it seems like they should.** | This is an [issue with Factorio's assembling machine logic](https://forums.factorio.com/viewtopic.php?f=7&t=101436). It seems that it will be fixed with the DLC release. Until then, you'll just have to work around it. (This bug is also the reason productivity modules aren't allowed in cube-powered recipes: bonus outputs block progress, get the cube stuck and make things worse.) |
 
 # Dependencies and credits
 
