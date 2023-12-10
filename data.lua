@@ -21,7 +21,7 @@ require("prototypes.scripts.autoplace")
 -- - Could provide some energy as steam instead
 -- 3. Teleporter (NEEDS EXPERIMENT)
 -- - how do we do it with entities? -- ROCKET SILO might work.
--- 4. Beacons? (!?) (ONLY POSSIBLE WITH SHENANNIGANS)
+-- 4. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS)
 -- - Small, effective, one per machine, powered by fluid (maybe deep crystal + something)
 -- 5. Various (BASICALLY KNOWN)
 -- 5a. Phantom FX (sound design, aura graphics)

@@ -46,7 +46,14 @@ The overall feel is probably closer to something like Freight Forwarding (but ma
 
 ## Development status and roadmap
 
-Endgame is not quite finished, and especially the latter half or so of the mod will likely be subject to some balance passes after further playtesting. Feedback is welcome!
+The mod is more or less feature-complete, but especially the latter half or so will likely be subject to balancing passes after further playtesting (feedback is welcome).
+
+Planned improvements include:
+
+* Reintroduction of beacons (in some form).
+* Reintroduction of barreling recipes.
+* Code reorganisation and interfaces to make it easy for other mods to add compatibility.
+* Compatibility with more optional mods (e.g. jetpack, signal transmission).
 
 # Compatibility
 
