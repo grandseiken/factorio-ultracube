@@ -154,6 +154,20 @@ local teleporter_animations_red = {
   },
 }
 
+local collision_index = 0
+local function collision_entity(collision_box)
+  collision_index = collision_index + 1
+  return {
+    type = "simple-entity",
+    name = "cube-experimental-teleporter-collision-" .. collision_index,
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+    collision_box = collision_box,
+    picture = {filename = "__core__/graphics/empty.png", size = 1},
+    collision_mask = {"player-layer"},
+    squeak_behaviour = false,
+  }
+end
+
 data:extend({
   {
     type = "rocket-silo",
@@ -171,6 +185,7 @@ data:extend({
     collision_box = {{-2.65, -1.9}, {2.65, 3.2}},
     selection_box = {{-3, -2}, {3, 3.4}},
     drawing_box = {{-3, -3}, {3, 3}},
+    collision_mask = {"item-layer", "object-layer", "water-tile"},
 
     energy_usage = "100MW",  -- Crafting.
     active_energy_usage = "100MW",  -- ??? not sure when this applies.
@@ -237,6 +252,9 @@ data:extend({
     audible_distance_modifier = 1,
   },
 
+  collision_entity({{-1.5, -1.5}, {1.5, 0.5}}),
+  collision_entity({{-0.8, -1.5}, {1.4, 3.2}}),
+  collision_entity({{-1.4, -1.5}, {0.8, 3.2}}),
   {
     type = "assembling-machine",
     name = "cube-experimental-teleporter-ready",
@@ -259,6 +277,23 @@ data:extend({
     energy_usage = "1W",
     energy_source = {type = "void"},
     working_visualisations = teleporter_animations_red,
+  },
+  {
+    type = "simple-entity",
+    name = "cube-experimental-teleporter-overlay",
+    flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
+    collision_mask = {},
+    render_layer = "higher-object-above",
+    picture = {
+      layers = {
+        {
+          filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-forward-towers.png",
+          width = 400,
+          height = 475,
+          scale = 0.5,
+        },
+      },
+    },
   },
 
   {

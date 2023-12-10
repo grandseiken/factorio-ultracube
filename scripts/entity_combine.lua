@@ -9,6 +9,16 @@ local combine_definitions = {
   },
   ["cube-experimental-teleporter"] = {
     {name = "cube-experimental-teleporter-ready"},
+    {name = "cube-experimental-teleporter-collision-1"},
+    {
+      name = "cube-experimental-teleporter-collision-2",
+      offset = {-2, 0},
+    },
+    {
+      name = "cube-experimental-teleporter-collision-3",
+      offset = {2, 0},
+    },
+    {name = "cube-experimental-teleporter-overlay"},
   },
   ["cube-antimatter-reactor"] = {
     {name = "cube-antimatter-reactor-animation"},

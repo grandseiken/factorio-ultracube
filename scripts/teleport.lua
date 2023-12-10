@@ -29,6 +29,21 @@ local function get_send_item(inventory)
   return nil
 end
 
+local function get_send_players(teleporter)
+  local result = {}
+  local tp = teleporter.position
+  for _, player in pairs(game.players) do
+    if player.character and player.character.surface == teleporter.surface then
+      local cp = player.character.position
+      if cp.x >= tp.x - 1 and cp.x <= tp.x + 1 and
+         cp.y >= tp.y + 0.25 and cp.y <= tp.y + 2.25 then
+          result[#result + 1] = player.character
+      end
+    end
+  end
+  return result
+end
+
 local function insert_or_drop(teleporter, item)
   local inventory = teleporter.get_output_inventory()
   if inventory.is_empty() then
@@ -50,8 +65,28 @@ function teleport.on_teleport(event)
   end
 
   teleport_fx(src_teleporter)
+  if not global.teleport_table then
+    global.teleport_table = {}
+  end
+  local entry = global.teleport_table[src_teleporter.unit_number]
+  if entry then
+    global.teleport_table[src_teleporter.unit_number] = nil
+    local position = entry.dst_teleporter.position
+    position.y = position.y + 1.25
+    for _, player in ipairs(entry.send_players) do
+      player.teleport(position)
+    end
+    position = entry.src_teleporter.position
+    position.y = position.y + 1.25
+    for _, player in ipairs(entry.swap_players) do
+      player.teleport(position)
+    end
+    return
+  end
+
   local send_item = get_send_item(event.rocket.get_inventory(1))
-  if not send_item then
+  local send_players = get_send_players(src_teleporter)
+  if not send_item and #send_players == 0 then
     return
   end
 
@@ -82,6 +117,12 @@ function teleport.on_teleport(event)
       insert_or_drop(src_teleporter, swap_item)
       swap_inventory.clear()
     end
+    global.teleport_table[dst_teleporter.unit_number] = {
+      src_teleporter = src_teleporter,
+      dst_teleporter = dst_teleporter,
+      send_players = send_players,
+      swap_players = get_send_players(dst_teleporter),
+    }
     dst_teleporter.launch_rocket()
   end
 
