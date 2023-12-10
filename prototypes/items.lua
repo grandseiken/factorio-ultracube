@@ -335,7 +335,7 @@ data:extend({
   {
     type = "item",
     name = "cube-teleporter-activation",
-    icon = "__Krastorio2Assets__/icons/signals/power_on.png",
+    icon = "__Krastorio2Assets__/icons/signals/power_off.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-experimental",
     order = "z[1-teleporter-activation]",

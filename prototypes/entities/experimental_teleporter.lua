@@ -72,21 +72,9 @@ local teleporter_animation = {
   },
 }
 
-local teleporter_animation_red = {
-  layers = {
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/hr-planetary-teleporter-shadow.png",
-      priority = "low",
-      width = 531,
-      height = 292,
-      scale = 0.5,
-      frame_count = 1,
-      repeat_count = 20,
-      draw_as_shadow = true,
-      animation_speed = 0.5,
-      shift = {1.9, 1.2},
-    },
-    {
+local teleporter_animations_red = {
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined.png",
       priority = "medium",
       width = 400,
@@ -96,7 +84,9 @@ local teleporter_animation_red = {
       line_length = 5,
       animation_speed = 0.5,
     },
-    {
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
@@ -105,7 +95,9 @@ local teleporter_animation_red = {
       repeat_count = 20,
       animation_speed = 0.5,
     },
-    {
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
       flags = {"mask"},
       priority = "extra-high",
@@ -118,7 +110,9 @@ local teleporter_animation_red = {
       apply_runtime_tint = true,
       tint = {r = 1, g = 0, b = 0, a = 1},
     },
-    {
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
       priority = "high",
       width = 400,
@@ -131,7 +125,9 @@ local teleporter_animation_red = {
       fadeout = true,
       blend_mode = "additive-soft",
     },
-    {
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
       priority = "extra-high",
       width = 400,
@@ -143,7 +139,9 @@ local teleporter_animation_red = {
       draw_as_light = true,
       blend_mode = "additive-soft",
     },
-    {
+  },
+  {
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
@@ -193,9 +191,8 @@ data:extend({
     allowed_effects = module_effects.speed_efficiency,
 
     animation = teleporter_animation,
-    animation_UNUSED = teleporter_animation_red,
-    launch_wait_time = 30,
-    rocket_rising_delay = 30,
+    launch_wait_time = 8,
+    rocket_rising_delay = 1,
 
     arm_01_back_animation = util.empty_sprite(),
     arm_02_right_animation = util.empty_sprite(),
@@ -223,18 +220,47 @@ data:extend({
     hole_clipping_box = {{0, 0}, {0, 0}},
 
     vehicle_impact_sound = sounds.generic_impact,
+    alarm_sound = {
+      filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-close-sound.ogg",
+      volume = 1,
+    },
     working_sound = {
       sound = {
         filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-working-sound.ogg",
-        volume = 0.50,
+        volume = 0.25,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
-      apparent_volume = 0.75,
+      apparent_volume = 0.25,
     },
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-open-sound.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-close-sound.ogg", volume = 0.8},
-    audible_distance_modifier = 30,
+    open_sound = sounds.electric_network_open,
+    close_sound = sounds.electric_network_close,
+    audible_distance_modifier = 1,
   },
+
+  {
+    type = "assembling-machine",
+    name = "cube-experimental-teleporter-ready",
+    localised_name = {"entity-name.cube-experimental-teleporter"},
+    localised_description = {"entity-description.cube-experimental-teleporter"},
+    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    max_health = 1000,
+    selection_box = {{-3, -2}, {3, 3.4}},
+    allow_copy_paste = false,
+    selectable_in_game = false,
+    show_recipe_icon = false,
+    match_animation_speed_to_activity = false,
+
+    picture = util.empty_sprite(),
+    crafting_categories = {"cube-uncraftable"},
+    crafting_speed = 1,
+    fixed_recipe = "cube-uncraftable-dummy-recipe",
+    energy_usage = "1W",
+    energy_source = {type = "void"},
+    working_visualisations = teleporter_animations_red,
+  },
+
   {
     type = "rocket-silo-rocket",
     name = "cube-experimental-teleporter-rocket",

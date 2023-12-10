@@ -910,4 +910,106 @@ data:extend({
       },
     },
   },
+  {
+    type = "explosion",
+    name = "cube-experimental-teleporter-explosion",
+    flags = {"not-on-map"},
+    animations = {
+      width = 316,
+      height = 360,
+      frame_count = 100,
+      priority = "very-low",
+      shift = util.by_pixel(0.5, -61.5),
+      tint = {1, 1, 1, 0.125},
+      draw_as_glow = true,
+      animation_speed = 0.5 * 0.75,
+      scale = 1,
+      dice_y = 5,
+      stripes = {
+        {
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-1.png",
+          width_in_frames = 5,
+          height_in_frames = 5,
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-2.png",
+          width_in_frames = 5,
+          height_in_frames = 5,
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-3.png",
+          width_in_frames = 5,
+          height_in_frames = 5,
+        },
+        {
+          filename = "__Krastorio2Assets__/entities/explosions/matter-explosion-4.png",
+          width_in_frames = 5,
+          height_in_frames = 5,
+        },
+      },
+      hr_version = {
+        width = 628,
+        height = 720,
+        frame_count = 100,
+        priority = "very-low",
+        shift = util.by_pixel(0.25, -61.25),
+        tint = {1, 1, 1, 0.125},
+        draw_as_glow = true,
+        animation_speed = 0.5 * 0.75,
+        scale = 0.5,
+        dice_y = 5,
+        stripes = {
+          {
+            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-1.png",
+            width_in_frames = 5,
+            height_in_frames = 5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-2.png",
+            width_in_frames = 5,
+            height_in_frames = 5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-3.png",
+            width_in_frames = 5,
+            height_in_frames = 5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-4.png",
+            width_in_frames = 5,
+            height_in_frames = 5,
+          },
+        },
+      },
+    },
+    sound = {
+      aggregation = {
+        max_count = 1,
+        remove = true,
+      },
+      variations = {
+        {
+          filename = "__base__/sound/fight/large-explosion-1.ogg",
+          volume = 0.5,
+        },
+        {
+          filename = "__base__/sound/fight/large-explosion-2.ogg",
+          volume = 0.5,
+        },
+      },
+    },
+  },
+  {
+    type = "sound",
+    name = "cube-experimental-teleporter-effect-sound",
+    category = "alert",
+    filename = "__Krastorio2Assets__/sounds/others/planetary-teleporter-effect-sound.ogg",
+    volume = 2.0,
+    audible_distance_modifier = 2.0,
+    aggregation = {
+      max_count = 2,
+      remove = true,
+      count_already_playing = true,
+    },
+  },
 })

@@ -7,6 +7,9 @@ local combine_definitions = {
       inoperable = true,
     },
   },
+  ["cube-experimental-teleporter"] = {
+    {name = "cube-experimental-teleporter-ready"},
+  },
   ["cube-antimatter-reactor"] = {
     {name = "cube-antimatter-reactor-animation"},
     {

@@ -55,6 +55,7 @@ local entity_types = {
     "logistic-container",
     "infinity-container",
     "character-corpse",
+    "rocket-silo-rocket",
   }),
   cube_crafter = make_set({
     "furnace",
@@ -134,7 +135,7 @@ local function add_internal(entity, cache, is_global)
   end
   if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = entity
-    needs_chunk_cache = true
+    needs_chunk_cache = entity_type ~= "rocket-silo-rocket"
   end
   if is_cube_crafter(entity) then
     cache.cube_crafters[entity.unit_number] = entity
@@ -179,7 +180,7 @@ local function remove_internal(entity, cache, is_global)
   end
   if inventory_entity_types[entity_type] then
     cache.inventories[entity.unit_number] = nil
-    needs_chunk_cache = true
+    needs_chunk_cache = entity_type ~= "rocket-silo-rocket"
   end
   if is_cube_crafter(entity) then
     cache.cube_crafters[entity.unit_number] = nil

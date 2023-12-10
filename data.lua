@@ -19,17 +19,15 @@ require("prototypes.scripts.autoplace")
 --     we should produce more power (maybe it is just fine)
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 3. Teleporter (NEEDS EXPERIMENT)
--- - how do we do it with entities? -- ROCKET SILO might work.
--- 4. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS)
+-- 3. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS, COULD DELAY)
 -- - Small, effective, one per machine, powered by fluid (maybe deep crystal + something)
--- 5. Various (BASICALLY KNOWN)
--- 5a. Phantom FX (sound design, aura graphics)
--- 5b. Fix deep core ore generation (?)
--- 5c. Infinite technologies, any more last equipments/armor
--- 5d. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
--- 5e. Should refined concrete use mineral water?
--- 5f. Victory (see silo script)
+-- 4. Various (BASICALLY KNOWN)
+-- 4a. Phantom FX (sound design, aura graphics)
+-- 4b. Fix deep core ore generation (?)
+-- 4c. Infinite technologies, any more last equipments/armor
+-- 4d. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 4e. Should refined concrete use mineral water?
+-- 4f. Victory (see silo script)
 
 -- v0.3+
 -------------------

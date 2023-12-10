@@ -59,11 +59,11 @@ The overall feel is probably closer to something like Freight Forwarding (but ma
 
 ## Development status and roadmap
 
-The mod is more or less feature-complete, but especially the latter half or so will likely be subject to balancing passes after further playtesting (feedback is welcome).
+The mod is more or less feature-complete, but should still be considered a beta at this point. Especially the latter half or so will likely be subject to balancing passes after further playtesting (feedback is welcome).
 
 Planned improvements include:
 
-* More in-game help using tips or the informatron.
+* More in-game help via the Informatron mod.
 * Reintroduction of beacons (in some form).
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
@@ -108,6 +108,7 @@ TODO: make it easy to for other mod authors to add compatibility for their mod a
 | - | - |
 | **Where are the biters?** | Currently there are no military technologies and biters are disabled. This decision might be revisited later. |
 | **Where are all the technologies?** | Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science. |
+| **Is this a Krastorio 2 extension?** | Ultracube depends only on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for some additional graphics and sounds (see [credits](#dependencies-and-credits)). It's otherwise separate and doesn't share any technologies or recipes with Krastorio 2. |
 | **So do I have to manually hand-feed this cube all the time, or what?** | You will likely need to do a few things manually in the short early-game section. Technologies will soon allow for automation. |
 | **Can I really automate this?** | Everything can be automated, and there is probably more than one way to do it. |
 | **I lost my cube!** | Its location will show up on the minimap. If you somehow manage to destroy the cube and the game can't find it, you'll see a warning message. In that case please file a bug report. |
@@ -116,4 +117,4 @@ TODO: make it easy to for other mod authors to add compatibility for their mod a
 
 # Dependencies and credits
 
-This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additonal graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.
+This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additional graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.
