@@ -6,6 +6,19 @@ An overhaul mod for Factorio featuring:
 * Six tiers of science and a new endgame goal.
 * Multiplayer compatibility.
 
+## Contents
+
+* [Overview](#overview)
+  * [You might like this mod if...](#you-might-like-this-mod-if)
+  * [You might not like this mod if...](#you-might-not-like-this-mod-if)
+  * [Comparison to other overhaul mods](#comparison-to-other-overhaul-mods)
+  * [Development status and roadmap](#development-status-and-roadmap)
+* [Compatibility](#compatibility)
+  * [List of compatible mods](#list-of-compatible-mods)
+  * [Compatibility guide for modders](#compatibility-guide-for-modders)
+* [FAQ](#faq)
+* [Dependencies and credits](#dependencies-and-credits)
+
 # Overview
 
 Sure, it's nice if the factory grows. But in this mod the factory must also be _optimized_.
@@ -18,14 +31,14 @@ At any given level of technological progress, there will exist some theoretical 
 
 The technology tree has been carefully rebuilt from scratch to fit, and there are a few new tools to play with, too.
 
-## You might like this mod if:
+## You might like this mod if...
 
 * You particularly like the "optimization problem" aspect of Factorio, and enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
 * You like the idea of a dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
 
-## You might not like this mod if:
+## You might not like this mod if...
 
 * You're looking for a "vanilla plus" experience.
 * You need compatibility with other large/overhaul mods.
@@ -50,6 +63,7 @@ The mod is more or less feature-complete, but especially the latter half or so w
 
 Planned improvements include:
 
+* More in-game help using tips or informatron.
 * Reintroduction of beacons (in some form).
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
@@ -69,9 +83,9 @@ Mods that teleport, create, destroy or otherwise mess with items and machines vi
 
 Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
-## Compatible mods
+## List of compatible mods
 
-The following mods have been adapted to work with Ultracube:
+The following mods are known to have been adapted to work with Ultracube:
 
 * [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) (integrated as standard)
 * [Flow Control](https://mods.factorio.com/mod/Flow%20Control)
@@ -82,7 +96,7 @@ The following mods have been adapted to work with Ultracube:
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 
-## Compatibility guide
+## Compatibility guide for modders
 
 TODO: make it easy to for other mod authors to add compatibility for their mod and describe here how to do so.
 

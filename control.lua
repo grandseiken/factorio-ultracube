@@ -169,6 +169,7 @@ script.on_event(
 
 script.on_event(
   defines.events.script_raised_built,
+  defines.events.script_raised_revive,
   function(e)
     if not e.entity.unit_number then
       return
