@@ -159,7 +159,7 @@ data:extend({
       {"cube-v4-transport-belt", 2},
       {"cube-advanced-engine", 1},
       {"cube-spectral-processor", 2},
-      {type = "fluid", name = "cube-elbow-grease", amount = 40},
+      {type = "fluid", name = "cube-elbow-grease", amount = 120},
     },
     results = {{"cube-v4-splitter", 1}},
     energy_required = 4,

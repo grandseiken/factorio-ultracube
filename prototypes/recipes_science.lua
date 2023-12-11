@@ -74,9 +74,9 @@ data:extend({
     name = "cube-deep-introspection-card",
     ingredients = {
       {"cube-deep-crystal", 1},
-      {"cube-resplendent-plate", 1}, -- Except something from it?
-      {"explosives", 1}, -- Except something from it. Or diamond?
-      {"concrete", 10}, -- Or refined concrete?
+      {"cube-resplendent-plate", 1},
+      {"explosives", 1},
+      {"concrete", 10},
     },
     results = {{"cube-deep-introspection-card", 1}},
     energy_required = 12,

@@ -5,7 +5,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/qubit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-research",
-    order = "0",
+    order = "0[qubit]",
     stack_size = 10,
   },
   {
@@ -26,7 +26,7 @@ data:extend({
       {"cube-sophisticated-matter-unit", 1},
       {"cube-bottled-consciousness", 1},
       {"cube-spectralite", 1},
-      {type = "fluid", name = "cube-deep-solution", amount = 4},
+      {"cube-deep-powder", 1},
     },
     results = {
       {"cube-qubit", 1},

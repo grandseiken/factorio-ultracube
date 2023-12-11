@@ -499,7 +499,29 @@ data:extend({
     energy_required = 2,
     category = "cube-dimension-folding-engine",
     subgroup = "cube-synthesis-ethereal",
-    order = "c[0-tendrils]",
+    order = "d[0-tendrils]",
+    always_show_made_in = true,
+    allow_decomposition = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-unobtainium",
+    icon = "__Ultracube__/assets/icons/unobtainium.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "fluid", name = "cube-ectoplasm", amount = 800},
+      {type = "fluid", name = "cube-deep-solution", amount = 1200},
+    },
+    results = {
+      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"cube-unobtainium", 40},
+    },
+    energy_required = 2,
+    category = "cube-cyclotron",
+    subgroup = "cube-research",
+    order = "x[unobtainium]",
     always_show_made_in = true,
     allow_decomposition = false,
     enabled = false,
@@ -509,6 +531,7 @@ data:extend({
     name = "cube-singularity-research-data",
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {"cube-unobtainium", 1},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},

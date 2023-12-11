@@ -42,15 +42,6 @@ local ingredients = {
     {"cube-synthetic-premonition-card", 1},
     {"cube-complete-annihilation-card", 1},
   },
-  ["x"] = {
-    {"cube-basic-contemplation-unit", 1},
-    {"cube-fundamental-comprehension-card", 1},
-    {"cube-abstract-interrogation-card", 1},
-    {"cube-deep-introspection-card", 1},
-    {"cube-synthetic-premonition-card", 1},
-    {"cube-complete-annihilation-card", 1},
-    {"cube-unobtainium", 1},
-  },
 }
 
 local time = {
@@ -62,7 +53,6 @@ local time = {
   ["4"] = 60,
   ["5"] = 90,
   ["6"] = 120,
-  ["x"] = 600,
 }
 
 function tech_cost_unit(level, count)

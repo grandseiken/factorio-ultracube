@@ -67,11 +67,11 @@ data:extend({
         pipe_connections = {{type = "output", position = {-4, 0}}},
       },
       {
-        production_type = "output",
+        production_type = "input",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
         base_area = 10,
-        base_level = 1,
+        base_level = -1,
         pipe_connections = {{type = "output", position = {4, 0}}},
       },
       {

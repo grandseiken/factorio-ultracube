@@ -65,7 +65,6 @@ require("prototypes.scripts.autoplace")
 -- - Slow-start feedback loop from e.g. tiny chance of diamond while (e.g. deep) crushing
 -- Other resource/intermediate conversions, or more efficient recipes but that still require the originals somehow
 -- - Or high power cost?
--- Unobtainium?
 -- Local-only solar panels?
 
 require("menu_simulations.menu_simulations")

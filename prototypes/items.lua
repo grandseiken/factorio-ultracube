@@ -307,6 +307,33 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-unobtainium",
+    icon = "__Ultracube__/assets/icons/unobtainium.png",
+    icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/tritium.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
+    subgroup = "cube-research",
+    order = "1[unobtainium]",
+    stack_size = 50,
+  },
+  {
+    type = "item",
     name = "cube-teleportation-control-module",
     icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
     icon_size = 64, icon_mipmaps = 4,

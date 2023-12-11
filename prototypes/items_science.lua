@@ -200,33 +200,4 @@ data:extend({
     flags = {"hidden"},
     durability = 1,
   },
-
-  {
-    type = "tool",
-    name = "cube-unobtainium",
-    icon = "__Krastorio2Assets__/icons/items/tritium.png",
-    icon_size = 64, icon_mipmaps = 4,
-    pictures = {
-      layers = {
-        {
-          size = 64,
-          filename = "__Krastorio2Assets__/icons/items/tritium.png",
-          scale = 0.25,
-          mipmap_count = 4,
-        },
-        {
-          draw_as_light = true,
-          flags = {"light"},
-          size = 64,
-          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
-          scale = 0.25,
-          mipmap_count = 4,
-        },
-      },
-    },
-    subgroup = "cube-science",
-    order = "x[a-unobtainium]",
-    stack_size = 100,
-    durability = 1,
-  },
 })

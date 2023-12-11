@@ -64,16 +64,4 @@ data:extend({
     unit = tech_cost_unit("6", 600),
     order = "6-1-0",
   },
-  {
-    type = "technology",
-    name = "cube-unobtainium",
-    icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
-    icon_size = 256, icon_mipmaps = 4,
-    effects = {
-      tech_unlock_effect(),
-    },
-    prerequisites = {"cube-complete-annihilation-card"},
-    unit = tech_cost_unit("x", 600),
-    order = "6-1-1",
-  },
 })
