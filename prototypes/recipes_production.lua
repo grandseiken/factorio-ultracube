@@ -430,6 +430,7 @@ data:extend({
       {"cube-resplendent-plate", 400},
       {"cube-arcane-drive", 128},
       {"cube-haunted-energy-cell", 128},
+      {"cube-singularity-research-data", 400},
       {"cube-quantum-research-data", 400},
     },
     energy_required = 300,

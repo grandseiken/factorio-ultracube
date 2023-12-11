@@ -209,14 +209,14 @@ data:extend({
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       -- Base game goes up to ~0.4 before infinite.
-      -- TODO: make infinite.
       {type = "mining-drill-productivity-bonus", modifier = 0.1},
     },
     prerequisites = {
       "cube-mining-productivity-6",
       "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("6", 800),
+    unit = tech_cost_formula("6", "2^(L-7)*800"),
+    max_level = "infinite",
     upgrade = true,
     order = "10-2-6",
   },
@@ -331,7 +331,6 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     effects = {
       -- Base game goes up to 12, we start at 4
-      -- TODO: make infinite.
       {type = "stack-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {"cube-stack-inserter-capacity-bonus-7"},
@@ -425,7 +424,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      {type = "worker-robot-speed", modifier = 0.4},
+      {type = "worker-robot-speed", modifier = 0.5},
     },
     prerequisites = {
       "cube-worker-robot-speed-2",
@@ -457,7 +456,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      {type = "worker-robot-speed", modifier = 0.5},
+      {type = "worker-robot-speed", modifier = 0.6},
     },
     prerequisites = {
       "cube-worker-robot-speed-4",
@@ -489,15 +488,14 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
-      -- Base game goes up to ~3 before infinite.
-      -- TODO: make infinite.
-      {type = "worker-robot-speed", modifier = 0.6},
+      {type = "worker-robot-speed", modifier = 0.65},
     },
     prerequisites = {
       "cube-worker-robot-speed-6",
       "cube-complete-annihilation-card",
     },
-    unit = tech_cost_unit("6", 420),
+    unit = tech_cost_formula("6", "2^(L-7)*420"),
+    max_level = "infinite",
     upgrade = true,
     order = "10-5-6",
   },
@@ -553,7 +551,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     effects = {
-      -- Base game goes up to ~3 before infinite.
+      -- Base game goes up to 3.
       {type = "worker-robot-storage", modifier = 1},
     },
     prerequisites = {
@@ -616,7 +614,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
     effects = {
-      -- Base game goes up to 2.5 before infinite.
+      -- Base game goes up to 2.5.
       {type = "laboratory-speed", modifier = 0.25},
     },
     prerequisites = {

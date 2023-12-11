@@ -23,11 +23,8 @@ require("prototypes.scripts.autoplace")
 -- - Small, effective, one per machine, powered by fluid (maybe deep crystal + something)
 -- 4. Various (BASICALLY KNOWN)
 -- 4a. Phantom FX (sound design, aura graphics)
--- 4b. Fix deep core ore generation (?)
--- 4c. Infinite technologies, any more last equipments/armor
--- 4d. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
--- 4e. Should refined concrete use mineral water?
--- 4f. Victory (see silo script)
+-- 4b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 4c. Should refined concrete use mineral water?
 
 -- v0.3+
 -------------------

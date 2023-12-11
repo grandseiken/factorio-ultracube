@@ -1,4 +1,37 @@
 local resource_autoplace = require("__core__/lualib/resource-autoplace")
+local noise = require("__core__/lualib/noise")
+
+local deep_core_ore_autoplace = resource_autoplace.resource_autoplace_settings({
+  name = "cube-deep-core-vein",
+  order = "f",
+  base_density = 1,
+  base_spots_per_km2 = 0.05,
+  has_starting_area_placement = false,
+  random_spot_size_minimum = 0.01,
+  random_spot_size_maximum = 0.1,
+  regular_blob_amplitude_multiplier = 1,
+  richness_post_multiplier = 1,
+  additional_richness = 150000,
+  regular_rq_factor_multiplier = 0.1,
+  candidate_spot_count = 22,
+})
+
+-- Distance from origin at which fully spawning
+local deep_core_distance = 512
+-- Factor where it starts to fade in
+local deep_core_fade_ratio = 3
+local deep_core_distance_bonus = 1024
+deep_core_ore_autoplace.probability_expression =
+    deep_core_ore_autoplace.probability_expression + noise.define_noise_function(function(x, y)
+      local d = deep_core_distance * deep_core_distance
+      local r = deep_core_fade_ratio * deep_core_fade_ratio
+      local c = r / d * (1 - r)
+      return noise.clamp(c * (d - x * x - y * y), -1, 0)
+    end)
+deep_core_ore_autoplace.richness_expression =
+    deep_core_ore_autoplace.richness_expression + noise.define_noise_function(function(x, y)
+      return noise.max(0, deep_core_distance_bonus * ((x * x + y * y)^0.5 - deep_core_distance))
+    end)
 
 data:extend({
   {
@@ -142,22 +175,7 @@ data:extend({
     },
     collision_box = {{ -3.4, -3.4}, {3.4, 3.4}},
     selection_box = {{ -3.5, -3.5}, {3.5, 3.5}},
-    autoplace = resource_autoplace.resource_autoplace_settings({
-      name = "cube-deep-core-vein",
-      order = "f",
-      base_density = 1,
-      richness_multiplier = 0.5,
-      richness_multiplier_distance_bonus = 1.5,
-      base_spots_per_km2 = 0.025,
-      has_starting_area_placement = false,
-      random_spot_size_minimum = 0.01,
-      random_spot_size_maximum = 0.1,
-      regular_blob_amplitude_multiplier = 1,
-      richness_post_multiplier = 1.0,
-      additional_richness = 100000,
-      regular_rq_factor_multiplier = 0.1,
-      candidate_spot_count = 22,
-    }),
+    autoplace = deep_core_ore_autoplace,
     stage_counts = {0},
     stages = {
       sheet = {

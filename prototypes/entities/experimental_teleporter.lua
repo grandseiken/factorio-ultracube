@@ -203,7 +203,7 @@ data:extend({
     fixed_recipe = "cube-teleporter-activation",
     show_recipe_icon = false,
     module_specification = {module_slots = 2},
-    allowed_effects = module_effects.speed_efficiency,
+    allowed_effects = module_effects.all,
 
     animation = teleporter_animation,
     launch_wait_time = 8,

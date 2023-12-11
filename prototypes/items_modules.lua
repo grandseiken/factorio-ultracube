@@ -45,6 +45,7 @@ local productivity_module_limitation = {
   "cube-qubit",
   -- Is it OK?
   "cube-resonance-cascade",
+  "cube-teleporter-activation",
 }
 
 data:extend({

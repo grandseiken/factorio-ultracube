@@ -124,7 +124,7 @@ add_mystery(4, "cube-ultradense-utility-cube", "cube-dormant-utility-cube")
 add_mystery(4, "cube-dormant-utility-cube", "cube-dormant-utility-cube")
 add_mystery(4, "cube-phantom-ultradense-constituent", "cube-dormant-phantom-constituent")
 add_mystery(4, "cube-dormant-phantom-constituent", "cube-dormant-phantom-constituent")
-add_mystery(4, "cube-legendary-iron-plate", "cube-legendary-iron-plate")
+add_mystery(4, "cube-legendary-iron-gear", "cube-legendary-iron-gear")
 
 add_mystery(1, "cube-qubit", "cube-spectralite")
 add_mystery(1, "cube-qubit-5", "cube-qubit-4")

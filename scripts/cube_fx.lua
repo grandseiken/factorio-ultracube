@@ -6,6 +6,7 @@ local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
+local legendary_iron_gear = cube_management.cubes.legendary_iron_gear
 
 local ultradense_icon = {type = "item", name = cube_ultradense}
 local dormant_icon = {type = "item", name = cube_dormant}
@@ -81,7 +82,8 @@ local function cube_boom(size, results)
         phantom_explosion.position = result.position
         phantom_explosion.target = result.position
         result.entity.surface.create_entity(phantom_explosion)
-      elseif result.velocity then
+      elseif result.item == cube_ultradense then
+        if result.velocity then
         local position = result.position
         local velocity = result.velocity
         ultradense_projectile.source = result.entity
@@ -90,11 +92,12 @@ local function cube_boom(size, results)
         ultradense_projectile.target.y = position.y + velocity.y
         ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
         result.entity.surface.create_entity(ultradense_projectile)
-      else
-        ultradense_explosion.source = result.entity
-        ultradense_explosion.position = result.position
-        ultradense_explosion.target = result.position
-        result.entity.surface.create_entity(ultradense_explosion)
+        else
+          ultradense_explosion.source = result.entity
+          ultradense_explosion.position = result.position
+          ultradense_explosion.target = result.position
+          result.entity.surface.create_entity(ultradense_explosion)
+        end
       end
     end
   end
@@ -220,6 +223,36 @@ local function cube_vehicle_mod(size, results)
   return boomed
 end
 
+local function cube_victory(size, results)
+  local state = global.cube_victory_state
+  if state == "victorious" then
+    return
+  end
+  local has_cube = false
+  local has_plate = false
+  for i = 1, size do
+    local result = results[i]
+    if result.item == cube_ultradense then
+      has_cube = true
+    end
+    if result.item == legendary_iron_gear then
+      has_plate = true
+    end
+  end
+  if has_plate and not has_cube and not state then
+    global.cube_victory_state = "imminent"
+  end
+  if has_cube and not has_plate and state == "imminent" then
+    global.cube_victory_state = "victorious"
+    game.set_game_state {
+      game_finished = true,
+      player_won = true,
+      can_continue = true,
+      victorious_force = "player",
+    }
+  end
+end
+
 function cube_fx.tick(tick)
   local update_tick = tick % 6 == 0
   local alert_tick = update_tick and tick % 24 == 12
@@ -232,6 +265,7 @@ function cube_fx.tick(tick)
   if alert_tick then
     cube_alert(size, results)
   end
+  cube_victory(size, results)
   if cube_vehicle_mod(size, results) then
     return
   end

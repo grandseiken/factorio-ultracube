@@ -534,7 +534,7 @@ data:extend({
       {name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-legendary-iron-plate", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-legendary-iron-gear", amount = 1, catalyst_amount = 1},
       {type = "item", name = "cube-ultradense-debris", amount = 256, catalyst_amount = 256},
       {type = "item", name = "cube-basic-antimatter-unit", amount = 1000},
     },
@@ -653,7 +653,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {"cube-legendary-iron-plate", 1},
+      {"cube-legendary-iron-gear", 1},
       {"cube-ultradense-composite", 64},
     },
     results = {{"cube-ultradense-utility-cube", 1}},

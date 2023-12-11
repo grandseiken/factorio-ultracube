@@ -5,7 +5,7 @@ local cube_defines = {
   dormant = "cube-dormant-utility-cube",
   ultradense_phantom = "cube-phantom-ultradense-constituent",
   dormant_phantom = "cube-dormant-phantom-constituent",
-  legendary_iron_plate = "cube-legendary-iron-plate",
+  legendary_iron_gear = "cube-legendary-iron-gear",
   fuel_category = "cube-cube",
 }
 
@@ -14,7 +14,7 @@ local cubes = {
   ultradense_phantom = cube_defines.ultradense_phantom,
   dormant = cube_defines.dormant,
   dormant_phantom = cube_defines.dormant_phantom,
-  legendary_iron_plate = cube_defines.legendary_iron_plate,
+  legendary_iron_gear = cube_defines.legendary_iron_gear,
 }
 
 local cube_info = make_set({
@@ -22,7 +22,7 @@ local cube_info = make_set({
   cubes.dormant,
   cubes.ultradense_phantom,
   cubes.dormant_phantom,
-  cubes.legendary_iron_plate,
+  cubes.legendary_iron_gear,
 })
 
 local cube_drop = make_set({
@@ -30,7 +30,7 @@ local cube_drop = make_set({
   cubes.dormant,
   cubes.ultradense_phantom,
   cubes.dormant_phantom,
-  cubes.legendary_iron_plate,
+  cubes.legendary_iron_gear,
   "cube-ultradense-debris",
   "cube-ultradense-powder",
   "cube-ultradense-mineral",
@@ -51,7 +51,7 @@ local cube_weight = {
   [cubes.dormant] = 1,
   [cubes.ultradense_phantom] = 0,
   [cubes.dormant_phantom] = 0,
-  [cubes.legendary_iron_plate] = 0,
+  [cubes.legendary_iron_gear] = 0,
 }
 
 local cube_recipes_cache = nil

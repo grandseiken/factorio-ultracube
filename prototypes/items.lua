@@ -57,8 +57,8 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-legendary-iron-plate",
-    icon = "__base__/graphics/icons/iron-plate.png",
+    name = "cube-legendary-iron-gear",
+    icon = "__base__/graphics/icons/iron-gear-wheel.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "0[0-plate]",
