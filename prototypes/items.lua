@@ -307,30 +307,57 @@ data:extend({
   },
   {
     type = "item",
-    name = "cube-unobtainium",
-    icon = "__Ultracube__/assets/icons/unobtainium.png",
+    name = "cube-boson-conduit",
+    icon = "__Ultracube__/assets/icons/boson-conduit.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
       layers = {
         {
+          filename = "__Ultracube__/assets/icons/boson-conduit.png",
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/tritium.png",
           scale = 0.25,
           mipmap_count = 4,
         },
         {
+          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
           scale = 0.25,
           mipmap_count = 4,
         },
       },
     },
     subgroup = "cube-research",
-    order = "1[unobtainium]",
-    stack_size = 50,
+    order = "1[boson-conduit]",
+    stack_size = 100,
+  },
+  {
+    type = "item",
+    name = "cube-fermion-conduit",
+    icon = "__Ultracube__/assets/icons/fermion-conduit.png",
+    icon_size = 64, icon_mipmaps = 4,
+    pictures = {
+      layers = {
+        {
+          filename = "__Ultracube__/assets/icons/fermion-conduit.png",
+          size = 64,
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+        {
+          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
+          draw_as_light = true,
+          flags = {"light"},
+          size = 64,
+          scale = 0.25,
+          mipmap_count = 4,
+        },
+      },
+    },
+    subgroup = "cube-research",
+    order = "2[fermion-conduit]",
+    stack_size = 100,
   },
   {
     type = "item",

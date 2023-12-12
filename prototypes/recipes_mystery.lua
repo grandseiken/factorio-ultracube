@@ -370,7 +370,8 @@ add_mystery(1, "cube-abstract-interrogation-card", "cube-basic-contemplation-uni
 add_mystery(1, "cube-deep-introspection-card", "cube-basic-contemplation-unit")
 add_mystery(1, "cube-synthetic-premonition-card", "cube-basic-contemplation-unit")
 add_mystery(1, "cube-complete-annihilation-card", "cube-basic-contemplation-unit")
-add_mystery(1, "cube-unobtainium", "cube-unobtainium")
+add_mystery(1, "cube-boson-conduit", "cube-boson-conduit")
+add_mystery(1, "cube-fermion-conduit", "cube-fermion-conduit")
 
 add_mystery(2, "cube-regulation-armor", "cube-modular-armor")
 add_mystery(4, "cube-modular-armor", "cube-power-armor")

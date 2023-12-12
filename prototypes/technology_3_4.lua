@@ -8,12 +8,15 @@ data:extend({
     icon = "__Ultracube__/assets/technology/cyclotron.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cyclotron"},
-      {type = "unlock-recipe", recipe = "cube-unobtainium"},
+      {type = "unlock-recipe", recipe = "cube-conduits"},
+      {type = "unlock-recipe", recipe = "cube-conduit-conversion-a"},
+      {type = "unlock-recipe", recipe = "cube-conduit-conversion-b"},
       {type = "unlock-recipe", recipe = "cube-singularity-research-data"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
       "cube-phantom-emotion",
+      "cube-uranium-processing",
     },
     unit = tech_cost_unit("3", 300),
     order = "3-0-0",

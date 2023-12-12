@@ -176,7 +176,7 @@ data:extend({
       drain = "200KW",
     },
 
-    ingredient_count = 2,
+    ingredient_count = 4,
     module_specification = {
       module_slots = 2,
       module_info_icon_shift = {0, 1.8},

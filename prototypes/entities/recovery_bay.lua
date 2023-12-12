@@ -124,7 +124,6 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    -- ingredient_count = 1,
     result_inventory_size = 1,
     source_inventory_size = 1,
     module_specification = {
