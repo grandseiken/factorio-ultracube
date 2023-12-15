@@ -3,28 +3,19 @@ require("prototypes.scripts.autoplace")
 
 -- RELEASE BLOCKERS (v0.2)
 -------------------
--- 1. Deep techs (NEEDS THINK)
--- 1a. Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
--- - Just use e.g. advanced chemical plant, electrolysis machine, condenser.
--- - Krastorio 1 might have something interesting!
--- - Cubetime can increase the rate?
--- - Or could involve an cube-compatible alternative fuel
--- 1b. How to get singularity data? (deep core crystal is currently the mystery furance output)
--- - - Cyclotron: cube must go in several in odd/timed/awkward pattern, numbers are weird/loop
--- - - 2-3 steps for card should be enough, maybe: something -> 50% A 50% B -> ...? then A -> B, maybe need 1A+2B -> thing?
--- 2. Finish gamma handling
+-- 1. Finish gamma handling
 -- - Current numbers seem good, but cube usage is too awkward - hard to buffer enough to avoid
 --   it getting stuck - can we maintain overall cubetime while making it different somehow?
 -- - - Ideally full cubetime should ~exactly process 4 ports. Currently ~8, but increasing seems to imply
 --     we should produce more power (maybe it is just fine)
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 3. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS, COULD DELAY)
--- - Small, effective, one per machine, powered by fluid (maybe deep crystal + something)
--- 4. Various (BASICALLY KNOWN)
--- 4a. Phantom FX (sound design, aura graphics)
--- 4b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
--- 4c. Should refined concrete use mineral water?
+-- 2. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS, COULD DELAY)
+-- - Small, effective, one per machine, powered by fluid (from fermion conduit?)
+-- 3. Various (BASICALLY KNOWN)
+-- 3a. Phantom FX (sound design, aura graphics)
+-- 3b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
+-- 3c. Should refined concrete use mineral water?
 
 -- v0.3+
 -------------------
@@ -32,11 +23,16 @@ require("prototypes.scripts.autoplace")
 -- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
 --   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
 -- - - Related to: revisit tendril expulsion (better recipe)?
+-- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
+-- - - Just use e.g. advanced chemical plant, electrolysis machine, condenser.
+-- - - Krastorio 1 might have something interesting!
+-- - - Cubetime can increase the rate?
+-- - Or could involve an cube-compatible alternative fuel
 -- - Icons in tooltips?
 -- - Is there a way to avoid antimatter ports showing up on power stats
 -- - - Apparently not other than converting to fixed-recipe fluid-powered assemblers and
 --     measuring manually, but that means no power bars (unless they can be modded back in?)
--- - More use for deep crystal etc
+-- - Later tech to make quantum decode output something different with 1 match?
 -- - Barreling recipes (+ mystery furnace)
 -- - make cube sparks aligned per-machine
 -- - make nuclear reactor a dummy so copy/paste undo works properly (and check it generally)

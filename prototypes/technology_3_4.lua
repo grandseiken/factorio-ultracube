@@ -10,13 +10,11 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-cyclotron"},
       {type = "unlock-recipe", recipe = "cube-conduits"},
       {type = "unlock-recipe", recipe = "cube-conduit-conversion-a"},
-      {type = "unlock-recipe", recipe = "cube-conduit-conversion-b"},
       {type = "unlock-recipe", recipe = "cube-singularity-research-data"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
       "cube-phantom-emotion",
-      "cube-uranium-processing",
     },
     unit = tech_cost_unit("3", 300),
     order = "3-0-0",
@@ -295,6 +293,31 @@ data:extend({
     },
     unit = tech_cost_unit("4", 300),
     order = "3-1-7",
+  },
+  {
+    type = "technology",
+    name = "cube-cyclotron-uranium",
+    icons = {
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Ultracube__/assets/technology/cyclotron.png",
+      },
+      {
+        icon_size = 256, icon_mipmaps = 4,
+        icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
+        scale = 0.625,
+      },
+    },
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-conduit-conversion-b"},
+      {type = "unlock-recipe", recipe = "cube-singularity-research-data-enhanced"},
+    },
+    prerequisites = {
+      "cube-cyclotron",
+      "cube-uranium-processing",
+    },
+    unit = tech_cost_unit("3", 420),
+    order = "3-1-8",
   },
   {
     type = "technology",

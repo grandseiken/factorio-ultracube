@@ -328,9 +328,9 @@ data:extend({
         },
       },
     },
-    subgroup = "cube-research",
+    subgroup = "cube-research-singularity",
     order = "1[boson-conduit]",
-    stack_size = 100,
+    stack_size = 20,
   },
   {
     type = "item",
@@ -355,9 +355,9 @@ data:extend({
         },
       },
     },
-    subgroup = "cube-research",
+    subgroup = "cube-research-singularity",
     order = "2[fermion-conduit]",
-    stack_size = 100,
+    stack_size = 20,
   },
   {
     type = "item",
