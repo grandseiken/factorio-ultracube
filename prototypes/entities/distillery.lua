@@ -18,7 +18,11 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box = {{-2.5, -2.8}, {2.5, 2.5}},
     scale_entity_info_icon = true,
-    module_specification = {module_slots = 2},
+    module_specification = {
+      module_slots = 2,
+      module_info_icon_shift = {0, 1.2},
+      module_info_icon_scale = 0.625,
+    },
     allowed_effects = module_effects.all,
     crafting_categories = {"cube-distillery"},
     crafting_speed = 1,

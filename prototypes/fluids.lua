@@ -158,6 +158,18 @@ data:extend({
   },
   {
     type = "fluid",
+    name = "cube-beacon-juice",
+    icon = "__Ultracube__/assets/icons/beacon-juice.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.0, g=0.975, b=0.65},
+    flow_color = {r=0.15, g=0.975, b=0.925},
+    default_temperature = 25,
+    fuel_value = "400kJ",
+    subgroup = "cube-distillation",
+    order = "y[beacon-juice]",
+  },
+  {
+    type = "fluid",
     name = "cube-ultradense-sap",
     icon = "__Ultracube__/assets/icons/ultradense-sap.png",
     icon_size = 64, icon_mipmaps = 4,

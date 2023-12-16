@@ -287,6 +287,25 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-beacon-juice",
+    ingredients = {
+      {type = "fluid", name = "water", amount = 1000},
+      {"cube-fermion-conduit", 1},
+      {"cube-spectralite", 1},
+    },
+    results = {
+      {type = "fluid", name = "cube-beacon-juice", amount = 4200},
+    },
+    main_product = "cube-beacon-juice",
+    energy_required = 30,
+    category = "cube-distillery",
+    always_show_made_in = true,
+    always_show_products = true,
+    show_amount_in_title = false,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-euphoric-release",
     icon = "__Ultracube__/assets/icons/recipe/euphoric-release.png",
     icon_size = 128, icon_mipmaps = 5,

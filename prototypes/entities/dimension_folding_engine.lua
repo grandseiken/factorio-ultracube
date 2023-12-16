@@ -179,8 +179,8 @@ data:extend({
     ingredient_count = 4,
     module_specification = {
       module_slots = 2,
-      module_info_icon_shift = {0, 1.8},
-      module_info_icon_scale = 0.6,
+      module_info_icon_shift = {0, 2.5},
+      module_info_icon_scale = 1,
     },
     allowed_effects = module_effects.speed_efficiency,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},

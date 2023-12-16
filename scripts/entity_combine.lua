@@ -7,6 +7,12 @@ local combine_definitions = {
       inoperable = true,
     },
   },
+  ["cube-beacon"] = {
+    {
+      name = "cube-beacon-fluid-source",
+      inoperable = true,
+    },
+  },
   ["cube-experimental-teleporter"] = {
     {name = "cube-experimental-teleporter-ready"},
     {name = "cube-experimental-teleporter-collision-1"},

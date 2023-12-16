@@ -410,6 +410,19 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-beacon",
+    ingredients = {
+      {"cube-singularity-research-data", 4},
+      {"cube-spectral-processor", 8},
+      {"cube-deep-crystal", 4},
+      {"cube-sophisticated-matter-unit", 10},
+    },
+    energy_required = 20,
+    results = {{"cube-beacon", 1}},
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-experimental-teleporter",
     ingredients = {
       {"cube-sophisticated-matter-unit", 60},

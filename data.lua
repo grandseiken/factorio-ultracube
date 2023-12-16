@@ -10,12 +10,13 @@ require("prototypes.scripts.autoplace")
 --     we should produce more power (maybe it is just fine)
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 2. Beacons - deep-side tree (!?) (ONLY POSSIBLE WITH SHENANNIGANS, COULD DELAY)
--- - Small, effective, one per machine, powered by fluid (from fermion conduit?)
+-- 2. Finish beacons
+-- - Scripting: fluid activation / one per machine; juice recipe + icon
 -- 3. Various (BASICALLY KNOWN)
 -- 3a. Phantom FX (sound design, aura graphics)
 -- 3b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 -- 3c. Should refined concrete use mineral water?
+-- 3d. always_show_made_in for all intermediates?
 
 -- v0.3+
 -------------------
@@ -102,6 +103,7 @@ require("prototypes.technology_upgrades")
 require("prototypes.tweaks")
 
 require("prototypes.entities.antimatter_reactor")
+require("prototypes.entities.beacon")
 require("prototypes.entities.belts")
 require("prototypes.entities.boiler")
 require("prototypes.entities.chemical_plant")

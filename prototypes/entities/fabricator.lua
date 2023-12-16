@@ -336,8 +336,8 @@ data:extend({
 
     module_specification = {
       module_slots = 4,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
+      module_info_icon_shift = {0, 0.7},
+      module_info_icon_scale = 0.625,
     },
     allowed_effects = module_effects.all,
     open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.75},

@@ -202,7 +202,12 @@ data:extend({
     crafting_categories = {"cube-experimental-teleporter"},
     fixed_recipe = "cube-teleporter-activation",
     show_recipe_icon = false,
-    module_specification = {module_slots = 2},
+    module_specification = {
+      module_slots = 2,
+      module_info_icon_shift = {0, 2.35},
+      module_info_icon_scale = 0.625,
+      module_info_separation_multiplier = 4,
+    },
     allowed_effects = module_effects.all,
 
     animation = teleporter_animation,

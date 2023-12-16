@@ -34,8 +34,12 @@ data:extend({
     },
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    fast_replaceable_group = "kr-greenhouse",
-    module_specification = {module_slots = 2},
+    fast_replaceable_group = "cube-greenhouse",
+    module_specification = {
+      module_slots = 2,
+      module_info_icon_shift = {0, 1.7},
+      module_info_icon_scale = 1,
+    },
     allowed_effects = module_effects.speed_efficiency,
     animation = {
       layers = {

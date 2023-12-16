@@ -259,7 +259,9 @@ data:extend({
     module_specification = {
       module_slots = 10,
       module_info_icon_shift = {0, 1.8},
-      module_info_icon_scale = 0.6,
+      module_info_icon_scale = 1,
+      module_info_max_icon_rows = 2,
+      module_info_max_icons_per_row = 5,
     },
     allowed_effects = module_effects.all,
     open_sound = sounds.machine_open,

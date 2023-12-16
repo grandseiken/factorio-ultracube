@@ -321,6 +321,22 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-beacon",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Krastorio2Assets__/technologies/singularity-beacon.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-beacon"},
+      {type = "unlock-recipe", recipe = "cube-beacon-juice"},
+    },
+    prerequisites = {
+      "cube-cyclotron",
+      "cube-spectral-processor",
+    },
+    unit = tech_cost_unit("3", 420),
+    order = "3-1-9",
+  },
+  {
+    type = "technology",
     name = "cube-nuclear-fuel-reprocessing",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/nuclear-fuel-reprocessing.png",
