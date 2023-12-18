@@ -10,8 +10,7 @@ require("prototypes.scripts.autoplace")
 --     we should produce more power (maybe it is just fine)
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 2. Finish beacons
--- - Scripting: fluid activation / one per machine; juice recipe + icon
+-- 2. Finish beacons: - juice recipe + icon? +one per machine (check spaceex etc)
 -- 3. Various (BASICALLY KNOWN)
 -- 3a. Phantom FX (sound design, aura graphics)
 -- 3b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast

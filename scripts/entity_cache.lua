@@ -2,10 +2,12 @@ require("__Ultracube__/scripts/lib")
 local cube_management = require("__Ultracube__/scripts/cube_management")
 local transition_table = require("__Ultracube__/scripts/transition_table")
 
+local by_tick_size = 60
 local chunk_size = 8
 local cache = nil
 
 local entity_cache = {
+  by_tick_size = by_tick_size,
   chunk_size = chunk_size,
 }
 
@@ -21,6 +23,7 @@ function entity_cache.refresh()
     reactors = {},
     multi_furnaces = {},
     by_name = {},
+    by_name_by_tick = {},
   }
   cache = global.entity_cache
   for _, surface in pairs(game.surfaces) do
@@ -89,7 +92,8 @@ local entity_types = {
     "cube-cyclotron",
     "cube-antimatter-reactor",
     "cube-experimental-teleporter",
-  })
+  }),
+  by_name_by_tick = make_set({"cube-beacon"}),
 }
 
 entity_cache.types = entity_types
@@ -101,6 +105,12 @@ local vehicle_entity_types = entity_types.vehicle
 local reactor_entities = entity_types.reactor
 local multi_furnace_entities = entity_types.multi_furnace
 local by_name_entities = entity_types.by_name
+local by_name_by_tick_entities = entity_types.by_name_by_tick
+
+local function by_tick(unit_number)
+  local index = unit_number % 50
+  return 1 + index + math.floor(index / 5)
+end
 
 function entity_cache.is_cube_crafter(entity)
   local categories = cube_management.recipe_categories()
@@ -153,19 +163,33 @@ local function add_internal(entity, cache, is_global)
     cache.vehicles[entity.unit_number] = entity
     needs_chunk_cache = false
   end
-  if is_global and entity_type == "reactor" and reactor_entities[entity.name] then
-    cache.reactors[entity.unit_number] = entity
-  end
-  if is_global and entity_type == "furnace" and multi_furnace_entities[entity.name] then
-    cache.multi_furnaces[entity.unit_number] = entity
-  end
-  if is_global and by_name_entities[entity_name] then
-    local map = cache.by_name[entity_name]
-    if not map then
-      map = {}
-      cache.by_name[entity_name] = map
+  if is_global then
+    if entity_type == "reactor" and reactor_entities[entity.name] then
+      cache.reactors[entity.unit_number] = entity
     end
-    map[entity.unit_number] = entity
+    if entity_type == "furnace" and multi_furnace_entities[entity.name] then
+      cache.multi_furnaces[entity.unit_number] = entity
+    end
+    if by_name_entities[entity_name] then
+      local map = cache.by_name[entity_name]
+      if not map then
+        map = {}
+        cache.by_name[entity_name] = map
+      end
+      map[entity.unit_number] = entity
+    end
+    if by_name_by_tick_entities[entity_name] then
+      local map = cache.by_name_by_tick[entity_name]
+      if not map then
+        map = {}
+        for i = 1, by_tick_size do
+          map[i - 1] = {}
+        end
+        cache.by_name_by_tick[entity_name] = map
+      end
+      local unit_number = entity.unit_number
+      map[by_tick(unit_number)][unit_number] = {entity = entity}
+    end
   end
   return needs_chunk_cache
 end
@@ -198,16 +222,25 @@ local function remove_internal(entity, cache, is_global)
     cache.vehicles[entity.unit_number] = nil
     needs_chunk_cache = false
   end
-  if is_global and entity_type == "reactor" and reactor_entities[entity_name] then
-    cache.reactors[entity.unit_number] = nil
-  end
-  if is_global and entity_type == "furnace" and multi_furnace_entities[entity_name] then
-    cache.multi_furnaces[entity.unit_number] = nil
-  end
-  if is_global and by_name_entities[entity_name] then
-    local map = cache.by_name[entity_name]
-    if map then
-      map[entity.unit_number] = nil
+  if is_global then
+    if entity_type == "reactor" and reactor_entities[entity_name] then
+      cache.reactors[entity.unit_number] = nil
+    end
+    if entity_type == "furnace" and multi_furnace_entities[entity_name] then
+      cache.multi_furnaces[entity.unit_number] = nil
+    end
+    if by_name_entities[entity_name] then
+      local map = cache.by_name[entity_name]
+      if map then
+        map[entity.unit_number] = nil
+      end
+    end
+    if by_name_by_tick_entities[entity_name] then
+      local map = cache.by_name_by_tick[entity_name]
+      if map then
+        local unit_number = entity.unit_number
+        map[by_tick(unit_number)][unit_number] = nil
+      end
     end
   end
   return needs_chunk_cache
