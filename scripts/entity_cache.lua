@@ -2,7 +2,7 @@ require("__Ultracube__/scripts/lib")
 local cube_management = require("__Ultracube__/scripts/cube_management")
 local transition_table = require("__Ultracube__/scripts/transition_table")
 
-local by_tick_size = 60
+local by_tick_size = 120
 local chunk_size = 8
 local cache = nil
 
@@ -107,9 +107,11 @@ local multi_furnace_entities = entity_types.multi_furnace
 local by_name_entities = entity_types.by_name
 local by_name_by_tick_entities = entity_types.by_name_by_tick
 
+local cube_fx_tick_interval = 6
+local by_tick_buckets = (by_tick_size * (cube_fx_tick_interval - 1)) / cube_fx_tick_interval
 local function by_tick(unit_number)
-  local index = unit_number % 50
-  return 1 + index + math.floor(index / 5)
+  local index = unit_number % by_tick_buckets
+  return 1 + index + math.floor(index / (cube_fx_tick_interval - 1))
 end
 
 function entity_cache.is_cube_crafter(entity)
@@ -138,37 +140,38 @@ local is_cube_burner = entity_cache.is_cube_burner
 local function add_internal(entity, cache, is_global)
   local entity_type = entity.type
   local entity_name = entity.name
+  local unit_number = entity.unit_number
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
-    cache.transport_lines[entity.unit_number] = entity
+    cache.transport_lines[unit_number] = entity
     needs_chunk_cache = true
   end
   if inventory_entity_types[entity_type] then
-    cache.inventories[entity.unit_number] = entity
+    cache.inventories[unit_number] = entity
     needs_chunk_cache = entity_type ~= "rocket-silo-rocket"
   end
   if is_cube_crafter(entity) then
-    cache.cube_crafters[entity.unit_number] = entity
+    cache.cube_crafters[unit_number] = entity
     needs_chunk_cache = true
   end
   if is_cube_burner(entity) then
-    cache.cube_burners[entity.unit_number] = entity
+    cache.cube_burners[unit_number] = entity
     needs_chunk_cache = true
   end
   if entity_type == "inserter" then
-    cache.inserters[entity.unit_number] = entity
+    cache.inserters[unit_number] = entity
     needs_chunk_cache = true
   end
   if vehicle_entity_types[entity_type] then
-    cache.vehicles[entity.unit_number] = entity
+    cache.vehicles[unit_number] = entity
     needs_chunk_cache = false
   end
   if is_global then
-    if entity_type == "reactor" and reactor_entities[entity.name] then
-      cache.reactors[entity.unit_number] = entity
+    if entity_type == "reactor" and reactor_entities[entity_name] then
+      cache.reactors[unit_number] = entity
     end
-    if entity_type == "furnace" and multi_furnace_entities[entity.name] then
-      cache.multi_furnaces[entity.unit_number] = entity
+    if entity_type == "furnace" and multi_furnace_entities[entity_name] then
+      cache.multi_furnaces[unit_number] = entity
     end
     if by_name_entities[entity_name] then
       local map = cache.by_name[entity_name]
@@ -176,7 +179,7 @@ local function add_internal(entity, cache, is_global)
         map = {}
         cache.by_name[entity_name] = map
       end
-      map[entity.unit_number] = entity
+      map[unit_number] = entity
     end
     if by_name_by_tick_entities[entity_name] then
       local map = cache.by_name_by_tick[entity_name]
@@ -187,7 +190,17 @@ local function add_internal(entity, cache, is_global)
         end
         cache.by_name_by_tick[entity_name] = map
       end
-      local unit_number = entity.unit_number
+      map[by_tick(unit_number)][unit_number] = {entity = entity}
+    end
+    if cube_management.module_machines()[entity_name] then
+      local map = cache.by_name_by_tick["__module-machines__"]
+      if not map then
+        map = {}
+        for i = 1, by_tick_size do
+          map[i - 1] = {}
+        end
+        cache.by_name_by_tick["__module-machines__"] = map
+      end
       map[by_tick(unit_number)][unit_number] = {entity = entity}
     end
   end
@@ -197,48 +210,54 @@ end
 local function remove_internal(entity, cache, is_global)
   local entity_type = entity.type
   local entity_name = entity.name
+  local unit_number = entity.unit_number
   local needs_chunk_cache = false
   if transport_line_entity_types[entity_type] then
-    cache.transport_lines[entity.unit_number] = nil
+    cache.transport_lines[unit_number] = nil
     needs_chunk_cache = true
   end
   if inventory_entity_types[entity_type] then
-    cache.inventories[entity.unit_number] = nil
+    cache.inventories[unit_number] = nil
     needs_chunk_cache = entity_type ~= "rocket-silo-rocket"
   end
   if is_cube_crafter(entity) then
-    cache.cube_crafters[entity.unit_number] = nil
+    cache.cube_crafters[unit_number] = nil
     needs_chunk_cache = true
   end
   if is_cube_burner(entity) then
-    cache.cube_burners[entity.unit_number] = nil
+    cache.cube_burners[unit_number] = nil
     needs_chunk_cache = true
   end
   if entity_type == "inserter" then
-    cache.inserters[entity.unit_number] = nil
+    cache.inserters[unit_number] = nil
     needs_chunk_cache = true
   end
   if vehicle_entity_types[entity_type] then
-    cache.vehicles[entity.unit_number] = nil
+    cache.vehicles[unit_number] = nil
     needs_chunk_cache = false
   end
   if is_global then
     if entity_type == "reactor" and reactor_entities[entity_name] then
-      cache.reactors[entity.unit_number] = nil
+      cache.reactors[unit_number] = nil
     end
     if entity_type == "furnace" and multi_furnace_entities[entity_name] then
-      cache.multi_furnaces[entity.unit_number] = nil
+      cache.multi_furnaces[unit_number] = nil
     end
     if by_name_entities[entity_name] then
       local map = cache.by_name[entity_name]
       if map then
-        map[entity.unit_number] = nil
+        map[unit_number] = nil
       end
     end
     if by_name_by_tick_entities[entity_name] then
       local map = cache.by_name_by_tick[entity_name]
       if map then
-        local unit_number = entity.unit_number
+        map[by_tick(unit_number)][unit_number] = nil
+      end
+    end
+    if cube_management.module_machines()[entity_name] then
+      local map = cache.by_name_by_tick["__module-machines__"]
+      if map then
         map[by_tick(unit_number)][unit_number] = nil
       end
     end

@@ -11,7 +11,8 @@
     "game",
     "pipecoverspictures",
     "commands",
-    "mods"
+    "mods",
+    "rendering"
   ],
   "Lua.diagnostics.disable": [
     "lowercase-global",

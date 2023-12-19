@@ -8,9 +8,9 @@ require("prototypes.scripts.autoplace")
 --   it getting stuck - can we maintain overall cubetime while making it different somehow?
 -- - - Ideally full cubetime should ~exactly process 4 ports. Currently ~8, but increasing seems to imply
 --     we should produce more power (maybe it is just fine)
+-- - - Maybe just check again? Maybe it's OK with 4 and fine with 2 + some buffer configuration?
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 2. Finish beacons: - juice recipe + icon? +one per machine (check spaceex etc)
 -- 3. Various (BASICALLY KNOWN)
 -- 3a. Phantom FX (sound design, aura graphics)
 -- 3b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
@@ -19,7 +19,8 @@ require("prototypes.scripts.autoplace")
 
 -- v0.3+
 -------------------
--- - Reorganise compatibility to make other mods easier (+mystery recipes into compat)
+-- - (HIGH PRIORITY) Reorganise compatibility to make other mods easier (+mystery recipes into compat)
+-- - Check whether we need emergency routines to clean up datastructures in case events don't fire properly
 -- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
 --   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
 -- - - Related to: revisit tendril expulsion (better recipe)?

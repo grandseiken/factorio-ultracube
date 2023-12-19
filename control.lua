@@ -5,6 +5,7 @@ do
   end
 end
 
+local activation = require("__Ultracube__/scripts/activation")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
@@ -41,13 +42,16 @@ end
 local function on_picker_dolly_moved(e)
   entity_cache.remove(e.moved_entity, nil, e.start_pos)
   cube_search.remove_entity(e.entity)
+  activation.remove_entity(e.entity)
   entity_cache.add(e.moved_entity)
 end
 
 local function on_load()
+  activation.on_load()
   entity_cache.on_load()
   cube_fx.on_load()
   cube_search.on_load()
+  linked_entities.on_load()
 
   if remote.interfaces["PickerDollies"] and remote.interfaces["PickerDollies"]["dolly_moved_entity_id"] then
     script.on_event(remote.call("PickerDollies", "dolly_moved_entity_id"), on_picker_dolly_moved)
@@ -70,9 +74,11 @@ local function on_init()
     remote.call("silo_script", "set_no_victory", true)
   end
 
+  activation.refresh()
   entity_cache.refresh()
   cube_fx.refresh()
   cube_search.refresh()
+  linked_entities.refresh()
   for _, force in pairs(game.forces) do
     tech_unlock.sync(force)
   end
@@ -151,6 +157,7 @@ script.on_event(
       return
     end
     tech_unlock.constructed(e.created_entity)
+    linked_entities.added(e.created_entity)
     entity_cache.add(e.created_entity)
     entity_combine.created(e.created_entity)
   end)
@@ -162,9 +169,11 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.loot)
+    linked_entities.removed(e.entity)
     entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
+    activation.remove_entity(e.entity)
   end)
 
 script.on_event(
@@ -177,6 +186,7 @@ script.on_event(
       return
     end
     tech_unlock.constructed(e.entity)
+    linked_entities.added(e.entity)
     entity_cache.add(e.entity)
     entity_combine.created(e.entity)
   end)
@@ -188,8 +198,10 @@ script.on_event(
       return
     end
     entity_combine.destroyed(e.entity)
+    linked_entities.removed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
+    activation.remove_entity(e.entity)
   end)
 
 script.on_event(
@@ -199,8 +211,11 @@ script.on_event(
       return
     end
     entity_combine.destroyed(e.entity)
+    linked_entities.removed(e.entity)
     entity_cache.remove(e.entity, e.old_surface_index, e.old_position)
     cube_search.remove_entity(e.entity)
+    activation.remove_entity(e.entity)
+    linked_entities.added(e.entity)
     entity_cache.add(e.entity)
     entity_combine.created(e.entity)
   end)
@@ -215,9 +230,11 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.buffer)
+    linked_entities.removed(e.entity)
     entity_combine.destroyed(e.entity)
     entity_cache.remove(e.entity)
     cube_search.remove_entity(e.entity)
+    activation.remove_entity(e.entity)
   end)
 
 script.on_event(

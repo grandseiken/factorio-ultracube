@@ -4,8 +4,29 @@ require("__Ultracube__/prototypes/entities/lib/module_effects")
 require("__Ultracube__/prototypes/entities/lib/pipe")
 
 local beacon_scale = 2
+local beacon_picture = {
+  filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon.png",
+  width = 90,
+  height = 90,
+  shift = util.by_pixel(0, -5),
+  scale = beacon_scale,
+  hr_version = {
+    filename = "__Krastorio2Assets__/entities/singularity-beacon/hr-singularity-beacon.png",
+    width = 360,
+    height = 360,
+    shift = util.by_pixel(0, -5),
+    scale = 0.25 * beacon_scale,
+  },
+}
 
 data:extend({
+  {
+    type = "virtual-signal",
+    name = "cube-beacon-overload",
+    icon = "__Krastorio2Assets__/icons/signals/attention_2.png",
+    icon_size = 64,
+    order = "x[special-signals]",
+  },
   {
     type = "beacon",
     name = "cube-beacon",
@@ -21,20 +42,7 @@ data:extend({
     selection_priority = 100,
     damaged_trigger_effect = hit_effects.entity(),
 
-    base_picture = {
-      filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon.png",
-      width = 90,
-      height = 90,
-      shift = util.by_pixel(0, -5),
-      scale = beacon_scale,
-      hr_version = {
-        filename = "__Krastorio2Assets__/entities/singularity-beacon/hr-singularity-beacon.png",
-        width = 360,
-        height = 360,
-        shift = util.by_pixel(0, -5),
-        scale = 0.25 * beacon_scale,
-      },
-    },
+    base_picture = beacon_picture,
     animation = {
       layers = {
         {
@@ -153,7 +161,7 @@ data:extend({
       burns_fluid = true,
       scale_fluid_usage = true,
       fluid_box = {
-        base_area = 2,
+        base_area = 1,
         base_level = 0,
         height = 1,
         filter = "cube-beacon-juice",
@@ -168,9 +176,9 @@ data:extend({
         },
       },
     },
-    picture = util.empty_sprite(),
+    animation = beacon_picture,
     crafting_categories = {"cube-uncraftable"},
-    crafting_speed = 1,
+    crafting_speed = 0.5,  -- Must match by_tick size.
     fixed_recipe = "cube-uncraftable-dummy-recipe",
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,

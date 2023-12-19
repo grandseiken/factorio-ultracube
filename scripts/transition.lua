@@ -1,6 +1,8 @@
+local activation = require("__Ultracube__/scripts/activation")
 local transition_table = require("__Ultracube__/scripts/transition_table")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
+local set_active = activation.set
 
 local function fast_replace(e, name, spill)
   entity_cache.remove(e)
@@ -108,7 +110,7 @@ function transition.tick(tick)
           end
         end
       end
-      e.active = active
+      set_active(e, "multi", active)
     end
     e_state.crafts = crafts
     e_state.recipe = recipe

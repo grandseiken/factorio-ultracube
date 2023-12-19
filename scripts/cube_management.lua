@@ -56,24 +56,26 @@ local cube_weight = {
 
 local cube_recipes_cache = nil
 function cube_management.recipes()
-  if not cube_recipes_cache then
-    cube_recipes_cache = {}
-    for name, recipe in pairs(game.recipe_prototypes) do
-      local data = {recipe = recipe, total_weight = 0, ingredients = {}}
-      local is_cube_recipe = false
-      for k, _ in pairs(cube_info) do
-        data.ingredients[k] = 0
+  if cube_recipes_cache then
+    return cube_recipes_cache
+  end
+
+  cube_recipes_cache = {}
+  for name, recipe in pairs(game.recipe_prototypes) do
+    local data = {recipe = recipe, total_weight = 0, ingredients = {}}
+    local is_cube_recipe = false
+    for k, _ in pairs(cube_info) do
+      data.ingredients[k] = 0
+    end
+    for _, ingredient in ipairs(recipe.ingredients) do
+      if cube_info[ingredient.name] then
+        is_cube_recipe = true
+        data.total_weight = data.total_weight + ingredient.amount * cube_weight[ingredient.name]
+        data.ingredients[ingredient.name] = ingredient.amount
       end
-      for _, ingredient in ipairs(recipe.ingredients) do
-        if cube_info[ingredient.name] then
-          is_cube_recipe = true
-          data.total_weight = data.total_weight + ingredient.amount * cube_weight[ingredient.name]
-          data.ingredients[ingredient.name] = ingredient.amount
-        end
-      end
-      if is_cube_recipe then
-        cube_recipes_cache[name] = data
-      end
+    end
+    if is_cube_recipe then
+      cube_recipes_cache[name] = data
     end
   end
   return cube_recipes_cache
@@ -81,13 +83,40 @@ end
 
 local cube_recipe_categories_cache = nil
 function cube_management.recipe_categories()
-  if not cube_recipe_categories_cache then
-    cube_recipe_categories_cache = {}
-    for _, data in pairs(cube_management.recipes()) do
-      cube_recipe_categories_cache[data.recipe.category] = true
-    end
+  if cube_recipe_categories_cache then
+    return cube_recipe_categories_cache
+  end
+
+  cube_recipe_categories_cache = {}
+  for _, data in pairs(cube_management.recipes()) do
+    cube_recipe_categories_cache[data.recipe.category] = true
   end
   return cube_recipe_categories_cache
+end
+
+local module_machine_types = {"furnace", "assembling-machine", "rocket-silo", "lab", "mining-drill"}
+local module_machines_cache = nil
+function cube_management.module_machines()
+  if module_machines_cache then
+    return module_machines_cache
+  end
+
+  module_machines_cache = {}
+  local prototypes = game.get_filtered_entity_prototypes {{
+    filter = "type",
+    type = module_machine_types,
+  }}
+  for name, prototype in pairs(prototypes) do
+    if prototype.module_inventory_size and prototype.module_inventory_size > 0 then
+      module_machines_cache[name] = true
+    elseif prototype.allowed_effects then
+      for _, _ in pairs(prototype.allowed_effects) do
+        module_machines_cache[name] = true
+        break
+      end
+    end
+  end
+  return module_machines_cache
 end
 
 function cube_management.player_data(player)

@@ -153,6 +153,8 @@ local function make_quantum_decoder(name)
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       apparent_volume = 1.5,
+      fade_in_ticks = 5,
+      fade_out_ticks = 5,
     },
   }
 end
