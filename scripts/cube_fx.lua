@@ -72,16 +72,16 @@ local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
     if result.entity then
-      if result.item == cube_dormant or result.item == cube_dormant_phantom then
-        dormant_explosion.source = result.entity
-        dormant_explosion.position = result.position
-        dormant_explosion.target = result.position
-        result.entity.surface.create_entity(dormant_explosion)
-      elseif result.item == cube_ultradense_phantom then
+      if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         phantom_explosion.source = result.entity
         phantom_explosion.position = result.position
         phantom_explosion.target = result.position
         result.entity.surface.create_entity(phantom_explosion)
+      elseif result.item == cube_dormant then
+        dormant_explosion.source = result.entity
+        dormant_explosion.position = result.position
+        dormant_explosion.target = result.position
+        result.entity.surface.create_entity(dormant_explosion)
       elseif result.item == cube_ultradense then
         if result.velocity then
         local position = result.position

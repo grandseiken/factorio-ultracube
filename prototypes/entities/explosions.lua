@@ -17,6 +17,32 @@ local empty_animation = {
   frame_count = 1,
 }
 
+local function blood_particle_pictures(tint, shift)
+  return {
+    sheet = {
+      filename = "__base__/graphics/particle/blood-particle/blood-particle.png",
+      line_length = 12,
+      width = 10,
+      height = 8,
+      frame_count = 12,
+      variation_count = 7,
+      tint = tint,
+      shift = util.add_shift(util.by_pixel(2,-1), shift),
+      hr_version = {
+        filename = "__base__/graphics/particle/blood-particle/hr-blood-particle.png",
+        line_length = 12,
+        width = 16,
+        height = 16,
+        frame_count = 12,
+        variation_count = 7,
+        tint = tint,
+        scale = 0.5,
+        shift = util.add_shift(util.by_pixel(1.5,-1), shift)
+      }
+    }
+  }
+end
+
 local function make_spark_explosion(name, height)
   return {
     type = "explosion",
@@ -30,7 +56,7 @@ local function make_spark_explosion(name, height)
     sound = {
       aggregation = {
         max_count = 1,
-        remove = true
+        remove = true,
       },
       audible_distance_modifier = 1,
       -- TODO: needs to be manually lowered in volume or distance falloff goes odd.
@@ -79,14 +105,15 @@ local function make_puff_explosion(name, height)
     animations = empty_animation,
     sound = {
       aggregation = {
-        max_count = 1,
-        remove = true
+        max_count = 16,
+        remove = true,
       },
       audible_distance_modifier = 0.75,
       variations = {
-        {filename = "__base__/sound/programmable-speaker/square-20.ogg", volume = 0.0375, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__base__/sound/programmable-speaker/square-25.ogg", volume = 0.0375, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__base__/sound/programmable-speaker/square-27.ogg", volume = 0.0375, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__base__/sound/programmable-speaker/celesta-08.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__base__/sound/programmable-speaker/celesta-13.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__base__/sound/programmable-speaker/celesta-15.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__base__/sound/programmable-speaker/celesta-20.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
       },
     },
     created_effect = {
@@ -187,69 +214,6 @@ data:extend({
 
   {
     type = "optimized-particle",
-    name = "cube-phantom-aura",
-    vertical_acceleration = 0,
-    life_time = 90,
-    fade_away_duration = 60,
-    render_layer = "higher-object-above",
-    pictures = {
-      filename = "__Ultracube__/assets/effects/phantom-aura.png",
-      priority = "high",
-      line_length = 8,
-      width = 128,
-      height = 128,
-      frame_count = 32,
-      animation_speed = 0.5,
-      variation_count = 1,
-      scale = 0.5,
-      shift = {0, -0.5},
-      tint = {1.0, 1.0, 1.0, 1.0},
-      blend_mode = "additive-soft",
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/phantom-aura.png",
-        priority = "high",
-        line_length = 8,
-        width = 128,
-        height = 128,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        scale = 0.5,
-        shift = {0, -0.5},
-        tint = {1.0, 1.0, 1.0, 1.0},
-        blend_mode = "additive-soft",
-      },
-    },
-    shadows = {
-      filename = "__Ultracube__/assets/effects/phantom-aura.png",
-      priority = "high",
-      line_length = 8,
-      width = 128,
-      height = 128,
-      frame_count = 32,
-      animation_speed = 0.5,
-      variation_count = 1,
-      scale = 0.5,
-      shift = {0, -0.5},
-      tint = {0, 0, 0, 0.5},
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/phantom-aura.png",
-        priority = "high",
-        line_length = 8,
-        width = 128,
-        height = 128,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        scale = 0.5,
-        shift = {0, -0.5},
-        tint = {0, 0, 0, 0.5},
-      },
-    },
-  },
-
-  {
-    type = "optimized-particle",
     name = "cube-spark-particle",
     life_time = 20,
     fade_away_duration = 8,
@@ -284,7 +248,7 @@ data:extend({
   {
     type = "explosion",
     name = "cube-periodic-dormant-explosion",
-    localised_name = {"entity-name.big-explosion"},
+    localised_name = {"entity-name.medium-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
@@ -303,7 +267,7 @@ data:extend({
                 sound = {
                   aggregation = {
                     max_count = 1,
-                    remove = true
+                    remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
@@ -321,7 +285,7 @@ data:extend({
                 sound = {
                   aggregation = {
                     max_count = 1,
-                    remove = true
+                    remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
@@ -460,7 +424,7 @@ data:extend({
                 sound = {
                   aggregation = {
                     max_count = 1,
-                    remove = true
+                    remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
@@ -506,46 +470,83 @@ data:extend({
   {
     type = "explosion",
     name = "cube-periodic-phantom-explosion",
+    localised_name = {"entity-name.medium-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    light = {intensity = 0.25, size = 8, color = {r=0.6, g=0.7, b=1.0}},
     subgroup = "explosions",
-    light = {intensity = 0.5, size = 8, color = {r=0.6, g=0.7, b=1.0}},
+    render_layer = "higher-object-above",
     animations = empty_animation,
-    sound = {
-      aggregation = {
-        max_count = 1,
-        remove = true
-      },
-      audible_distance_modifier = 0.75,
-      variations = {
-        {filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Krastorio2Assets__/sounds/others/zap-3.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
-      },
-    },
     created_effect = {
       type = "direct",
       action_delivery = {
         type = "instant",
-        source_effects = {
+        source_effects = add_cluster_offsets(
+          add_cluster_offsets(
+            {
+              {
+                type = "play-sound",
+                sound = {
+                  aggregation = {
+                    max_count = 16,
+                    remove = true,
+                  },
+                  audible_distance_modifier = 0.75,
+                  variations = {
+                    {filename = "__base__/sound/fight/pulse.ogg", volume = 1 / 7, min_speed = 0.875, max_speed = 1.125},
+                  },
+                },
+              },
+              {
+                type = "play-sound",
+                sound = {
+                  aggregation = {
+                    max_count = 16,
+                    remove = true,
+                  },
+                  audible_distance_modifier = 0.75,
+                  variations = {
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                  },
+                },
+              },
+            },
+            12, 0.125, 0,
+            {
+              type = "create-particle",
+              particle_name = "cube-phantom-splat",
+              repeat_count = 1,
+              initial_height = 0.125,
+              initial_vertical_speed = 1 / 12,
+              initial_vertical_speed_deviation = 1 / 16,
+              frame_speed = 1,
+              frame_speed_variation = 0.25,
+              tail_length = 12,
+              tail_width = 8,
+              speed_from_center = 1 / 128,
+              speed_from_center_deviation = 1 / 64,
+            }
+          ),
+          12, 0.125, 0.5,
           {
             type = "create-particle",
-            particle_name = "cube-phantom-aura",
+            particle_name = "cube-phantom-splat-lower-layer",
             repeat_count = 1,
-            repeat_count_deviation = 0,
-            initial_height = 0.025,
-            initial_vertical_speed = 0,
-            initial_vertical_speed_deviation = 0,
-            tail_width = 0,
-            tail_length = 0,
+            initial_height = 0.125,
+            initial_vertical_speed = 1 / 16,
+            initial_vertical_speed_deviation = 1 / 16,
             frame_speed = 1,
             frame_speed_variation = 0.25,
-            speed_from_center = 0.01,
-            speed_from_center_deviation = 0.01,
-            offset_deviation = {{0.01, 0.01}, {0.01, 0.01}},
-          },
-        },
+            tail_length = 12,
+            tail_width = 8,
+            speed_from_center = 1 / 128,
+            speed_from_center_deviation = 1 / 64,
+          }
+        ),
       },
     },
   },
@@ -560,7 +561,7 @@ data:extend({
     pictures = {
       filename = "__Ultracube__/assets/effects/cube-shockwave-1.png",
       priority = "high",
-      flags = { "smoke" },
+      flags = {"smoke"},
       line_length = 8,
       width = 66,
       height = 68,
@@ -574,7 +575,7 @@ data:extend({
       hr_version = {
         filename = "__Ultracube__/assets/effects/hr-cube-shockwave-1.png",
         priority = "high",
-        flags = { "smoke" },
+        flags = {"smoke"},
         line_length = 8,
         width = 132,
         height = 136,
@@ -590,7 +591,7 @@ data:extend({
     shadows = {
       filename = "__Ultracube__/assets/effects/cube-shockwave-1.png",
       priority = "high",
-      flags = { "smoke" },
+      flags = {"smoke"},
       line_length = 8,
       width = 66,
       height = 68,
@@ -603,7 +604,7 @@ data:extend({
       hr_version = {
         filename = "__Ultracube__/assets/effects/hr-cube-shockwave-1.png",
         priority = "high",
-        flags = { "smoke" },
+        flags = {"smoke"},
         line_length = 8,
         width = 132,
         height = 136,
@@ -626,7 +627,7 @@ data:extend({
     pictures = {
       filename = "__Ultracube__/assets/effects/cube-shockwave-2.png",
       priority = "high",
-      flags = { "smoke" },
+      flags = {"smoke"},
       line_length = 8,
       width = 56,
       height = 64,
@@ -640,7 +641,7 @@ data:extend({
       hr_version = {
         filename = "__Ultracube__/assets/effects/hr-cube-shockwave-2.png",
         priority = "high",
-        flags = { "smoke" },
+        flags = {"smoke"},
         line_length = 8,
         width = 110,
         height = 128,
@@ -656,7 +657,7 @@ data:extend({
     shadows = {
       filename = "__Ultracube__/assets/effects/cube-shockwave-2.png",
       priority = "high",
-      flags = { "smoke" },
+      flags = {"smoke"},
       line_length = 8,
       width = 56,
       height = 64,
@@ -669,7 +670,7 @@ data:extend({
       hr_version = {
         filename = "__Ultracube__/assets/effects/hr-cube-shockwave-2.png",
         priority = "high",
-        flags = { "smoke" },
+        flags = {"smoke"},
         line_length = 8,
         width = 110,
         height = 128,
@@ -681,6 +682,33 @@ data:extend({
         tint = {0, 0, 0, 0.5},
       },
     },
+  },
+
+  {
+    type = "optimized-particle",
+    name = "cube-phantom-splat",
+    life_time = 120,
+    fade_away_duration = 45,
+    pictures = blood_particle_pictures({0.6, 0.8, 0.7, 0.625}),
+    shadows = blood_particle_pictures({0, 0, 0}, util.by_pixel(1, 0)),
+    draw_shadow_when_on_ground = false,
+    ended_in_water_trigger_effect = data.raw["optimized-particle"]["blood-particle"].ended_in_water_trigger_effect,
+    movement_modifier_when_on_ground = 0,
+    render_layer = "higher-object-under",
+    render_layer_when_on_ground = "floor",
+  },
+  {
+    type = "optimized-particle",
+    name = "cube-phantom-splat-lower-layer",
+    life_time = 120,
+    fade_away_duration = 45,
+    pictures = blood_particle_pictures({0.6, 0.8, 0.7, 0.625}),
+    shadows = blood_particle_pictures({0, 0, 0}, util.by_pixel(1, 0)),
+    draw_shadow_when_on_ground = false,
+    ended_in_water_trigger_effect = data.raw["optimized-particle"]["blood-particle-lower-layer"].ended_in_water_trigger_effect,
+    movement_modifier_when_on_ground = 0,
+    render_layer = "lower-object-above-shadow",
+    render_layer_when_on_ground = "floor",
   },
 
   {

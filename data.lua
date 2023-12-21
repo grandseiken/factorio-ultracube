@@ -11,40 +11,29 @@ require("prototypes.scripts.autoplace")
 -- - - Maybe just check again? Maybe it's OK with 4 and fine with 2 + some buffer configuration?
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 3. Various (BASICALLY KNOWN)
--- 3a. Phantom FX (sound design, aura graphics)
--- 3b. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
--- 3c. Should refined concrete use mineral water?
--- 3d. always_show_made_in for all intermediates?
+-- 2. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- v0.3+
 -------------------
--- - (HIGH PRIORITY) Reorganise compatibility to make other mods easier (+mystery recipes into compat)
--- - Check whether we need emergency routines to clean up datastructures in case events don't fire properly
--- - Revert bulkframes to pre-antimatter values (~250MJ, 2.5MW in) and add a more
---   interesting late-game storage solution (... energy + tendrils -> haunted cells???)
--- - - Related to: revisit tendril expulsion (better recipe)?
--- - Constant-rate flexible thing (from deep ore science) + late-game raw material swapping of some kind (?)
--- - - Just use e.g. advanced chemical plant, electrolysis machine, condenser.
--- - - Krastorio 1 might have something interesting!
--- - - Cubetime can increase the rate?
--- - Or could involve an cube-compatible alternative fuel
--- - Icons in tooltips?
+-- - Reorganise compatibility to make other mods easier (+mystery into compat)
+-- - Need emergency routines to clean up datastructures in case events don't fire properly?
+-- - Bulkframes to more reasonable values (~250MJ, 2.5MW in pre-antimatter) and add a more interesting
+--   lategame storage solution (energy +/- tendrils -> haunted cells? and/or better expulsion recipe)
+-- - Constant-rate flexible thing (deep tech) with raw material swapping or similar
+-- - - Maybe use advanced chemical plant or electrolysis; cubetime can increase the rate?
+-- - - Cube-compatible alternative fuel?
+-- - Later tech to make quantum decode output something different on 1 match?
+-- - Add icons to tooltips
 -- - Is there a way to avoid antimatter ports showing up on power stats
 -- - - Apparently not other than converting to fixed-recipe fluid-powered assemblers and
 --     measuring manually, but that means no power bars (unless they can be modded back in?)
--- - Later tech to make quantum decode output something different with 1 match?
--- - Barreling recipes (+ mystery furnace)
--- - make cube sparks aligned per-machine
--- - make nuclear reactor a dummy so copy/paste undo works properly (and check it generally)
--- - - except then its description won't show up as a reactor...?
--- - - but it could be really a reactor modded to be inoperable somehow
--- - tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
--- - - advanced engine tech graphic + name (?)
--- - Check phantom handling isn't too unwieldy, potentially have an alternative smaller synthesizer?
--- - allow prod modules on some bulk recipes once 2.0 is out with stack size fix
+-- - Barreling recipes (+ mystery)
+-- - Cube sparks aligned per-machine
+-- - Nuclear reactor a dummy so undo works properly, make the base a disabled reactor
+-- - Tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
+-- - Pocket synthesizer for phantom recipes if too unwieldy
 -- - Uranium processing, could it use a sludge fluid or something
--- - Optional compatibility with alien biomes/worldgen mod (as a lib)
+-- - Alien biomes or worldgen integration
 
 -- v.later
 -------------------
@@ -63,6 +52,7 @@ require("prototypes.scripts.autoplace")
 -- Other resource/intermediate conversions, or more efficient recipes but that still require the originals somehow
 -- - Or high power cost?
 -- Local-only solar panels?
+-- Prod modules on bulk recipes once 2.0 is out with stack size fix
 
 require("menu_simulations.menu_simulations")
 
@@ -77,8 +67,6 @@ require("prototypes.items_modules")
 require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
-require("prototypes.mechanical_network.data")
-require("prototypes.mechanical_network.entities")
 require("prototypes.recipe_categories")
 require("prototypes.recipes_compatibility")
 require("prototypes.recipes_equipment")

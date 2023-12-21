@@ -266,7 +266,7 @@ data:extend({
       {"stone-brick", 6},
       {"cube-refined-rare-metals", 4},
       {"cube-calcium", 2},
-      {type = "fluid", name = "water", amount = 100},
+      {type = "fluid", name = "cube-mineral-water", amount = 20},
     },
     results = {{"refined-concrete", 10}},
     energy_required = 8,
