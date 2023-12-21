@@ -110,7 +110,7 @@ function entity_combine.destroyed(entity)
 
   for _, entry in ipairs(linked_entries) do
     if entry.valid then
-      entry.destroy { raise_destroy = true }
+      entry.destroy {raise_destroy = true}
     end
   end
   combine_table[entity.unit_number] = nil

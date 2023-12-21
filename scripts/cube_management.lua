@@ -163,7 +163,14 @@ end
 
 function cube_management.return_cube_fuel(entity, inventory)
   if cube_management.is_entity_burning_fuel(entity, cubes.ultradense) then
-    inventory.insert(cubes.dormant)
+    if inventory then
+      inventory.insert(cubes.dormant)
+    else
+      entity.surface.spill_item_stack(
+        entity.position, {name = cubes.dormant, count = 1}, nil, nil, false)
+      -- Should call cube_search.hint_entity on the result, really,
+      -- but rare (never?) and dependencies.
+    end
   end
 end
 

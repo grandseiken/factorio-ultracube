@@ -39,11 +39,27 @@ local function create_initial_cube(player)
   end
 end
 
+local function on_entity_removed(entity, old_surface, old_position)
+  entity_cache.remove(entity, old_surface, old_position)
+  entity_combine.destroyed(entity)
+  linked_entities.removed(entity)
+  cube_search.remove_entity(entity)
+  activation.remove_entity(entity)
+end
+
+local function on_entity_added(entity)
+  linked_entities.added(entity)
+  entity_cache.add(entity)
+  entity_combine.created(entity)
+end
+
+local function on_entity_move(entity, old_surface, old_position)
+  on_entity_removed(entity, old_surface, old_position)
+  on_entity_added(entity)
+end
+
 local function on_picker_dolly_moved(e)
-  entity_cache.remove(e.moved_entity, nil, e.start_pos)
-  cube_search.remove_entity(e.entity)
-  activation.remove_entity(e.entity)
-  entity_cache.add(e.moved_entity)
+  on_entity_move(e.moved_entity, nil, e.start_pos)
 end
 
 local function on_load()
@@ -157,9 +173,7 @@ script.on_event(
       return
     end
     tech_unlock.constructed(e.created_entity)
-    linked_entities.added(e.created_entity)
-    entity_cache.add(e.created_entity)
-    entity_combine.created(e.created_entity)
+    on_entity_added(e.created_entity)
   end)
 
 script.on_event(
@@ -169,11 +183,7 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.loot)
-    linked_entities.removed(e.entity)
-    entity_combine.destroyed(e.entity)
-    entity_cache.remove(e.entity)
-    cube_search.remove_entity(e.entity)
-    activation.remove_entity(e.entity)
+    on_entity_removed(e.entity)
   end)
 
 script.on_event(
@@ -186,9 +196,7 @@ script.on_event(
       return
     end
     tech_unlock.constructed(e.entity)
-    linked_entities.added(e.entity)
-    entity_cache.add(e.entity)
-    entity_combine.created(e.entity)
+    on_entity_added(e.entity)
   end)
 
 script.on_event(
@@ -197,11 +205,8 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    entity_combine.destroyed(e.entity)
-    linked_entities.removed(e.entity)
-    entity_cache.remove(e.entity)
-    cube_search.remove_entity(e.entity)
-    activation.remove_entity(e.entity)
+    cube_management.return_cube_fuel(e.entity, nil)
+    on_entity_removed(e.entity)
   end)
 
 script.on_event(
@@ -210,14 +215,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    entity_combine.destroyed(e.entity)
-    linked_entities.removed(e.entity)
-    entity_cache.remove(e.entity, e.old_surface_index, e.old_position)
-    cube_search.remove_entity(e.entity)
-    activation.remove_entity(e.entity)
-    linked_entities.added(e.entity)
-    entity_cache.add(e.entity)
-    entity_combine.created(e.entity)
+    on_entity_move(e.entity, e.old_surface_index, e.old_position)
   end)
 
 script.on_event(
@@ -230,11 +228,7 @@ script.on_event(
       return
     end
     cube_management.return_cube_fuel(e.entity, e.buffer)
-    linked_entities.removed(e.entity)
-    entity_combine.destroyed(e.entity)
-    entity_cache.remove(e.entity)
-    cube_search.remove_entity(e.entity)
-    activation.remove_entity(e.entity)
+    on_entity_removed(e.entity)
   end)
 
 script.on_event(
@@ -244,6 +238,8 @@ script.on_event(
   },
   function(e)
     entity_cache.refresh()
+    -- Should really clear a bunch of structures, but other surfaces can
+    -- be added only by other (incompatible) mods.
   end)
 
 script.on_event(
