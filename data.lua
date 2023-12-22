@@ -16,7 +16,7 @@ require("prototypes.scripts.autoplace")
 -- v0.3+
 -------------------
 -- - Reorganise compatibility to make other mods easier (+mystery into compat)
--- - Need emergency routines to clean up datastructures in case events don't fire properly?
+-- - Emergency routines to clean up datastructures in case events don't fire properly?
 -- - Bulkframes to more reasonable values (~250MJ, 2.5MW in pre-antimatter) and add a more interesting
 --   lategame storage solution (energy +/- tendrils -> haunted cells? and/or better expulsion recipe)
 -- - Constant-rate flexible thing (deep tech) with raw material swapping or similar

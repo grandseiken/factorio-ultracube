@@ -93,7 +93,7 @@ The following mods are known to have been adapted to work with Ultracube:
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
-| [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | very helpful for tweaking combinator layouts |
+| [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
