@@ -10,6 +10,14 @@ local empty_script = [[
   --
 ]]
 
+local cube_0 = {
+  checkboard = false,
+  save = "__Ultracube__/menu_simulations/cube_0.zip",
+  length = 60 * 105,
+  init = init_script,
+  update = empty_script,
+}
+
 local cube_a = {
   checkboard = false,
   save = "__Ultracube__/menu_simulations/cube_a.zip",
@@ -43,6 +51,7 @@ local cube_d = {
 }
 
 data.raw["utility-constants"]["default"].main_menu_simulations = {
+  cube_0 = cube_0,
   cube_a = cube_a,
   cube_b = cube_b,
   cube_c = cube_c,

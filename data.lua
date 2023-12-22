@@ -11,7 +11,6 @@ require("prototypes.scripts.autoplace")
 -- - - Maybe just check again? Maybe it's OK with 4 and fine with 2 + some buffer configuration?
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
--- 2. Menu sim 5: belts that spell cube, 1 cube goes then 64 phantoms, loop it back fast
 
 -- v0.3+
 -------------------

@@ -644,12 +644,31 @@ local function cube_search_graph(last_entities_size, last_entities)
   return false
 end
 
+local direction_map = {}
+direction_map[defines.direction.north] = {
+  x = 0,
+  y = -1,
+}
+direction_map[defines.direction.east] = {
+  x = 1,
+  y = 0,
+}
+direction_map[defines.direction.south] = {
+  x = 0,
+  y = 1,
+}
+direction_map[defines.direction.west] = {
+  x = -1,
+  y = 0,
+}
+
 local function fill_result(result)
   local entity = result.entity
   local entity_type = entity.type
 
   result.surface = entity.surface
   result.position = entity.position
+  result.positions = nil
   result.height = 0
   result.velocity = nil
   if entity_type == inserter_t then
@@ -665,34 +684,42 @@ local function fill_result(result)
       result.height = -1
     else
       local speed = entity.prototype.belt_speed
-      local theta = 2 * math.pi * (entity.orientation - 0.25)
+      local d = direction_map[entity.direction]
       result.velocity = {
-        x = speed * math.cos(theta),
-        y = speed * math.sin(theta),
+        x = speed * d.x,
+        y = speed * d.y,
       }
     end
     if not is_splitter then
-      local theta = 2 * math.pi * (entity.orientation - 0.25)
-      local vx = 0.25 * math.cos(theta)
-      local vy = 0.25 * math.sin(theta)
+      local d = direction_map[entity.direction]
+      local vx = 0.25 * d.x
+      local vy = 0.25 * d.y
       local item = result.item
       local position = result.position
-      local x = 0
-      local y = 0
-      local total = 0
+      local x = position.x
+      local y = position.y
+      local already_found = false
       for i = 1, entity.get_max_transport_line_index() do
         local count = entity.get_transport_line(i).get_item_count(item)
-        total = total + count
-        if i == 1 then
-          x = x + count * vy
-          y = y - count * vx
-        else
-          x = x - count * vy
-          y = y + count * vx
+        if count > 0 then
+          local px
+          local py
+          if i == 1 then
+            px = x + vy
+            py = y - vx
+          else
+            px = x - vy
+            py = y + vx
+          end
+          if already_found then
+            result.positions = {result.position, {x = px, y = py}}
+          else
+            already_found = true
+            result.position.x = px
+            result.position.y = py
+          end
         end
       end
-      position.x = position.x + x / total
-      position.y = position.y + y / total
     end
     return
   end

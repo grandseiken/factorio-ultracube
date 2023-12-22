@@ -245,7 +245,7 @@ data:extend({
     belt_animation_set = v4_transport_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.125,
-    animation_speed_coefficient = 30,
+    animation_speed_coefficient = 32,
     structure = {
       direction_in = {
         sheet = {
@@ -362,7 +362,7 @@ data:extend({
     belt_animation_set = v4_transport_belt_animation_set,
     fast_replaceable_group = "transport-belt",
     speed = 0.125,
-    animation_speed_coefficient = 30,
+    animation_speed_coefficient = 32,
     structure = {
       north = {
         filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-north.png",

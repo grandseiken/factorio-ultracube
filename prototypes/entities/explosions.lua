@@ -9,13 +9,16 @@ local function add_cluster_offsets(source, count, distance, angle_offset, t)
   return source
 end
 
-local empty_animation = {
-  filename = "__Krastorio2Assets__/entities/empty.png",
-  priority = "high",
-  width = 1,
-  height = 1,
-  frame_count = 1,
-}
+local function make_empty_animation(frame_count)
+  return {
+    filename = "__Krastorio2Assets__/entities/empty.png",
+    priority = "high",
+    width = 1,
+    height = 1,
+    frame_count = 1,
+    repeat_count = frame_count,
+  }
+end
 
 local function blood_particle_pictures(tint, shift)
   return {
@@ -52,18 +55,18 @@ local function make_spark_explosion(name, height)
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
     subgroup = "explosions",
     light = {intensity = 0.25, size = 4, color = {r=0.6, g=0.7, b=1.0}},
-    animations = empty_animation,
+    animations = make_empty_animation(),
     sound = {
+      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
       },
       audible_distance_modifier = 1,
-      -- TODO: needs to be manually lowered in volume or distance falloff goes odd.
       variations = {
-        {filename = "__Krastorio2Assets__/sounds/others/zap-1.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Krastorio2Assets__/sounds/others/zap-2.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Krastorio2Assets__/sounds/others/zap-3.ogg", volume = 0.015, min_speed = 0.875, max_speed = 1.125},
+        {filename = "__Ultracube__/assets/sounds/zap-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+        {filename = "__Ultracube__/assets/sounds/zap-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+        {filename = "__Ultracube__/assets/sounds/zap-3.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
       },
     },
     created_effect = {
@@ -101,19 +104,20 @@ local function make_puff_explosion(name, height)
     icon_size = 64,
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
     subgroup = "explosions",
-    light = {intensity = 0.25, size = 4, color = {r=0.6, g=0.7, b=1.0}},
-    animations = empty_animation,
+    light = {intensity = 0.25, size = 2, color = {r=0.6, g=0.7, b=1.0}},
+    animations = make_empty_animation(12),
     sound = {
+      preload = true,
       aggregation = {
         max_count = 16,
         remove = true,
       },
-      audible_distance_modifier = 0.75,
+      audible_distance_modifier = 1,
       variations = {
-        {filename = "__base__/sound/programmable-speaker/celesta-08.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__base__/sound/programmable-speaker/celesta-13.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__base__/sound/programmable-speaker/celesta-15.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__base__/sound/programmable-speaker/celesta-20.ogg", volume = 1 / 32, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-08.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-13.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-15.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-20.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
       },
     },
     created_effect = {
@@ -254,7 +258,7 @@ data:extend({
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
     subgroup = "explosions",
     render_layer = "higher-object-above",
-    animations = empty_animation,
+    animations = make_empty_animation(),
     created_effect = {
       type = "direct",
       action_delivery = {
@@ -265,6 +269,7 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
+                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
@@ -283,6 +288,7 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
+                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
@@ -422,6 +428,7 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
+                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
@@ -474,10 +481,10 @@ data:extend({
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
     flags = {"placeable-off-grid", "not-on-map", "hidden"},
-    light = {intensity = 0.25, size = 8, color = {r=0.6, g=0.7, b=1.0}},
+    light = {intensity = 0.5, size = 4, color = {r=0.6, g=0.7, b=1.0}},
     subgroup = "explosions",
     render_layer = "higher-object-above",
-    animations = empty_animation,
+    animations = make_empty_animation(32),
     created_effect = {
       type = "direct",
       action_delivery = {
@@ -488,6 +495,7 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
+                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
@@ -501,11 +509,12 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
+                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
                   },
-                  audible_distance_modifier = 0.75,
+                  audible_distance_modifier = 1,
                   variations = {
                     {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
                     {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
@@ -748,6 +757,7 @@ data:extend({
       },
     },
     sound = {
+      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
@@ -798,6 +808,7 @@ data:extend({
       },
     },
     sound = {
+      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
@@ -903,6 +914,7 @@ data:extend({
       },
     },
     sound = {
+      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
@@ -1011,6 +1023,7 @@ data:extend({
       },
     },
     sound = {
+      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,

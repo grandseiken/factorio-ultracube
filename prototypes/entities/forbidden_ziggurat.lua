@@ -1,20 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-local ziggurat_light = {
-  intensity = 0.75,
-  size = 20,
-  shift = {0, -0.5},
-  color = {r = 1, g = 0.2, b = 1},
-}
-
-local activated_ziggurat_light = {
-  intensity = 1.75,
-  size = 30,
-  shift = {0, -0.5},
-  color = {r = 1, g = 0.2, b = 1},
-}
-
 local ziggurat_animations = {
   {
     constant_speed = true,
@@ -144,6 +130,7 @@ local ziggurat_animations = {
 
 local ziggurat_working_sound = {
   sound = {
+    preload = true,
     variations = {
       {
         filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge.ogg",

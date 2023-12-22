@@ -73,10 +73,21 @@ local function cube_boom(size, results)
     local result = results[i]
     if result.entity then
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
-        phantom_explosion.source = result.entity
-        phantom_explosion.position = result.position
-        phantom_explosion.target = result.position
-        result.entity.surface.create_entity(phantom_explosion)
+        local positions = result.positions
+        if positions then
+          for j = 1, #positions do
+            local position = positions[j]
+            phantom_explosion.source = result.entity
+            phantom_explosion.position = position
+            phantom_explosion.target = position
+            result.entity.surface.create_entity(phantom_explosion)
+          end
+        else
+          phantom_explosion.source = result.entity
+          phantom_explosion.position = result.position
+          phantom_explosion.target = result.position
+          result.entity.surface.create_entity(phantom_explosion)
+        end
       elseif result.item == cube_dormant then
         dormant_explosion.source = result.entity
         dormant_explosion.position = result.position
@@ -119,10 +130,21 @@ local function cube_spark(size, results)
         result.entity.surface.create_entity(spark)
       elseif result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
-        puff.source = result.entity
-        puff.position = result.position
-        puff.target = result.position
-        result.entity.surface.create_entity(puff)
+        local positions = result.positions
+        if positions then
+          for j = 1, #positions do
+            local position = positions[j]
+            puff.source = result.entity
+            puff.position = position
+            puff.target = position
+            result.entity.surface.create_entity(puff)
+          end
+        else
+          puff.source = result.entity
+          puff.position = result.position
+          puff.target = result.position
+          result.entity.surface.create_entity(puff)
+        end
       end
     end
   end
