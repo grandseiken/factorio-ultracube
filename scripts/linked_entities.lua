@@ -4,7 +4,7 @@ local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 
 local linked_entities = {}
-local overload_sprites = {}
+local overload_sprites = nil
 local get_linked = entity_combine.get_linked
 local set_active = activation.set
 
