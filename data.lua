@@ -1,17 +1,5 @@
 require("prototypes.scripts.remove_unused")
 require("prototypes.scripts.autoplace")
-
--- RELEASE BLOCKERS (v0.2)
--------------------
--- 1. Finish gamma handling
--- - Current numbers seem good, but cube usage is too awkward - hard to buffer enough to avoid
---   it getting stuck - can we maintain overall cubetime while making it different somehow?
--- - - Ideally full cubetime should ~exactly process 4 ports. Currently ~8, but increasing seems to imply
---     we should produce more power (maybe it is just fine)
--- - - Maybe just check again? Maybe it's OK with 4 and fine with 2 + some buffer configuration?
--- - Could be in the blender (?) -> and could make/consume water/steam (?)
--- - Could provide some energy as steam instead
-
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")
