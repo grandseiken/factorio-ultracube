@@ -469,10 +469,13 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/gamma-waste-containment.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {type = "fluid", name = "cube-gamma-waste-stream", amount = 72000},
+      {type = "fluid", name = "cube-gamma-waste-stream", amount = 48000},
     },
-    results = {},
-    energy_required = 0.25,
+    results = {
+      {type = "fluid", name = "water", amount = 8000},
+      {type = "fluid", name = "steam", amount = 8000, temperature = 1000},
+    },
+    energy_required = 0.5,
     main_product = "",
     category = "cube-ultradense-furnace",
     subgroup = "cube-energy-fluids",
