@@ -12,47 +12,6 @@ require("prototypes.scripts.autoplace")
 -- - Could be in the blender (?) -> and could make/consume water/steam (?)
 -- - Could provide some energy as steam instead
 
--- v0.3+
--------------------
--- - Reorganise compatibility to make other mods easier (+mystery into compat)
--- - Emergency routines to clean up datastructures in case events don't fire properly?
--- - Bulkframes to more reasonable values (~250MJ, 2.5MW in pre-antimatter) and add a more interesting
---   lategame storage solution (energy +/- tendrils -> haunted cells? and/or better expulsion recipe)
--- - Constant-rate flexible thing (deep tech) with raw material swapping or similar
--- - - Maybe use advanced chemical plant or electrolysis; cubetime can increase the rate?
--- - - Cube-compatible alternative fuel?
--- - Later tech to make quantum decode output something different on 1 match?
--- - Add icons to tooltips
--- - Is there a way to avoid antimatter ports showing up on power stats
--- - - Apparently not other than converting to fixed-recipe fluid-powered assemblers and
---     measuring manually, but that means no power bars (unless they can be modded back in?)
--- - Barreling recipes (+ mystery)
--- - Cube sparks aligned per-machine
--- - Nuclear reactor a dummy so undo works properly, make the base a disabled reactor
--- - Tech graphics: resplendent plate, phantom handling, seance, concretes, roboport
--- - Pocket synthesizer for phantom recipes if too unwieldy
--- - Uranium processing, could it use a sludge fluid or something
--- - Alien biomes or worldgen integration
-
--- v.later
--------------------
--- analysis machine that unlocks techs based on finding things in the world?
--- - or a secret tech tree you find out in the world?
--- rework fuel refinery? (to not need cube directly, something else instead? or maybe it can use other cubes?)
--- World events? (ghost/forest/daylight)
--- - ghost effects spooky player
--- think about reintroducing biters + military? or biter farming?
--- storylore tooltips
--- something where cube splits in exactly 2 (joy + anguish?), which are used for different things, then recombined.
--- - maybe: 1 can be used as fuel, one can be used as something else?
--- - Or 1 fuel-only; 32 phantoms?
--- - Or random chance for different subcubes?
--- - Slow-start feedback loop from e.g. tiny chance of diamond while (e.g. deep) crushing
--- Other resource/intermediate conversions, or more efficient recipes but that still require the originals somehow
--- - Or high power cost?
--- Local-only solar panels?
--- Prod modules on bulk recipes once 2.0 is out with stack size fix
-
 require("menu_simulations.menu_simulations")
 
 require("prototypes.equipment")
