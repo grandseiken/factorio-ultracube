@@ -31,9 +31,11 @@ At any given level of technological progress, there will exist some theoretical 
 
 The technology tree has been carefully rebuilt from scratch to fit, and there are a few new tools to play with, too.
 
+[![Teaser trailer](teaser_trailer.jpg)](https://youtu.be/ySN1ezX_Ss0)
+
 ## You might like this mod if...
 
-* You particularly like the "optimization problem" aspect of Factorio, and enjoy solving automation and logistic puzzles, monitoring and iterating on complex setups which probably won't be perfect first try.
+* You like the "optimization problem" aspect of Factorio, enjoy solving automation and logistic puzzles, and monitoring and iterating on complex setups which probably won't be perfect first try.
 * You like the idea of a dynamic factory, with different sections that turn on at different times, and not every belt tends towards either completely empty or completely backed-up.
 * You want an excuse to experiment with Factorio's core mechanics in unusual ways.
 * You appreciate Rube Goldberg machines.
@@ -41,13 +43,13 @@ The technology tree has been carefully rebuilt from scratch to fit, and there ar
 ## You might not like this mod if...
 
 * You're looking for a "vanilla plus" experience.
-* You need compatibility with other large/overhaul mods.
+* You need compatibility with other large or overhaul mods.
 * You can't live without the ability to scale up production arbitrarily. (There are still benefits in going big, and ways to do so, but you can't always just stamp down more machines in the usual way.)
 * You're not willing to experiment at least a little bit with combinators and circuit conditions.
 
 ## Comparison to other overhaul mods
 
-In terms of raw volume of content, Ultracube probably lies somewhere between the base game and Krastorio 2. Playtime might vary, but the scope isn't excessive.
+In terms of raw volume of content, Ultracube aims for a comparable scope to the base game.
 
 As for difficulty, it's trickier to compare. Ultracube mostly avoids the long, complicated recipe chains with many intermediate products often found in overhaul mods. There are only a handful of raw resources, and many recipes are fairly simple. There's a bit more fluid and byproduct handling, but nothing masochistic.
 
