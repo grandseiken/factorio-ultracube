@@ -53,9 +53,9 @@ In terms of raw volume of content, Ultracube aims for a comparable scope to the 
 
 As for difficulty, it's trickier to compare. Ultracube mostly avoids the long, complicated recipe chains with many intermediate products often found in overhaul mods. There are only a handful of raw resources, and many recipes are fairly simple. There's a bit more fluid and byproduct handling, but nothing masochistic.
 
-Instead, additional complexity comes largely from logistics and macro-level interactions. While individual recipes might not seem complicated on the surface, it'll be difficult to make them all run efficiently together. Other processes might need a bit of careful planning or lateral thinking to get working at all, even if they only have a few steps.
+Instead, additional complexity comes largely from logistics and macro-level interactions. Even when recipes are simple, it'll be difficult to make them all run efficiently together. Other processes might need a bit of careful planning or lateral thinking to get working at all, even if they only have a few steps.
 
-Progression should be relatively clear, without too much hunting around in the tech tree for what's next, but at the same frequently presenting new and interesting challenges.
+Progression should be relatively clear, without too much hunting around in the tech tree for what's next, while frequently presenting new and interesting challenges.
 
 The overall feel is probably closer to something like Freight Forwarding (but maybe a bit more radical) than other overhauls.
 
@@ -66,7 +66,6 @@ The mod is more or less feature-complete, but should still be considered a beta 
 Planned improvements include:
 
 * More in-game help via the Informatron mod.
-* Reintroduction of beacons (in some form).
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
 * Compatibility with more optional mods (e.g. jetpack, signal transmission).
@@ -81,13 +80,13 @@ Quality-of-life mods without new technologies or recipes like [Far Reach](https:
 
 Mods that add new recipes or technologies must be specifically adapted to work with Ultracube. Technologies need to be changed to fit into the Ultracube tech tree with appropriate prerequisites, and be researched with Ultracube science cards. Recipes need to be changed to have Ultracube ingredients. Support can be added with either conditional logic in Ultracube code to check for the presence of the other mod and make the necessary adjustments, or the other way around.
 
-Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items at all times (necessary for various UX and technical reasons) in a UPS-friendly manner.
+Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items (necessary for UX and technical reasons) in a UPS-friendly manner.
 
 Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
 ## List of compatible mods
 
-The following mods are known to have been adapted to work with Ultracube:
+The following mods have been adapted to work with Ultracube:
 
 | Mod | Notes |
 | --- | ----- |
@@ -119,4 +118,4 @@ TODO: make it easy to for other mod authors to add compatibility for their mod a
 
 # Dependencies and credits
 
-This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additional graphics and sounds. It doesn't depend on the [Krastorio2 code](https://mods.factorio.com/mod/Krastorio2) itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.
+This mod depends on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for additional graphics and sounds. It doesn't depend on Krastorio 2 code itself, but contains modified versions of some of its prototype definitions. Both mods are licensed under the GNU GPLv3. I am extremely grateful to the Krastorio 2 authors, since this mod wouldn't have happened without their work.
