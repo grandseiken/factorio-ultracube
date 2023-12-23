@@ -13,7 +13,7 @@ local empty_script = [[
 local cube_0 = {
   checkboard = false,
   save = "__Ultracube__/menu_simulations/cube_0.zip",
-  length = 60 * 105,
+  length = 60 * 108,
   init = init_script,
   update = empty_script,
 }
