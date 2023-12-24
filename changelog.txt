@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.3
+Date: 24. 12. 2023
+  Bugfixes:
+    - Fixed a script error when the cube was inserted into a locomotive fuel inventory slot.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.2
 Date: 24. 12. 2023
   Bugfixes:

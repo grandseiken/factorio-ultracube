@@ -247,7 +247,7 @@ local function cube_check_entity(entity)
       if inventory and check_inventory(entity, inventory) then return true end
       inventory = entity.get_inventory(defines.inventory.spider_trash)
     end
-    if check_inventory(entity, inventory) then return true end
+    if inventory and check_inventory(entity, inventory) then return true end
   end
 
   if is_cube_crafter(entity) then
