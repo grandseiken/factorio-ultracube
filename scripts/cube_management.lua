@@ -194,7 +194,7 @@ function cube_management.drop_before_leaving(player_index)
   local keep_going = true
   while keep_going do
     keep_going = false
-    for _, item in pairs(cube_drop) do
+    for item, _ in pairs(cube_drop) do
       local removed = player.remove_item(item)
       if removed > 0 then
         player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)

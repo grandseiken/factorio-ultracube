@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 24. 12. 2023
+  Bugfixes:
+    - Fixed a script error when a player left the game in multiplayer.
+    - Fixed a startup error when Flow Control was installed but Pushbutton was not.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 23. 12. 2023
   Bugfixes:
