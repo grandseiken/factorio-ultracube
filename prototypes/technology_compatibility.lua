@@ -45,8 +45,6 @@ if mods["Flow Control"] then
       order = "x-0-1",
     },
   })
-  data.raw.item["pushbutton"].subgroup = "cube-combinator-extra"
-  data.raw.item["pushbutton"].order = "x"
 end
 
 if mods["pushbutton"] then
@@ -67,4 +65,6 @@ if mods["pushbutton"] then
       order = "x-0-2",
     },
   })
+  data.raw.item["pushbutton"].subgroup = "cube-combinator-extra"
+  data.raw.item["pushbutton"].order = "x"
 end
