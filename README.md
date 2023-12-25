@@ -6,6 +6,8 @@ An overhaul mod for Factorio featuring:
 * Six tiers of science and a new endgame goal.
 * Multiplayer compatibility.
 
+There is a [discord you can join here](https://discord.com/invite/8n2fUCgf).
+
 ## Contents
 
 * [Overview](#overview)
