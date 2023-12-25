@@ -1,1 +1,2 @@
-require("prototypes.updates_compatibility")
+require("prototypes.updates.character")
+require("prototypes.updates.compatibility")
