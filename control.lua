@@ -116,6 +116,9 @@ local function on_player_created(e)
     grid.put {name = "cube-battery-equipment"}
     grid.put {name = "cube-solar-panel-equipment"}
     grid.put {name = "cube-solar-panel-equipment"}
+    for _, grid_equipment in pairs(grid.equipment) do
+      grid_equipment.energy = grid_equipment.max_energy
+    end
   end
 end
 
