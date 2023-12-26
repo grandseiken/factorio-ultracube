@@ -4,7 +4,22 @@ data:extend({
     name = "cube-show-cube-alerts",
     setting_type = "runtime-per-user",
     default_value = true,
-  }
+    order = "0",
+  },
+  {
+    type = "string-setting",
+    name = "cube-cube-fx-frequency",
+    setting_type = "runtime-global",
+    default_value = "normal",
+    allowed_values = {
+      "normal",
+      "low",
+      "lower",
+      "verylow",
+      "off",
+    },
+    order = "1",
+  },
 })
 
 data.raw["string-setting"]["aai-loaders-mode"].hidden = true

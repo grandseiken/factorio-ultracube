@@ -50,7 +50,7 @@ local function cube_alert(size, results)
 
     if player.controller_type == defines.controllers.character and
        player.mod_settings["cube-show-cube-alerts"].value and
-       cube_management.player_data(player).total_weight == 0 then
+       cube_management.player_data(player).total_weight < 64 then
       for i = 1, size do
         local result = results[i]
         custom_alert.name = result.item
@@ -291,11 +291,29 @@ function cube_fx.tick(tick)
   if cube_vehicle_mod(size, results) then
     return
   end
-  if spark_tick then
-    cube_spark(size, results)
+
+  local frequency = settings.global["cube-cube-fx-frequency"].value
+  local cycle_length = 1
+  if frequency == "low" then
+    cycle_length = 2
+  elseif frequency == "lower" then
+    cycle_length = 4
+  elseif frequency == "verylow" then
+    cycle_length = 8
+  elseif frequency == "off" then
+    cycle_length = 0
   end
-  if boom_tick then
-    cube_boom(size, results)
+
+  if cycle_length == 1 or
+     (cycle_length > 0 and
+      (tick % (240 * cycle_length) == 0 or
+       tick % (240 * cycle_length) >= 240 * cycle_length - 120)) then
+    if spark_tick then
+      cube_spark(size, results)
+    end
+    if boom_tick then
+      cube_boom(size, results)
+    end
   end
 end
 
