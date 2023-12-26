@@ -4,7 +4,7 @@ if mods["aai-signal-transmission"] then
       type = "recipe",
       name = "cube-aai-signal-sender",
       ingredients = {
-        {"cube-spectral-processor", 20},
+        {"cube-spectral-processor", 10},
         {"battery", 20},
         {"cube-rare-metals", 10},
         {"cube-advanced-engine", 10},
@@ -35,7 +35,10 @@ if mods["aai-signal-transmission"] then
         {type = "unlock-recipe", recipe = "cube-aai-signal-sender"},
         {type = "unlock-recipe", recipe = "cube-aai-signal-receiver"},
       },
-      prerequisites = {"cube-phantom-electronics"},
+      prerequisites = {
+        "cube-battery",
+        "cube-spectral-processor",
+      },
       unit = tech_cost_unit("2", 180),
       order = "x-0-0",
     },
@@ -48,4 +51,5 @@ if mods["aai-signal-transmission"] then
   data.raw.item["aai-signal-sender"].order = "a-z-a"
   data.raw.item["aai-signal-receiver"].subgroup = "cube-combinator-extra"
   data.raw.item["aai-signal-receiver"].order = "a-z-b"
+  data.raw.roboport["aai-signal-sender"].energy_usage = "5MW"
 end
