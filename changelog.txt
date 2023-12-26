@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: ???
+  Minor Features:
+    - Characters now start the game with their equipment grid fully charged.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.4
 Date: 25. 12. 2023
   Minor Features:
