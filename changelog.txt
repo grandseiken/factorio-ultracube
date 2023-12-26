@@ -3,6 +3,7 @@ Version: 0.2.6
 Date: ???
   Minor Features:
     - Added optional compatibility with AAI Signal Transmission.
+    - Added optional compatibility with Inventory Sensor.
     - Added default preset for the Milestones mod.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.5

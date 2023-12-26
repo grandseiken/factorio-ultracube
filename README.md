@@ -95,6 +95,7 @@ The following mods have been adapted to work with Ultracube:
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
+| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies a few things, but not essential |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
