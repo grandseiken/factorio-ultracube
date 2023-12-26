@@ -2,6 +2,7 @@
 Version: 0.2.5
 Date: ???
   Minor Features:
+    - Added Russian localization thanks to Dizabeth.
     - Characters now start the game with their equipment grid fully charged.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.4
