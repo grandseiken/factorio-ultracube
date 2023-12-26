@@ -10,6 +10,7 @@ require("updates.recipes_mystery")
 
 require("updates.compatibility.aai_signal_transmission")
 require("updates.compatibility.flow_control")
+require("updates.compatibility.inventory_sensor")
 require("updates.compatibility.nixie_tubes")
 require("updates.compatibility.pushbutton")
 require("updates.compatibility.textplates")
