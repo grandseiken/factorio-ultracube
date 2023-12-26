@@ -15,6 +15,7 @@ local linked_entities = require("__Ultracube__/scripts/linked_entities")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local teleport = require("__Ultracube__/scripts/teleport")
 local transition = require("__Ultracube__/scripts/transition")
+require("__Ultracube__/scripts/milestones")
 
 local function create_initial_cube(player)
   local surface = player.surface
