@@ -39,9 +39,6 @@ if mods["nixie-tubes"] then
       category = "cube-fabricator-handcraft",
       enabled = false,
     },
-  })
-
-  data:extend({
     {
       type = "technology",
       name = "cathodes",

@@ -43,9 +43,6 @@ if mods["Flow Control"] then
       category = "cube-fabricator-handcraft",
       enabled = false,
     },
-  })
-
-  data:extend({
     {
       type = "technology",
       name = "flow_control_valves_tech",

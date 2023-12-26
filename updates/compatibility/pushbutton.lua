@@ -14,9 +14,6 @@ if mods["pushbutton"] then
       category = "cube-fabricator-handcraft",
       enabled = false,
     },
-  })
-
-  data:extend({
     {
       type = "technology",
       name = "pushbutton",

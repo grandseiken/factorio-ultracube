@@ -70,7 +70,7 @@ Planned improvements include:
 * More in-game help via the Informatron mod.
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
-* Compatibility with more optional mods (e.g. jetpack, signal transmission).
+* Compatibility with more optional mods (e.g. jetpack).
 
 # Compatibility
 
@@ -93,6 +93,7 @@ The following mods have been adapted to work with Ultracube:
 | Mod | Notes |
 | --- | ----- |
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
+| [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
