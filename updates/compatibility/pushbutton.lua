@@ -6,8 +6,8 @@ if mods["pushbutton"] then
       ingredients =
       {
         {"constant-combinator", 1},
-        {"electronic-circuit", 1},
-        {"advanced-circuit", 1},
+        {"cube-electronic-circuit", 1},
+        {"cube-advanced-circuit", 1},
       },
       results = {{"pushbutton", 1}},
       energy_required = 1,
