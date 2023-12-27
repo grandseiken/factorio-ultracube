@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.7
-Date: ???
+Date: 27. 12. 2023
   Minor Features:
     - The flare stack can now void steam.
     - Added compatibility with Wire Shortcuts.
+    - Added compatibility with Project Cybersyn.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.6
 Date: 27. 12. 2023
