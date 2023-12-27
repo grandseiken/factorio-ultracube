@@ -100,6 +100,7 @@ The following mods have been adapted to work with Ultracube:
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
+| [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 
