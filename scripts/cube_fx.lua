@@ -315,7 +315,8 @@ remote.add_interface("Ultracube", {
     local stats = { by_force = { ["player"] = { } } }
     local force_stats = stats.by_force.player
     force_stats["ultracube"] = { order = "a", stats = {
-      ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance"}
+      ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance"},
+      ["matter-created"] =          {value = game.forces["player"].item_production_statistics.get_input_count("cube-basic-matter-unit")},
     }}
     force_stats["miscellaneous"] = {stats = { ["total-enemy-kills"] = { ignore = true} } }
     return stats
