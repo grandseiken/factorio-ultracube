@@ -99,6 +99,7 @@ The following mods have been adapted to work with Ultracube:
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
+| [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
