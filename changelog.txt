@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.6
-Date: ???
+Date: 27. 12. 2023
   Minor Features:
     - Added optional compatibility with AAI Signal Transmission.
     - Added optional compatibility with Inventory Sensor.
