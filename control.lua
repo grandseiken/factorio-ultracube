@@ -86,8 +86,11 @@ local function on_init()
     })
     remote.call("freeplay", "set_respawn_items", {})
   end
-  if remote.interfaces.silo_script then
-    remote.call("silo_script", "set_no_victory", true)
+
+  for interface, functions in pairs(remote.interfaces) do
+    if functions["set_no_victory"] then
+      remote.call(interface, "set_no_victory", true)
+    end
   end
 
   activation.refresh()
