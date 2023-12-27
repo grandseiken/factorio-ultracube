@@ -132,11 +132,13 @@ function cube_management.player_data(player)
       if recipe then
         data.total_weight = math.max(data.total_weight, recipe.total_weight)
         for k, count in pairs(recipe.ingredients) do
-          data.ingredients[k] = math.max(data.ingredients[k], count)
+          data.ingredients[k] = data.ingredients[k] + craft.count * count
         end
       end
     end
   end
+  data.ingredients[cubes.ultradense] = math.min(data.ingredients[cubes.ultradense], 1)
+  data.ingredients[cubes.dormant] = math.min(data.ingredients[cubes.dormant], 1)
   for _, item in pairs(cubes) do
     local count = player.get_item_count(item)
     local trash = player.get_inventory(defines.inventory.character_trash)
@@ -161,15 +163,21 @@ function cube_management.is_entity_burning_fuel(entity, fuel_item)
          entity.burner.currently_burning.name == fuel_item
 end
 
+local fuel_map = {
+  [cubes.ultradense] = cubes.dormant,
+  [cubes.ultradense_phantom] = cubes.dormant_phantom,
+}
 function cube_management.return_cube_fuel(entity, inventory)
-  if cube_management.is_entity_burning_fuel(entity, cubes.ultradense) then
-    if inventory then
-      inventory.insert(cubes.dormant)
-    else
-      entity.surface.spill_item_stack(
-        entity.position, {name = cubes.dormant, count = 1}, nil, nil, false)
-      -- Should call cube_search.hint_entity on the result, really,
-      -- but rare (never?) and dependencies.
+  for base, dormant in pairs(fuel_map) do
+    if cube_management.is_entity_burning_fuel(entity, base) then
+      if inventory then
+        inventory.insert(dormant)
+      else
+        entity.surface.spill_item_stack(
+          entity.position, {name = dormant, count = 1}, nil, nil, false)
+        -- Should call cube_search.hint_entity on the result, really,
+        -- but rare (never?) and dependencies.
+      end
     end
   end
 end

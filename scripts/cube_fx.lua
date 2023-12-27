@@ -121,7 +121,7 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.height >= 0 and result.entity then
+    if result.entity and result.height >= 0 then
       if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity

@@ -6,6 +6,9 @@ Date: ???
     - Added optional compatibility with Inventory Sensor.
   Bugfixes:
     - Fixed recipe for pushbutton mod.
+    - Fixed several script tracking issues involving phantom cubes.
+    - Fixed that deconstructing a boiler burning a phantom cube would not return it.
+    - Other minor script fixes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.5
 Date: 26. 12. 2023
