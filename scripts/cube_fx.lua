@@ -311,15 +311,28 @@ end
 
 remote.add_interface("Ultracube", {
   ["better-victory-screen-statistics"] = function()
+    local force = game.forces["player"] -- Winning force
     local victory_stats = global.victory_statistics
-    local stats = { by_force = { ["player"] = { } } }
-    local force_stats = stats.by_force.player
+    local stats = { by_force = { [force.name] = { } } }
+    local force_stats = stats.by_force[force.name]
+
+    local cube_uses = 0
+    for _, cube_type in pairs(cube_management.cubes) do
+      -- Count the consumed production value because produced values are not accurate
+      -- because of the catalyst keyword 
+      cube_uses = cube_uses + force.item_production_statistics.get_input_count(cube_type)
+    end
+
     force_stats["ultracube"] = { order = "a", stats = {
-      ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance"},
-      ["matter-created"]          = {value = game.forces["player"].item_production_statistics.get_input_count("cube-basic-matter-unit")},
+      ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance",                   order="a"},
+      ["cube-uses"]               = {value = cube_uses,                                                                   order="b"},
+      ["matter-created"]          = {value = force.item_production_statistics.get_input_count("cube-basic-matter-unit"),  order="c"},
     }}
+
+    -- Ignore some military orientated stats
     force_stats["miscellaneous"]  = {stats = { ["total-enemy-kills"]  = { ignore = true} } }
     force_stats["player"]         = {stats = { ["kills"]              = { ignore = true} } }
+
     return stats
   end
 })
