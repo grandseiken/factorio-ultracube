@@ -316,22 +316,34 @@ remote.add_interface("Ultracube", {
     local stats = { by_force = { [force.name] = { } } }
     local force_stats = stats.by_force[force.name]
 
+    -- Calculate some interesting values to show
     local cube_uses = 0
+    local cube_permutations = 0
     for _, cube_type in pairs(cube_management.cubes) do
       -- Count the consumed production value because produced values are not accurate
       -- because of the catalyst keyword 
-      cube_uses = cube_uses + force.item_production_statistics.get_input_count(cube_type)
+      local times_consumed = force.item_production_statistics.get_input_count(cube_type)
+
+      cube_uses = cube_uses + times_consumed
+
+      if cube_type ~= cube_management.cubes.ultradense then
+        -- To count the amount of times the cube changed state we assumed that it always
+        -- has to change back to the ultradense cube before it can change state to something else.
+        cube_permutations = cube_permutations + times_consumed
+      end
     end
 
+    -- Create the new category for the victory gui
     force_stats["ultracube"] = { order = "a", stats = {
       ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance",                   order="a"},
-      ["cube-uses"]               = {value = cube_uses,                                                                   order="b"},
-      ["matter-created"]          = {value = force.item_production_statistics.get_input_count("cube-basic-matter-unit"),  order="c"},
+      ["cube-permutations"]       = {value = cube_permutations,                                                           order="b"},
+      ["cube-uses"]               = {value = cube_uses,                                                                   order="c"},
+      ["matter-created"]          = {value = force.item_production_statistics.get_input_count("cube-basic-matter-unit"),  order="d"},
     }}
 
-    -- Ignore some military orientated stats
-    force_stats["miscellaneous"]  = {stats = { ["total-enemy-kills"]  = { ignore = true} } }
-    force_stats["player"]         = {stats = { ["kills"]              = { ignore = true} } }
+    -- Add ignore-flag some military orientated stats that this mod doesn't care about
+    force_stats["miscellaneous"]  = {stats = { ["total-enemy-kills"]  = { ignore = true } } }
+    force_stats["player"]         = {stats = { ["kills"]              = { ignore = true } } }
 
     return stats
   end
