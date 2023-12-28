@@ -88,6 +88,7 @@ local whitelist = make_set({
   "personal-roboport-mk2-equipment",
   "fusion-reactor-equipment",
   -- Compatibility.
+  -- TODO: this is not a good system, make it possible for mods to specify.
   "nixie-tube",
   "nixie-tube-alpha",
   "nixie-tube-small",
@@ -95,6 +96,24 @@ local whitelist = make_set({
   "overflow-valve",
   "underflow-valve",
   "pushbutton",
+  "item-sensor",
+  "cybersyn-combinator",
+  "aai-signal-sender",
+  "aai-signal-receiver",
+  "textplate-small-plastic",
+  "textplate-large-plastic",
+  "textplate-small-stone",
+  "textplate-large-stone",
+  "textplate-small-steel",
+  "textplate-large-steel",
+  "textplate-small-concrete",
+  "textplate-large-concrete",
+  "textplate-small-glass",
+  "textplate-large-glass",
+  "textplate-small-gold",
+  "textplate-large-gold",
+  "textplate-small-uranium",
+  "textplate-large-uranium",
 })
 
 local entity_prototypes = {
