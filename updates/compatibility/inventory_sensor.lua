@@ -12,4 +12,6 @@ if mods["Inventory Sensor"] then
     "cube-combinatorics",
     "cube-fundamental-comprehension-card",
   }
+
+  add_mystery_recipe(1, "item-sensor", "cube-electronic-circuit")
 end
