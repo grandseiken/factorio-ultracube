@@ -6,8 +6,6 @@ local milestones = {
   {type="item",  name="cube-deep-introspection-card",        quantity=1},
   {type="item",  name="cube-synthetic-premonition-card",     quantity=1},
   {type="item",  name="cube-complete-annihilation-card",     quantity=1},
-
-  {type="group", name="Science at scale"},
   {type="item",  name="cube-basic-contemplation-unit",       quantity=1000, next="x10"},
   {type="item",  name="cube-fundamental-comprehension-card", quantity=1000, next="x10"},
   {type="item",  name="cube-abstract-interrogation-card",    quantity=1000, next="x10"},
@@ -28,6 +26,12 @@ local milestones = {
   {type="item",  name="cube-basic-motor-unit",   quantity=1},
   {type="item",  name="cube-advanced-engine",    quantity=1},
   {type="item",  name="cube-arcane-drive",       quantity=1, hidden = true},
+  {type="item",  name="cube-electronic-circuit", quantity=1000, next="x10"},
+  {type="item",  name="cube-advanced-circuit",   quantity=1000, next="x10"},
+  {type="item",  name="cube-spectral-processor", quantity=1000, next="x10", hidden = true},
+  {type="item",  name="cube-basic-motor-unit",   quantity=1000, next="x10"},
+  {type="item",  name="cube-advanced-engine",    quantity=1000, next="x10"},
+  {type="item",  name="cube-arcane-drive",       quantity=1000, next="x10", hidden = true},
 
   {type="group", name="Materials"},
   {type="item",  name="cube-basic-matter-unit",  quantity=1},
@@ -35,6 +39,11 @@ local milestones = {
   {type="fluid", name="cube-gelatinous-tar",     quantity=1},
   {type="item",  name="cube-spectralite",        quantity=1, hidden = true},
   {type="item",  name="cube-resplendent-plate",  quantity=1, hidden = true},
+  {type="item",  name="cube-basic-matter-unit",  quantity=10000, next="x10"},
+  {type="item",  name="cube-rare-metals",        quantity=10000, next="x10"},
+  {type="fluid", name="cube-gelatinous-tar",     quantity=10000, next="x10"},
+  {type="item",  name="cube-spectralite",        quantity=10000, next="x10", hidden = true},
+  {type="item",  name="cube-resplendent-plate",  quantity=10000, next="x10", hidden = true},
 
   {type="group", name="Logistics"},
   {type="item",  name="stack-inserter",               quantity=1},
