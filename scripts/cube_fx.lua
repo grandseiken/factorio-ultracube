@@ -232,8 +232,8 @@ local function cube_vehicle_mod(size, results)
     end
   end
   for unit_number, locomotive in pairs(cube_fx_data.last_locomotives) do
-    if not new_locomotives[unit_number] and locomotive.burner and
-       locomotive.burner.currently_burning then
+    if not new_locomotives[unit_number] and locomotive.valid and
+       locomotive.burner and locomotive.burner.currently_burning then
       local ultralocomotion_fuel = locomotive.burner.currently_burning.name
       local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
       if normal_fuel then
