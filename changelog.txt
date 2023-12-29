@@ -1,3 +1,7 @@
+Version: 0.2.8
+Date: ???
+  Minor Features:
+    - Added default preset for the Milestones mod.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.7
 Date: 27. 12. 2023
