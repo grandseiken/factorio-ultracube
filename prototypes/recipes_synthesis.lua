@@ -5,7 +5,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/utility-cube-manual-reboot.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-utility-cube", amount = 1},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -27,7 +27,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-cube-manual-discharge.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
@@ -50,7 +50,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-cube-manual-reassembly.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-phantom-constituent", amount = 64, catalyst_amount = 64},
+      {name = "cube-dormant-phantom-constituent", amount = 64},
     },
     results = {
       {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
@@ -72,7 +72,7 @@ data:extend({
     name = "cube-phantom-ultradense-constituent",
     icon = "__Ultracube__/assets/icons/recipe/phantom-ultradense-constituent.png",
     icon_size = 128, icon_mipmaps = 5,
-    ingredients = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
+    ingredients = {{name = "cube-ultradense-utility-cube", amount = 1}},
     results = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
     main_product = "",
     energy_required = 4,
@@ -88,7 +88,7 @@ data:extend({
     name = "cube-ultradense-utility-cube-phantom",
     icon = "__Ultracube__/assets/icons/recipe/ultradense-utility-cube-phantom.png",
     icon_size = 128, icon_mipmaps = 5,
-    ingredients = {{name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
+    ingredients = {{name = "cube-phantom-ultradense-constituent", amount = 64}},
     results = {{name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
     main_product = "",
     energy_required = 4,
@@ -105,7 +105,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/utility-cube-recharge.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-utility-cube", amount = 1},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -128,7 +128,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-constituent-recharge.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-phantom-constituent", amount = 1},
     },
     results = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
@@ -151,7 +151,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-constituent-recharge-euphoria.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-phantom-constituent", amount = 1},
       {"cube-bottled-euphoria", 1},
     },
     results = {
@@ -183,7 +183,7 @@ data:extend({
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -203,7 +203,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/basic-matter-unit-replication.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
       {type = "fluid", name = "steam", amount = 2000},
     },
@@ -225,7 +225,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/basic-matter-unit-phantom.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 40},
     },
     results = {
@@ -248,7 +248,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/automation-core.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {"cube-rare-metals", 50},
     },
     results = {
@@ -270,7 +270,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/n-dimensional-widget-replication.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {"cube-rare-metals", 200},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 200},
       {type = "fluid", name = "steam", amount = 1000},
@@ -294,7 +294,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-components.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 50},
       {type = "fluid", name = "steam", amount = 100},
       {"cube-rare-metals", 50},
@@ -344,7 +344,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/fluids/matter.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-utility-cube", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
     },
     results = {
@@ -364,9 +364,9 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/cerebral-substrate-phantom.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-phantom-constituent", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 40},
-      {type = "item", name = "cube-bottled-euphoria", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
@@ -386,7 +386,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/emotional-decomposition.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 25000},
       {type = "fluid", name = "cube-ethanol", amount = 2000},
     },
@@ -411,7 +411,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
     },
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
@@ -435,8 +435,8 @@ data:extend({
     icon = "__Ultracube__/assets/icons/ectoplasm.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-bottled-anguish", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
+      {type = "item", name = "cube-bottled-anguish", amount = 1},
       {type = "item", name = "cube-ghost-crystal", amount = 1},
       {type = "fluid", name = "cube-unstable-gas", amount = 50},
     },
@@ -463,7 +463,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/equipments/vehicle/advanced-additional-engine.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {name = "cube-phantom-ultradense-constituent", amount = 1},
       {"cube-advanced-engine", 1},
       {"cube-resplendent-plate", 1},
       {"cube-spectral-processor", 1},
@@ -488,12 +488,12 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/residual-tendrils.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {name = "cube-residual-tendrils", amount = 20000},
     },
     results = {
       {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
-      {name = "cube-residual-tendrils", amount_min = 4800, amount_max = 6400, catalyst_amount = 10000},
+      {name = "cube-residual-tendrils", amount_min = 4800, amount_max = 6400, catalyst_amount = 6400},
     },
     main_product = "",
     energy_required = 2,
@@ -510,7 +510,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/conduits.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-ectoplasm", amount = 400},
       {type = "fluid", name = "cube-deep-solution", amount = 600},
     },
@@ -533,7 +533,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/conduit-conversion-a.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {name = "cube-deep-crystal", amount = 4},
       {name = "cube-fermion-conduit", amount = 50},
     },
@@ -556,7 +556,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/conduit-conversion-b.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {name = "cube-boson-conduit", amount = 50},
       {name = "uranium-235", amount = 1},
     },
@@ -578,7 +578,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/cards/singularity-research-data.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {"cube-boson-conduit", 16},
       {"cube-fermion-conduit", 10},
     },
@@ -600,7 +600,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/singularity-research-data-enhanced.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-dormant-utility-cube", amount = 1},
       {"cube-boson-conduit", 160},
       {"cube-fermion-conduit", 100},
       {"uranium-238", 10},
@@ -624,7 +624,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/resonance-cascade.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
