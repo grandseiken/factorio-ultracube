@@ -2,6 +2,7 @@ Version: 0.2.9
 Date: 29. 12. 2023
   Minor Features:
     - Added Japanese localization thanks to YAMATO_Hajime.
+    - Added Japanese localization thanks to aotix / sdQwo.
   Changes:
     - Increased boiler fluidbox capacity to 300 from 200.
 ---------------------------------------------------------------------------------------------------
