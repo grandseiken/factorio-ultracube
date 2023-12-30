@@ -1,3 +1,8 @@
+Version: 0.2.9
+Date: 29. 12. 2023
+  Minor Features:
+    - Added Japanese localization thanks to YAMATO_Hajime.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.8
 Date: 29. 12. 2023
   Minor Features:
