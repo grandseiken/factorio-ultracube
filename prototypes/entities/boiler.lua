@@ -21,7 +21,7 @@ data:extend({
     target_temperature = 215,
     fluid_box = {
       base_area = 1,
-      height = 2,
+      height = 3,
       base_level = -1,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {{type = "input", position = {0, -1.5}}},
