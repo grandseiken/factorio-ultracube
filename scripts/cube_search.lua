@@ -591,7 +591,7 @@ local function cube_search_graph(last_entities_size, last_entities)
       else
         t = e.drop_target
       end
-      if t and not target_queued[t.unit_number] and t.type ~= ghost_t then
+      if t and t.valid and not target_queued[t.unit_number] and t.type ~= ghost_t then
         target_queue_end = target_queue_end + 1
         if target_queue_end > search_target_queue_capacity then
           search_target_queue_capacity = target_queue_end

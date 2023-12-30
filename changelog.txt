@@ -7,6 +7,7 @@ Date: 30. 12. 2023
     - Increased boiler fluidbox capacity to 300 from 200.
   Bugfixes:
     - Ultracube handcrafting categories will no longer be added to alternative character prototypes with no inventory (e.g. YARM remote viewer).
+    - Guarded against script issue if an inserter holding the cube had an invalid drop target.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.8
 Date: 29. 12. 2023
