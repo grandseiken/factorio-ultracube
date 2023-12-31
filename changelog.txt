@@ -1,3 +1,20 @@
+Version: 0.2.9
+Date: 30. 12. 2023
+  Minor Features:
+    - Added Japanese localization thanks to YAMATO_Hajime.
+    - Added Chinese localization thanks to aotix / sdQwo.
+  Changes:
+    - Increased boiler fluidbox capacity to 300 from 200.
+  Bugfixes:
+    - Ultracube handcrafting categories will no longer be added to alternative character prototypes with no inventory (e.g. YARM remote viewer).
+    - Guarded against script issue if an inserter holding the cube had an invalid drop target.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+Date: 29. 12. 2023
+  Minor Features:
+    - Added default preset for the Milestones mod.
+  Bugfixes:
+    - Fixed a script error that could occur when mining a locomotive under the effect of ultralocomotion.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.8
 Date: ??. 12. 2023

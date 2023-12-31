@@ -1,9 +1,11 @@
 for _, character in pairs(data.raw.character) do
-  character.crafting_categories = {
-    "crafting",
-    "cube-synthesizer-handcraft",
-    "cube-fabricator-handcraft",
-  }
+  if character.inventory_size and character.inventory_size > 0 then
+    character.crafting_categories = {
+      "crafting",
+      "cube-synthesizer-handcraft",
+      "cube-fabricator-handcraft",
+    }
+  end
 
   for _, animation in ipairs(character.animations) do
     if animation.armors then
