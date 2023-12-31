@@ -1,6 +1,6 @@
 {
   "name": "Ultracube",
-  "version": "0.2.9",
+  "version": "0.2.10",
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
@@ -19,7 +19,8 @@
     "?pushbutton",
     "?textplates",
     "?aai-signal-transmission",
-    "!Krastorio2"
+    "!Krastorio2",
+    "?better-victory-screen >= 0.2.0"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod."
 }
