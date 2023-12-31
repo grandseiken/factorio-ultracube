@@ -1,3 +1,8 @@
+Version: 0.2.10
+Date: ??
+  Minor Features:
+    - Added optional compatibility with Better Victory Screen.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.9
 Date: 30. 12. 2023
   Minor Features:
@@ -15,11 +20,6 @@ Date: 29. 12. 2023
     - Added default preset for the Milestones mod.
   Bugfixes:
     - Fixed a script error that could occur when mining a locomotive under the effect of ultralocomotion.
----------------------------------------------------------------------------------------------------
-Version: 0.2.8
-Date: ??. 12. 2023
-  Minor Features:
-    - Added optional compatibility with Better Victory Screen.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.7
 Date: 27. 12. 2023

@@ -270,3 +270,42 @@ script.on_event(defines.events.on_tick,
     transition.tick(e.tick)
     linked_entities.tick(e.tick)
   end)
+
+-- Better victory screen support.
+local function better_victory_screen_statistics()
+  local force = game.forces["player"]
+  local stats = {}
+  local victory_statistics = global.victory_statistics
+
+  local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
+  local production = force.item_production_statistics
+  local cubes_consumed = production.get_input_count("cube-ultradense-utility-cube")
+  local cubes_consumed_dormant = production.get_input_count("cube-dormant-utility-cube")
+  local cubes_consumed_phantom = production.get_input_count("cube-phantom-ultradense-constituent")
+  local cubes_consumed_phantom_dormant = production.get_input_count("cube-dormant-phantom-constituent")
+  local cubes_reconstructed = production.get_input_count("cube-legendary-iron-gear")
+  local cubes_consumed_total = cubes_consumed + cubes_consumed_dormant +
+      cubes_consumed_phantom + cubes_consumed_phantom_dormant
+  local matter_created = production.get_output_count("cube-basic-matter-unit")
+
+  stats["ultracube"] = {order = "a", stats = {
+    ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
+    ["cubes-consumed"]                 = {order = "b", value = cubes_consumed},
+    ["cubes-consumed-dormant"]         = {order = "c", value = cubes_consumed_dormant},
+    ["cubes-consumed-phantom"]         = {order = "d", value = cubes_consumed_phantom},
+    ["cubes-consumed-phantom-dormant"] = {order = "e", value = cubes_consumed_phantom_dormant},
+    ["cubes-reconstructed"]            = {order = "f", value = cubes_reconstructed},
+    ["cubes-consumed-total"]           = {order = "g", value = cubes_consumed_total},
+    ["matter-created"]                 = {order = "h", value = matter_created},
+  }}
+
+  -- Ignore-flag some military-oriented stats we don't care about.
+  stats["miscellaneous"] = {stats = {["total-enemy-kills"] = {ignore = true}}}
+  stats["player"]        = {stats = {["kills"]             = {ignore = true}}}
+  return {by_force = {[force.name] = stats}}
+end
+
+remote.add_interface("Ultracube", {
+  ["better-victory-screen-statistics"] = better_victory_screen_statistics,
+})
+

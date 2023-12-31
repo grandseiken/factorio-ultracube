@@ -19,8 +19,8 @@
     "?pushbutton",
     "?textplates",
     "?aai-signal-transmission",
-    "!Krastorio2",
-    "?better-victory-screen >= 0.2.0"
+    "?better-victory-screen >= 0.2.0",
+    "!Krastorio2"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod."
 }

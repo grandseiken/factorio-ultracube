@@ -94,6 +94,7 @@ The following mods have been adapted to work with Ultracube:
 | --- | ----- |
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
+| [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies a few things, but not essential |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
@@ -102,6 +103,7 @@ The following mods have been adapted to work with Ultracube:
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
+| [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
 | [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.

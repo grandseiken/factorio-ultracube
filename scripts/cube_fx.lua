@@ -25,6 +25,7 @@ local cube_fuel_vehicle_entity_types = make_set({
   "locomotive", "car", "tank", "spider-vehicle",
 })
 
+local victory_statistics = nil
 local cube_fx_data = nil
 local cube_fx = {}
 
@@ -39,10 +40,12 @@ function cube_fx.refresh()
   }
 
   cube_fx_data = global.cube_fx_data
+  victory_statistics = global.victory_statistics
 end
 
 function cube_fx.on_load()
   cube_fx_data = global.cube_fx_data
+  victory_statistics = global.victory_statistics
 end
 
 local custom_alert = {type = "item"}
@@ -273,7 +276,8 @@ local function cube_victory(size, results)
   if has_cube and not has_plate and state == "imminent" then
     global.cube_victory_state = "victorious"
 
-    if remote.interfaces["better-victory-screen"] and remote.interfaces["better-victory-screen"]["trigger_victory"] then
+    local bvs = remote.interfaces["better-victory-screen"]
+    if bvs and bvs["trigger_victory"] then
       remote.call("better-victory-screen", "trigger_victory", game.forces["player"])
     else
       game.set_game_state {
@@ -283,71 +287,30 @@ local function cube_victory(size, results)
         victorious_force = "player",
       }
     end
-
   end
 end
 
 local function track_victory_statistics(size, results)
-  if size ~= 1 then return end -- Assume there can only be one cube
+  if size ~= 1 then return end  -- Only track distance travelled by main cube.
   local entity = results[1].entity
   if not entity or not entity.valid then return end
 
-  local stats = global.victory_statistics
-  if not stats.cube_last_position then
-    stats.cube_last_position = entity.position
-    return
-  end
-
-  if (stats.cube_last_position.x ~= entity.position.x)
-      or (stats.cube_last_position.y ~= entity.position.y) then
-    local old = stats.cube_last_position
-    local new = entity.position
-    local delta = math.sqrt((old.x - new.x)^2 + (old.y - new.y)^2)
-    stats.cube_last_position = new
-
-    stats.distance_travelled_by_cube = stats.distance_travelled_by_cube + delta
-  end
-end
-
-remote.add_interface("Ultracube", {
-  ["better-victory-screen-statistics"] = function()
-    local force = game.forces["player"] -- Winning force
-    local victory_stats = global.victory_statistics
-    local stats = { by_force = { [force.name] = { } } }
-    local force_stats = stats.by_force[force.name]
-
-    -- Calculate some interesting values to show
-    local cube_uses = 0
-    local cube_permutations = 0
-    for _, cube_type in pairs(cube_management.cubes) do
-      -- Count the consumed production value because produced values are not accurate
-      -- because of the catalyst keyword 
-      local times_consumed = force.item_production_statistics.get_input_count(cube_type)
-
-      cube_uses = cube_uses + times_consumed
-
-      if cube_type ~= cube_management.cubes.ultradense then
-        -- To count the amount of times the cube changed state we assumed that it always
-        -- has to change back to the ultradense cube before it can change state to something else.
-        cube_permutations = cube_permutations + times_consumed
-      end
+  local old = victory_statistics.cube_last_position
+  local new = entity.position
+  if old then
+    local old_x = old.x
+    local old_y = old.y
+    local new_x = new.x
+    local new_y = new.y
+    if old_x ~= new_x or old_y ~= new_y then
+      local dx = new_x - old_x
+      local dy = new_y - old_y
+      victory_statistics.distance_travelled_by_cube =
+          victory_statistics.distance_travelled_by_cube + math.sqrt(dx * dx + dy * dy)
     end
-
-    -- Create the new category for the victory gui
-    force_stats["ultracube"] = { order = "a", stats = {
-      ["cube-distance-travelled"] = {value = victory_stats.distance_travelled_by_cube, unit="distance",                   order="a"},
-      ["cube-permutations"]       = {value = cube_permutations,                                                           order="b"},
-      ["cube-uses"]               = {value = cube_uses,                                                                   order="c"},
-      ["matter-created"]          = {value = force.item_production_statistics.get_input_count("cube-basic-matter-unit"),  order="d"},
-    }}
-
-    -- Add ignore-flag some military orientated stats that this mod doesn't care about
-    force_stats["miscellaneous"]  = {stats = { ["total-enemy-kills"]  = { ignore = true } } }
-    force_stats["player"]         = {stats = { ["kills"]              = { ignore = true } } }
-
-    return stats
   end
-})
+  victory_statistics.cube_last_position = new
+end
 
 function cube_fx.tick(tick)
   local update_tick = tick % 6 == 0
