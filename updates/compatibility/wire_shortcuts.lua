@@ -5,6 +5,7 @@ if mods["WireShortcuts"] then
       {"cube-electronic-circuit", 1},
       {"copper-cable", 1},
     }
+    recipe.category = "cube-fabricator-handcraft"
   end
   recipe = data.raw.recipe["fake-green-wire"]
   if recipe then
@@ -12,6 +13,7 @@ if mods["WireShortcuts"] then
       {"cube-electronic-circuit", 1},
       {"copper-cable", 1},
     }
+    recipe.category = "cube-fabricator-handcraft"
   end
   data.raw.shortcut["WireShortcuts-give-copper"].technology_to_unlock = "cube-electronics"
   data.raw.shortcut["WireShortcuts-give-cutter"].technology_to_unlock = "cube-combinatorics"

@@ -1,5 +1,7 @@
 if mods["cybersyn"] then
-  data.raw.recipe["cybersyn-combinator"].ingredients = {
+  local recipe = data.raw.recipe["cybersyn-combinator"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
     {"copper-cable", 20},
     {"cube-electronic-circuit", 10},
   }

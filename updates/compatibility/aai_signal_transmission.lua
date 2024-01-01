@@ -10,8 +10,9 @@ if mods["aai-signal-transmission"] then
         {"cube-advanced-engine", 10},
       },
       result = "aai-signal-sender",
-      enabled = false,
       energy_required = 10,
+      category = "cube-fabricator-handcraft",
+      enabled = false,
     },
     {
       type = "recipe",
@@ -23,8 +24,9 @@ if mods["aai-signal-transmission"] then
         {"cube-advanced-engine", 10},
       },
       result = "aai-signal-receiver",
-      enabled = false,
       energy_required = 10,
+      category = "cube-fabricator-handcraft",
+      enabled = false,
     },
     {
       type = "technology",

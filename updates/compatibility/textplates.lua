@@ -21,6 +21,8 @@ if mods["textplates"] then
 
     recipes[small].enabled = false
     recipes[large].enabled = false
+    recipes[small].category = "cube-fabricator-handcraft"
+    recipes[large].category = "cube-fabricator-handcraft"
     data.raw.technology[technology] = nil
     if ingredient then
       recipes[small].ingredients = {{ingredient, 1}}

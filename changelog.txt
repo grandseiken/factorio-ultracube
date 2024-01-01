@@ -1,3 +1,10 @@
+Version: 0.2.11
+Date: ??
+  Changes:
+    - Updated Chinese localization.
+  Bugfixes:
+    - Fixed that several recipes from other compatible mods couldn't be made in the fabricator.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.10
 Date: 01. 01. 2024
   Minor Features:
