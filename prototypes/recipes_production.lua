@@ -330,8 +330,9 @@ data:extend({
       {"cube-advanced-circuit", 200},
       {"cube-sophisticated-matter-unit", 400},
     },
-    energy_required = 30,
     results = {{"cube-nuclear-reactor", 1}},
+    energy_required = 30,
+    category = "cube-fabricator-handcraft",
     requester_paste_multiplier = 1,
     enabled = false,
   },
@@ -339,8 +340,9 @@ data:extend({
     type = "recipe",
     name = "cube-heat-pipe",
     ingredients = {{"cube-rare-metals", 20}},
-    energy_required = 1,
     results = {{"heat-pipe", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -353,6 +355,7 @@ data:extend({
     },
     energy_required = 4,
     results = {{"heat-exchanger", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -366,6 +369,7 @@ data:extend({
     },
     energy_required = 12,
     results = {{"cube-mystery-furnace", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -380,6 +384,7 @@ data:extend({
     },
     energy_required = 12,
     results = {{"cube-cyclotron", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -393,6 +398,7 @@ data:extend({
     },
     energy_required = 8,
     results = {{"cube-particle-phase-aligner", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -406,6 +412,7 @@ data:extend({
     },
     energy_required = 20,
     results = {{"cube-quantum-decoder", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -417,8 +424,9 @@ data:extend({
       {"cube-deep-crystal", 4},
       {"cube-sophisticated-matter-unit", 10},
     },
-    energy_required = 20,
     results = {{"cube-beacon", 1}},
+    energy_required = 20,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -431,8 +439,9 @@ data:extend({
       {"cube-ghost-wire", 80},
       {"cube-quantum-research-data", 40},
     },
-    energy_required = 30,
     results = {{"cube-experimental-teleporter", 1}},
+    energy_required = 30,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -446,8 +455,9 @@ data:extend({
       {"cube-singularity-research-data", 400},
       {"cube-quantum-research-data", 400},
     },
-    energy_required = 300,
     results = {{"cube-forbidden-ziggurat", 1}},
+    energy_required = 300,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -460,8 +470,9 @@ data:extend({
       {"cube-singularity-research-data", 400},
       {"cube-spectral-processor", 200},
     },
-    energy_required = 300,
     results = {{"cube-antimatter-reactor", 1}},
+    energy_required = 300,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -473,8 +484,9 @@ data:extend({
       {"cube-quantum-research-data", 100},
       {"cube-arcane-drive", 80},
     },
-    energy_required = 60,
     results = {{"cube-annihilation-chamber", 1}},
+    energy_required = 60,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
 })
