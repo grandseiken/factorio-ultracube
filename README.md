@@ -84,6 +84,8 @@ Mods that add new recipes or technologies must be specifically adapted to work w
 
 Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items (necessary for UX and technical reasons) in a UPS-friendly manner.
 
+Mods that move the player to other surfaces or allow creating additional cubes for testing, like Blueprint Designer or Editor Extensions, are currently not well-supported. This should be fixed at some point.
+
 Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
 ## List of compatible mods

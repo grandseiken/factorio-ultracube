@@ -1,5 +1,5 @@
 Version: 0.2.11
-Date: ??
+Date: 01. 01. 2024
   Changes:
     - Updated Chinese localization.
   Bugfixes:
