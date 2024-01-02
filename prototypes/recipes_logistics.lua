@@ -218,6 +218,7 @@ data:extend({
     ingredients = {{"stone-brick", 5}},
     results = {{"stone-wall", 1}},
     energy_required = 1,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -231,6 +232,7 @@ data:extend({
     },
     results = {{"gate", 1}},
     energy_required = 2,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -539,9 +541,6 @@ data:extend({
     name = "cube-spidertron",
     ingredients = {
       {"exoskeleton-equipment", 4},
-      -- TODO: ?
-      -- {"fusion-reactor-equipment", 2},
-      -- {"rocket-launcher", 4},
       {"cube-spectral-processor", 40},
       {"cube-advanced-engine", 20},
       {"cube-sophisticated-matter-unit", 80},
