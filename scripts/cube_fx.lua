@@ -25,6 +25,7 @@ local cube_fuel_vehicle_entity_types = make_set({
   "locomotive", "car", "tank", "spider-vehicle",
 })
 
+local victory_statistics = nil
 local cube_fx_data = nil
 local cube_fx = {}
 
@@ -32,11 +33,19 @@ function cube_fx.refresh()
   global.cube_fx_data = {
     last_locomotives = {},
   }
+
+  global.victory_statistics = global.victory_statistics or {
+    distance_travelled_by_cube = 0,
+    cube_last_position = nil,
+  }
+
   cube_fx_data = global.cube_fx_data
+  victory_statistics = global.victory_statistics
 end
 
 function cube_fx.on_load()
   cube_fx_data = global.cube_fx_data
+  victory_statistics = global.victory_statistics
 end
 
 local custom_alert = {type = "item"}
@@ -50,7 +59,7 @@ local function cube_alert(size, results)
 
     if player.controller_type == defines.controllers.character and
        player.mod_settings["cube-show-cube-alerts"].value and
-       cube_management.player_data(player).total_weight == 0 then
+       cube_management.player_data(player).total_weight < 64 then
       for i = 1, size do
         local result = results[i]
         custom_alert.name = result.item
@@ -121,7 +130,7 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.height >= 0 and result.entity then
+    if result.entity and result.height >= 0 then
       if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity
@@ -232,8 +241,8 @@ local function cube_vehicle_mod(size, results)
     end
   end
   for unit_number, locomotive in pairs(cube_fx_data.last_locomotives) do
-    if not new_locomotives[unit_number] and locomotive.burner and
-       locomotive.burner.currently_burning then
+    if not new_locomotives[unit_number] and locomotive.valid and
+       locomotive.burner and locomotive.burner.currently_burning then
       local ultralocomotion_fuel = locomotive.burner.currently_burning.name
       local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
       if normal_fuel then
@@ -266,13 +275,41 @@ local function cube_victory(size, results)
   end
   if has_cube and not has_plate and state == "imminent" then
     global.cube_victory_state = "victorious"
-    game.set_game_state {
-      game_finished = true,
-      player_won = true,
-      can_continue = true,
-      victorious_force = "player",
-    }
+
+    local bvs = remote.interfaces["better-victory-screen"]
+    if bvs and bvs["trigger_victory"] then
+      remote.call("better-victory-screen", "trigger_victory", game.forces["player"])
+    else
+      game.set_game_state {
+        game_finished = true,
+        player_won = true,
+        can_continue = true,
+        victorious_force = "player",
+      }
+    end
   end
+end
+
+local function track_victory_statistics(size, results)
+  if size ~= 1 then return end  -- Only track distance travelled by main cube.
+  local entity = results[1].entity
+  if not entity or not entity.valid then return end
+
+  local old = victory_statistics.cube_last_position
+  local new = entity.position
+  if old then
+    local old_x = old.x
+    local old_y = old.y
+    local new_x = new.x
+    local new_y = new.y
+    if old_x ~= new_x or old_y ~= new_y then
+      local dx = new_x - old_x
+      local dy = new_y - old_y
+      victory_statistics.distance_travelled_by_cube =
+          victory_statistics.distance_travelled_by_cube + math.sqrt(dx * dx + dy * dy)
+    end
+  end
+  victory_statistics.cube_last_position = new
 end
 
 function cube_fx.tick(tick)
@@ -287,15 +324,34 @@ function cube_fx.tick(tick)
   if alert_tick then
     cube_alert(size, results)
   end
+  track_victory_statistics(size, results)
   cube_victory(size, results)
   if cube_vehicle_mod(size, results) then
     return
   end
-  if spark_tick then
-    cube_spark(size, results)
+
+  local frequency = settings.global["cube-cube-fx-frequency"].value
+  local cycle_length = 1
+  if frequency == "low" then
+    cycle_length = 2
+  elseif frequency == "lower" then
+    cycle_length = 4
+  elseif frequency == "verylow" then
+    cycle_length = 8
+  elseif frequency == "off" then
+    cycle_length = 0
   end
-  if boom_tick then
-    cube_boom(size, results)
+
+  if cycle_length == 1 or
+     (cycle_length > 0 and
+      (tick % (240 * cycle_length) == 0 or
+       tick % (240 * cycle_length) >= 240 * cycle_length - 120)) then
+    if spark_tick then
+      cube_spark(size, results)
+    end
+    if boom_tick then
+      cube_boom(size, results)
+    end
   end
 end
 

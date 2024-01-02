@@ -189,9 +189,14 @@ local function check_stack(entity, stack)
   return false
 end
 
+local phantom_burners = {["cube-boiler"] = true}
 local function check_burner(entity)
+  local can_burn_phantom = phantom_burners[entity.name]
   if cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
     if add_result(cube_ultradense, 1, entity) then return true end
+  end
+  if can_burn_phantom and cube_management.is_entity_burning_fuel(entity, cube_ultradense_phantom) then
+    if add_result(cube_ultradense_phantom, 1, entity) then return true end
   end
   local inventory = entity.get_fuel_inventory()
   if inventory then
@@ -199,12 +204,24 @@ local function check_burner(entity)
     if count > 0 then
       if add_result(cube_ultradense, count, entity) then return true end
     end
+    if can_burn_phantom then
+      count = inventory.get_item_count(cube_ultradense_phantom)
+      if count > 0 then
+        if add_result(cube_ultradense_phantom, count, entity) then return true end
+      end
+    end
   end
   inventory = entity.get_burnt_result_inventory()
   if inventory then
     local count = inventory.get_item_count(cube_dormant)
     if count > 0 then
       if add_result(cube_dormant, count, entity) then return true end
+    end
+    if can_burn_phantom then
+      count = inventory.get_item_count(cube_dormant_phantom)
+      if count > 0 then
+        if add_result(cube_dormant_phantom, count, entity) then return true end
+      end
     end
   end
   return false
@@ -574,7 +591,7 @@ local function cube_search_graph(last_entities_size, last_entities)
       else
         t = e.drop_target
       end
-      if t and not target_queued[t.unit_number] and t.type ~= ghost_t then
+      if t and t.valid and not target_queued[t.unit_number] and t.type ~= ghost_t then
         target_queue_end = target_queue_end + 1
         if target_queue_end > search_target_queue_capacity then
           search_target_queue_capacity = target_queue_end

@@ -6,6 +6,8 @@ An overhaul mod for Factorio featuring:
 * Six tiers of science and a new endgame goal.
 * Multiplayer compatibility.
 
+There is a [discord you can join here](https://discord.com/invite/8n2fUCgf).
+
 ## Contents
 
 * [Overview](#overview)
@@ -68,7 +70,7 @@ Planned improvements include:
 * More in-game help via the Informatron mod.
 * Reintroduction of barreling recipes.
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
-* Compatibility with more optional mods (e.g. jetpack, signal transmission).
+* Compatibility with more optional mods (e.g. jetpack).
 
 # Compatibility
 
@@ -82,6 +84,8 @@ Mods that add new recipes or technologies must be specifically adapted to work w
 
 Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items (necessary for UX and technical reasons) in a UPS-friendly manner.
 
+Mods that move the player to other surfaces or allow creating additional cubes for testing, like Blueprint Designer or Editor Extensions, are currently not well-supported. This should be fixed at some point.
+
 Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
 ## List of compatible mods
@@ -91,11 +95,18 @@ The following mods have been adapted to work with Ultracube:
 | Mod | Notes |
 | --- | ----- |
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
+| [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
+| [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
+| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies a few things, but not essential |
+| [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
+| [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
+| [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
+| [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 

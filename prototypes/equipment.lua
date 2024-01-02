@@ -1,20 +1,3 @@
-for _, animation in ipairs(data.raw.character.character.animations) do
-  if animation.armors then
-    for _, armor in ipairs(animation.armors) do
-      if armor == "heavy-armor" then
-        animation.armors[#animation.armors + 1] = "cube-regulation-armor"
-        animation.armors[#animation.armors + 1] = "cube-modular-armor"
-        break
-      end
-      if armor == "power-armor" then
-        animation.armors[#animation.armors + 1] = "cube-power-armor"
-        animation.armors[#animation.armors + 1] = "cube-power-armor-mk2"
-        break
-      end
-    end
-  end
-end
-
 data:extend({
   {
     type = "equipment-category",

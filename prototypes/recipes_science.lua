@@ -5,7 +5,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
@@ -25,7 +25,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/contemplative-replication.png",
     icon_size = 128, icon_mipmaps = 5,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},
       {type = "fluid", name = "water", amount = 8000},
       {"cube-calcium", 50},

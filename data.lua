@@ -14,7 +14,6 @@ require("prototypes.items_resources")
 require("prototypes.items_production")
 require("prototypes.items_science")
 require("prototypes.recipe_categories")
-require("prototypes.recipes_compatibility")
 require("prototypes.recipes_equipment")
 require("prototypes.recipes_fluids")
 require("prototypes.recipes_intermediates")
@@ -32,7 +31,6 @@ require("prototypes.technology_2")
 require("prototypes.technology_3_4")
 require("prototypes.technology_5")
 require("prototypes.technology_6")
-require("prototypes.technology_compatibility")
 require("prototypes.technology_upgrades")
 require("prototypes.tweaks")
 
@@ -72,8 +70,3 @@ require("prototypes.entities.robots")
 require("prototypes.entities.stygian_energy_lab")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
-
-require("prototypes.recipes_mystery")
-for _, t in pairs(data.raw.technology) do
-  t.enabled = false
-end

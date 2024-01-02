@@ -1,7 +1,8 @@
-require("prototypes.lib.tech_costs")
-
 if mods["textplates"] then
-  local textplates = {"stone", "iron", "copper", "steel", "concrete", "glass", "gold", "plastic", "uranium"}
+  local textplates = {
+    "stone", "iron", "copper", "steel",
+    "concrete", "glass", "gold", "plastic", "uranium",
+  }
   local recipes = data.raw.recipe
   for _, v in ipairs(textplates) do
     if recipes["textplate-small-" .. v] then
@@ -20,6 +21,8 @@ if mods["textplates"] then
 
     recipes[small].enabled = false
     recipes[large].enabled = false
+    recipes[small].category = "cube-fabricator-handcraft"
+    recipes[large].category = "cube-fabricator-handcraft"
     data.raw.technology[technology] = nil
     if ingredient then
       recipes[small].ingredients = {{ingredient, 1}}
@@ -61,4 +64,19 @@ if mods["textplates"] then
   handle_textplates("glass", "cube-glass", "cube-crusher", tech_cost_unit("1a", 60))
   handle_textplates("gold", "sulfur", "cube-sulfur-processing", tech_cost_unit("1a", 120))
   handle_textplates("uranium", "uranium-238", "cube-uranium-processing", tech_cost_unit("2", 120))
+
+  add_mystery_recipe(1, "textplate-small-plastic", "cube-basic-matter-unit")
+  add_mystery_recipe(1, "textplate-large-plastic", "cube-basic-matter-unit")
+  add_mystery_recipe(1, "textplate-small-stone", "stone")
+  add_mystery_recipe(1, "textplate-large-stone", "stone")
+  add_mystery_recipe(1, "textplate-small-steel", "cube-rare-metals")
+  add_mystery_recipe(1, "textplate-large-steel", "cube-rare-metals")
+  add_mystery_recipe(1, "textplate-small-concrete", "concrete")
+  add_mystery_recipe(1, "textplate-large-concrete", "concrete")
+  add_mystery_recipe(1, "textplate-small-glass", "cube-glass")
+  add_mystery_recipe(1, "textplate-large-glass", "cube-glass")
+  add_mystery_recipe(1, "textplate-small-gold", "sulfur")
+  add_mystery_recipe(1, "textplate-large-gold", "sulfur")
+  add_mystery_recipe(1, "textplate-small-uranium", "uranium-238")
+  add_mystery_recipe(1, "textplate-large-uranium", "uranium-238")
 end

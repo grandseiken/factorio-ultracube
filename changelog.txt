@@ -1,3 +1,64 @@
+Version: 0.2.11
+Date: 01. 01. 2024
+  Changes:
+    - Updated Chinese localization.
+  Bugfixes:
+    - Fixed that several recipes from other compatible mods couldn't be made in the fabricator.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.10
+Date: 01. 01. 2024
+  Minor Features:
+    - Added optional compatibility with Better Victory Screen.
+  Bugfixes:
+    - Fixed that several production recipes couldn't be made in the fabricator.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.9
+Date: 30. 12. 2023
+  Minor Features:
+    - Added Japanese localization thanks to YAMATO_Hajime.
+    - Added Chinese localization thanks to aotix / sdQwo.
+  Changes:
+    - Increased boiler fluidbox capacity to 300 from 200.
+  Bugfixes:
+    - Ultracube handcrafting categories will no longer be added to alternative character prototypes with no inventory (e.g. YARM remote viewer).
+    - Guarded against script issue if an inserter holding the cube had an invalid drop target.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+Date: 29. 12. 2023
+  Minor Features:
+    - Added default preset for the Milestones mod.
+  Bugfixes:
+    - Fixed a script error that could occur when mining a locomotive under the effect of ultralocomotion.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.7
+Date: 27. 12. 2023
+  Minor Features:
+    - The flare stack can now void steam.
+    - Added compatibility with Wire Shortcuts.
+    - Added compatibility with Project Cybersyn.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.6
+Date: 27. 12. 2023
+  Minor Features:
+    - Added optional compatibility with AAI Signal Transmission.
+    - Added optional compatibility with Inventory Sensor.
+  Bugfixes:
+    - Fixed recipe for pushbutton mod.
+    - Fixed several script tracking issues involving phantom cubes.
+    - Fixed that deconstructing a boiler burning a phantom cube would not return it.
+    - Other minor script fixes.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.5
+Date: 26. 12. 2023
+  Minor Features:
+    - Added Russian localization thanks to Dizabeth.
+    - Added a setting to reduce or disable the frequency of cube explosion effects.
+    - Characters now start the game with their equipment grid fully charged.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.4
+Date: 25. 12. 2023
+  Minor Features:
+    - Improved compatibility with mods that change the default character.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.3
 Date: 24. 12. 2023
