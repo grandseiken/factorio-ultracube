@@ -49,7 +49,10 @@ if mods["nixie-tubes"] then
         {type = "unlock-recipe", recipe = "cube-nixie-tube-alpha"},
         {type = "unlock-recipe", recipe = "cube-nixie-tube-small"},
       },
-      prerequisites = {"cube-crusher"},
+      prerequisites = {
+        "cube-combinatorics",
+        "cube-crusher",
+      },
       unit = tech_cost_unit("1a", 60),
       order = "x-0-0",
     },
@@ -65,4 +68,45 @@ if mods["nixie-tubes"] then
   data.raw.item["nixie-tube-alpha"].order = "y"
   data.raw.item["nixie-tube-small"].subgroup = "cube-combinator-extra"
   data.raw.item["nixie-tube-small"].order = "y"
+end
+
+if mods["SantasNixieTubeDisplay"] or mods["UPSFriendlyNixieTubeDisplay"] then
+  local tech = data.raw.technology["SNTD-nixie-tubes-1"]
+  tech.prerequisites = {"cube-combinatorics", "cube-crusher"}
+  tech.unit = tech_cost_unit("1a", 60)
+  tech = data.raw.technology["SNTD-nixie-tubes-2"]
+  tech.unit = tech_cost_unit("1a", 80)
+
+  local recipe = data.raw.recipe["SNTD-old-nixie-tube"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {"cube-electronic-circuit", 1},
+    {"cube-glass", 2},
+    {"cube-basic-matter-unit", 2},
+  }
+  recipe = data.raw.recipe["SNTD-nixie-tube"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {"SNTD-old-nixie-tube", 2},
+    {"cube-rare-metals", 4},
+    {"cube-basic-matter-unit", 4},
+  }
+  recipe = data.raw.recipe["SNTD-nixie-tube-small"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {"SNTD-old-nixie-tube", 1},
+    {"cube-rare-metals", 2},
+    {"cube-basic-matter-unit", 2},
+  }
+
+  data.raw.item["SNTD-old-nixie-tube"].subgroup = "cube-combinator-extra"
+  data.raw.item["SNTD-old-nixie-tube"].order = "y-a"
+  data.raw.item["SNTD-nixie-tube"].subgroup = "cube-combinator-extra"
+  data.raw.item["SNTD-nixie-tube"].order = "y-b"
+  data.raw.item["SNTD-nixie-tube-small"].subgroup = "cube-combinator-extra"
+  data.raw.item["SNTD-nixie-tube-small"].order = "y-c"
+
+  add_mystery_recipe(1, "SNTD-old-nixie-tube", "cube-glass")
+  add_mystery_recipe(1, "SNTD-nixie-tube", "SNTD-old-nixie-tube")
+  add_mystery_recipe(1, "SNTD-nixie-tube-small", "SNTD-old-nixie-tube")
 end

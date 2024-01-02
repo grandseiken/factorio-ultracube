@@ -4,6 +4,7 @@ Date: 02. 01. 2024
   Minor Features:
     - Added Polish localization thanks to S3BA-pl.
     - Added optional compatibility with Cybersyn Combinator.
+    - Added optional compatibility with Santa's Nixie Tube Display and UPS Friendly Nixie Tube Display.
   Bugfixes:
     - Fixed that walls and gates couldn't be made in the fabricator.
 ---------------------------------------------------------------------------------------------------
