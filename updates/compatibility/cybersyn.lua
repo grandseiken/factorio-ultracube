@@ -14,4 +14,14 @@ if mods["cybersyn"] then
   tech.unit = tech_cost_unit("1b", 120)
 
   add_mystery_recipe(1, "cybersyn-combinator", "cube-electronic-circuit")
+
+  if mods["cybersyn-combinator"] then
+    recipe = data.raw.recipe["cybersyn-constant-combinator"]
+    recipe.category = "cube-fabricator-handcraft"
+    recipe.ingredients = {
+      {"constant-combinator", 1},
+      {"cube-electronic-circuit", 1},
+    }
+    add_mystery_recipe(1, "cybersyn-constant-combinator", "cube-electronic-circuit")
+  end
 end

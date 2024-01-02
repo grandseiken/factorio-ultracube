@@ -3,6 +3,7 @@ Version: 0.2.12
 Date: 02. 01. 2024
   Minor Features:
     - Added Polish localization thanks to S3BA-pl.
+    - Added optional compatibility with Cybersyn Combinator.
   Bugfixes:
     - Fixed that walls and gates couldn't be made in the fabricator.
 ---------------------------------------------------------------------------------------------------
