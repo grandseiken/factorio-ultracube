@@ -72,6 +72,10 @@ Planned improvements include:
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
 * Compatibility with more optional mods (e.g. jetpack).
 
+## Translation
+
+Translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. You can find more details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin).
+
 # Compatibility
 
 This is an overhaul mod that removes most standard resources, ingredients, technologies and entities from the game.
@@ -118,6 +122,7 @@ TODO: make it easy to for other mod authors to add compatibility for their mod a
 
 | Q | A |
 | - | - |
+| **Can I help translate this mod?** | Yes, translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. More details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin). |
 | **Where are the biters?** | Currently there are no military technologies and biters are disabled. This decision might be revisited later. |
 | **Where are all the technologies?** | Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science. |
 | **Is this a Krastorio 2 extension?** | Ultracube depends only on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for some additional graphics and sounds (see [credits](#dependencies-and-credits)). It's otherwise separate and doesn't share any technologies or recipes with Krastorio 2. |
