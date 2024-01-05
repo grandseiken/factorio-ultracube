@@ -29,6 +29,8 @@ local victory_statistics = nil
 local cube_fx_data = nil
 local cube_fx = {}
 
+local update_tick_modulus = 6
+
 function cube_fx.refresh()
   global.cube_fx_data = {
     last_locomotives = {},
@@ -41,6 +43,14 @@ function cube_fx.refresh()
 
   cube_fx_data = global.cube_fx_data
   victory_statistics = global.victory_statistics
+
+  if not victory_statistics.utilization then
+    -- A little migration.
+    victory_statistics.utilization = {
+      idle = 0,
+      working = 0,
+    }
+  end
 end
 
 function cube_fx.on_load()
@@ -290,11 +300,41 @@ local function cube_victory(size, results)
   end
 end
 
+-- Map to determine if some machine is using the cube
+-- in an "efficient" manner. 
+local cube_machine_condition_handlers = {
+  ["status"] = function(entity)
+    return entity.status == defines.entity_status.working
+  end,
+}
+
+-- Map to determine in which machine types the cube can be
+-- seen as being "utilization". The value will show what 
+-- requirement this machine has to be "productive" with
+-- the cube. 
+local cube_working_machine_types = {
+  ["assembling-machine"]  = cube_machine_condition_handlers["status"],
+  ["furnace"]             = cube_machine_condition_handlers["status"],
+  ["boiler"]              = cube_machine_condition_handlers["status"],
+  ["generator"]           = cube_machine_condition_handlers["status"],
+  ["burner-generator"]    = cube_machine_condition_handlers["status"],
+  ["rocket-silo"]         = cube_machine_condition_handlers["status"],
+  ["reactor"]             = cube_machine_condition_handlers["status"], -- Does this work?
+}
+
 local function track_victory_statistics(size, results)
-  if size ~= 1 then return end  -- Only track distance travelled by main cube.
+  if size == 0 then return end      -- There are no cubes! That's weird, let's ignore the problem
+
+  -- We will only look at what the first cube is doing, because there might be
+  -- multiple like when it's in its phantom form. This makes it not entirely
+  -- accurate, but it's better than nothing. It's also important that we track
+  -- something as often as possible to ensure the "utilization" is calculated
+  -- somewhat correctly.
   local entity = results[1].entity
+
   if not entity or not entity.valid then return end
 
+  -- Track distance travelled by this cube
   local old = victory_statistics.cube_last_position
   local new = entity.position
   if old then
@@ -310,10 +350,20 @@ local function track_victory_statistics(size, results)
     end
   end
   victory_statistics.cube_last_position = new
+
+  -- Track cube "utilization"
+  local machine_conditional = cube_working_machine_types[entity.type]
+  if machine_conditional and machine_conditional(entity) then
+    -- The cube is in some entity that's using the cube "utilization"
+    victory_statistics.utilization.working = victory_statistics.utilization.working + update_tick_modulus
+  else
+    -- The cube is idling!
+    victory_statistics.utilization.idle = victory_statistics.utilization.idle + update_tick_modulus
+  end
 end
 
 function cube_fx.tick(tick)
-  local update_tick = tick % 6 == 0
+  local update_tick = tick % update_tick_modulus == 0
   if not update_tick then
     return
   end

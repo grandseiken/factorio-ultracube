@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.13
+Date: 02. 01. 2024
+  Minor Features:
+    - Add Cube Utilization statistic to Better Victory Screen (#?).
+---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 02. 01. 2024
   Minor Features:
@@ -18,7 +23,7 @@ Date: 01. 01. 2024
 Version: 0.2.10
 Date: 01. 01. 2024
   Minor Features:
-    - Added optional compatibility with Better Victory Screen.
+    - Added optional compatibility with Better Victory Screen (#3).
   Bugfixes:
     - Fixed that several production recipes couldn't be made in the fabricator.
 ---------------------------------------------------------------------------------------------------
