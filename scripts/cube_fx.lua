@@ -303,8 +303,25 @@ end
 -- Map to determine if some machine is using the cube
 -- in an "efficient" manner. 
 local cube_machine_condition_handlers = {
-  ["status"] = function(entity)
+  ["status"] = function(entity, cube_type)
     return entity.status == defines.entity_status.working
+  end,
+  ["handcrafting"] = function(character, cube_type)
+    -- We could search through the crafting queue, but this function
+    -- needs to be quick because it's called every 6 ticks. Lets
+    -- rather assume that if the player doesn't have it in their
+    -- inventory or cursor then the player is crafting with it.
+    -- That doesn't handle it being in queues though, but it's
+    -- better than nothing.
+    local player = character.player
+    if not player then return end
+    local cursor_stack = player.cursor_stack
+    if cursor_stack.valid and cursor_stack.valid_for_read then
+      if cursor_stack.name == cube_type then return false end
+    end
+    local inventory = player.get_main_inventory()
+    if inventory.find_item_stack(cube_type) then return false end
+    return true
   end,
 }
 
@@ -313,6 +330,7 @@ local cube_machine_condition_handlers = {
 -- requirement this machine has to be "productive" with
 -- the cube. 
 local cube_working_machine_types = {
+  ["character"]           = cube_machine_condition_handlers["handcrafting"],
   ["assembling-machine"]  = cube_machine_condition_handlers["status"],
   ["furnace"]             = cube_machine_condition_handlers["status"],
   ["boiler"]              = cube_machine_condition_handlers["status"],
@@ -353,7 +371,7 @@ local function track_victory_statistics(size, results)
 
   -- Track cube "utilization"
   local machine_conditional = cube_working_machine_types[entity.type]
-  if machine_conditional and machine_conditional(entity) then
+  if machine_conditional and machine_conditional(entity, results[1].item) then
     -- The cube is in some entity that's using the cube "utilization"
     victory_statistics.utilization.working = victory_statistics.utilization.working + update_tick_modulus
   else
