@@ -2,7 +2,7 @@
 Version: 0.2.13
 Date: 02. 01. 2024
   Minor Features:
-    - Add Cube Utilization statistic to Better Victory Screen (#?).
+    - Add Cube Utilization statistic to Better Victory Screen (#13).
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 02. 01. 2024
