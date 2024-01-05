@@ -7,6 +7,7 @@ end
 
 require("updates.character")
 require("updates.recipes_mystery")
+require("updates.ultralocomotion")
 
 require("updates.compatibility.aai_signal_transmission")
 require("updates.compatibility.cybersyn")

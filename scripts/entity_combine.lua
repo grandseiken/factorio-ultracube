@@ -1,6 +1,11 @@
 local entity_combine = {}
 
 local combine_definitions = {
+  ["cube-nuclear-reactor"] = {
+    {
+      name = "cube-nuclear-reactor-base",
+    },
+  },
   ["cube-cyclotron"] = {
     {
       name = "cube-cyclotron-interface",
@@ -60,6 +65,15 @@ local function get_combine_table()
   return combine_table
 end
 
+local function get_inverse_table()
+  if global.combine_inverse_table then
+    return global.combine_inverse_table
+  end
+  local inverse_table = {}
+  global.combine_inverse_table = inverse_table
+  return inverse_table
+end
+
 function entity_combine.created(entity)
   local entries = nil
   if entity.name then
@@ -70,6 +84,7 @@ function entity_combine.created(entity)
   end
 
   local combine_table = get_combine_table()
+  local inverse_table = get_inverse_table()
   local linked_entries = combine_table[entity.unit_number]
   if not linked_entries then
     linked_entries = {}
@@ -97,23 +112,34 @@ function entity_combine.created(entity)
         new_entity.operable = false
       end
       linked_entries[#linked_entries + 1] = new_entity
+      inverse_table[new_entity.unit_number] = entity
     end
   end
 end
 
 function entity_combine.destroyed(entity)
   local combine_table = get_combine_table()
+  local inverse_table = get_inverse_table()
   local linked_entries = combine_table[entity.unit_number]
-  if not linked_entries then
+  if linked_entries then
+    for _, e in ipairs(linked_entries) do
+      if e.valid then
+        inverse_table[e.unit_number] = nil
+        e.destroy {raise_destroy = true}
+      end
+    end
+    combine_table[entity.unit_number] = nil
     return
   end
+end
 
-  for _, entry in ipairs(linked_entries) do
-    if entry.valid then
-      entry.destroy {raise_destroy = true}
-    end
+function entity_combine.mined_final(entity, player)
+  local inverse_table = get_inverse_table()
+  local base_entity = inverse_table[entity.unit_number]
+  inverse_table[entity.unit_number] = nil
+  if base_entity and base_entity.valid then
+    player.mine_entity(base_entity, true)
   end
-  combine_table[entity.unit_number] = nil
 end
 
 function entity_combine.get_linked(entity)

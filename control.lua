@@ -167,7 +167,9 @@ script.on_event(
     defines.events.on_pre_player_left_game,
   },
   function(e)
-    cube_management.drop_before_leaving(e.player_index)
+    for _, entity in ipairs(cube_management.drop_before_leaving(e.player_index)) do
+      cube_search.hint_entity(entity)
+    end
   end)
 
 script.on_event(
@@ -189,7 +191,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, e.loot)
+    linked_entities.return_cubes(e.entity, e.loot)
     on_entity_removed(e.entity)
   end)
 
@@ -212,7 +214,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, nil)
+    linked_entities.return_cubes(e.entity, nil)
     on_entity_removed(e.entity)
   end)
 
@@ -234,8 +236,11 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, e.buffer)
+    linked_entities.return_cubes(e.entity, e.buffer)
     on_entity_removed(e.entity)
+    if e.player_index then
+      entity_combine.mined_final(e.entity, game.players[e.player_index])
+    end
   end)
 
 script.on_event(

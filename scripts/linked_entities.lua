@@ -1,5 +1,6 @@
 local activation = require("__Ultracube__/scripts/activation")
 local cube_management = require("__Ultracube__/scripts/cube_management")
+local cube_search = require("__Ultracube__/scripts/cube_search")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 
@@ -7,6 +8,38 @@ local linked_entities = {}
 local overload_sprites = nil
 local get_linked = entity_combine.get_linked
 local set_active = activation.set
+
+local function fast_replace(e, name, spill)
+  entity_cache.remove(e)
+  cube_search.remove_entity(e)
+  activation.remove_entity(e)
+  linked_entities.removed(e)
+  local opened_players = {}
+  for k, player in pairs(game.players) do
+    if player.opened == e then
+      player.opened = nil
+      opened_players[k] = player
+    end
+  end
+  local new_entity = e.surface.create_entity {
+    name = name,
+    position = e.position,
+    direction = e.direction,
+    force = e.force,
+    fast_replace = true,
+    spill = spill,
+    create_build_effect_smoke = false,
+  }
+  if new_entity then
+    for _, player in pairs(opened_players) do
+      player.opened = new_entity
+    end
+    return new_entity
+  elseif e.valid then
+    return e
+  end
+  return nil
+end
 
 function linked_entities.on_load()
   overload_sprites = global.overload_sprites
@@ -142,6 +175,85 @@ function linked_entities.tick(tick)
       if linked then
         local animation = linked[1]
         animation.active = e.rocket_silo_status == defines.rocket_silo_status.rocket_ready
+      end
+    end
+  end
+
+  local nuclear_reactors = cache.by_name["cube-nuclear-reactor"]
+  if nuclear_reactors then
+    local reactor_hysteresis = global.reactor_hysteresis
+    if not reactor_hysteresis then
+      reactor_hysteresis = {}
+      global.reactor_hysteresis = reactor_hysteresis
+    end
+    for k, timer in pairs(reactor_hysteresis) do
+      if timer > 0 then
+        reactor_hysteresis[k] = timer - 1
+      else
+        reactor_hysteresis[k] = nil
+      end
+    end
+    local new_entities = {}
+    for _, e in pairs(nuclear_reactors) do
+      local timer = reactor_hysteresis[e.unit_number]
+      if not timer then
+        local linked = get_linked(e)
+        local reactor = linked[1]
+        local new_entity = nil
+        if reactor.name == "cube-nuclear-reactor-base" and reactor.temperature > 100 and not reactor.burner.currently_burning then
+          new_entity = fast_replace(reactor, "cube-nuclear-reactor-online", true)
+        elseif reactor.name == "cube-nuclear-reactor-online" and reactor.temperature < 100 and not reactor.burner.currently_burning then
+          new_entity = fast_replace(reactor, "cube-nuclear-reactor-base", true)
+        end
+        if new_entity then
+          reactor_hysteresis[e.unit_number] = 120
+          linked[1] = new_entity
+          new_entities[#new_entities + 1] = new_entity
+        end
+      end
+    end
+    for _, e in ipairs(new_entities) do
+      entity_cache.add(e)
+    end
+  end
+end
+
+local fuel_map = {
+  [cube_management.cubes.ultradense] = cube_management.cubes.dormant,
+  [cube_management.cubes.ultradense_phantom] = cube_management.cubes.dormant_phantom,
+}
+
+local function insert_or_spill(entity, inventory, item)
+  local inserted_count = 0
+  if inventory then
+    inserted_count = inventory.insert(item)
+  end
+  if inserted_count < item.count then
+    item.count = item.count - inserted_count
+    local spill = entity.surface.spill_item_stack(entity.position, item, nil, nil, false)
+    for _, e in ipairs(spill) do
+      cube_search.hint_entity(e)
+    end
+  end
+end
+
+function linked_entities.return_cubes(entity, inventory)
+  for base, dormant in pairs(fuel_map) do
+    if cube_management.is_entity_burning_fuel(entity, base) then
+      insert_or_spill(entity, inventory, {name = dormant, count = 1})
+    end
+  end
+  local linked = entity_combine.get_linked(entity)
+  if linked then
+    for _, e in ipairs(linked) do
+      for i = 1, e.get_max_inventory_index() do
+        local di = e.get_inventory(i)
+        if di then
+          for item, count in pairs(di.get_contents()) do
+            insert_or_spill(entity, inventory, {name = item, count = count})
+            di.clear()
+          end
+        end
       end
     end
   end

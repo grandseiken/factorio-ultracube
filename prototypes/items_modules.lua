@@ -90,28 +90,6 @@ data:extend({
   },
 
   {
-    -- TODO: module effect breaks the output full thing even more, since
-    -- cube can't even be removed / second craft cannot continue until
-    -- the machine is completely full.
-    type = "module",
-    name = "cube-replication-module",
-    localised_description = {"item-description.cube-replication-module"},
-    icon = "__base__/graphics/icons/productivity-module.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "cube-module-intermediates",
-    category = "cube-replication",
-    tier = 1,
-    order = "e[1]",
-    stack_size = 20,
-    effect =
-    {
-      productivity = {bonus = 0.25},
-      consumption = {bonus = 0.5},
-    },
-    flags = {"hidden"},  -- Until we work out how to make it work.
-  },
-
-  {
     type = "module",
     name = "cube-speed-module",
     localised_description = {"item-description.cube-speed-module"},
