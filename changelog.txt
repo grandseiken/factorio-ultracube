@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: ??
+  Changes:
+    - This version makes some changes which could require minor factory reworks. See other patch notes for details.
+    - The conduits recipe now requires an additional ingredient.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 02. 01. 2024
   Minor Features:

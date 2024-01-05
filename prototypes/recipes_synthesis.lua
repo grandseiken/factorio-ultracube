@@ -513,6 +513,7 @@ data:extend({
       {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-ectoplasm", amount = 400},
       {type = "fluid", name = "cube-deep-solution", amount = 600},
+      {name = "cube-deep-powder", amount = 200},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
