@@ -167,50 +167,65 @@ local function cube_vehicle_mod(size, results)
   for i = 1, size do
     local result = results[i]
     local entity = result.entity
+    if entity then
+      local item = result.item
+      local type = entity.type
 
-    if result.entity and (result.item == cube_ultradense or result.item == cube_dormant) and
-       (entity.type == "construction-robot" or entity.type == "logistic-robot") then
-      local last_robot = cube_fx_data.last_robot
-      if last_robot and entity.energy < last_robot.energy then
-        local drain = 1
-        if entity.type == "logistic-robot" then
-          drain = 10
+      if (item == cube_ultradense or item == cube_dormant) and
+        (type == "construction-robot" or type == "logistic-robot") then
+        local last_robot = cube_fx_data.last_robot
+        if last_robot and entity.energy < last_robot.energy then
+          local drain = 1
+          if type == "logistic-robot" then
+            drain = 10
+          end
+          drain = 15000 * drain * vector_length(vector_sub(entity.position, last_robot.position))
+          entity.energy = math.max(0, entity.energy - drain)
         end
-        drain = 15000 * drain * vector_length(vector_sub(entity.position, last_robot.position))
-        entity.energy = math.max(0, entity.energy - drain)
+        cube_fx_data.last_robot = {
+          position = entity.position,
+          energy = entity.energy,
+        }
+        new_last_robot = true
       end
-      cube_fx_data.last_robot = {
-        position = entity.position,
-        energy = entity.energy,
-      }
-      new_last_robot = true
-    end
 
-    if result.entity and result.item == cube_ultradense and cube_fuel_vehicle_entity_types[entity.type] and
-       entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
-       entity.burner.currently_burning.name == cube_ultradense then
-      local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
-      entity.surface.create_entity {
-        name = "cube-periodic-ultradense-projectile",
-        source = entity,
-        position = entity.position,
-        target = vector_add(entity.position, velocity),
-        speed = vector_length(velocity) / 64,
-        max_range = 0,
-      }
-      boomed = true
-    end
+      if item == cube_ultradense then
+        if cube_fuel_vehicle_entity_types[type] and
+           entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
+           entity.burner.currently_burning.name == cube_ultradense then
+          local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
+          entity.surface.create_entity {
+            name = "cube-periodic-ultradense-projectile",
+            source = entity,
+            position = entity.position,
+            target = vector_add(entity.position, velocity),
+            speed = vector_length(velocity) / 64,
+            max_range = 0,
+          }
+          boomed = true
+        end
 
-    if result.entity and result.item == cube_ultradense and entity.type == "cargo-wagon" then
-      local force = entity.force
-      local train = entity.train
-      if train and force.technologies["cube-transitive-ultralocomotion"] and
-         force.technologies["cube-transitive-ultralocomotion"].researched then
-        for _, a in pairs(train.locomotives) do
-          for j = 1, #a do
-            local locomotive = a[j]
-            if locomotive.burner and locomotive.burner.currently_burning then
-              new_locomotives[locomotive.unit_number] = locomotive
+        local train = nil
+        local force = nil
+        if type == "cargo-wagon" then
+          force = entity.force
+          train = entity.train
+        elseif type == "character" then
+          local vehicle = entity.vehicle
+          if vehicle and (vehicle.type == "cargo-wagon" or vehicle.type == "locomotive") then
+            force = entity.force
+            train = vehicle.train
+          end
+        end
+
+        if train and force and force.technologies["cube-transitive-ultralocomotion"] and
+            force.technologies["cube-transitive-ultralocomotion"].researched then
+          for _, a in pairs(train.locomotives) do
+            for j = 1, #a do
+              local locomotive = a[j]
+              if locomotive.burner and locomotive.burner.currently_burning then
+                new_locomotives[locomotive.unit_number] = locomotive
+              end
             end
           end
         end
@@ -262,11 +277,10 @@ local function cube_victory(size, results)
   local has_cube = false
   local has_plate = false
   for i = 1, size do
-    local result = results[i]
-    if result.item == cube_ultradense then
+    local item = results[i].item
+    if item == cube_ultradense then
       has_cube = true
-    end
-    if result.item == legendary_iron_gear then
+    elseif item == legendary_iron_gear then
       has_plate = true
     end
   end
