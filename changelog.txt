@@ -10,7 +10,7 @@ Date: ??
   Minor Features:
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.
   Bugfixes:
-    - As part of the nuclear reactor rework, also addressed an issue where they could be accidentally duplicated.
+    - Fixed an issue where reactors could duplicate themselves.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 02. 01. 2024
