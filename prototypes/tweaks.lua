@@ -53,9 +53,11 @@ data.raw.item["heat-pipe"].subgroup = "cube-advanced-power"
 data.raw.item["heat-exchanger"].subgroup = "cube-advanced-power"
 
 data.raw.item["uranium-235"].subgroup = "cube-uranium"
-data.raw.item["uranium-235"].order = "cube-a[0]"
 data.raw.item["uranium-238"].subgroup = "cube-uranium"
+data.raw.item["uranium-235"].order = "cube-a[0]"
 data.raw.item["uranium-238"].order = "cube-a[2]"
+data.raw.item["uranium-235"].stack_size = 50
+data.raw.item["uranium-238"].stack_size = 50
 data.raw.resource["uranium-ore"].category = "cube-uranium"
 
 data.raw.radar["radar"].energy_usage = "200kW"

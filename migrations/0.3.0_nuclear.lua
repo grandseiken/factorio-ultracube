@@ -8,6 +8,14 @@ entity_cache.on_load()
 cube_search.on_load()
 
 for _, surface in pairs(game.surfaces) do
+  local refineries = surface.find_entities_filtered {name = "cube-fuel-refinery"}
+  for _, refinery in ipairs(refineries) do
+    local recipe = refinery.get_recipe()
+    if recipe and recipe.name == "cube-nuclear-fuel-reprocessing" and refinery.is_crafting() then
+      surface.spill_item_stack(refinery.position, {name = "cube-ultradense-utility-cube", count = 1}, false, nil, false)
+    end
+  end
+
   local positions = {}
   local reactors = surface.find_entities_filtered {
     name = {"cube-nuclear-reactor", "cube-nuclear-reactor-online"}

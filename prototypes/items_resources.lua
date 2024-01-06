@@ -666,7 +666,7 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-x[0-tendrils]",
-    stack_size = 100,
+    stack_size = 50,
   },
   {
     type = "item",
@@ -694,6 +694,6 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-uranium",
     order = "cube-a[1]",
-    stack_size = 100,
+    stack_size = 50,
   },
 })

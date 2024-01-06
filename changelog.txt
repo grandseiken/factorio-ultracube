@@ -5,9 +5,11 @@ Date: ??
     - This version makes some changes which could require minor factory reworks. See other patch notes for details.
     - The nuclear reactor has been reworked with more robust logic. Its heat connections now connect only once kickstarted by cube, and there's always at least a short window after this to insert a uranium fuel cell even if most of its heat flows out immediately. This should make it easier to automate restarting via cube if desired, since a single cube use should now always be enough to bring one reactor online.
     - Cubes currently inside reactors may be lost during migration. Save your game with the cube elsewhere before updating to avoid the need to spawn a new cube with console commands. Reactors will need to be kickstarted again after updating.
-    - Reworked systems for detecting and supporting compatibility with other mods. Added a compatibility guide for those who want to add support for Ultracube in their mods.
+    - Reprocessing depleted uranium fuel cells no longer requires the cube, but producing uranium fuel cells to begin with now takes more cube uses.
+    - Various types of tendrils and uranium now stack to 50, down from 100.
     - The subatomic conduits recipe now requires an additional ingredient.
     - Renamed a certain late-game recipe and associated technology.
+    - Reworked systems for detecting and supporting compatibility with other mods. Added a compatibility guide for those who want to add support for Ultracube in their mods.
   Minor Features:
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.
   Bugfixes:
