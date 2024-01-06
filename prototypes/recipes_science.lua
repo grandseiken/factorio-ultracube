@@ -23,7 +23,7 @@ data:extend({
     type = "recipe",
     name = "cube-basic-contemplation-unit-1",
     icon = "__Ultracube__/assets/icons/recipe/contemplative-replication.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 100},

@@ -2,13 +2,13 @@
 Version: 0.3.0
 Date: ??
   Changes:
-    - This version makes some changes which could require minor factory reworks. See other patch notes for details.
+    - This version makes some changes to later-game technologies which could necessitate some factory modifications if you have progressed far enough. See other notes for details.
     - The nuclear reactor has been reworked with more robust logic. Its heat connections now connect only once kickstarted by cube, and there's always at least a short window after this to insert a uranium fuel cell even if most of its heat flows out immediately. This should make it easier to automate restarting via cube if desired, since a single cube use should now always be enough to bring one reactor online.
-    - Cubes currently inside reactors may be lost during migration. Save your game with the cube elsewhere before updating to avoid the need to spawn a new cube with console commands. Reactors will need to be kickstarted again after updating.
-    - Reprocessing depleted uranium fuel cells no longer requires the cube, but producing uranium fuel cells to begin with now takes more cube uses.
-    - Various types of tendrils and uranium now stack to 50, down from 100.
+    - Cubes currently inside reactors may be lost during migration to the new format. Save your game with the cube elsewhere before updating to avoid the need to spawn a new cube with console commands. Reactors will need to be kickstarted again after updating.
+    - Several uranium-related recipes have been reworked. Reprocessing uranium fuel cells no longer requires the cube, but creating them in the first place now requires significantly more of it. An improved fuel cell recipe can be now unlocked with kovarex processing.
+    - Tendrils now stack to 50, down from 100.
     - The subatomic conduits recipe now requires an additional ingredient.
-    - Renamed a certain late-game recipe and associated technology.
+    - Renamed a certain late-game recipe and associated technology and increased its power usage.
     - Reworked systems for detecting and supporting compatibility with other mods. Added a compatibility guide for those who want to add support for Ultracube in their mods.
   Minor Features:
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.

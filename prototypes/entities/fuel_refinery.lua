@@ -194,7 +194,7 @@ data:extend({
       emissions_per_minute = 0,
     },
     energy_usage = "250kW",
-    ingredient_count = 4,
+    ingredient_count = 5,
     crafting_categories = {"cube-fuel-refinery"},
     fluid_boxes = {
       -- Inputs

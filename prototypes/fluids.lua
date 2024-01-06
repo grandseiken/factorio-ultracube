@@ -158,6 +158,17 @@ data:extend({
   },
   {
     type = "fluid",
+    name = "cube-radioactive-sludge",
+    icon = "__Ultracube__/assets/icons/radioactive-sludge.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.02, g=0.18, b=0.03},
+    flow_color = {r=0.05, g=0.35, b=0.05},
+    default_temperature = 25,
+    subgroup = "cube-energy-fluids",
+    order = "cube-0[sludge]",
+  },
+  {
+    type = "fluid",
     name = "cube-beacon-juice",
     icon = "__Ultracube__/assets/icons/beacon-juice.png",
     icon_size = 64, icon_mipmaps = 4,

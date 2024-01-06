@@ -230,7 +230,7 @@ data:extend({
     drawing_box = {{-6, -6.5}, {6, 4.5}},
     crafting_categories = {"cube-forbidden-ziggurat"},
     crafting_speed = 1,
-    energy_usage = "1GW",
+    energy_usage = "4GW",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

@@ -64,7 +64,7 @@ data:extend({
     type = "recipe",
     name = "cube-qubits-success-dummy",
     icon = "__Ultracube__/assets/icons/recipe/qubits-success.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {{"cube-qubits", 2}},
     results = {{"cube-quantum-research-data", 10}},
     energy_required = 3.2,

@@ -181,7 +181,7 @@ data:extend({
     type = "item",
     name = "cube-intelligent-calcium",
     icon = "__Ultracube__/assets/icons/intelligent-calcium.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     pictures = {
       {
         layers = {
@@ -694,6 +694,6 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-uranium",
     order = "cube-a[1]",
-    stack_size = 50,
+    stack_size = 100,
   },
 })

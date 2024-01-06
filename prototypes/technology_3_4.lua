@@ -99,6 +99,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-kovarex-enrichment-process"},
       {type = "unlock-recipe", recipe = "cube-kovarex-redemption-process"},
+      {type = "unlock-recipe", recipe = "cube-uranium-fuel-cell-enhanced"},
     },
     prerequisites = {
       "cube-deep-introspection-card",

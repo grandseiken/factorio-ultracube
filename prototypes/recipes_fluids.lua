@@ -24,7 +24,7 @@ data:extend({
     type = "recipe",
     name = "cube-improved-gelatinous-tar",
     icon = "__Ultracube__/assets/icons/recipe/improved-gelatinous-tar.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "steam", amount = 4000},
       {"cube-sand", 200},
@@ -46,7 +46,7 @@ data:extend({
     type = "recipe",
     name = "cube-tar-processing",
     icon = "__Ultracube__/assets/icons/recipe/tar-processing.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 400},
     },
@@ -71,7 +71,7 @@ data:extend({
     type = "recipe",
     name = "cube-heavy-tar-reclamation",
     icon = "__Ultracube__/assets/icons/recipe/heavy-tar-reclamation.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 400},
       {type = "fluid", name = "steam", amount = 100},
@@ -97,7 +97,7 @@ data:extend({
     type = "recipe",
     name = "cube-light-tar-reclamation",
     icon = "__Ultracube__/assets/icons/recipe/light-tar-reclamation.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "cube-light-tar", amount = 400},
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
@@ -265,7 +265,7 @@ data:extend({
     type = "recipe",
     name = "cube-deep-crystal-distillation",
     icon = "__Ultracube__/assets/icons/recipe/deep-crystal-distillation.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "cube-mineral-water", amount = 2000},
       {type = "fluid", name = "sulfuric-acid", amount = 200},
@@ -308,7 +308,7 @@ data:extend({
     type = "recipe",
     name = "cube-euphoric-release",
     icon = "__Ultracube__/assets/icons/recipe/euphoric-release.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
@@ -436,6 +436,21 @@ data:extend({
     always_show_products = false,
     show_amount_in_title = false,
   },
+  {
+    type = "recipe",
+    name = "cube-radioactive-sludge-void",
+    icon = "__Ultracube__/assets/icons/radioactive-sludge.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {{type = "fluid", name = "cube-radioactive-sludge", amount = 100}},
+    results = {},
+    energy_required = 1,
+    category = "cube-fluid-burner",
+    subgroup = "cube-fluid-burner",
+    order = "cube-a[void]-h[sludge]",
+    hide_from_player_crafting = true,
+    always_show_products = false,
+    show_amount_in_title = false,
+  },
 
   {
     type = "recipe",
@@ -460,7 +475,7 @@ data:extend({
     type = "recipe",
     name = "cube-annihilation",
     icon = "__Ultracube__/assets/icons/recipe/annihilation.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {"cube-basic-matter-unit", 1},
       {"cube-basic-antimatter-unit", 1},
@@ -482,7 +497,7 @@ data:extend({
     type = "recipe",
     name = "cube-gamma-waste-containment",
     icon = "__Ultracube__/assets/icons/recipe/gamma-waste-containment.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     ingredients = {
       {type = "fluid", name = "cube-gamma-waste-stream", amount = 48000},
     },
