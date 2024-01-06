@@ -1,7 +1,7 @@
 require("__Ultracube__/scripts/lib")
 
--- Disable all default items (except for whitelisted), recipes and technologies.
-local whitelist = make_set({
+-- Whitelisted vanilla items/entities.
+local vanilla_item_whitelist = make_set({
   "raw-fish",
   "water",
   "steam",
@@ -87,37 +87,6 @@ local whitelist = make_set({
   "battery-mk2-equipment",
   "personal-roboport-mk2-equipment",
   "fusion-reactor-equipment",
-  -- Compatibility.
-  -- TODO: this is not a good system, make it possible for mods to specify.
-  "nixie-tube",
-  "nixie-tube-alpha",
-  "nixie-tube-small",
-  "SNTD-old-nixie-tube",
-  "SNTD-nixie-tube",
-  "SNTD-nixie-tube-small",
-  "check-valve",
-  "overflow-valve",
-  "underflow-valve",
-  "pushbutton",
-  "item-sensor",
-  "cybersyn-combinator",
-  "cybersyn-constant-combinator",
-  "aai-signal-sender",
-  "aai-signal-receiver",
-  "textplate-small-plastic",
-  "textplate-large-plastic",
-  "textplate-small-stone",
-  "textplate-large-stone",
-  "textplate-small-steel",
-  "textplate-large-steel",
-  "textplate-small-concrete",
-  "textplate-large-concrete",
-  "textplate-small-glass",
-  "textplate-large-glass",
-  "textplate-small-gold",
-  "textplate-large-gold",
-  "textplate-small-uranium",
-  "textplate-large-uranium",
 })
 
 local entity_prototypes = {
@@ -146,8 +115,39 @@ local item_prototypes = {
   "tool",
   "mining-tool",
   "repair-tool",
+  "rail-planner",
   "artillery-wagon",
 }
+
+local function has_prefix(s)
+  return s and string.sub(s, 1, 5) == "cube-"
+end
+
+local function add_prefix(s)
+  if has_prefix(s) then
+    return s
+  elseif s then
+    return "cube-" .. s
+  else
+    return nil
+  end
+end
+
+local function is_compatible(t)
+  return t and (has_prefix(t.name) or has_prefix(t.order) or has_prefix(t.subgroup))
+end
+
+local function is_compatible_recipe(t)
+  return t and (is_compatible(t) or has_prefix(t.category))
+end
+
+local function is_compatible_item(t)
+  return t and (is_compatible(t) or is_compatible_recipe(data.raw.recipe[t.name]))
+end
+
+local function is_compatible_entity(t)
+  return t and (is_compatible(t) or is_compatible_item(data.raw.item[t.name]))
+end
 
 local function add_hidden_flag(t)
   if not t.flags then
@@ -158,7 +158,9 @@ end
 
 for _, v in ipairs(entity_prototypes) do
   for _, t in pairs(data.raw[v]) do
-    if not whitelist[t.name] then
+    if vanilla_item_whitelist[t.name] or is_compatible_entity(t) then
+      t.order = add_prefix(t.order)
+    else
       t.next_upgrade = nil
       add_hidden_flag(t)
     end
@@ -167,24 +169,32 @@ end
 
 for _, v in ipairs(item_prototypes) do
   for _, t in pairs(data.raw[v]) do
-    if not whitelist[t.name] then
+    if vanilla_item_whitelist[t.name] or is_compatible_item(t) then
+      t.order = add_prefix(t.order)
+    else
       add_hidden_flag(t)
     end
   end
 end
 
 for _, t in pairs(data.raw.fluid) do
-  if not whitelist[t.name] then
+  if vanilla_item_whitelist[t.name] or is_compatible_item(t) then
+    t.order = add_prefix(t.order)
+  else
     t.hidden = true
   end
 end
 
 for _, t in pairs(data.raw.recipe) do
-  t.enabled = false
-  if t.normal then
-    t.normal.enabled = false
-  end
-  if t.expensive then
-    t.expensive.enabled = false
+  if is_compatible_recipe(t) then
+    t.order = add_prefix(t.order)
+  else
+    t.enabled = false
+    if t.normal then
+      t.normal.enabled = false
+    end
+    if t.expensive then
+      t.expensive.enabled = false
+    end
   end
 end

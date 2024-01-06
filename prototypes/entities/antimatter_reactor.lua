@@ -327,7 +327,7 @@ data:extend({
     tile_height = 9,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "z[remnants]-a[generic]-b[antimatter-reactor-remnant]",
+    order = "cube-z[remnants]-a[generic]-b[antimatter-reactor-remnant]",
     time_before_removed = 60 * 60 * 20, -- 20 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,

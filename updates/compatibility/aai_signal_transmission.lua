@@ -50,8 +50,8 @@ if mods["aai-signal-transmission"] then
   add_mystery_recipe(1, "aai-signal-receiver", "cube-spectral-processor")
 
   data.raw.item["aai-signal-sender"].subgroup = "cube-combinator-extra"
-  data.raw.item["aai-signal-sender"].order = "a-z-a"
+  data.raw.item["aai-signal-sender"].order = "cube-a-z-a"
   data.raw.item["aai-signal-receiver"].subgroup = "cube-combinator-extra"
-  data.raw.item["aai-signal-receiver"].order = "a-z-b"
+  data.raw.item["aai-signal-receiver"].order = "cube-a-z-b"
   data.raw.roboport["aai-signal-sender"].energy_usage = "5MW"
 end

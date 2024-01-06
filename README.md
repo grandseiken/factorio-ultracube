@@ -102,7 +102,7 @@ The following mods have been adapted to work with Ultracube:
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
-| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies a few things, but not essential |
+| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some challenges, not essential |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
@@ -116,7 +116,7 @@ This list is expected to grow with time. You can submit a pull request, github i
 
 ## Compatibility guide for modders
 
-TODO: make it easy to for other mod authors to add compatibility for their mod and describe here how to do so.
+See the [dedicated compatibility page](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md).
 
 # FAQ
 

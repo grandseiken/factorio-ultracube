@@ -34,5 +34,5 @@ if mods["pushbutton"] then
   add_mystery_recipe(1, "pushbutton", "cube-advanced-circuit")
 
   data.raw.item["pushbutton"].subgroup = "cube-combinator-extra"
-  data.raw.item["pushbutton"].order = "x"
+  data.raw.item["pushbutton"].order = "cube-x"
 end

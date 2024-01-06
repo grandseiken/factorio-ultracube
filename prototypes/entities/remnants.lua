@@ -10,7 +10,7 @@ data:extend({
     tile_height = 9,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "z[remnants]-a[generic]-b[medium]",
+    order = "cube-z[remnants]-a[generic]-b[medium]",
     time_before_removed = 60 * 60 * 20, -- 20 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
@@ -43,7 +43,7 @@ data:extend({
     tile_height = 3,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "z[remnants]-a[generic]-b[big]",
+    order = "cube-z[remnants]-a[generic]-b[big]",
     time_before_removed = 60 * 60 * 20, -- 20 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,

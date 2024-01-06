@@ -5,7 +5,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/qubit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-research-quantum",
-    order = "0[qubit]",
+    order = "cube-0[qubit]",
     stack_size = 10,
   },
   {
@@ -14,7 +14,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/qubits.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-research-quantum",
-    order = "x[0]",
+    order = "cube-x[0]",
     stack_size = 1,
     flags = {"hidden"},
   },
@@ -57,7 +57,7 @@ data:extend({
     main_product = "",
     category = "cube-quantum-decoder-dummy",
     subgroup = "cube-research-quantum",
-    order = "a[0]",
+    order = "cube-a[0]",
     enabled = false,
   },
   {
@@ -71,19 +71,19 @@ data:extend({
     main_product = "",
     category = "cube-quantum-decoder-dummy",
     subgroup = "cube-research-quantum",
-    order = "a[1]",
+    order = "cube-a[1]",
     enabled = false,
   },
 
   {
     type = "recipe-category",
     name = "cube-quantum-decoder",
-    order = "zz",
+    order = "cube-zz",
   },
   {
     type = "recipe-category",
     name = "cube-quantum-decoder-dummy",
-    order = "zz",
+    order = "cube-zz",
   },
 })
 
@@ -119,7 +119,7 @@ for i = 0, 5 do
         },
       },
       subgroup = "cube-qubits",
-      order = "1[" .. i .. "]",
+      order = "cube-1[" .. i .. "]",
       stack_size = 10,
     },
     {
@@ -146,7 +146,7 @@ for i = 0, 5 do
       energy_required = dummy.energy_required / 2,
       category = "cube-quantum-decoder",
       subgroup = "cube-qubits",
-      order = "z[" .. i .. "]",
+      order = "cube-z[" .. i .. "]",
       enabled = true,
       hide_from_player_crafting = true,
       unlock_results = false,

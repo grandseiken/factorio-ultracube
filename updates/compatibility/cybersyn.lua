@@ -9,10 +9,11 @@ if mods["cybersyn"] then
   local tech = data.raw.technology["cybersyn-train-network"]
   tech.prerequisites = {
     "cube-combinatorics",
-    "cube-rail-signals",
+    "rail-signals",
   }
   tech.unit = tech_cost_unit("1b", 120)
 
+  data.raw.item["cybersyn-combinator"].order = "cube-" .. data.raw.item["cybersyn-combinator"].order
   add_mystery_recipe(1, "cybersyn-combinator", "cube-electronic-circuit")
 
   if mods["cybersyn-combinator"] then
@@ -22,6 +23,7 @@ if mods["cybersyn"] then
       {"constant-combinator", 1},
       {"cube-electronic-circuit", 1},
     }
+    data.raw.item["cybersyn-constant-combinator"].order = "cube-" .. data.raw.item["cybersyn-constant-combinator"].order
     add_mystery_recipe(1, "cybersyn-constant-combinator", "cube-electronic-circuit")
   end
 end

@@ -1,7 +1,6 @@
-require("prototypes.scripts.remove_unused")
-require("prototypes.scripts.autoplace")
 require("menu_simulations.menu_simulations")
 
+require("prototypes.autoplace")
 require("prototypes.equipment")
 require("prototypes.fluids")
 require("prototypes.fuel_categories")

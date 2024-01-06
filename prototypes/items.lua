@@ -6,7 +6,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-stackable"},
     subgroup = "cube-synthesis-handling",
-    order = "0[0-cube]",
+    order = "cube-0[0-cube]",
     stack_size = 1,
 
     fuel_category = "cube-cube",
@@ -23,7 +23,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-stackable"},
     subgroup = "cube-synthesis-handling",
-    order = "0[1-cube]",
+    order = "cube-0[1-cube]",
     stack_size = 1,
   },
   {
@@ -35,7 +35,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.25},
     }},
     subgroup = "cube-synthesis-handling",
-    order = "0[2-cube]",
+    order = "cube-0[2-cube]",
     stack_size = 1,
 
     fuel_category = "cube-phantom",
@@ -52,7 +52,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.25},
     }},
     subgroup = "cube-synthesis-handling",
-    order = "0[3-cube]",
+    order = "cube-0[3-cube]",
     stack_size = 1,
   },
   {
@@ -61,7 +61,7 @@ data:extend({
     icon = "__base__/graphics/icons/iron-gear-wheel.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
-    order = "0[0-plate]",
+    order = "cube-0[0-plate]",
     stack_size = 1,
     flags = {"not-stackable"},
   },
@@ -76,7 +76,7 @@ data:extend({
     fuel_acceleration_multiplier = 1.25,
     fuel_top_speed_multiplier = 1.1,
     subgroup = "cube-fuel",
-    order = "x[fuel-0]",
+    order = "cube-x[fuel-0]",
     stack_size = 20,
   },
   {
@@ -89,7 +89,7 @@ data:extend({
     fuel_acceleration_multiplier = 1.75,
     fuel_top_speed_multiplier = 1.25,
     subgroup = "cube-fuel",
-    order = "y[fuel-1]",
+    order = "cube-y[fuel-1]",
     stack_size = 10,
   },
   {
@@ -102,7 +102,7 @@ data:extend({
     fuel_acceleration_multiplier = 1.25,
     fuel_top_speed_multiplier = 1.15,
     subgroup = "cube-fuel",
-    order = "z[a-condensed-fuel]",
+    order = "cube-z[a-condensed-fuel]",
     stack_size = 10,
   },
 
@@ -112,7 +112,7 @@ data:extend({
     icon = "__base__/graphics/icons/plastic-bar.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
-    order = "0[a-matter]",
+    order = "cube-0[a-matter]",
     stack_size = 200,
   },
   {
@@ -121,7 +121,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/basic-antimatter-unit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
-    order = "0[b-matter]",
+    order = "cube-0[b-matter]",
     stack_size = 200,
   },
   {
@@ -130,7 +130,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/automation-core.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-basic-products",
-    order = "2[widget]",
+    order = "cube-2[widget]",
     stack_size = 50,
   },
 
@@ -140,7 +140,7 @@ data:extend({
     icon = "__base__/graphics/icons/engine-unit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "0[a-basic-motor-unit]",
+    order = "cube-0[a-basic-motor-unit]",
     stack_size = 50,
   },
   {
@@ -149,7 +149,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/equipments/vehicle/additional-engine.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "0[b-advanced-engine]",
+    order = "cube-0[b-advanced-engine]",
     stack_size = 50,
   },
   {
@@ -158,7 +158,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/equipments/vehicle/advanced-additional-engine.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "0[c-advanced-engine]",
+    order = "cube-0[c-advanced-engine]",
     stack_size = 50,
   },
   {
@@ -170,7 +170,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
     subgroup = "cube-processed-materials",
-    order = "6[ghostwire]",
+    order = "cube-6[ghostwire]",
     stack_size = 200,
   },
   {
@@ -179,7 +179,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "2[a-electronic-circuit]",
+    order = "cube-2[a-electronic-circuit]",
     stack_size = 100,
   },
   {
@@ -188,7 +188,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/advanced-circuit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
-    order = "2[b-advanced-circuit]",
+    order = "cube-2[b-advanced-circuit]",
     stack_size = 100,
   },
   {
@@ -200,7 +200,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.75},
     }},
     subgroup = "cube-components",
-    order = "2[c-processing-unit]",
+    order = "cube-2[c-processing-unit]",
     stack_size = 100,
   },
   {
@@ -209,7 +209,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/flask.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
-    order = "b[d-besselheim-flask]",
+    order = "cube-b[d-besselheim-flask]",
     stack_size = 50,
   },
   {
@@ -218,7 +218,7 @@ data:extend({
     icon = "__base__/graphics/icons/space-science-pack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
-    order = "b[e-besselheim-flask]",
+    order = "cube-b[e-besselheim-flask]",
     stack_size = 50,
   },
   {
@@ -227,7 +227,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
-    order = "b[f-besselheim-flask]",
+    order = "cube-b[f-besselheim-flask]",
     stack_size = 50,
   },
   {
@@ -236,7 +236,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/bottled-anguish.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
-    order = "b[g-besselheim-flask]",
+    order = "cube-b[g-besselheim-flask]",
     stack_size = 50,
   },
   {
@@ -245,7 +245,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-processed-materials",
-    order = "2[sophisticated]",
+    order = "cube-2[sophisticated]",
     stack_size = 100,
   },
   {
@@ -272,7 +272,7 @@ data:extend({
       },
     },
     subgroup = "cube-processed-materials",
-    order = "3[plate]",
+    order = "cube-3[plate]",
     stack_size = 100,
   },
   {
@@ -299,7 +299,7 @@ data:extend({
       },
     },
     subgroup = "cube-chemical-intermediates",
-    order = "z[haunted-energy-cell]",
+    order = "cube-z[haunted-energy-cell]",
     fuel_category = "cube-haunted-energy",
     -- TODO: may need tweaking with actual practice.
     fuel_value = "400MJ",
@@ -329,7 +329,7 @@ data:extend({
       },
     },
     subgroup = "cube-research-singularity",
-    order = "1[boson-conduit]",
+    order = "cube-1[boson-conduit]",
     stack_size = 20,
   },
   {
@@ -356,7 +356,7 @@ data:extend({
       },
     },
     subgroup = "cube-research-singularity",
-    order = "2[fermion-conduit]",
+    order = "cube-2[fermion-conduit]",
     stack_size = 20,
   },
   {
@@ -383,7 +383,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "z[0-teleportation-control-module]",
+    order = "cube-z[0-teleportation-control-module]",
     stack_size = 20,
   },
   {
@@ -392,7 +392,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/signals/power_off.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "z[1-teleporter-activation]",
+    order = "cube-z[1-teleporter-activation]",
     stack_size = 10,
     flags = {"hidden"},
   },
@@ -422,7 +422,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "z[teleportation-control-module]",
+    order = "cube-z[teleportation-control-module]",
     stack_size = 10,
   },
   {
@@ -452,7 +452,7 @@ data:extend({
       },
     },
     subgroup = "cube-synthesis-forbidden",
-    order = "1[step-0]",
+    order = "cube-1[step-0]",
     stack_size = 64,
   },
   {
@@ -476,7 +476,7 @@ data:extend({
       },
     },
     subgroup = "cube-synthesis-forbidden",
-    order = "2[step-1]",
+    order = "cube-2[step-1]",
     stack_size = 200,
   },
   {
@@ -512,7 +512,7 @@ data:extend({
       },
     },
     subgroup = "cube-synthesis-forbidden",
-    order = "3[step-2a]",
+    order = "cube-3[step-2a]",
     stack_size = 100,
   },
   {
@@ -521,7 +521,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/ultradense-matter-unit.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
-    order = "4[step-3]",
+    order = "cube-4[step-3]",
     stack_size = 50,
   },
   {
@@ -530,7 +530,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/ultradense-composite.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
-    order = "5[step-4]",
+    order = "cube-5[step-4]",
     stack_size = 10,
   },
 })

@@ -76,7 +76,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/modular-casing.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
-    order = "a[modular-casing]",
+    order = "cube-a[modular-casing]",
     stack_size = 20,
   },
   {
@@ -85,7 +85,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/burnt-out-modular-casing.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
-    order = "b[burnt-out-modular-casing]",
+    order = "cube-b[burnt-out-modular-casing]",
     stack_size = 20,
   },
 
@@ -98,7 +98,7 @@ data:extend({
     subgroup = "cube-speed-modules",
     category = "cube-speed",
     tier = 1,
-    order = "b[1]",
+    order = "cube-b[1]",
     stack_size = 20,
     effect = {
       speed = {bonus = 0.2},
@@ -120,7 +120,7 @@ data:extend({
     subgroup = "cube-speed-modules",
     category = "cube-speed",
     tier = 2,
-    order = "b[2]",
+    order = "cube-b[2]",
     stack_size = 20,
     effect = {
       speed = {bonus = 0.35},
@@ -142,7 +142,7 @@ data:extend({
     subgroup = "cube-speed-modules",
     category = "cube-speed",
     tier = 3,
-    order = "b[3]",
+    order = "cube-b[3]",
     stack_size = 20,
     effect = {
       speed = {bonus = 0.5},
@@ -165,7 +165,7 @@ data:extend({
     subgroup = "cube-efficiency-modules",
     category = "cube-efficiency",
     tier = 1,
-    order = "c[1]",
+    order = "cube-c[1]",
     stack_size = 20,
     effect = {
       consumption = {bonus = -0.2},
@@ -187,7 +187,7 @@ data:extend({
     subgroup = "cube-efficiency-modules",
     category = "cube-efficiency",
     tier = 2,
-    order = "c[2]",
+    order = "cube-c[2]",
     stack_size = 20,
     effect = {
       consumption = {bonus = -0.4},
@@ -209,7 +209,7 @@ data:extend({
     subgroup = "cube-efficiency-modules",
     category = "cube-efficiency",
     tier = 3,
-    order = "c[3]",
+    order = "cube-c[3]",
     stack_size = 20,
     effect = {
       consumption = {bonus = -0.6},
@@ -232,7 +232,7 @@ data:extend({
     subgroup = "cube-productivity-modules",
     category = "cube-productivity",
     tier = 1,
-    order = "d[1]",
+    order = "cube-d[1]",
     stack_size = 20,
     effect = {
       productivity = {bonus = 0.05},
@@ -251,7 +251,7 @@ data:extend({
     subgroup = "cube-productivity-modules",
     category = "cube-productivity",
     tier = 2,
-    order = "d[2]",
+    order = "cube-d[2]",
     stack_size = 20,
     effect = {
       productivity = {bonus = 0.08},
@@ -270,7 +270,7 @@ data:extend({
     subgroup = "cube-productivity-modules",
     category = "cube-productivity",
     tier = 3,
-    order = "d[3]",
+    order = "cube-d[3]",
     stack_size = 20,
     effect = {
       productivity = {bonus = 0.12},
