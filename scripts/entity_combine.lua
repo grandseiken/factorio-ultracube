@@ -150,4 +150,12 @@ function entity_combine.get_linked(entity)
   return combine_table[entity.unit_number]
 end
 
+function entity_combine.swap_linked(entity, index, old_unit_number, new_entity)
+  local inverse_table = get_inverse_table()
+  local linked = entity_combine.get_linked(entity)
+  linked[index] = new_entity
+  inverse_table[old_unit_number] = nil
+  inverse_table[new_entity.unit_number] = entity
+end
+
 return entity_combine

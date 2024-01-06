@@ -200,6 +200,7 @@ function linked_entities.tick(tick)
         local linked = get_linked(e)
         local reactor = linked[1]
         local new_entity = nil
+        local n = reactor.unit_number
         if reactor.name == "cube-nuclear-reactor-base" and reactor.temperature > 100 and not reactor.burner.currently_burning then
           new_entity = fast_replace(reactor, "cube-nuclear-reactor-online", true)
         elseif reactor.name == "cube-nuclear-reactor-online" and reactor.temperature < 100 and not reactor.burner.currently_burning then
@@ -207,7 +208,7 @@ function linked_entities.tick(tick)
         end
         if new_entity then
           reactor_hysteresis[e.unit_number] = 120
-          linked[1] = new_entity
+          entity_combine.swap_linked(e, 1, n, new_entity)
           new_entities[#new_entities + 1] = new_entity
         end
       end
@@ -251,8 +252,8 @@ function linked_entities.return_cubes(entity, inventory)
         if di then
           for item, count in pairs(di.get_contents()) do
             insert_or_spill(entity, inventory, {name = item, count = count})
-            di.clear()
           end
+          di.clear()
         end
       end
     end

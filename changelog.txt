@@ -4,6 +4,7 @@ Date: ??
   Changes:
     - This version makes some changes which could require minor factory reworks. See other patch notes for details.
     - The nuclear reactor has been reworked with more robust logic. Its heat connections now connect only once kickstarted by cube, and there's always at least a short window after this to insert a uranium fuel cell even if most of its heat flows out immediately. This should make it easier to automate restarting via cube if desired, since a single cube use should now always be enough to bring one reactor online.
+    - Cubes currently inside reactors may be lost during migration. Save your game with the cube elsewhere before updating to avoid the need to spawn a new cube with console commands. Reactors will need to be kickstarted again after updating.
     - The subatomic conduits recipe now requires an additional ingredient.
     - Renamed a certain late-game recipe and associated technology.
   Minor Features:
