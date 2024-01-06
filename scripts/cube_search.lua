@@ -212,19 +212,7 @@ local function check_burner(entity)
     end
   end
   inventory = entity.get_burnt_result_inventory()
-  if inventory then
-    local count = inventory.get_item_count(cube_dormant)
-    if count > 0 then
-      if add_result(cube_dormant, count, entity) then return true end
-    end
-    if can_burn_phantom then
-      count = inventory.get_item_count(cube_dormant_phantom)
-      if count > 0 then
-        if add_result(cube_dormant_phantom, count, entity) then return true end
-      end
-    end
-  end
-  return false
+  return inventory and check_inventory(entity, inventory)
 end
 
 local function cube_check_entity(entity)
@@ -289,9 +277,14 @@ local function cube_check_entity(entity)
     return false
   end
 
-  if (is_cube_burner(entity) or (vehicle_entity_types[entity_type] and entity_type ~= cargo_wagon_t)) and
-     check_burner(entity) then
-    return true
+  if is_cube_burner(entity) or (vehicle_entity_types[entity_type] and entity_type ~= cargo_wagon_t) then
+    if check_burner(entity) then return true end
+  else
+    local burner = entity.prototype.burner_prototype
+    if burner and burner.burnt_inventory_size then
+      local inventory = entity.get_burnt_result_inventory()
+      if inventory and check_inventory(entity, inventory) then return true end
+    end
   end
 
   if inventory_entity_types[entity_type] then

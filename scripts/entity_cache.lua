@@ -110,6 +110,7 @@ local function by_tick(unit_number)
 end
 
 function entity_cache.is_cube_crafter(entity)
+  -- TODO: just cache this by entity.
   local categories = cube_management.recipe_categories()
   if cube_crafter_entity_types[entity.type] and entity.prototype.crafting_categories then
     for category, _ in pairs(entity.prototype.crafting_categories) do
@@ -125,8 +126,11 @@ function entity_cache.is_cube_crafter(entity)
 end
 
 function entity_cache.is_cube_burner(entity)
-  return cube_burner_entity_types[entity.type] and entity.prototype.burner_prototype and
-         entity.prototype.burner_prototype.burnt_inventory_size > 0
+  if not cube_burner_entity_types[entity.type] then
+    return false
+  end
+  local burner = entity.prototype.burner_prototype
+  return burner and burner.burnt_inventory_size > 0
 end
 
 local is_cube_crafter = entity_cache.is_cube_crafter
