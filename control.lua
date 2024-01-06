@@ -206,6 +206,7 @@ script.on_event(
     end
     tech_unlock.constructed(e.entity)
     on_entity_added(e.entity)
+    cube_search.hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -214,7 +215,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    linked_entities.return_cubes(e.entity, nil)
+    linked_entities.return_cubes(e.entity, nil, true)
     on_entity_removed(e.entity)
   end)
 
@@ -225,6 +226,7 @@ script.on_event(
       return
     end
     on_entity_move(e.entity, e.old_surface_index, e.old_position)
+    cube_search.hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -276,6 +278,12 @@ script.on_event(defines.events.on_tick,
     linked_entities.tick(e.tick)
   end)
 
+local function remote_hint_entity(entity)
+  if entity then
+    cube_search.hint_entity(entity)
+  end
+end
+
 -- Better victory screen support.
 local function better_victory_screen_statistics()
   local force = game.forces["player"]
@@ -311,6 +319,7 @@ local function better_victory_screen_statistics()
 end
 
 remote.add_interface("Ultracube", {
+  ["hint_entity"] = remote_hint_entity,
   ["better-victory-screen-statistics"] = better_victory_screen_statistics,
 })
 

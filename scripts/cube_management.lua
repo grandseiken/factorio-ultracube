@@ -42,6 +42,7 @@ local cube_management = {
   cube_defines = cube_defines,
   cubes = cubes,
   cube_info = cube_info,
+  cube_drop = cube_drop,
 }
 
 local cube_weight = {
