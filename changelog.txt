@@ -11,6 +11,8 @@ Date: ??
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.
   Bugfixes:
     - Fixed an issue where reactors could duplicate themselves.
+  Modding:
+    - Marked the Merging Chests mod as incompatible for now since it leads to script errors.
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 02. 01. 2024
