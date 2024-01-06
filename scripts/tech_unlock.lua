@@ -64,6 +64,18 @@ function tech_unlock.sync(force)
     local unlocked = not force.technologies[name] or force.technologies[name].researched
     tech_unlock.trigger(force, name, unlocked)
   end
+  for _, tech in pairs(force.technologies) do
+    if tech.enabled and tech.researched then
+      for _, effect in ipairs(tech.effects) do
+        if effect.type == "unlock-recipe" then
+          local recipe = force.recipes[effect.recipe]
+          if recipe then
+            recipe.enabled = true
+          end
+        end
+      end
+    end
+  end
 end
 
 function tech_unlock.constructed(entity)
