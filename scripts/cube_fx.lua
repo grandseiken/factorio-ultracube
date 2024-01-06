@@ -29,8 +29,6 @@ local victory_statistics = nil
 local cube_fx_data = nil
 local cube_fx = {}
 
-local update_tick_modulus = 6
-
 function cube_fx.refresh()
   global.cube_fx_data = {
     last_locomotives = {},
@@ -47,8 +45,8 @@ function cube_fx.refresh()
   if not victory_statistics.utilization then
     -- A little migration.
     victory_statistics.utilization = {
-      idle = 0,
-      working = 0,
+      idle = 0,     -- The unit here doesn't matter, as long as it's consistent
+      working = 0,  -- between `idle` and `working`.
     }
   end
 end
@@ -373,15 +371,15 @@ local function track_victory_statistics(size, results)
   local machine_conditional = cube_working_machine_types[entity.type]
   if machine_conditional and machine_conditional(entity, results[1].item) then
     -- The cube is in some entity that's using the cube "utilization"
-    victory_statistics.utilization.working = victory_statistics.utilization.working + update_tick_modulus
+    victory_statistics.utilization.working = victory_statistics.utilization.working + 1
   else
     -- The cube is idling!
-    victory_statistics.utilization.idle = victory_statistics.utilization.idle + update_tick_modulus
+    victory_statistics.utilization.idle = victory_statistics.utilization.idle + 1
   end
 end
 
 function cube_fx.tick(tick)
-  local update_tick = tick % update_tick_modulus == 0
+  local update_tick = tick % 6 == 0
   if not update_tick then
     return
   end
