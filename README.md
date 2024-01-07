@@ -15,6 +15,7 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
   * [You might not like this mod if...](#you-might-not-like-this-mod-if)
   * [Comparison to other overhaul mods](#comparison-to-other-overhaul-mods)
   * [Development status and roadmap](#development-status-and-roadmap)
+  * [Translation](#translation)
 * [Compatibility](#compatibility)
   * [List of compatible mods](#list-of-compatible-mods)
   * [Compatibility guide for modders](#compatibility-guide-for-modders)
@@ -72,6 +73,8 @@ Planned improvements include:
 * Code reorganisation and interfaces to make it easy for other mods to add compatibility.
 * Compatibility with more optional mods (e.g. jetpack).
 
+See the [mod portal changelog](https://mods.factorio.com/mod/Ultracube/changelog) for version history.
+
 ## Translation
 
 Translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. You can find more details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin).
@@ -102,12 +105,14 @@ The following mods have been adapted to work with Ultracube:
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
-| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies a few things, but not essential |
+| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some challenges, not essential |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
+| [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported |
+| [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
 | [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
@@ -116,14 +121,15 @@ This list is expected to grow with time. You can submit a pull request, github i
 
 ## Compatibility guide for modders
 
-TODO: make it easy to for other mod authors to add compatibility for their mod and describe here how to do so.
+See the [dedicated compatibility page here](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md).
 
 # FAQ
 
 | Q | A |
 | - | - |
+| **How can I make my mod compatible with Ultracube?** | See the [compatibility guide](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md). |
 | **Can I help translate this mod?** | Yes, translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. More details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin). |
-| **Where are the biters?** | Currently there are no military technologies and biters are disabled. This decision might be revisited later. |
+| **Where are the biters?** | Currently there are no military technologies and biters are disabled. This was mostly to prioritise releasing a playable version without needing to integrate and balance military. Biters might get reintroduced as an optional extra at some point. |
 | **Where are all the technologies?** | Most technologies are hidden at the start of the game. The technology tree will expand as you gain access to new levels of science. |
 | **Is this a Krastorio 2 extension?** | Ultracube depends only on [Krastorio2Assets](https://mods.factorio.com/mod/Krastorio2Assets) for some additional graphics and sounds (see [credits](#dependencies-and-credits)). It's otherwise separate and doesn't share any technologies or recipes with Krastorio 2. |
 | **So do I have to manually hand-feed this cube all the time, or what?** | You will likely need to do a few things manually in the short early-game section. Technologies will soon allow for automation. |

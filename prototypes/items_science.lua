@@ -2,6 +2,7 @@ data:extend({
   {
     type = "tool",
     name = "cube-basic-contemplation-unit",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -23,13 +24,14 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "0[contemplation]",
+    order = "cube-0[contemplation]",
     stack_size = 100,
     durability = 1,
   },
   {
     type = "tool",
     name = "cube-fundamental-comprehension-card",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -51,13 +53,14 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "1[comprehension]",
+    order = "cube-1[comprehension]",
     stack_size = 100,
     durability = 1,
   },
   {
     type = "tool",
     name = "cube-abstract-interrogation-card",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -79,13 +82,14 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "2[interrogation]",
+    order = "cube-2[interrogation]",
     stack_size = 100,
     durability = 1,
   },
   {
     type = "tool",
     name = "cube-deep-introspection-card",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -107,13 +111,14 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "3[introspection]",
+    order = "cube-3[introspection]",
     stack_size = 100,
     durability = 1,
   },
   {
     type = "tool",
     name = "cube-synthetic-premonition-card",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -135,13 +140,14 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "4[premonition]",
+    order = "cube-4[premonition]",
     stack_size = 100,
     durability = 1,
   },
   {
     type = "tool",
     name = "cube-complete-annihilation-card",
+    localised_description = {"item-description.cube-science-card"},
     icon = "__Krastorio2Assets__/icons/cards/advanced-tech-card.png",
     icon_size = 64, icon_mipmaps = 4,
     pictures = {
@@ -163,7 +169,7 @@ data:extend({
       },
     },
     subgroup = "cube-science",
-    order = "5[annihilation]",
+    order = "cube-5[annihilation]",
     stack_size = 100,
     durability = 1,
   },
@@ -175,7 +181,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "z[quantum-research-data]",
+    order = "cube-z[quantum-research-data]",
     stack_size = 50,
   },
   {
@@ -185,7 +191,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-experimental",
-    order = "y[singularity-research-data]",
+    order = "cube-y[singularity-research-data]",
     stack_size = 50,
   },
   {
@@ -195,7 +201,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-final-machines",
-    order = "z[construct]",
+    order = "cube-z[construct]",
     stack_size = 1,
     flags = {"hidden"},
     durability = 1,

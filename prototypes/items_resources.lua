@@ -35,7 +35,7 @@ data:extend({
       },
     },
     subgroup = "raw-resource",
-    order = "e[0-raw-rare-metals]",
+    order = "cube-e[0-raw-rare-metals]",
     stack_size = 100,
   },
   {
@@ -64,7 +64,7 @@ data:extend({
       },
     },
     subgroup = "cube-processing",
-    order = "a[refined-rare-metals]",
+    order = "cube-a[refined-rare-metals]",
     stack_size = 100,
   },
   {
@@ -117,7 +117,7 @@ data:extend({
       },
     },
     subgroup = "cube-basic-products",
-    order = "1[rare-metals]",
+    order = "cube-1[rare-metals]",
     stack_size = 100,
   },
 
@@ -135,7 +135,7 @@ data:extend({
       },
     },
     subgroup = "cube-processing",
-    order = "c[0-sand]",
+    order = "cube-c[0-sand]",
     stack_size = 200,
   },
   {
@@ -144,7 +144,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/glass.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-processed-materials",
-    order = "1[a-glass]",
+    order = "cube-1[a-glass]",
     stack_size = 50,
   },
 
@@ -174,14 +174,14 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "a[calcium]",
+    order = "cube-a[calcium]",
     stack_size = 100,
   },
   {
     type = "item",
     name = "cube-intelligent-calcium",
     icon = "__Ultracube__/assets/icons/intelligent-calcium.png",
-    icon_size = 128, icon_mipmaps = 5,
+    icon_size = 128,
     pictures = {
       {
         layers = {
@@ -233,7 +233,7 @@ data:extend({
       },
     },
     subgroup = "cube-experimental",
-    order = "b[calcium]",
+    order = "cube-b[calcium]",
     stack_size = 100,
   },
   {
@@ -262,7 +262,7 @@ data:extend({
       },
     },
     subgroup = "cube-processing",
-    order = "b[0-mash]",
+    order = "cube-b[0-mash]",
     stack_size = 100,
   },
 
@@ -355,7 +355,7 @@ data:extend({
       },
     },
     subgroup = "raw-resource",
-    order = "f[1-deep-core-ore]",
+    order = "cube-f[1-deep-core-ore]",
     stack_size = 200,
   },
   {
@@ -427,7 +427,7 @@ data:extend({
       },
     },
     subgroup = "cube-processing",
-    order = "d[0-powder]",
+    order = "cube-d[0-powder]",
     stack_size = 200,
   },
   {
@@ -539,7 +539,7 @@ data:extend({
       },
     },
     subgroup = "cube-chemical-intermediates",
-    order = "0[b-crystal]",
+    order = "cube-0[b-crystal]",
     stack_size = 50,
   },
   {
@@ -548,7 +548,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/items/potato.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-fuel",
-    order = "1[a-potato]",
+    order = "cube-1[a-potato]",
     stack_size = 50,
   },
   {
@@ -557,7 +557,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/capsules/spoiled-potato.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-fuel",
-    order = "1[b-potato]",
+    order = "cube-1[b-potato]",
     stack_size = 50,
   },
   {
@@ -600,7 +600,7 @@ data:extend({
       },
     },
     subgroup = "cube-chemical-intermediates",
-    order = "0[c-crystal]",
+    order = "cube-0[c-crystal]",
     stack_size = 100,
   },
   {
@@ -636,7 +636,7 @@ data:extend({
       },
     },
     subgroup = "cube-processed-materials",
-    order = "5[spectralite]",
+    order = "cube-5[spectralite]",
     stack_size = 100,
   },
   {
@@ -665,8 +665,8 @@ data:extend({
       },
     },
     subgroup = "cube-processing",
-    order = "x[0-tendrils]",
-    stack_size = 100,
+    order = "cube-x[0-tendrils]",
+    stack_size = 50,
   },
   {
     type = "item",
@@ -693,7 +693,7 @@ data:extend({
     },
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-uranium",
-    order = "a[1]",
+    order = "cube-a[1]",
     stack_size = 100,
   },
 })

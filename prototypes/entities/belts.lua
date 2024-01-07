@@ -60,7 +60,7 @@ data:extend({
     tile_height = 1,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "d[remnants]-a[generic]-a[small]",
+    order = "cube-d[remnants]-a[generic]-a[small]",
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
@@ -100,7 +100,7 @@ data:extend({
     tile_height = 1,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "d[remnants]-a[generic]-a[small]",
+    order = "cube-d[remnants]-a[generic]-a[small]",
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
@@ -140,7 +140,7 @@ data:extend({
     tile_height = 1,
     selectable_in_game = false,
     subgroup = "remnants",
-    order = "d[remnants]-a[generic]-a[small]",
+    order = "cube-d[remnants]-a[generic]-a[small]",
     time_before_removed = 60 * 60 * 15, -- 15 minutes
     final_render_layer = "remnants",
     remove_on_tile_placement = false,

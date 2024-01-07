@@ -9,7 +9,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
-    order = "a[tar]-a[tar]",
+    order = "cube-a[tar]-a[tar]",
   },
   {
     type = "fluid",
@@ -22,7 +22,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
-    order = "a[tar]-b[heavy]",
+    order = "cube-a[tar]-b[heavy]",
   },
   {
     type = "fluid",
@@ -35,7 +35,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
-    order = "a[tar]-c[light]",
+    order = "cube-a[tar]-c[light]",
   },
   {
     type = "fluid",
@@ -47,7 +47,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
-    order = "a[tar]-a[unstable-gas]",
+    order = "cube-a[tar]-a[unstable-gas]",
   },
   {
     type = "fluid",
@@ -59,7 +59,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
-    order = "a[tar]-c[lubricant]",
+    order = "cube-a[tar]-c[lubricant]",
   },
   {
     type = "fluid",
@@ -71,7 +71,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
-    order = "1[ethanol]",
+    order = "cube-1[ethanol]",
   },
   {
     type = "fluid",
@@ -83,7 +83,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-a[gel]",
+    order = "cube-b[matter]-a[gel]",
   },
   {
     type = "fluid",
@@ -95,7 +95,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-b[cerebral]",
+    order = "cube-b[matter]-b[cerebral]",
   },
   {
     type = "fluid",
@@ -107,7 +107,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-c[joy]",
+    order = "cube-b[matter]-c[joy]",
   },
   {
     type = "fluid",
@@ -119,7 +119,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
-    order = "b[matter]-d[despair]",
+    order = "cube-b[matter]-d[despair]",
   },
   {
     type = "fluid",
@@ -130,7 +130,7 @@ data:extend({
     flow_color = {r=0.5, g=0.5, b=0.75},
     default_temperature = 25,
     heat_capacity = "0.1KJ",
-    order = "a[fluid]-b[mineral-water]",
+    order = "cube-a[fluid]-b[mineral-water]",
   },
   {
     type = "fluid",
@@ -142,7 +142,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
-    order = "0[deep-solution]",
+    order = "cube-0[deep-solution]",
   },
   {
     type = "fluid",
@@ -154,7 +154,18 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
-    order = "x[ectoplasm]",
+    order = "cube-x[ectoplasm]",
+  },
+  {
+    type = "fluid",
+    name = "cube-radioactive-sludge",
+    icon = "__Ultracube__/assets/icons/radioactive-sludge.png",
+    icon_size = 64, icon_mipmaps = 4,
+    base_color = {r=0.02, g=0.18, b=0.03},
+    flow_color = {r=0.05, g=0.35, b=0.05},
+    default_temperature = 25,
+    subgroup = "cube-energy-fluids",
+    order = "cube-0[sludge]",
   },
   {
     type = "fluid",
@@ -166,7 +177,7 @@ data:extend({
     default_temperature = 25,
     fuel_value = "400kJ",
     subgroup = "cube-distillation",
-    order = "y[beacon-juice]",
+    order = "cube-y[beacon-juice]",
   },
   {
     type = "fluid",
@@ -178,7 +189,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-forbidden",
-    order = "3[step-2a]",
+    order = "cube-3[step-2a]",
   },
   {
     type = "fluid",
@@ -191,7 +202,7 @@ data:extend({
     max_temperature = 425,
     heat_capacity = "0.2KJ",
     subgroup = "cube-energy-fluids",
-    order = "a[void-wind]",
+    order = "cube-a[void-wind]",
   },
   {
     type = "fluid",
@@ -203,7 +214,7 @@ data:extend({
     default_temperature = 25,
     fuel_value = "250KJ",
     subgroup = "cube-energy-fluids",
-    order = "x[ion-stream]",
+    order = "cube-x[ion-stream]",
   },
   {
     type = "fluid",
@@ -214,6 +225,6 @@ data:extend({
     flow_color = {r=0.45, g=0.1, b=0.2, a=1},
     default_temperature = 25,
     subgroup = "cube-energy-fluids",
-    order = "y[gamma-stream]",
+    order = "cube-y[gamma-stream]",
   },
 })

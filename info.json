@@ -1,6 +1,6 @@
 {
   "name": "Ultracube",
-  "version": "0.2.12",
+  "version": "0.3.0",
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
@@ -19,8 +19,10 @@
     "?pushbutton",
     "?textplates",
     "?aai-signal-transmission",
-    "?better-victory-screen >= 0.2.3",
-    "!Krastorio2"
+    "?better-victory-screen >= 0.2.4",
+    "!Krastorio2",
+    "!burner-fuel-bonus",
+    "!WideChests"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod."
 }

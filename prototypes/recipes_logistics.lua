@@ -687,7 +687,7 @@ data:extend({
     energy_required = 2,
     category = "cube-fabricator-handcraft",
     subgroup = "logistic-network",
-    order = "a[robot]-b[construction-robot]",
+    order = "cube-a[robot]-b[construction-robot]",
     enabled = false,
   },
   {
@@ -708,7 +708,7 @@ data:extend({
     energy_required = 4,
     category = "cube-fabricator-handcraft",
     subgroup = "logistic-network",
-    order = "a[robot]-a[logistic-robot]",
+    order = "cube-a[robot]-a[logistic-robot]",
     enabled = false,
   },
   {

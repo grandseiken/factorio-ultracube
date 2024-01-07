@@ -510,6 +510,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-abstract-interrogation-card",
+    localised_description = {"technology-description.cube-technology-technology"},
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     effects = {

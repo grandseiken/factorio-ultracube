@@ -42,10 +42,9 @@ local cube_management = {
   cube_defines = cube_defines,
   cubes = cubes,
   cube_info = cube_info,
+  cube_drop = cube_drop,
 }
 
-local cubes = cubes
-local cube_info = cube_info
 local cube_weight = {
   [cubes.ultradense] = 1,
   [cubes.dormant] = 1,
@@ -163,25 +162,6 @@ function cube_management.is_entity_burning_fuel(entity, fuel_item)
          entity.burner.currently_burning.name == fuel_item
 end
 
-local fuel_map = {
-  [cubes.ultradense] = cubes.dormant,
-  [cubes.ultradense_phantom] = cubes.dormant_phantom,
-}
-function cube_management.return_cube_fuel(entity, inventory)
-  for base, dormant in pairs(fuel_map) do
-    if cube_management.is_entity_burning_fuel(entity, base) then
-      if inventory then
-        inventory.insert(dormant)
-      else
-        entity.surface.spill_item_stack(
-          entity.position, {name = dormant, count = 1}, nil, nil, false)
-        -- Should call cube_search.hint_entity on the result, really,
-        -- but rare (never?) and dependencies.
-      end
-    end
-  end
-end
-
 function cube_management.drop_before_leaving(player_index)
   local player = game.get_player(player_index)
   local recipes = cube_management.recipes()
@@ -199,17 +179,22 @@ function cube_management.drop_before_leaving(player_index)
     end
   end
 
+  local results = {}
   local keep_going = true
   while keep_going do
     keep_going = false
     for item, _ in pairs(cube_drop) do
       local removed = player.remove_item(item)
       if removed > 0 then
-        player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)
+        local spill = player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)
+        for _, e in ipairs(spill) do
+          results[#results + 1] = e
+        end
         keep_going = true
       end
     end
   end
+  return results
 end
 
 return cube_management

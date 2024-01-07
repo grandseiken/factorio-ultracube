@@ -63,11 +63,11 @@ if mods["nixie-tubes"] then
   add_mystery_recipe(1, "nixie-tube-small", "cube-glass")
 
   data.raw.item["nixie-tube"].subgroup = "cube-combinator-extra"
-  data.raw.item["nixie-tube"].order = "y"
+  data.raw.item["nixie-tube"].order = "cube-y"
   data.raw.item["nixie-tube-alpha"].subgroup = "cube-combinator-extra"
-  data.raw.item["nixie-tube-alpha"].order = "y"
+  data.raw.item["nixie-tube-alpha"].order = "cube-y"
   data.raw.item["nixie-tube-small"].subgroup = "cube-combinator-extra"
-  data.raw.item["nixie-tube-small"].order = "y"
+  data.raw.item["nixie-tube-small"].order = "cube-y"
 end
 
 if mods["SantasNixieTubeDisplay"] or mods["UPSFriendlyNixieTubeDisplay"] then
@@ -100,11 +100,11 @@ if mods["SantasNixieTubeDisplay"] or mods["UPSFriendlyNixieTubeDisplay"] then
   }
 
   data.raw.item["SNTD-old-nixie-tube"].subgroup = "cube-combinator-extra"
-  data.raw.item["SNTD-old-nixie-tube"].order = "y-a"
+  data.raw.item["SNTD-old-nixie-tube"].order = "cube-y-a"
   data.raw.item["SNTD-nixie-tube"].subgroup = "cube-combinator-extra"
-  data.raw.item["SNTD-nixie-tube"].order = "y-b"
+  data.raw.item["SNTD-nixie-tube"].order = "cube-y-b"
   data.raw.item["SNTD-nixie-tube-small"].subgroup = "cube-combinator-extra"
-  data.raw.item["SNTD-nixie-tube-small"].order = "y-c"
+  data.raw.item["SNTD-nixie-tube-small"].order = "cube-y-c"
 
   add_mystery_recipe(1, "SNTD-old-nixie-tube", "cube-glass")
   add_mystery_recipe(1, "SNTD-nixie-tube", "SNTD-old-nixie-tube")

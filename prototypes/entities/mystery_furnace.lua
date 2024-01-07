@@ -1,6 +1,7 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/module_effects")
+require("__Ultracube__/scripts/lib")
 
 local function stygian_smoke()
   local smoke = {}

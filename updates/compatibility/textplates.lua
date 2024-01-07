@@ -29,6 +29,8 @@ if mods["textplates"] then
       recipes[large].ingredients = {{ingredient, 4}}
       data.raw.item[small].flags = {}
       data.raw.item[large].flags = {}
+      data.raw.item[small].order = "cube-" .. data.raw.item[small].order
+      data.raw.item[large].order = "cube-" .. data.raw.item[large].order
     else
       data.raw.item[small].flags = {"hidden"}
       data.raw.item[large].flags = {"hidden"}

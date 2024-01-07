@@ -167,7 +167,9 @@ script.on_event(
     defines.events.on_pre_player_left_game,
   },
   function(e)
-    cube_management.drop_before_leaving(e.player_index)
+    for _, entity in ipairs(cube_management.drop_before_leaving(e.player_index)) do
+      cube_search.hint_entity(entity)
+    end
   end)
 
 script.on_event(
@@ -189,7 +191,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, e.loot)
+    linked_entities.return_cubes(e.entity, e.loot)
     on_entity_removed(e.entity)
   end)
 
@@ -204,6 +206,7 @@ script.on_event(
     end
     tech_unlock.constructed(e.entity)
     on_entity_added(e.entity)
+    cube_search.hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -212,7 +215,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, nil)
+    linked_entities.return_cubes(e.entity, nil, true)
     on_entity_removed(e.entity)
   end)
 
@@ -223,6 +226,7 @@ script.on_event(
       return
     end
     on_entity_move(e.entity, e.old_surface_index, e.old_position)
+    cube_search.hint_entity(e.entity)
   end)
 
 script.on_event(
@@ -234,8 +238,11 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    cube_management.return_cube_fuel(e.entity, e.buffer)
+    linked_entities.return_cubes(e.entity, e.buffer)
     on_entity_removed(e.entity)
+    if e.player_index then
+      entity_combine.mined_final(e.entity, game.players[e.player_index])
+    end
   end)
 
 script.on_event(
@@ -270,6 +277,26 @@ script.on_event(defines.events.on_tick,
     transition.tick(e.tick)
     linked_entities.tick(e.tick)
   end)
+
+-- Custom input events.
+script.on_event("cube-toggle-alerts", function(e)
+  local settings = settings.get_player_settings(e.player_index)
+  local value = settings["cube-show-cube-alerts"].value
+  local new_value = not value
+  local player = game.players[e.player_index]
+  if new_value then
+    player.print({"cube-msg-alerts-enabled"})
+  else
+    player.print({"cube-msg-alerts-disabled"})
+  end
+  settings["cube-show-cube-alerts"] = {value = new_value}
+end)
+
+local function remote_hint_entity(entity)
+  if entity then
+    cube_search.hint_entity(entity)
+  end
+end
 
 -- Better victory screen support.
 local function better_victory_screen_statistics()
@@ -308,6 +335,7 @@ local function better_victory_screen_statistics()
 end
 
 remote.add_interface("Ultracube", {
+  ["hint_entity"] = remote_hint_entity,
   ["better-victory-screen-statistics"] = better_victory_screen_statistics,
 })
 

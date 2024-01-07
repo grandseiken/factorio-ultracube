@@ -790,6 +790,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-deep-introspection-card",
+    localised_description = {"technology-description.cube-technology-technology"},
     icon = "__Krastorio2Assets__/technologies/singularity-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
@@ -807,6 +808,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-synthetic-premonition-card",
+    localised_description = {"technology-description.cube-technology-technology"},
     icon = "__Krastorio2Assets__/technologies/optimization-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {

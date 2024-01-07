@@ -20,7 +20,6 @@ function entity_cache.refresh()
     cube_burners = {},
     inserters = {},
     vehicles = {},
-    reactors = {},
     multi_furnaces = {},
     by_name = {},
     by_name_by_tick = {},
@@ -83,13 +82,10 @@ local entity_types = {
     "cargo-wagon",
     "spider-vehicle",
   }),
-  reactor = make_set({
-    "cube-nuclear-reactor",
-    "cube-nuclear-reactor-online",
-  }),
   multi_furnace = transition_table,
   by_name = make_set({
     "cube-cyclotron",
+    "cube-nuclear-reactor",
     "cube-antimatter-reactor",
     "cube-experimental-teleporter",
   }),
@@ -102,7 +98,6 @@ local inventory_entity_types = entity_types.inventory
 local cube_crafter_entity_types = entity_types.cube_crafter
 local cube_burner_entity_types = entity_types.cube_burner
 local vehicle_entity_types = entity_types.vehicle
-local reactor_entities = entity_types.reactor
 local multi_furnace_entities = entity_types.multi_furnace
 local by_name_entities = entity_types.by_name
 local by_name_by_tick_entities = entity_types.by_name_by_tick
@@ -115,6 +110,7 @@ local function by_tick(unit_number)
 end
 
 function entity_cache.is_cube_crafter(entity)
+  -- TODO: just cache this by entity.
   local categories = cube_management.recipe_categories()
   if cube_crafter_entity_types[entity.type] and entity.prototype.crafting_categories then
     for category, _ in pairs(entity.prototype.crafting_categories) do
@@ -130,8 +126,11 @@ function entity_cache.is_cube_crafter(entity)
 end
 
 function entity_cache.is_cube_burner(entity)
-  return cube_burner_entity_types[entity.type] and entity.prototype.burner_prototype and
-         entity.prototype.burner_prototype.burnt_inventory_size > 0
+  if not cube_burner_entity_types[entity.type] then
+    return false
+  end
+  local burner = entity.prototype.burner_prototype
+  return burner and burner.burnt_inventory_size > 0
 end
 
 local is_cube_crafter = entity_cache.is_cube_crafter
@@ -167,9 +166,6 @@ local function add_internal(entity, cache, is_global)
     needs_chunk_cache = false
   end
   if is_global then
-    if entity_type == "reactor" and reactor_entities[entity_name] then
-      cache.reactors[unit_number] = entity
-    end
     if entity_type == "furnace" and multi_furnace_entities[entity_name] then
       cache.multi_furnaces[unit_number] = entity
     end
@@ -237,9 +233,6 @@ local function remove_internal(entity, cache, is_global)
     needs_chunk_cache = false
   end
   if is_global then
-    if entity_type == "reactor" and reactor_entities[entity_name] then
-      cache.reactors[unit_number] = nil
-    end
     if entity_type == "furnace" and multi_furnace_entities[entity_name] then
       cache.multi_furnaces[unit_number] = nil
     end

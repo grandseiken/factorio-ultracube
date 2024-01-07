@@ -29,7 +29,7 @@ data:extend({
     energy_required = 4,
     category = "cube-fabricator-handcraft",
     subgroup = "cube-module-intermediates",
-    order = "b[burnt-out-modular-casing]",
+    order = "cube-b[burnt-out-modular-casing]",
     enabled = false,
   },
 
