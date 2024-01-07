@@ -278,6 +278,20 @@ script.on_event(defines.events.on_tick,
     linked_entities.tick(e.tick)
   end)
 
+-- Custom input events.
+script.on_event("cube-toggle-alerts", function(e)
+  local settings = settings.get_player_settings(e.player_index)
+  local value = settings["cube-show-cube-alerts"].value
+  local new_value = not value
+  local player = game.players[e.player_index]
+  if new_value then
+    player.print({"cube-msg-alerts-enabled"})
+  else
+    player.print({"cube-msg-alerts-disabled"})
+  end
+  settings["cube-show-cube-alerts"] = {value = new_value}
+end)
+
 local function remote_hint_entity(entity)
   if entity then
     cube_search.hint_entity(entity)
