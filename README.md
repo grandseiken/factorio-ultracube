@@ -118,7 +118,7 @@ This list is expected to grow with time. You can submit a pull request, github i
 
 ## Compatibility guide for modders
 
-See the [dedicated compatibility page he](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md).
+See the [dedicated compatibility page here](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md).
 
 # FAQ
 
