@@ -104,6 +104,7 @@ The following mods have been adapted to work with Ultracube:
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
+| [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some challenges, not essential |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
