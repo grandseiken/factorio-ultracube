@@ -64,9 +64,9 @@ if mods["Flow Control"] then
   data.raw.item["check-valve"].order = "cube-" .. data.raw.item["check-valve"].order
   data.raw.item["overflow-valve"].order = "cube-" .. data.raw.item["overflow-valve"].order
   data.raw.item["underflow-valve"].order = "cube-" .. data.raw.item["underflow-valve"].order
-  data.raw.recipe["pipe-elbow"].order = "cube-a"
-  data.raw.recipe["pipe-junction"].order = "cube-a"
-  data.raw.recipe["pipe-straight"].order = "cube-a"
+  data.raw.recipe["pipe-elbow"].order = "cube-" .. data.raw.item["pipe-elbow"].order
+  data.raw.recipe["pipe-junction"].order = "cube-" .. data.raw.item["pipe-junction"].order
+  data.raw.recipe["pipe-straight"].order = "cube-" .. data.raw.item["pipe-straight"].order
 
   add_mystery_recipe(1, "pipe-elbow", "pipe")
   add_mystery_recipe(1, "pipe-junction", "pipe")
