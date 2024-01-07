@@ -13,6 +13,7 @@ if mods["safefill"] then
     if recipe then
       recipe.category = "cube-fabricator-handcraft"
     end
+    add_mystery_recipe(1, recipe_name, "landfill")
   end
   local tech = data.raw.technology["nullius-irrigation"]
   tech.unit = tech_cost_unit("2", 320)

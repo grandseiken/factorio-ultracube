@@ -25,4 +25,7 @@ if mods["recursive-blueprints"] or mods["rec-blue-plus"] then
   local item = data.raw.item["recursive-blueprints-scanner"]
   item.subgroup = "cube-combinator-extra"
   item.order = "cube-z-" .. item.order
+
+  add_mystery_recipe(1, "blueprint-deployer", "blueprint-book")
+  add_mystery_recipe(1, "recursive-blueprints-scanner", "cube-electronic-circuit")
 end
