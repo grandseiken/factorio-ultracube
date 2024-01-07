@@ -6,7 +6,7 @@ You can see examples of the kind of tweaks that are needed in existing compatibi
 
 ### Where to add compatibility code
 
-Compatibility code can be added in your mod or Ultracube itself.
+Compatibility code can be added in your mod or Ultracube itself (by opening a pull request).
 
 You can add compatibility code in your mod by checking for the presence of Ultracube and making adjustments. This should ideally be done in `data.lua` to be sure the changes have been made in time for Ultracube to see them when it does compatibility checks in its `data-updates.lua`.
 

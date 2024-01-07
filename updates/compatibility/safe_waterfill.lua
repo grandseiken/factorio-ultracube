@@ -8,8 +8,11 @@ if mods["safefill"] then
     "safefill-deepgreen",
   }
 
-  for _, recipe in ipairs(recipes) do
-    data.raw.recipe[recipe].category = "cube-fabricator-handcraft"
+  for _, recipe_name in ipairs(recipes) do
+    local recipe = data.raw.recipe[recipe_name]
+    if recipe then
+      recipe.category = "cube-fabricator-handcraft"
+    end
   end
   local tech = data.raw.technology["nullius-irrigation"]
   tech.unit = tech_cost_unit("2", 320)

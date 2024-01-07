@@ -13,6 +13,7 @@ Date: ??
   Minor Features:
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.
     - Added optional compatibility with Safe Waterfill.
+    - Added optional compatibility with Recursive Blueprints and Recursive Blueprints+.
   Bugfixes:
     - Fixed an issue where reactors could duplicate themselves.
     - Fixed an issue where the cube couldn't be found after manually placing it in the burnt fuel result inventory of a machine.
