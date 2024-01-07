@@ -88,8 +88,8 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
-  for interface, functions in pairs(remote.interfaces) do
-    if functions["set_no_victory"] then
+  for _, interface in pairs{"silo_script", "better-victory-screen"} do
+    if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
       remote.call(interface, "set_no_victory", true)
     end
   end
