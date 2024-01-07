@@ -6,7 +6,6 @@ if mods["recursive-blueprints"] or mods["rec-blue-plus"] then
     {"cube-electronic-circuit", 3},
     {"cube-advanced-circuit", 1},
   }
-  recipe.enabled = true
 
   recipe = data.raw.recipe["recursive-blueprints-scanner"]
   recipe.category = "cube-fabricator-handcraft"
@@ -15,7 +14,10 @@ if mods["recursive-blueprints"] or mods["rec-blue-plus"] then
     {"cube-basic-matter-unit", 5},
     {"cube-rare-metals", 5},
   }
-  recipe.enabled = true
+
+  local tech = data.raw.technology["cube-construction-robotics"]
+  table.insert(tech.effects, {type = "unlock-recipe", recipe = "blueprint-deployer"})
+  table.insert(tech.effects, {type = "unlock-recipe", recipe = "recursive-blueprints-scanner"})
 
   local item = data.raw.item["blueprint-deployer"]
   item.subgroup = "cube-combinator-extra"
