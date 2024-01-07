@@ -339,42 +339,57 @@ local cube_working_machine_types = {
 }
 
 local function track_victory_statistics(size, results)
-  if size == 0 then return end      -- There are no cubes! That's weird, let's ignore the problem
 
-  -- We will only look at what the first cube is doing, because there might be
-  -- multiple like when it's in its phantom form. This makes it not entirely
-  -- accurate, but it's better than nothing. It's also important that we track
-  -- something as often as possible to ensure the "utilization" is calculated
-  -- somewhat correctly.
-  local entity = results[1].entity
-
-  if not entity or not entity.valid then return end
-
-  -- Track distance travelled by this cube
-  local old = victory_statistics.cube_last_position
-  local new = entity.position
-  if old then
-    local old_x = old.x
-    local old_y = old.y
-    local new_x = new.x
-    local new_y = new.y
-    if old_x ~= new_x or old_y ~= new_y then
-      local dx = new_x - old_x
-      local dy = new_y - old_y
-      victory_statistics.distance_travelled_by_cube =
-          victory_statistics.distance_travelled_by_cube + math.sqrt(dx * dx + dy * dy)
+  -- We will only track the distance if there is only one cube.
+  -- There is no guarentee to the order of results, meaning the 
+  -- new position might not relate to the old position, resulting
+  -- in really bad measurements. Therefore when the cube is split
+  -- apart we clear the previous_position, only only start tracking
+  -- again when the cube is back into one piece.
+  -- The last position is nilled when:
+  --   - There are no cubes
+  --   - There are more than one cube
+  --   - The one cube is invalid for some reason (should never happen)
+  if size == 1 then
+    local entity = results[1].entity
+    if entity and entity.valid then
+      local old = victory_statistics.cube_last_position
+      local new = entity.position
+      if old then
+        local old_x = old.x
+        local old_y = old.y
+        local new_x = new.x
+        local new_y = new.y
+        if old_x ~= new_x or old_y ~= new_y then
+          local dx = new_x - old_x
+          local dy = new_y - old_y
+          victory_statistics.distance_travelled_by_cube =
+              victory_statistics.distance_travelled_by_cube + math.sqrt(dx * dx + dy * dy)
+        end
+      end
+      victory_statistics.cube_last_position = new
+    else
+      victory_statistics.cube_last_position = nil -- Invalid entity
     end
-  end
-  victory_statistics.cube_last_position = new
-
-  -- Track cube "utilization"
-  local machine_conditional = cube_working_machine_types[entity.type]
-  if machine_conditional and machine_conditional(entity, results[1].item) then
-    -- The cube is in some entity that's using the cube "utilization"
-    victory_statistics.utilization.working = victory_statistics.utilization.working + 1
   else
-    -- The cube is idling!
-    victory_statistics.utilization.idle = victory_statistics.utilization.idle + 1
+    victory_statistics.cube_last_position = nil   -- Wrong number of cubes
+  end
+
+  -- Track cube "utilization". This is done when there is at least one cube.
+  -- Something is wrong when there are no cubes so we won't count that as idling.
+  -- When there are multiple cubes we will pick one at random to get
+  -- a less biased sampling
+  if size > 0 then
+    local entity = results[math.random(size)].entity
+    if not (entity and entity.valid) then return end -- Should never happen
+    local machine_conditional = cube_working_machine_types[entity.type]
+    if machine_conditional and machine_conditional(entity, results[1].item) then
+      -- The cube is in some entity that's using the cube "utilization"
+      victory_statistics.utilization.working = victory_statistics.utilization.working + 1
+    else
+      -- The cube is idling!
+      victory_statistics.utilization.idle = victory_statistics.utilization.idle + 1
+    end
   end
 end
 
