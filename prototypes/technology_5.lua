@@ -161,6 +161,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-complete-annihilation-card",
+    localised_description = {"technology-description.cube-technology-technology"},
     icon = "__Krastorio2Assets__/technologies/advanced-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {

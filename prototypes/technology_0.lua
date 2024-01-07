@@ -192,6 +192,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-fundamental-comprehension-card",
+    localised_description = {"technology-description.cube-technology-technology"},
     icon = "__Krastorio2Assets__/technologies/logistic-tech-card.png",
     icon_size = 256, icon_mipmaps = 4,
     effects = {
