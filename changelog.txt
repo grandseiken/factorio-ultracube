@@ -12,6 +12,7 @@ Date: ??
     - Reworked systems for detecting and supporting compatibility with other mods. Added a compatibility guide for those who want to add support for Ultracube in their mods.
   Minor Features:
     - Riding a train while carrying the ultradense cube in your inventory will now also trigger the transitive ultralocomotion technology.
+    - Added optional compatibility with Safe Waterfill.
   Bugfixes:
     - Fixed an issue where reactors could duplicate themselves.
     - Fixed an issue where the cube couldn't be found after manually placing it in the burnt fuel result inventory of a machine.

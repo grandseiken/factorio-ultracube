@@ -108,6 +108,7 @@ The following mods have been adapted to work with Ultracube:
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
+| [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
 | [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
