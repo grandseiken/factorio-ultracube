@@ -6,7 +6,7 @@ You can see examples of the kind of tweaks that are needed in existing compatibi
 
 ### Where to add compatibility code
 
-Compatibility code can be added in your mod or Ultracube itself (by opening a pull request).
+Compatibility code can be added either in your mod (let me know so I can add it to the list of compatible mods in the description) or Ultracube itself (by opening a pull request).
 
 You can add compatibility code in your mod by checking for the presence of Ultracube and making adjustments. This should ideally be done in `data.lua` to be sure the changes have been made in time for Ultracube to see them when it does compatibility checks in its `data-updates.lua`.
 
@@ -98,27 +98,27 @@ add_mystery_recipe(1, "your-mod-item", "your-result-item")
 
 ## Adding compatibility with Ultracube for your mod that messes with machines or inventories via script
 
-Ultracube is quite sensitive to other mods modifying entities in unexpected ways at runtime via script. To work correctly it needs to track the location of limited items such as the cube, and to do this in a UPS-friendly way takes a lot of complicated infrastructure that can break down. To avoid your mod causing script errors you need to be careful in the following situations:
+Ultracube is quite sensitive to other mods modifying entities in unexpected ways at runtime via script. To work correctly it needs to track the location of limited items such as the cube, and to do this in a UPS-friendly way takes some complicated infrastructure that can break down if things are changed out from underneath it. To avoid your mod causing script errors you need to be careful in the following situations:
 
-### Destroying, creating, or moving / teleporting any entity that could ever concievably contain a cube
+### Destroying, creating, or moving or teleporting any entity that could ever concievably contain a cube
 
 Ultracube needs to know when this happens so it can update its internal caches. You need to make sure you:
 
 * Ensure [`script_raised_built`](https://lua-api.factorio.com/latest/events.html#script_raised_built) or [`script_raised_revive`](https://lua-api.factorio.com/latest/events.html#script_raised_revive) is correctly fired when creating such an entity, e.g. by setting `raise_built = true` when calling [`LuaSurface::create_entity`](https://lua-api.factorio.com/latest/classes/LuaSurface.html#create_entity).
 * Ensure [`script_raised_destroy`](https://lua-api.factorio.com/latest/events.html#script_raised_destroy) is correctly fired when removing such an entity, e.g. by setting `raise_destroy = true` when calling [`LuaEntity::destroy`](https://lua-api.factorio.com/latest/classes/LuaEntity.html#destroy).
-* Ensure [`script_raised_teleported`](https://lua-api.factorio.com/latest/events.html#script_raised_teleported) is correctly fired when teleporting any such entity other than player characters, which have special handling.
+* Ensure [`script_raised_teleported`](https://lua-api.factorio.com/latest/events.html#script_raised_teleported) is correctly fired when teleporting any such entity (other than player characters, which have special handling anyway).
 
 Failing to do this could crash the game with script errors and make your mod incompatible.
 
 ### Teleporting items
 
-If your mod provides some new means to teleport or transfer an item, and that item could be a cube, it's good to tell Ultracube about it. Failing to do this won't crash the game, but will print a warning when it happens and Ultracube has to fall back to inefficient search methods that aren't good for UPS. You can do this by calling the remote interface and passing a hint about the entity into which the item was moved, to prioritise looking in and around the given entity next time Ultracube updates:
+If your mod provides some new means to teleport or transfer an item, and that item could be a cube, it's good to tell Ultracube about it. Failing to do this shouldn't crash the game, but will print a warning if Ultracube has to fall back to inefficient UPS-unfriendly search methods. You can do this by calling the remote interface and passing a hint about the entity into which the item was moved, to prioritise checking in and around the given entity next time Ultracube updates:
 
 ```
 remote.call("Ultracube", "hint_entity", some_lua_entity)
 ```
 
-This will also happen automatically when triggering `script_raised_teleported` and so on, so you don't need to do it in that case.
+This will happen automatically when triggering `script_raised_teleported` and so on, so you don't need to do it in that case.
 
 ### Creating duplicated cubes, for example in lab surface mods
 
