@@ -1,9 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.1
-Date: ??
+Date: 07. 01. 2024
   Changes:
     - Reduced the idle electrical power drain of a late-game building.
   Minor Features:
+    - Added a keyboard shortcut to toggle the cube alerts on and off (defaulting to Ctrl+A).
+    - Added optional compatibility with Display Plates.
     - Added optional compatibility with Stack Combinator.
   Modding:
     - Marked the Burner Fuel Bonus mod as incompatible.
