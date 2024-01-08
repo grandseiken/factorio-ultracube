@@ -314,6 +314,14 @@ local cube_machine_condition_handlers = {
   ["status"] = function(entity, cube_type)
     return entity.status == defines.entity_status.working
   end,
+  ['burner'] = function(entity, cube_type)
+    if entity.status ~= defines.entity_status.working then return false end
+    local burner = entity.burner
+    if not burner then return false end
+    -- Now we know this entity is currently burning
+    if burner.currently_burning and burner.currently_burning.name == cube_type then return true end
+    return false -- This burner is burning something else
+  end,
   ["handcrafting"] = function(character, cube_type)
     -- We could search through the crafting queue, but this function
     -- needs to be quick because it's called every 6 ticks. Lets
@@ -339,13 +347,28 @@ local cube_machine_condition_handlers = {
 -- the cube. 
 local cube_working_machine_types = {
   ["character"]           = cube_machine_condition_handlers["handcrafting"],
+
+  -- For the following entity-types we only ever have to check the entity status.
+  -- This is because in 99% of cases if the cube can be placed in the machine
+  -- then it has to be an ingredient or fuel. And thus, if the cube is in a machine
+  -- and it's not currently "working" then it would mean the cube is idling due to
+  -- `no_fuel`, `output_full`, `no_ingredients`, etc.
+  -- One edge case might be phantom cube placed in the output slot of a boiler
+  -- while the boiler is burning, but the only possible fuel source then
   ["assembling-machine"]  = cube_machine_condition_handlers["status"],
   ["furnace"]             = cube_machine_condition_handlers["status"],
-  ["boiler"]              = cube_machine_condition_handlers["status"],
   ["generator"]           = cube_machine_condition_handlers["status"],
   ["burner-generator"]    = cube_machine_condition_handlers["status"],
   ["rocket-silo"]         = cube_machine_condition_handlers["status"],
-  ["reactor"]             = cube_machine_condition_handlers["status"], -- Does this work?
+  ["reactor"]             = cube_machine_condition_handlers["status"],
+
+  -- The boiler is a special case though. It can be burned using Condensed Fuek
+  -- while a cube sits in the output slot, which means it will show as working.
+  -- Thus we'll add a special check to ensure it's burning the cube. This cannot
+  -- easily be applied to the furnace, because sometimes the furnace needs the cube
+  -- as ingredient and not fuel. But the furnace can only burn the cube as fuel, 
+  -- and nothing else. 
+  ["boiler"]              = cube_machine_condition_handlers["burner"],
 }
 
 local function track_victory_statistics(size, results)
