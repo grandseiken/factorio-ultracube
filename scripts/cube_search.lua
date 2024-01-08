@@ -873,7 +873,7 @@ function cube_search.update(tick)
         cube_search_data.was_refreshed = false
       else
         game.print("Ultracube warning: optimized cube control routines failed. This may be due to compatibility issues with another mod, or a bug that should be reported.")
-        cube_search_data.report_timer = 600
+        cube_search_data.report_timer = 1200
       end
     end
     clear_result_set()
