@@ -37,18 +37,14 @@ function cube_fx.refresh()
   global.victory_statistics = global.victory_statistics or {
     distance_travelled_by_cube = 0,
     cube_last_position = nil,
+    utilization = {
+      idle = 0,     -- The unit here doesn't matter, as long as it's consistent
+      working = 0,  -- between `idle` and `working`.
+    }
   }
 
   cube_fx_data = global.cube_fx_data
   victory_statistics = global.victory_statistics
-
-  if not victory_statistics.utilization then
-    -- A little migration.
-    victory_statistics.utilization = {
-      idle = 0,     -- The unit here doesn't matter, as long as it's consistent
-      working = 0,  -- between `idle` and `working`.
-    }
-  end
 end
 
 function cube_fx.on_load()
