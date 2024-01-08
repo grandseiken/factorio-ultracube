@@ -306,14 +306,14 @@ local function better_victory_screen_statistics()
 
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local production = force.item_production_statistics
-  local cubes_consumed = production.get_input_count("cube-ultradense-utility-cube")
-  local cubes_consumed_dormant = production.get_input_count("cube-dormant-utility-cube")
-  local cubes_consumed_phantom = production.get_input_count("cube-phantom-ultradense-constituent")
-  local cubes_consumed_phantom_dormant = production.get_input_count("cube-dormant-phantom-constituent")
-  local cubes_reconstructed = production.get_input_count("cube-legendary-iron-gear")
+  local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
+  local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
+  local cubes_consumed_phantom = production.get_output_count("cube-phantom-ultradense-constituent")
+  local cubes_consumed_phantom_dormant = production.get_output_count("cube-dormant-phantom-constituent")
+  local cubes_reconstructed = production.get_output_count("cube-legendary-iron-gear")
   local cubes_consumed_total = cubes_consumed + cubes_consumed_dormant +
       cubes_consumed_phantom + cubes_consumed_phantom_dormant
-  local matter_created = production.get_output_count("cube-basic-matter-unit")
+  local matter_created = production.get_input_count("cube-basic-matter-unit")
 
   stats["ultracube"] = {order = "a", stats = {
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},

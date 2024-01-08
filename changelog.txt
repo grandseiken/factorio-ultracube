@@ -9,6 +9,8 @@ Date: 07. 01. 2024
     - Added optional compatibility with Stack Combinator.
   Modding:
     - Marked the Burner Fuel Bonus mod as incompatible.
+  Bugfixes:
+    - Fixed Better Victory Screen statistics using production instead of consumption values (#14).
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 07. 01. 2024
