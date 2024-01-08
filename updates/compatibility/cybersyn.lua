@@ -9,7 +9,7 @@ if mods["cybersyn"] then
   local tech = data.raw.technology["cybersyn-train-network"]
   tech.prerequisites = {
     "cube-combinatorics",
-    "rail-signals",
+    "cube-rail-signals",
   }
   tech.unit = tech_cost_unit("1b", 120)
 
