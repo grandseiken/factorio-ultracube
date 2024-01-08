@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: ??
+  Bugfixes:
+    - Cube alerts will now play more nicely with programmable speakers by sharing time-slices of the custom alert channel when necessary.
+    - Fixed a regression with Cybersyn compatibility code.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 07. 01. 2024
   Changes:

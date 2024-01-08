@@ -7,11 +7,7 @@ local cube_dormant = cube_management.cubes.dormant
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 local legendary_iron_gear = cube_management.cubes.legendary_iron_gear
-
-local ultradense_icon = {type = "item", name = cube_ultradense}
-local dormant_icon = {type = "item", name = cube_dormant}
-local ultradense_phantom_icon = {type = "item", name = cube_ultradense_phantom}
-local dormant_phantom_icon = {type = "item", name = cube_dormant_phantom}
+local alert_icons = make_set({cube_ultradense, cube_dormant, cube_ultradense_phantom, cube_dormant_phantom, legendary_iron_gear})
 
 local ultralocomotion_fuel_map = {
   ["wood"] = "wood-ultralocomotion",
@@ -48,22 +44,44 @@ function cube_fx.on_load()
   victory_statistics = global.victory_statistics
 end
 
+local alert_type_custom = defines.alert_type.custom
+local alert_type_custom_t = {type = alert_type_custom}
+local function has_existing_alert(player)
+  for _, surface in pairs(player.get_alerts(alert_type_custom_t)) do
+    local alerts = surface[alert_type_custom]
+    if alerts then
+      for i = 1, #alerts do
+        local a = alerts[i]
+        if not (a.icon and a.icon.type == "item" and alert_icons[a.icon.name]) then
+          return true
+        end
+      end
+    end
+  end
+  return false
+end
+
 local custom_alert = {type = "item"}
 local custom_alert_text = {"alert-description.cube-alert"}
-local function cube_alert(size, results)
+local remove_alert_icon = {type = "item"}
+local remove_alert_t = {type = alert_type_custom, icon = remove_alert_icon}
+local function cube_alert(size, results, override)
   for _, player in pairs(game.players) do
-    player.remove_alert {type = defines.alert_type.custom, ultradense_icon}
-    player.remove_alert {type = defines.alert_type.custom, dormant_icon}
-    player.remove_alert {type = defines.alert_type.custom, ultradense_phantom_icon}
-    player.remove_alert {type = defines.alert_type.custom, dormant_phantom_icon}
-
-    if player.controller_type == defines.controllers.character and
+    local alerts_enabled =
+       player.controller_type == defines.controllers.character and
        player.mod_settings["cube-show-cube-alerts"].value and
-       cube_management.player_data(player).total_weight < 64 then
+       cube_management.player_data(player).total_weight < 1
+    if alerts_enabled and (override or not has_existing_alert(player)) then
+      player.remove_alert(alert_type_custom_t)
       for i = 1, size do
         local result = results[i]
         custom_alert.name = result.item
         player.add_custom_alert(result.entity, custom_alert, custom_alert_text, true)
+      end
+    else
+      for icon, _ in pairs(alert_icons) do
+        remove_alert_icon.name = icon
+        player.remove_alert(remove_alert_t)
       end
     end
   end
@@ -332,11 +350,12 @@ function cube_fx.tick(tick)
     return
   end
   local alert_tick = tick % 24 == 12
+  local alert_override_tick = tick % 240 >= 120
   local spark_tick = tick % 240 >= 120 and tick % 240 < 234
   local boom_tick = tick % 240 == 0
   local size, results = cube_search.update(tick)
   if alert_tick then
-    cube_alert(size, results)
+    cube_alert(size, results, alert_override_tick)
   end
   track_victory_statistics(size, results)
   cube_victory(size, results)
