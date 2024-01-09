@@ -2,7 +2,9 @@
 Version: 0.3.2
 Date: ??
   Changes:
-    - Modified the qubit recipe slightly.
+    - Modified the qubit shell recipe slightly.
+  Minor Features:
+    - Added a late-game research which allows for more efficient use of qubits.
   Bugfixes:
     - Cube alerts will now play more nicely with programmable speakers by sharing time-slices of the custom alert channel when necessary.
     - Fixed a regression with Cybersyn compatibility code.

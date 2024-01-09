@@ -64,4 +64,16 @@ data:extend({
     unit = tech_cost_unit("6", 600),
     order = "6-1-0",
   },
+  {
+    type = "technology",
+    name = "cube-quantum-entanglement",
+    icons = util.technology_icon_constant_movement_speed("__Krastorio2Assets__/technologies/quantum-computer.png"),
+    icon = "__Krastorio2Assets__/technologies/quantum-computer.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-qubits-partial-dummy"},
+    },
+    prerequisites = {"cube-complete-annihilation-card"},
+    unit = tech_cost_unit("6", 2400),
+    order = "6-1-1",
+  },
 })

@@ -3,16 +3,23 @@ local transition_table = require("__Ultracube__/scripts/transition_table")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local set_active = activation.set
 
-local function get_products(entry)
+local function get_products(e_state, entry)
   if not entry then
     return nil
   end
-  if entry.product then
-    return {entry.product}
+  if entry.product_recipe then
+    return game.recipe_prototypes[entry.product_recipe].products
+  elseif e_state.random_product then
+    return e_state.random_product
+  elseif entry.random_products then
+    local random_products = entry.random_products
+    local product = random_products[math.random(#random_products)]
+    e_state.random_product = product
+    return product
   elseif entry.products then
     return entry.products
-  elseif entry.product_recipe then
-    return game.recipe_prototypes[entry.product_recipe].products
+  elseif entry.product then
+    return {entry.product}
   end
   return nil
 end
@@ -34,7 +41,12 @@ function transition.tick(tick)
   end
 
   for _, e in pairs(cache.multi_furnaces) do
-    local table = transition_table[e.name]
+    local table
+    if e.name == "cube-quantum-decoder" and e.force.technologies["cube-quantum-entanglement"].researched then
+      table = transition_table["cube-quantum-decoder-1"]
+    else
+      table = transition_table[e.name]
+    end
     if not table then goto continue end
 
     local e_state = state[e.unit_number]
@@ -65,14 +77,14 @@ function transition.tick(tick)
         elseif t.states then
           e_state.state = t.states[math.random(#t.states)]
         end
-        products = get_products(t)
+        products = get_products(e_state, t)
       end
     elseif e_state.recipe and e.crafting_progress >= 1 then
-      local potential_products = get_products(table[e_state.recipe])
+      local potential_products = get_products(e_state, table[e_state.recipe])
       local active = true
       if potential_products then
         local inventory = e.get_output_inventory()
-        for _, product in pairs(potential_products) do
+        for _, product in ipairs(potential_products) do
           if not inventory.can_insert({name = product.name, count = product.amount}) then
             active = false
             break
@@ -83,6 +95,7 @@ function transition.tick(tick)
     end
     e_state.crafts = crafts
     e_state.recipe = recipe
+    e_state.random_product = nil
 
     if products then
       local inventory = e.get_output_inventory()
