@@ -26,7 +26,7 @@ data:extend({
       {"cube-sophisticated-matter-unit", 1},
       {"cube-bottled-consciousness", 1},
       {"cube-spectralite", 1},
-      {"cube-deep-powder", 1},
+      {"cube-deep-crystal", 1},
     },
     results = {
       {"cube-qubit", 1},

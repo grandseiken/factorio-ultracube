@@ -290,7 +290,7 @@ data:extend({
     },
     prerequisites = {
       "cube-synthetic-premonition-card",
-      "cube-deep-core-ultradrill",
+      "cube-deep-crystallization",
     },
     unit = tech_cost_unit("4", 300),
     order = "3-1-7",

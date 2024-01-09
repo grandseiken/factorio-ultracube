@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: ??
+  Changes:
+    - Modified the qubit recipe slightly.
   Bugfixes:
     - Cube alerts will now play more nicely with programmable speakers by sharing time-slices of the custom alert channel when necessary.
     - Fixed a regression with Cybersyn compatibility code.
