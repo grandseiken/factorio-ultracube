@@ -114,6 +114,7 @@ The following mods have been adapted to work with Ultracube:
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
 | [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported |
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
+| [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
 | [Stack Combinator](https://mods.factorio.com/mod/stack-combinator) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
