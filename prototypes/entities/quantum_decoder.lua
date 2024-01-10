@@ -132,7 +132,7 @@ local function make_quantum_decoder(name)
     animation = animation,
     crafting_categories = {name},
     source_inventory_size = 1,
-    result_inventory_size = 3,
+    result_inventory_size = 8,
     crafting_speed = 1,
     energy_source = {
       type = "electric",
