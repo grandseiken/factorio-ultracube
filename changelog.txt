@@ -5,6 +5,7 @@ Date: ??
     - Modified the qubit shell recipe slightly.
   Minor Features:
     - Added a late-game research which allows for more efficient use of qubits.
+    - Reintroduced belt immunity equipment.
   Bugfixes:
     - Cube alerts will now play more nicely with programmable speakers by sharing time-slices of the custom alert channel when necessary.
     - Fixed a regression with Cybersyn compatibility code.
