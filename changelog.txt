@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: ??. 01. 2024
+Date: 11. 01. 2024
   Minor Features:
     - Added optional compatibility with Spidertron Logistics System.
   Bugfixes:
