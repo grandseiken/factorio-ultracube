@@ -1,6 +1,6 @@
 {
   "name": "Ultracube",
-  "version": "0.3.1",
+  "version": "0.3.4",
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
@@ -11,6 +11,7 @@
     "aai-loaders >= 0.1.4",
     "Krastorio2Assets >= 1.2",
     "simhelper >= 1.1.4",
+    "?far-reach",
     "?nixie-tubes",
     "?Honk",
     "?Flow Control",

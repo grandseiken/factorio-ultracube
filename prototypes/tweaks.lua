@@ -85,6 +85,7 @@ data.raw.item["used-up-uranium-fuel-cell"].subgroup = "cube-uranium"
 
 data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/assets/icons/battery-mk2-equipment.png"
 data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"
+data.raw.item["belt-immunity-equipment"].subgroup = "cube-equipment"
 data.raw.item["exoskeleton-equipment"].subgroup = "cube-equipment"
 data.raw.item["personal-roboport-mk2-equipment"].subgroup = "cube-equipment"
 data.raw.item["battery-mk2-equipment"].subgroup = "cube-equipment-power"
@@ -95,6 +96,7 @@ data.raw.item["fusion-reactor-equipment"].order = "cube-0[reactor]-a[reactor-equ
 data.raw["generator-equipment"]["fusion-reactor-equipment"].power = "1200kW"
 data.raw["night-vision-equipment"]["night-vision-equipment"].shape.height = 1
 data.raw["night-vision-equipment"]["night-vision-equipment"].categories = {"cube-armor"}
+data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].categories = {"cube-armor"}
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"cube-armor"}
 data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].categories = {"cube-armor"}

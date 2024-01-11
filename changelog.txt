@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 11. 01. 2024
+  Bugfixes:
+    - Fixed script error introduced in 0.3.0 upon placing an experimental teleporter.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 11. 01. 2024
+  Minor Features:
+    - Added optional compatibility with Spidertron Logistics System.
+  Bugfixes:
+    - Work around a game crash that could occur in a strange case by increasing quantum decoder output inventory size to 8 for now.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 10. 01. 2024
+  Changes:
+    - Modified the qubit shell recipe slightly.
+  Minor Features:
+    - Added a late-game research which allows for more efficient use of qubits.
+    - Reintroduced belt immunity equipment.
+  Bugfixes:
+    - Cube alerts will now play more nicely with programmable speakers by sharing time-slices of the custom alert channel when necessary.
+    - Fixed a regression with Cybersyn compatibility code.
+    - Fixed Better Victory Screen statistics using production instead of consumption values (#14).
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 07. 01. 2024
   Changes:

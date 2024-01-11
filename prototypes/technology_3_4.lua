@@ -126,6 +126,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-belt-immunity-equipment",
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/belt-immunity-equipment.png"),
+    icon_size = 256, icon_mipmaps = 4,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-belt-immunity-equipment"},
+    },
+    prerequisites = {
+      "cube-deep-introspection-card",
+      "cube-spectral-processor",
+    },
+    unit = tech_cost_unit("3", 180),
+    order = "3-0-8"
+  },
+  {
+    type = "technology",
     name = "cube-speed-module-v2",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/speed-module-2.png",
@@ -138,7 +153,7 @@ data:extend({
       "cube-speed-module",
     },
     unit = tech_cost_unit("3", 300),
-    order = "3-0-8",
+    order = "3-0-9",
   },
   {
     type = "technology",
@@ -290,7 +305,7 @@ data:extend({
     },
     prerequisites = {
       "cube-synthetic-premonition-card",
-      "cube-deep-core-ultradrill",
+      "cube-deep-crystallization",
     },
     unit = tech_cost_unit("4", 300),
     order = "3-1-7",

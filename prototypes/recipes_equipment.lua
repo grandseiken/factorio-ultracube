@@ -104,6 +104,18 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-belt-immunity-equipment",
+    ingredients = {
+      {"cube-resplendent-plate", 1},
+      {"cube-spectral-processor", 10},
+      {"cube-deep-crystal", 10},
+    },
+    results = {{"belt-immunity-equipment", 1}},
+    energy_required = 10,
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-exoskeleton-equipment",
     ingredients = {
       {"cube-sophisticated-matter-unit", 10},

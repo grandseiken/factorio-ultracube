@@ -167,6 +167,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-logistics-extra",
+    group = "logistics",
+    order = "g-a",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-combinator-extra",
     group = "logistics",
     order = "h-a",

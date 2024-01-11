@@ -18,6 +18,16 @@ data:extend({
     stack_size = 1,
     flags = {"hidden"},
   },
+  {
+    type = "item",
+    name = "cube-qubit-random",
+    icon = "__Ultracube__/assets/icons/recipe/qubits.png",
+    icon_size = 64, icon_mipmaps = 4,
+    subgroup = "cube-research-quantum",
+    order = "cube-x[1]",
+    stack_size = 1,
+    flags = {"hidden"},
+  },
 
   {
     type = "recipe",
@@ -26,7 +36,7 @@ data:extend({
       {"cube-sophisticated-matter-unit", 1},
       {"cube-bottled-consciousness", 1},
       {"cube-spectralite", 1},
-      {"cube-deep-powder", 1},
+      {"cube-deep-crystal", 1},
     },
     results = {
       {"cube-qubit", 1},
@@ -62,6 +72,20 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-qubits-partial-dummy",
+    icon = "__Ultracube__/assets/icons/recipe/qubits-partial.png",
+    icon_size = 64, icon_mipmaps = 4,
+    ingredients = {{"cube-qubits", 2}},
+    results = {{"cube-qubit-random", 1}},
+    energy_required = 3.2,
+    main_product = "",
+    category = "cube-quantum-decoder-dummy",
+    subgroup = "cube-research-quantum",
+    order = "cube-a[1]",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-qubits-success-dummy",
     icon = "__Ultracube__/assets/icons/recipe/qubits-success.png",
     icon_size = 128,
@@ -71,7 +95,7 @@ data:extend({
     main_product = "",
     category = "cube-quantum-decoder-dummy",
     subgroup = "cube-research-quantum",
-    order = "cube-a[1]",
+    order = "cube-a[2]",
     enabled = false,
   },
 
@@ -142,6 +166,12 @@ for i = 0, 5 do
       results = {
         {"cube-qubit", 0},
         {"cube-quantum-research-data", 0},
+        {"cube-qubit-0", 0},
+        {"cube-qubit-1", 0},
+        {"cube-qubit-2", 0},
+        {"cube-qubit-3", 0},
+        {"cube-qubit-4", 0},
+        {"cube-qubit-5", 0},
       },
       energy_required = dummy.energy_required / 2,
       category = "cube-quantum-decoder",

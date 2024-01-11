@@ -1,5 +1,8 @@
 ![Thumbnail](thumbnail.png)
 
+[![shield](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2FUltracube)](https://mods.factorio.com/mod/Ultracube)
+[![shield](https://img.shields.io/badge/Crowdin-Translate-brightgreen)](https://crowdin.com/project/factorio-mods-localization)
+
 An overhaul mod for Factorio featuring:
 * Completely reworked tech tree and recipes.
 * Unique logistic challenges and assorted devious automation puzzles.
@@ -114,6 +117,7 @@ The following mods have been adapted to work with Ultracube:
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
 | [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported |
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
+| [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
 | [Stack Combinator](https://mods.factorio.com/mod/stack-combinator) | |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
