@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: ???
+  Minor Features:
+    - When powered by the cube, cars will no longer be stopped by anything in their way. Be careful around your factory!
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 11. 01. 2024
   Minor Features:
