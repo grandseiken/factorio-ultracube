@@ -396,7 +396,6 @@ local cube_working_machine_types = {
   -- These two types could have the cube as a burner source or as ingredient
   ["assembling-machine"]  = cube_machine_condition_handlers["crafter"],
   ["furnace"]             = cube_machine_condition_handlers["crafter"],
-  ["rocket-silo"]         = cube_machine_condition_handlers["crafter"],
 
   -- For the following entity-types we only ever have to check the entity status.
   -- This is because in 99% of cases if the cube can only be placed in the machine
