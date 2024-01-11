@@ -305,7 +305,7 @@ local function better_victory_screen_statistics()
   local victory_statistics = global.victory_statistics
 
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
-  local cube_utilization = victory_statistics.utilization.working * 100 / (victory_statistics.utilization.working + victory_statistics.utilization.idle)
+  local cube_utilization = victory_statistics.utilization.working / (victory_statistics.utilization.working + victory_statistics.utilization.idle)
   local production = force.item_production_statistics
   local cubes_consumed = production.get_input_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_input_count("cube-dormant-utility-cube")
