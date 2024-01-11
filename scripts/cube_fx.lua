@@ -378,6 +378,7 @@ local cube_working_machine_types = {
   -- These two types could have the cube as a burner source or as ingredient
   ["assembling-machine"]  = cube_machine_condition_handlers["crafter"],
   ["furnace"]             = cube_machine_condition_handlers["crafter"],
+  ["rocket-silo"]         = cube_machine_condition_handlers["crafter"],
 
   -- For the following entity-types we only ever have to check the entity status.
   -- This is because in 99% of cases if the cube can only be placed in the machine
@@ -386,7 +387,6 @@ local cube_working_machine_types = {
   -- `no_fuel`, `output_full`, `no_ingredients`, etc.
   ["generator"]           = cube_machine_condition_handlers["status"],
   ["burner-generator"]    = cube_machine_condition_handlers["status"],
-  ["rocket-silo"]         = cube_machine_condition_handlers["status"],
 
   -- The boiler and reactor could have the cube currently being burned, or sitting
   -- in the burnt_result slot while an alternative fuel is being used.
