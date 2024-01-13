@@ -24,6 +24,7 @@
     "?better-victory-screen >= 0.2.0",
     "!Krastorio2",
     "!burner-fuel-bonus",
+    "!factory-levels",
     "!WideChests"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod."
