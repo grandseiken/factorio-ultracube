@@ -120,7 +120,7 @@ local item_prototypes = {
 }
 
 local function has_prefix(s)
-  return s and string.sub(s, 1, 5) == "cube-"
+  return s and starts_with(s, "cube-")
 end
 
 local function add_prefix(s)

@@ -1,8 +1,6 @@
 require("prototypes.lib.tech_costs")
 require("prototypes.lib.mystery")
 
-require("prototypes.cube_powered_cars")
-
 require("updates.compatibility.aai_signal_transmission")
 require("updates.compatibility.cybersyn")
 require("updates.compatibility.display_plates")

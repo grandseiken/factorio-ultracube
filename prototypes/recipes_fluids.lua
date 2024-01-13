@@ -1,3 +1,5 @@
+require("scripts.lib")
+
 data:extend({
   {
     type = "recipe",
@@ -428,7 +430,7 @@ local voidable_fluids = {
 for _, fluid in ipairs(voidable_fluids) do
   local prototype = data.raw.fluid[fluid]
   local recipe_name = fluid .. "-void"
-  if string.sub(recipe_name, 1, 5) ~= "cube-" then
+  if not starts_with(recipe_name, "cube-") then
     recipe_name = "cube-" .. recipe_name
   end
   data:extend({{

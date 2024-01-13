@@ -34,13 +34,13 @@ function vector_length(v)
   return math.sqrt(v.x * v.x + v.y * v.y)
 end
 
-function string_starts(s, start)
+function starts_with(s, start)
   return string.sub(s, 1, string.len(start)) == start
 end
 
-function transfer_inventory(src_inv, dst_inv)
-  for i = 1, #src_inv do
-    -- swap_stack is a tiny bit slower than set_stack, but set_stack can lose the quick-bar links to non-fungible items (e.g. blueprints)
-    dst_inv[i].swap_stack(src_inv[i])
+function transfer_inventory(src_inventory, dst_inventory)
+  for i = 1, #src_inventory do
+    -- swap_stack is a tiny bit slower than set_stack, but set_stack can lose the quick-bar links to non-fungible items (e.g. blueprints).
+    dst_inventory[i].swap_stack(src_inventory[i])
   end
 end

@@ -14,7 +14,7 @@ data:extend({
     minable = {mining_time = 1, result = "cube-synthesizer"},
     max_health = 1000,
     damaged_trigger_effect = hit_effects.entity(),
-    corpse = "cube-medium-random-pipes-remnant",
+    corpse = "cube-big-random-pipes-remnant",
     dying_explosion = "cube-medium-matter-explosion",
     fluid_boxes = {
       {

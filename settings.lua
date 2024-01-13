@@ -20,6 +20,13 @@ data:extend({
     },
     order = "1",
   },
+  {
+    type = "bool-setting",
+    name = "cube-powered-cars",
+    setting_type = "runtime-global",
+    default_value = true,
+    order = "2",
+  },
 })
 
 data.raw["string-setting"]["aai-loaders-mode"].hidden = true

@@ -20,7 +20,6 @@ local ultralocomotion_fuel_inverse_map = inverse_map(ultralocomotion_fuel_map)
 local cube_fuel_vehicle_entity_types = make_set({
   "locomotive", "car", "spider-vehicle",
 })
-local cube_powered_cars_entity_names -- Cache for is_cube_powered_car
 
 local victory_statistics = nil
 local cube_fx_data = nil
@@ -99,7 +98,7 @@ local ultradense_projectile = {
 local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity and result.entity.valid then
+    if result.entity then
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         local positions = result.positions
         if positions then
@@ -149,7 +148,7 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity and result.entity.valid and result.height >= 0 then
+    if result.entity and result.height >= 0 then
       if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity
@@ -178,38 +177,47 @@ local function cube_spark(size, results)
   end
 end
 
-local function is_cube_powered_car(entity_name)
+local cube_powered_prefix = "cube-powered-"
+local cube_powered_cars_cache
+local function get_cube_powered_cars()
   -- Set for cache, since this can be on_tick we care about minor performance improvements.
-  if not cube_powered_cars_entity_names then
-    cube_powered_cars_entity_names = {}
-    for car_name, _ in pairs(game.get_filtered_entity_prototypes({{filter="type", type="car"}})) do
-      if string_starts(car_name, "cube-powered") then
-        cube_powered_cars_entity_names[car_name] = true
+  if not cube_powered_cars_cache then
+    cube_powered_cars_cache = {}
+    for car_name, _ in pairs(game.get_filtered_entity_prototypes({{filter = "type", type = "car"}})) do
+      if starts_with(car_name, cube_powered_prefix) then
+        cube_powered_cars_cache[car_name] = string.sub(car_name, string.len(cube_powered_prefix) + 1)
       end
     end
   end
-  return cube_powered_cars_entity_names[entity_name]
+  return cube_powered_cars_cache
 end
 
-local function swap_to_car(car, new_car_entity_name)
-  local new_car = car.surface.create_entity({
+local car_swap_inventories = {
+  defines.inventory.car_trunk,
+  defines.inventory.car_ammo,
+  defines.inventory.fuel,
+  defines.inventory.burnt_result
+}
+local function swap_car(car, new_car_entity_name)
+  local new_car = car.surface.create_entity {
     name = new_car_entity_name,
-    position = {x=car.position.x, y=car.position.y + 10}, -- Slightly off to avoid destroying the existing car, teleport later
+    -- Slightly off to avoid destroying the existing car, teleport later.
+    position = {x = car.position.x, y = car.position.y + 10},
     direction = car.direction,
     force = car.force,
     player = car.last_user,
     raise_built = true,
     create_build_effect_smoke = false,
-  })
+  }
   new_car.speed = car.speed
   new_car.orientation = car.orientation
 
   local driver = car.get_driver()
   local passenger = car.get_passenger()
   if driver then
-    local riding_state = car.riding_state -- Store the state before we switch driver
+    local riding_state = car.riding_state
     new_car.set_driver(driver)
-    new_car.riding_state = riding_state -- Continue the keypresses of the player
+    new_car.riding_state = riding_state  -- Continue the keypresses of the player.
   end
   if passenger then
     new_car.set_passenger(passenger)
@@ -221,37 +229,46 @@ local function swap_to_car(car, new_car_entity_name)
     end
   end
 
-  for _, inv in pairs({defines.inventory.car_trunk, defines.inventory.car_ammo, defines.inventory.fuel, defines.inventory.burnt_result}) do
-    transfer_inventory(car.get_inventory(inv), new_car.get_inventory(inv))
+  for _, inventory in ipairs(car_swap_inventories) do
+    transfer_inventory(car.get_inventory(inventory), new_car.get_inventory(inventory))
   end
 
   new_car.burner.currently_burning = car.burner.currently_burning
   new_car.burner.heat = car.burner.heat
   new_car.burner.remaining_burning_fuel = car.burner.remaining_burning_fuel
-
-  local position = car.position -- Store before destroying
-  car.destroy({raise_destroy = true})
-  new_car.teleport(position)
-
   cube_search.hint_entity(new_car)
 
+  local position = car.position
+  car.destroy({raise_destroy = true})
+  new_car.teleport(position)
+  cube_search.hint_entity(new_car)
   return new_car
 end
 
-local function swap_to_cube_powered_car(car)
-  return swap_to_car(car, "cube-powered-" .. car.name)
-end
-
-local function swap_to_normal_car(car)
-  local prefix = "cube-powered-"
-  local normal_car_name = string.sub(car.name, string.len(prefix)+1)
-  return swap_to_car(car, normal_car_name)
-end
-
 local function cube_vehicle_mod(size, results)
+  local cube_powered_cars = get_cube_powered_cars()
   local new_locomotives = {}
   local new_last_robot = false
   local boomed = false
+
+  local cube_powered_cars_enabled = settings.global["cube-powered-cars"].value
+  local last_car = cube_fx_data.last_car
+  if last_car then
+    if not last_car.valid then
+      cube_fx_data.last_car = nil
+    elseif not cube_management.is_entity_burning_fuel(last_car, cube_ultradense) then
+      -- I don't know if you can realistically use an entire cube's worth of power just by driving, but just in case.
+      local car_name = cube_powered_cars[last_car.name]
+      if car_name then
+        local swap_result = size >= 1 and results[1].entity == last_car
+        local entity = swap_car(last_car, car_name)
+        if swap_result then
+          results[1].entity = entity
+        end
+      end
+      cube_fx_data.last_car = nil
+    end
+  end
 
   for i = 1, size do
     local result = results[i]
@@ -278,17 +295,11 @@ local function cube_vehicle_mod(size, results)
         new_last_robot = true
       end
 
-      if type == "car" and cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
-        if not is_cube_powered_car(entity.name) then
-          entity = swap_to_cube_powered_car(entity)
-          cube_fx_data.last_car = entity
-        end
-      elseif cube_fx_data.last_car then
-        if is_cube_powered_car(entity.name) then
-          -- I don't know if you can realistically use an entire cube's worth of power just by driving, but just in case.
-          entity = swap_to_normal_car(entity)
-        end
-        cube_fx_data.last_car = nil
+      if cube_powered_cars_enabled and type == "car" and not cube_powered_cars[entity.name] and
+         cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
+        entity = swap_car(entity, cube_powered_prefix .. entity.name)
+        result.entity = entity
+        cube_fx_data.last_car = entity
       end
 
       if item == cube_ultradense then

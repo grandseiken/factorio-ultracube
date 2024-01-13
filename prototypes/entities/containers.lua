@@ -57,7 +57,7 @@ data:extend({
     flags = {"placeable-player", "player-creation", "not-rotatable"},
     minable = {mining_time = 1, result = "cube-big-container"},
     max_health = 1500,
-    corpse = "cube-big-random-pipes-remnant",
+    corpse = "big-remnants",
     collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
