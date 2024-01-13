@@ -18,8 +18,9 @@ local ultralocomotion_fuel_map = {
 }
 local ultralocomotion_fuel_inverse_map = inverse_map(ultralocomotion_fuel_map)
 local cube_fuel_vehicle_entity_types = make_set({
-  "locomotive", "car", "tank", "spider-vehicle",
+  "locomotive", "car", "spider-vehicle",
 })
+local cube_powered_cars_entity_names -- Cache for is_cube_powered_car
 
 local victory_statistics = nil
 local cube_fx_data = nil
@@ -98,7 +99,7 @@ local ultradense_projectile = {
 local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity then
+    if result.entity and result.entity.valid then
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         local positions = result.positions
         if positions then
@@ -107,19 +108,19 @@ local function cube_boom(size, results)
             phantom_explosion.source = result.entity
             phantom_explosion.position = position
             phantom_explosion.target = position
-            result.entity.surface.create_entity(phantom_explosion)
+            result.surface.create_entity(phantom_explosion)
           end
         else
           phantom_explosion.source = result.entity
           phantom_explosion.position = result.position
           phantom_explosion.target = result.position
-          result.entity.surface.create_entity(phantom_explosion)
+          result.surface.create_entity(phantom_explosion)
         end
       elseif result.item == cube_dormant then
         dormant_explosion.source = result.entity
         dormant_explosion.position = result.position
         dormant_explosion.target = result.position
-        result.entity.surface.create_entity(dormant_explosion)
+        result.surface.create_entity(dormant_explosion)
       elseif result.item == cube_ultradense then
         if result.velocity then
         local position = result.position
@@ -129,12 +130,12 @@ local function cube_boom(size, results)
         ultradense_projectile.target.x = position.x + velocity.x
         ultradense_projectile.target.y = position.y + velocity.y
         ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
-        result.entity.surface.create_entity(ultradense_projectile)
+        result.surface.create_entity(ultradense_projectile)
         else
           ultradense_explosion.source = result.entity
           ultradense_explosion.position = result.position
           ultradense_explosion.target = result.position
-          result.entity.surface.create_entity(ultradense_explosion)
+          result.surface.create_entity(ultradense_explosion)
         end
       end
     end
@@ -148,13 +149,13 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity and result.height >= 0 then
+    if result.entity and result.entity.valid and result.height >= 0 then
       if result.item == cube_ultradense then
         local spark = result.height > 0 and spark_high or spark_low
         spark.source = result.entity
         spark.position = result.position
         spark.target = result.position
-        result.entity.surface.create_entity(spark)
+        result.surface.create_entity(spark)
       elseif result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
         local positions = result.positions
@@ -164,17 +165,87 @@ local function cube_spark(size, results)
             puff.source = result.entity
             puff.position = position
             puff.target = position
-            result.entity.surface.create_entity(puff)
+            result.surface.create_entity(puff)
           end
         else
           puff.source = result.entity
           puff.position = result.position
           puff.target = result.position
-          result.entity.surface.create_entity(puff)
+          result.surface.create_entity(puff)
         end
       end
     end
   end
+end
+
+local function is_cube_powered_car(entity_name)
+  -- Set for cache, since this can be on_tick we care about minor performance improvements.
+  if not cube_powered_cars_entity_names then
+    cube_powered_cars_entity_names = {}
+    for car_name, _ in pairs(game.get_filtered_entity_prototypes({{filter="type", type="car"}})) do
+      if string_starts(car_name, "cube-powered") then
+        cube_powered_cars_entity_names[car_name] = true
+      end
+    end
+  end
+  return cube_powered_cars_entity_names[entity_name]
+end
+
+local function swap_to_car(car, new_car_entity_name)
+  local new_car = car.surface.create_entity({
+    name = new_car_entity_name,
+    position = {x=car.position.x, y=car.position.y + 10}, -- Slightly off to avoid destroying the existing car, teleport later
+    direction = car.direction,
+    force = car.force,
+    player = car.last_user,
+    raise_built = true,
+    create_build_effect_smoke = false,
+  })
+  new_car.speed = car.speed
+  new_car.orientation = car.orientation
+
+  local driver = car.get_driver()
+  local passenger = car.get_passenger()
+  if driver then
+    local riding_state = car.riding_state -- Store the state before we switch driver
+    new_car.set_driver(driver)
+    new_car.riding_state = riding_state -- Continue the keypresses of the player
+  end
+  if passenger then
+    new_car.set_passenger(passenger)
+  end
+
+  for _, player in pairs(game.players) do
+    if player.opened == car then
+      player.opened = new_car
+    end
+  end
+
+  for _, inv in pairs({defines.inventory.car_trunk, defines.inventory.car_ammo, defines.inventory.fuel, defines.inventory.burnt_result}) do
+    transfer_inventory(car.get_inventory(inv), new_car.get_inventory(inv))
+  end
+
+  new_car.burner.currently_burning = car.burner.currently_burning
+  new_car.burner.heat = car.burner.heat
+  new_car.burner.remaining_burning_fuel = car.burner.remaining_burning_fuel
+
+  local position = car.position -- Store before destroying
+  car.destroy({raise_destroy = true})
+  new_car.teleport(position)
+
+  cube_search.hint_entity(new_car)
+
+  return new_car
+end
+
+local function swap_to_cube_powered_car(car)
+  return swap_to_car(car, "cube-powered-" .. car.name)
+end
+
+local function swap_to_normal_car(car)
+  local prefix = "cube-powered-"
+  local normal_car_name = string.sub(car.name, string.len(prefix)+1)
+  return swap_to_car(car, normal_car_name)
 end
 
 local function cube_vehicle_mod(size, results)
@@ -205,6 +276,19 @@ local function cube_vehicle_mod(size, results)
           energy = entity.energy,
         }
         new_last_robot = true
+      end
+
+      if type == "car" and cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
+        if not is_cube_powered_car(entity.name) then
+          entity = swap_to_cube_powered_car(entity)
+          cube_fx_data.last_car = entity
+        end
+      elseif cube_fx_data.last_car then
+        if is_cube_powered_car(entity.name) then
+          -- I don't know if you can realistically use an entire cube's worth of power just by driving, but just in case.
+          entity = swap_to_normal_car(entity)
+        end
+        cube_fx_data.last_car = nil
       end
 
       if item == cube_ultradense then
