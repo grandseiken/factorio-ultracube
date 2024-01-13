@@ -21,7 +21,7 @@
     "?textplates",
     "?stack-combinator",
     "?aai-signal-transmission",
-    "?better-victory-screen >= 0.2.0",
+    "?better-victory-screen >= 0.2.7",
     "!Krastorio2",
     "!burner-fuel-bonus",
     "!factory-levels",

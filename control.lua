@@ -88,8 +88,8 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
-  for interface, functions in pairs(remote.interfaces) do
-    if functions["set_no_victory"] then
+  for _, interface in pairs{"silo_script", "better-victory-screen"} do
+    if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
       remote.call(interface, "set_no_victory", true)
     end
   end
@@ -305,6 +305,7 @@ local function better_victory_screen_statistics()
   local victory_statistics = global.victory_statistics
 
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
+  local cube_utilization = victory_statistics.utilization.working / (victory_statistics.utilization.working + victory_statistics.utilization.idle)
   local production = force.item_production_statistics
   local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
@@ -317,13 +318,14 @@ local function better_victory_screen_statistics()
 
   stats["ultracube"] = {order = "a", stats = {
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
-    ["cubes-consumed"]                 = {order = "b", value = cubes_consumed},
-    ["cubes-consumed-dormant"]         = {order = "c", value = cubes_consumed_dormant},
-    ["cubes-consumed-phantom"]         = {order = "d", value = cubes_consumed_phantom},
-    ["cubes-consumed-phantom-dormant"] = {order = "e", value = cubes_consumed_phantom_dormant},
-    ["cubes-reconstructed"]            = {order = "f", value = cubes_reconstructed},
-    ["cubes-consumed-total"]           = {order = "g", value = cubes_consumed_total},
-    ["matter-created"]                 = {order = "h", value = matter_created},
+    ["cube-utilization"]               = {order = "b", value = cube_utilization, unit = "percentage"},
+    ["cubes-consumed"]                 = {order = "c", value = cubes_consumed},
+    ["cubes-consumed-dormant"]         = {order = "d", value = cubes_consumed_dormant},
+    ["cubes-consumed-phantom"]         = {order = "e", value = cubes_consumed_phantom},
+    ["cubes-consumed-phantom-dormant"] = {order = "f", value = cubes_consumed_phantom_dormant},
+    ["cubes-reconstructed"]            = {order = "g", value = cubes_reconstructed},
+    ["cubes-consumed-total"]           = {order = "h", value = cubes_consumed_total},
+    ["matter-created"]                 = {order = "i", value = matter_created},
   }}
 
   -- Ignore-flag some military-oriented stats we don't care about.
