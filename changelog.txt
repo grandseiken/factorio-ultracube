@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.4
+Version: 0.3.5
 Date: ???
   Minor Features:
     - When powered by the cube, cars will no longer be stopped by anything in their way. Be careful around your factory!
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 11. 01. 2024
+  Bugfixes:
+    - Fixed script error introduced in 0.3.0 upon placing an experimental teleporter.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 11. 01. 2024

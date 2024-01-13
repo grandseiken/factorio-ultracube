@@ -112,7 +112,9 @@ function entity_combine.created(entity)
         new_entity.operable = false
       end
       linked_entries[#linked_entries + 1] = new_entity
-      inverse_table[new_entity.unit_number] = entity
+      if new_entity.unit_number then
+        inverse_table[new_entity.unit_number] = entity
+      end
     end
   end
 end
@@ -124,7 +126,9 @@ function entity_combine.destroyed(entity)
   if linked_entries then
     for _, e in ipairs(linked_entries) do
       if e.valid then
-        inverse_table[e.unit_number] = nil
+        if e.unit_number then
+          inverse_table[e.unit_number] = nil
+        end
         e.destroy {raise_destroy = true}
       end
     end
@@ -155,7 +159,9 @@ function entity_combine.swap_linked(entity, index, old_unit_number, new_entity)
   local linked = entity_combine.get_linked(entity)
   linked[index] = new_entity
   inverse_table[old_unit_number] = nil
-  inverse_table[new_entity.unit_number] = entity
+  if new_entity.unit_number then
+    inverse_table[new_entity.unit_number] = entity
+  end
 end
 
 return entity_combine
