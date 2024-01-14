@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 14. 01. 2024
+  Minor Features:
+    - Added a cubecam that can remotely follow your cube, opened with K by default.
+  Bugfixes:
+    - Fixed compatibility when Wire Shortcuts and Circuit HUD V2 were both enabled.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 14. 01. 2024
   Bugfixes:

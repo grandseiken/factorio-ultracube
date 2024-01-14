@@ -1,3 +1,17 @@
+local function remove_unlock_recipe(tech_effects, recipe)
+  local index = nil
+  for i = 1, #tech_effects do
+    local effect = tech_effects[i]
+    if effect.type == "unlock-recipe" and effect.recipe == recipe then
+      index = i
+      break
+    end
+  end
+  if index then
+    table.remove(tech_effects, index)
+  end
+end
+
 if mods["WireShortcuts"] then
   local recipe = data.raw.recipe["fake-red-wire"]
   if recipe then
@@ -19,23 +33,12 @@ if mods["WireShortcuts"] then
   data.raw.shortcut["WireShortcuts-give-cutter"].technology_to_unlock = "cube-combinatorics"
   data.raw.shortcut["WireShortcuts-give-green"].technology_to_unlock = "cube-combinatorics"
   data.raw.shortcut["WireShortcuts-give-red"].technology_to_unlock = "cube-combinatorics"
+
+  local tech_effects = data.raw.technology["cube-combinatorics"].effects
+  remove_unlock_recipe(tech_effects, "cube-red-wire")
+  remove_unlock_recipe(tech_effects, "cube-green-wire")
   if settings.startup["wire-shortcuts-is-retain-wire-crafting"].value then
-    data.raw.technology["cube-combinatorics"].effects = {
-      {type = "unlock-recipe", recipe = "cube-constant-combinator"},
-      {type = "unlock-recipe", recipe = "cube-arithmetic-combinator"},
-      {type = "unlock-recipe", recipe = "cube-decider-combinator"},
-      {type = "unlock-recipe", recipe = "fake-red-wire"},
-      {type = "unlock-recipe", recipe = "fake-green-wire"},
-      {type = "unlock-recipe", recipe = "cube-programmable-speaker"},
-      {type = "unlock-recipe", recipe = "cube-power-switch"},
-    }
-  else
-    data.raw.technology["cube-combinatorics"].effects = {
-      {type = "unlock-recipe", recipe = "cube-constant-combinator"},
-      {type = "unlock-recipe", recipe = "cube-arithmetic-combinator"},
-      {type = "unlock-recipe", recipe = "cube-decider-combinator"},
-      {type = "unlock-recipe", recipe = "cube-programmable-speaker"},
-      {type = "unlock-recipe", recipe = "cube-power-switch"},
-    }
+    table.insert(tech_effects, {type = "unlock-recipe", recipe = "fake-red-wire"})
+    table.insert(tech_effects, {type = "unlock-recipe", recipe = "fake-green-wire"})
   end
 end

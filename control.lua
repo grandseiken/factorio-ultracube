@@ -9,6 +9,7 @@ local activation = require("__Ultracube__/scripts/activation")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
+local cubecam = require("__Ultracube__/scripts/cubecam")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 local linked_entities = require("__Ultracube__/scripts/linked_entities")
@@ -257,6 +258,11 @@ script.on_event(
   end)
 
 script.on_event(
+  defines.events.on_player_removed, function(e)
+    cubecam.remove_player(e.player_index)
+  end)
+
+script.on_event(
   defines.events.on_research_finished,
   function(e)
     tech_unlock.trigger(e.research.force, e.research.name, true)
@@ -273,9 +279,11 @@ script.on_event(
 
 script.on_event(defines.events.on_tick,
   function(e)
-    cube_fx.tick(e.tick)
-    transition.tick(e.tick)
-    linked_entities.tick(e.tick)
+    local tick = e.tick
+    cube_fx.tick(tick)
+    transition.tick(tick)
+    linked_entities.tick(tick)
+    cubecam.tick(tick)
   end)
 
 -- Custom input events.
@@ -290,6 +298,19 @@ script.on_event("cube-toggle-alerts", function(e)
     player.print({"cube-msg-alerts-disabled"})
   end
   settings["cube-show-cube-alerts"] = {value = new_value}
+end)
+
+script.on_event("cube-open-cubecam", function(e)
+  cubecam.toggle_open(game.get_player(e.player_index), false)
+end)
+script.on_event("cube-open-cubecam-fullscreen", function(e)
+  cubecam.toggle_open(game.get_player(e.player_index), true)
+end)
+script.on_event(defines.events.on_gui_click, function(e)
+  cubecam.on_click(game.get_player(e.player_index), e.element)
+end)
+script.on_event(defines.events.on_gui_value_changed, function(e)
+  cubecam.on_value_changed(game.get_player(e.player_index), e.element)
 end)
 
 local function remote_hint_entity(entity)

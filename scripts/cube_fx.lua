@@ -1,6 +1,7 @@
 require("__Ultracube__/scripts/lib")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
+local cubecam = require("__Ultracube__/scripts/cubecam")
 
 local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
@@ -493,6 +494,41 @@ function cube_fx.tick(tick)
   local spark_tick = tick % 240 >= 120 and tick % 240 < 234
   local boom_tick = tick % 240 == 0
   local size, results = cube_search.update(tick)
+
+  local x_min = nil
+  local x_max = nil
+  local y_min = nil
+  local y_max = nil
+  for i = 1, size do
+    local position = results[i].position
+    if position then
+      local x = position.x
+      local y = position.y
+      if not x_min or x < x_min then x_min = x end
+      if not x_max or x > x_max then x_max = x end
+      if not y_min or y < y_min then y_min = y end
+      if not y_max or y > y_max then y_max = y end
+    end
+  end
+  if x_min then
+    local e = nil
+    local z = 1
+    if size == 1 then
+      local result = results[1]
+      if result.entity and result.entity.valid then
+        e = result.entity
+      end
+    else
+      local d = math.max(x_max - x_min, y_max - y_min)
+      if d > 20 then
+        z = 20 / d
+      end
+    end
+    local x = 0.5 * (x_min + x_max)
+    local y = 0.5 * (y_min + y_max)
+    cubecam.update_position(x, y, z, e)
+  end
+
   if alert_tick then
     cube_alert(size, results, alert_override_tick)
   end
