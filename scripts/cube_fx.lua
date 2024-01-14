@@ -472,8 +472,8 @@ local function track_victory_statistics(size, results)
     local result = results[math.random(size)]
     local entity = result.entity
     local item = result.item
-    local entity_type = entity.type
     if not (entity and entity.valid) then return end -- Should never happen
+    local entity_type = entity.type
     if (entity_type == "character" and is_cube_working_character(entity, item)) or
        (cube_utilisation_machine_types[entity_type] and is_cube_working(entity, item)) then
       victory_statistics.cube_working_samples = (victory_statistics.cube_working_samples or 0) + 1
