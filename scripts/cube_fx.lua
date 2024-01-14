@@ -33,10 +33,8 @@ function cube_fx.refresh()
   global.victory_statistics = global.victory_statistics or {
     distance_travelled_by_cube = 0,
     cube_last_position = nil,
-    utilization = {
-      idle = 0,     -- The unit here doesn't matter, as long as it's consistent
-      working = 0,  -- between `idle` and `working`.
-    }
+    cube_idle_samples = 0,
+    cube_working_samples = 0,
   }
 
   cube_fx_data = global.cube_fx_data
@@ -421,107 +419,31 @@ local function cube_victory(size, results)
   end
 end
 
----Map to determine if some machine is using the cube
----in an "efficient" manner. Returns true if the cube is
----being used productively. Try to get out of the function
----as fast as possible!
----@type table<string, fun(entity: LuaEntity, cube_type: string): boolean>
-local cube_machine_condition_handlers = {
-  ["status"] = function(entity, cube_type)
-    return entity.status == defines.entity_status.working
-  end,
-  ["crafter"] = function(entity, cube_type)
-    if entity.status ~= defines.entity_status.working then return false end
+local function is_cube_working(entity, item)
+  if entity.status ~= defines.entity_status.working then return false end
+  if cube_management.is_entity_burning_fuel(entity, item) then return true end
+  local recipe = entity.get_recipe()
+  if not recipe then return false end
+  local cube_recipe = cube_management.recipes()[recipe.name]
+  return cube_recipe and cube_recipe.ingredients[item] > 0
+end
 
-    -- First handle the case where it could be a burner fuel source.
-    local burner = entity.burner
-    if burner
-      and burner.currently_burning
-      and burner.currently_burning.name == cube_type
-    then
-      return true
-    end
+local function is_cube_working_character(entity, item)
+  local queue = entity.crafting_queue
+  if not queue or #queue == 0 then return false end
+  local cube_recipe = cube_management.recipes()[queue[1].recipe]
+  return cube_recipe and cube_recipe.ingredients[item] > 0
+end
 
-    -- Now handle the case where it's an ingredient. At this point we don't
-    -- have to verify that it's currently crafting because we know the status
-    -- is working. Therefore we only have to check if it's an ingredient.
-    local recipe = entity.get_recipe()
-    if not recipe then return false end
-    for  _, ingredient in pairs(recipe.ingredients) do
-      if ingredient.name == cube_type then return true end
-    end
-
-    return false
-  end,
-  ['burner'] = function(entity, cube_type)
-    if entity.status ~= defines.entity_status.working then return false end
-    local burner = entity.burner
-    if not burner then return false end
-    -- Now we know this entity is currently burning
-    if burner.currently_burning and burner.currently_burning.name == cube_type then return true end
-    return false -- This burner is burning something else
-  end,
-  ["handcrafting"] = function(character, cube_type)
-    -- We could search through the crafting queue, but this function
-    -- needs to be quick because it's called every 6 ticks. Lets
-    -- rather assume that if the player doesn't have it in their
-    -- inventory or cursor then the player is crafting with it.
-    -- That doesn't handle it being in queues though, but it's
-    -- better than nothing.
-    local player = character.player
-    if not player then return false end
-    local cursor_stack = player.cursor_stack
-    if cursor_stack.valid and cursor_stack.valid_for_read then
-      if cursor_stack.name == cube_type then return false end
-    end
-    local inventory = player.get_main_inventory()
-    if inventory.find_item_stack(cube_type) then return false end
-    return true
-  end,
-}
-
----Map to determine in which machine types the cube can be
----seen as being "utilization". The value will show what 
----requirement this machine has to be "productive" with
----the cube. 
----@type table<string, fun(entity: LuaEntity, cube_type: string): boolean>
-local cube_working_machine_types = {
-  ["character"]           = cube_machine_condition_handlers["handcrafting"],
-
-  -- These two types could have the cube as a burner source or as ingredient
-  ["assembling-machine"]  = cube_machine_condition_handlers["crafter"],
-  ["furnace"]             = cube_machine_condition_handlers["crafter"],
-
-  -- For the following entity-types we only ever have to check the entity status.
-  -- This is because in 99% of cases if the cube can only be placed in the machine
-  -- then it has to be an ingredient or fuel. And thus, if the cube is in a machine
-  -- and it's not currently "working" then it would mean the cube is idling due to
-  -- `no_fuel`, `output_full`, `no_ingredients`, etc.
-  ["generator"]           = cube_machine_condition_handlers["status"],
-  ["burner-generator"]    = cube_machine_condition_handlers["status"],
-
-  -- The boiler and reactor could have the cube currently being burned, or sitting
-  -- in the burnt_result slot while an alternative fuel is being used.
-  -- Thus we'll add a special check to ensure it's burning the cube.
-  ["boiler"]              = cube_machine_condition_handlers["burner"],
-  ["reactor"]             = cube_machine_condition_handlers["burner"],
-}
-
+local cube_utilisation_machine_types = make_set({"assembling-machine", "furnace", "boiler", "reactor"})
 local function track_victory_statistics(size, results)
-
-  -- We will only track the distance if there is only one cube.
-  -- There is no guarentee to the order of results, meaning the 
-  -- new position might not relate to the old position, resulting
-  -- in really bad measurements. Therefore when the cube is split
-  -- apart we clear the previous_position, only only start tracking
-  -- again when the cube is back into one piece.
-  -- The last position is nilled when:
-  --   - There are no cubes
-  --   - There are more than one cube
-  --   - The one cube is invalid for some reason (should never happen)
+  -- Track distance only when there's a single cube, since inconsistencies in result ordering
+  -- makes it very difficult otherwise.
+  local tracking_position = false
   if size == 1 then
     local entity = results[1].entity
     if entity and entity.valid then
+      tracking_position = true
       local old = victory_statistics.cube_last_position
       local new = entity.position
       if old then
@@ -537,27 +459,24 @@ local function track_victory_statistics(size, results)
         end
       end
       victory_statistics.cube_last_position = new
-    else
-      victory_statistics.cube_last_position = nil -- Invalid entity
     end
-  else
-    victory_statistics.cube_last_position = nil   -- Wrong number of cubes
+  end
+  if not tracking_position then
+    victory_statistics.cube_last_position = nil
   end
 
-  -- Track cube "utilization". This is done when there is at least one cube.
-  -- Something is wrong when there are no cubes so we won't count that as idling.
-  -- When there are multiple cubes we will pick one at random to get
-  -- a less biased sampling
   if size > 0 then
-    local entity = results[math.random(size)].entity
+    -- Track cube utilisation. Pick one at random for a less-biased sampling.
+    local result = results[math.random(size)]
+    local entity = result.entity
+    local item = result.item
+    local entity_type = entity.type
     if not (entity and entity.valid) then return end -- Should never happen
-    local machine_conditional = cube_working_machine_types[entity.type]
-    if machine_conditional and machine_conditional(entity, results[1].item) then
-      -- The cube is in some entity that's using the cube "utilization"
-      victory_statistics.utilization.working = victory_statistics.utilization.working + 1
+    if (entity_type == "character" and is_cube_working_character(entity, item)) or
+       (cube_utilisation_machine_types[entity_type] and is_cube_working(entity, item)) then
+      victory_statistics.cube_working_samples = (victory_statistics.cube_working_samples or 0) + 1
     else
-      -- The cube is idling!
-      victory_statistics.utilization.idle = victory_statistics.utilization.idle + 1
+      victory_statistics.cube_idle_samples = (victory_statistics.cube_idle_samples or 0) + 1
     end
   end
 end
