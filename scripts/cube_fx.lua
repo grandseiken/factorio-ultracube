@@ -419,9 +419,12 @@ local function cube_victory(size, results)
   end
 end
 
+local cube_utilisation_machine_types = make_set({"assembling-machine", "furnace", "boiler", "reactor"})
+local cube_crafter_machine_types = make_set({"assembling-machine", "furnace"})
 local function is_cube_working(entity, item)
   if entity.status ~= defines.entity_status.working then return false end
   if cube_management.is_entity_burning_fuel(entity, item) then return true end
+  if not cube_crafter_machine_types[entity.type] then return false end
   local recipe = entity.get_recipe()
   if not recipe then return false end
   local cube_recipe = cube_management.recipes()[recipe.name]
@@ -435,7 +438,6 @@ local function is_cube_working_character(entity, item)
   return cube_recipe and cube_recipe.ingredients[item] > 0
 end
 
-local cube_utilisation_machine_types = make_set({"assembling-machine", "furnace", "boiler", "reactor"})
 local function track_victory_statistics(size, results)
   -- Track distance only when there's a single cube, since inconsistencies in result ordering
   -- makes it very difficult otherwise.
