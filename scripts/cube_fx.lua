@@ -307,7 +307,7 @@ local function cube_vehicle_mod(size, results)
 
       if item == cube_ultradense then
         if cube_fuel_vehicle_entity_types[type] and
-           entity.speed > 1 / 8 and entity.burner and entity.burner.currently_burning and
+           math.abs(entity.speed) > 1 / 8 and entity.burner and entity.burner.currently_burning and
            entity.burner.currently_burning.name == cube_ultradense then
           local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
           entity.surface.create_entity {
