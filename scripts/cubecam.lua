@@ -188,7 +188,7 @@ function cubecam.update_position(x, y, z, e)
   if e and lock_entity_types[e.type] then
     global.cubecam_target_e = e
     if vehicle_entity_types[e.type] then
-      z = z / (1 + e.speed)
+      z = z / (1 + math.abs(e.speed))
     end
   else
     global.cubecam_target_e = nil
