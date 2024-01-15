@@ -239,9 +239,9 @@ local function swap_car(car, new_car_entity_name)
   new_car.burner.currently_burning = car.burner.currently_burning
   new_car.burner.heat = car.burner.heat
   new_car.burner.remaining_burning_fuel = car.burner.remaining_burning_fuel
-  cube_search.hint_entity(new_car)
 
   local position = car.position
+  car.burner.currently_burning = nil
   car.destroy({raise_destroy = true})
   new_car.teleport(position)
   cube_search.hint_entity(new_car)
