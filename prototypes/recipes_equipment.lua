@@ -23,6 +23,7 @@ data:extend({
     },
     results = {{"cube-power-armor", 1}},
     energy_required = 40,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -100,6 +101,7 @@ data:extend({
     },
     results = {{"night-vision-equipment", 1}},
     energy_required = 10,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -112,6 +114,7 @@ data:extend({
     },
     results = {{"belt-immunity-equipment", 1}},
     energy_required = 10,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -125,6 +128,7 @@ data:extend({
     },
     results = {{"exoskeleton-equipment", 1}},
     energy_required = 15,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
@@ -138,6 +142,7 @@ data:extend({
     },
     results = {{"cube-exoskeleton-equipment-mk2", 1}},
     energy_required = 25,
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
