@@ -5,6 +5,8 @@ Date: ??
     - Reduced the inventory size of the logistics storage chest to 20 to match other logistic chests (this will result in the loss of items in slots beyond the new capacity).
     - The stack sizes of several mid-game items have been reduced (deep core ore, deep powder, and ghost crystals). Deep-core mining setups may require some adjustment.
     - Construction robots now use the vanilla prototype for better compatibility with Recursive Blueprints, which relies on the vanilla construction robot signal.
+  Major Features:
+    - A new endgame technology allows for better parallelisation of some combinations of processes in certain situations, but will take some work to apply effectively.
   Minor Features:
     - There is now a small selection of Ultracube-specific tips in the built-in tips and tricks GUI, covering some of the most common friction points. More will probably follow.
     - Added optional compatibility with Compact Circuits.

@@ -48,6 +48,21 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-ultradense-combustion-cube",
+    icon_size = 256, icon_mipmaps = 4,
+    icon = "__Ultracube__/assets/technology/ultradense-combustion-cube.png",
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-ultradense-combustion-cube"},
+      {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube-combustion"},
+      {type = "unlock-recipe", recipe = "cube-combustion-cube-recharge"},
+      {type = "unlock-recipe", recipe = "cube-combustion-cube-manual-reassembly"},
+    },
+    prerequisites = {"cube-complete-annihilation-card"},
+    unit = tech_cost_unit("6", 600),
+    order = "6-1-0",
+  },
+  {
+    type = "technology",
     name = "cube-antimatter-reactor",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
@@ -62,7 +77,7 @@ data:extend({
       "cube-refined-concrete",
     },
     unit = tech_cost_unit("6", 600),
-    order = "6-1-0",
+    order = "6-1-1",
   },
   {
     type = "technology",
@@ -73,7 +88,7 @@ data:extend({
     },
     prerequisites = {"cube-complete-annihilation-card"},
     unit = tech_cost_unit("6", 2400),
-    order = "6-1-1",
+    order = "6-1-2",
   },
   {
     type = "technology",

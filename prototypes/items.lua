@@ -28,6 +28,33 @@ data:extend({
   },
   {
     type = "item",
+    name = "cube-ultradense-combustion-cube",
+    icon = "__Ultracube__/assets/icons/ultradense-combustion-cube.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"not-stackable"},
+    subgroup = "cube-synthesis-handling",
+    order = "cube-0[2-cube]",
+    stack_size = 1,
+
+    fuel_category = "cube-cube",
+    fuel_value = "1GJ",
+    fuel_glow_color = {0.5, 0.5, 1, 1},
+    fuel_acceleration_multiplier = 10,
+    fuel_top_speed_multiplier = 4,
+    burnt_result = "cube-dormant-combustion-cube",
+  },
+  {
+    type = "item",
+    name = "cube-dormant-combustion-cube",
+    icon = "__Ultracube__/assets/icons/dormant-combustion-cube.png",
+    icon_size = 64, icon_mipmaps = 4,
+    flags = {"not-stackable"},
+    subgroup = "cube-synthesis-handling",
+    order = "cube-0[3-cube]",
+    stack_size = 1,
+  },
+  {
+    type = "item",
     name = "cube-phantom-ultradense-constituent",
     icons = {{
       icon = "__Ultracube__/assets/icons/phantom-cube.png",
@@ -35,7 +62,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.25},
     }},
     subgroup = "cube-synthesis-handling",
-    order = "cube-0[2-cube]",
+    order = "cube-0[4-cube]",
     stack_size = 1,
 
     fuel_category = "cube-phantom",
@@ -52,7 +79,7 @@ data:extend({
       tint = {r = 1, g = 1, b = 1, a = 0.25},
     }},
     subgroup = "cube-synthesis-handling",
-    order = "cube-0[3-cube]",
+    order = "cube-0[5-cube]",
     stack_size = 1,
   },
   {
