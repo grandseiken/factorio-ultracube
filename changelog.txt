@@ -2,7 +2,7 @@
 Version: 0.3.10
 Date: ??
   Bugfixes:
-    - Fixed that some equipment could only be crafted by hand.
+    - Fixed that some energy bulkframes and some equipment could only be crafted by hand.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 15. 01. 2024

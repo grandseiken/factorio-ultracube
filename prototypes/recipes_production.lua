@@ -305,6 +305,7 @@ data:extend({
     },
     energy_required = 20,
     results = {{"cube-energy-bulkframe", 1}},
+    category = "cube-fabricator-handcraft",
     enabled = false,
   },
   {
