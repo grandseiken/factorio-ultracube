@@ -201,7 +201,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "cube-final-machines",
-    order = "cube-z[construct]",
+    order = "cube-4[z-construct]",
     stack_size = 1,
     flags = {"hidden"},
     durability = 1,

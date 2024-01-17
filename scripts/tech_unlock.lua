@@ -49,13 +49,32 @@ function tech_unlock.trigger(force, technology_name, unlocked)
   end
   if technology_name == "cube-mystery-furnace" then
     force.technologies["cube-mystery-furnace-dummy"].researched = unlocked
-  end
-  if technology_name == "cube-forbidden-ziggurat" then
+  elseif technology_name == "cube-forbidden-ziggurat" then
     force.technologies["cube-construct-forbidden-ziggurat"].enabled = unlocked
-  end
-  if technology_name == "cube-construct-forbidden-ziggurat" then
+  elseif technology_name == "cube-construct-forbidden-ziggurat" then
     force.technologies["cube-resonance-cascade"].enabled = unlocked
     force.technologies["cube-complete-annihilation-card"].enabled = unlocked
+  elseif technology_name == "cube-everything" then
+    local state = global.cube_victory_state
+    if state ~= "victorious" then
+      global.cube_victory_state = "victorious"
+
+      local bvs = remote.interfaces["better-victory-screen"]
+      if bvs and bvs["trigger_victory"] then
+        remote.call("better-victory-screen", "trigger_victory", game.forces["player"], true)
+      else
+        game.set_game_state {
+          game_finished = true,
+          player_won = true,
+          can_continue = true,
+          victorious_force = "player",
+        }
+      end
+      game.print({"cube-msg-victory-0"})
+      game.print({"cube-msg-victory-1"})
+      game.print({"cube-msg-victory-2"})
+      game.print({"cube-msg-victory-3"})
+    end
   end
 end
 

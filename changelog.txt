@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.10
-Date: ??
+Date: 17. 01. 2024
+  Minor Features:
+    - The victory condition has been changed to encourage automation of end-game processes.
   Bugfixes:
     - Fixed that some energy bulkframes and some equipment could only be crafted by hand.
 ---------------------------------------------------------------------------------------------------

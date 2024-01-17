@@ -385,41 +385,6 @@ local function cube_vehicle_mod(size, results)
   return boomed
 end
 
-local function cube_victory(size, results)
-  local state = global.cube_victory_state
-  if state == "victorious" then
-    return
-  end
-  local has_cube = false
-  local has_plate = false
-  for i = 1, size do
-    local item = results[i].item
-    if item == cube_ultradense then
-      has_cube = true
-    elseif item == legendary_iron_gear then
-      has_plate = true
-    end
-  end
-  if has_plate and not has_cube and not state then
-    global.cube_victory_state = "imminent"
-  end
-  if has_cube and not has_plate and state == "imminent" then
-    global.cube_victory_state = "victorious"
-
-    local bvs = remote.interfaces["better-victory-screen"]
-    if bvs and bvs["trigger_victory"] then
-      remote.call("better-victory-screen", "trigger_victory", game.forces["player"])
-    else
-      game.set_game_state {
-        game_finished = true,
-        player_won = true,
-        can_continue = true,
-        victorious_force = "player",
-      }
-    end
-  end
-end
-
 local cube_utilisation_machine_types = make_set({"assembling-machine", "furnace", "boiler", "reactor"})
 local cube_crafter_machine_types = make_set({"assembling-machine", "furnace"})
 local function is_cube_working(entity, item)
@@ -533,7 +498,6 @@ function cube_fx.tick(tick)
     cube_alert(size, results, alert_override_tick)
   end
   track_victory_statistics(size, results)
-  cube_victory(size, results)
   if cube_vehicle_mod(size, results) then
     return
   end
