@@ -10,6 +10,7 @@ local unlock_trigger_technologies = make_set({
 local special_condition_technologies = make_set({
   "cube-construct-forbidden-ziggurat",
   "cube-resonance-cascade",
+  "cube-complete-annihilation-card",
 })
 
 local function get_unlocks_for_technology(force, technology_name)

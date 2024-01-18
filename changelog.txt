@@ -2,6 +2,7 @@
 Version: 0.3.11
 Date: ??
   Bugfixes:
+    - Fixed that the final science card technology became visible before it was supposed to.
     - Fixed an incorrect control sequence reference in the cube alert tooltip.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.10
