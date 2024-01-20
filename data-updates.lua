@@ -3,6 +3,7 @@ require("prototypes.lib.mystery")
 
 require("updates.compatibility.aai_signal_transmission")
 require("updates.compatibility.circuit_hud")
+require("updates.compatibility.compact_circuits")
 require("updates.compatibility.cybersyn")
 require("updates.compatibility.display_plates")
 require("updates.compatibility.flow_control")
