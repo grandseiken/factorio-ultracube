@@ -33,6 +33,7 @@ require("prototypes.technology_3_4")
 require("prototypes.technology_5")
 require("prototypes.technology_6")
 require("prototypes.technology_upgrades")
+require("prototypes.tips_and_tricks")
 require("prototypes.tweaks")
 
 require("prototypes.entities.antimatter_reactor")
