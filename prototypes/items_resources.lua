@@ -356,7 +356,7 @@ data:extend({
     },
     subgroup = "raw-resource",
     order = "cube-f[1-deep-core-ore]",
-    stack_size = 200,
+    stack_size = 50,
   },
   {
     type = "item",
@@ -428,7 +428,7 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-d[0-powder]",
-    stack_size = 200,
+    stack_size = 100,
   },
   {
     type = "item",
@@ -601,7 +601,7 @@ data:extend({
     },
     subgroup = "cube-chemical-intermediates",
     order = "cube-0[c-crystal]",
-    stack_size = 100,
+    stack_size = 50,
   },
   {
     type = "item",

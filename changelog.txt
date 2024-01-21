@@ -3,6 +3,7 @@ Version: 0.4.0
 Date: ??
   Changes:
     - Reduced the inventory size of the logistics storage chest to 20 to match other logistic chests (this will result in the loss of items in slots beyond the new capacity).
+    - The stack sizes of several mid-game items have been reduced (deep core ore, deep powder, and ghost crystals).
   Minor Features:
     - Added optional compatibility with Compact Circuits.
     - Added optional compatibility with Holographic Signs.
