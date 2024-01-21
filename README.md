@@ -108,6 +108,7 @@ The following mods have been adapted to work with Ultracube:
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
+| [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
 | [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some challenges, not essential |
