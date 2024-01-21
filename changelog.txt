@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: ??
+  Changes:
+    - Reduced the inventory size of the logistics storage chest to 20 to match other logistic chests (this will result in the loss of items in slots beyond the new capacity).
+---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 19. 01. 2024
   Bugfixes:
