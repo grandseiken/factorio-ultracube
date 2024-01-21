@@ -17,6 +17,7 @@ if mods["compaktcircuit"] then
   local item = data.raw.item[proc_name]
   item.order = "cube-" .. item.order
   item.subgroup = "cube-combinator-extra"
+  add_mystery_recipe(1, proc_name, "cube-spectral-processor")
 
   proc_name = proc_name .. "_1x1"
   proc = data.raw.recipe[proc_name]
@@ -30,5 +31,6 @@ if mods["compaktcircuit"] then
   item = data.raw.item[proc_name]
   item.order = "cube-" .. item.order
   item.subgroup = "cube-combinator-extra"
+  add_mystery_recipe(1, proc_name, "cube-spectral-processor")
 end
 
