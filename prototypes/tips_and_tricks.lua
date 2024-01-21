@@ -1,69 +1,4 @@
-local vanilla_tips = {
-  "introduction",
-  "show-info",
-  "e-confirm",
-  "clear-cursor",
-  "pipette",
-  "stack-transfers",
-  "entity-transfers",
-  "z-dropping",
-  "shoot-targeting",
-  "bulk-crafting",
-  "rotating-assemblers",
-  "circuit-network",
-  "inserters",
-  "burner-inserter-refueling",
-  "long-handed-inserters",
-  "move-between-labs",
-  "insertion-limits",
-  "limit-chests",
-  "transport-belts",
-  "belt-lanes",
-  "splitters",
-  "splitter-filters",
-  "underground-belts",
-  "electric-network",
-  "steam-power",
-  "electric-pole-connections",
-  "low-power",
-  "connect-switch",
-  "copy-entity-settings",
-  "copy-paste-trains",
-  "copy-paste-filters",
-  "copy-paste-requester-chest",
-  "copy-paste-spidertron",
-  "drag-building",
-  "drag-building-poles",
-  "pole-dragging-coverage",
-  "drag-building-underground-belts",
-  "fast-belt-bending",
-  "fast-obstacle-traversing",
-  "trains",
-  "rail-building",
-  "train-stops",
-  "rail-signals-basic",
-  "rail-signals-advanced",
-  "gate-over-rail",
-  "pump-connection",
-  "train-stop-same-name",
-  "logistic-network",
-  "personal-logistics",
-  "construction-robots",
-  "passive-provider-chest",
-  "storage-chest",
-  "requester-chest",
-  "active-provider-chest",
-  "buffer-chest",
-  "ghost-building",
-  "ghost-rail-planner",
-  "copy-paste",
-  "fast-replace",
-  "fast-replace-direction",
-  "fast-replace-belt-splitter",
-  "fast-replace-belt-underground",
-}
-
-local vanilla_categories = {
+local vanilla_categories = make_set({
   "game-interaction",
   "inserters",
   "belts",
@@ -74,18 +9,13 @@ local vanilla_categories = {
   "logistic-network",
   "ghost-building",
   "fast-replace",
-}
+})
 
-for _, name in pairs(vanilla_tips) do
-  local tip = data.raw["tips-and-tricks-item"][name]
-  tip.indent = 1 + (tip.indent or 0)
-  tip.order = "z[vanilla]-" .. (tip.order or "")
-  tip.starting_status = "unlocked"
-end
-
-for _, name in pairs(vanilla_categories) do
-  local category = data.raw["tips-and-tricks-item-category"][name]
-  category.order = "z[vanilla]-" .. (category.order or "")
+for name, tip in pairs(data.raw["tips-and-tricks-item"]) do
+  if name == "introduction" or (tip.category and vanilla_categories[tip.category]) then
+    tip.indent = 1 + (tip.indent or 0)
+    tip.starting_status = "unlocked"
+  end
 end
 
 data:extend({
@@ -94,7 +24,7 @@ data:extend({
     name = "cube-vanilla",
     is_title = true,
     starting_status = "unlocked",
-    order = "z[vanilla]",
+    order = "1[vanilla]",
   },
   {
     type = "tips-and-tricks-item-category",
