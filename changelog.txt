@@ -6,6 +6,7 @@ Date: ??
     - The stack sizes of several mid-game items have been reduced (deep core ore, deep powder, and ghost crystals). Deep-core mining setups may require some adjustment.
     - Construction robots now use the vanilla prototype for better compatibility with Recursive Blueprints, which relies on the vanilla construction robot signal.
   Minor Features:
+    - There is now a small selection of Ultracube-specific tips in the built-in tips and tricks GUI, covering some of the most common friction points. More will probably follow.
     - Added optional compatibility with Compact Circuits.
     - Added optional compatibility with Holographic Signs.
 ---------------------------------------------------------------------------------------------------
