@@ -312,6 +312,9 @@ end)
 script.on_event(defines.events.on_gui_value_changed, function(e)
   cubecam.on_value_changed(game.get_player(e.player_index), e.element)
 end)
+script.on_event(defines.events.on_runtime_mod_setting_changed, function(e)
+  cubecam.on_settings_changed(game.get_player(e.player_index), e.setting)
+end)
 
 local function remote_hint_entity(entity)
   if entity then
