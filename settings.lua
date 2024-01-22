@@ -37,7 +37,7 @@ data:extend({
 })
 
 local allowed_values_cubecam_scale = {}
-for i = 1, 200 do
+for i = 10, 150, 1 do
   allowed_values_cubecam_scale[i] = i
 end
 
