@@ -83,16 +83,6 @@ data:extend({
 
   {
     type = "item",
-    name = "cube-construction-robot-0",
-    icon = "__base__/graphics/icons/construction-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
-    subgroup = "logistic-network",
-    order = "cube-a[robot]-b[construction-robot]",
-    place_result = "cube-construction-robot-0",
-    stack_size = 50,
-  },
-  {
-    type = "item",
     name = "cube-logistic-robot-0",
     icon = "__base__/graphics/icons/logistic-robot.png",
     icon_size = 64, icon_mipmaps = 4,

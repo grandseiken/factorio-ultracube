@@ -152,7 +152,7 @@ add_mystery_recipe(2, "fluid-wagon", "storage-tank")
 
 add_mystery_recipe(2, "cube-logistic-robot-1", "cube-logistic-robot-0")
 add_mystery_recipe(2, "cube-logistic-robot-0", "cube-logistic-robot-1")
-add_mystery_recipe(2, "cube-construction-robot-0", "cube-bottled-consciousness")
+add_mystery_recipe(2, "construction-robot", "cube-bottled-consciousness")
 
 add_mystery_recipe(1, "logistic-chest-active-provider", "iron-chest")
 add_mystery_recipe(1, "logistic-chest-passive-provider", "iron-chest")

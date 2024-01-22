@@ -51,7 +51,7 @@ local milestones = {
   {type = "item",  name = "car",                          quantity = 1},
   {type = "item",  name = "locomotive",                   quantity = 1},
   {type = "item",  name = "spidertron",                   quantity = 1},
-  {type = "item",  name = "cube-construction-robot-0",    quantity = 1},
+  {type = "item",  name = "construction-robot",           quantity = 1},
   {type = "item",  name = "cube-logistic-robot-0",        quantity = 1},
   {type = "item",  name = "cube-roboport",                quantity = 1},
   {type = "item",  name = "cube-beacon",                  quantity = 1},

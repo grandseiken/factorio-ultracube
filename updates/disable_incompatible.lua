@@ -19,6 +19,7 @@ local vanilla_item_whitelist = make_set({
   "pipe",
   "pipe-to-ground",
   "iron-chest",
+  "construction-robot",
   "logistic-chest-passive-provider",
   "logistic-chest-active-provider",
   "logistic-chest-storage",

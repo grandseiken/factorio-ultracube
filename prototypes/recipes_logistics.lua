@@ -683,7 +683,7 @@ data:extend({
       {"cube-advanced-circuit", 1},
       {"cube-bottled-consciousness", 1},
     },
-    results = {{"cube-construction-robot-0", 1}},
+    results = {{"construction-robot", 1}},
     energy_required = 2,
     category = "cube-fabricator-handcraft",
     subgroup = "logistic-network",
