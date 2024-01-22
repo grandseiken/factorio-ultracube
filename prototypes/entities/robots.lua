@@ -7,6 +7,8 @@ local logistic_robot = data.raw["logistic-robot"]["logistic-robot"]
 local construction_robot_0 = {
   type = "construction-robot",
   name = "cube-construction-robot-0",
+  localised_name = {"entity-name.construction-robot"},
+  localised_description = {"entity-description.construction-robot"},
   icon = "__base__/graphics/icons/construction-robot.png",
   icon_size = 64, icon_mipmaps = 4,
   flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
@@ -69,6 +71,7 @@ local construction_robot_0 = {
 local logistic_robot_0 = {
   type = "logistic-robot",
   name = "cube-logistic-robot-0",
+  localised_name = {"entity-name.logistic-robot"},
   icon = "__base__/graphics/icons/logistic-robot.png",
   icon_size = 64, icon_mipmaps = 4,
   flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},

@@ -16,4 +16,3 @@ if mods["holographic_signs"] then
   table.insert(tech.effects, {type = "unlock-recipe", recipe = "hs_holo_sign"})
   add_mystery_recipe(1, "hs_holo_sign", "small-lamp")
 end
-
