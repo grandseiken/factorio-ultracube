@@ -45,8 +45,7 @@ local function cubecam_calculate_size(player, fullscreen)
     return {resolution.width / scale, resolution.height / scale}
   else
     local scale_setting = player.mod_settings["cube-cubecam-scale"].value
-    local display_scale = player.display_scale
-    return {cubecam_width * display_scale * scale_setting, cubecam_height * display_scale * scale_setting}
+    return {cubecam_width * scale_setting, cubecam_height * scale_setting}
   end
 end
 
@@ -122,14 +121,14 @@ local function cubecam_open(player, fullscreen)
   }
 
   local size = cubecam_calculate_size(player, fullscreen)
-
   main.style.size = size
   if fullscreen then
     main.auto_center = true
   else
     local resolution = player.display_resolution
     local display_scale = player.display_scale
-    main.location = {resolution.width - size[1] * display_scale, resolution.height - size[2] * display_scale}
+    main.location = {resolution.width - size[1] * display_scale,
+                    resolution.height - size[2] * display_scale}
   end
 
   state.main = main
