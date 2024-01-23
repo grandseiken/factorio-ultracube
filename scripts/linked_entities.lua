@@ -238,38 +238,39 @@ local function insert_or_spill(entity, inventory, item)
   end
 end
 
+local function transfer_or_drop_all(entity, inventory, item_set)
+  for i = 1, entity.get_max_inventory_index() do
+    local di = entity.get_inventory(i)
+    if di then
+      for item, count in pairs(di.get_contents()) do
+        if not item_set then
+          insert_or_spill(entity, inventory, {name = item, count = count})
+        elseif item_set[item] then
+          insert_or_spill(entity, inventory, {name = item, count = count})
+          di.remove({name = item, count = count})
+        end
+      end
+      if not item_set then
+        di.clear()
+      end
+    end
+  end
+end
+
 function linked_entities.return_cubes(entity, inventory, drop_all)
   for base, dormant in pairs(fuel_map) do
     if cube_management.is_entity_burning_fuel(entity, base) then
       insert_or_spill(entity, inventory, {name = dormant, count = 1})
+      entity.burner.currently_burning = nil
     end
   end
   if drop_all then
-    local cube_drop = cube_management.cube_drop
-    for i = 1, entity.get_max_inventory_index() do
-      local di = entity.get_inventory(i)
-      if di then
-        for item, count in pairs(di.get_contents()) do
-          if cube_drop[item] then
-            insert_or_spill(entity, inventory, {name = item, count = count})
-            di.remove({name = item, count = count})
-          end
-        end
-      end
-    end
+    transfer_or_drop_all(entity, inventory, cube_management.cube_drop)
   end
   local linked = entity_combine.get_linked(entity)
   if linked then
     for _, e in ipairs(linked) do
-      for i = 1, e.get_max_inventory_index() do
-        local di = e.get_inventory(i)
-        if di then
-          for item, count in pairs(di.get_contents()) do
-            insert_or_spill(entity, inventory, {name = item, count = count})
-          end
-          di.clear()
-        end
-      end
+      transfer_or_drop_all(e, inventory)
     end
   end
 end

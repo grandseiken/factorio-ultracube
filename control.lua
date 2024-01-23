@@ -192,7 +192,7 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    linked_entities.return_cubes(e.entity, e.loot)
+    linked_entities.return_cubes(e.entity, nil, true)
     on_entity_removed(e.entity)
   end)
 
