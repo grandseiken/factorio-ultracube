@@ -38,6 +38,18 @@ local zoom_map = {
   4,
 }
 
+local function cubecam_calculate_size(player, fullscreen)
+  if fullscreen then
+    local resolution = player.display_resolution
+    local scale = player.display_scale
+    return {resolution.width / scale, resolution.height / scale}
+  else
+    local scale_setting = player.mod_settings["cube-cubecam-scale"].value
+    local display_scale = player.display_scale
+    return {cubecam_width * display_scale * scale_setting, cubecam_height * display_scale * scale_setting}
+  end
+end
+
 local function cubecam_open(player, fullscreen)
   local state = player_state(player)
   if state.main then
@@ -109,15 +121,17 @@ local function cubecam_open(player, fullscreen)
     position = {x = 0, y = 0},
   }
 
-  local resolution = player.display_resolution
-  local scale = player.display_scale
+  local size = cubecam_calculate_size(player, fullscreen)
+
+  main.style.size = size
   if fullscreen then
-    main.style.size = {resolution.width / scale, resolution.height / scale}
     main.auto_center = true
   else
-    main.style.size = {cubecam_width, cubecam_height}
-    main.location = {resolution.width - scale * cubecam_width, resolution.height - scale * cubecam_height}
+    local resolution = player.display_resolution
+    local display_scale = player.display_scale
+    main.location = {resolution.width - size[1] * display_scale, resolution.height - size[2] * display_scale}
   end
+
   state.main = main
   state.content = content
   state.camera = camera
@@ -179,6 +193,17 @@ function cubecam.on_value_changed(player, element)
   if element.name == "cube-cubecam-zoom" then
     local state = player_state(player)
     state.zoom = element.slider_value
+  end
+end
+
+function cubecam.on_settings_changed(player, setting)
+  if setting == "cube-cubecam-scale" or setting == "display-scale" then
+    local state = player_state(player)
+    if state.main then
+      local fullscreen = state.fullscreen
+      cubecam_close(player)
+      cubecam_open(player, fullscreen)
+    end
   end
 end
 

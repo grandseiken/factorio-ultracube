@@ -27,6 +27,15 @@ data:extend({
     default_value = true,
     order = "2",
   },
+  {
+    type = "double-setting",
+    name = "cube-cubecam-scale",
+    setting_type = "runtime-per-user",
+    minimum_value = 0.1,
+    maximum_value = 2.0,
+    default_value = 1.0,
+    order = "3",
+  }
 })
 
 data.raw["string-setting"]["aai-loaders-mode"].hidden = true
