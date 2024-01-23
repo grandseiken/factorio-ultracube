@@ -89,6 +89,18 @@ data:extend({
   },
   {
     type = "tips-and-tricks-item",
+    name = "cube-nuclear-reactor",
+    tag = "[entity=cube-nuclear-reactor]",
+    trigger = {
+      type = "research",
+      technology = "cube-nuclear-power",
+    },
+    category = "cube-tips",
+    indent = 1,
+    order = "5",
+  },
+  {
+    type = "tips-and-tricks-item",
     name = "cube-quantum-decoder",
     tag = "[item=cube-quantum-decoder]",
     trigger = {
@@ -97,6 +109,6 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "5",
+    order = "6",
   },
 })

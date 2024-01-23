@@ -781,7 +781,6 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-heat-exchanger"},
       {type = "unlock-recipe", recipe = "cube-heat-pipe"},
       {type = "unlock-recipe", recipe = "cube-heavy-turbine"},
-      -- {type = "unlock-recipe", recipe = "nuclear-fuel-reprocessing"},
     },
     prerequisites = {"cube-uranium-processing"},
     unit = tech_cost_unit("2", 240),
