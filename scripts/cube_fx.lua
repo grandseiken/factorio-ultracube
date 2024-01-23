@@ -5,10 +5,23 @@ local cubecam = require("__Ultracube__/scripts/cubecam")
 
 local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
+local cube_combustion = cube_management.cubes.combustions
+local cube_dormant_combustion = cube_management.cubes.dormant_combustion
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 local legendary_iron_gear = cube_management.cubes.legendary_iron_gear
-local alert_icons = make_set({cube_ultradense, cube_dormant, cube_ultradense_phantom, cube_dormant_phantom, legendary_iron_gear})
+
+local cube_weight = cube_management.cube_weight
+local cube_ultradense_fuel = cube_management.cube_ultradense_fuel
+local alert_icons = make_set({
+  cube_ultradense,
+  cube_dormant,
+  cube_combustion,
+  cube_dormant_combustion,
+  cube_ultradense_phantom,
+  cube_dormant_phantom,
+  legendary_iron_gear,
+})
 
 local ultralocomotion_fuel_map = {
   ["wood"] = "wood-ultralocomotion",
@@ -92,9 +105,15 @@ end
 
 local dormant_explosion = {name = "cube-periodic-dormant-explosion"}
 local ultradense_explosion = {name = "cube-periodic-ultradense-explosion"}
+local combustion_explosion = {name = "cube-periodic-combustion-explosion"}
 local phantom_explosion = {name = "cube-periodic-phantom-explosion"}
 local ultradense_projectile = {
   name = "cube-periodic-ultradense-projectile",
+  max_range = 0,
+  target = {},
+}
+local combustion_projectile = {
+  name = "cube-periodic-combustion-projectile",
   max_range = 0,
   target = {},
 }
@@ -118,26 +137,28 @@ local function cube_boom(size, results)
           phantom_explosion.target = result.position
           result.surface.create_entity(phantom_explosion)
         end
-      elseif result.item == cube_dormant then
+      elseif result.item == cube_dormant or result.item == cube_dormant_combustion then
         dormant_explosion.source = result.entity
         dormant_explosion.position = result.position
         dormant_explosion.target = result.position
         result.surface.create_entity(dormant_explosion)
-      elseif result.item == cube_ultradense then
+      elseif result.item == cube_ultradense or result.item == cube_combustion then
         if result.velocity then
-        local position = result.position
-        local velocity = result.velocity
-        ultradense_projectile.source = result.entity
-        ultradense_projectile.position = position
-        ultradense_projectile.target.x = position.x + velocity.x
-        ultradense_projectile.target.y = position.y + velocity.y
-        ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
-        result.surface.create_entity(ultradense_projectile)
+          local position = result.position
+          local velocity = result.velocity
+          ultradense_projectile.source = result.entity
+          ultradense_projectile.position = position
+          ultradense_projectile.target.x = position.x + velocity.x
+          ultradense_projectile.target.y = position.y + velocity.y
+          ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
+          result.surface.create_entity(
+              result.item == cube_combustion and combustion_projectile or ultradense_projectile)
         else
           ultradense_explosion.source = result.entity
           ultradense_explosion.position = result.position
           ultradense_explosion.target = result.position
-          result.surface.create_entity(ultradense_explosion)
+          result.surface.create_entity(
+              result.item == cube_combustion and combustion_explosion or ultradense_explosion)
         end
       end
     end
@@ -146,19 +167,15 @@ end
 
 local spark_high = {name = "cube-periodic-ultradense-high-spark"}
 local spark_low = {name = "cube-periodic-ultradense-low-spark"}
+local combustion_spark_high = {name = "cube-periodic-combustion-high-spark"}
+local combustion_spark_low = {name = "cube-periodic-combustion-low-spark"}
 local puff_high = {name = "cube-periodic-phantom-high-puff"}
 local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
     if result.entity and result.height >= 0 then
-      if result.item == cube_ultradense then
-        local spark = result.height > 0 and spark_high or spark_low
-        spark.source = result.entity
-        spark.position = result.position
-        spark.target = result.position
-        result.surface.create_entity(spark)
-      elseif result.item == cube_ultradense_phantom then
+      if result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
         local positions = result.positions
         if positions then
@@ -174,6 +191,19 @@ local function cube_spark(size, results)
           puff.position = result.position
           puff.target = result.position
           result.surface.create_entity(puff)
+        end
+      else
+        local spark = nil
+        if result.item == cube_ultradense then
+          spark = result.height > 0 and spark_high or spark_low
+        elseif result.item == cube_combustion then
+          spark = result.height > 0 and combustion_spark_high or combustion_spark_low
+        end
+        if spark then
+          spark.source = result.entity
+          spark.position = result.position
+          spark.target = result.position
+          result.surface.create_entity(spark)
         end
       end
     end
@@ -251,6 +281,7 @@ end
 local function cube_vehicle_mod(size, results)
   local cube_powered_cars = get_cube_powered_cars()
   local new_locomotives = {}
+  local locomotive_fuel = {}
   local new_last_robot = false
   local boomed = false
 
@@ -259,17 +290,20 @@ local function cube_vehicle_mod(size, results)
   if last_car then
     if not last_car.valid then
       cube_fx_data.last_car = nil
-    elseif not cube_management.is_entity_burning_fuel(last_car, cube_ultradense) then
-      -- I don't know if you can realistically use an entire cube's worth of power just by driving, but just in case.
-      local car_name = cube_powered_cars[last_car.name]
-      if car_name then
-        local swap_result = size >= 1 and results[1].entity == last_car
-        local entity = swap_car(last_car, car_name)
-        if swap_result then
-          results[1].entity = entity
+    else
+      local fuel = cube_management.get_entity_burning_fuel(last_car)
+      if not (fuel and cube_ultradense_fuel[fuel]) then
+        -- I don't know if you can realistically use an entire cube's worth of power just by driving, but just in case.
+        local car_name = cube_powered_cars[last_car.name]
+        if car_name then
+          local swap_result = size >= 1 and results[1].entity == last_car
+          local entity = swap_car(last_car, car_name)
+          if swap_result then
+            results[1].entity = entity
+          end
         end
+        cube_fx_data.last_car = nil
       end
-      cube_fx_data.last_car = nil
     end
   end
 
@@ -280,8 +314,8 @@ local function cube_vehicle_mod(size, results)
       local item = result.item
       local type = entity.type
 
-      if (item == cube_ultradense or item == cube_dormant) and
-        (type == "construction-robot" or type == "logistic-robot") then
+      local weight = cube_weight[item]
+      if weight and weight > 0 and (type == "construction-robot" or type == "logistic-robot") then
         local last_robot = cube_fx_data.last_robot
         if last_robot and entity.energy < last_robot.energy then
           local drain = 1
@@ -298,20 +332,24 @@ local function cube_vehicle_mod(size, results)
         new_last_robot = true
       end
 
-      if cube_powered_cars_enabled and type == "car" and not cube_powered_cars[entity.name] and
-         cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
-        entity = swap_car(entity, cube_powered_prefix .. entity.name)
-        result.entity = entity
-        cube_fx_data.last_car = entity
+      if cube_powered_cars_enabled and type == "car" and not cube_powered_cars[entity.name] then
+        local fuel = cube_management.get_entity_burning_fuel(entity)
+        if cube_ultradense_fuel[fuel] then
+          entity = swap_car(entity, cube_powered_prefix .. entity.name)
+          result.entity = entity
+          cube_fx_data.last_car = entity
+        end
       end
 
-      if item == cube_ultradense then
+      if cube_ultradense_fuel[item] then
+        local fuel = cube_management.get_entity_burning_fuel(entity)
         if cube_fuel_vehicle_entity_types[type] and
-           math.abs(entity.speed) > 1 / 8 and entity.burner and entity.burner.currently_burning and
-           entity.burner.currently_burning.name == cube_ultradense then
+           math.abs(entity.speed) > 1 / 8 and cube_ultradense_fuel[fuel] then
           local velocity = from_polar_orientation(math.min(2, entity.speed), entity.orientation)
+          local explosion = fuel == cube_combustion and
+              "cube-periodic-combustion-projectile" or "cube-periodic-ultradense-projectile"
           entity.surface.create_entity {
-            name = "cube-periodic-ultradense-projectile",
+            name = explosion,
             source = entity,
             position = entity.position,
             target = vector_add(entity.position, velocity),
@@ -341,6 +379,7 @@ local function cube_vehicle_mod(size, results)
               local locomotive = a[j]
               if locomotive.burner and locomotive.burner.currently_burning then
                 new_locomotives[locomotive.unit_number] = locomotive
+                locomotive_fuel[locomotive.unit_number] = item
               end
             end
           end
@@ -360,8 +399,10 @@ local function cube_vehicle_mod(size, results)
       locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
     elseif ultralocomotion_fuel_inverse_map[fuel] and locomotive.speed > 1 / 8 then
       local velocity = from_polar_orientation(math.min(2, locomotive.speed), locomotive.orientation)
+      local explosion = locomotive_fuel[locomotive.unit_number] == cube_combustion and
+          "cube-periodic-combustion-projectile" or "cube-periodic-ultradense-projectile"
       locomotive.surface.create_entity {
-        name = "cube-periodic-ultradense-projectile",
+        name = explosion,
         source = locomotive,
         position = locomotive.position,
         target = vector_add(locomotive.position, velocity),

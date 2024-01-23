@@ -3,6 +3,8 @@ require("__Ultracube__/scripts/lib")
 local cube_defines = {
   ultradense = "cube-ultradense-utility-cube",
   dormant = "cube-dormant-utility-cube",
+  combustion = "cube-ultradense-combustion-cube",
+  dormant_combustion = "cube-dormant-combustion-cube",
   ultradense_phantom = "cube-phantom-ultradense-constituent",
   dormant_phantom = "cube-dormant-phantom-constituent",
   legendary_iron_gear = "cube-legendary-iron-gear",
@@ -12,6 +14,8 @@ local cube_defines = {
 local cubes = {
   ultradense = cube_defines.ultradense,
   ultradense_phantom = cube_defines.ultradense_phantom,
+  combustion = cube_defines.combustion,
+  dormant_combustion = cube_defines.dormant_combustion,
   dormant = cube_defines.dormant,
   dormant_phantom = cube_defines.dormant_phantom,
   legendary_iron_gear = cube_defines.legendary_iron_gear,
@@ -20,6 +24,8 @@ local cubes = {
 local cube_info = make_set({
   cubes.ultradense,
   cubes.dormant,
+  cubes.combustion,
+  cubes.dormant_combustion,
   cubes.ultradense_phantom,
   cubes.dormant_phantom,
   cubes.legendary_iron_gear,
@@ -28,6 +34,8 @@ local cube_info = make_set({
 local cube_drop = make_set({
   cubes.ultradense,
   cubes.dormant,
+  cubes.combustion,
+  cubes.dormant_combustion,
   cubes.ultradense_phantom,
   cubes.dormant_phantom,
   cubes.legendary_iron_gear,
@@ -38,19 +46,28 @@ local cube_drop = make_set({
   "cube-ultradense-composite",
 })
 
+local cube_weight = {
+  [cubes.ultradense] = 1,
+  [cubes.dormant] = 1,
+  [cubes.combustion] = 1,
+  [cubes.dormant_combustion] = 1,
+  [cubes.ultradense_phantom] = 0,
+  [cubes.dormant_phantom] = 0,
+  [cubes.legendary_iron_gear] = 0,
+}
+
+local cube_ultradense_fuel = {
+  [cubes.ultradense] = cubes.dormant,
+  [cubes.combustion] = cubes.dormant_combustion,
+}
+
 local cube_management = {
   cube_defines = cube_defines,
   cubes = cubes,
   cube_info = cube_info,
   cube_drop = cube_drop,
-}
-
-local cube_weight = {
-  [cubes.ultradense] = 1,
-  [cubes.dormant] = 1,
-  [cubes.ultradense_phantom] = 0,
-  [cubes.dormant_phantom] = 0,
-  [cubes.legendary_iron_gear] = 0,
+  cube_weight = cube_weight,
+  cube_ultradense_fuel = cube_ultradense_fuel,
 }
 
 local cube_recipes_cache = nil
@@ -119,9 +136,10 @@ function cube_management.module_machines()
 end
 
 function cube_management.player_data(player)
-  local data = {total_weight = 0, ingredients = {}}
+  local total_weight = 0
+  local ingredients = {}
   for _, item in pairs(cubes) do
-    data.ingredients[item] = 0
+    ingredients[item] = 0
   end
   local recipes = cube_management.recipes()
   if (player.controller_type == defines.controllers.character or
@@ -129,25 +147,25 @@ function cube_management.player_data(player)
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
       if recipe then
-        data.total_weight = math.max(data.total_weight, recipe.total_weight)
+        total_weight = math.max(total_weight, recipe.total_weight)
         for k, count in pairs(recipe.ingredients) do
-          data.ingredients[k] = data.ingredients[k] + craft.count * count
+          ingredients[k] = ingredients[k] + craft.count * count
         end
       end
     end
   end
-  data.ingredients[cubes.ultradense] = math.min(data.ingredients[cubes.ultradense], 1)
-  data.ingredients[cubes.dormant] = math.min(data.ingredients[cubes.dormant], 1)
+  ingredients[cubes.ultradense] = math.min(ingredients[cubes.ultradense], 1)
+  ingredients[cubes.dormant] = math.min(ingredients[cubes.dormant], 1)
   for _, item in pairs(cubes) do
     local count = player.get_item_count(item)
     local trash = player.get_inventory(defines.inventory.character_trash)
     if trash then
       count = count + trash.get_item_count(item)
     end
-    data.total_weight = data.total_weight + count * cube_weight[item]
-    data.ingredients[item] = data.ingredients[item] + count
+    total_weight = total_weight + count * cube_weight[item]
+    ingredients[item] = ingredients[item] + count
   end
-  return data
+  return {total_weight = total_weight, ingredients = ingredients}
 end
 
 function cube_management.update_player(player_index)
@@ -155,6 +173,13 @@ function cube_management.update_player(player_index)
   if player.controller_type == defines.controllers.character then
     player.character_running_speed_modifier = -1.0 + 0.5^cube_management.player_data(player).total_weight
   end
+end
+
+function cube_management.get_entity_burning_fuel(entity)
+  if entity.burner and entity.burner.currently_burning then
+    return entity.burner.currently_burning.name
+  end
+  return nil
 end
 
 function cube_management.is_entity_burning_fuel(entity, fuel_item)
@@ -171,7 +196,7 @@ function cube_management.drop_before_leaving(player_index)
       keep_going = false
       for _, craft in ipairs(player.crafting_queue) do
         if recipes[craft.recipe] then
-          player.cancel_crafting { index = craft.index, count = craft.count }
+          player.cancel_crafting {index = craft.index, count = craft.count}
           keep_going = true
           break
         end

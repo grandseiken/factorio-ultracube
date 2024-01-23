@@ -4,6 +4,8 @@ local entity_cache = require("__Ultracube__/scripts/entity_cache")
 
 local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
+local cube_combustion = cube_management.cubes.combustion
+local cube_dormant_combustion = cube_management.cubes.dormant_combustion
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
 local legendary_iron_gear = cube_management.cubes.legendary_iron_gear
@@ -38,6 +40,8 @@ local max_search_result_weight = 64
 local search_result_weight = {
   [cube_ultradense] = 64,
   [cube_dormant] = 64,
+  [cube_combustion] = 32,
+  [cube_dormant_combustion] = 32,
   [cube_ultradense_phantom] = 1,
   [cube_dormant_phantom] = 1,
   [legendary_iron_gear] = 64,
@@ -97,7 +101,7 @@ local function add_result(item, count, entity)
     entry.unit_number = entity.unit_number
   end
   result_set.entries_size = size
-  if item == cube_dormant_phantom or item == cube_ultradense_phantom then
+  if item == cube_ultradense_phantom or item == cube_dormant_phantom then
     result_set.has_phantom = true
   end
   return result_set.total_weight >= max_search_result_weight
@@ -112,6 +116,14 @@ local function check_ingredients(entity, ingredients)
     count = ingredients[cube_dormant_phantom]
     if count > 0 then
       if add_result(cube_dormant_phantom, count, entity) then return true end
+    end
+    count = ingredients[cube_combustion]
+    if count > 0 then
+      if add_result(cube_combustion, count, entity) then return true end
+    end
+    count = ingredients[cube_dormant_combustion]
+    if count > 0 then
+      if add_result(cube_dormant_combustion, count, entity) then return true end
     end
     return false
   end
@@ -131,6 +143,14 @@ local function check_ingredients(entity, ingredients)
   if count > 0 then
     if add_result(cube_dormant_phantom, count, entity) then return true end
   end
+  count = ingredients[cube_combustion]
+  if count > 0 then
+    if add_result(cube_combustion, count, entity) then return true end
+  end
+  count = ingredients[cube_dormant_combustion]
+  if count > 0 then
+    if add_result(cube_dormant_combustion, count, entity) then return true end
+  end
   count = ingredients[legendary_iron_gear]
   if count > 0 then
     if add_result(legendary_iron_gear, count, entity) then return true end
@@ -147,6 +167,14 @@ local function check_inventory(entity, inventory)
     count = inventory.get_item_count(cube_dormant_phantom)
     if count > 0 then
       if add_result(cube_dormant_phantom, count, entity) then return true end
+    end
+    count = inventory.get_item_count(cube_combustion)
+    if count > 0 then
+      if add_result(cube_combustion, count, entity) then return true end
+    end
+    count = inventory.get_item_count(cube_dormant_combustion)
+    if count > 0 then
+      if add_result(cube_dormant_combustion, count, entity) then return true end
     end
     return false
   end
@@ -166,6 +194,14 @@ local function check_inventory(entity, inventory)
   if count > 0 then
     if add_result(cube_dormant_phantom, count, entity) then return true end
   end
+  count = inventory.get_item_count(cube_combustion)
+  if count > 0 then
+    if add_result(cube_combustion, count, entity) then return true end
+  end
+  count = inventory.get_item_count(cube_dormant_combustion)
+  if count > 0 then
+    if add_result(cube_dormant_combustion, count, entity) then return true end
+  end
   count = inventory.get_item_count(legendary_iron_gear)
   if count > 0 then
     if add_result(legendary_iron_gear, count, entity) then return true end
@@ -175,16 +211,8 @@ end
 
 local function check_stack(entity, stack)
   local item = stack.name
-  if item == cube_ultradense then
-    if add_result(cube_ultradense, stack.count, entity) then return true end
-  elseif item == cube_dormant then
-    if add_result(cube_dormant, stack.count, entity) then return true end
-  elseif item == cube_ultradense_phantom then
-    if add_result(cube_ultradense_phantom, stack.count, entity) then return true end
-  elseif item == cube_dormant_phantom then
-    if add_result(cube_dormant_phantom, stack.count, entity) then return true end
-  elseif item == legendary_iron_gear then
-    if add_result(legendary_iron_gear, stack.count, entity) then return true end
+  if search_result_weight[item] then
+    if add_result(item, stack.count, entity) then return true end
   end
   return false
 end
@@ -192,17 +220,20 @@ end
 local phantom_burners = {["cube-boiler"] = true}
 local function check_burner(entity)
   local can_burn_phantom = phantom_burners[entity.name]
-  if cube_management.is_entity_burning_fuel(entity, cube_ultradense) then
-    if add_result(cube_ultradense, 1, entity) then return true end
-  end
-  if can_burn_phantom and cube_management.is_entity_burning_fuel(entity, cube_ultradense_phantom) then
-    if add_result(cube_ultradense_phantom, 1, entity) then return true end
+  local fuel = cube_management.get_entity_burning_fuel(entity)
+  if fuel == cube_ultradense or fuel == cube_combustion or
+     (can_burn_phantom and fuel == cube_ultradense_phantom) then
+    if add_result(fuel, 1, entity) then return true end
   end
   local inventory = entity.get_fuel_inventory()
   if inventory then
     local count = inventory.get_item_count(cube_ultradense)
     if count > 0 then
       if add_result(cube_ultradense, count, entity) then return true end
+    end
+    count = inventory.get_item_count(cube_combustion)
+    if count > 0 then
+      if add_result(cube_combustion, count, entity) then return true end
     end
     if can_burn_phantom then
       count = inventory.get_item_count(cube_ultradense_phantom)

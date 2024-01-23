@@ -221,6 +221,7 @@ end
 
 local fuel_map = {
   [cube_management.cubes.ultradense] = cube_management.cubes.dormant,
+  [cube_management.cubes.combustion] = cube_management.cubes.dormant_combustion,
   [cube_management.cubes.ultradense_phantom] = cube_management.cubes.dormant_phantom,
 }
 
@@ -258,8 +259,10 @@ local function transfer_or_drop_all(entity, inventory, item_set)
 end
 
 function linked_entities.return_cubes(entity, inventory, drop_all)
-  for base, dormant in pairs(fuel_map) do
-    if cube_management.is_entity_burning_fuel(entity, base) then
+  local fuel = cube_management.get_entity_burning_fuel(entity)
+  if fuel then
+    local dormant = fuel_map[fuel]
+    if dormant then
       insert_or_spill(entity, inventory, {name = dormant, count = 1})
       entity.burner.currently_burning = nil
     end
