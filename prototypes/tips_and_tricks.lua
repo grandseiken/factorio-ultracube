@@ -14,6 +14,7 @@ local vanilla_categories = make_set({
 for name, tip in pairs(data.raw["tips-and-tricks-item"]) do
   if name == "introduction" or (tip.category and vanilla_categories[tip.category]) then
     tip.indent = 1 + (tip.indent or 0)
+    tip.starting_status = "unlocked"
   end
 end
 
@@ -22,7 +23,7 @@ data:extend({
     type = "tips-and-tricks-item",
     name = "cube-vanilla",
     is_title = true,
-    starting_status = "completed",
+    starting_status = "unlocked",
     order = "1[vanilla]",
   },
   {
@@ -34,7 +35,7 @@ data:extend({
     type = "tips-and-tricks-item",
     name = "cube-ultracube",
     is_title = true,
-    starting_status = "completed",
+    starting_status = "unlocked",
     category = "cube-tips",
     order = "0",
   },
