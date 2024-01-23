@@ -39,15 +39,14 @@ local zoom_map = {
 }
 
 local function cubecam_calculate_size(player, fullscreen)
-  local resolution = player.display_resolution
   if fullscreen then
+    local resolution = player.display_resolution
     local scale = player.display_scale
     return {resolution.width / scale, resolution.height / scale}
   else
-    local scale_settings = player.mod_settings["cube-cubecam-scale"].value / 100.0
-    local inverse_display_scale = math.abs(2.0 - player.display_scale)
-    local scale = inverse_display_scale * scale_settings
-    return {cubecam_width * scale, cubecam_height * scale}
+    local scale_setting = player.mod_settings["cube-cubecam-scale"].value
+    local display_scale = player.display_scale
+    return {cubecam_width * display_scale * scale_setting, cubecam_height * display_scale * scale_setting}
   end
 end
 
@@ -123,15 +122,16 @@ local function cubecam_open(player, fullscreen)
   }
 
   local size = cubecam_calculate_size(player, fullscreen)
-  state.current_size = size
-  main.style.size = size
 
+  main.style.size = size
   if fullscreen then
     main.auto_center = true
   else
     local resolution = player.display_resolution
-    main.location = {resolution.width - size[1], resolution.height - size[2]}
+    local display_scale = player.display_scale
+    main.location = {resolution.width - size[1] * display_scale, resolution.height - size[2] * display_scale}
   end
+
   state.main = main
   state.content = content
   state.camera = camera
@@ -145,7 +145,6 @@ local function cubecam_close(player)
     state.main = nil
     state.camera = nil
     state.minimap = nil
-    state.current_size = nil
   end
 end
 
@@ -198,20 +197,13 @@ function cubecam.on_value_changed(player, element)
 end
 
 function cubecam.on_settings_changed(player, setting)
-  if setting == "cube-cubecam-scale" then
+  if setting == "cube-cubecam-scale" or setting == "display-scale" then
     local state = player_state(player)
-    if not state.main then
-      return
+    if state.main then
+      local fullscreen = state.fullscreen
+      cubecam_close(player)
+      cubecam_open(player, fullscreen)
     end
-    local main = state.main
-    local previous_size = state.current_size or {cubecam_width, cubecam_height}
-    local new_size = cubecam_calculate_size(player, state.fullscreen)
-    main.style.size = new_size
-    state.current_size = new_size
-
-    local size_difference = {previous_size[1] - new_size[1], previous_size[2] - new_size[2]}
-    local previous_location = main.location
-    main.location = {previous_location.x + size_difference[1], previous_location.y + size_difference[2]}
   end
 end
 

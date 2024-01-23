@@ -315,6 +315,10 @@ end)
 script.on_event(defines.events.on_runtime_mod_setting_changed, function(e)
   cubecam.on_settings_changed(game.get_player(e.player_index), e.setting)
 end)
+script.on_event(defines.events.on_player_display_scale_changed, function(e)
+  cubecam.on_settings_changed(game.get_player(e.player_index), "display-scale")
+end)
+
 
 local function remote_hint_entity(entity)
   if entity then

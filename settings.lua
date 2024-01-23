@@ -28,20 +28,15 @@ data:extend({
     order = "2",
   },
   {
-    type = "int-setting",
+    type = "double-setting",
     name = "cube-cubecam-scale",
     setting_type = "runtime-per-user",
-    default_value = 100,
+    minimum_value = 0.1,
+    maximum_value = 2.0,
+    default_value = 1.0,
     order = "3",
   }
 })
-
-local allowed_values_cubecam_scale = {}
-for i = 10, 150, 1 do
-  allowed_values_cubecam_scale[i] = i
-end
-
-data.raw["int-setting"]["cube-cubecam-scale"].allowed_values = allowed_values_cubecam_scale
 
 data.raw["string-setting"]["aai-loaders-mode"].hidden = true
 data.raw["string-setting"]["aai-loaders-mode"].allowed_values = {"expensive"}
