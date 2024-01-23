@@ -71,10 +71,8 @@ The mod is more or less feature-complete, but should still be considered a beta 
 
 Planned improvements include:
 
-* More in-game help via the Informatron mod.
 * Reintroduction of barreling recipes.
-* Code reorganisation and interfaces to make it easy for other mods to add compatibility.
-* Compatibility with more optional mods (e.g. jetpack).
+* Compatibility with more optional mods.
 
 See the [mod portal changelog](https://mods.factorio.com/mod/Ultracube/changelog) for version history.
 

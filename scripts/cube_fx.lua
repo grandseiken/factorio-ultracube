@@ -5,7 +5,7 @@ local cubecam = require("__Ultracube__/scripts/cubecam")
 
 local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
-local cube_combustion = cube_management.cubes.combustions
+local cube_combustion = cube_management.cubes.combustion
 local cube_dormant_combustion = cube_management.cubes.dormant_combustion
 local cube_ultradense_phantom = cube_management.cubes.ultradense_phantom
 local cube_dormant_phantom = cube_management.cubes.dormant_phantom
@@ -144,21 +144,23 @@ local function cube_boom(size, results)
         result.surface.create_entity(dormant_explosion)
       elseif result.item == cube_ultradense or result.item == cube_combustion then
         if result.velocity then
+          local projectile =
+              result.item == cube_combustion and combustion_projectile or ultradense_projectile
           local position = result.position
           local velocity = result.velocity
-          ultradense_projectile.source = result.entity
-          ultradense_projectile.position = position
-          ultradense_projectile.target.x = position.x + velocity.x
-          ultradense_projectile.target.y = position.y + velocity.y
-          ultradense_projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
-          result.surface.create_entity(
-              result.item == cube_combustion and combustion_projectile or ultradense_projectile)
+          projectile.source = result.entity
+          projectile.position = position
+          projectile.target.x = position.x + velocity.x
+          projectile.target.y = position.y + velocity.y
+          projectile.speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y) / 8
+          result.surface.create_entity(projectile)
         else
-          ultradense_explosion.source = result.entity
-          ultradense_explosion.position = result.position
-          ultradense_explosion.target = result.position
-          result.surface.create_entity(
-              result.item == cube_combustion and combustion_explosion or ultradense_explosion)
+          local explosion =
+              result.item == cube_combustion and combustion_explosion or ultradense_explosion
+          explosion.source = result.entity
+          explosion.position = result.position
+          explosion.target = result.position
+          result.surface.create_entity(explosion)
         end
       end
     end
