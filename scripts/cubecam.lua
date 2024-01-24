@@ -221,6 +221,7 @@ function cubecam.update_position(x, y, z, e)
 end
 
 function cubecam.tick()
+  -- TODO: don't calculate cubecam if nobody is looking at it.
   local global = global
   local x = global.cubecam_x or 0
   local y = global.cubecam_y or 0

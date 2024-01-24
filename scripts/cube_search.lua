@@ -30,6 +30,7 @@ local spider_vehicle_t = "spider-vehicle"
 local furnace_t = "furnace"
 local rocket_silo_t = "rocket-silo"
 local item_entity_t = "item-entity"
+local character_corpse_t = "character-corpse"
 local ghost_t = "entity-ghost"
 local input_t = "input"
 local output_t = "output"
@@ -321,6 +322,9 @@ local function cube_check_entity(entity)
   if inventory_entity_types[entity_type] then
     local inventory = entity.get_inventory(defines.inventory.chest)
     if inventory and check_inventory(entity, inventory) then return true end
+  elseif entity_type == character_corpse_t then
+    local inventory = entity.get_inventory(defines.inventory.character_corpse)
+    if inventory and check_inventory(entity, inventory) then return true end
   end
 
   if entity_type == item_entity_t then
@@ -427,10 +431,16 @@ local function cube_search_ground(surface, area)
 
   local find_result = surface.find_entities_filtered {
     area = area,
-    type = item_entity_t,
+    type = {item_entity_t, character_corpse_t},
   }
   for _, e in ipairs(find_result) do
-    if check_stack(e, e.stack) then return true end
+    local entity_type = e.type
+    if entity_type == item_entity_t then
+      if check_stack(e, e.stack) then return true end
+    elseif entity_type == character_corpse_t then
+      local inventory = e.get_inventory(defines.inventory.character_corpse)
+      if inventory and check_inventory(e, inventory) then return true end
+    end
   end
   find_result = surface.find_entities_filtered {
     area = area,

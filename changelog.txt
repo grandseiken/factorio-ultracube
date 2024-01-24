@@ -3,6 +3,8 @@ Version: 0.4.1
 Date: ??
   Minor Features:
     - Some fluids can now be barrelled.
+  Bugfixes:
+    - Fixed that the cube could be lost if carried by a player who was killed by a train, and the corpse expired.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 23. 01. 2024

@@ -174,6 +174,21 @@ script.on_event(
   end)
 
 script.on_event(
+  defines.events.on_post_entity_died,
+  function(e)
+    for _, corpse in pairs(e.corpses) do
+      cube_search.hint_entity(corpse)
+    end
+  end,
+  {{filter = "type", type = "character"}})
+
+script.on_event(
+  defines.events.on_character_corpse_expired,
+  function(e)
+    linked_entities.return_cubes(e.corpse, nil, true)
+  end)
+
+script.on_event(
   {
     defines.events.on_built_entity,
     defines.events.on_robot_built_entity,
@@ -318,7 +333,6 @@ end)
 script.on_event(defines.events.on_player_display_scale_changed, function(e)
   cubecam.on_settings_changed(game.get_player(e.player_index), "display-scale")
 end)
-
 
 local function remote_hint_entity(entity)
   if entity then
