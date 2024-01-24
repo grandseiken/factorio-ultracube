@@ -794,6 +794,18 @@ data:extend({
 
   {
     type = "recipe",
+    name = "cube-barrel",
+    ingredients = {
+      {"cube-basic-matter-unit", 2},
+      {"cube-rare-metals", 4},
+    },
+    results = {{"empty-barrel", 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-medium-container",
     ingredients = {
       {"cube-sophisticated-matter-unit", 10},

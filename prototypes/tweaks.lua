@@ -83,6 +83,9 @@ data.raw.item["uranium-fuel-cell"].subgroup = "cube-uranium"
 data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
 data.raw.item["used-up-uranium-fuel-cell"].subgroup = "cube-uranium"
 
+data.raw.item["empty-barrel"].subgroup = "cube-barrel"
+data.raw.item["empty-barrel"].order = "cube-0"
+
 data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/assets/icons/battery-mk2-equipment.png"
 data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"
 data.raw.item["belt-immunity-equipment"].subgroup = "cube-equipment"

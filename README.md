@@ -71,7 +71,6 @@ The mod is more or less feature-complete, but should still be considered a beta 
 
 Planned improvements include:
 
-* Reintroduction of barreling recipes.
 * Compatibility with more optional mods.
 
 See the [mod portal changelog](https://mods.factorio.com/mod/Ultracube/changelog) for version history.

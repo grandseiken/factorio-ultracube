@@ -1,3 +1,5 @@
+require("__Ultracube__/scripts/lib")
+
 local vanilla_categories = make_set({
   "game-interaction",
   "inserters",

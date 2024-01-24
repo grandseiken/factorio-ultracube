@@ -333,3 +333,5 @@ add_mystery_recipe(1, "cube-efficiency-module-v2", "cube-efficiency-module")
 add_mystery_recipe(1, "cube-speed-module-v3", "cube-speed-module-v2")
 add_mystery_recipe(1, "cube-productivity-module-v3", "cube-productivity-module-v2")
 add_mystery_recipe(1, "cube-efficiency-module-v3", "cube-efficiency-module-v2")
+
+add_mystery_recipe(1, "empty-barrel", "cube-rare-metals")

@@ -5,6 +5,7 @@ local vanilla_item_whitelist = make_set({
   "raw-fish",
   "water",
   "steam",
+  "empty-barrel",
   "sulfuric-acid",
   "uranium-ore",
   "uranium-235",

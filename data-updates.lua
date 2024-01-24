@@ -18,6 +18,7 @@ require("updates.compatibility.stack_combinator")
 require("updates.compatibility.textplates")
 require("updates.compatibility.wire_shortcuts")
 
+require("updates.barrelling")
 require("updates.character")
 require("updates.recipes_mystery")
 require("updates.disable_incompatible")

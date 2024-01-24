@@ -307,6 +307,24 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-barrel",
+    group = "fluids",
+    order = "v",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-fill-barrel",
+    group = "fluids",
+    order = "w",
+  },
+  {
+    type = "item-subgroup",
+    name = "cube-empty-barrel",
+    group = "fluids",
+    order = "x",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-fluid-burner",
     group = "fluids",
     order = "y",

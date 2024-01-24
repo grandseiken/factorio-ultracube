@@ -1,3 +1,13 @@
+require("__Ultracube__/scripts/lib")
+
+local vanilla_fluids = make_set({"water", "sulfuric-acid"})
+for name, fluid in pairs(data.raw.fluid) do
+  if not vanilla_fluids[name] then
+    fluid.auto_barrel = false
+  end
+end
+data.raw.fluid["sulfuric-acid"].barrelling_unlock_tech = "cube-sulfur-processing"
+
 data:extend({
   {
     type = "fluid",
@@ -10,6 +20,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
     order = "cube-a[tar]-a[tar]",
+    barrelling_unlock_tech = "cube-tar-processing",
   },
   {
     type = "fluid",
@@ -23,6 +34,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
     order = "cube-a[tar]-b[heavy]",
+    barrelling_unlock_tech = "cube-tar-processing",
   },
   {
     type = "fluid",
@@ -36,6 +48,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-input",
     order = "cube-a[tar]-c[light]",
+    barrelling_unlock_tech = "cube-tar-processing",
   },
   {
     type = "fluid",
@@ -48,6 +61,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
     order = "cube-a[tar]-a[unstable-gas]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -60,6 +74,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-tar-output",
     order = "cube-a[tar]-c[lubricant]",
+    barrelling_unlock_tech = "cube-elbow-grease",
   },
   {
     type = "fluid",
@@ -72,6 +87,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
     order = "cube-1[ethanol]",
+    barrelling_unlock_tech = "cube-distillation",
   },
   {
     type = "fluid",
@@ -84,6 +100,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
     order = "cube-b[matter]-a[gel]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -96,6 +113,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
     order = "cube-b[matter]-b[cerebral]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -108,6 +126,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
     order = "cube-b[matter]-c[joy]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -120,6 +139,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-fluids",
     order = "cube-b[matter]-d[despair]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -131,6 +151,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1KJ",
     order = "cube-a[fluid]-b[mineral-water]",
+    barrelling_unlock_tech = "cube-deep-crystallization",
   },
   {
     type = "fluid",
@@ -143,6 +164,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
     order = "cube-0[deep-solution]",
+    barrelling_unlock_tech = "cube-deep-crystallization",
   },
   {
     type = "fluid",
@@ -155,6 +177,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-distillation",
     order = "cube-x[ectoplasm]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -166,6 +189,7 @@ data:extend({
     default_temperature = 25,
     subgroup = "cube-energy-fluids",
     order = "cube-0[sludge]",
+    barrelling_unlock_tech = "cube-kovarex-enrichment-process",
   },
   {
     type = "fluid",
@@ -178,6 +202,7 @@ data:extend({
     fuel_value = "400kJ",
     subgroup = "cube-distillation",
     order = "cube-y[beacon-juice]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -190,6 +215,7 @@ data:extend({
     heat_capacity = "0.1KJ",
     subgroup = "cube-synthesis-forbidden",
     order = "cube-3[step-2a]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -203,6 +229,7 @@ data:extend({
     heat_capacity = "0.2KJ",
     subgroup = "cube-energy-fluids",
     order = "cube-a[void-wind]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -215,6 +242,7 @@ data:extend({
     fuel_value = "250KJ",
     subgroup = "cube-energy-fluids",
     order = "cube-x[ion-stream]",
+    auto_barrel = false,
   },
   {
     type = "fluid",
@@ -226,5 +254,6 @@ data:extend({
     default_temperature = 25,
     subgroup = "cube-energy-fluids",
     order = "cube-y[gamma-stream]",
+    auto_barrel = false,
   },
 })

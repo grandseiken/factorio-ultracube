@@ -111,6 +111,7 @@ data:extend({
     icon = "__base__/graphics/technology/fluid-handling.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-pump"},
+      {type = "unlock-recipe", recipe = "cube-barrel"},
     },
     prerequisites = {"cube-electronics"},
     unit = tech_cost_unit("0", 60),
