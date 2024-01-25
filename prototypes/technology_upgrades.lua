@@ -215,7 +215,7 @@ data:extend({
       "cube-mining-productivity-6",
       "cube-complete-annihilation-card",
     },
-    unit = tech_cost_formula("6", "2^(L-7)*800"),
+    unit = tech_cost_formula("6", "800+(L-7)*1600"),
     max_level = "infinite",
     upgrade = true,
     order = "10-2-6",
