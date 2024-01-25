@@ -6,6 +6,7 @@ Date: ??
   Minor Features:
     - Some fluids can now be barrelled.
   Bugfixes:
+    - Fixed that trains under the effect of locomotion could sometimes reset to normal speed when their current fuel item ran out.
     - Fixed that the cube could be lost if carried by a player who was killed by a train, and the corpse expired.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0

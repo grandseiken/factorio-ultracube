@@ -495,6 +495,17 @@ end
 function cube_fx.tick(tick)
   local update_tick = tick % 6 == 0
   if not update_tick then
+    -- We need to update locomotives every tick, since if they start burning a new item it
+    -- won't be ultralocomotion and they'll immediately reset to normal maximum speed.
+    for _, locomotive in pairs(cube_fx_data.last_locomotives) do
+      if locomotive.valid and locomotive.burner and locomotive.burner.currently_burning then
+        local fuel = locomotive.burner.currently_burning.name
+        local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
+        if ultralocomotion_fuel then
+          locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
+        end
+      end
+    end
     return
   end
   local alert_tick = tick % 24 == 12
