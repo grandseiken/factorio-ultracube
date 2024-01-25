@@ -46,6 +46,10 @@ data.raw.car.car.burner.burnt_inventory_size = 1
 data.raw.locomotive.locomotive.burner.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
 data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
 
+data.raw.accumulator.accumulator.energy_source.input_flow_limit = "500kW"
+data.raw.accumulator.accumulator.energy_source.output_flow_limit = "500kW"
+data.raw.accumulator.accumulator.energy_source.buffer_capacity = "10MJ"
+
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"
 data.raw.item["centrifuge"].stack_size = "20"

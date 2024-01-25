@@ -3,6 +3,7 @@ Version: 0.4.1
 Date: ??
   Changes:
     - Infinite mining productivity research cost is no longer exponential, and now scales more like vanilla.
+    - Accumulators and energy bulkframes have had
   Minor Features:
     - Some fluids can now be barrelled.
   Bugfixes:

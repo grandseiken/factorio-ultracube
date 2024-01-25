@@ -21,10 +21,10 @@ data:extend({
       -- TODO: numbers (particularly input flow) tweaked upwards to handle antimatter power.
       -- Perhaps tweak down a bit if we add some other super-endgame storage solution.
       type = "electric",
-      buffer_capacity = "400MJ",
+      buffer_capacity = "1GJ",
       usage_priority = "tertiary",
       input_flow_limit = "50MW",
-      output_flow_limit = "10MW",
+      output_flow_limit = "50MW",
     },
     picture = {
       layers = {
