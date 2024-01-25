@@ -3,7 +3,8 @@ Version: 0.4.1
 Date: ??
   Changes:
     - Infinite mining productivity research cost is no longer exponential, and now scales more like vanilla.
-    - Accumulators and energy bulkframes have had
+    - Capacity and input/output energy flow limits of accumulators and energy bulkframes has been increased.
+    - Increased the power output of the portable fusion reactor.
   Minor Features:
     - Some fluids can now be barrelled.
   Bugfixes:
