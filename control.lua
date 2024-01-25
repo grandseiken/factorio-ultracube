@@ -16,7 +16,7 @@ local linked_entities = require("__Ultracube__/scripts/linked_entities")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local teleport = require("__Ultracube__/scripts/teleport")
 local transition = require("__Ultracube__/scripts/transition")
-require("__Ultracube__/scripts/milestones")
+local milestones = require("__Ultracube__/scripts/milestones")
 
 local function create_initial_cube(player)
   local surface = player.surface
@@ -366,5 +366,6 @@ end
 remote.add_interface("Ultracube", {
   ["hint_entity"] = remote_hint_entity,
   ["better-victory-screen-statistics"] = better_victory_screen_statistics,
+  ["milestones_presets"] = milestones
 })
 
