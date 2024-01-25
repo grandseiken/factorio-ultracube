@@ -4,7 +4,7 @@ Date: 25. 01. 2024
   Changes:
     - Infinite mining productivity research cost is no longer exponential, and now scales more like vanilla.
     - Capacity and input/output energy flow limits of accumulators and energy bulkframes has been increased.
-    - Increased the power output of the portable fusion reactor to 1.6MW from 1.2MW.
+    - Increased the power output of the portable fusion reactor to 1.5MW from 1.2MW.
     - Reduced the fuel value of uranium fuel cells from 6GW to 4GW.
     - The Milestones mod now tracks consumption of the cube.
   Minor Features:
