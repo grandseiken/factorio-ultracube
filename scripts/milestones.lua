@@ -13,9 +13,10 @@ local milestones = {
   {type = "item",  name = "cube-synthetic-premonition-card",     quantity = 1000, next = "x10"},
   {type = "item",  name = "cube-complete-annihilation-card",     quantity = 1000, next = "x10"},
 
-  {type = "group", name = "The Cube"},
+  {type = "group", name = "Cube"},
   {type = "item_consumption",  name = "cube-ultradense-utility-cube",        quantity = 100, next = "x10"},
   {type = "item_consumption",  name = "cube-phantom-ultradense-constituent", quantity = 1,   next = "x10", hidden = true},
+  {type = "item_consumption",  name = "cube-ultradense-combustion-cube",     quantity = 1,   next = "x10", hidden = true},
   {type = "item_consumption",  name = "cube-legendary-iron-gear",            quantity = 1,   next = "x10", hidden = true},
 
   {type = "group", name = "Components"},
