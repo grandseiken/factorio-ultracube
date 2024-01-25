@@ -31,6 +31,7 @@ local productivity_module_limitation = {
   "cube-abstract-interrogation-card",
   "cube-deep-introspection-card",
   "cube-synthetic-premonition-card",
+  "cube-complete-annihilation-card",
   "cube-unstable-gas",
   "cube-sulfuric-acid",
   "cube-elbow-grease",
