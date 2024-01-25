@@ -13,11 +13,10 @@ local milestones = {
   {type = "item",  name = "cube-synthetic-premonition-card",     quantity = 1000, next = "x10"},
   {type = "item",  name = "cube-complete-annihilation-card",     quantity = 1000, next = "x10"},
 
-  -- TODO: re-enable cube usage stats by consumption once supported in milestones mod.
-  -- {type = "group", name = "The Cube"},
-  -- {type = "item",  name = "cube-ultradense-utility-cube",        quantity = 100, next = "x10"},
-  -- {type = "item",  name = "cube-phantom-ultradense-constituent", quantity = 1,   next = "x10", hidden = true},
-  -- {type = "item",  name = "cube-legendary-iron-gear",            quantity = 1,   next = "x10", hidden = true},
+  {type = "group", name = "The Cube"},
+  {type = "item_consumption",  name = "cube-ultradense-utility-cube",        quantity = 100, next = "x10"},
+  {type = "item_consumption",  name = "cube-phantom-ultradense-constituent", quantity = 1,   next = "x10", hidden = true},
+  {type = "item_consumption",  name = "cube-legendary-iron-gear",            quantity = 1,   next = "x10", hidden = true},
 
   {type = "group", name = "Components"},
   {type = "item",  name = "cube-electronic-circuit", quantity = 1},
@@ -65,16 +64,16 @@ local milestones = {
   {type = "item",  name = "cube-antimatter-reactor", quantity = 1},
 
   {type = "group", name = "Kills"},
-  {type = "kill",  name = "character", quantity = 1, next = "x5"},
+  {type = "kill",  name = "character", quantity = 1, next = "x5", hidden = true},
 }
 
-remote.add_interface("ultracube", {
-  milestones_presets = function()
-    return {
-      ["Ultracube: Age of Cube"] = {
-        required_mods = {"Ultracube"},
-        milestones = milestones,
-      },
-    }
-  end
-})
+local function milestones_preset()
+  return {
+    ["Ultracube: Age of Cube"] = {
+      required_mods = {"Ultracube"},
+      milestones = milestones,
+    },
+  }
+end
+
+return milestones_preset

@@ -22,6 +22,7 @@
     "?stack-combinator",
     "?aai-signal-transmission",
     "?better-victory-screen >= 0.2.7",
+    "?Milestones >= 1.3.22",
     "!Krastorio2",
     "!burner-fuel-bonus",
     "!factory-levels",
