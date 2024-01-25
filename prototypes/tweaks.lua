@@ -82,7 +82,7 @@ data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4
 data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 
 data.raw.item["uranium-fuel-cell"].stack_size = 10
-data.raw.item["uranium-fuel-cell"].fuel_value = "6GJ"
+data.raw.item["uranium-fuel-cell"].fuel_value = "4GJ"
 data.raw.item["uranium-fuel-cell"].subgroup = "cube-uranium"
 data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
 data.raw.item["used-up-uranium-fuel-cell"].subgroup = "cube-uranium"
