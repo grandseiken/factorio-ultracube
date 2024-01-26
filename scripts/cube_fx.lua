@@ -398,7 +398,7 @@ local function cube_vehicle_mod(size, results)
     local fuel = locomotive.burner.currently_burning.name
     local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
     if ultralocomotion_fuel then
-      locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
+      locomotive.burner.currently_burning = ultralocomotion_fuel
     elseif ultralocomotion_fuel_inverse_map[fuel] and locomotive.speed > 1 / 8 then
       local velocity = from_polar_orientation(math.min(2, locomotive.speed), locomotive.orientation)
       local explosion = locomotive_fuel[locomotive.unit_number] == cube_combustion and
@@ -420,7 +420,7 @@ local function cube_vehicle_mod(size, results)
       local ultralocomotion_fuel = locomotive.burner.currently_burning.name
       local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
       if normal_fuel then
-        locomotive.burner.currently_burning = game.item_prototypes[normal_fuel]
+        locomotive.burner.currently_burning = normal_fuel
       end
     end
   end
@@ -498,11 +498,17 @@ function cube_fx.tick(tick)
     -- We need to update locomotives every tick, since if they start burning a new item it
     -- won't be ultralocomotion and they'll immediately reset to normal maximum speed.
     for _, locomotive in pairs(cube_fx_data.last_locomotives) do
-      if locomotive.valid and locomotive.burner and locomotive.burner.currently_burning then
-        local fuel = locomotive.burner.currently_burning.name
-        local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
-        if ultralocomotion_fuel then
-          locomotive.burner.currently_burning = game.item_prototypes[ultralocomotion_fuel]
+      if locomotive.valid then
+        local burner = locomotive.burner
+        if burner then
+          local currently_burning = burner.currently_burning
+          if currently_burning then
+            local fuel = currently_burning.name
+            local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
+            if ultralocomotion_fuel then
+              burner.currently_burning = ultralocomotion_fuel
+            end
+          end
         end
       end
     end
