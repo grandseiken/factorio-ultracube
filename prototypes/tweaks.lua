@@ -49,6 +49,8 @@ data.raw.locomotive.locomotive.burner.burnt_inventory_size = 1
 data.raw.accumulator.accumulator.energy_source.input_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.output_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.buffer_capacity = "10MJ"
+data.raw.accumulator.accumulator.collision_mask =
+    {"item-layer", "object-layer", "player-layer", "water-tile", "layer-53"}
 
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"

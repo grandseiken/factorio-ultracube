@@ -1,6 +1,17 @@
 data:extend({
   {
     type = "recipe",
+    name = "cube-local-turbine",
+    ingredients = {
+      {"cube-basic-matter-unit", 12},
+      {"cube-basic-motor-unit", 4},
+    },
+    results = {{"cube-local-turbine", 1}},
+    energy_required = 2,
+    category = "cube-fabricator-handcraft",
+  },
+  {
+    type = "recipe",
     name = "cube-offshore-pump",
     ingredients = {
       {"cube-basic-matter-unit", 40},

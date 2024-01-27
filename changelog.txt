@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 28. 01. 2024
+  Minor Features:
+    - Introduced the backup turbine, a limited generator that can provide small amounts of power only to nearby entities, available from the start of the game. It can be used, for example, to ensure critical combinators remain operational during a power outage, or as part of a power failure recovery bootstrapping system.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 25. 01. 2024
   Changes:

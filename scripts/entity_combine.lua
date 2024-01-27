@@ -1,6 +1,34 @@
 local entity_combine = {}
 
+local function make_inoperable(_, _, e)
+  e.operable = false
+end
+
+local function setup_local_turbine(base, linked, e)
+  e.connect_neighbour(linked[2])
+end
+
 local combine_definitions = {
+  ["cube-local-turbine"] = {
+    {
+      name = "cube-local-turbine-generator",
+      hidden_surface = true,
+    },
+    {
+      name = "cube-local-turbine-source",
+      hidden_surface = true,
+    },
+    {
+      name = "cube-local-turbine-transmitter",
+      setup_function = setup_local_turbine,
+    },
+  },
+  ["accumulator"] = {
+    {name = "cube-accumulator-local-turbine-collision"},
+  },
+  ["cube-energy-bulkframe"] = {
+    {name = "cube-energy-bulkframe-local-turbine-collision"},
+  },
   ["cube-nuclear-reactor"] = {
     {
       name = "cube-nuclear-reactor-base",
@@ -9,13 +37,13 @@ local combine_definitions = {
   ["cube-cyclotron"] = {
     {
       name = "cube-cyclotron-interface",
-      inoperable = true,
+      setup_function = make_inoperable,
     },
   },
   ["cube-beacon"] = {
     {
       name = "cube-beacon-fluid-source",
-      inoperable = true,
+      setup_function = make_inoperable,
     },
   },
   ["cube-experimental-teleporter"] = {
@@ -55,6 +83,16 @@ local combine_definitions = {
     },
   },
 }
+
+local function get_hidden_surface()
+  local surface = game.surfaces["cube-hidden-surface"]
+  if surface then
+    return surface
+  end
+  surface = game.create_surface("cube-hidden-surface")
+  surface.generate_with_lab_tiles = true
+  return surface
+end
 
 local function get_combine_table()
   if global.combine_table then
@@ -96,7 +134,11 @@ function entity_combine.created(entity)
       position.x = position.x + entry.offset[1]
       position.y = position.y + entry.offset[2]
     end
-    local new_entity = entity.surface.create_entity {
+    local surface = entity.surface
+    if entry.hidden_surface then
+      surface = get_hidden_surface()
+    end
+    local new_entity = surface.create_entity {
       name = entry.name,
       position = position,
       direction = entry.direction or entity.direction,
@@ -108,8 +150,9 @@ function entity_combine.created(entity)
     }
     if new_entity then
       new_entity.destructible = false
-      if entry.inoperable then
-        new_entity.operable = false
+      local setup_function = entry.setup_function
+      if setup_function then
+        setup_function(entity, linked_entries, new_entity)
       end
       linked_entries[#linked_entries + 1] = new_entity
       if new_entity.unit_number then

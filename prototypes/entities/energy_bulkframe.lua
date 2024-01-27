@@ -14,6 +14,7 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
     damaged_trigger_effect = hit_effects.entity(),
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", "layer-53"},
     collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
     selection_box = {{-3, -3}, {3, 3}},
     drawing_box = {{-3, -3}, {3, 3}},
