@@ -5,13 +5,14 @@ local turbine_persistent_sound = {
   variations = {
     {
       filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating.ogg",
-      volume = 0.55,
+      volume = 0.3,
     },
     {
       filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating-2.ogg",
-      volume = 0.38,
+      volume = 0.2,
     },
   },
+  audible_distance_modifier = 0.5,
   aggregation = {
     max_count = 3,
     remove = false,
