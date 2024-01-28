@@ -4,26 +4,27 @@
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
-  "homepage": "https://github.com/grandseiken/factorio-ultracube",
+  "homepage": "https://discord.gg/GAvypzwyWU",
   "factorio_version": "1.1",
   "dependencies": [
     "base >= 1.1.101",
     "aai-loaders >= 0.1.4",
     "Krastorio2Assets >= 1.2",
     "simhelper >= 1.1.4",
+    "?aai-signal-transmission",
+    "?better-victory-screen >= 0.2.7",
     "?far-reach",
-    "?nixie-tubes",
+    "?Flow Control",
     "?Honk",
+    "?nixie-tubes",
+    "?Milestones >= 1.3.22",
     "?PickerDollies",
     "?pushbutton",
     "?textplates",
-    "?aai-signal-transmission",
-    "?better-victory-screen >= 0.2.7",
-    "?Milestones >= 1.3.22",
     "!Krastorio2",
     "!burner-fuel-bonus",
     "!factory-levels",
     "!WideChests"
   ],
-  "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod."
+  "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod.\n\nSee the mod page for a full list of compatible mods."
 }

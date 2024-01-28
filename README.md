@@ -109,7 +109,7 @@ The following mods have been adapted to work with Ultracube:
 | [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Holographic Signs](https://mods.factorio.com/mod/holographic_signs) | |
-| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some challenges, not essential |
+| [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some aspects substantially: leave out for a bigger challenge |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
