@@ -5,11 +5,15 @@ local turbine_persistent_sound = {
   variations = {
     {
       filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating.ogg",
-      volume = 0.3,
+      volume = 0.4,
+      min_speed = 0.8,
+      max_speed = 0.9,
     },
     {
       filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating-2.ogg",
-      volume = 0.2,
+      volume = 0.3,
+      min_speed = 0.8,
+      max_speed = 0.9,
     },
   },
   audible_distance_modifier = 0.5,
@@ -122,7 +126,6 @@ data:extend({
     drawing_box = {{-0.45, -1.6}, {0.45, 0.8}},
     water_reflection = turbine_water_reflection,
     animations = turbine_animation,
-    continuous_animation = true,
     working_sound = {
       sound = turbine_persistent_sound,
       idle_sound = turbine_persistent_sound,
