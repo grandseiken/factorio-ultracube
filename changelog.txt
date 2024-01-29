@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.3
+Date: 29. 01. 2024
+  Bugfixes:
+    - Fixed and improved interaction of several scripted composite entities with the pipette tool (Q) and the Picker Dollies mod.
+---------------------------------------------------------------------------------------------------
 Version: 0.4.2
 Date: 28. 01. 2024
   Minor Features:

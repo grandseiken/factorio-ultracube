@@ -1,4 +1,5 @@
 require("__Ultracube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 local chamber_animation_horizontal = {
   layers = {
@@ -276,9 +277,11 @@ local function make_reactor_port(flip)
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    placeable_by = {item = "cube-antimatter-reactor", count = 1},
     max_health = 1000,
     drawing_box = {{-0.5, -0.5}, {0.5, 0.5}},
     collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
+    collision_mask = {collision_layers.selectable_composite},
     selection_box = selection_box,
     selection_priority = 100,
     allow_copy_paste = false,
@@ -419,6 +422,7 @@ data:extend({
     icon_mipmaps = 4,
     flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
+    collision_mask = {},
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
     allow_copy_paste = false,

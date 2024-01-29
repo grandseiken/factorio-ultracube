@@ -269,6 +269,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
+    collision_mask = {},
     selection_box = {{-3, -2}, {3, 3.4}},
     allow_copy_paste = false,
     selectable_in_game = false,

@@ -64,6 +64,18 @@ local function on_picker_dolly_moved(e)
   on_entity_move(e.moved_entity, nil, e.start_pos)
 end
 
+local picker_dollies_blacklist = {
+  "cube-local-turbine",
+  "cube-local-turbine-source",
+  "cube-local-turbine-transmitter",
+  "cube-local-turbine-generator",
+  "cube-nuclear-reactor",
+  "cube-nuclear-reactor-base",
+  "cube-nuclear-reactor-online",
+  "cube-cyclotron-interface",
+  "cube-beacon-fluid-source",
+  "cube-antimatter-reactor-port",
+}
 local function on_load()
   activation.on_load()
   entity_cache.on_load()
@@ -71,8 +83,15 @@ local function on_load()
   cube_search.on_load()
   linked_entities.on_load()
 
-  if remote.interfaces["PickerDollies"] and remote.interfaces["PickerDollies"]["dolly_moved_entity_id"] then
-    script.on_event(remote.call("PickerDollies", "dolly_moved_entity_id"), on_picker_dolly_moved)
+  if remote.interfaces["PickerDollies"] then
+    if remote.interfaces["PickerDollies"]["dolly_moved_entity_id"] then
+      script.on_event(remote.call("PickerDollies", "dolly_moved_entity_id"), on_picker_dolly_moved)
+    end
+    if remote.interfaces["PickerDollies"] and remote.interfaces["PickerDollies"]["add_blacklist_name"] then
+      for _, name in pairs(picker_dollies_blacklist) do
+        remote.call("PickerDollies", "add_blacklist_name", name)
+      end
+    end
   end
 end
 

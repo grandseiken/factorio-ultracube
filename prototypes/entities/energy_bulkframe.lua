@@ -1,5 +1,6 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 data:extend({
   {
@@ -14,7 +15,8 @@ data:extend({
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
     damaged_trigger_effect = hit_effects.entity(),
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile", "layer-53"},
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
+                      collision_layers.accumulator_forbidden_zone},
     collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
     selection_box = {{-3, -3}, {3, 3}},
     drawing_box = {{-3, -3}, {3, 3}},

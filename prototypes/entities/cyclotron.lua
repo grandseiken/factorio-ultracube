@@ -2,6 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/pipe")
 require("__Ultracube__/prototypes/entities/lib/module_effects")
+require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 data:extend({
   {
@@ -238,6 +239,8 @@ data:extend({
     icon_size = 128, icon_mipmaps = 4,
     flags = {"hidden", "not-repairable", "not-rotatable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
+    collision_mask = {collision_layers.selectable_composite},
+    placeable_by = {item = "cube-cyclotron", count = 1},
     collision_box = {{-3, -1}, {0, 2}},
     selection_box = {{-3, -1}, {0, 2}},
     allow_copy_paste = false,

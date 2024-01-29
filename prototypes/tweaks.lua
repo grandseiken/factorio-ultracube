@@ -1,3 +1,5 @@
+require("__Ultracube__/prototypes/entities/lib/collision_layers")
+
 data.raw.generator["steam-engine"].maximum_temperature = 215
 data.raw.pump.pump.pumping_speed = 250
 data.raw.pump.pump.energy_usage = "40KW"
@@ -50,7 +52,8 @@ data.raw.accumulator.accumulator.energy_source.input_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.output_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.buffer_capacity = "10MJ"
 data.raw.accumulator.accumulator.collision_mask =
-    {"item-layer", "object-layer", "player-layer", "water-tile", "layer-53"}
+    {"item-layer", "object-layer", "player-layer", "water-tile",
+     collision_layers.accumulator_forbidden_zone}
 
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"

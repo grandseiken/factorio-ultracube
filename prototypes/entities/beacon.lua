@@ -2,6 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/module_effects")
 require("__Ultracube__/prototypes/entities/lib/pipe")
+require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 local beacon_scale = 2
 local beacon_picture = {
@@ -39,6 +40,8 @@ data:extend({
     dying_explosion = "cube-medium-matter-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.25, -1.5}, {1.25, 1.0}},
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
+                      "not-colliding-with-itself", collision_layers.beacon},
     selection_priority = 100,
     damaged_trigger_effect = hit_effects.entity(),
 
@@ -147,11 +150,14 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"hidden", "not-rotatable", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    placeable_by = {item = "cube-beacon", count = 1},
     allow_copy_paste = false,
     selectable_in_game = true,
     max_health = 300,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
+                      "not-colliding-with-itself", collision_layers.beacon},
 
     energy_usage = "800kW",
     energy_source = {
@@ -176,7 +182,7 @@ data:extend({
         },
       },
     },
-    animation = beacon_picture,
+    animation = util.empty_sprite(),
     crafting_categories = {"cube-uncraftable"},
     crafting_speed = 0.5,  -- Must match by_tick size.
     fixed_recipe = "cube-uncraftable-dummy-recipe",
