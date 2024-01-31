@@ -380,7 +380,7 @@ local function better_victory_screen_statistics()
 
   stats["ultracube"] = {order = "a", stats = {
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
-    ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage"},
+    ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
     ["cubes-consumed"]                 = {order = "c", value = cubes_consumed},
     ["cubes-consumed-dormant"]         = {order = "d", value = cubes_consumed_dormant},
     ["cubes-consumed-phantom"]         = {order = "e", value = cubes_consumed_phantom},
