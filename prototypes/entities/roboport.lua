@@ -31,7 +31,7 @@ data:extend({
     -- per one charge slot
     charging_energy = "1MW",
     logistics_radius = 35,     -- default 25.
-    construction_radius = 70,  -- default 55.
+    construction_radius = 75,  -- default 55.
     charge_approach_distance = 5,
     robot_slots_count = 5,
     material_slots_count = 5,
