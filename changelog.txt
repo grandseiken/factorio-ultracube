@@ -4,6 +4,9 @@ Date: ??
   Changes:
     - Slightly increased roboport construction range so that bots can deconstruct objects in the way of the next roboport when building a grid remotely.
     - Moved the menu simulation template scenario somewhere else so it doesn't show up and get clicked by accident.
+  Modding:
+    - Marked Power Grid Comb as incompatible since it can cause issues with the backup turbine.
+    - Made some entity cleanup scripting more crash-resilient when interfered with by incompatible mods.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 29. 01. 2024

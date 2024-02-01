@@ -273,7 +273,9 @@ function linked_entities.return_cubes(entity, inventory, drop_all)
   local linked = entity_combine.get_linked(entity)
   if linked then
     for _, e in ipairs(linked) do
-      transfer_or_drop_all(e, inventory)
+      if e.valid then
+        transfer_or_drop_all(e, inventory)
+      end
     end
   end
 end
