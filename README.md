@@ -4,6 +4,7 @@
 [![shield](https://img.shields.io/badge/Crowdin-Translate-brightgreen)](https://crowdin.com/project/factorio-mods-localization)
 
 An overhaul mod for Factorio featuring:
+
 * Completely reworked tech tree and recipes.
 * Unique logistic challenges and assorted devious automation puzzles.
 * Six tiers of science and a new endgame goal.
@@ -20,6 +21,7 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
   * [Development status and roadmap](#development-status-and-roadmap)
   * [Translation](#translation)
 * [Compatibility](#compatibility)
+  * [Details](#details)
   * [List of compatible mods](#list-of-compatible-mods)
   * [Compatibility guide for modders](#compatibility-guide-for-modders)
 * [FAQ](#faq)
@@ -81,13 +83,21 @@ Translation is handled via this [CrowdIn project](https://crowdin.com/project/fa
 
 # Compatibility
 
+**Ultracube is stricter than many overhauls in terms of compatibility, and relies heavily on runtime scripting to function correctly.** If you usually play Factorio with a giant list of mods enabled and load up Ultracube without vetting them, don't expect to have them all function, and don't be surprised if you run into issues (e.g. script errors due to interference from other scripted mods).
+
+It's gently recommended to start with a smaller set of mods and add extras as needed as you go. This makes it much easier to narrow down which is the problematic mod if you do encounter issues.
+
+Mods in the [compatibility list](#list-of-compatible-mods) are definitely supported and should function as intended without problems.
+
+## Details
+
 This is an overhaul mod that removes most standard resources, ingredients, technologies and entities from the game.
 
 As you might expect, compatibility with other large overhaul mods that make their own drastic changes to the technology tree is unlikely.
 
-Quality-of-life mods without new technologies or recipes like [Far Reach](https://mods.factorio.com/mod/far-reach) or [Even Distribution](https://mods.factorio.com/mod/even-distribution) should mostly work just fine.
+Quality-of-life mods without new technologies or recipes like [Far Reach](https://mods.factorio.com/mod/far-reach) or [Even Distribution](https://mods.factorio.com/mod/even-distribution), or visual-only mods, should hopefully work just fine.
 
-Mods that add new recipes or technologies must be specifically adapted to work with Ultracube. Technologies need to be changed to fit into the Ultracube tech tree with appropriate prerequisites, and be researched with Ultracube science cards. Recipes need to be changed to have Ultracube ingredients. Support can be added with either conditional logic in Ultracube code to check for the presence of the other mod and make the necessary adjustments, or the other way around.
+Mods that add new recipes or technologies must be specifically adapted to work with Ultracube. Technologies need to be changed to fit into the Ultracube tech tree with appropriate prerequisites, and be researched with Ultracube science cards. Recipes need to be changed to have Ultracube ingredients. **If compatibility hasn't been added, mod-introduced technologies and recipes simply won't show up at all in the game.** Support can be added with either conditional logic in Ultracube code to check for the presence of the other mod and make the necessary adjustments, or the other way around.
 
 Mods that teleport, create, destroy or otherwise mess with items and machines via script also have the potential to cause issues. This could either be by allowing for some way to accidentally destroy an irreplaceable item (something that's otherwise carefully guarded against), or by interfering with the optimized caching logic that Ultracube uses to track the current location of such items (necessary for UX and technical reasons) in a UPS-friendly manner.
 
@@ -97,7 +107,7 @@ Regardless of technical obstacles, practical considerations could make some othe
 
 ## List of compatible mods
 
-The following mods have been adapted to work with Ultracube:
+The following mods have been specifically adapted to work with Ultracube:
 
 | Mod | Notes |
 | --- | ----- |
