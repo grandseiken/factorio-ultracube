@@ -2,6 +2,7 @@
 Version: 0.4.5
 Date: ??
   Minor Features:
+    - Added optional compatibility with Advanced Fluid Handling.
     - Added optional compatibility with Larger Lamps.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
