@@ -309,12 +309,19 @@ local function cube_vehicle_mod(size, results)
     end
   end
 
+  local new_last_furnace = nil
   for i = 1, size do
     local result = results[i]
     local entity = result.entity
     if entity then
       local item = result.item
       local type = entity.type
+      local name = entity.name
+
+      if name == "cube-ultradense-furnace" and cube_ultradense_fuel[item] and
+         entity.status == defines.entity_status.working then
+        new_last_furnace = entity
+      end
 
       local weight = cube_weight[item]
       if weight and weight > 0 and (type == "construction-robot" or type == "logistic-robot") then
@@ -334,10 +341,10 @@ local function cube_vehicle_mod(size, results)
         new_last_robot = true
       end
 
-      if cube_powered_cars_enabled and type == "car" and not cube_powered_cars[entity.name] then
+      if cube_powered_cars_enabled and type == "car" and not cube_powered_cars[name] then
         local fuel = cube_management.get_entity_burning_fuel(entity)
         if cube_ultradense_fuel[fuel] then
-          entity = swap_car(entity, cube_powered_prefix .. entity.name)
+          entity = swap_car(entity, cube_powered_prefix .. name)
           result.entity = entity
           cube_fx_data.last_car = entity
         end
@@ -392,6 +399,14 @@ local function cube_vehicle_mod(size, results)
 
   if not new_last_robot then
     cube_fx_data.last_robot = nil
+  end
+
+  local last_furnace = cube_fx_data.last_furnace
+  cube_fx_data.last_furnace = new_last_furnace
+  if last_furnace and last_furnace.valid and
+     (last_furnace.status ~= defines.entity_status.working or
+      not new_last_furnace or new_last_furnace.unit_number ~= last_furnace.unit_number) then
+    cube_fx_data.furnace_to_fix = last_furnace
   end
 
   for _, locomotive in pairs(new_locomotives) do
@@ -495,6 +510,22 @@ end
 function cube_fx.tick(tick)
   local update_tick = tick % 6 == 0
   if not update_tick then
+    -- Workaround for ultradense furnace getting stuck at 99% if modules are changed during
+    -- smelting (or possibly other situations?).
+    local furnace_to_fix = cube_fx_data.furnace_to_fix
+    if furnace_to_fix then
+      if not furnace_to_fix.valid then
+        cube_fx_data.furnace_to_fix = nil
+      elseif furnace_to_fix.status ~= defines.entity_status.working then
+        local progress = furnace_to_fix.crafting_progress
+        if progress > 0.75 then
+          furnace_to_fix.crafting_progress = 1.0
+        elseif progress > 0.0 then
+          furnace_to_fix.crafting_progress = 0.0
+        end
+        cube_fx_data.furnace_to_fix = nil
+      end
+    end
     -- We need to update locomotives every tick, since if they start burning a new item it
     -- won't be ultralocomotion and they'll immediately reset to normal maximum speed.
     for _, locomotive in pairs(cube_fx_data.last_locomotives) do

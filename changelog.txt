@@ -4,6 +4,8 @@ Date: ??
   Minor Features:
     - Added optional compatibility with Advanced Fluid Handling.
     - Added optional compatibility with Larger Lamps.
+  Bugfixes:
+    - Fixed that a speed-moduled ultradense furnace could be left with a craft almost-finished in certain situations, particularly after removing or replacing modules while a craft was in-progress.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 01. 02. 2024
