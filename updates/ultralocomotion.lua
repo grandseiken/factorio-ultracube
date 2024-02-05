@@ -45,6 +45,7 @@ for _, car in pairs(data.raw.car) do
     cube_car.flags = {"hidden"}
   end
 
+  cube_car.resistances = cube_car.resistances or {}
   for _, resistance in pairs(cube_car.resistances) do
     if resistance.type == "impact" then
       resistance.percent = 100
