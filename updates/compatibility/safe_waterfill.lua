@@ -12,10 +12,24 @@ if mods["safefill"] then
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
       recipe.category = "cube-fabricator-handcraft"
+      add_mystery_recipe(1, recipe_name, "landfill")
     end
-    add_mystery_recipe(1, recipe_name, "landfill")
   end
   local tech = data.raw.technology["nullius-irrigation"]
-  tech.unit = tech_cost_unit("2", 320)
-  tech.prerequisites = {"cube-cliff-explosives", "cube-concrete", "cube-landfill"}
+  if settings.startup["safefill-cost"].value == "expensive" then
+    tech.unit = tech_cost_unit("2", 640)
+    tech.prerequisites = {
+      "cube-fluid-handling",
+      "cube-cliff-explosives",
+      "cube-concrete",
+      "cube-landfill",
+    }
+  else
+    tech.unit = tech_cost_unit("2", 320)
+    tech.prerequisites = {
+      "cube-cliff-explosives",
+      "cube-concrete",
+      "cube-landfill",
+    }
+  end
 end
