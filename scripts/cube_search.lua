@@ -344,8 +344,11 @@ end
 
 local function cube_search_inventories(cache)
   for _, e in pairs(cache.inventories) do
-    local inventory = e.get_inventory(defines.inventory.chest)
-    if inventory and check_inventory(e, inventory) then return true end
+    local no_error,inventory =pcall(function() return e.get_inventory(defines.inventory.chest) end)
+    if no_error and inventory and check_inventory(e, inventory) then return true 
+    else
+      return false;
+    end
   end
   return false
 end
