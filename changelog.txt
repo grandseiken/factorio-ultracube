@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
-Date: ??
+Date: 07. 02. 2024
   Bugfixes:
+    - Fixed that the fix for speed-moduled furnaces could cause them to destroy inputs occasionally.
     - Fixed minor compatibility issues with Safe Waterfill.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.5

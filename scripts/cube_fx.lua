@@ -520,8 +520,6 @@ function cube_fx.tick(tick)
         local progress = furnace_to_fix.crafting_progress
         if progress > 0.75 then
           furnace_to_fix.crafting_progress = 1.0
-        elseif progress > 0.0 then
-          furnace_to_fix.crafting_progress = 0.0
         end
         cube_fx_data.furnace_to_fix = nil
       end
