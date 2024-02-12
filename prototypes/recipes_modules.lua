@@ -1,16 +1,16 @@
 local t1_t1_p = 0.25
 local t1_t0_p = 0.75
 
-local t2_t2_p = 0.1
-local t2_t1_p = 0.4
-local t2_t0_p = 0.3
-local t2_destroy_p = 0.2
+local t2_t2_p = 0.15
+local t2_t1_p = 0.45
+local t2_t0_p = 0.25
+local t2_destroy_p = 0.15
 
-local t3_t3_p = 0.05
-local t3_t2_p = 0.15
+local t3_t3_p = 0.1
+local t3_t2_p = 0.2
 local t3_t1_p = 0.2
 local t3_t0_p = 0.2
-local t3_destroy_p = 0.4
+local t3_destroy_p = 0.3
 
 data:extend({
   {
@@ -86,7 +86,7 @@ data:extend({
     name = "cube-efficiency-module-v3",
     ingredients = {
       {"cube-efficiency-module-v2", 1},
-      {"cube-basic-antimatter-unit", 1},
+      {"cube-basic-antimatter-unit", 2},
     },
     results = {
       {type = "item", name = "cube-efficiency-module-v3", amount = 1, probability = t3_t3_p},
@@ -140,7 +140,7 @@ data:extend({
     name = "cube-speed-module-v3",
     ingredients = {
       {"cube-speed-module-v2", 1},
-      {"cube-basic-antimatter-unit", 1},
+      {"cube-basic-antimatter-unit", 2},
     },
     results = {
       {type = "item", name = "cube-speed-module-v3", amount = 1, probability = t3_t3_p},
@@ -194,7 +194,7 @@ data:extend({
     name = "cube-productivity-module-v3",
     ingredients = {
       {"cube-productivity-module-v2", 1},
-      {"cube-basic-antimatter-unit", 1},
+      {"cube-basic-antimatter-unit", 2},
     },
     results = {
       {type = "item", name = "cube-productivity-module-v3", amount = 1, probability = t3_t3_p},
