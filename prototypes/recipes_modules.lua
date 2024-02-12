@@ -1,3 +1,17 @@
+local t1_t1_p = 0.25
+local t1_t0_p = 0.75
+
+local t2_t2_p = 0.1
+local t2_t1_p = 0.4
+local t2_t0_p = 0.3
+local t2_destroy_p = 0.2
+
+local t3_t3_p = 0.05
+local t3_t2_p = 0.15
+local t3_t1_p = 0.2
+local t3_t0_p = 0.2
+local t3_destroy_p = 0.4
+
 data:extend({
   {
     type = "recipe",
@@ -41,8 +55,8 @@ data:extend({
       {"cube-spectralite", 10},
     },
     results = {
-      {type = "item", name = "cube-efficiency-module", amount = 1, probability = 0.25},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.75},
+      {type = "item", name = "cube-efficiency-module", amount = 1, probability = t1_t1_p},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t1_t0_p},
     },
     main_product = "cube-efficiency-module",
     energy_required = 4,
@@ -57,10 +71,10 @@ data:extend({
       {"cube-haunted-energy-cell", 1},
     },
     results = {
-      {type = "item", name = "cube-efficiency-module-v2", amount = 1, probability = 0.1},
-      {type = "item", name = "cube-efficiency-module", amount = 1, probability = 0.4, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.3},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.2},
+      {type = "item", name = "cube-efficiency-module-v2", amount = 1, probability = t2_t2_p},
+      {type = "item", name = "cube-efficiency-module", amount = 1, probability = t2_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t2_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t2_destroy_p},
     },
     main_product = "cube-efficiency-module-v2",
     energy_required = 8,
@@ -75,11 +89,11 @@ data:extend({
       {"cube-basic-antimatter-unit", 1},
     },
     results = {
-      {type = "item", name = "cube-efficiency-module-v3", amount = 1, probability = 0.05},
-      {type = "item", name = "cube-efficiency-module-v2", amount = 1, probability = 0.15, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-efficiency-module", amount = 1, probability = 0.2, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.4},
+      {type = "item", name = "cube-efficiency-module-v3", amount = 1, probability = t3_t3_p},
+      {type = "item", name = "cube-efficiency-module-v2", amount = 1, probability = t3_t2_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-efficiency-module", amount = 1, probability = t3_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t3_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t3_destroy_p},
     },
     main_product = "cube-efficiency-module-v3",
     energy_required = 12,
@@ -95,8 +109,8 @@ data:extend({
       {"cube-deep-powder", 10},
     },
     results = {
-      {type = "item", name = "cube-speed-module", amount = 1, probability = 0.25},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.75},
+      {type = "item", name = "cube-speed-module", amount = 1, probability = t1_t1_p},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t1_t0_p},
     },
     main_product = "cube-speed-module",
     energy_required = 4,
@@ -111,10 +125,10 @@ data:extend({
       {"cube-deep-crystal", 1},
     },
     results = {
-      {type = "item", name = "cube-speed-module-v2", amount = 1, probability = 0.1},
-      {type = "item", name = "cube-speed-module", amount = 1, probability = 0.4, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.3},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.2},
+      {type = "item", name = "cube-speed-module-v2", amount = 1, probability = t2_t2_p},
+      {type = "item", name = "cube-speed-module", amount = 1, probability = t2_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t2_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t2_destroy_p},
     },
     main_product = "cube-speed-module-v2",
     energy_required = 8,
@@ -129,11 +143,11 @@ data:extend({
       {"cube-basic-antimatter-unit", 1},
     },
     results = {
-      {type = "item", name = "cube-speed-module-v3", amount = 1, probability = 0.05},
-      {type = "item", name = "cube-speed-module-v2", amount = 1, probability = 0.15, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-speed-module", amount = 1, probability = 0.2, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.4},
+      {type = "item", name = "cube-speed-module-v3", amount = 1, probability = t3_t3_p},
+      {type = "item", name = "cube-speed-module-v2", amount = 1, probability = t3_t2_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-speed-module", amount = 1, probability = t3_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t3_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t3_destroy_p},
     },
     main_product = "cube-speed-module-v3",
     energy_required = 12,
@@ -149,8 +163,8 @@ data:extend({
       {"cube-advanced-engine", 1},
     },
     results = {
-      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.25},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.75},
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = t1_t1_p},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t1_t0_p},
     },
     main_product = "cube-productivity-module",
     energy_required = 4,
@@ -165,10 +179,10 @@ data:extend({
       {"cube-arcane-drive", 1},
     },
     results = {
-      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = 0.1},
-      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.4, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.3},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.2},
+      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = t2_t2_p},
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = t2_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t2_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t2_destroy_p},
     },
     main_product = "cube-productivity-module-v2",
     energy_required = 8,
@@ -183,11 +197,11 @@ data:extend({
       {"cube-basic-antimatter-unit", 1},
     },
     results = {
-      {type = "item", name = "cube-productivity-module-v3", amount = 1, probability = 0.05},
-      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = 0.15, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-productivity-module", amount = 1, probability = 0.2, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "cube-modular-casing", amount = 1, probability = 0.2},
-      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = 0.4},
+      {type = "item", name = "cube-productivity-module-v3", amount = 1, probability = t3_t3_p},
+      {type = "item", name = "cube-productivity-module-v2", amount = 1, probability = t3_t2_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-productivity-module", amount = 1, probability = t3_t1_p, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-modular-casing", amount = 1, probability = t3_t0_p},
+      {type = "item", name = "cube-burnt-out-modular-casing", amount = 1, probability = t3_destroy_p},
     },
     main_product = "cube-productivity-module-v3",
     energy_required = 12,
