@@ -3,6 +3,8 @@ Version: 0.5.0
 Date: ??
   Changes:
     - Somewhat reduced the resource investment necessary to create tier 2 and 3 modules.
+  Bugfixes:
+    - Fixed that beacon ghosts could be placed on top of each other.
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 07. 02. 2024

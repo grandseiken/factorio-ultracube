@@ -40,8 +40,6 @@ data:extend({
     dying_explosion = "cube-medium-matter-explosion",
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.25, -1.5}, {1.25, 1.0}},
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
-                      "not-colliding-with-itself", collision_layers.beacon},
     selection_priority = 100,
     damaged_trigger_effect = hit_effects.entity(),
 
@@ -125,7 +123,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "600kW",
+    energy_usage = "800kW",
     energy_source = {type = "void"},
     allowed_effects = module_effects.fuel_speed_only,
     module_specification = {
@@ -156,8 +154,7 @@ data:extend({
     max_health = 300,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
-                      "not-colliding-with-itself", collision_layers.beacon},
+    collision_mask = {},
 
     energy_usage = "800kW",
     energy_source = {
