@@ -40,7 +40,7 @@ data:extend({
     },
     results = {
       {"cube-qubit", 1},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.75},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.75},
     },
     main_product = "cube-qubit",
     energy_required = 4,

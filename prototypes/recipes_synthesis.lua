@@ -245,7 +245,7 @@ data:extend({
     },
     results = {
       {name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.75, catalyst_amount = 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.75},
     },
     main_product = "",
     energy_required = 1,
@@ -460,7 +460,7 @@ data:extend({
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 1000},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5, catalyst_amount = 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
     },
     energy_required = 1,
     category = "cube-synthesizer",
@@ -532,7 +532,7 @@ data:extend({
     results = {
       {name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
       {type = "fluid", name = "cube-ectoplasm", amount = 200},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5, catalyst_amount = 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
     },
     main_product = "",
     energy_required = 1,
@@ -820,7 +820,7 @@ data:extend({
     },
     results = {
       {"cube-ultradense-composite", 1},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
     },
     main_product = "cube-ultradense-composite",
     energy_required = 4,

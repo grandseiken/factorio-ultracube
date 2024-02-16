@@ -316,7 +316,7 @@ data:extend({
     },
     results = {
       {type = "fluid", name = "steam", amount = 250, temperature = 215},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, probability = 0.5},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
     },
     main_product = "",
     energy_required = 2,
