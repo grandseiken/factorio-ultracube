@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: ??
+  Minor Features:
+    - Added several more Ultracube-specific entries to the in-game tips and tricks menu.
   Changes:
     - Somewhat reduced the resource investment necessary to create tier 2 and 3 modules.
   Bugfixes:

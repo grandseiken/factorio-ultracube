@@ -44,7 +44,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "cube-boiler",
-    tag = "[item=cube-boiler]",
+    tag = "[entity=cube-boiler]",
     trigger = {
       type = "unlock-recipe",
       recipe = "cube-boiler",
@@ -80,7 +80,7 @@ data:extend({
   {
     type = "tips-and-tricks-item",
     name = "cube-ultralocomotion",
-    tag = "[item=locomotive]",
+    tag = "[entity=locomotive]",
     trigger = {
       type = "research",
       technology = "cube-transitive-ultralocomotion",
@@ -88,6 +88,18 @@ data:extend({
     category = "cube-tips",
     indent = 1,
     order = "4",
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "cube-loaders",
+    tag = "[entity=aai-v2-loader]",
+    trigger = {
+      type = "research",
+      technology = "cube-loader",
+    },
+    category = "cube-tips",
+    indent = 1,
+    order = "5",
   },
   {
     type = "tips-and-tricks-item",
@@ -99,18 +111,42 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "5",
+    order = "6",
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "cube-mystery-furnace",
+    tag = "[entity=cube-mystery-furnace]",
+    trigger = {
+      type = "research",
+      technology = "cube-mystery-furnace",
+    },
+    category = "cube-tips",
+    indent = 1,
+    order = "7",
   },
   {
     type = "tips-and-tricks-item",
     name = "cube-quantum-decoder",
-    tag = "[item=cube-quantum-decoder]",
+    tag = "[entity=cube-quantum-decoder]",
     trigger = {
       type = "research",
       technology = "cube-quantum-decoder",
     },
     category = "cube-tips",
     indent = 1,
-    order = "6",
+    order = "8",
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "cube-helvetica-scenario",
+    tag = "[recipe=cube-resonance-cascade]",
+    trigger = {
+      type = "research",
+      technology = "cube-resonance-cascade",
+    },
+    category = "cube-tips",
+    indent = 1,
+    order = "9",
   },
 })
