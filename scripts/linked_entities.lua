@@ -195,22 +195,24 @@ function linked_entities.tick(tick)
     end
     local new_entities = {}
     for _, e in pairs(nuclear_reactors) do
-      local timer = reactor_hysteresis[e.unit_number]
-      if not timer then
-        local linked = get_linked(e)
-        local reactor = linked[1]
-        local new_entity = nil
-        local n = reactor.unit_number
-        if reactor.name == "cube-nuclear-reactor-base" and reactor.temperature > 100 and not reactor.burner.currently_burning then
+      local linked = get_linked(e)
+      local reactor = linked[1]
+      local new_entity = nil
+      local en = e.unit_number
+      local n = reactor.unit_number
+      if reactor.name == "cube-nuclear-reactor-base" then
+        if reactor.burner.currently_burning then
+          reactor_hysteresis[en] = 300
+        elseif reactor_hysteresis[en] and reactor.temperature > 100 then
           new_entity = fast_replace(reactor, "cube-nuclear-reactor-online", true)
-        elseif reactor.name == "cube-nuclear-reactor-online" and reactor.temperature < 100 and not reactor.burner.currently_burning then
-          new_entity = fast_replace(reactor, "cube-nuclear-reactor-base", true)
         end
-        if new_entity then
-          reactor_hysteresis[e.unit_number] = 120
-          entity_combine.swap_linked(e, 1, n, new_entity)
-          new_entities[#new_entities + 1] = new_entity
-        end
+      elseif reactor.name == "cube-nuclear-reactor-online" and
+             not reactor.burner.currently_burning and not reactor_hysteresis[en] then
+        new_entity = fast_replace(reactor, "cube-nuclear-reactor-base", true)
+      end
+      if new_entity then
+        entity_combine.swap_linked(e, 1, n, new_entity)
+        new_entities[#new_entities + 1] = new_entity
       end
     end
     for _, e in ipairs(new_entities) do

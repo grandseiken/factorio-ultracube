@@ -6,6 +6,8 @@ Date: ??
   Changes:
     - Several recipes have been adjusted to address end-game resource imbalances, particularly of rare metals and calcium.
     - Adjusted recipes are: qubits, singularity calibration data, and the final science card. The latter two now require an additional ingredient each.
+    - Nuclear reactors now require kickstarting with the cube once they run out of uranium fuel cells, regardless of temperature.
+    - The neighbour bonus of nuclear reactors has been reduced from 50% to 25%.
     - Somewhat reduced the resource investment necessary to create tier 2 and 3 modules.
   Bugfixes:
     - Fixed that beacon ghosts could be placed on top of each other.
