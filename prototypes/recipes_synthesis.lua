@@ -671,10 +671,11 @@ data:extend({
       {name = "cube-ultradense-utility-cube", amount = 1},
       {"cube-boson-conduit", 16},
       {"cube-fermion-conduit", 10},
+      {"cube-rare-metals", 400},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-singularity-research-data", 10},
+      {"cube-singularity-research-data", 5},
     },
     energy_required = 2,
     category = "cube-cyclotron",
@@ -693,11 +694,12 @@ data:extend({
       {name = "cube-dormant-utility-cube", amount = 1},
       {"cube-boson-conduit", 160},
       {"cube-fermion-conduit", 100},
-      {"uranium-238", 10},
+      {"uranium-238", 20},
+      {"cube-rare-metals", 2000},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {"cube-singularity-research-data", 100},
+      {"cube-singularity-research-data", 50},
     },
     energy_required = 2,
     category = "cube-dimension-folding-engine",
@@ -715,7 +717,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {name = "cube-ultradense-utility-cube", amount = 1},
-      {name = "cube-bottled-euphoria", amount = 1},
+      {name = "cube-bottled-euphoria", amount = 10},
     },
     results = {
       {type = "item", name = "cube-legendary-iron-gear", amount = 1, catalyst_amount = 1},

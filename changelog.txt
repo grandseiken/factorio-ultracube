@@ -4,6 +4,8 @@ Date: ??
   Minor Features:
     - Added several more Ultracube-specific entries to the in-game tips and tricks menu.
   Changes:
+    - Several recipes have been adjusted to address end-game resource imbalances, particularly of rare metals and calcium.
+    - Adjusted recipes are: qubits, singularity calibration data, and the final science card. The latter two now require an additional ingredient each.
     - Somewhat reduced the resource investment necessary to create tier 2 and 3 modules.
   Bugfixes:
     - Fixed that beacon ghosts could be placed on top of each other.

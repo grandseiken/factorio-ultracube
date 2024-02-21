@@ -33,13 +33,13 @@ data:extend({
     type = "recipe",
     name = "cube-qubit",
     ingredients = {
-      {"cube-sophisticated-matter-unit", 1},
+      {"cube-sophisticated-matter-unit", 2},
       {"cube-bottled-consciousness", 1},
-      {"cube-spectralite", 1},
-      {"cube-deep-crystal", 1},
+      {"cube-spectralite", 2},
+      {"cube-deep-crystal", 2},
     },
     results = {
-      {"cube-qubit", 1},
+      {"cube-qubit", 2},
       {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.75},
     },
     main_product = "cube-qubit",

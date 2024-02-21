@@ -107,6 +107,7 @@ data:extend({
       {"cube-singularity-research-data", 1},
       {"cube-quantum-research-data", 1},
       {"cube-basic-antimatter-unit", 2},
+      {"cube-n-dimensional-widget", 2},
     },
     results = {
       {"cube-complete-annihilation-card", 2},
