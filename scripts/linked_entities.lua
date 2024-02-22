@@ -206,9 +206,16 @@ function linked_entities.tick(tick)
         elseif reactor_hysteresis[en] and reactor.temperature > 100 then
           new_entity = fast_replace(reactor, "cube-nuclear-reactor-online", true)
         end
-      elseif reactor.name == "cube-nuclear-reactor-online" and
-             not reactor.burner.currently_burning and not reactor_hysteresis[en] then
-        new_entity = fast_replace(reactor, "cube-nuclear-reactor-base", true)
+      elseif reactor.name == "cube-nuclear-reactor-online" and not reactor_hysteresis[en] then
+        local burner = reactor.burner
+        local status = reactor.status
+        if not burner.currently_burning then
+          new_entity = fast_replace(reactor, "cube-nuclear-reactor-base", true)
+        elseif status == defines.entity_status.full_burnt_result_output or
+               status == defines.entity_status.no_fuel then
+          burner.currently_burning = nil
+          reactor.surface.spill_item_stack(reactor.position, {name = "used-up-uranium-fuel-cell", count = 1}, false, nil, false)
+        end
       end
       if new_entity then
         entity_combine.swap_linked(e, 1, n, new_entity)

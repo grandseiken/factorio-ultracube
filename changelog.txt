@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+Date: 22.02.2024
+  Changes:
+    - Doubled the crafting time of the qubit recipe to match the fact it now makes two qubits per craft as of 0.5.0.
+    - Updated the nuclear reactor tips and tricks item to reflect the 0.5.0 behaviour.
+  Bugfixes:
+    - Fixed that nuclear reactors could be kept online indefinitely without fuel by neglecting to clear their burnt result inventory. Excesss used-up uranium fuel cells will now spill onto the floor.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
 Date: 21.02.2024
   Minor Features:

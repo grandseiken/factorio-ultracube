@@ -43,7 +43,7 @@ data:extend({
       {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.75},
     },
     main_product = "cube-qubit",
-    energy_required = 4,
+    energy_required = 8,
     category = "cube-fabricator",
     enabled = false,
   },
