@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: ??
+  Changes:
+    - The nuclear fuel recipe now converts 10 vehicle fuel into 10 nuclear fuel per uranium-235.
   Bugfixes:
     - Fixed that activated nuclear reactors had incorrect neighbour bonus.
 ---------------------------------------------------------------------------------------------------
