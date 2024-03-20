@@ -17,6 +17,7 @@ local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local teleport = require("__Ultracube__/scripts/teleport")
 local transition = require("__Ultracube__/scripts/transition")
 local milestones = require("__Ultracube__/scripts/milestones")
+local util = require("__core__/lualib/util.lua")
 
 local function create_initial_cube(player)
   local surface = player.surface
@@ -359,6 +360,10 @@ local function remote_hint_entity(entity)
   end
 end
 
+local function remote_cube_info()
+  return util.table.deepcopy(global.cube_remote)
+end
+
 -- Better victory screen support.
 local function better_victory_screen_statistics()
   local force = game.forces["player"]
@@ -397,8 +402,28 @@ local function better_victory_screen_statistics()
 end
 
 remote.add_interface("Ultracube", {
+  -- Call hint_entity if you have teleported or moved an item via script (unless you are certain
+  -- it's not a cube). Pass the entity into which the item was placed.
   ["hint_entity"] = remote_hint_entity,
+  -- Call cube_info to get a table with the following fields:
+  --
+  -- - position:       Current position of the cube. Nil if it could not be found, or there is
+  --                   currently more than one.
+  -- - min_position:   Top-left position of the rectangle containing all cubes. Nil if none could be
+  --                   found.
+  -- - max_position:   Bottom-right position of the rectangle containing all cubes. Nil if none
+  --                   could be found.
+  -- - distance_delta: Distance travelled by the cube since the last update to this table. Nil if
+  --                   the cube could not be found or there is more than one.
+  -- - is_working:     True if the cube is currently being used in some machine. If there are
+  --                   multiple cubes, this is a random sample of one cube from all of them.
+  --
+  -- Note that these values are only updated every 6 ticks, so distance_delta is the distance
+  -- travelled over 6 ticks. Further, cube position within a belt tile is not tracked, so
+  -- distance_delta will be 0 most of the time when it is on a belt and 1 when it crosses a tile.
+  ["cube_info"] = remote_cube_info,
+  -- Interfaces for compatibility with certain mods.
   ["better-victory-screen-statistics"] = better_victory_screen_statistics,
-  ["milestones_presets"] = milestones
+  ["milestones_presets"] = milestones,
 })
 

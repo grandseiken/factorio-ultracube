@@ -462,7 +462,13 @@ local function is_cube_working_character(entity, item)
   return cube_recipe and cube_recipe.ingredients[item] > 0
 end
 
-local function track_victory_statistics(size, results)
+local function track_statistics(size, results)
+  local cube_remote = global.cube_remote
+  if not cube_remote then
+    cube_remote = {}
+    global.cube_remote = cube_remote
+  end
+
   -- Track distance only when there's a single cube, since inconsistencies in result ordering
   -- makes it very difficult otherwise.
   local tracking_position = false
@@ -472,6 +478,7 @@ local function track_victory_statistics(size, results)
       tracking_position = true
       local old = victory_statistics.cube_last_position
       local new = entity.position
+      local distance_delta = 0
       if old then
         local old_x = old.x
         local old_y = old.y
@@ -480,17 +487,23 @@ local function track_victory_statistics(size, results)
         if old_x ~= new_x or old_y ~= new_y then
           local dx = new_x - old_x
           local dy = new_y - old_y
+          distance_delta = math.sqrt(dx * dx + dy * dy)
           victory_statistics.distance_travelled_by_cube =
-              victory_statistics.distance_travelled_by_cube + math.sqrt(dx * dx + dy * dy)
+              victory_statistics.distance_travelled_by_cube + distance_delta
         end
       end
+      cube_remote.position = new
+      cube_remote.distance_delta = distance_delta
       victory_statistics.cube_last_position = new
     end
   end
   if not tracking_position then
+    cube_remote.position = nil
+    cube_remote.distance_delta = nil
     victory_statistics.cube_last_position = nil
   end
 
+  cube_remote.is_working = false
   if size > 0 then
     -- Track cube utilisation. Pick one at random for a less-biased sampling.
     local result = results[math.random(size)]
@@ -500,11 +513,13 @@ local function track_victory_statistics(size, results)
     local entity_type = entity.type
     if (entity_type == "character" and is_cube_working_character(entity, item)) or
        (cube_utilisation_machine_types[entity_type] and is_cube_working(entity, item)) then
+      cube_remote.is_working = true
       victory_statistics.cube_working_samples = (victory_statistics.cube_working_samples or 0) + 1
     else
       victory_statistics.cube_idle_samples = (victory_statistics.cube_idle_samples or 0) + 1
     end
   end
+  return cube_remote
 end
 
 function cube_fx.tick(tick)
@@ -586,7 +601,14 @@ function cube_fx.tick(tick)
   if alert_tick then
     cube_alert(size, results, alert_override_tick)
   end
-  track_victory_statistics(size, results)
+  local cube_remote = track_statistics(size, results)
+  if x_min then
+    cube_remote.min_position = {x = x_min, y = y_min}
+    cube_remote.max_position = {x = x_max, y = y_max}
+  else
+    cube_remote.min_position = nil
+    cube_remote.max_position = nil
+  end
   if cube_vehicle_mod(size, results) then
     return
   end

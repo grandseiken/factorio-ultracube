@@ -7,6 +7,8 @@ Date: ??
   Bugfixes:
     - Fixed that activated nuclear reactors had incorrect neighbour bonus.
     - Fixed that the cyclotron charge core would be in the wrong place after copy-pasting a rotated cyclotron.
+  Modding:
+    - Added an experimental cube_info remote interface which can be called to retrieve information about what the cube is up to. See control.lua for documentation.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 22.02.2024
