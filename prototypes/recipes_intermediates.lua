@@ -374,7 +374,7 @@ data:extend({
       {"cube-rare-metals", 80},
       {"uranium-235", 5},
       {"uranium-238", 75},
-      {type = "fluid", name = "cube-radioactive-sludge", amount = 800},
+      {type = "fluid", name = "cube-radioactive-sludge", amount = 1200},
     },
     results = {
       {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},

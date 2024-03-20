@@ -302,7 +302,7 @@ data:extend({
       {type = "item", name = "uranium-238", amount = 200},
     },
     results = {
-      {type = "item", name = "cube-uranium-234", amount_min = 50, amount_max = 300},
+      {type = "item", name = "cube-uranium-234", amount_min = 25, amount_max = 300},
       {type = "item", name = "uranium-238", amount_min = 125, amount_max = 300},
       {type = "item", name = "uranium-235", amount_min = 1, amount_max = 3},
       {type = "fluid", name = "cube-radioactive-sludge", amount = 2400},
