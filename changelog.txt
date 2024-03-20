@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
-Date: ??
+Date: 20.03.2024
   Changes:
     - The nuclear fuel recipe now converts 10 vehicle fuel into 10 nuclear fuel per uranium-235.
     - Slightly rebalanced the effectiveness of the slugged uranium fuel cell recipe.
