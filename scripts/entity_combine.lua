@@ -38,6 +38,7 @@ local combine_definitions = {
     {
       name = "cube-cyclotron-interface",
       setup_function = make_inoperable,
+      direction = defines.direction.north,
     },
   },
   ["cube-beacon"] = {

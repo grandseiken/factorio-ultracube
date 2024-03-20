@@ -5,6 +5,7 @@ Date: ??
     - The nuclear fuel recipe now converts 10 vehicle fuel into 10 nuclear fuel per uranium-235.
   Bugfixes:
     - Fixed that activated nuclear reactors had incorrect neighbour bonus.
+    - Fixed that the cyclotron charge core would be in the wrong place after copy-pasting a rotated cyclotron.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 22.02.2024
