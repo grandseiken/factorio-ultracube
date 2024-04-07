@@ -1,6 +1,7 @@
 require("__Ultracube__/scripts/lib")
 local cube_management = require("__Ultracube__/scripts/cube_management")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
+local if_this_crashes_you_have_incompatible_mods = require("__Ultracube__/scripts/if_this_crashes_you_have_incompatible_mods")
 
 local cube_ultradense = cube_management.cubes.ultradense
 local cube_dormant = cube_management.cubes.dormant
@@ -870,7 +871,7 @@ function cube_search.remove_entity(entity)
   end
 end
 
-function cube_search.update(tick)
+local function cube_search_update(tick)
   if cube_search_data.last_tick and tick <= cube_search_data.last_tick then
     return result_set.entries_size, result_set.entries
   end
@@ -897,7 +898,6 @@ function cube_search.update(tick)
   local done = cube_search_graph(last_entities_size, last_entities)
 
   if not done then
-    -- game.print("Found only " .. result_set.total_weight)
     done = cube_search_local(last_entities_size, last_entities)
   end
 
@@ -929,7 +929,15 @@ function cube_search.update(tick)
     game.print("If the cube is really gone, you fix it with the following console command: /c game.player.insert(\"cube-ultradense-utility-cube\")")
     cube_search_data.last_tick = tick + 600
   end
-  return result_set.entries_size, result_set.entries
+end
+
+function cube_search.update(tick)
+  local status, result = pcall(function() cube_search_update(tick) end)
+  if status then
+    return result_set.entries_size, result_set.entries
+  else
+    if_this_crashes_you_have_incompatible_mods.crash(result)
+  end
 end
 
 return cube_search
