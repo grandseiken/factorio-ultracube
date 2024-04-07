@@ -127,7 +127,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
-| [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported |
+| [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported. Note: be careful, it's currently possible to destroy the cube by overwriting a machine's recipe with a blueprint deployer when it holds the cube in some cases |
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
 | [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
 | [Stack Combinator](https://mods.factorio.com/mod/stack-combinator) | |
