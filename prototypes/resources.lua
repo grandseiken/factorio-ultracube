@@ -28,8 +28,9 @@ deep_core_ore_autoplace.probability_expression =
       local c = r / d * (1 - r)
       return noise.clamp(c * (d - x * x - y * y), -1, 0)
     end)
-deep_core_ore_autoplace.richness_expression =
-    deep_core_ore_autoplace.richness_expression + noise.define_noise_function(function(x, y)
+deep_core_ore_autoplace.richness_expression = deep_core_ore_autoplace.richness_expression +
+    noise.get_control_setting("cube-deep-core-vein").richness_multiplier *
+    noise.get_control_setting("cube-deep-core-vein").size_multiplier * noise.define_noise_function(function(x, y)
       return noise.max(0, deep_core_distance_bonus * ((x * x + y * y)^0.5 - deep_core_distance))
     end)
 
