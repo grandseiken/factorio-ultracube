@@ -16,9 +16,9 @@ local deep_core_ore_autoplace = resource_autoplace.resource_autoplace_settings({
   candidate_spot_count = 22,
 })
 
--- Distance from origin at which fully spawning
+-- Distance from origin at which fully spawning.
 local deep_core_distance = 512
--- Factor where it starts to fade in
+-- Factor where it starts to fade in.
 local deep_core_fade_ratio = 3
 local deep_core_distance_bonus = 1024
 deep_core_ore_autoplace.probability_expression =
