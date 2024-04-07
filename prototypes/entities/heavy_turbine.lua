@@ -25,6 +25,7 @@ data:extend({
     effectivity = 1,
     fluid_usage_per_tick = 1,
     burns_fluid = false,
+    destroy_non_fuel_fluid = false,
     maximum_temperature = 1000,
     fast_replaceable_group = "steam-engine",
     collision_box = {{-1.25, -2.35}, {1.25, 2.35}},

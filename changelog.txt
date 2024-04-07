@@ -5,6 +5,7 @@ Date: ??
     - ??
   Bugfixes:
     - Centrifuges no longer produce pollution.
+    - Heavy turbines can no longer be used to void non-fuel fluids.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 20.03.2024
