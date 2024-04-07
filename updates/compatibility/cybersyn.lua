@@ -11,7 +11,7 @@ if mods["cybersyn"] then
     "cube-combinatorics",
     "cube-rail-signals",
   }
-  tech.unit = tech_cost_unit("1b", 120)
+  tech.unit = tech_cost_unit("1b", 240)
 
   data.raw.item["cybersyn-combinator"].order = "cube-" .. data.raw.item["cybersyn-combinator"].order
   add_mystery_recipe(1, "cybersyn-combinator", "cube-electronic-circuit")
