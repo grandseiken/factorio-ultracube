@@ -278,7 +278,7 @@ add_mystery_recipe(1, "used-up-uranium-fuel-cell", "uranium-ore")
 add_mystery_recipe(1, "cube-calcium", "cube-sand")
 add_mystery_recipe(1, "cube-intelligent-calcium", "cube-calcium")
 add_mystery_recipe(1, "cube-singularity-research-data", "cube-boson-conduit")
-add_mystery_recipe(1, "cube-quantum-research-data", "cube-qubit")
+add_mystery_recipe(1, "cube-quantum-research-data", "cube-qubit", 10, 1)
 add_mystery_recipe(1, "cube-teleportation-control-module", "cube-spectral-processor")
 
 add_mystery_recipe(1, "cube-besselheim-flask", "cube-glass")

@@ -6,6 +6,7 @@ Date: ??
   Bugfixes:
     - Centrifuges no longer produce pollution.
     - Heavy turbines can no longer be used to void non-fuel fluids.
+    - Fixed the mystery furnace recipe for quantum calibration data to avoid an unintended positive feedback loop.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 20.03.2024
