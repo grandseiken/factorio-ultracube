@@ -51,7 +51,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "1",
+    order = "a",
   },
   {
     type = "tips-and-tricks-item",
@@ -63,7 +63,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "2",
+    order = "b",
   },
   {
     type = "tips-and-tricks-item",
@@ -75,7 +75,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "3",
+    order = "c",
   },
   {
     type = "tips-and-tricks-item",
@@ -87,7 +87,19 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "4",
+    order = "d",
+  },
+  {
+    type = "tips-and-tricks-item",
+    name = "cube-deep-core-ore",
+    tag = "[item=cube-deep-core-ore]",
+    trigger = {
+      type = "research",
+      technology = "cube-deep-core-ultradrill",
+    },
+    category = "cube-tips",
+    indent = 1,
+    order = "e",
   },
   {
     type = "tips-and-tricks-item",
@@ -99,7 +111,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "5",
+    order = "f",
   },
   {
     type = "tips-and-tricks-item",
@@ -111,7 +123,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "6",
+    order = "g",
   },
   {
     type = "tips-and-tricks-item",
@@ -123,7 +135,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "7",
+    order = "h",
   },
   {
     type = "tips-and-tricks-item",
@@ -135,7 +147,7 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "8",
+    order = "i",
   },
   {
     type = "tips-and-tricks-item",
@@ -147,6 +159,6 @@ data:extend({
     },
     category = "cube-tips",
     indent = 1,
-    order = "9",
+    order = "j",
   },
 })

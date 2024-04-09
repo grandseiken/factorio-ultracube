@@ -124,6 +124,7 @@ local fx_offset_map = {
   ["cube-ultradense-furnace"] = {x = -1.15, y = -2.9},
   ["cube-nuclear-reactor-base"] = {x = 0, y = -1.5},
   ["cube-nuclear-reactor-online"] = {x = 0, y = -1.5},
+  ["cube-deep-core-ultradrill"] = {x = 0, y = -1},
 }
 
 local function fx_offset(entity, position)
