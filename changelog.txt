@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.3
-Date: ??
+Date: 09.04.2024
   Changes:
     - Script crashes in cube search scripts are now wrapped with a prominent message indicating that the problem is almost certainly caused by another incompatible mod.
     - Deep core vein generation is now more correctly affected by richness and size map generation sliders, especially at great distances from the starting location. Veins should now contain a more respectable quantity of ore compared to other resource patches when playing with high richness settings.

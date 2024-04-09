@@ -104,6 +104,9 @@ local function cube_alert(size, results, override)
 end
 
 local fx_offset_map = {
+  ["iron-chest"] = {x = 0, y = -0.2},
+  ["cube-medium-container"] = {x = 0, y = -0.35},
+  ["cube-big-container"] = {x = 0, y = -0.7},
   ["cube-boiler"] = {
     [defines.direction.north] = {x = 0, y = -0.2},
     [defines.direction.south] = {x = 0, y = -0.65},
