@@ -1,10 +1,11 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.0
+Version: 0.5.3
 Date: ??
   Changes:
     - Script crashes in cube search scripts are now wrapped with a prominent message indicating that the problem is almost certainly caused by another incompatible mod.
     - Deep core vein generation is now more correctly affected by richness and size map generation sliders, especially at great distances from the starting location. Veins should now contain a more respectable quantity of ore compared to other resource patches when playing with high richness settings.
   Minor Features:
+    - Cube explosion effects are now positioned appropriately to better match the visuals of whichever machine is holding it.
     - Added optional compatibility with Logistic Train Network.
   Bugfixes:
     - Centrifuges no longer produce pollution.

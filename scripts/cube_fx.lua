@@ -103,6 +103,41 @@ local function cube_alert(size, results, override)
   end
 end
 
+local fx_offset_map = {
+  ["cube-boiler"] = {
+    [defines.direction.north] = {x = 0, y = -0.2},
+    [defines.direction.south] = {x = 0, y = -0.65},
+    [defines.direction.east] = {x = -0.3, y = -0.6},
+    [defines.direction.west] = {x = 0.4, y = -0.6},
+  },
+  ["cube-fuel-refinery"] = {
+    [defines.direction.north] = {x = 0.95, y = -0.7},
+    [defines.direction.south] = {x = -0.95, y = -1.45},
+    [defines.direction.east] = {x = -0.35, y = 0},
+    [defines.direction.west] = {x = 0, y = -1.45},
+  },
+  ["cube-mystery-furnace"] = {x = 0, y = 0.75},
+  ["cube-dimension-folding-engine"] = {x = -1.15, y = -1.6},
+  ["cube-cyclotron"] = {x = -1.4, y = -0.25},
+  ["cube-forbidden-ziggurat"] = {x = 0, y = -0.4},
+  ["cube-experimental-teleporter"] = {x = 0, y = 1.25},
+  ["cube-ultradense-furnace"] = {x = -1.15, y = -2.9},
+  ["cube-nuclear-reactor-base"] = {x = 0, y = -1.5},
+  ["cube-nuclear-reactor-online"] = {x = 0, y = -1.5},
+}
+
+local function fx_offset(entity, position)
+  if not entity or not entity.valid then
+    return position
+  end
+  local entry = fx_offset_map[entity.name]
+  if not entry then
+    return position
+  end
+  local value = entry[entity.direction] or entry
+  return {x = position.x + value.x, y = position.y + value.y}
+end
+
 local dormant_explosion = {name = "cube-periodic-dormant-explosion"}
 local ultradense_explosion = {name = "cube-periodic-ultradense-explosion"}
 local combustion_explosion = {name = "cube-periodic-combustion-explosion"}
@@ -120,33 +155,36 @@ local combustion_projectile = {
 local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity then
+    local entity = result.entity
+    if entity then
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         local positions = result.positions
         if positions then
           for j = 1, #positions do
-            local position = positions[j]
-            phantom_explosion.source = result.entity
+            local position = fx_offset(entity, positions[j])
+            phantom_explosion.source = entity
             phantom_explosion.position = position
             phantom_explosion.target = position
             result.surface.create_entity(phantom_explosion)
           end
         else
-          phantom_explosion.source = result.entity
-          phantom_explosion.position = result.position
-          phantom_explosion.target = result.position
+          local position = fx_offset(entity, result.position)
+          phantom_explosion.source = entity
+          phantom_explosion.position = position
+          phantom_explosion.target = position
           result.surface.create_entity(phantom_explosion)
         end
       elseif result.item == cube_dormant or result.item == cube_dormant_combustion then
-        dormant_explosion.source = result.entity
-        dormant_explosion.position = result.position
-        dormant_explosion.target = result.position
+        local position = fx_offset(entity, result.position)
+        dormant_explosion.source = entity
+        dormant_explosion.position = position
+        dormant_explosion.target = position
         result.surface.create_entity(dormant_explosion)
       elseif result.item == cube_ultradense or result.item == cube_combustion then
         if result.velocity then
           local projectile =
               result.item == cube_combustion and combustion_projectile or ultradense_projectile
-          local position = result.position
+          local position = fx_offset(entity, result.position)
           local velocity = result.velocity
           projectile.source = result.entity
           projectile.position = position
@@ -157,9 +195,10 @@ local function cube_boom(size, results)
         else
           local explosion =
               result.item == cube_combustion and combustion_explosion or ultradense_explosion
-          explosion.source = result.entity
-          explosion.position = result.position
-          explosion.target = result.position
+          local position = fx_offset(entity, result.position)
+          explosion.source = entity
+          explosion.position = position
+          explosion.target = position
           result.surface.create_entity(explosion)
         end
       end
@@ -176,22 +215,24 @@ local puff_low = {name = "cube-periodic-phantom-low-puff"}
 local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
-    if result.entity and result.height >= 0 then
+    local entity = result.entity
+    if entity and result.height >= 0 then
       if result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
         local positions = result.positions
         if positions then
           for j = 1, #positions do
-            local position = positions[j]
-            puff.source = result.entity
+            local position = fx_offset(entity, positions[j])
+            puff.source = entity
             puff.position = position
             puff.target = position
             result.surface.create_entity(puff)
           end
         else
-          puff.source = result.entity
-          puff.position = result.position
-          puff.target = result.position
+          local position = fx_offset(entity, result.position)
+          puff.source = entity
+          puff.position = position
+          puff.target = position
           result.surface.create_entity(puff)
         end
       else
@@ -202,9 +243,10 @@ local function cube_spark(size, results)
           spark = result.height > 0 and combustion_spark_high or combustion_spark_low
         end
         if spark then
-          spark.source = result.entity
-          spark.position = result.position
-          spark.target = result.position
+          local position = fx_offset(entity, result.position)
+          spark.source = entity
+          spark.position = position
+          spark.target = position
           result.surface.create_entity(spark)
         end
       end
