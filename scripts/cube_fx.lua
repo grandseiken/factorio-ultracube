@@ -116,6 +116,7 @@ local fx_offset_map = {
     [defines.direction.east] = {x = -0.35, y = 0},
     [defines.direction.west] = {x = 0, y = -1.45},
   },
+  ["cube-recovery-bay"] = {x = 0, y = -0.5},
   ["cube-mystery-furnace"] = {x = 0, y = 0.75},
   ["cube-dimension-folding-engine"] = {x = -1.15, y = -1.6},
   ["cube-cyclotron"] = {x = -1.4, y = -0.25},
