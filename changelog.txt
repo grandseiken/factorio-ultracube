@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.4
+Date: 13.04.2024
+  Changes:
+    - Removed SimHelper dependency and updated menu simulations for compatibility with Factorio 1.1.107.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.3
 Date: 09.04.2024
   Changes:

@@ -12,6 +12,7 @@ local empty_script = [[
 
 local cube_0 = {
   checkboard = false,
+  mods = {"Ultracube"},
   save = "__Ultracube__/menu_simulations/cube_0.zip",
   length = 60 * 108,
   init = init_script,
@@ -20,6 +21,7 @@ local cube_0 = {
 
 local cube_a = {
   checkboard = false,
+  mods = {"Ultracube"},
   save = "__Ultracube__/menu_simulations/cube_a.zip",
   length = 60 * 90,
   init = init_script,
@@ -28,6 +30,7 @@ local cube_a = {
 
 local cube_b = {
   checkboard = false,
+  mods = {"Ultracube"},
   save = "__Ultracube__/menu_simulations/cube_b.zip",
   length = 60 * 90,
   init = init_script,
@@ -36,6 +39,7 @@ local cube_b = {
 
 local cube_c = {
   checkboard = false,
+  mods = {"Ultracube"},
   save = "__Ultracube__/menu_simulations/cube_c.zip",
   length = 60 * 90,
   init = init_script,
@@ -44,6 +48,7 @@ local cube_c = {
 
 local cube_d = {
   checkboard = false,
+  mods = {"Ultracube"},
   save = "__Ultracube__/menu_simulations/cube_d.zip",
   length = 60 * 90,
   init = init_script,
