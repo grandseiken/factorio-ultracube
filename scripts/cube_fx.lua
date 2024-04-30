@@ -162,6 +162,7 @@ local function cube_boom(size, results)
     local result = results[i]
     local entity = result.entity
     if entity then
+      entity.create_build_effect_smoke()
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         local positions = result.positions
         if positions then
