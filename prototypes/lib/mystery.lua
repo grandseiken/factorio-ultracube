@@ -1,6 +1,8 @@
 local item_prototypes = {
   "item",
   "tool",
+  "gun",
+  "ammo",
   "armor",
   "module",
   "item-with-entity-data",
