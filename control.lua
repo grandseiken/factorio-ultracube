@@ -427,3 +427,28 @@ remote.add_interface("Ultracube", {
   ["milestones_presets"] = milestones,
 })
 
+script.on_event(defines.events.on_console_command, function(event)
+  if event.command ~= "cheat" then return end
+  local player = game.get_player(event.player_index)
+  if not player.admin then return end
+
+  local function recusively_research_techs(force)
+    -- Research the first found tech, and then call it again
+    for _, tech in pairs(force.technologies) do
+      if
+          tech.enabled                        -- Make sure we only research techs the player are able to research
+          and not tech.researched
+          and tech.level < 4                  -- Ignore infinite techs
+          and tech.name ~= "cube-everything"  -- Don't auto-win the game
+      then
+        tech.researched = true
+
+        -- Only try again if we found a tech to research
+        recusively_research_techs(force)
+        return
+      end
+    end
+  end
+
+  recusively_research_techs(player.force)
+end)
