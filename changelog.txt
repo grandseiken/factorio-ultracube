@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.5
-Date: ???
+Date: ??.??.2024
+  Changes:
+    - Add a little more smoke to cube booms. (#25)
   Bugfixes:
     - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
 ---------------------------------------------------------------------------------------------------
