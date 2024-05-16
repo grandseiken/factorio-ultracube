@@ -386,13 +386,14 @@ local function better_victory_screen_statistics()
   stats["ultracube"] = {order = "a", stats = {
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
     ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
-    ["cubes-consumed"]                 = {order = "c", value = cubes_consumed},
-    ["cubes-consumed-dormant"]         = {order = "d", value = cubes_consumed_dormant},
-    ["cubes-consumed-phantom"]         = {order = "e", value = cubes_consumed_phantom},
-    ["cubes-consumed-phantom-dormant"] = {order = "f", value = cubes_consumed_phantom_dormant},
-    ["cubes-reconstructed"]            = {order = "g", value = cubes_reconstructed},
-    ["cubes-consumed-total"]           = {order = "h", value = cubes_consumed_total},
-    ["matter-created"]                 = {order = "i", value = matter_created},
+    ["cubes-reconstructed"]            = {order = "c", value = cubes_reconstructed},
+    ["cube-helvetica-scenario"]        = {order = "d", value = victory_statistics.fastest_helvetica or 60, unit = "time", ignore = victory_statistics.fastest_helvetica == nil},
+    ["cubes-consumed"]                 = {order = "e", value = cubes_consumed},
+    ["cubes-consumed-dormant"]         = {order = "f", value = cubes_consumed_dormant},
+    ["cubes-consumed-phantom"]         = {order = "g", value = cubes_consumed_phantom},
+    ["cubes-consumed-phantom-dormant"] = {order = "h", value = cubes_consumed_phantom_dormant},
+    ["cubes-consumed-total"]           = {order = "k", value = cubes_consumed_total},
+    ["matter-created"]                 = {order = "j", value = matter_created},
   }}
 
   -- Ignore-flag some military-oriented stats we don't care about.

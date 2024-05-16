@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: ??.??.2024
+  Changes:
+    - Add fastest cube reconstruction using the Helvetica scenario to the Better Victory Screen (#28).
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 13.04.2024
   Changes:
