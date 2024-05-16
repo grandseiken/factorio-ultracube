@@ -3,6 +3,7 @@ Version: 0.5.5
 Date: ??.??.2024
   Changes:
     - Add a little more smoke to cube booms.
+    - Added optional compatibility with Fuel Train Stop.
   Bugfixes:
     - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
     - Fixed some compatibility issues with other mods involving icons.

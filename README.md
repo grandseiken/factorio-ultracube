@@ -114,6 +114,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Advanced Fluid Handling](https://mods.factorio.com/mod/underground-pipe-pack) | not entirely compatible with Flow Control |
+| [Automatic Fuel Train Stop](https://mods.factorio.com/mod/FuelTrainStop) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | |
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
