@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: ???
+  Bugfixes:
+    - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 13.04.2024
   Changes:
