@@ -567,9 +567,9 @@ local function track_statistics(size, results)
       end
     end
 
-    -- The legendary iron gear only exists while the Helvetica process in ongoing.
+    -- The legendary iron gear only exists while the Helvetica process is ongoing.
     -- This timer will not include the time spent waiting for the legendary iron gear to be crafted
-    -- but will include the time building the cube again
+    -- but will include the time building the cube again.
     if item == legendary_iron_gear and not cube_remote.helvetica_started then
       cube_remote.helvetica_started = game.tick
     elseif cube_remote.helvetica_started and item == cube_ultradense then
