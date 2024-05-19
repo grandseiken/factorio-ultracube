@@ -373,6 +373,7 @@ local function better_victory_screen_statistics()
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local cube_utilisation = victory_statistics.cube_working_samples /
       (victory_statistics.cube_working_samples + victory_statistics.cube_idle_samples)
+  local fastest_helvetica = victory_statistics.fastest_helvetica
   local production = force.item_production_statistics
   local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
@@ -387,7 +388,7 @@ local function better_victory_screen_statistics()
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
     ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
     ["cubes-reconstructed"]            = {order = "c", value = cubes_reconstructed},
-    ["cube-helvetica-scenario"]        = {order = "d", value = victory_statistics.fastest_helvetica or 60, unit = "time", ignore = victory_statistics.fastest_helvetica == nil},
+    ["cube-helvetica-scenario"]        = {order = "d", value = fastest_helvetica or 60, unit = "time", ignore = fastest_helvetica == nil},
     ["cubes-consumed"]                 = {order = "e", value = cubes_consumed},
     ["cubes-consumed-dormant"]         = {order = "f", value = cubes_consumed_dormant},
     ["cubes-consumed-phantom"]         = {order = "g", value = cubes_consumed_phantom},
