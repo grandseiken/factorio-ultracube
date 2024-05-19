@@ -7,6 +7,8 @@ Date: ??.??.2024
   Bugfixes:
     - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
     - Fixed some compatibility issues with other mods involving icons.
+  Modding:
+    - Added an experimental remote API which allows another mod to temporarily assume responsibility for tracking a cube, which should allow for compatibility with Renai transportation or similar mods.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 13.04.2024

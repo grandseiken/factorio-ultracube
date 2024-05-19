@@ -91,8 +91,11 @@ local function cube_alert(size, results, override)
       player.remove_alert(alert_type_custom_t)
       for i = 1, size do
         local result = results[i]
-        custom_alert.name = result.item
-        player.add_custom_alert(result.entity, custom_alert, custom_alert_text, true)
+        local entity = result.entity
+        if entity and entity.valid then
+          custom_alert.name = result.item
+          player.add_custom_alert(result.entity, custom_alert, custom_alert_text, true)
+        end
       end
     else
       for icon, _ in pairs(alert_icons) do
@@ -161,8 +164,11 @@ local function cube_boom(size, results)
   for i = 1, size do
     local result = results[i]
     local entity = result.entity
-    if entity then
-      entity.create_build_effect_smoke()
+    if not result.hidden then
+      if entity and entity.valid then
+        entity.create_build_effect_smoke()
+      end
+
       if result.item == cube_ultradense_phantom or result.item == cube_dormant_phantom then
         local positions = result.positions
         if positions then
@@ -222,7 +228,7 @@ local function cube_spark(size, results)
   for i = 1, size do
     local result = results[i]
     local entity = result.entity
-    if entity and result.height >= 0 then
+    if not result.hidden and result.height >= 0 then
       if result.item == cube_ultradense_phantom then
         local puff = result.height > 0 and puff_high or puff_low
         local positions = result.positions
@@ -361,7 +367,7 @@ local function cube_vehicle_mod(size, results)
   for i = 1, size do
     local result = results[i]
     local entity = result.entity
-    if entity then
+    if entity and entity.valid then
       local item = result.item
       local type = entity.type
       local name = entity.name
