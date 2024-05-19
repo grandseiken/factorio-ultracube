@@ -403,10 +403,13 @@ local function better_victory_screen_statistics()
   local matter_created = production.get_input_count("cube-basic-matter-unit")
 
   stats["ultracube"] = {order = "a", stats = {
-    ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
-    ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
+    ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube,
+                                          unit = "distance"},
+    ["cube-utilisation"]               = {order = "b", value = cube_utilisation,
+                                          unit = "percentage", has_tooltip = true},
     ["cubes-reconstructed"]            = {order = "c", value = cubes_reconstructed},
-    ["cube-helvetica-scenario"]        = {order = "d", value = fastest_helvetica or 60, unit = "time", ignore = fastest_helvetica == nil},
+    ["cube-fastest-helvetica"]         = {order = "d", value = fastest_helvetica or 60,
+                                          unit = "time", ignore = fastest_helvetica == nil},
     ["cubes-consumed"]                 = {order = "e", value = cubes_consumed},
     ["cubes-consumed-dormant"]         = {order = "f", value = cubes_consumed_dormant},
     ["cubes-consumed-phantom"]         = {order = "g", value = cubes_consumed_phantom},
