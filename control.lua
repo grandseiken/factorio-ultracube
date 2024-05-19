@@ -391,6 +391,7 @@ local function better_victory_screen_statistics()
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local cube_utilisation = victory_statistics.cube_working_samples /
       (victory_statistics.cube_working_samples + victory_statistics.cube_idle_samples)
+  local fastest_helvetica = victory_statistics.fastest_helvetica
   local production = force.item_production_statistics
   local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
@@ -404,13 +405,14 @@ local function better_victory_screen_statistics()
   stats["ultracube"] = {order = "a", stats = {
     ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
     ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
-    ["cubes-consumed"]                 = {order = "c", value = cubes_consumed},
-    ["cubes-consumed-dormant"]         = {order = "d", value = cubes_consumed_dormant},
-    ["cubes-consumed-phantom"]         = {order = "e", value = cubes_consumed_phantom},
-    ["cubes-consumed-phantom-dormant"] = {order = "f", value = cubes_consumed_phantom_dormant},
-    ["cubes-reconstructed"]            = {order = "g", value = cubes_reconstructed},
-    ["cubes-consumed-total"]           = {order = "h", value = cubes_consumed_total},
-    ["matter-created"]                 = {order = "i", value = matter_created},
+    ["cubes-reconstructed"]            = {order = "c", value = cubes_reconstructed},
+    ["cube-helvetica-scenario"]        = {order = "d", value = fastest_helvetica or 60, unit = "time", ignore = fastest_helvetica == nil},
+    ["cubes-consumed"]                 = {order = "e", value = cubes_consumed},
+    ["cubes-consumed-dormant"]         = {order = "f", value = cubes_consumed_dormant},
+    ["cubes-consumed-phantom"]         = {order = "g", value = cubes_consumed_phantom},
+    ["cubes-consumed-phantom-dormant"] = {order = "h", value = cubes_consumed_phantom_dormant},
+    ["cubes-consumed-total"]           = {order = "k", value = cubes_consumed_total},
+    ["matter-created"]                 = {order = "j", value = matter_created},
   }}
 
   -- Ignore-flag some military-oriented stats we don't care about.

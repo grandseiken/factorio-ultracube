@@ -5,6 +5,7 @@ Date: ??.??.2024
     - Added a little more smoke to cube booms.
     - Added optional compatibility with Fuel Train Stop.
     - Added optional compatibility with Quick Adjustable Inserters.
+    - Added fastest cube reconstruction using the Helvetica scenario to the Better Victory Screen.
   Bugfixes:
     - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
     - Fixed some compatibility issues with other mods involving icons.
