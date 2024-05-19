@@ -371,6 +371,7 @@ local function remote_cube_item_prototypes()
   for item, _ in pairs(cube_management.cube_info) do
     t[#t + 1] = item
   end
+  return t
 end
 
 local function remote_irreplaceable_item_prototypes()
@@ -378,6 +379,7 @@ local function remote_irreplaceable_item_prototypes()
   for item, _ in pairs(cube_management.cube_drop) do
     t[#t + 1] = item
   end
+  return t
 end
 
 -- Better victory screen support.
@@ -457,15 +459,17 @@ remote.add_interface("Ultracube", {
   -- It can be used as follows:
   --
   -- (1) Remove exactly one item from the game (e.g. an inventory), and then call
-  --     token_id = create_ownership_token(item_name, timeout, data), where the parameters are:
-  --     - item_name: The item prototype name.
-  --     - timeout:   A timeout (in number of ticks) after which the token will expire and the item
-  --                  will automatically be placed backed in the world at its last known position.
-  --     - data:      A table containing parameters (see below).
-  --     The function returns an integer token ID which must be stored.
+  --     token_id = create_ownership_token(item_name, timeout_ticks, data), where the parameters
+  --     are:
+  --     - item_name:     The item prototype name.
+  --     - timeout_ticks: A timeout (in number of ticks) after which the token will expire and the
+  --                      item will automatically be placed back into the world at its last known
+  --                      position.
+  --     - data:          A table containing parameters (see below).
+  --     The function returns an integer token ID which should be stored.
   --
-  -- (2) If necessary, call update_ownership_token(token_id, timeout, data) periodically to refresh
-  --     the timeout and/or update parameters (again, see below).
+  -- (2) If necessary, call update_ownership_token(token_id, timeout_ticks, data) periodically to
+  --     refresh the timeout and/or update parameters (again, see below).
   --
   -- (3) Call release_ownership_token(token_id) to release the token. This function returns:
   --     - nil if the token has already expired due to timeout.
@@ -475,9 +479,13 @@ remote.add_interface("Ultracube", {
   --     item with the given prototype name, and call hint_entity(entity) for the entity into which
   --     it was inserted.
   --
+  -- While a token for a given item is held, Ultracube behaves as if the item existed in the
+  -- location described, drawing explosion effects (if necessary and not hidden), and treating
+  -- a single instance of that item as "not missing" for the purposes of reporting cube-lost errors.
+  --
   -- The timeout feature is to protect against irrecoverable cube loss in case of bugs, or in case
   -- the player uninstalls your mod while it still holds a token. Try to keep timeouts to reasonable
-  -- (as small as practical) values.
+  -- (as small as practical) values. They will be limited to a maximum of 60 seconds anyway.
   --
   -- The data tables passed to functions (1) and (2) may have any of the following fields:
   -- - hidden:    if true, cube explosion effects won't be created (and most other fields don't do
@@ -491,13 +499,10 @@ remote.add_interface("Ultracube", {
   --              dynamic).
   -- Position and velocity should be given as tables with 'x' and 'y' fields.
   --
-  -- While a token for a given item is held, Ultracube behaves as if the item existed in the
-  -- location described, drawing explosion effects (if necessary and not hidden) and not considering
-  -- it missing for the purposes of reporting errors.
-  --
-  -- Note that the functions can be used with any item, not just special cube items. For example,
+  -- Note that this system may be used with any item, not just special cube items. For example,
   -- you can use this with items in remote_irreplaceable_item_prototypes() to make sure they don't
-  -- go missing, even though they don't have explosion effects.
+  -- go missing, even though the special integration / explosions / etc only apply to items in
+  -- cube_item_prototypes().
   ["create_ownership_token"] = remote_ownership.create_token,
   ["update_ownership_token"] = remote_ownership.update_token,
   ["release_ownership_token"] = remote_ownership.release_token,

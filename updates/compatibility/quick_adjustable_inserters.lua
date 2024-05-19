@@ -1,21 +1,45 @@
 if mods["quick-adjustable-inserters"] then
-    local techNearInserters = data.raw.technology["near-inserters"]
-    techNearInserters.unit = tech_cost_unit("0", 40)
-    techNearInserters.prerequisites = {
-        "cube-inserters",
+  local tech = data.raw.technology["near-inserters"]
+  if tech then
+    tech.unit = tech_cost_unit("0", 40)
+    tech.prerequisites = {
+      "cube-inserters",
     }
-    
-    local techMoreInserters1 = data.raw.technology["more-inserters-1"]
-    techMoreInserters1.unit = tech_cost_unit("0", 120)
-    techMoreInserters1.prerequisites = {
-        "near-inserters",
-        "cube-electronics",
+  end
+
+  tech = data.raw.technology["more-inserters-1"]
+  if tech then
+    tech.unit = tech_cost_unit("0", 120)
+    tech.prerequisites = {
+      "near-inserters",
+      "cube-electronics",
     }
-    
-    local techMoreInserters2 = data.raw.technology["more-inserters-2"]
-    techMoreInserters2.unit = tech_cost_unit("1a", 240)
-    techMoreInserters2.prerequisites = {
-        "more-inserters-1",
-        "cube-advanced-electronics",
+  end
+
+  tech = data.raw.technology["more-inserters-2"]
+  if tech then
+    tech.unit = tech_cost_unit("1a", 240)
+    tech.prerequisites = {
+      "more-inserters-1",
+      "cube-advanced-electronics",
     }
+  end
+
+  tech = data.raw.technology["long-inserters-1"]
+  if tech then
+    tech.unit = tech_cost_unit("2", 240)
+    tech.prerequisites = {
+      "near-inserters",
+      "cube-abstract-interrogation-card",
+    }
+  end
+
+  tech = data.raw.technology["long-inserters-2"]
+  if tech then
+    tech.unit = tech_cost_unit("3", 240)
+    tech.prerequisites = {
+      "long-inserters-1",
+      "cube-deep-introspection-card",
+    }
+  end
 end

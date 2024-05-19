@@ -1,5 +1,6 @@
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local remote_ownership = {}
+local max_timeout_ticks = 60 * 60
 
 local function get_ownership_table()
   local t = global.remote_ownership_table
@@ -12,7 +13,7 @@ local function get_ownership_table()
   return t, global.remote_ownership_free_list
 end
 
-function remote_ownership.create_token(item, timeout, data)
+function remote_ownership.create_token(item, timeout_ticks, data)
   local ownership_table, free_list = get_ownership_table()
   local token_id, _ = next(free_list)
   if token_id then
@@ -29,12 +30,12 @@ function remote_ownership.create_token(item, timeout, data)
     velocity = data.velocity,
     height = data.height,
     hidden = data.hidden,
-    timeout = timeout or 1,
+    timeout = math.min(timeout_ticks or 1, max_timeout_ticks),
   }
   return token_id
 end
 
-function remote_ownership.update_token(token_id, timeout, update_data)
+function remote_ownership.update_token(token_id, timeout_ticks, update_data)
   if token_id == 0 then
     return
   end
@@ -48,7 +49,7 @@ function remote_ownership.update_token(token_id, timeout, update_data)
   data.velocity = update_data.velocity or data.velocity
   data.height = update_data.height or data.height
   data.hidden = update_data.hidden ~= nil and update_data.hidden or data.hidden
-  data.timeout = timeout or 1
+  data.timeout = math.min(timeout_ticks or 1, max_timeout_ticks)
 end
 
 function remote_ownership.release_token(token_id)
