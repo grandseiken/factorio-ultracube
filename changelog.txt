@@ -2,7 +2,15 @@
 Version: 0.5.5
 Date: ??.??.2024
   Changes:
-    - Add fastest cube reconstruction using the Helvetica scenario to the Better Victory Screen (#28).
+    - Added a little more smoke to cube booms.
+    - Added optional compatibility with Fuel Train Stop.
+    - Added optional compatibility with Quick Adjustable Inserters.
+    - Added fastest cube reconstruction using the Helvetica scenario to the Better Victory Screen.
+  Bugfixes:
+    - Fixed a script crash if a player left a multiplayer game while manually crafting using the cube.
+    - Fixed some compatibility issues with other mods involving icons.
+  Modding:
+    - Added an experimental remote API which allows another mod to temporarily assume responsibility for tracking a cube, which should allow for compatibility with Renai transportation or similar mods.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 13.04.2024

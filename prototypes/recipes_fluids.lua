@@ -440,6 +440,7 @@ for _, fluid in ipairs(voidable_fluids) do
     icon = prototype.icon,
     icon_size = prototype.icon_size,
     icon_mipmaps = prototype.icon_mipmaps,
+    icons = prototype.icons,
     ingredients = {{type = "fluid", name = fluid, amount = 100}},
     results = {},
     energy_required = 4,

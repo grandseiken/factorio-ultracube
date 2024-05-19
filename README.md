@@ -114,7 +114,8 @@ The following mods have been specifically adapted to work with Ultracube:
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Advanced Fluid Handling](https://mods.factorio.com/mod/underground-pipe-pack) | not entirely compatible with Flow Control |
-| [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | Adds additional information to the victory screen, for example the effective `Cube utilization` |
+| [Automatic Fuel Train Stop](https://mods.factorio.com/mod/FuelTrainStop) | |
+| [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | Adds additional information to the victory screen, for example the effective cube utilisation |
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
 | [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
@@ -128,6 +129,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
+| [Quick Adjustable Inserters](https://mods.factorio.com/mod/quick-adjustable-inserters) | |
 | [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported. Note: be careful, it's currently possible to destroy the cube by overwriting a machine's recipe with a blueprint deployer when it holds the cube in some cases |
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
 | [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
