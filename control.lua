@@ -401,6 +401,24 @@ local function better_victory_screen_statistics()
   return {by_force = {[force.name] = stats}}
 end
 
+local function jetpack_fuels()
+  -- Modded fuel thrust values are capped at 1.1
+  return {
+    -- It would be fun to have the cubes as jetpack fuel, but the jetpack would use the entire 1 GJ
+    -- of energy before switching to a different fuel, even after the cube leaves the player's inventory
+    -- The problem above might be fixable with extra scripting [there's a remote call that
+    -- may help, but I haven't tested yet], but the thrust cap also makes this much less appealling
+    -- Softlocking wouldn't be an issue though, since the jetpack would put the
+    -- "burnt result" in the inventory immediately when used
+    --["cube-ultradense-utility-cube"] = 4
+    --["cube-ultradense-combustion-cube"] = 4
+
+    ["cube-condensed-fuel"] = 1.2, --equivalent to rocket fuel, but will be capped to 1.1
+    ["cube-vehicle-fuel"] = 1,
+    ["cube-nuclear-fuel"] = 1.1
+  }
+end
+
 remote.add_interface("Ultracube", {
   -- Call hint_entity if you have teleported or moved an item via script (unless you are certain
   -- it's not a cube). Pass the entity into which the item was placed.
