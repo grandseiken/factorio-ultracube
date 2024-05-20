@@ -463,10 +463,11 @@ remote.add_interface("Ultracube", {
   --
   -- It can be used as follows:
   --
-  -- (1) Remove exactly one item from the game (e.g. an inventory), and then call
-  --     token_id = create_ownership_token(item_name, timeout_ticks, data), where the parameters
+  -- (1) Remove exactly N items from the game (e.g. an inventory), and then call
+  --     token_id = create_ownership_token(item_name, N, timeout_ticks, data), where the parameters
   --     are:
   --     - item_name:     The item prototype name.
+  --     - N:             The count of how many items you removed.
   --     - timeout_ticks: A timeout (in number of ticks) after which the token will expire and the
   --                      item will automatically be placed back into the world at its last known
   --                      position.
@@ -478,7 +479,8 @@ remote.add_interface("Ultracube", {
   --
   -- (3) Call release_ownership_token(token_id) to release the token. This function returns:
   --     - nil if the token has already expired due to timeout.
-  --     - otherwise, the item prototype name originally passed to create_ownership_token().
+  --     - otherwise, a table containing fields 'name' and 'count', which are the item prototype
+  --       name and count originally passed to create_ownership_token().
   --     In the former case, your mod should _not_ attempt to reinsert the item in the world (it has
   --     already been recreated by the failsafe). In the latter case, you must recreate exactly one
   --     item with the given prototype name, and call hint_entity(entity) for the entity into which
@@ -505,8 +507,8 @@ remote.add_interface("Ultracube", {
   -- Position and velocity should be given as tables with 'x' and 'y' fields.
   --
   -- Note that this system may be used with any item, not just special cube items. For example,
-  -- you can use this with items in remote_irreplaceable_item_prototypes() to make sure they don't
-  -- go missing, even though the special integration / explosions / etc only apply to items in
+  -- you can use this with items in irreplaceable_item_prototypes() to make sure they don't go
+  -- missing, even though the special integration / explosions / etc only apply to items in
   -- cube_item_prototypes().
   ["create_ownership_token"] = remote_ownership.create_token,
   ["update_ownership_token"] = remote_ownership.update_token,

@@ -13,7 +13,7 @@ local function get_ownership_table()
   return t, global.remote_ownership_free_list
 end
 
-function remote_ownership.create_token(item, timeout_ticks, data)
+function remote_ownership.create_token(item, count, timeout_ticks, data)
   local ownership_table, free_list = get_ownership_table()
   local token_id, _ = next(free_list)
   if token_id then
@@ -25,6 +25,7 @@ function remote_ownership.create_token(item, timeout_ticks, data)
 
   ownership_table[token_id] = {
     item = item,
+    count = count or 1,
     surface = data.surface,
     position = data.position,
     velocity = data.velocity,
@@ -65,9 +66,10 @@ function remote_ownership.release_token(token_id)
     return nil
   end
   local item = data.item
+  local count = data.count
   ownership_table[token_id] = nil
   free_list[token_id] = true
-  return item
+  return {name = item, count = count}
 end
 
 function remote_ownership.tick()
@@ -82,13 +84,13 @@ function remote_ownership.tick()
     if timeout > 0 then
       data.timeout = timeout
     else
-      local item = data.item
       local surface = data.surface
       if not surface or not surface.valid then
         surface = game.surfaces[1]
       end
       local position = data.position or {x = 0, y = 0}
-      local spill = surface.spill_item_stack(position, item, nil, nil, false)
+      local spill = surface.spill_item_stack(
+          position, {name = data.item, count = data.count}, nil, nil, false)
       for _, e in ipairs(spill) do
         cube_search.hint_entity(e)
       end

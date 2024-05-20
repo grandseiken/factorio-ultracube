@@ -702,7 +702,7 @@ local function cube_search_remote(ownership_table)
   for _, data in pairs(ownership_table) do
     local item = data.item
     if cube_info[item] then
-      if add_result(item, 1, nil, data) then return true end
+      if add_result(item, data.count, nil, data) then return true end
     end
   end
 end
