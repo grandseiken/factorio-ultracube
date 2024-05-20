@@ -190,16 +190,14 @@ end
 function cube_management.drop_before_leaving(player_index)
   local player = game.get_player(player_index)
   local recipes = cube_management.recipes()
-  if player.crafting_queue then
-    local keep_going = true
-    while keep_going do
-      keep_going = false
-      for _, craft in ipairs(player.crafting_queue) do
-        if recipes[craft.recipe] then
-          player.cancel_crafting {index = craft.index, count = craft.count}
-          keep_going = true
-          break
-        end
+  local keep_going = true
+  while keep_going and player.crafting_queue do
+    keep_going = false
+    for _, craft in ipairs(player.crafting_queue) do
+      if recipes[craft.recipe] then
+        player.cancel_crafting {index = craft.index, count = craft.count}
+        keep_going = true
+        break
       end
     end
   end

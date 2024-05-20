@@ -84,7 +84,7 @@ local function clear_result_set()
   end
 end
 
-local function add_result(item, count, entity)
+local function add_result(item, count, entity, remote)
   if entity and result_set.exclude[entity.unit_number] then
     return false
   end
@@ -99,6 +99,7 @@ local function add_result(item, count, entity)
   entry.item = item
   entry.count = count
   entry.entity = entity
+  entry.remote = remote
   if entity then
     entry.unit_number = entity.unit_number
   end
@@ -696,6 +697,16 @@ local function cube_search_graph(last_entities_size, last_entities)
   return false
 end
 
+local function cube_search_remote(ownership_table)
+  local cube_info = cube_management.cube_info
+  for _, data in pairs(ownership_table) do
+    local item = data.item
+    if cube_info[item] then
+      if add_result(item, data.count, nil, data) then return true end
+    end
+  end
+end
+
 local direction_map = {}
 direction_map[defines.direction.north] = {
   x = 0,
@@ -715,6 +726,20 @@ direction_map[defines.direction.west] = {
 }
 
 local function fill_result(result)
+  local remote = result.remote
+  if remote then
+    local surface = remote.surface
+    if not surface or not surface.valid then
+      surface = game.surfaces[1]
+    end
+    result.surface = surface
+    result.position = remote.position or {x = 0, y = 0}
+    result.positions = nil
+    result.height = remote.height or 0
+    result.hidden = remote.hidden
+    result.velocity = remote.velocity
+    return
+  end
   local entity = result.entity
   local entity_type = entity.type
 
@@ -722,6 +747,7 @@ local function fill_result(result)
   result.position = entity.position
   result.positions = nil
   result.height = 0
+  result.hidden = false
   result.velocity = nil
   if entity_type == inserter_t then
     result.position = entity.held_stack_position
@@ -815,9 +841,10 @@ local function process_results()
     local result = result_set.entries[i]
     local entity = result.entity
     local e = cube_search_data.last_entities[i]
+
+    fill_result(result)
     e.entity = entity
     if entity then
-      fill_result(result)
       e.position = entity.position
       e.surface_index = entity.surface_index
 
@@ -895,7 +922,16 @@ local function cube_search_update(tick)
   end
   local last_entities = cube_search_data.last_entities
   local last_entities_size = cube_search_data.last_entities_size
-  local done = cube_search_graph(last_entities_size, last_entities)
+
+  local done = false
+  local ownership_table = global.remote_ownership_table
+  if ownership_table then
+    done = cube_search_remote(ownership_table)
+  end
+
+  if not done then
+    done = cube_search_graph(last_entities_size, last_entities)
+  end
 
   if not done then
     done = cube_search_local(last_entities_size, last_entities)
