@@ -4,6 +4,7 @@ Date: ??.??.2024
   Changes:
     - Added a little more smoke to cube booms.
     - Added optional compatibility with Fuel Train Stop.
+    - Added optional compatibility with Grappling Gun.
     - Added optional compatibility with Quick Adjustable Inserters.
     - Added Helvetica scenario record time to the Better Victory Screen.
   Bugfixes:
