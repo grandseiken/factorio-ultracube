@@ -443,6 +443,6 @@ remote.add_interface("Ultracube", {
   -- Interfaces for compatibility with certain mods.
   ["better-victory-screen-statistics"] = better_victory_screen_statistics,
   ["milestones_presets"] = milestones,
-  ["jetpack-fuels"] = jetpack_fuels,
+  ["jetpack_fuels"] = jetpack_fuels,
 })
 
