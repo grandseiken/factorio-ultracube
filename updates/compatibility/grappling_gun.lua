@@ -7,6 +7,9 @@ if mods["grappling-gun"] then
         {"pipe", 5}
     }
     gun_recipe.category = "cube-fabricator-handcraft"
+    local gun_item = data.raw.gun["grappling-gun"]
+    gun_item.order = "cube-" .. gun_item.order
+    gun_item.subgroup = "cube-utility"
 
     local ammo_recipe = data.raw.recipe["grappling-gun-ammo"]
     --original recipe: 4 iron stick, 2 coal
@@ -16,6 +19,9 @@ if mods["grappling-gun"] then
         {"cube-rare-metals", 1}
     }
     ammo_recipe.category = "cube-fabricator-handcraft"
+    local ammo_item = data.raw.ammo["grappling-gun-ammo"]
+    ammo_item.order = "cube-" .. gun_item.order
+    ammo_item.subgroup = "cube-utility"
 
     add_mystery_recipe(2, "grappling-gun", "cube-basic-motor-unit")
     add_mystery_recipe(1, "grappling-gun-ammo", "cube-basic-matter-unit")
