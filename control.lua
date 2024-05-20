@@ -367,19 +367,11 @@ local function remote_cube_info()
 end
 
 local function remote_cube_item_prototypes()
-  local t = {}
-  for item, _ in pairs(cube_management.cube_info) do
-    t[#t + 1] = item
-  end
-  return t
+  return cube_management.cube_info
 end
 
 local function remote_irreplaceable_item_prototypes()
-  local t = {}
-  for item, _ in pairs(cube_management.cube_drop) do
-    t[#t + 1] = item
-  end
-  return t
+  return cube_management.cube_drop
 end
 
 -- Better victory screen support.
@@ -445,11 +437,11 @@ remote.add_interface("Ultracube", {
   -- travelled over 6 ticks. Further, cube position within a belt tile is not tracked, so
   -- distance_delta will be 0 most of the time when it is on a belt and 1 when it crosses a tile.
   ["cube_info"] = remote_cube_info,
-  -- cube_item_prototypes() returns a list of item prototype names which Ultracube must keep track
+  -- cube_item_prototypes() returns a set of item prototype names which Ultracube must keep track
   -- of at all times, i.e. the ones that must be handled by hint_entity() or the token system below
   -- if messed with by other mods.
   ["cube_item_prototypes"] = remote_cube_item_prototypes,
-  -- irreplaceable_item_prototypes() returns a list of item prototype names which must never be
+  -- irreplaceable_item_prototypes() returns a set of item prototype names which must never be
   -- destroyed by another mod (or else the player will be unable to progress). This includes all
   -- items returned by cube_item_prototypes(), as well as all intermediates involved in the
   -- Helvetica scenario chain.
