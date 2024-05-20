@@ -120,6 +120,10 @@ remote.call("Ultracube", "hint_entity", some_lua_entity)
 
 This will happen automatically when triggering `script_raised_teleported` and so on, so you don't need to do it in that case.
 
+### Manually taking ownership of cubes temporarily
+
+If your mod does something more advanced with items which means they no longer physically exist in the world (or at least don't exist anywhere Ultracube can) find, you might be able to use the ownership token system in Ultracube's remote API. This allows a mod to remove an item from the game temporarily while promising to Ultracube that it's still keeping track of it (and will put it back somewhere later). This API is a little experimental still, but is documented in Ultracube's `control.lua`.
+
 ### Creating duplicated cubes, for example in lab surface mods
 
 This isn't well supported yet and needs further investigation.

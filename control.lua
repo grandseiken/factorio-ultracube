@@ -13,10 +13,11 @@ local cubecam = require("__Ultracube__/scripts/cubecam")
 local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 local linked_entities = require("__Ultracube__/scripts/linked_entities")
+local milestones = require("__Ultracube__/scripts/milestones")
+local remote_ownership = require("__Ultracube__/scripts/remote_ownership")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local teleport = require("__Ultracube__/scripts/teleport")
 local transition = require("__Ultracube__/scripts/transition")
-local milestones = require("__Ultracube__/scripts/milestones")
 local util = require("__core__/lualib/util.lua")
 
 local function create_initial_cube(player)
@@ -315,6 +316,7 @@ script.on_event(
 script.on_event(defines.events.on_tick,
   function(e)
     local tick = e.tick
+    remote_ownership.tick(tick)
     cube_fx.tick(tick)
     transition.tick(tick)
     linked_entities.tick(tick)
@@ -364,6 +366,14 @@ local function remote_cube_info()
   return util.table.deepcopy(global.cube_remote)
 end
 
+local function remote_cube_item_prototypes()
+  return cube_management.cube_info
+end
+
+local function remote_irreplaceable_item_prototypes()
+  return cube_management.cube_drop
+end
+
 -- Better victory screen support.
 local function better_victory_screen_statistics()
   local force = game.forces["player"]
@@ -373,6 +383,7 @@ local function better_victory_screen_statistics()
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local cube_utilisation = victory_statistics.cube_working_samples /
       (victory_statistics.cube_working_samples + victory_statistics.cube_idle_samples)
+  local fastest_helvetica = victory_statistics.fastest_helvetica
   local production = force.item_production_statistics
   local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
@@ -384,15 +395,19 @@ local function better_victory_screen_statistics()
   local matter_created = production.get_input_count("cube-basic-matter-unit")
 
   stats["ultracube"] = {order = "a", stats = {
-    ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube, unit = "distance"},
-    ["cube-utilisation"]               = {order = "b", value = cube_utilisation, unit = "percentage", has_tooltip=true},
-    ["cubes-consumed"]                 = {order = "c", value = cubes_consumed},
-    ["cubes-consumed-dormant"]         = {order = "d", value = cubes_consumed_dormant},
-    ["cubes-consumed-phantom"]         = {order = "e", value = cubes_consumed_phantom},
-    ["cubes-consumed-phantom-dormant"] = {order = "f", value = cubes_consumed_phantom_dormant},
-    ["cubes-reconstructed"]            = {order = "g", value = cubes_reconstructed},
-    ["cubes-consumed-total"]           = {order = "h", value = cubes_consumed_total},
-    ["matter-created"]                 = {order = "i", value = matter_created},
+    ["cube-distance-travelled"]        = {order = "a", value = distance_travelled_by_cube,
+                                          unit = "distance"},
+    ["cube-utilisation"]               = {order = "b", value = cube_utilisation,
+                                          unit = "percentage", has_tooltip = true},
+    ["cubes-reconstructed"]            = {order = "c", value = cubes_reconstructed},
+    ["cube-fastest-helvetica"]         = {order = "d", value = fastest_helvetica or 60,
+                                          unit = "time", ignore = fastest_helvetica == nil},
+    ["cubes-consumed"]                 = {order = "e", value = cubes_consumed},
+    ["cubes-consumed-dormant"]         = {order = "f", value = cubes_consumed_dormant},
+    ["cubes-consumed-phantom"]         = {order = "g", value = cubes_consumed_phantom},
+    ["cubes-consumed-phantom-dormant"] = {order = "h", value = cubes_consumed_phantom_dormant},
+    ["cubes-consumed-total"]           = {order = "k", value = cubes_consumed_total},
+    ["matter-created"]                 = {order = "j", value = matter_created},
   }}
 
   -- Ignore-flag some military-oriented stats we don't care about.
@@ -402,10 +417,10 @@ local function better_victory_screen_statistics()
 end
 
 remote.add_interface("Ultracube", {
-  -- Call hint_entity if you have teleported or moved an item via script (unless you are certain
-  -- it's not a cube). Pass the entity into which the item was placed.
-  ["hint_entity"] = remote_hint_entity,
-  -- Call cube_info to get a table with the following fields:
+  -- Interfaces for compatibility with certain mods.
+  ["better-victory-screen-statistics"] = better_victory_screen_statistics,
+  ["milestones_presets"] = milestones,
+  -- Call cube_info() to get a table with the following fields:
   --
   -- - position:       Current position of the cube. Nil if it could not be found, or there is
   --                   currently more than one.
@@ -422,8 +437,73 @@ remote.add_interface("Ultracube", {
   -- travelled over 6 ticks. Further, cube position within a belt tile is not tracked, so
   -- distance_delta will be 0 most of the time when it is on a belt and 1 when it crosses a tile.
   ["cube_info"] = remote_cube_info,
-  -- Interfaces for compatibility with certain mods.
-  ["better-victory-screen-statistics"] = better_victory_screen_statistics,
-  ["milestones_presets"] = milestones,
+  -- cube_item_prototypes() returns a set of item prototype names which Ultracube must keep track
+  -- of at all times, i.e. the ones that must be handled by hint_entity() or the token system below
+  -- if messed with by other mods.
+  ["cube_item_prototypes"] = remote_cube_item_prototypes,
+  -- irreplaceable_item_prototypes() returns a set of item prototype names which must never be
+  -- destroyed by another mod (or else the player will be unable to progress). This includes all
+  -- items returned by cube_item_prototypes(), as well as all intermediates involved in the
+  -- Helvetica scenario chain.
+  ["irreplaceable_item_prototypes"] = remote_irreplaceable_item_prototypes,
+  -- Call hint_entity(entity) if you have teleported or moved an item via script (unless you are
+  -- certain it is not a cube). Pass the entity into which the item was placed.
+  ["hint_entity"] = remote_hint_entity,
+  -- The following functions provide a more sophisticated alternative to hint_entity() and allow
+  -- another mod to temporarily assume responsibility for a cube item which no longer physically
+  -- exists in the world.
+  --
+  -- It can be used as follows:
+  --
+  -- (1) Remove exactly N items from the game (e.g. an inventory), and then call
+  --     token_id = create_ownership_token(item_name, N, timeout_ticks, data), where the parameters
+  --     are:
+  --     - item_name:     The item prototype name.
+  --     - N:             The count of how many items you removed.
+  --     - timeout_ticks: A timeout (in number of ticks) after which the token will expire and the
+  --                      item will automatically be placed back into the world at its last known
+  --                      position.
+  --     - data:          A table containing parameters (see below).
+  --     The function returns an integer token ID which should be stored.
+  --
+  -- (2) If necessary, call update_ownership_token(token_id, timeout_ticks, data) periodically to
+  --     refresh the timeout and/or update parameters (again, see below).
+  --
+  -- (3) Call release_ownership_token(token_id) to release the token. This function returns:
+  --     - nil if the token has already expired due to timeout.
+  --     - otherwise, a table containing fields 'name' and 'count', which are the item prototype
+  --       name and count originally passed to create_ownership_token().
+  --     In the former case, your mod should _not_ attempt to reinsert the item in the world (it has
+  --     already been recreated by the failsafe). In the latter case, you must recreate exactly one
+  --     item with the given prototype name, and call hint_entity(entity) for the entity into which
+  --     it was inserted.
+  --
+  -- While a token for a given item is held, Ultracube behaves as if the item existed in the
+  -- location described, drawing explosion effects (if necessary and not hidden), and treating
+  -- a single instance of that item as "not missing" for the purposes of reporting cube-lost errors.
+  --
+  -- The timeout feature is to protect against irrecoverable cube loss in case of bugs, or in case
+  -- the player uninstalls your mod while it still holds a token. Try to keep timeouts to reasonable
+  -- (as small as practical) values. They will be limited to a maximum of 60 seconds anyway.
+  --
+  -- The data tables passed to functions (1) and (2) may have any of the following fields:
+  -- - hidden:    if true, cube explosion effects won't be created (and most other fields don't do
+  --              much apart from decide where the item will be dropped on timeout).
+  -- - surface:   surface where cube explosion effects should be drawn (defaults to first surface)
+  -- - position:  position where cube explosion effects should be drawn (and location where the item
+  --              will be dropped if the token expires).
+  -- - velocity:  velocity of the item (used to subtly alter some explosion effects).
+  -- - height:    height of the item (used to subtly alter some explosion effects, but the only
+  --              thing that matters is whether this is negative, positive, or zero - it's not fully
+  --              dynamic).
+  -- Position and velocity should be given as tables with 'x' and 'y' fields.
+  --
+  -- Note that this system may be used with any item, not just special cube items. For example,
+  -- you can use this with items in irreplaceable_item_prototypes() to make sure they don't go
+  -- missing, even though the special integration / explosions / etc only apply to items in
+  -- cube_item_prototypes().
+  ["create_ownership_token"] = remote_ownership.create_token,
+  ["update_ownership_token"] = remote_ownership.update_token,
+  ["release_ownership_token"] = remote_ownership.release_token,
 })
 
