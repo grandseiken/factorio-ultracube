@@ -52,6 +52,7 @@ local function on_entity_removed(entity, old_surface, old_position)
 end
 
 local function on_entity_added(entity)
+  cube_fx.added(entity)
   linked_entities.added(entity)
   entity_cache.add(entity)
   entity_combine.created(entity)
