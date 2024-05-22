@@ -736,7 +736,7 @@ local function fill_result(result)
     result.position = remote.position or {x = 0, y = 0}
     result.positions = nil
     result.height = remote.height or 0
-    result.hidden = remote.hidden
+    result.hidden = not remote.position
     result.velocity = remote.velocity
     return
   end

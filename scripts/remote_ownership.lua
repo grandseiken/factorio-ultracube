@@ -27,10 +27,10 @@ function remote_ownership.create_token(item, count, timeout_ticks, data)
     item = item,
     count = count or 1,
     surface = data.surface,
+    spill_position = data.spill_position,
     position = data.position,
     velocity = data.velocity,
     height = data.height,
-    hidden = data.hidden,
     timeout = math.min(timeout_ticks or 1, max_timeout_ticks),
   }
   return token_id
@@ -46,11 +46,13 @@ function remote_ownership.update_token(token_id, timeout_ticks, update_data)
     return
   end
   data.surface = update_data.surface or data.surface
+  data.spill_position = update_data.spill_position or data.spill_position
   data.position = update_data.position or data.position
   data.velocity = update_data.velocity or data.velocity
   data.height = update_data.height or data.height
-  data.hidden = update_data.hidden ~= nil and update_data.hidden or data.hidden
-  data.timeout = math.min(timeout_ticks or 1, max_timeout_ticks)
+  if timeout_ticks then
+    data.timeout = math.min(timeout_ticks or 1, max_timeout_ticks)
+  end
 end
 
 function remote_ownership.release_token(token_id)
@@ -88,7 +90,7 @@ function remote_ownership.tick()
       if not surface or not surface.valid then
         surface = game.surfaces[1]
       end
-      local position = data.position or {x = 0, y = 0}
+      local position = data.spill_position or data.position or {x = 0, y = 0}
       local spill = surface.spill_item_stack(
           position, {name = data.item, count = data.count}, nil, nil, false)
       for _, e in ipairs(spill) do

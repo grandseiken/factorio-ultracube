@@ -467,7 +467,7 @@ remote.add_interface("Ultracube", {
   --     The function returns an integer token ID which should be stored.
   --
   -- (2) If necessary, call update_ownership_token(token_id, timeout_ticks, data) periodically to
-  --     refresh the timeout and/or update parameters (again, see below).
+  --     refresh the timeout and/or update parameters (again, see below). timeout_ticks may be nil.
   --
   -- (3) Call release_ownership_token(token_id) to release the token. This function returns:
   --     - nil if the token has already expired due to timeout.
@@ -487,15 +487,15 @@ remote.add_interface("Ultracube", {
   -- (as small as practical) values. They will be limited to a maximum of 60 seconds anyway.
   --
   -- The data tables passed to functions (1) and (2) may have any of the following fields:
-  -- - hidden:    if true, cube explosion effects won't be created (and most other fields don't do
-  --              much apart from decide where the item will be dropped on timeout).
-  -- - surface:   surface where cube explosion effects should be drawn (defaults to first surface)
-  -- - position:  position where cube explosion effects should be drawn (and location where the item
-  --              will be dropped if the token expires).
-  -- - velocity:  velocity of the item (used to subtly alter some explosion effects).
-  -- - height:    height of the item (used to subtly alter some explosion effects, but the only
-  --              thing that matters is whether this is negative, positive, or zero - it's not fully
-  --              dynamic).
+  -- - surface:        surface where cube explosion effects should be drawn (defaults to first
+  --                   surface).
+  -- - position:       position where cube explosion effects should be drawn. If nil, explosion
+  --                   effects won't be drawn.
+  -- - spill_position: position where the item will be dropped if the token expires.
+  -- - velocity:       velocity of the item (used to subtly alter some explosion effects).
+  -- - height:         height of the item (used to subtly alter some explosion effects, but all that
+  --                   matters is whether this is negative, positive, or zero - it's not fully
+  --                   dynamic).
   -- Position and velocity should be given as tables with 'x' and 'y' fields.
   --
   -- Note that this system may be used with any item, not just special cube items. For example,
