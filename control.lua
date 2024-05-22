@@ -52,7 +52,7 @@ local function on_entity_removed(entity, old_surface, old_position)
 end
 
 local function on_entity_added(entity)
-  cube_fx.added(entity)
+  cube_fx.reset_ultralocomotion_fuel(entity)
   linked_entities.added(entity)
   entity_cache.add(entity)
   entity_combine.created(entity)
@@ -506,5 +506,7 @@ remote.add_interface("Ultracube", {
   ["create_ownership_token"] = remote_ownership.create_token,
   ["update_ownership_token"] = remote_ownership.update_token,
   ["release_ownership_token"] = remote_ownership.release_token,
+  -- Special function for Renai compatibility.
+  ["reset_ultralocomotion_fuel"] = cube_fx.reset_ultralocomotion_fuel,
 })
 

@@ -590,8 +590,7 @@ local function track_statistics(size, results)
   return cube_remote
 end
 
-function cube_fx.added(entity)
-  -- Catch trains spawned by e.g. Renai with ultralocomotion fuel and reset them.
+function cube_fx.reset_ultralocomotion_fuel(entity)
   if entity.unit_number and cube_fuel_vehicle_entity_types[entity.type] and entity.burner and
      entity.burner.currently_burning then
     local fuel = entity.burner.currently_burning.name
