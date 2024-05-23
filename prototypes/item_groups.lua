@@ -182,49 +182,49 @@ data:extend({
     type = "item-subgroup",
     name = "cube-repair",
     group = "cube-tools",
-    order = "a"
+    order = "a",
   },
   {
     type = "item-subgroup",
     name = "cube-utility",
     group = "cube-tools",
-    order = "b"
+    order = "d",
   },
   {
     type = "item-subgroup",
     name = "cube-equipment-power",
     group = "cube-tools",
-    order = "e"
+    order = "e",
   },
   {
     type = "item-subgroup",
     name = "cube-equipment",
     group = "cube-tools",
-    order = "f"
+    order = "f",
   },
   {
     type = "item-subgroup",
     name = "cube-module-intermediates",
     group = "cube-tools",
-    order = "w"
+    order = "w",
   },
   {
     type = "item-subgroup",
     name = "cube-speed-modules",
     group = "cube-tools",
-    order = "x"
+    order = "x",
   },
   {
     type = "item-subgroup",
     name = "cube-efficiency-modules",
     group = "cube-tools",
-    order = "y"
+    order = "y",
   },
   {
     type = "item-subgroup",
     name = "cube-productivity-modules",
     group = "cube-tools",
-    order = "z"
+    order = "z",
   },
   {
     type = "item-subgroup",
