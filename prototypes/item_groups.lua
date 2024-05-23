@@ -186,6 +186,12 @@ data:extend({
   },
   {
     type = "item-subgroup",
+    name = "cube-utility",
+    group = "cube-tools",
+    order = "b"
+  },
+  {
+    type = "item-subgroup",
     name = "cube-equipment-power",
     group = "cube-tools",
     order = "e"

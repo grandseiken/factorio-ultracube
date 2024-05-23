@@ -120,6 +120,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
 | [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
+| [Grappling Gun](https://mods.factorio.com/mod/grappling-gun) | |
 | [Holographic Signs](https://mods.factorio.com/mod/holographic_signs) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some aspects substantially: leave out for a bigger challenge |
 | [Larger Lamps](https://mods.factorio.com/mod/DeadlockLargerLamp) | |
