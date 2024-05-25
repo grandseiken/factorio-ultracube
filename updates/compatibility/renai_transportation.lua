@@ -166,4 +166,95 @@ if mods["RenaiTransportation"] then
 			end
 		end
 	end
+
+	-- Manual recipes/techs
+
+	-- Thrower inserters
+	if (settings.startup["RTThrowersSetting"].value == true) then -- Throwers are enabled
+		--[[ 
+			Since Ultracube has inserters available before electronic circuits/copper cable,
+			I'm opting to replace the normal copper cable cost to convert inserters to throwers with basic matter units 
+		]]
+		local inserter_list = {"fast-inserter", "long-handed-inserter", "filter-inserter", "stack-inserter", "stack-filter-inserter"}
+		for _, inserter_name in ipairs(inserter_list) do
+			data:extend({
+				{
+					type = "recipe",
+					name = "cube-RTThrower-"..inserter_name.."-Recipe",
+					enabled = false,
+					energy_required = 1,
+					ingredients =
+						{
+							{inserter_name, 1},
+							{"cube-basic-matter-unit", 4}
+						},
+					result = "RTThrower-"..inserter_name.."-Item"
+				}
+			})
+		end
+		
+		-- add thrower inserter equivalents to Ultracube inserter tech
+		local effects = data.raw.technology["cube-inserters"].effects
+		effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-fast-inserter-Recipe"}
+		effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-long-handed-inserter-Recipe"}
+		effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-filter-inserter-Recipe"}
+
+		-- Thrower techs
+		data:extend({
+			{ -- Stack thrower inserters, normally is all thrower insterters >= fast inserters, + all modded inserters
+				type = "technology",
+				name = "RTThrowerTime",
+				icon = "__RenaiTransportation__/graphics/tech/ThrowerTech.png",
+				icon_size = 128,
+				effects =
+				{
+					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-inserter-Recipe"},
+					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-filter-inserter-Recipe"}
+				},
+				prerequisites = {"se~no", "cube-stack-inserters"},
+				unit = tech_cost_unit("1b", 50) -- increased to level 1b given this is now just for stack inserters
+				-- original
+				--[[ {
+					count = 50,
+					ingredients =
+					{
+					  {"automation-science-pack", 1},
+					  {"logistic-science-pack", 1}
+					},
+					time = 20
+				} ]]
+			},
+			{ -- Control over thrower inserter distance. This one could've been automated if not for needing a custom RTThrowerTime tech
+				type = "technology",
+				name = "RTFocusedFlinging",
+				icon = "__RenaiTransportation__/graphics/tech/focus.png",
+				icon_size = 128,
+				effects =
+				{
+					{
+						type = "nothing",
+						effect_description = "Thrower Range 1-15 tiles"
+					},
+					{
+						type = "nothing",
+						effect_description = "Thrower Range can be set by this signal",
+						icon = "__RenaiTransportation__/graphics/RangeSignaling.png",
+						icon_size = 64,
+					}
+				},
+				prerequisites = {"RTThrowerTime"},
+				unit = tech_cost_unit("1b", 75) -- Effectively the same cost except with Ultracube science items
+				-- original
+				--[[ {
+					count = 75,
+					ingredients =
+					{
+					  {"automation-science-pack", 1},
+					  {"logistic-science-pack", 1}
+					},
+					time = 30
+				} ]]
+			  }
+		})
+	end
 end
