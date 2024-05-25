@@ -23,7 +23,8 @@
     "!Krastorio2",
     "!burner-fuel-bonus",
     "!factory-levels",
-    "!power-grid-comb"
+    "!power-grid-comb",
+    "?blueprint-shotgun > 0.0.11"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod.\n\nSee the mod page for a complete list of compatible mods."
 }
