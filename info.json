@@ -12,6 +12,7 @@
     "Krastorio2Assets >= 1.2",
     "?aai-signal-transmission",
     "?better-victory-screen >= 0.2.7",
+    "?blueprint-shotgun > 0.0.11",
     "?far-reach",
     "?Flow Control",
     "?Honk",
@@ -23,8 +24,7 @@
     "!Krastorio2",
     "!burner-fuel-bonus",
     "!factory-levels",
-    "!power-grid-comb",
-    "?blueprint-shotgun > 0.0.11"
+    "!power-grid-comb"
   ],
   "description": "Unravel the mysteries of the ultradense utility cube in this devious overhaul mod.\n\nSee the mod page for a complete list of compatible mods."
 }
