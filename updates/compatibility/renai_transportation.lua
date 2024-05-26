@@ -221,8 +221,8 @@ if mods["RenaiTransportation"] then
 					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-inserter-Recipe"},
 					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-filter-inserter-Recipe"}
 				},
-				prerequisites = {"se~no", "cube-stack-inserters"},
-				unit = tech_cost_unit("1b", 50) -- increased to level 1b given this is now just for stack inserters
+				prerequisites = {"se~no", "cube-fundamental-comprehension-card", "cube-inserters"}, -- added "cube-inserters" as that technically could be skipped and this tech doesn't make sense without it
+				unit = tech_cost_unit("1a", 50) -- Effectively the same cost except with Ultracube science items
 				-- original
 				--[[ {
 					count = 50,
