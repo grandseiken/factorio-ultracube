@@ -222,12 +222,8 @@ if mods["RenaiTransportation"] then
 					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-inserter-Recipe"},
 					{type = "unlock-recipe", recipe = "cube-RTThrower-stack-filter-inserter-Recipe"}
 				},
-				-- Option 3
-				prerequisites = {"se~no", "cube-fundamental-comprehension-card", "cube-inserters"}, -- added "cube-inserters" as that technically could be skipped and this tech doesn't make sense without it
-				unit = tech_cost_unit("1a", 50) -- Effectively the same cost except with Ultracube science items
-				-- Option 1 & 2
-				--prerequisites = {"se~no", cube-stack-inserters},
-				--unit = tech_cost_unit("1b", 50)
+				prerequisites = {"se~no", "cube-stack-inserters"},
+				unit = tech_cost_unit("1b", 50)
 
 				-- original
 				--[[ {
@@ -259,10 +255,10 @@ if mods["RenaiTransportation"] then
 					}
 				},
 				-- Option 1 & 3
-				prerequisites = {"RTThrowerTime"},
+				prerequisites = {"RTThrowerTime", "cube-extremely-long-inserter"},
 				-- Option 2
 				--prerequisites = {"se~no", "cube-fundamental-comprehension-card", "cube-inserters"},
-				unit = tech_cost_unit("1b", 75) -- Effectively the same cost except with Ultracube science items
+				unit = tech_cost_unit("2", 300) -- Bumped up to match extremely-long-inserter tier
 				-- original
 				--[[ {
 					count = 75,
