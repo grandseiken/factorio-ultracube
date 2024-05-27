@@ -293,5 +293,381 @@ if mods["RenaiTransportation"] then
 		-- add_mystery_recipe(1, "RTThrower-stack-inserter-Item", "stack-inserter")
 		-- add_mystery_recipe(1, "RTThrower-stack-filter-inserter-Item", "stack-filter-inserter")
 	end
+
+	-- Ziplines
+	if (settings.startup["RTZiplineSetting"].value == true) then
+		data:extend({
+			-- Recipes
+			{ --------- zipline recipie ----------
+				type = "recipe",
+				name = "cube-RTZiplineRecipe",
+				enabled = false,
+				energy_required = 0.5,
+				ingredients =
+					{
+						{"copper-cable", 100},
+						{"cube-basic-matter-unit", 100}, -- 50 iron-gear-wheel = 100 iron-plate
+						{"cube-electronic-circuit", 4},
+						{"PlayerLauncherItem", 1},
+						{"iron-chest", 1}
+					},
+					-- original
+					--[[ {
+						{"copper-cable", 100},
+						{"iron-gear-wheel", 50},
+						{"electronic-circuit", 4},
+						{"PlayerLauncherItem", 1},
+						{"steel-chest", 1}
+					}, ]]
+				result = "RTZiplineItem"
+			},
+			{ --------- zipline controls recipie ----------
+				type = "recipe",
+				name = "cube-RTZiplineControlsRecipe",
+				enabled = false,
+				energy_required = 0.5,
+				ingredients =
+					{
+						{"copper-cable", 10},
+						{"cube-basic-matter-unit", 5}, -- 6 iron-sticks = 3 iron-plate
+						{"cube-electronic-circuit", 2}
+					},
+					-- original
+					--[[ {
+						{"copper-cable", 10},
+						{"iron-stick", 6},
+						{"iron-plate", 2},
+						{"electronic-circuit", 2}
+					}, ]]
+				result = "RTZiplineControlsItem"
+			},
+			{ --------- zipline crank controls recipie ----------
+				type = "recipe",
+				name = "cube-RTZiplineCrankControlsRecipe",
+				enabled = false,
+				energy_required = 0.5,
+				ingredients =
+					{
+						{"RTZiplineControlsItem", 1},
+						{"cube-basic-matter-unit", 21} -- 2 iron-sticks + 10 iron-gear-wheel = 21 iron-plate
+					},
+					--[[ {
+						{"RTZiplineControlsItem", 1},
+						{"iron-stick", 2},
+						{"iron-gear-wheel", 10}
+					}, ]]
+				result = "RTZiplineCrankControlsItem"
+			},
+			{ --------- programmable zipline controls recipie ----------
+				type = "recipe",
+				name = "cube-RTProgrammableZiplineControlsRecipe",
+				enabled = false,
+				energy_required = 0.5,
+				ingredients =
+					{
+					{"RTZiplineControlsItem", 1},
+						{"cube-electronic-circuit", 5}
+					},
+				result = "RTProgrammableZiplineControlsItem"
+			},
+			{
+				type = "recipe",
+				name = "cube-RTZiplineTerminalRecipe",
+				enabled = false,
+				energy_required = 3,
+				ingredients =
+				{
+					{"medium-electric-pole", 1},
+					{"cube-electronic-circuit", 10},
+					{"cube-rare-metals", 20},
+					{"concrete", 25}
+				 },
+				   --[[ {
+					  {"medium-electric-pole", 1},
+					  {"electronic-circuit", 10},
+					  {"steel-plate", 20},
+					  {"concrete", 25}
+				   }, ]]
+				result = "RTZiplineTerminalItem"
+			},
+			{ --------- zipline recipie ----------
+				type = "recipe",
+				name = "cube-RTZiplineRecipe2",
+				enabled = false,
+				energy_required = 0.5,
+				ingredients =
+					{
+						{"cube-basic-matter-unit", 200},
+						{"cube-basic-motor-unit", 10},
+						{"RTZiplineItem", 1},
+					},
+					--[[ {
+						{"iron-gear-wheel", 100},
+						{"engine-unit", 10},
+						{"RTZiplineItem", 1},
+					}, ]]
+				result = "RTZiplineItem2"
+			},
+			{ --------- zipline recipie ----------
+			type = "recipe",
+			name = "cube-RTZiplineRecipe3",
+			enabled = false,
+			energy_required = 0.5,
+			ingredients =
+				{
+					{"cube-basic-matter-unit", 300},
+					{"cube-advanced-engine", 10},
+					{"cube-advanced-circuit", 10},
+					{"RTZiplineItem2", 1},
+				},
+			   --[[ {
+				  {"iron-gear-wheel", 150},
+				  {"electric-engine-unit", 10},
+				  {"advanced-circuit", 10},
+				  {"RTZiplineItem2", 1},
+			   }, ]]
+			result = "RTZiplineItem3"
+		 	},
+			{ --------- zipline recipie ----------
+			type = "recipe",
+			name = "cube-RTZiplineRecipe4",
+			enabled = false,
+			energy_required = 0.5,
+			ingredients =
+				{
+					{"cube-basic-matter-unit", 400},
+					{"cube-vehicle-fuel", 25},
+					{"cube-spectral-processor", 5},
+					{"RTZiplineItem3", 1},
+				},
+				--[[ {
+					{"iron-gear-wheel", 200},
+					{"rocket-fuel", 25},
+					{"processing-unit", 5},
+					{"RTZiplineItem3", 1},
+				}, ]]
+			result = "RTZiplineItem4"
+			},
+			{ --------- zipline recipie ----------
+			type = "recipe",
+			name = "cube-RTZiplineRecipe5",
+			enabled = false,
+			energy_required = 0.5,
+			ingredients =
+				{
+					{"cube-basic-matter-unit", 600},
+					{"cube-nuclear-fuel", 5},
+					{"fusion-reactor-equipment", 1},
+					{"RTZiplineItem4", 1},
+				},
+			   --[[ {
+				  {"iron-gear-wheel", 300},
+				  {"nuclear-fuel", 5},
+				  {"fusion-reactor-equipment", 1},
+				  {"RTZiplineItem4", 1},
+			   }, ]]
+			result = "RTZiplineItem5"
+			},
+			-- Technologies
+			{
+				type = "technology",
+				name = "RTZiplineTech",
+				icon = "__RenaiTransportation__/graphics/zipline/icon.png",
+				icon_size = 64,
+				effects =
+				{
+					{
+						type = "unlock-recipe",
+						recipe = "cube-RTZiplineRecipe"
+					},
+					{
+						type = "unlock-recipe",
+						recipe = "cube-RTZiplineControlsRecipe"
+					}
+				},
+				prerequisites = {"se~no", "cube-electronics"}, --{"se~no", "steel-processing"},
+				unit = tech_cost_unit("0", 100)
+				--[[ {
+					count = 100,
+					ingredients =
+					{
+					  {"automation-science-pack", 1}
+					},
+					time = 30
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTZiplineControlTech1",
+				icon = "__RenaiTransportation__/graphics/zipline/crankcontrols.png",
+				icon_size = 64,
+				effects =
+				{
+					{
+						type = "unlock-recipe",
+						recipe = "cube-RTZiplineCrankControlsRecipe"
+					}
+				},
+				prerequisites = {"RTZiplineTech"},
+				unit = tech_cost_unit("0", 50)
+				--[[ {
+					count = 50,
+					ingredients =
+					{
+					  {"automation-science-pack", 1}
+					},
+					time = 30
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTProgrammableZiplineControlTech",
+				icon = "__RenaiTransportation__/graphics/zipline/terminaltech.png",
+				icon_size = 128,
+				effects =
+				{
+				   {
+					  type = "unlock-recipe",
+					  recipe = "cube-RTProgrammableZiplineControlsRecipe"
+				   },
+				   {
+					  type = "unlock-recipe",
+					  recipe = "cube-RTZiplineTerminalRecipe"
+				   }
+				},
+				prerequisites = {"RTZiplineTech", "cube-concrete"}, --{"RTZiplineTech", "electric-energy-distribution-1", "concrete"},
+				unit = tech_cost_unit("1b", 150)
+				--[[ {
+				   count = 150,
+				   ingredients =
+				   {
+					 {"automation-science-pack", 1},
+					 {"logistic-science-pack", 1}
+				   },
+				   time = 30
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTZiplineTech2",
+				icons = {
+				 {
+					 icon = "__RenaiTransportation__/graphics/zipline/icon.png",
+					 icon_size = 64,
+					tint = {1,0.9,0},
+				 }
+				},
+				effects =
+				{
+				 {
+					type = "unlock-recipe",
+					recipe = "cube-RTZiplineRecipe2"
+				 }
+				},
+				prerequisites = {"RTZiplineTech"},--{"RTZiplineTech", "engine"},
+				unit = tech_cost_unit("1a", 100)
+				--[[ {
+				 count = 100,
+				 ingredients =
+				 {
+				   {"automation-science-pack", 1},
+				   {"logistic-science-pack", 1}
+				 },
+				 time = 15
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTZiplineTech3",
+				icons = {
+				 {
+				   icon = "__RenaiTransportation__/graphics/zipline/icon.png",
+				   icon_size = 64,
+					tint = {255,35,35},
+				 }
+				},
+				effects =
+				{
+				 {
+					type = "unlock-recipe",
+					recipe = "cube-RTZiplineRecipe3"
+				 }
+				},
+				prerequisites = {"RTZiplineTech2", "cube-abstract-interrogation-card"}, --{"RTZiplineTech2", "electric-engine"},
+				unit = tech_cost_unit("2", 100)
+				--[[ {
+				 count = 100,
+				 ingredients =
+				 {
+				   {"automation-science-pack", 1},
+				   {"logistic-science-pack", 1},
+				   {"chemical-science-pack", 1}
+				 },
+				 time = 30
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTZiplineTech4",
+				icons = {
+				 {
+				   icon = "__RenaiTransportation__/graphics/zipline/icon.png",
+				   icon_size = 64,
+					tint = {18,201,233},
+				 }
+				},
+				effects =
+				{
+				 {
+					type = "unlock-recipe",
+					recipe = "cube-RTZiplineRecipe4"
+				 }
+				},
+				prerequisites = {"RTZiplineTech3", "cube-fuel-refinery", "cube-spectral-processor"}, --{"RTZiplineTech3", "rocket-fuel", "advanced-electronics-2"},
+				unit = tech_cost_unit("2", 150)
+				--[[ {
+				 count = 150,
+				 ingredients =
+				 {
+				   {"automation-science-pack", 1},
+				   {"logistic-science-pack", 1},
+				   {"chemical-science-pack", 1}
+				 },
+				 time = 30
+				} ]]
+			},
+			{
+				type = "technology",
+				name = "RTZiplineTech5",
+				icons = {
+				 {
+				   icon = "__RenaiTransportation__/graphics/zipline/icon.png",
+				   icon_size = 64,
+					tint = {83,255,26},
+				 }
+				},
+				effects =
+				{
+				 {
+					type = "unlock-recipe",
+					recipe = "cube-RTZiplineRecipe5"
+				 }
+				},
+				prerequisites = {"RTZiplineTech4", "cube-fusion-reactor-equipment"}, --{"RTZiplineTech4", "kovarex-enrichment-process", "fusion-reactor-equipment"},
+				unit = tech_cost_unit("3", 200) -- matched tier of fusion reactor equipment
+				--[[ {
+				  count = 200,
+				  ingredients =
+				  {
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
+					{"production-science-pack", 1},
+					{"utility-science-pack", 1},
+				  },
+				  time = 30
+				} ]]
+			}
+		})
 	end
 end
