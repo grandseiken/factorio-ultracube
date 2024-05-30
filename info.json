@@ -19,7 +19,7 @@
     "?Milestones >= 1.3.22",
     "?PickerDollies",
     "?pushbutton",
-	"?RenaiTransportation > 1.2.8",
+    "(?)RenaiTransportation > 1.2.8",
     "?textplates",
     "!Krastorio2",
     "!burner-fuel-bonus",

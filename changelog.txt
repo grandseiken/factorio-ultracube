@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.6
+Date: ???
+  Changes:
+    - Added optional compatibility with Renai Transportation.
+    - Added optional compatibility with Jetpack.
+    - Added optional compatibility with Railway Motor Car.
+  Bugfixes:
+    - Improved the fix for making sure an ultradense furnace always uses exactly one cube's-worth of energy.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.5
 Date: 23.05.2024
   Changes:

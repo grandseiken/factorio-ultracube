@@ -371,8 +371,8 @@ local function cube_vehicle_mod(size, results)
       local type = entity.type
       local name = entity.name
 
-      if name == "cube-ultradense-furnace" and cube_ultradense_fuel[item] and
-         entity.energy > 1000 then
+      if name == "cube-ultradense-furnace" and
+         cube_ultradense_fuel[item] and entity.energy > 1000 then
         cube_fx_data.last_furnace = entity
       end
 

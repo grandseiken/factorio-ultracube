@@ -1,14 +1,15 @@
 if mods["RenaiTransportation"] then
--- Conversion of vanilla items to rough equivalents in Ultracube
+  -- Conversion of vanilla items to rough equivalents in Ultracube.
   local recipe_item_conversion = {
     ["iron-plate"] = "cube-basic-matter-unit",
     ["copper-plate"] = "cube-basic-matter-unit",
     ["steel-plate"] = "cube-rare-metals",
-    ["automation-science-pack"] = "cube-basic-contemplation-unit", -- shows up in bounce pad recipes for some reason, may want to change this
+    -- Shows up in bounce pad recipes for some reason, may want to change this.
+    ["automation-science-pack"] = "cube-basic-contemplation-unit",
     ["electronic-circuit"] = "cube-electronic-circuit",
     ["advanced-circuit"] = "cube-advanced-circuit",
 
-  -- Items that can stay as-is
+    -- Items that can stay as-is.
     ["iron-chest"] = true,
     ["concrete"] = true,
     ["constant-combinator"] = true,
@@ -21,14 +22,14 @@ if mods["RenaiTransportation"] then
     ["cargo-wagon"] = true,
   }
 
-  -- Conversion of vanilla science items to Ultracube science equivalents
+  -- Conversion of vanilla science items to Ultracube science equivalents.
   local tech_item_conversion = {
     ["automation-science-pack"] = "cube-basic-contemplation-unit",
     ["logistic-science-pack"] = "cube-fundamental-comprehension-card",
-    ["chemical-science-pack"] = "cube-abstract-interrogation-card"
+    ["chemical-science-pack"] = "cube-abstract-interrogation-card",
   }
 
-  -- Conversion of prerequisite techs from vanilla to Ultracube
+  -- Conversion of prerequisite techs from vanilla to Ultracube.
   local tech_prerequisite_conversion = {
     ["logistic-science-pack"] = "cube-fundamental-comprehension-card",
     ["advanced-electronics"] = "cube-advanced-electronics",
@@ -39,44 +40,44 @@ if mods["RenaiTransportation"] then
     ["electric-energy-distribution-2"] = "cube-electric-energy-distribution-2",
   }
 
-  -- All technologies that can be handled completely automatically or with minor tweaks afterward
+  -- All technologies that can be handled completely automatically or with minor tweaks afterward.
   local renai_auto_techs = {
-    "se~no", -- Starter tech for most of Renai Transport
-    "HatchRTTech", -- Hatches for machines
-    "EjectorHatchRTTech", -- Ejector hatch
-    "RTSimonSays", -- Director bounce pad
-    "SignalPlateTech", -- Signal bounce pad
-    "RTFlyingFreight", -- Train ramp
-    "RTMagnetTrainRamps", -- Magnetic train ramp
-    "RTImpactTech", -- Impact wagon & unloader (Unloader requires refined concrete)
-    "RTFreightPlates", -- Train bounce pads
+    "se~no",  -- Starter tech for most of Renai Transport
+    "HatchRTTech",  -- Hatches for machines
+    "EjectorHatchRTTech",  -- Ejector hatch
+    "RTSimonSays",  -- Director bounce pad
+    "SignalPlateTech",  -- Signal bounce pad
+    "RTFlyingFreight",  -- Train ramp
+    "RTMagnetTrainRamps",  -- Magnetic train ramp
+    "RTImpactTech",  -- Impact wagon and unloader (unloader requires refined concrete)
+    "RTFreightPlates",  -- Train bounce pads
   }
 
   -- All recipes that can be handled completely automatically or with minor tweaks afterward
   local renai_auto_recipes = {
-    -- Default-enabled recipes
+    -- Default-enabled recipes.
     "BouncePlateRecipie",
     "OpenContainerRecipie",
     "OpenContainerRevertRecipie",
 
-    "DirectedBouncePlateRecipie", -- se~no
-    "PlayerLauncherRecipie", -- se~no
-    "HatchRTRecipe", -- HatchRTTech
-    "RTThrower-EjectorHatchRTRecipe", -- EjectorHatchRTTech
-	"RTThrower-FilterEjectorHatchRTRecipe", -- EjectorHatchRTTech (Added in Renai Transportation 1.3.0)
-    "DirectorBouncePlateRecipie", -- RTSimonSays
-    "SignalBouncePlateRecipie", -- SignalPlateTech
-    "RTTrainRampRecipe", -- RTFlyingFreight
-    "RTMagnetTrainRampRecipe", -- RTMagnetTrainRamps
-    "RTImpactWagonRecipe", -- RTImpactTech
-    "RTImpactUnloaderRecipe", -- RTImpactTech (Recipe is changed to use regular concrete)
-    "RTTrainBouncePlateRecipie", -- RTFreightPlates
-    "RTTrainDirectedBouncePlateRecipie" -- RTFreightPlates
+    "DirectedBouncePlateRecipie",
+    "PlayerLauncherRecipie",
+    "HatchRTRecipe",  -- HatchRTTech
+    "RTThrower-EjectorHatchRTRecipe",  -- EjectorHatchRTTech
+    "RTThrower-FilterEjectorHatchRTRecipe",  -- EjectorHatchRTTech (Added in Renai Transportation 1.3.0)
+    "DirectorBouncePlateRecipie",  -- RTSimonSays
+    "SignalBouncePlateRecipie",  -- SignalPlateTech
+    "RTTrainRampRecipe",  -- RTFlyingFreight
+    "RTMagnetTrainRampRecipe",  -- RTMagnetTrainRamps
+    "RTImpactWagonRecipe",  -- RTImpactTech
+    "RTImpactUnloaderRecipe",  -- RTImpactTech (Recipe is changed to use regular concrete)
+    "RTTrainBouncePlateRecipie",  -- RTFreightPlates
+    "RTTrainDirectedBouncePlateRecipie",  -- RTFreightPlates
   }
 
-  local valid_recipes = {} -- List of recipes that have cube-equivalents created or have been updated to be compatible
+  local valid_recipes = {} -- List of recipes that have cube-equivalents created or have been updated to be compatible.
 
-  -- Fully automatic recipe updating
+  -- Fully automatic recipe updating.
   for _, recipe_name in ipairs(renai_auto_recipes) do
     if data.raw.recipe[recipe_name] then
       local recipe_is_valid = true
@@ -89,13 +90,14 @@ if mods["RenaiTransportation"] then
           end
         else
           log("Ultracube+Renai - Unrecognised ingredient: " .. ingredient_name .. " in recipe: " .. recipe_name)
-          recipe_is_valid = false -- Ingredient isn't recognized, so Renai must have changed its recipe to something not handled already
+          -- Ingredient isn't recognized, so Renai must have changed its recipe to something not handled already.
+          recipe_is_valid = false
         end
       end
       if recipe_is_valid then
         cube_recipe.category = "cube-fabricator-handcraft"
-        valid_recipes[recipe_name] = true -- add to list of handled recipes
-        recipe_item_conversion[cube_recipe.result] = true -- add result of recipe to items that can stay as-is
+        valid_recipes[recipe_name] = true  -- add to list of handled recipes
+        recipe_item_conversion[cube_recipe.result] = true  -- add result of recipe to items that can stay as-is
       end
     end
   end
@@ -105,7 +107,7 @@ if mods["RenaiTransportation"] then
   --[[
   Impact unloader normally requires refined concrete, but that's behind purple card tech.
   That's extremely far above the green card requirement for the technology that unlocks it,
-  so it's probably best to replace it with regular concrete. 
+  so it's probably best to replace it with regular concrete.
   ]]
   if valid_recipes["RTImpactUnloaderRecipe"] then -- Recipe for impact unloader was updated
     for _, ingredient in ipairs(data.raw.recipe["RTImpactUnloaderRecipe"].ingredients) do
@@ -116,17 +118,17 @@ if mods["RenaiTransportation"] then
     end
   end
 
-  -- Fully automatic technology editing
+  -- Fully automatic technology editing.
   for _, tech_name in ipairs(renai_auto_techs) do
     if data.raw.technology[tech_name] then
       local is_valid_tech = true
       local tech = data.raw.technology[tech_name]
 
-      -- Convert prerequisite technologies
+      -- Convert prerequisite technologies.
       if tech.prerequisites then -- tech has prerequisites
         for prereq_index, prereq_name in ipairs(tech.prerequisites) do
-          if tech_prerequisite_conversion[prereq_name] then -- is a recognized prerequisite
-            if type(tech_prerequisite_conversion[prereq_name]) == "string" then -- is a tech that needs conversion
+          if tech_prerequisite_conversion[prereq_name] then  -- is a recognized prerequisite
+            if type(tech_prerequisite_conversion[prereq_name]) == "string" then  -- is a tech that needs conversion
               tech.prerequisites[prereq_index] = tech_prerequisite_conversion[prereq_name]
             end
           else
@@ -136,7 +138,7 @@ if mods["RenaiTransportation"] then
         end
       end
 
-      -- Convert recipe unlocks
+      -- Convert recipe unlocks.
       for _, effect in ipairs(tech.effects) do
         if effect.type == "unlock-recipe" then -- Tech unlocks a recipe
           if not valid_recipes[effect.recipe] then -- Recipe is one we haven't updated
@@ -146,8 +148,9 @@ if mods["RenaiTransportation"] then
         end
       end
 
-      -- Convert tech cost items
-      if is_valid_tech then -- Only convert items if we've been able to properly update the original tech up to this point
+      -- Convert tech cost items.
+      if is_valid_tech then
+        -- Only convert items if we've been able to properly update the original tech up to this point.
         for _, ingredient in ipairs(tech.unit.ingredients) do
           local ingredient_name = ingredient[1]
           if tech_item_conversion[ingredient_name] then
@@ -169,14 +172,23 @@ if mods["RenaiTransportation"] then
 
   -- Thrower inserters
   if (settings.startup["RTThrowersSetting"].value == true) then -- Throwers are enabled
-    --[[ 
+    --[[
     Since Ultracube has inserters available before electronic circuits/copper cable,
-    I'm opting to replace the normal copper cable cost to convert inserters to throwers with basic matter units 
+    I'm opting to replace the normal copper cable cost to convert inserters to throwers with basic matter units.
     ]]
-    local inserter_list = {"fast-inserter", "long-handed-inserter", "filter-inserter", "stack-inserter", "stack-filter-inserter"}
-    if settings.startup["RTModdedThrowers"].value == true then -- Renai will generate thrower inserters for modded inserters
-      inserter_list[#inserter_list + 1] = "cube-extremely-long-inserter" -- Ultracube's extremely long filter inserter. Why you would want to use a thrower version of this, I have no idea
-      -- TODO: If there's ever any mods made compatible that add inserters, append their names to inserter_list based on them being active
+    local inserter_list = {
+      "fast-inserter",
+      "long-handed-inserter",
+      "filter-inserter",
+      "stack-inserter",
+      "stack-filter-inserter",
+    }
+    if settings.startup["RTModdedThrowers"].value == true then  -- Renai will generate throwers for modded inserters.
+      -- Ultracube's extremely long filter inserter. Why you would want to use a thrower version of this,
+      -- I have no idea.
+      inserter_list[#inserter_list + 1] = "cube-extremely-long-inserter"
+      -- TODO: If there's ever any mods made compatible that add inserters, append their names to inserter_list based
+      -- on them being active.
     end
 
     -- generate recipes for all inserters in inserter_list
@@ -191,9 +203,10 @@ if mods["RenaiTransportation"] then
           {"cube-basic-matter-unit", 4}
         },
         --[[
-        This item isn't created until Renai Transport's data-final-fixes.lua runs, 
-        but this seems to work OK so long as the item is actually created by the end of the prototype phase.
-        May want to add a check in Ultracube's data-final-fixes to remove any invalid recipes in the incredibly unlikely scenario Renai Transport fails to generate the inserters
+        This item isn't created until Renai Transport's data-final-fixes.lua runs, but this seems to work OK so long
+        as the item is actually created by the end of the prototype phase. May want to add a check in Ultracube's
+        data-final-fixes to remove any invalid recipes in the incredibly unlikely scenario Renai Transport fails to
+        generate the inserters.
         ]]
         result = "RTThrower-" .. inserter_name .. "-Item",
         category = "cube-fabricator-handcraft",
@@ -202,14 +215,14 @@ if mods["RenaiTransportation"] then
 
     -- add thrower inserter equivalents to Ultracube inserter tech
     local effects = data.raw.technology["cube-inserters"].effects
-    effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-fast-inserter-Recipe"}
-    effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-long-handed-inserter-Recipe"}
-    effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-filter-inserter-Recipe"}
+    effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-fast-inserter-Recipe"}
+    effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-long-handed-inserter-Recipe"}
+    effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-filter-inserter-Recipe"}
 
     -- Thrower techs
     data:extend({
       {
-        -- Stack thrower inserters + modded inserters, normally is all thrower insterters >= fast inserters
+        -- Stack thrower inserters + modded inserters, normally is all thrower insterters >= fast inserters.
         type = "technology",
         name = "RTThrowerTime",
         icon = "__RenaiTransportation__/graphics/tech/ThrowerTech.png",
@@ -232,7 +245,8 @@ if mods["RenaiTransportation"] then
         } ]]
       },
       {
-        -- Control over thrower inserter distance. This one could've been automated if not for needing a custom RTThrowerTime tech
+        -- Control over thrower inserter distance. This one could've been automated if not for needing a custom
+        -- RTThrowerTime tech.
         type = "technology",
         name = "RTFocusedFlinging",
         icon = "__RenaiTransportation__/graphics/tech/focus.png",
@@ -268,10 +282,11 @@ if mods["RenaiTransportation"] then
     })
 
     -- Add modded recipes to RTThrowerTime
-    if settings.startup["RTModdedThrowers"].value == true then -- Modded thrower inserters are enabled, and thus are generated by Renai Transport
-      -- TODO: If there's ever any mods made compatible that add inserters, add those recipes to RTThrowerTime here
+    if settings.startup["RTModdedThrowers"].value == true then
+      -- Modded thrower inserters are enabled, and thus are generated by Renai Transport.
+      -- TODO: If there's ever any mods made compatible that add inserters, add those recipes to RTThrowerTime here.
       local effects = data.raw.technology["RTThrowerTime"].effects
-      effects[#effects+1] = {type = "unlock-recipe", recipe = "cube-RTThrower-cube-extremely-long-inserter-Recipe"}
+      effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-cube-extremely-long-inserter-Recipe"}
     end
   end
 
@@ -290,14 +305,6 @@ if mods["RenaiTransportation"] then
           {"PlayerLauncherItem", 1},
           {"iron-chest", 1},
         },
-        -- original
-        --[[ {
-        {"copper-cable", 100},
-        {"iron-gear-wheel", 50},
-        {"electronic-circuit", 4},
-        {"PlayerLauncherItem", 1},
-        {"steel-chest", 1}
-        }, ]]
         result = "RTZiplineItem",
         category = "cube-fabricator-handcraft",
       },
@@ -311,13 +318,6 @@ if mods["RenaiTransportation"] then
           {"cube-basic-matter-unit", 5}, -- 6 iron-sticks = 3 iron-plate
           {"cube-electronic-circuit", 2}
         },
-        -- original
-        --[[ {
-        {"copper-cable", 10},
-        {"iron-stick", 6},
-        {"iron-plate", 2},
-        {"electronic-circuit", 2}
-        }, ]]
         result = "RTZiplineControlsItem",
         category = "cube-fabricator-handcraft",
       },
@@ -330,11 +330,6 @@ if mods["RenaiTransportation"] then
           {"RTZiplineControlsItem", 1},
           {"cube-basic-matter-unit", 21} -- 2 iron-sticks + 10 iron-gear-wheel = 21 iron-plate
         },
-        --[[ {
-        {"RTZiplineControlsItem", 1},
-        {"iron-stick", 2},
-        {"iron-gear-wheel", 10}
-        }, ]]
         result = "RTZiplineCrankControlsItem",
         category = "cube-fabricator-handcraft",
       },
@@ -361,12 +356,6 @@ if mods["RenaiTransportation"] then
           {"cube-rare-metals", 20},
           {"concrete", 25},
         },
-        --[[ {
-        {"medium-electric-pole", 1},
-        {"electronic-circuit", 10},
-        {"steel-plate", 20},
-        {"concrete", 25}
-        }, ]]
         result = "RTZiplineTerminalItem",
         category = "cube-fabricator-handcraft",
       },
@@ -380,11 +369,6 @@ if mods["RenaiTransportation"] then
           {"cube-basic-motor-unit", 10},
           {"RTZiplineItem", 1},
         },
-        --[[ {
-        {"iron-gear-wheel", 100},
-        {"engine-unit", 10},
-        {"RTZiplineItem", 1},
-        }, ]]
         result = "RTZiplineItem2",
         category = "cube-fabricator-handcraft",
       },
@@ -399,12 +383,6 @@ if mods["RenaiTransportation"] then
           {"cube-advanced-circuit", 10},
           {"RTZiplineItem2", 1},
         },
-        --[[ {
-        {"iron-gear-wheel", 150},
-        {"electric-engine-unit", 10},
-        {"advanced-circuit", 10},
-        {"RTZiplineItem2", 1},
-        }, ]]
         result = "RTZiplineItem3",
         category = "cube-fabricator-handcraft",
       },
@@ -419,12 +397,6 @@ if mods["RenaiTransportation"] then
           {"cube-spectral-processor", 5},
           {"RTZiplineItem3", 1},
         },
-        --[[ {
-        {"iron-gear-wheel", 200},
-        {"rocket-fuel", 25},
-        {"processing-unit", 5},
-        {"RTZiplineItem3", 1},
-        }, ]]
         result = "RTZiplineItem4",
         category = "cube-fabricator-handcraft",
       },
@@ -439,12 +411,6 @@ if mods["RenaiTransportation"] then
           {"fusion-reactor-equipment", 1},
           {"RTZiplineItem4", 1},
         },
-        --[[ {
-        {"iron-gear-wheel", 300},
-        {"nuclear-fuel", 5},
-        {"fusion-reactor-equipment", 1},
-        {"RTZiplineItem4", 1},
-        }, ]]
         result = "RTZiplineItem5",
         category = "cube-fabricator-handcraft"
       },
@@ -457,16 +423,8 @@ if mods["RenaiTransportation"] then
           {type = "unlock-recipe", recipe = "RTZiplineRecipe"},
           {type = "unlock-recipe", recipe = "RTZiplineControlsRecipe"},
         },
-        prerequisites = {"se~no", "cube-electronics"}, --{"se~no", "steel-processing"},
+        prerequisites = {"se~no", "cube-electronics"},
         unit = tech_cost_unit("0", 100),
-        --[[ {
-        count = 100,
-        ingredients =
-        {
-        {"automation-science-pack", 1}
-        },
-        time = 30
-        } ]]
       },
       {
         type = "technology",
@@ -478,14 +436,6 @@ if mods["RenaiTransportation"] then
         },
         prerequisites = {"RTZiplineTech"},
         unit = tech_cost_unit("0", 50),
-        --[[ {
-        count = 50,
-        ingredients =
-        {
-        {"automation-science-pack", 1}
-        },
-        time = 30
-        } ]]
       },
       {
         type = "technology",
@@ -496,17 +446,8 @@ if mods["RenaiTransportation"] then
           {type = "unlock-recipe", recipe = "RTProgrammableZiplineControlsRecipe"},
           {type = "unlock-recipe", recipe = "RTZiplineTerminalRecipe"},
         },
-        prerequisites = {"RTZiplineTech", "cube-concrete"}, --{"RTZiplineTech", "electric-energy-distribution-1", "concrete"},
+        prerequisites = {"RTZiplineTech", "cube-concrete"},
         unit = tech_cost_unit("1b", 150),
-        --[[ {
-        count = 150,
-        ingredients =
-        {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1}
-        },
-        time = 30
-        } ]]
       },
       {
         type = "technology",
@@ -519,17 +460,8 @@ if mods["RenaiTransportation"] then
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineRecipe2"},
         },
-        prerequisites = {"RTZiplineTech"}, --{"RTZiplineTech", "engine"},
+        prerequisites = {"RTZiplineTech"},
         unit = tech_cost_unit("1a", 100),
-        --[[ {
-        count = 100,
-        ingredients =
-        {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1}
-        },
-        time = 15
-        } ]]
       },
       {
         type = "technology",
@@ -542,18 +474,8 @@ if mods["RenaiTransportation"] then
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineRecipe3"},
         },
-        prerequisites = {"RTZiplineTech2", "cube-abstract-interrogation-card"}, --{"RTZiplineTech2", "electric-engine"},
+        prerequisites = {"RTZiplineTech2", "cube-abstract-interrogation-card"},
         unit = tech_cost_unit("2", 100),
-        --[[ {
-        count = 100,
-        ingredients =
-        {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
-        },
-        time = 30
-        } ]]
       },
       {
         type = "technology",
@@ -566,18 +488,8 @@ if mods["RenaiTransportation"] then
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineRecipe4"},
         },
-        prerequisites = {"RTZiplineTech3", "cube-fuel-refinery", "cube-spectral-processor"}, --{"RTZiplineTech3", "rocket-fuel", "advanced-electronics-2"},
+        prerequisites = {"RTZiplineTech3", "cube-fuel-refinery", "cube-spectral-processor"},
         unit = tech_cost_unit("2", 150),
-        --[[ {
-        count = 150,
-        ingredients =
-        {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1}
-        },
-        time = 30
-        } ]]
       },
       {
         type = "technology",
@@ -585,25 +497,13 @@ if mods["RenaiTransportation"] then
         icons = {{
           icon = "__RenaiTransportation__/graphics/zipline/icon.png",
           icon_size = 64,
-          tint = {83,255,26},
+          tint = {83, 255, 26},
         }},
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineRecipe5"},
         },
-        prerequisites = {"RTZiplineTech4", "cube-fusion-reactor-equipment"}, --{"RTZiplineTech4", "kovarex-enrichment-process", "fusion-reactor-equipment"},
-        unit = tech_cost_unit("3", 200), -- matched tier of fusion reactor equipment
-        --[[ {
-        count = 200,
-        ingredients =
-        {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        },
-        time = 30
-        } ]]
+        prerequisites = {"RTZiplineTech4", "cube-fusion-reactor-equipment"},
+        unit = tech_cost_unit("3", 200),  -- Matched tier of fusion reactor equipment.
       }
     })
   end

@@ -2,7 +2,7 @@ if mods["stack-combinator"] then
   data.raw.technology["stack-combinator"].enabled = false
 end
 if mods["RenaiTransportation"] then
-	require("updates.compatibility.renai_transportation_mystery")
+  require("updates.compatibility.renai_transportation_mystery")
 end
 
 -- Ensure other mods haven't messed with some important settings.

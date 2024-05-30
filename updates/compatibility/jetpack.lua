@@ -32,7 +32,7 @@ if mods["jetpack"] then
     {"cube-arcane-drive", 20}, -- Arcane drive already contains the other 2 ingredients so this
                                -- feels a little redundant, but it fits with the pattern already
                                -- established.
-    {"cube-spectral-processor", 20}
+    {"cube-spectral-processor", 20},
   }
   pack2_recipe.category = craft_category
 
@@ -70,7 +70,7 @@ if mods["jetpack"] then
   pack3_recipe.category = craft_category
 
   -- Use the actual jetpack 3 tech prototype so that the number that appears on it is correct.
-  -- Everything else uses the jetpack 4 prototypes so that the thrust is correct and the original 
+  -- Everything else uses the jetpack 4 prototypes so that the thrust is correct and the original
   -- jetpack 3 is pruned by disable_incompatible.lua.
   local pack3_tech = data.raw.technology["jetpack-3"]
   pack3_tech.effects[1].recipe = "jetpack-4"
