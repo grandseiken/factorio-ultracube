@@ -119,6 +119,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
 | [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
+| [Filter Combinator](https://mods.factorio.com/mod/silent-filter-combinator) | |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
 | [Grappling Gun](https://mods.factorio.com/mod/grappling-gun) | |
 | [Holographic Signs](https://mods.factorio.com/mod/holographic_signs) | |
