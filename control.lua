@@ -14,6 +14,7 @@ local entity_cache = require("__Ultracube__/scripts/entity_cache")
 local entity_combine = require("__Ultracube__/scripts/entity_combine")
 local linked_entities = require("__Ultracube__/scripts/linked_entities")
 local milestones = require("__Ultracube__/scripts/milestones")
+local mod_config_changed = require("__Ultracube__/updates/mod_config_changed_handling")
 local remote_ownership = require("__Ultracube__/scripts/remote_ownership")
 local tech_unlock = require("__Ultracube__/scripts/tech_unlock")
 local teleport = require("__Ultracube__/scripts/teleport")
@@ -151,7 +152,12 @@ end
 
 script.on_load(on_load)
 script.on_init(on_init)
-script.on_configuration_changed(on_init)
+script.on_configuration_changed(
+	function(ConfigurationChangedData)
+		mod_config_changed.run_handlers(ConfigurationChangedData)
+		on_init()
+	end
+)
 
 commands.add_command(
   "cube_refresh", nil,
