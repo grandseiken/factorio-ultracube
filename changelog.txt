@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.6
-Date: ???
+Date: 06.07.2024
   Changes:
     - Added optional compatibility with Renai Transportation.
     - Added optional compatibility with Jetpack.
