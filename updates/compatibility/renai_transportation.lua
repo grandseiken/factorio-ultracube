@@ -63,6 +63,7 @@ if mods["RenaiTransportation"] then
     "PlayerLauncherRecipie", -- se~no
     "HatchRTRecipe", -- HatchRTTech
     "RTThrower-EjectorHatchRTRecipe", -- EjectorHatchRTTech
+	"RTThrower-FilterEjectorHatchRTRecipe", -- EjectorHatchRTTech (Added in Renai Transportation 1.3.0)
     "DirectorBouncePlateRecipie", -- RTSimonSays
     "SignalBouncePlateRecipie", -- SignalPlateTech
     "RTTrainRampRecipe", -- RTFlyingFreight
