@@ -1,0 +1,28 @@
+{
+	"recipe":[
+		["cube-BouncePlateRecipie", "BouncePlateRecipie"],
+		["cube-OpenContainerRecipie", "OpenContainerRecipie"],
+		["cube-OpenContainerRevertRecipie", "OpenContainerRevertRecipie"],
+		["cube-DirectedBouncePlateRecipie", "DirectedBouncePlateRecipie"],
+		["cube-PlayerLauncherRecipie", "PlayerLauncherRecipie"],
+		["cube-HatchRTRecipe", "HatchRTRecipe"],
+		["cube-RTThrower-EjectorHatchRTRecipe", "RTThrower-EjectorHatchRTRecipe"],
+		["cube-DirectorBouncePlateRecipie", "DirectorBouncePlateRecipie"],
+		["cube-SignalBouncePlateRecipie", "SignalBouncePlateRecipie"],
+		["cube-RTTrainRampRecipe", "RTTrainRampRecipe"],
+		["cube-RTMagnetTrainRampRecipe", "RTMagnetTrainRampRecipe"],
+		["cube-RTImpactWagonRecipe", "RTImpactWagonRecipe"],
+		["cube-RTImpactUnloaderRecipe", "RTImpactUnloaderRecipe"],
+		["cube-RTTrainBouncePlateRecipie", "RTTrainBouncePlateRecipie"],
+		["cube-RTTrainDirectedBouncePlateRecipie", "RTTrainDirectedBouncePlateRecipie"],
+		["cube-RTZiplineRecipe", "RTZiplineRecipe"],
+		["cube-RTZiplineControlsRecipe", "RTZiplineControlsRecipe"],
+		["cube-RTZiplineCrankControlsRecipe", "RTZiplineCrankControlsRecipe"],
+		["cube-RTProgrammableZiplineControlsRecipe", "RTProgrammableZiplineControlsRecipe"],
+		["cube-RTZiplineTerminalRecipe", "RTZiplineTerminalRecipe"],
+		["cube-RTZiplineRecipe2", "RTZiplineRecipe2"],
+		["cube-RTZiplineRecipe3", "RTZiplineRecipe3"],
+		["cube-RTZiplineRecipe4", "RTZiplineRecipe4"],
+		["cube-RTZiplineRecipe5", "RTZiplineRecipe5"]
+	]
+}
