@@ -35,6 +35,4 @@ if mods["power-combinator"] then
     }
     data.raw.item["power-combinator-MK2"].order = "cube-" .. data.raw.item["power-combinator-MK2"].order
     add_mystery_recipe(1, "power-combinator-MK2", "power-combinator")
-
-else print("Did not find the mod")
 end
