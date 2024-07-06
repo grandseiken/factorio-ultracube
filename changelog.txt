@@ -7,6 +7,7 @@ Date: ???
     - Added optional compatibility with Railway Motor Car.
   Bugfixes:
     - Improved the fix for making sure an ultradense furnace always uses exactly one cube's-worth of energy.
+    - Nuclear reactor neighbour bonus is now actually 25%, as advertised.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.5
 Date: 23.05.2024
