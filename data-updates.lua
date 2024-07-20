@@ -15,6 +15,7 @@ require("updates.compatibility.inventory_sensor")
 require("updates.compatibility.jetpack")
 require("updates.compatibility.larger_lamps")
 require("updates.compatibility.ltn")
+require("updates.compatibility.ltn_combinator_modernized")
 require("updates.compatibility.nixie_tubes")
 require("updates.compatibility.pushbutton")
 require("updates.compatibility.quick_adjustable_inserters")
@@ -34,5 +35,5 @@ require("updates.disable_incompatible")
 require("updates.ultralocomotion")
 
 for _, t in pairs(data.raw.technology) do
-  t.enabled = false
+    t.enabled = false
 end
