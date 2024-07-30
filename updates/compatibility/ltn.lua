@@ -11,4 +11,17 @@ if mods["LogisticTrainNetwork"] then
 
   data.raw.item["logistic-train-stop"].order = "cube-" .. data.raw.item["logistic-train-stop"].order
   add_mystery_recipe(1, "logistic-train-stop", "train-stop")
+  
+  --LTN combinator support.
+  if mods["LTN_Combinator_Modernized"] then
+
+    local recipe = data.raw.recipe["ltn-combinator"]
+    recipe.category = "cube-fabricator-handcraft"
+    recipe.ingredients = {
+        {"constant-combinator", 1},
+        {"cube-electronic-circuit", 1},
+    }
+    data.raw.item["ltn-combinator"].order = "cube-" .. data.raw.item["ltn-combinator"].order
+    add_mystery_recipe(1, "ltn-combinator", "constant-combinator")
+  end
 end
