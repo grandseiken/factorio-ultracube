@@ -32,5 +32,12 @@ if mods["compaktcircuit"] then
   item.order = "cube-" .. item.order
   item.subgroup = "cube-combinator-extra"
   add_mystery_recipe(1, proc_name, "cube-spectral-processor")
-end
 
+  item = data.raw["item-with-tags"]["compaktcircuit-processor_with_tags"]
+  item.order = "cube-" .. item.order
+  item.subgroup = "cube-combinator-extra"
+
+  item = data.raw.item["compaktcircuit-iopoint"]
+  item.order = "cube-" .. item.order
+  item.subgroup = "cube-combinator-extra"
+end

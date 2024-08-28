@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.7
+Date: ???
+  Bugfixes:
+    - Fixed that some entities added by the compact circuits mod couldn't be built by construction robots.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.6
 Date: 06.07.2024
   Changes:
