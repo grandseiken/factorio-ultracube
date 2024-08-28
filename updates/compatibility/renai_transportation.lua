@@ -1,4 +1,6 @@
 if mods["RenaiTransportation"] then
+  data.raw.container["OpenContainer"].inventory_size = data.raw.container["iron-chest"].inventory_size
+
   -- Conversion of vanilla items to rough equivalents in Ultracube.
   local recipe_item_conversion = {
     ["iron-plate"] = "cube-basic-matter-unit",

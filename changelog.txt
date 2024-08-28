@@ -2,7 +2,8 @@
 Version: 0.5.7
 Date: ???
   Bugfixes:
-    - Fixed that some entities added by the compact circuits mod couldn't be built by construction robots.
+    - Fixed that some entities added by the Compact Circuits mod couldn't be built by construction robots.
+    - Chests added by Renai Transportation now match the inventory capacity of Ultracube chests.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.6
 Date: 06.07.2024
