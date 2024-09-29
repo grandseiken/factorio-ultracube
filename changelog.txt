@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: ???
+  Changes:
+    - Added optional compatibility with Lighted Electric Poles +
   Bugfixes:
     - Fixed that some entities added by the compact circuits mod couldn't be built by construction robots.
 ---------------------------------------------------------------------------------------------------
