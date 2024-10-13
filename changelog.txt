@@ -3,6 +3,8 @@ Version: 0.5.7
 Date: ???
   Changes:
     - Added optional compatibility with Lighted Electric Poles +.
+    - Added optional compatibility with Power Combinator.
+    - Added optional compatibility with LTN Combinator Modernized.
   Bugfixes:
     - Fixed that some entities added by the Compact Circuits mod couldn't be built by construction robots.
     - Chests added by Renai Transportation now match the inventory capacity of Ultracube chests.

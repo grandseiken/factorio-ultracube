@@ -127,9 +127,10 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Jetpack](https://mods.factorio.com/mod/jetpack) | |
 | [Larger Lamps](https://mods.factorio.com/mod/DeadlockLargerLamp) | |
 | [Lighted Electric Poles +](https://mods.factorio.com/mod/LightedPolesPlus) | |
-| [LTN - Logistic Train Network](https://mods.factorio.com/mod/LogisticTrainNetwork) | |
+| [LTN - Logistic Train Network](https://mods.factorio.com/mod/LogisticTrainNetwork) | [LTN Combinator Modernized](https://mods.factorio.com/mod/LTN_Combinator_Modernized) is also supported. |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
+| [Power Combinator](https://mods.factorio.com/mod/power-combinator) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
