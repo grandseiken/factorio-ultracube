@@ -126,6 +126,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some aspects substantially: leave out for a bigger challenge |
 | [Jetpack](https://mods.factorio.com/mod/jetpack) | |
 | [Larger Lamps](https://mods.factorio.com/mod/DeadlockLargerLamp) | |
+| [Lighted Electric Poles +](https://mods.factorio.com/mod/LightedPolesPlus) | |
 | [LTN - Logistic Train Network](https://mods.factorio.com/mod/LogisticTrainNetwork) | |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
