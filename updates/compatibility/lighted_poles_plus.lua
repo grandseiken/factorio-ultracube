@@ -1,18 +1,18 @@
 if mods["LightedPolesPlus"] then
-  local med_pole = data.raw.recipe["lighted-medium-electric-pole"]
   -- Medium pole is special because it starts unlocked.
-  if med_pole ~= nil then
-    med_pole.category = "cube-fabricator-handcraft"
+  if data.raw.recipe["lighted-medium-electric-pole"] then
     local technology = data.raw.technology["cube-optics"]
     table.insert(technology.effects, {type = "unlock-recipe", recipe = "lighted-medium-electric-pole"})
   end
-  for name, recipe in pairs(data.raw.recipe) do
-    if name:find("^lighted-") then
+  for _, name in pairs({"lighted-big-electric-pole",
+                        "lighted-medium-electric-pole",
+                        "lighted-substation"}) do
+    local recipe = data.raw.recipe[name]
+    if recipe then
       recipe.category = "cube-fabricator-handcraft"
-      if recipe.order and recipe.order:find("^cube-") == nil then
-        recipe.order = "cube-"..recipe.order
+      if recipe.order then
+        recipe.order = "cube-" .. recipe.order
       end
     end
   end
-
 end
