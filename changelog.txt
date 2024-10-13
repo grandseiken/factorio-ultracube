@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
-Date: ???
+Date: 13.10.2024
   Changes:
     - Added optional compatibility with Lighted Electric Poles +.
     - Added optional compatibility with Power Combinator.
