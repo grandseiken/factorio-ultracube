@@ -42,20 +42,20 @@ local function fast_replace(e, name, spill)
 end
 
 function linked_entities.on_load()
-  overload_sprites = global.overload_sprites
+  overload_sprites = storage.overload_sprites
 end
 
 local function on_change(entity)
   -- TODO: this could be changed to do chunk-caching instead if it becomes a problem.
   if not entity or entity.name == "cube-beacon" or cube_management.module_machines()[entity.name] then
-    global.module_machines_ticks = entity_cache.by_tick_size
+    storage.module_machines_ticks = entity_cache.by_tick_size
   end
 end
 
 function linked_entities.refresh()
   if not overload_sprites then
     overload_sprites = {}
-    global.overload_sprites = overload_sprites
+    storage.overload_sprites = overload_sprites
   end
   on_change(nil)
 end
@@ -83,8 +83,8 @@ function linked_entities.tick(tick)
   local cache = entity_cache.get()
   local tick_index = tick % entity_cache.by_tick_size
 
-  if global.module_machines_ticks and global.module_machines_ticks > 0 then
-    global.module_machines_ticks = global.module_machines_ticks - 1
+  if storage.module_machines_ticks and storage.module_machines_ticks > 0 then
+    storage.module_machines_ticks = storage.module_machines_ticks - 1
     local module_machines = cache.by_name_by_tick["__module-machines__"]
     if module_machines then
       for _, e in pairs(module_machines[tick_index]) do
@@ -181,10 +181,10 @@ function linked_entities.tick(tick)
 
   local nuclear_reactors = cache.by_name["cube-nuclear-reactor"]
   if nuclear_reactors then
-    local reactor_hysteresis = global.reactor_hysteresis
+    local reactor_hysteresis = storage.reactor_hysteresis
     if not reactor_hysteresis then
       reactor_hysteresis = {}
-      global.reactor_hysteresis = reactor_hysteresis
+      storage.reactor_hysteresis = reactor_hysteresis
     end
     for k, timer in pairs(reactor_hysteresis) do
       if timer > 0 then

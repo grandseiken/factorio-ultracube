@@ -27,10 +27,10 @@ end
 local transition = {}
 
 function transition.tick(tick)
-  local state = global.transition_state
+  local state = storage.transition_state
   if not state then
-    global.transition_state = {}
-    state = global.transition_state
+    storage.transition_state = {}
+    state = storage.transition_state
   end
 
   local cache = entity_cache.get()

@@ -130,8 +130,8 @@ end
 
 local function on_player_created(e)
   local player = game.get_player(e.player_index)
-  if not global.cube_given then
-    global.cube_given = true
+  if not storage.cube_given then
+    storage.cube_given = true
     create_initial_cube(player)
   end
 
@@ -364,7 +364,7 @@ local function remote_hint_entity(entity)
 end
 
 local function remote_cube_info()
-  return util.table.deepcopy(global.cube_remote)
+  return util.table.deepcopy(storage.cube_remote)
 end
 
 local function remote_cube_item_prototypes()
@@ -379,7 +379,7 @@ end
 local function better_victory_screen_statistics()
   local force = game.forces["player"]
   local stats = {}
-  local victory_statistics = global.victory_statistics
+  local victory_statistics = storage.victory_statistics
 
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local cube_utilisation = victory_statistics.cube_working_samples /

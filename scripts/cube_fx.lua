@@ -40,24 +40,24 @@ local cube_fx_data = nil
 local cube_fx = {}
 
 function cube_fx.refresh()
-  global.cube_fx_data = {
+  storage.cube_fx_data = {
     last_locomotives = {},
   }
 
-  global.victory_statistics = global.victory_statistics or {
+  storage.victory_statistics = storage.victory_statistics or {
     distance_travelled_by_cube = 0,
     cube_last_position = nil,
     cube_idle_samples = 0,
     cube_working_samples = 0,
   }
 
-  cube_fx_data = global.cube_fx_data
-  victory_statistics = global.victory_statistics
+  cube_fx_data = storage.cube_fx_data
+  victory_statistics = storage.victory_statistics
 end
 
 function cube_fx.on_load()
-  cube_fx_data = global.cube_fx_data
-  victory_statistics = global.victory_statistics
+  cube_fx_data = storage.cube_fx_data
+  victory_statistics = storage.victory_statistics
 end
 
 local alert_type_custom = defines.alert_type.custom
@@ -508,10 +508,10 @@ local function is_cube_working_character(entity, item)
 end
 
 local function track_statistics(size, results)
-  local cube_remote = global.cube_remote
+  local cube_remote = storage.cube_remote
   if not cube_remote then
     cube_remote = {}
-    global.cube_remote = cube_remote
+    storage.cube_remote = cube_remote
   end
 
   -- Track distance only when there's a single cube, since inconsistencies in result ordering

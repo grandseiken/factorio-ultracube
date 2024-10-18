@@ -56,9 +56,9 @@ function tech_unlock.trigger(force, technology_name, unlocked)
     force.technologies["cube-resonance-cascade"].enabled = unlocked
     force.technologies["cube-complete-annihilation-card"].enabled = unlocked
   elseif technology_name == "cube-everything" then
-    local state = global.cube_victory_state
+    local state = storage.cube_victory_state
     if state ~= "victorious" then
-      global.cube_victory_state = "victorious"
+      storage.cube_victory_state = "victorious"
 
       local bvs = remote.interfaces["better-victory-screen"]
       if bvs and bvs["trigger_victory"] then

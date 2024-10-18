@@ -7,13 +7,14 @@
     "remote",
     "defines",
     "script",
-    "global",
     "game",
     "pipecoverspictures",
     "commands",
     "mods",
     "rendering",
-    "settings"
+    "settings",
+    "storage",
+    "feature_flags"
   ],
   "Lua.diagnostics.disable": [
     "lowercase-global",

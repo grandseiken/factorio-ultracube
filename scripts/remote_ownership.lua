@@ -3,14 +3,14 @@ local remote_ownership = {}
 local max_timeout_ticks = 60 * 60
 
 local function get_ownership_table()
-  local t = global.remote_ownership_table
+  local t = storage.remote_ownership_table
   if not t then
     t = {}
-    global.remote_ownership_table = t
-    global.remote_ownership_next_id = 1
-    global.remote_ownership_free_list = {}
+    storage.remote_ownership_table = t
+    storage.remote_ownership_next_id = 1
+    storage.remote_ownership_free_list = {}
   end
-  return t, global.remote_ownership_free_list
+  return t, storage.remote_ownership_free_list
 end
 
 function remote_ownership.create_token(item, count, timeout_ticks, data)
@@ -19,8 +19,8 @@ function remote_ownership.create_token(item, count, timeout_ticks, data)
   if token_id then
     free_list[token_id] = nil
   else
-    token_id = global.remote_ownership_next_id
-    global.remote_ownership_next_id = token_id + 1
+    token_id = storage.remote_ownership_next_id
+    storage.remote_ownership_next_id = token_id + 1
   end
 
   ownership_table[token_id] = {
@@ -62,7 +62,7 @@ function remote_ownership.release_token(token_id)
   local ownership_table, free_list = get_ownership_table()
   local data = ownership_table[token_id]
   if not data then
-    if token_id < global.remote_ownership_next_id and not free_list[token_id] then
+    if token_id < storage.remote_ownership_next_id and not free_list[token_id] then
       free_list[token_id] = true
     end
     return nil
@@ -75,7 +75,7 @@ function remote_ownership.release_token(token_id)
 end
 
 function remote_ownership.tick()
-  local ownership_table = global.remote_ownership_table
+  local ownership_table = storage.remote_ownership_table
   if not ownership_table then
     return
   end

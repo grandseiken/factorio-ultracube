@@ -96,20 +96,20 @@ local function get_hidden_surface()
 end
 
 local function get_combine_table()
-  if global.combine_table then
-    return global.combine_table
+  if storage.combine_table then
+    return storage.combine_table
   end
   local combine_table = {}
-  global.combine_table = combine_table
+  storage.combine_table = combine_table
   return combine_table
 end
 
 local function get_inverse_table()
-  if global.combine_inverse_table then
-    return global.combine_inverse_table
+  if storage.combine_inverse_table then
+    return storage.combine_inverse_table
   end
   local inverse_table = {}
-  global.combine_inverse_table = inverse_table
+  storage.combine_inverse_table = inverse_table
   return inverse_table
 end
 

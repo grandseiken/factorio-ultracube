@@ -52,18 +52,18 @@ local search_result_weight = {
 local cube_search = {}
 
 function cube_search.refresh()
-  global.cube_search_data = {
+  storage.cube_search_data = {
     last_tick = nil,
     last_entities = nil,
     search_results = nil,
     pickups = nil,
     was_refreshed = true,
   }
-  cube_search_data = global.cube_search_data
+  cube_search_data = storage.cube_search_data
 end
 
 function cube_search.on_load()
-  cube_search_data = global.cube_search_data
+  cube_search_data = storage.cube_search_data
 end
 
 local result_set = {
@@ -924,7 +924,7 @@ local function cube_search_update(tick)
   local last_entities_size = cube_search_data.last_entities_size
 
   local done = false
-  local ownership_table = global.remote_ownership_table
+  local ownership_table = storage.remote_ownership_table
   if ownership_table then
     done = cube_search_remote(ownership_table)
   end

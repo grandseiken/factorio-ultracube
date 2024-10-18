@@ -65,12 +65,12 @@ function teleport.on_teleport(event)
   end
 
   teleport_fx(src_teleporter)
-  if not global.teleport_table then
-    global.teleport_table = {}
+  if not storage.teleport_table then
+    storage.teleport_table = {}
   end
-  local entry = global.teleport_table[src_teleporter.unit_number]
+  local entry = storage.teleport_table[src_teleporter.unit_number]
   if entry then
-    global.teleport_table[src_teleporter.unit_number] = nil
+    storage.teleport_table[src_teleporter.unit_number] = nil
     local position = entry.dst_teleporter.position
     position.y = position.y + 1.25
     for _, player in ipairs(entry.send_players) do
@@ -117,7 +117,7 @@ function teleport.on_teleport(event)
       insert_or_drop(src_teleporter, swap_item)
       swap_inventory.clear()
     end
-    global.teleport_table[dst_teleporter.unit_number] = {
+    storage.teleport_table[dst_teleporter.unit_number] = {
       src_teleporter = src_teleporter,
       dst_teleporter = dst_teleporter,
       send_players = send_players,
