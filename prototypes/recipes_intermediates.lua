@@ -307,12 +307,12 @@ data:extend({
     type = "recipe",
     name = "cube-condensed-fuel",
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "sulfur", amount = 20},
       {type = "fluid", name = "cube-unstable-gas", amount = 4000},
     },
     results = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "item", name = "cube-condensed-fuel", amount = 50}
     },
     main_product = "cube-condensed-fuel",
@@ -327,13 +327,13 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/deeply-condensed-fuel.png",
     icon_size = 128,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "sulfur", amount = 100},
       {type = "item", name = "cube-deep-powder", amount = 200},
       {type = "fluid", name = "cube-unstable-gas", amount = 8000},
     },
     results = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
       {type = "item", name = "cube-condensed-fuel", amount = 160}
     },
     category = "cube-fuel-refinery",
@@ -347,14 +347,14 @@ data:extend({
     type = "recipe",
     name = "cube-uranium-fuel-cell",
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-rare-metals", amount = 20},
       {type = "item", name = "uranium-235", amount = 1},
       {type = "item", name = "uranium-238", amount = 19},
     },
     results = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {name = "uranium-fuel-cell", amount = 10},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "uranium-fuel-cell", amount = 10},
     },
     energy_required = 2,
     main_product = "uranium-fuel-cell",
@@ -370,15 +370,15 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/uranium-fuel-cell-enhanced.png",
     icon_size = 128,
     ingredients = {
-      {name = "cube-ultradense-utility-cube", amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-rare-metals", amount = 80},
       {type = "item", name = "uranium-235", amount = 5},
       {type = "item", name = "uranium-238", amount = 75},
       {type = "fluid", name = "cube-radioactive-sludge", amount = 1200},
     },
     results = {
-      {name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {name = "uranium-fuel-cell", amount = 40},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "uranium-fuel-cell", amount = 40},
     },
     energy_required = 2,
     category = "cube-fuel-refinery",

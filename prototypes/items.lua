@@ -421,7 +421,7 @@ data:extend({
     subgroup = "cube-experimental",
     order = "cube-z[1-teleporter-activation]",
     stack_size = 10,
-    flags = {"hidden"},
+    hidden = true,
   },
 
   {

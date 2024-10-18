@@ -185,7 +185,7 @@ local function make_reactor_port(flip)
     icon = "__base__/graphics/icons/pump.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     placeable_by = {item = "cube-antimatter-reactor", count = 1},
     max_health = 1000,
     drawing_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -194,6 +194,7 @@ local function make_reactor_port(flip)
     selection_box = selection_box,
     selection_priority = 100,
     allow_copy_paste = false,
+    hidden = true,
 
     fluid_box = {
       production_type = "input",
@@ -320,7 +321,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
     collision_mask = {},
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
@@ -329,6 +330,7 @@ data:extend({
     selectable_in_game = false,
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,
+    hidden = true,
 
     picture = util.empty_sprite(),
     crafting_categories = {"cube-uncraftable"},

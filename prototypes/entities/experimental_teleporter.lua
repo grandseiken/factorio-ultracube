@@ -269,7 +269,7 @@ data:extend({
     localised_description = {"entity-description.cube-experimental-teleporter"},
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
     icon_size = 64, icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
     collision_mask = {},
     selection_box = {{-3, -2}, {3, 3.4}},
@@ -277,6 +277,7 @@ data:extend({
     selectable_in_game = false,
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,
+    hidden = true,
 
     picture = util.empty_sprite(),
     crafting_categories = {"cube-uncraftable"},

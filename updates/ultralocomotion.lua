@@ -19,10 +19,10 @@ for _, name in ipairs(fuel_items) do
       order = base.order,
       stack_size = 1,
       flags = {
-        "hidden",
         "hide-from-bonus-gui",
         "hide-from-fuel-tooltip",
       },
+      hidden = true,
     },
   })
 end
@@ -40,11 +40,7 @@ for _, car in pairs(data.raw.car) do
   cube_car.immune_to_tree_impacts = true
   cube_car.immune_to_rock_impacts = true
   cube_car.immune_to_cliff_impacts = true
-  if cube_car.flags then
-    table.insert(cube_car.flags, "hidden")
-  else
-    cube_car.flags = {"hidden"}
-  end
+  cube_car.hidden = true
 
   cube_car.resistances = cube_car.resistances or {}
   for _, resistance in pairs(cube_car.resistances) do

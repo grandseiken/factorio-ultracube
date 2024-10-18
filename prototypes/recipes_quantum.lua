@@ -16,7 +16,7 @@ data:extend({
     subgroup = "cube-research-quantum",
     order = "cube-x[0]",
     stack_size = 1,
-    flags = {"hidden"},
+    hidden = true,
   },
   {
     type = "item",
@@ -26,7 +26,7 @@ data:extend({
     subgroup = "cube-research-quantum",
     order = "cube-x[1]",
     stack_size = 1,
-    flags = {"hidden"},
+    hidden = true,
   },
 
   {
@@ -149,8 +149,8 @@ for i = 0, 5 do
     {
       type = "recipe",
       name = "cube-qubit-next-" .. ((i + 1) % 6),
-      ingredients = {{qubit, 1}},
-      results = {{qubit_next, 1}},
+      ingredients = {{type = "item", name = qubit, amount = 1}},
+      results = {{type = "item", name = qubit_next, amount = 1}},
       energy_required = 1,
       category = "cube-particle-phase-aligner",
       enabled = false,
@@ -162,7 +162,7 @@ for i = 0, 5 do
       localised_name = {"recipe-name.cube-qubit-recipe-hidden"},
       icon = icon,
       icon_size = 64, icon_mipmaps = 4,
-      ingredients = {{qubit, 1}},
+      ingredients = {{type = "item", name = qubit, amount = 1}},
       results = {
         {type = "item", name = "cube-qubit", amount = 0},
         {type = "item", name = "cube-quantum-research-data", amount = 0},

@@ -203,7 +203,7 @@ data:extend({
     subgroup = "cube-final-machines",
     order = "cube-4[z-construct]",
     stack_size = 1,
-    flags = {"hidden"},
     durability = 1,
+    hidden = true,
   },
 })

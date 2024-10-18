@@ -260,9 +260,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {{type = "item", name = "uranium-ore", amount = 10}},
     results = {
-      {name = "cube-uranium-234", probability = 0.0001, amount = 1},
-      {name = "uranium-235", probability = 0.007, amount = 1},
-      {name = "uranium-238", probability = 0.993, amount = 1},
+      {type = "item", name = "cube-uranium-234", probability = 0.0001, amount = 1},
+      {type = "item", name = "uranium-235", probability = 0.007, amount = 1},
+      {type = "item", name = "uranium-238", probability = 0.993, amount = 1},
     },
     energy_required = 10,
     category = "centrifuging",

@@ -32,8 +32,8 @@ if mods["textplates"] then
       data.raw.item[small].order = "cube-" .. data.raw.item[small].order
       data.raw.item[large].order = "cube-" .. data.raw.item[large].order
     else
-      data.raw.item[small].flags = {"hidden"}
-      data.raw.item[large].flags = {"hidden"}
+      data.raw.item[small].hidden = true
+      data.raw.item[large].hidden = true
     end
 
     if ingredient and prerequisite then

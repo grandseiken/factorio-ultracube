@@ -55,7 +55,7 @@ data.raw.accumulator.accumulator.collision_mask =
 
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"
-data.raw.item["centrifuge"].stack_size = "20"
+data.raw.item["centrifuge"].stack_size = 20
 data.raw.item["heat-pipe"].subgroup = "cube-advanced-power"
 data.raw.item["heat-exchanger"].subgroup = "cube-advanced-power"
 data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_minute = 0

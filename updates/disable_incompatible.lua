@@ -115,7 +115,6 @@ local item_prototypes = {
   "spidertron-remote",
   "armor",
   "tool",
-  "mining-tool",
   "repair-tool",
   "rail-planner",
   "artillery-wagon",
@@ -151,20 +150,13 @@ local function is_compatible_entity(t)
   return t and (is_compatible(t) or is_compatible_item(data.raw.item[t.name]))
 end
 
-local function add_hidden_flag(t)
-  if not t.flags then
-    t.flags = {}
-  end
-  t.flags[#t.flags + 1] = "hidden"
-end
-
 for _, v in ipairs(entity_prototypes) do
   for _, t in pairs(data.raw[v]) do
     if vanilla_item_whitelist[t.name] or is_compatible_entity(t) then
       t.order = add_prefix(t.order)
     else
       t.next_upgrade = nil
-      add_hidden_flag(t)
+      t.hidden = true
     end
   end
 end
@@ -174,7 +166,7 @@ for _, v in ipairs(item_prototypes) do
     if vanilla_item_whitelist[t.name] or is_compatible_item(t) then
       t.order = add_prefix(t.order)
     else
-      add_hidden_flag(t)
+      t.hidden = true
     end
   end
 end

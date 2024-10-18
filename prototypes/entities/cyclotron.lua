@@ -178,7 +178,7 @@ data:extend({
     name = "cube-cyclotron-interface",
     icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
     icon_size = 128, icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-rotatable", "not-blueprintable", "not-deconstructable"},
+    flags = {"not-repairable", "not-rotatable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
     collision_mask = {collision_layers.selectable_composite},
     placeable_by = {item = "cube-cyclotron", count = 1},
@@ -186,6 +186,7 @@ data:extend({
     selection_box = {{-3, -1}, {0, 2}},
     allow_copy_paste = false,
     selectable_in_game = true,
+    hidden = true,
 
     energy_production = "0W",
     energy_usage = "0W",
