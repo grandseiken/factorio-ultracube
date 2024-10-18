@@ -1,6 +1,5 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 local turbine_persistent_sound = {
   variations = {
@@ -93,8 +92,10 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation", "not-rotatable"},
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
-                      collision_layers.local_turbine_forbidden_zone},
+    collision_mask = {
+      layers = {item = true, object = true, player = true, water_tile = true,
+                cube_local_turbine_forbidden_zone = true},
+    },
     selectable_in_game = false,
     minable = {mining_time = 0.25, result = "cube-local-turbine"},
     max_health = 200,
@@ -179,7 +180,7 @@ data:extend({
     minable = {mining_time = 0.25},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
-    collision_mask = {collision_layers.accumulator_forbidden_zone},
+    collision_mask = {layers = {cube_accumulator_forbidden_zone = true}},
     max_health = 100,
     maximum_wire_distance = 0.5,
     supply_area_distance = 3,
@@ -203,7 +204,7 @@ data:extend({
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
-    collision_mask = {collision_layers.local_turbine_forbidden_zone},
+    collision_mask = {layers = {cube_local_turbine_forbidden_zone = true}},
     max_health = 100,
     selectable_in_game = false,
     hidden = true,
@@ -218,7 +219,7 @@ data:extend({
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     selection_box = {{-3, -3}, {3, 3}},
     collision_box = {{-4.8, -4.8}, {4.8, 4.8}},
-    collision_mask = {collision_layers.local_turbine_forbidden_zone},
+    collision_mask = {layers = {cube_local_turbine_forbidden_zone = true}},
     max_health = 100,
     selectable_in_game = false,
     hidden = true,

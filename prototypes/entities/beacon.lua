@@ -2,7 +2,6 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/module_effects")
 require("__Ultracube__/prototypes/entities/lib/pipe")
-require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 local beacon_scale = 2
 local beacon_picture = {
@@ -126,7 +125,7 @@ data:extend({
     max_health = 300,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    collision_mask = {},
+    collision_mask = {layers = {}},
 
     energy_usage = "800kW",
     energy_source = {

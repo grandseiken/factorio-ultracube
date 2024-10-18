@@ -163,7 +163,7 @@ local function collision_entity(collision_box)
     flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
     collision_box = collision_box,
     picture = {filename = "__core__/graphics/empty.png", size = 1},
-    collision_mask = {"player-layer"},
+    collision_mask = {layers = {player = true}},
     squeak_behaviour = false,
   }
 end
@@ -185,7 +185,9 @@ data:extend({
     collision_box = {{-2.65, -1.9}, {2.65, 3.2}},
     selection_box = {{-3, -2}, {3, 3.4}},
     drawing_box = {{-3, -3}, {3, 3}},
-    collision_mask = {"item-layer", "object-layer", "water-tile"},
+    collision_mask = {
+      layers = {item = true, object = true, water_tile = true},
+    },
     -- Disable DLC silo behaviour even if space_travel feature flag is enabled.
     launch_to_space_platforms = false,
 
@@ -271,7 +273,7 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,
-    collision_mask = {},
+    collision_mask = {layers = {}},
     selection_box = {{-3, -2}, {3, 3.4}},
     allow_copy_paste = false,
     selectable_in_game = false,
@@ -291,7 +293,7 @@ data:extend({
     type = "simple-entity",
     name = "cube-experimental-teleporter-overlay",
     flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
-    collision_mask = {},
+    collision_mask = {layers = {}},
     render_layer = "higher-object-above",
     picture = {
       layers = {
@@ -309,7 +311,7 @@ data:extend({
     type = "rocket-silo-rocket",
     name = "cube-experimental-teleporter-rocket",
     flags = {"not-on-map"},
-    collision_mask = {"not-colliding-with-itself"},
+    collision_mask = {not_colliding_with_itself = true, layers = {}},
     selection_box = {{0, 0}, {0, 0}},
     inventory_size = 1,
     rising_speed = 1,

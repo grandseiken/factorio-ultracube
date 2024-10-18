@@ -1,4 +1,3 @@
-require("__Ultracube__/prototypes/entities/lib/collision_layers")
 local util = require("__core__/lualib/util.lua")
 
 data.raw.generator["steam-engine"].maximum_temperature = 215
@@ -49,9 +48,10 @@ data.raw.locomotive.locomotive.energy_source.burnt_inventory_size = 1
 data.raw.accumulator.accumulator.energy_source.input_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.output_flow_limit = "500kW"
 data.raw.accumulator.accumulator.energy_source.buffer_capacity = "10MJ"
-data.raw.accumulator.accumulator.collision_mask =
-    {"item-layer", "object-layer", "player-layer", "water-tile",
-     collision_layers.accumulator_forbidden_zone}
+data.raw.accumulator.accumulator.collision_mask = {
+  layers = {item = true, object = true, player = true, water_tile = true,
+            cube_accumulator_forbidden_zone = true},
+}
 
 data.raw.item["centrifuge"].subgroup = "cube-processing-machines"
 data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"

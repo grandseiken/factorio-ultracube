@@ -1,6 +1,7 @@
 require("menu_simulations.menu_simulations")
 
 require("prototypes.autoplace")
+require("prototypes.collision")
 require("prototypes.custom_inputs")
 require("prototypes.equipment")
 require("prototypes.fluids")
