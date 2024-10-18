@@ -189,8 +189,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-    circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+    circuit_connector = circuit_connector_definitions["accumulator"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_output_signal = { type = "virtual", name = "signal-A" },
   },

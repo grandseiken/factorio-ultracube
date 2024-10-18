@@ -4,7 +4,7 @@ local sounds = require("__base__/prototypes/entity/sounds")
 -- Reinstate 1.1 filter inserters.
 data.raw.inserter["inserter"].filter_count = 0
 data.raw.inserter["fast-inserter"].filter_count = 0
-data.raw.inserter["stack-inserter"].filter_count = 0
+data.raw.inserter["bulk-inserter"].filter_count = 0
 data.raw.inserter["long-handed-inserter"].filter_count = 0
 
 data:extend({
@@ -91,8 +91,7 @@ data:extend({
       }
     },
 
-    circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-    circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+    circuit_connector = circuit_connector_definitions["inserter"],
     circuit_wire_max_distance = inserter_circuit_wire_max_distance,
     default_stack_control_input_signal = inserter_default_stack_control_input_signal
   },
@@ -179,8 +178,7 @@ data:extend({
         scale = 0.5,
       }
     },
-    circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-    circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+    circuit_connector = circuit_connector_definitions["inserter"],
     circuit_wire_max_distance = inserter_circuit_wire_max_distance,
     default_stack_control_input_signal = inserter_default_stack_control_input_signal,
   },
@@ -302,8 +300,7 @@ data:extend({
         scale = 0.5,
       },
     },
-    circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-    circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+    circuit_connector = circuit_connector_definitions["inserter"],
     circuit_wire_max_distance = inserter_circuit_wire_max_distance,
     default_stack_control_input_signal = inserter_default_stack_control_input_signal,
   },

@@ -1602,8 +1602,7 @@ data:extend({
     monitor_visualization_tint = {r = 78, g = 173, b = 255},
     next_upgrade = "cube-electric-mining-drill-mk2",
     fast_replaceable_group = "electric-mining-drill",
-    circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
-    circuit_connector_sprites = circuit_connector_definitions["electric-mining-drill"].sprites,
+    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 
@@ -2975,8 +2974,7 @@ data:extend({
     monitor_visualization_tint = {r = 78, g = 173, b = 255},
     fast_replaceable_group = "electric-mining-drill",
 
-    circuit_wire_connection_points = circuit_connector_definitions["electric-mining-drill"].points,
-    circuit_connector_sprites = circuit_connector_definitions["electric-mining-drill"].sprites,
+    circuit_connector = circuit_connector_definitions["electric-mining-drill"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

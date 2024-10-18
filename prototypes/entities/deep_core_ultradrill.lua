@@ -2,7 +2,7 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 require("__Ultracube__/prototypes/entities/lib/module_effects")
 
-circuit_connector_definitions["cube-deep-core-ultradrill"] = circuit_connector_definitions.create(universal_connector_template, {
+circuit_connector_definitions["cube-deep-core-ultradrill"] = circuit_connector_definitions.create_vector(universal_connector_template, {
   {
     variation = 0,
     main_offset = util.by_pixel(5, -118),
@@ -126,8 +126,7 @@ data:extend({
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       max_sounds_per_type = 2,
     },
-    circuit_wire_connection_points = circuit_connector_definitions["cube-deep-core-ultradrill"].points,
-    circuit_connector_sprites = circuit_connector_definitions["cube-deep-core-ultradrill"].sprites,
+    circuit_connector = circuit_connector_definitions["cube-deep-core-ultradrill"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
 })

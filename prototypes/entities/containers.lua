@@ -1,13 +1,11 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-circuit_connector_definitions["cube-big-container"] = circuit_connector_definitions.create(universal_connector_template, {
-  {
+circuit_connector_definitions["cube-big-container"] = circuit_connector_definitions.create_single(universal_connector_template, {
     variation = 26,
     main_offset = util.by_pixel(0.5, -2.6),
     shadow_offset = util.by_pixel(3.5, 0),
     show_shadow = true,
-  },
 })
 
 data:extend({
@@ -36,8 +34,7 @@ data:extend({
       height = 340,
       scale = 0.25,
     },
-    circuit_wire_connection_point = circuit_connector_definitions["chest"].points,
-    circuit_connector_sprites = circuit_connector_definitions["chest"].sprites,
+    circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -82,8 +79,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    circuit_wire_connection_point = circuit_connector_definitions["cube-big-container"].points,
-    circuit_connector_sprites = circuit_connector_definitions["cube-big-container"].sprites,
+    circuit_connector = circuit_connector_definitions["cube-big-container"],
     circuit_wire_max_distance = 20,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
@@ -189,8 +185,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
   {
@@ -301,8 +296,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    circuit_wire_connection_points = circuit_connector_definitions["storage-tank"].points,
-    circuit_connector_sprites = circuit_connector_definitions["storage-tank"].sprites,
+    circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 20,
   },
 })
