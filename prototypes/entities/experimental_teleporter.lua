@@ -186,6 +186,8 @@ data:extend({
     selection_box = {{-3, -2}, {3, 3.4}},
     drawing_box = {{-3, -3}, {3, 3}},
     collision_mask = {"item-layer", "object-layer", "water-tile"},
+    -- Disable DLC silo behaviour even if space_travel feature flag is enabled.
+    launch_to_space_platforms = false,
 
     energy_usage = "100MW",  -- Crafting.
     active_energy_usage = "100MW",  -- ??? not sure when this applies.

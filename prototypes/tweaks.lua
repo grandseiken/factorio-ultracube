@@ -1,4 +1,5 @@
 require("__Ultracube__/prototypes/entities/lib/collision_layers")
+local util = require("__core__/lualib/util.lua")
 
 data.raw.generator["steam-engine"].maximum_temperature = 215
 data.raw.pump.pump.pumping_speed = 250
@@ -117,3 +118,13 @@ data.raw["generator-equipment"]["fusion-reactor-equipment"].categories = {"cube-
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/battery-mk2-equipment.png"
 data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.hr_version.filename = "__Ultracube__/assets/equipment/hr-battery-mk2-equipment.png"
+
+if feature_flags.space_travel then
+  -- With the space travel feature activated but no space-age mod enabled, we have to define
+  -- the empty_space tile to prevent the game crashing.
+  local empty_space = util.table.deepcopy(data.raw.tile["out-of-map"])
+  empty_space.name = "empty-space"
+  empty_space.order = "z[other]-b[empty-space]"
+  empty_space.subgroup = "special-tiles"
+  data:extend({empty_space})
+end
