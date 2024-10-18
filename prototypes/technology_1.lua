@@ -307,12 +307,12 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stack-inserters",
+    name = "cube-bulk-inserters",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/stack-inserter.png",
+    icon = "__base__/graphics/technology/bulk-inserter.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-stack-inserter"},
-      {type = "unlock-recipe", recipe = "cube-stack-filter-inserter"},
+      {type = "unlock-recipe", recipe = "cube-bulk-inserter"},
+      {type = "unlock-recipe", recipe = "cube-bulk-filter-inserter"},
     },
     prerequisites = {
       "cube-inserters",

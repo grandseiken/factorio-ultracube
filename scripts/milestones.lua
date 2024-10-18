@@ -46,7 +46,7 @@ local milestones = {
   {type = "item",  name = "cube-resplendent-plate",  quantity = 10000, next = "x10", hidden = true},
 
   {type = "group", name = "Logistics"},
-  {type = "item",  name = "stack-inserter",               quantity = 1},
+  {type = "item",  name = "bulk-inserter",                quantity = 1},
   {type = "item",  name = "aai-v2-loader",                quantity = 1},
   {type = "item",  name = "car",                          quantity = 1},
   {type = "item",  name = "locomotive",                   quantity = 1},
