@@ -214,7 +214,7 @@ function linked_entities.tick(tick)
         elseif status == defines.entity_status.full_burnt_result_output or
                status == defines.entity_status.no_fuel then
           burner.currently_burning = nil
-          reactor.surface.spill_item_stack(reactor.position, {name = "used-up-uranium-fuel-cell", count = 1}, false, nil, false)
+          reactor.surface.spill_item_stack(reactor.position, {name = "depleted-uranium-fuel-cell", count = 1}, false, nil, false)
         end
       end
       if new_entity then

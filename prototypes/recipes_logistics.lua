@@ -799,7 +799,7 @@ data:extend({
       {type = "item", name = "cube-basic-matter-unit", amount = 2},
       {type = "item", name = "cube-rare-metals", amount = 4},
     },
-    results = {{type = "item", name = "empty-barrel", amount = 1}},
+    results = {{type = "item", name = "barrel", amount = 1}},
     energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,

@@ -112,7 +112,7 @@ data:extend({
     type = "technology",
     name = "cube-fusion-reactor-equipment",
     icon_size = 256, icon_mipmaps = 4,
-    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fusion-reactor-equipment.png"),
+    icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fission-reactor-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-fusion-reactor-equipment"},
     },

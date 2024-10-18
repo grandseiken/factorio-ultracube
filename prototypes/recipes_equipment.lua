@@ -86,7 +86,7 @@ data:extend({
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 100},
       {type = "item", name = "cube-spectral-processor", amount = 100},
     },
-    results = {{type = "item", name = "fusion-reactor-equipment", amount = 1}},
+    results = {{type = "item", name = "fission-reactor-equipment", amount = 1}},
     energy_required = 20,
     category = "cube-fabricator-handcraft",
     enabled = false,

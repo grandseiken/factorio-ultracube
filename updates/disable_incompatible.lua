@@ -5,13 +5,13 @@ local vanilla_item_whitelist = make_set({
   "raw-fish",
   "water",
   "steam",
-  "empty-barrel",
+  "barrel",
   "sulfuric-acid",
   "uranium-ore",
   "uranium-235",
   "uranium-238",
   "uranium-fuel-cell",
-  "used-up-uranium-fuel-cell",
+  "depleted-uranium-fuel-cell",
   "stone",
   "stone-brick",
   "wood",
@@ -88,7 +88,7 @@ local vanilla_item_whitelist = make_set({
   "exoskeleton-equipment",
   "battery-mk2-equipment",
   "personal-roboport-mk2-equipment",
-  "fusion-reactor-equipment",
+  "fission-reactor-equipment",
 })
 
 local entity_prototypes = {

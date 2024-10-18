@@ -86,11 +86,11 @@ data.raw["splitter"]["express-splitter"].next_upgrade = "cube-v4-splitter"
 data.raw.item["uranium-fuel-cell"].stack_size = 10
 data.raw.item["uranium-fuel-cell"].fuel_value = "4GJ"
 data.raw.item["uranium-fuel-cell"].subgroup = "cube-uranium"
-data.raw.item["used-up-uranium-fuel-cell"].stack_size = 10
-data.raw.item["used-up-uranium-fuel-cell"].subgroup = "cube-uranium"
+data.raw.item["depleted-uranium-fuel-cell"].stack_size = 10
+data.raw.item["depleted-uranium-fuel-cell"].subgroup = "cube-uranium"
 
-data.raw.item["empty-barrel"].subgroup = "cube-barrel"
-data.raw.item["empty-barrel"].order = "cube-0"
+data.raw.item["barrel"].subgroup = "cube-barrel"
+data.raw.item["barrel"].order = "cube-0"
 
 data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/assets/icons/battery-mk2-equipment.png"
 data.raw.item["night-vision-equipment"].subgroup = "cube-equipment"
@@ -100,16 +100,16 @@ data.raw.item["personal-roboport-mk2-equipment"].subgroup = "cube-equipment"
 data.raw.item["battery-mk2-equipment"].subgroup = "cube-equipment-power"
 data.raw.item["battery-mk2-equipment"].order = "cube-b[battery]-b[battery-mk2-equipment]"
 data.raw.item["battery-mk2-equipment"].icon = "__Ultracube__/assets/icons/battery-mk2-equipment.png"
-data.raw.item["fusion-reactor-equipment"].subgroup = "cube-equipment-power"
-data.raw.item["fusion-reactor-equipment"].order = "cube-0[reactor]-a[reactor-equipment]"
-data.raw["generator-equipment"]["fusion-reactor-equipment"].power = "1500kW"
+data.raw.item["fission-reactor-equipment"].subgroup = "cube-equipment-power"
+data.raw.item["fission-reactor-equipment"].order = "cube-0[reactor]-a[reactor-equipment]"
+data.raw["generator-equipment"]["fission-reactor-equipment"].power = "1500kW"
 data.raw["night-vision-equipment"]["night-vision-equipment"].shape.height = 1
 data.raw["night-vision-equipment"]["night-vision-equipment"].categories = {"cube-armor"}
 data.raw["belt-immunity-equipment"]["belt-immunity-equipment"].categories = {"cube-armor"}
 data.raw["movement-bonus-equipment"]["exoskeleton-equipment"].categories = {"cube-armor"}
 data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].categories = {"cube-armor"}
-data.raw["generator-equipment"]["fusion-reactor-equipment"].categories = {"cube-armor"}
+data.raw["generator-equipment"]["fission-reactor-equipment"].categories = {"cube-armor"}
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/hr-battery-mk2-equipment.png"
 

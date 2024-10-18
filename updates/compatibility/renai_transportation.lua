@@ -427,7 +427,7 @@ if mods["RenaiTransportation"] then
         ingredients = {
           {type = "item", name = "cube-basic-matter-unit", amount = 600},
           {type = "item", name = "cube-nuclear-fuel", amount = 5},
-          {type = "item", name = "fusion-reactor-equipment", amount = 1},
+          {type = "item", name = "fission-reactor-equipment", amount = 1},
           {type = "item", name = "RTZiplineItem4", amount = 1},
         },
         result = "RTZiplineItem5",
