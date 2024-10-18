@@ -80,7 +80,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-fusion-reactor-equipment",
+    name = "cube-fission-reactor-equipment",
     ingredients = {
       {type = "item", name = "uranium-fuel-cell", amount = 20},
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 100},

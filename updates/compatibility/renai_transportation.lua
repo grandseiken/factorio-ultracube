@@ -521,7 +521,7 @@ if mods["RenaiTransportation"] then
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineRecipe5"},
         },
-        prerequisites = {"RTZiplineTech4", "cube-fusion-reactor-equipment"},
+        prerequisites = {"RTZiplineTech4", "cube-fission-reactor-equipment"},
         unit = tech_cost_unit("3", 200),  -- Matched tier of fusion reactor equipment.
       }
     })

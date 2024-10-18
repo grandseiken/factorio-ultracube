@@ -110,7 +110,7 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-fusion-reactor-equipment",
+    name = "cube-fission-reactor-equipment",
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fission-reactor-equipment.png"),
     effects = {
