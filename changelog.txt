@@ -3,6 +3,7 @@ Version: 0.6.0
 Date: ???
   Changes:
     - Ultracube is now (only) compatible with Factorio 2.0.
+    - This should be considered a beta release for 2.0 compatibility. Everything appears to be working, but there could still be some tendrils lurking somewhere.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 13.10.2024
