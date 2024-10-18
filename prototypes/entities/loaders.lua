@@ -35,13 +35,13 @@ AAILoaders.make_tier{
 }
 
 local function add_energy_source(t, energy_scale)
-  t.energy_per_item = "5KJ"
+  t.energy_per_item = "5kJ"
   t.energy_source = {
     type = "electric",
     usage_priority = "secondary-input",
     input_flow_limit = (energy_scale * 0.4) .. "MW",
     emissions_per_minute = 0,
-    drain = (energy_scale * 50) .. "KW",
+    drain = (energy_scale * 50) .. "kW",
   }
 end
 

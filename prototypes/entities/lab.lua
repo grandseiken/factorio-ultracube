@@ -158,9 +158,9 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      drain = "10KW",
+      drain = "10kW",
     },
-    energy_usage = "250KW",
+    energy_usage = "250kW",
     researching_speed = 1,
     inputs = {
       "cube-basic-contemplation-unit",

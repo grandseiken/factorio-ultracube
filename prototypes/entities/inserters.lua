@@ -27,8 +27,8 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     pickup_position = {0, -1},
     insert_position = {0, 1.2},
-    energy_per_movement = "8KJ",
-    energy_per_rotation = "8KJ",
+    energy_per_movement = "8kJ",
+    energy_per_rotation = "8kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -112,8 +112,8 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     pickup_position = {0, -1},
     insert_position = {0, 1.2},
-    energy_per_movement = "20KJ",
-    energy_per_rotation = "20KJ",
+    energy_per_movement = "20kJ",
+    energy_per_rotation = "20kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -235,8 +235,8 @@ data:extend({
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
     pickup_position = {0, -5},
     insert_position = {0, 5.2},
-    energy_per_movement = "40KJ",
-    energy_per_rotation = "40KJ",
+    energy_per_movement = "40kJ",
+    energy_per_rotation = "40kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",

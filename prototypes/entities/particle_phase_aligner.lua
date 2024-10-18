@@ -103,7 +103,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "200KW",
+    energy_usage = "200kW",
     ingredient_count = 1,
     module_specification = {module_slots = 0},
     allowed_effects = module_effects.none,

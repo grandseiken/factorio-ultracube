@@ -195,9 +195,9 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 0,
-      drain = "10KW",
+      drain = "10kW",
     },
-    energy_usage = "150KW",
+    energy_usage = "150kW",
 
     water_reflection = {
       pictures = {

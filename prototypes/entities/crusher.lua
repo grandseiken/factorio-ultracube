@@ -56,7 +56,7 @@ data:extend({
       type = "electric",
       usage_priority = "secondary-input",
       emissions_per_minute = 0,
-      drain = "10KW",
+      drain = "10kW",
     },
 
     water_reflection = {
@@ -73,7 +73,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "250KW",
+    energy_usage = "250kW",
     module_specification = {
       module_slots = 2,
       module_info_icon_shift = {0, 1.7},
