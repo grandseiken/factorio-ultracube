@@ -12,11 +12,11 @@ data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"
 data.raw["item-subgroup"]["transport"].group = "cube-tools"
 
 data.raw.container["iron-chest"].inventory_size = 20
-data.raw["logistic-container"]["logistic-chest-passive-provider"].inventory_size = 20
-data.raw["logistic-container"]["logistic-chest-active-provider"].inventory_size = 20
-data.raw["logistic-container"]["logistic-chest-buffer"].inventory_size = 20
-data.raw["logistic-container"]["logistic-chest-requester"].inventory_size = 20
-data.raw["logistic-container"]["logistic-chest-storage"].inventory_size = 20
+data.raw["logistic-container"]["passive-provider-chest"].inventory_size = 20
+data.raw["logistic-container"]["active-provider-chest"].inventory_size = 20
+data.raw["logistic-container"]["buffer-chest"].inventory_size = 20
+data.raw["logistic-container"]["requester-chest"].inventory_size = 20
+data.raw["logistic-container"]["storage-chest"].inventory_size = 20
 data.raw["repair-tool"]["repair-pack"].subgroup = "cube-repair"
 data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
 data.raw.inserter["stack-inserter"].stack_size_bonus = 3

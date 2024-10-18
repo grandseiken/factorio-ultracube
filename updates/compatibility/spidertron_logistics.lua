@@ -11,7 +11,7 @@ if mods["spidertron-logistics"] then
   local recipe = data.raw.recipe["spidertron-requester-chest"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {type = "item", name = "logistic-chest-requester", amount = 4},
+    {type = "item", name = "requester-chest", amount = 4},
     {type = "item", name = "cube-big-container", amount = 1},
     {type = "item", name = "spidertron-remote", amount = 1},
   }
@@ -19,7 +19,7 @@ if mods["spidertron-logistics"] then
   recipe = data.raw.recipe["spidertron-provider-chest"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {type = "item", name = "logistic-chest-passive-provider", amount = 4},
+    {type = "item", name = "passive-provider-chest", amount = 4},
     {type = "item", name = "cube-big-container", amount = 1},
     {type = "item", name = "spidertron-remote", amount = 1},
   }
