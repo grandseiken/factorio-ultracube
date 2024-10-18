@@ -74,10 +74,8 @@ data.raw.radar["radar"].vehicle_impact_sound = {
   filename = "__base__/sound/car-metal-impact.ogg",
   volume = 0.65,
 }
-data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png"
-data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png"
-data.raw.radar["radar"].pictures.layers[1].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png"
-data.raw.radar["radar"].pictures.layers[2].hr_version.filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
+data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png"
+data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
 data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
 data.raw.fluid["sulfuric-acid"].order = "cube-a[tar]-b[acid]"
 
@@ -113,8 +111,7 @@ data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {
 data.raw["battery-equipment"]["battery-mk2-equipment"].categories = {"cube-armor"}
 data.raw["generator-equipment"]["fusion-reactor-equipment"].categories = {"cube-armor"}
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
-data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/battery-mk2-equipment.png"
-data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.hr_version.filename = "__Ultracube__/assets/equipment/hr-battery-mk2-equipment.png"
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/hr-battery-mk2-equipment.png"
 
 if feature_flags.space_travel then
   -- With the space travel feature activated but no space-age mod enabled, we have to define
