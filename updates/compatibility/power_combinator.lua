@@ -12,8 +12,8 @@ if mods["power-combinator"] then
   local recipe = data.raw.recipe["power-combinator"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"constant-combinator", 1},
-    {"cube-electronic-circuit", 1},
+    {type = "item", name = "constant-combinator", amount = 1},
+    {type = "item", name = "cube-electronic-circuit", amount = 1},
   }
   data.raw.item["power-combinator"].order = "cube-" .. data.raw.item["power-combinator"].order
   data.raw.item["power-combinator"].subgroup = "cube-combinator-extra"
@@ -22,8 +22,8 @@ if mods["power-combinator"] then
   recipe = data.raw.recipe["power-combinator-MK2"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"power-combinator", 1},
-    {"cube-advanced-circuit", 1},
+    {type = "item", name = "power-combinator", amount = 1},
+    {type = "item", name = "cube-advanced-circuit", amount = 1},
   }
   data.raw.item["power-combinator-MK2"].order = "cube-" .. data.raw.item["power-combinator-MK2"].order
   data.raw.item["power-combinator-MK2"].subgroup = "cube-combinator-extra"

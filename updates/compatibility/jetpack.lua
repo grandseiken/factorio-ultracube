@@ -7,9 +7,9 @@ if mods["jetpack"] then
   -- Tier 1 original recipe: 10 steel, 10 pipes, 10 green circuits.
   -- Tier 2 original recipe: 2 jetpack 1, 20 E-engines, 20 red circuits.
   pack1_recipe.ingredients = {
-    {"cube-sophisticated-matter-unit", 10},
-    {"cube-advanced-engine", 10},
-    {"cube-advanced-circuit", 10},
+    {type = "item", name = "cube-sophisticated-matter-unit", amount = 10},
+    {type = "item", name = "cube-advanced-engine", amount = 10},
+    {type = "item", name = "cube-advanced-circuit", amount = 10},
   }
   pack1_recipe.category = craft_category
 
@@ -27,12 +27,12 @@ if mods["jetpack"] then
   -- Equivalent to vanilla tier 3. Original recipe: 2 jetpack 2, 30 LDS, 30 blue circuits.
   local pack2_recipe = data.raw.recipe["jetpack-2"]
   pack2_recipe.ingredients = {
-    {"jetpack-1", 2},
-    {"cube-resplendent-plate", 20},
-    {"cube-arcane-drive", 20}, -- Arcane drive already contains the other 2 ingredients so this
-                               -- feels a little redundant, but it fits with the pattern already
-                               -- established.
-    {"cube-spectral-processor", 20},
+    {type = "item", name = "jetpack-1", amount = 2},
+    {type = "item", name = "cube-resplendent-plate", amount = 20},
+    -- Arcane drive already contains the other 2 ingredients so this feels a little redundant,
+    -- but it fits with the pattern already established.
+    {type = "item", name = "cube-arcane-drive", amount = 20},
+    {type = "item", name = "cube-spectral-processor", amount = 20},
   }
   pack2_recipe.category = craft_category
 
@@ -51,13 +51,13 @@ if mods["jetpack"] then
   -- to make this 4 thrust is by using the jetpack 4 item prototype and pretend it's tier 3.
   local pack3_recipe = data.raw.recipe["jetpack-4"]
   pack3_recipe.ingredients = {
-    {"jetpack-2", 4}, -- May seem extreme, but still a similar cost to the original tier 4.
-    {"cube-ultradense-composite", 40}, -- lol
-    {"cube-speed-module-v3", 40},
-    {"cube-efficiency-module-v3", 40},
+    {type = "item", name = "jetpack-2", amount = 4}, -- May seem extreme, but still a similar cost to the original tier 4.
+    {type = "item", name = "cube-ultradense-composite", amount = 40}, -- lol
+    {type = "item", name = "cube-speed-module-v3", amount = 40},
+    {type = "item", name = "cube-efficiency-module-v3", amount = 40},
   }
   pack3_recipe.results = {
-    {"jetpack-4", 1},
+    {type = "item", name = "jetpack-4", amount = 1},
     {
       type = "item",
       name = "cube-ultradense-debris",

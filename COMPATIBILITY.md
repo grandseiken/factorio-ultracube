@@ -81,8 +81,8 @@ Example:
 local recipe = data.raw.recipe["cybersyn-combinator"]
 recipe.category = "cube-fabricator-handcraft"
 recipe.ingredients = {
-  {"copper-cable", 20},
-  {"cube-electronic-circuit", 10},
+  {type = "item", name = "copper-cable", amount = 20},
+  {type = "item", name = "cube-electronic-circuit", amount = 10},
 }
 data.raw.item["cybersyn-combinator"].order = "cube-" .. data.raw.item["cybersyn-combinator"].order
 ```

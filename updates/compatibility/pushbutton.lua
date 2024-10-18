@@ -5,11 +5,11 @@ if mods["pushbutton"] then
       name = "cube-pushbutton",
       ingredients =
       {
-        {"constant-combinator", 1},
-        {"cube-electronic-circuit", 1},
-        {"cube-advanced-circuit", 1},
+        {type = "item", name = "constant-combinator", amount = 1},
+        {type = "item", name = "cube-electronic-circuit", amount = 1},
+        {type = "item", name = "cube-advanced-circuit", amount = 1},
       },
-      results = {{"pushbutton", 1}},
+      results = {{type = "item", name = "pushbutton", amount = 1}},
       energy_required = 1,
       category = "cube-fabricator-handcraft",
       enabled = false,

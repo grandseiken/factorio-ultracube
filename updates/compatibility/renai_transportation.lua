@@ -85,10 +85,10 @@ if mods["RenaiTransportation"] then
       local recipe_is_valid = true
       local cube_recipe = data.raw.recipe[recipe_name]
       for _, ingredient in ipairs(cube_recipe.ingredients) do
-        local ingredient_name = ingredient[1]
+        local ingredient_name = ingredient.name
         if recipe_item_conversion[ingredient_name] then -- Item is in conversion list
           if type(recipe_item_conversion[ingredient_name]) == "string" then -- Item has equivalent
-          ingredient[1] = recipe_item_conversion[ingredient_name]
+            ingredient.name = recipe_item_conversion[ingredient_name]
           end
         else
           log("Ultracube+Renai - Unrecognised ingredient: " .. ingredient_name .. " in recipe: " .. recipe_name)
@@ -113,8 +113,8 @@ if mods["RenaiTransportation"] then
   ]]
   if valid_recipes["RTImpactUnloaderRecipe"] then -- Recipe for impact unloader was updated
     for _, ingredient in ipairs(data.raw.recipe["RTImpactUnloaderRecipe"].ingredients) do
-      if ingredient[1] == "refined-concrete" then
-        ingredient[1] = "concrete"
+      if ingredient.name == "refined-concrete" then
+        ingredient.name = "concrete"
         break
       end
     end
@@ -154,9 +154,9 @@ if mods["RenaiTransportation"] then
       if is_valid_tech then
         -- Only convert items if we've been able to properly update the original tech up to this point.
         for _, ingredient in ipairs(tech.unit.ingredients) do
-          local ingredient_name = ingredient[1]
+          local ingredient_name = ingredient.name
           if tech_item_conversion[ingredient_name] then
-            ingredient[1] = tech_item_conversion[ingredient_name]
+            ingredient.name = tech_item_conversion[ingredient_name]
           else
             log("Ultracube+Renai - Unrecognised research item: " .. ingredient_name .. " in tech: " .. tech_name)
             is_valid_tech = false
@@ -202,7 +202,7 @@ if mods["RenaiTransportation"] then
         energy_required = 1,
         ingredients = {
           {inserter_name, 1},
-          {"cube-basic-matter-unit", 4}
+          {type = "item", name = "cube-basic-matter-unit", amount = 4}
         },
         --[[
         This item isn't created until Renai Transport's data-final-fixes.lua runs, but this seems to work OK so long
@@ -318,11 +318,11 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"copper-cable", 100},
-          {"cube-basic-matter-unit", 100}, -- 50 iron-gear-wheel = 100 iron-plate
-          {"cube-electronic-circuit", 4},
-          {"PlayerLauncherItem", 1},
-          {"iron-chest", 1},
+          {type = "item", name = "copper-cable", amount = 100},
+          {type = "item", name = "cube-basic-matter-unit", amount = 100}, -- 50 iron-gear-wheel = 100 iron-plate
+          {type = "item", name = "cube-electronic-circuit", amount = 4},
+          {type = "item", name = "PlayerLauncherItem", amount = 1},
+          {type = "item", name = "iron-chest", amount = 1},
         },
         result = "RTZiplineItem",
         category = "cube-fabricator-handcraft",
@@ -333,9 +333,9 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"copper-cable", 10},
-          {"cube-basic-matter-unit", 5}, -- 6 iron-sticks = 3 iron-plate
-          {"cube-electronic-circuit", 2}
+          {type = "item", name = "copper-cable", amount = 10},
+          {type = "item", name = "cube-basic-matter-unit", amount = 5}, -- 6 iron-sticks = 3 iron-plate
+          {type = "item", name = "cube-electronic-circuit", amount = 2}
         },
         result = "RTZiplineControlsItem",
         category = "cube-fabricator-handcraft",
@@ -346,8 +346,8 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"RTZiplineControlsItem", 1},
-          {"cube-basic-matter-unit", 21} -- 2 iron-sticks + 10 iron-gear-wheel = 21 iron-plate
+          {type = "item", name = "RTZiplineControlsItem", amount = 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 21} -- 2 iron-sticks + 10 iron-gear-wheel = 21 iron-plate
         },
         result = "RTZiplineCrankControlsItem",
         category = "cube-fabricator-handcraft",
@@ -358,8 +358,8 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"RTZiplineControlsItem", 1},
-          {"cube-electronic-circuit", 5},
+          {type = "item", name = "RTZiplineControlsItem", amount = 1},
+          {type = "item", name = "cube-electronic-circuit", amount = 5},
         },
         result = "RTProgrammableZiplineControlsItem",
         category = "cube-fabricator-handcraft",
@@ -370,10 +370,10 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 3,
         ingredients = {
-          {"medium-electric-pole", 1},
-          {"cube-electronic-circuit", 10},
-          {"cube-rare-metals", 20},
-          {"concrete", 25},
+          {type = "item", name = "medium-electric-pole", amount = 1},
+          {type = "item", name = "cube-electronic-circuit", amount = 10},
+          {type = "item", name = "cube-rare-metals", amount = 20},
+          {type = "item", name = "concrete", amount = 25},
         },
         result = "RTZiplineTerminalItem",
         category = "cube-fabricator-handcraft",
@@ -384,9 +384,9 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"cube-basic-matter-unit", 200},
-          {"cube-basic-motor-unit", 10},
-          {"RTZiplineItem", 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 200},
+          {type = "item", name = "cube-basic-motor-unit", amount = 10},
+          {type = "item", name = "RTZiplineItem", amount = 1},
         },
         result = "RTZiplineItem2",
         category = "cube-fabricator-handcraft",
@@ -397,10 +397,10 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"cube-basic-matter-unit", 300},
-          {"cube-advanced-engine", 10},
-          {"cube-advanced-circuit", 10},
-          {"RTZiplineItem2", 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 300},
+          {type = "item", name = "cube-advanced-engine", amount = 10},
+          {type = "item", name = "cube-advanced-circuit", amount = 10},
+          {type = "item", name = "RTZiplineItem2", amount = 1},
         },
         result = "RTZiplineItem3",
         category = "cube-fabricator-handcraft",
@@ -411,10 +411,10 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"cube-basic-matter-unit", 400},
-          {"cube-vehicle-fuel", 25},
-          {"cube-spectral-processor", 5},
-          {"RTZiplineItem3", 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 400},
+          {type = "item", name = "cube-vehicle-fuel", amount = 25},
+          {type = "item", name = "cube-spectral-processor", amount = 5},
+          {type = "item", name = "RTZiplineItem3", amount = 1},
         },
         result = "RTZiplineItem4",
         category = "cube-fabricator-handcraft",
@@ -425,10 +425,10 @@ if mods["RenaiTransportation"] then
         enabled = false,
         energy_required = 0.5,
         ingredients = {
-          {"cube-basic-matter-unit", 600},
-          {"cube-nuclear-fuel", 5},
-          {"fusion-reactor-equipment", 1},
-          {"RTZiplineItem4", 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 600},
+          {type = "item", name = "cube-nuclear-fuel", amount = 5},
+          {type = "item", name = "fusion-reactor-equipment", amount = 1},
+          {type = "item", name = "RTZiplineItem4", amount = 1},
         },
         result = "RTZiplineItem5",
         category = "cube-fabricator-handcraft"

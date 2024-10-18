@@ -11,33 +11,33 @@ if mods["spidertron-logistics"] then
   local recipe = data.raw.recipe["spidertron-requester-chest"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"logistic-chest-requester", 4},
-    {"cube-big-container", 1},
-    {"spidertron-remote", 1},
+    {type = "item", name = "logistic-chest-requester", amount = 4},
+    {type = "item", name = "cube-big-container", amount = 1},
+    {type = "item", name = "spidertron-remote", amount = 1},
   }
 
   recipe = data.raw.recipe["spidertron-provider-chest"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"logistic-chest-passive-provider", 4},
-    {"cube-big-container", 1},
-    {"spidertron-remote", 1},
+    {type = "item", name = "logistic-chest-passive-provider", amount = 4},
+    {type = "item", name = "cube-big-container", amount = 1},
+    {type = "item", name = "spidertron-remote", amount = 1},
   }
 
   recipe = data.raw.recipe["spidertron-logistic-controller"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"cube-singularity-research-data", 10},
-    {"cube-spectral-processor", 10},
-    {"spidertron-remote", 1},
+    {type = "item", name = "cube-singularity-research-data", amount = 10},
+    {type = "item", name = "cube-spectral-processor", amount = 10},
+    {type = "item", name = "spidertron-remote", amount = 1},
   }
 
   recipe = data.raw.recipe["spidertron-logistic-beacon"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"cube-resplendent-plate", 10},
-    {"cube-spectral-processor", 2},
-    {"spidertron-remote", 1},
+    {type = "item", name = "cube-resplendent-plate", amount = 10},
+    {type = "item", name = "cube-spectral-processor", amount = 2},
+    {type = "item", name = "spidertron-remote", amount = 1},
   }
 
   data.raw.item["spidertron-requester-chest"].subgroup = "cube-logistics-extra"

@@ -6,9 +6,9 @@ if mods["holographic_signs"] then
   local recipe = data.raw.recipe["hs_holo_sign"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"small-lamp", 1},
-    {"cube-electronic-circuit", 1},
-    {"cube-rare-metals", 4},
+    {type = "item", name = "small-lamp", amount = 1},
+    {type = "item", name = "cube-electronic-circuit", amount = 1},
+    {type = "item", name = "cube-rare-metals", amount = 4},
   }
   recipe.enabled = false
 

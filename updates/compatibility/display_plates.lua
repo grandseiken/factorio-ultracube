@@ -16,7 +16,7 @@ if mods["DisplayPlates"] then
       local name = material .. "-display" .. size
       local recipe = data.raw.recipe[name]
       recipe.category = "cube-fabricator-handcraft"
-      recipe.ingredients[1][1] = ingredient
+      recipe.ingredients[1].name = ingredient
       if technology then
         recipe.enabled = false
         table.insert(data.raw.technology[technology].effects, {type = "unlock-recipe", recipe = name})

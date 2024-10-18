@@ -2,9 +2,9 @@ if mods["CircuitHUD-V2"] then
   local recipe = data.raw.recipe["hud-combinator"]
   recipe.category = "cube-fabricator-handcraft"
   recipe.ingredients = {
-    {"copper-cable", 5},
-    {"cube-basic-matter-unit", 2},
-    {"cube-electronic-circuit", 2},
+    {type = "item", name = "copper-cable", amount = 5},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+    {type = "item", name = "cube-electronic-circuit", amount = 2},
   }
   recipe.enabled = false
 

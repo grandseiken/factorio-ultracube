@@ -19,59 +19,59 @@ end
 
 if mods["underground-pipe-pack"] then
   data.raw.recipe["check-valve"].ingredients = {
-    {"pipe", 1},
-    {"cube-basic-matter-unit", 2},
-    {"cube-basic-motor-unit", 1},
+    {type = "item", name = "pipe", amount = 1},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+    {type = "item", name = "cube-basic-motor-unit", amount = 1},
   }
   data.raw.recipe["80-overflow-valve"].ingredients = {
-    {"pipe", 1},
-    {"cube-basic-matter-unit", 2},
-    {"cube-basic-motor-unit", 1},
+    {type = "item", name = "pipe", amount = 1},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+    {type = "item", name = "cube-basic-motor-unit", amount = 1},
   }
   data.raw.recipe["80-top-up-valve"].ingredients = {
-    {"pipe", 1},
-    {"cube-basic-matter-unit", 2},
-    {"cube-basic-motor-unit", 1},
+    {type = "item", name = "pipe", amount = 1},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+    {type = "item", name = "cube-basic-motor-unit", amount = 1},
   }
   data.raw.recipe["underground-mini-pump"].ingredients = {
-    {"cube-basic-motor-unit", 1},
-    {"cube-rare-metals", 2},
-    {"small-pipe-coupler", 2},
-    {"underground-pipe-segment-t1", 10},
+    {type = "item", name = "cube-basic-motor-unit", amount = 1},
+    {type = "item", name = "cube-rare-metals", amount = 2},
+    {type = "item", name = "small-pipe-coupler", amount = 2},
+    {type = "item", name = "underground-pipe-segment-t1", amount = 10},
   }
 
   data.raw.recipe["underground-pipe-segment-t1"].ingredients = {
-    {"pipe", 1},
-    {"stone", 1},
+    {type = "item", name = "pipe", amount = 1},
+    {type = "item", name = "stone", amount = 1},
   }
   data.raw.recipe["underground-pipe-segment-t2"].ingredients = {
-    {"underground-pipe-segment-t1", 1},
-    {"cube-sophisticated-matter-unit", 1},
-    {"stone", 1},
+    {type = "item", name = "underground-pipe-segment-t1", amount = 1},
+    {type = "item", name = "cube-sophisticated-matter-unit", amount = 1},
+    {type = "item", name = "stone", amount = 1},
   }
   data.raw.recipe["underground-pipe-segment-t3"].ingredients = {
-    {"underground-pipe-segment-t2", 1},
-    {"cube-resplendent-plate", 1},
-    {"stone", 1},
+    {type = "item", name = "underground-pipe-segment-t2", amount = 1},
+    {type = "item", name = "cube-resplendent-plate", amount = 1},
+    {type = "item", name = "stone", amount = 1},
   }
 
   data.raw.recipe["swivel-joint"].ingredients = {
-    {"cube-rare-metals", 1},
-    {"cube-basic-matter-unit", 2},
+    {type = "item", name = "cube-rare-metals", amount = 1},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
   }
   data.raw.recipe["small-pipe-coupler"].ingredients = {
-    {"cube-rare-metals", 2},
-    {"cube-basic-matter-unit", 1},
+    {type = "item", name = "cube-rare-metals", amount = 2},
+    {type = "item", name = "cube-basic-matter-unit", amount = 1},
   }
   data.raw.recipe["medium-pipe-coupler"].ingredients = {
-    {"small-pipe-coupler", 1},
-    {"cube-sophisticated-matter-unit", 1},
-    {"cube-rare-metals", 2},
+    {type = "item", name = "small-pipe-coupler", amount = 1},
+    {type = "item", name = "cube-sophisticated-matter-unit", amount = 1},
+    {type = "item", name = "cube-rare-metals", amount = 2},
   }
   data.raw.recipe["large-pipe-coupler"].ingredients = {
-    {"medium-pipe-coupler", 1},
-    {"cube-resplendent-plate", 1},
-    {"cube-rare-metals", 2},
+    {type = "item", name = "medium-pipe-coupler", amount = 1},
+    {type = "item", name = "cube-resplendent-plate", amount = 1},
+    {type = "item", name = "cube-rare-metals", amount = 2},
   }
 
   handle_technology(

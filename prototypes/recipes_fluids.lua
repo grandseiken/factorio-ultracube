@@ -8,8 +8,8 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "fluid", name = "steam", amount = 1000},
-      {"cube-sand", 100},
-      {"wood", 400},
+      {type = "item", name = "cube-sand", amount = 100},
+      {type = "item", name = "wood", amount = 400},
     },
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 16000},
@@ -29,9 +29,9 @@ data:extend({
     icon_size = 128,
     ingredients = {
       {type = "fluid", name = "steam", amount = 4000},
-      {"cube-sand", 200},
-      {"wood", 800},
-      {"coal", 400},
+      {type = "item", name = "cube-sand", amount = 200},
+      {type = "item", name = "wood", amount = 800},
+      {type = "item", name = "coal", amount = 400},
     },
     results = {
       {type = "fluid", name = "cube-gelatinous-tar", amount = 40000},
@@ -249,7 +249,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/deep-solution.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
-      {"cube-deep-powder", 2000},
+      {type = "item", name = "cube-deep-powder", amount = 2000},
       {type = "fluid", name = "sulfuric-acid", amount = 4000},
     },
     results = {
@@ -292,8 +292,8 @@ data:extend({
     name = "cube-beacon-juice",
     ingredients = {
       {type = "fluid", name = "water", amount = 1000},
-      {"cube-fermion-conduit", 1},
-      {"cube-spectralite", 1},
+      {type = "item", name = "cube-fermion-conduit", amount = 1},
+      {type = "item", name = "cube-spectralite", amount = 1},
     },
     results = {
       {type = "fluid", name = "cube-beacon-juice", amount = 4200},
@@ -358,8 +358,8 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/annihilation.png",
     icon_size = 128,
     ingredients = {
-      {"cube-basic-matter-unit", 1},
-      {"cube-basic-antimatter-unit", 1},
+      {type = "item", name = "cube-basic-matter-unit", amount = 1},
+      {type = "item", name = "cube-basic-antimatter-unit", amount = 1},
     },
     results = {
       {type = "fluid", name = "cube-ionized-annihilation-stream", amount = 48000},

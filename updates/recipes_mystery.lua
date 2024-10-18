@@ -56,7 +56,7 @@ local function add_mystery_dummy(name, item)
       icon_size = 64, icon_mipmaps = 4,
       localised_name = {"recipe-name.cube-mystery"},
       ingredients = {},
-      results = {{item, 1}},
+      results = {{type = "item", name = item, amount = 1}},
       energy_required = 1,
       category = "cube-mystery-furnace",
       subgroup = "cube-mystery",

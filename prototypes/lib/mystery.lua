@@ -20,7 +20,7 @@ function add_mystery_recipe(a, b, c, d, e)
   local results = {{type = "item", name = "cube-residual-tendrils",
                     amount_min = 0, amount_max = math.floor(1 + a)}}
   if c then
-    results[#results + 1] = {c, e or 1}
+    results[#results + 1] = {type = "item", name = c, amount = e or 1}
   end
   data:extend({
     {
@@ -31,7 +31,7 @@ function add_mystery_recipe(a, b, c, d, e)
       icon_mipmaps = item.icon_mipmaps,
       icons = item.icons,
       localised_name = {"recipe-name.cube-mystery"},
-      ingredients = {{b, d or 1}},
+      ingredients = {{type = "item", name = b, amount = d or 1}},
       results = results,
       energy_required = 2 * a,
       category = "cube-mystery-furnace",

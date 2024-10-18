@@ -16,16 +16,16 @@ if mods["WireShortcuts"] then
   local recipe = data.raw.recipe["fake-red-wire"]
   if recipe then
     recipe.ingredients = {
-      {"cube-electronic-circuit", 1},
-      {"copper-cable", 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
+      {type = "item", name = "copper-cable", amount = 1},
     }
     recipe.category = "cube-fabricator-handcraft"
   end
   recipe = data.raw.recipe["fake-green-wire"]
   if recipe then
     recipe.ingredients = {
-      {"cube-electronic-circuit", 1},
-      {"copper-cable", 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
+      {type = "item", name = "copper-cable", amount = 1},
     }
     recipe.category = "cube-fabricator-handcraft"
   end
