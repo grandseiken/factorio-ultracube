@@ -78,6 +78,9 @@ data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/enti
 data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
 data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
 data.raw.fluid["sulfuric-acid"].order = "cube-a[tar]-b[acid]"
+-- Revert 1 water -> 10 steam boiler change.
+data.raw.fluid["water"].max_temperature = 215
+data.raw.fluid["water"].heat_capacity = "0.2kJ"
 
 data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-transport-belt"
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"
