@@ -422,30 +422,6 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
-  {
-    type = "recipe",
-    name = "cube-red-wire",
-    ingredients = {
-      {type = "item", name = "cube-basic-matter-unit", amount = 1},
-      {type = "item", name = "copper-cable", amount = 2},
-    },
-    results = {{type = "item", name = "red-wire", amount = 2}},
-    energy_required = 0.5,
-    category = "cube-fabricator-handcraft",
-    enabled = false,
-  },
-  {
-    type = "recipe",
-    name = "cube-green-wire",
-    ingredients = {
-      {type = "item", name = "cube-basic-matter-unit", amount = 1},
-      {type = "item", name = "copper-cable", amount = 2},
-    },
-    results = {{type = "item", name = "green-wire", amount = 2}},
-    energy_required = 0.5,
-    category = "cube-fabricator-handcraft",
-    enabled = false,
-  },
 
   {
     type = "recipe",

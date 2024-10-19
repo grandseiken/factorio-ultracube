@@ -161,8 +161,6 @@ add_mystery_recipe(1, "buffer-chest", "iron-chest")
 add_mystery_recipe(1, "requester-chest", "iron-chest")
 
 add_mystery_recipe(1, "small-lamp", "cube-potato")
-add_mystery_recipe(1, "red-wire", "green-wire")
-add_mystery_recipe(1, "green-wire", "red-wire")
 add_mystery_recipe(1, "constant-combinator", "cube-electronic-circuit")
 add_mystery_recipe(1, "arithmetic-combinator", "cube-electronic-circuit")
 add_mystery_recipe(1, "decider-combinator", "cube-electronic-circuit")

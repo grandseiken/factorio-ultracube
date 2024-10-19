@@ -135,11 +135,10 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icon = "__base__/graphics/technology/circuit-network.png",
     effects = {
+      {type = "unlock-circuit-network", modifier = true},
       {type = "unlock-recipe", recipe = "cube-constant-combinator"},
       {type = "unlock-recipe", recipe = "cube-arithmetic-combinator"},
       {type = "unlock-recipe", recipe = "cube-decider-combinator"},
-      {type = "unlock-recipe", recipe = "cube-red-wire"},
-      {type = "unlock-recipe", recipe = "cube-green-wire"},
       {type = "unlock-recipe", recipe = "cube-programmable-speaker"},
       {type = "unlock-recipe", recipe = "cube-power-switch"},
     },
