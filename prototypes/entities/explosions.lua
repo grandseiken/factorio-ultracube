@@ -30,7 +30,7 @@ local red_light = {r=1.0, g=0.6, b=0.7}
 local function blood_particle_pictures(tint, shift)
   return {
     sheet = {
-      filename = "__base__/graphics/particle/blood-particle/hr-blood-particle.png",
+      filename = "__base__/graphics/particle/blood-particle/blood-particle.png",
       line_length = 12,
       width = 16,
       height = 16,
@@ -180,7 +180,7 @@ local function make_cube_shockwave_1(name, base_filename)
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
+      filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
@@ -195,7 +195,7 @@ local function make_cube_shockwave_1(name, base_filename)
       blend_mode = "additive-soft",
     },
     shadows = {
-      filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
+      filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
@@ -220,7 +220,7 @@ local function make_cube_shockwave_2(name, base_filename)
     fade_away_duration = 60,
     render_layer = "object",
     pictures = {
-      filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
+      filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
@@ -235,7 +235,7 @@ local function make_cube_shockwave_2(name, base_filename)
       blend_mode = "additive-soft",
     },
     shadows = {
-      filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
+      filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
@@ -264,7 +264,7 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
     render_layer = "higher-object-above",
     animations = {
       {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-1.png",
+        filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-1.png",
         draw_as_glow = true,
         priority = "high",
         width = 124,
@@ -276,7 +276,7 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
         scale = 0.5,
       },
       {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-2.png",
+        filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-2.png",
         draw_as_glow = true,
         priority = "high",
         width = 154,
@@ -288,7 +288,7 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
         scale = 0.5,
       },
       {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-3.png",
+        filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-3.png",
         draw_as_glow = true,
         priority = "high",
         width = 126,
@@ -361,10 +361,10 @@ end
 data:extend({
   make_spark_particle("cube-spark-particle",
                       "__base__/graphics/particle/pole-sparks/pole-sparks.png",
-                      "__base__/graphics/particle/pole-sparks/hr-pole-sparks.png"),
+                      "__base__/graphics/particle/pole-sparks/pole-sparks.png"),
   make_spark_particle("cube-fuel-spark-particle",
                       "__Ultracube__/assets/effects/fuel-sparks.png",
-                      "__Ultracube__/assets/effects/hr-fuel-sparks.png"),
+                      "__Ultracube__/assets/effects/fuel-sparks.png"),
   make_spark_explosion("cube-periodic-ultradense-high-spark",
                        "cube-spark-particle", blue_light, 0.75),
   make_spark_explosion("cube-periodic-ultradense-low-spark",

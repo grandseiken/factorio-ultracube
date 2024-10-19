@@ -114,7 +114,7 @@ data.raw["roboport-equipment"]["personal-roboport-mk2-equipment"].categories = {
 data.raw["battery-equipment"]["battery-mk2-equipment"].categories = {"cube-armor"}
 data.raw["generator-equipment"]["fission-reactor-equipment"].categories = {"cube-armor"}
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
-data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/hr-battery-mk2-equipment.png"
+data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/battery-mk2-equipment.png"
 
 if feature_flags.space_travel then
   -- With the space travel feature activated but no space-age mod enabled, we have to define

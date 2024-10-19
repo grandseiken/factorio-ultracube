@@ -13,7 +13,7 @@ particle_animations.get_metal_particle_medium_pictures = function(options)
   local options = options or {}
   return {
     sheet = {
-      filename = "__base__/graphics/particle/metal-particle/hr-metal-particle-medium.png",
+      filename = "__base__/graphics/particle/metal-particle/metal-particle-medium.png",
       priority = "extra-high",
       width = 30,
       height = 30,
@@ -30,7 +30,7 @@ particle_animations.get_metal_particle_small_pictures = function(options)
   local options = options or {}
   return {
     sheet = {
-      filename = "__base__/graphics/particle/metal-particle/hr-metal-particle-small.png",
+      filename = "__base__/graphics/particle/metal-particle/metal-particle-small.png",
       priority = "extra-high",
       width = 20,
       height = 16,
@@ -161,7 +161,7 @@ data:extend({
   {
     type = "corpse",
     name = "filter-inserter-remnants",
-    icon = "__base__/graphics/icons/filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "not-on-map"},
     subgroup = "inserter-remnants",
@@ -174,7 +174,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(4, {
-      filename = "__base__/graphics/entity/filter-inserter/remnants/hr-filter-inserter-remnants.png",
+      filename = "__Ultracube__/assets/inserter/filter-inserter-remnants.png",
       line_length = 1,
       width = 134,
       height = 94,
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "corpse",
     name = "stack-filter-inserter-remnants",
-    icon = "__base__/graphics/icons/stack-filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/bulk-filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "not-on-map"},
     subgroup = "inserter-remnants",
@@ -202,7 +202,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(4, {
-      filename = "__base__/graphics/entity/stack-filter-inserter/remnants/hr-stack-filter-inserter-remnants.png",
+      filename = "__Ultracube__/assets/inserter/bulk-filter-inserter-remnants.png",
       line_length = 1,
       width = 132,
       height = 96,
@@ -217,7 +217,7 @@ data:extend({
   {
     type = "explosion",
     name = "filter-inserter-explosion",
-    icon = "__base__/graphics/icons/filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-on-map"},
     hidden = true,
@@ -278,7 +278,7 @@ data:extend({
   {
     type = "explosion",
     name = "stack-filter-inserter-explosion",
-    icon = "__base__/graphics/icons/stack-filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/bulk-filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-on-map"},
     hidden = true,
@@ -339,7 +339,7 @@ data:extend({
   {
     type = "inserter",
     name = "filter-inserter",
-    icon = "__base__/graphics/icons/filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "filter-inserter"},
@@ -367,42 +367,42 @@ data:extend({
     fast_replaceable_group = "inserter",
     filter_count = 5,
     hand_base_picture = {
-      filename = "__base__/graphics/entity/filter-inserter/hr-filter-inserter-hand-base.png",
+      filename = "__Ultracube__/assets/inserter/filter-inserter-hand-base.png",
       priority = "extra-high",
       width = 32,
       height = 136,
       scale = 0.25,
     },
     hand_closed_picture = {
-      filename = "__base__/graphics/entity/filter-inserter/hr-filter-inserter-hand-closed.png",
+      filename = "__Ultracube__/assets/inserter/filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 72,
       height = 164,
       scale = 0.25,
     },
     hand_open_picture = {
-      filename = "__base__/graphics/entity/filter-inserter/hr-filter-inserter-hand-open.png",
+      filename = "__Ultracube__/assets/inserter/filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 72,
       height = 164,
       scale = 0.25,
     },
     hand_base_shadow = {
-      filename = "__base__/graphics/entity/burner-inserter/hr-burner-inserter-hand-base-shadow.png",
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 132,
       scale = 0.25,
     },
     hand_closed_shadow = {
-      filename = "__base__/graphics/entity/burner-inserter/hr-burner-inserter-hand-closed-shadow.png",
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 72,
       height = 164,
       scale = 0.25,
     },
     hand_open_shadow = {
-      filename = "__base__/graphics/entity/burner-inserter/hr-burner-inserter-hand-open-shadow.png",
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 72,
       height = 164,
@@ -410,7 +410,7 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = "__base__/graphics/entity/filter-inserter/hr-filter-inserter-platform.png",
+        filename = "__Ultracube__/assets/inserter/filter-inserter-platform.png",
         priority = "extra-high",
         width = 105,
         height = 79,
@@ -426,7 +426,7 @@ data:extend({
   {
     type = "inserter",
     name = "bulk-filter-inserter",
-    icon = "__base__/graphics/icons/stack-filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/bulk-filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     stack = true,
@@ -455,42 +455,42 @@ data:extend({
     close_sound = sounds.machine_close,
     working_sound = sounds.inserter_fast,
     hand_base_picture = {
-      filename = "__base__/graphics/entity/stack-filter-inserter/hr-stack-filter-inserter-hand-base.png",
+      filename = "__Ultracube__/assets/inserter/bulk-filter-inserter-hand-base.png",
       priority = "extra-high",
       width = 32,
       height = 136,
       scale = 0.25,
     },
     hand_closed_picture = {
-      filename = "__base__/graphics/entity/stack-filter-inserter/hr-stack-filter-inserter-hand-closed.png",
+      filename = "__Ultracube__/assets/inserter/bulk-filter-inserter-hand-closed.png",
       priority = "extra-high",
       width = 100,
       height = 164,
       scale = 0.25,
     },
     hand_open_picture = {
-      filename = "__base__/graphics/entity/stack-filter-inserter/hr-stack-filter-inserter-hand-open.png",
+      filename = "__Ultracube__/assets/inserter/bulk-filter-inserter-hand-open.png",
       priority = "extra-high",
       width = 130,
       height = 164,
       scale = 0.25,
     },
     hand_base_shadow = {
-      filename = "__base__/graphics/entity/burner-inserter/hr-burner-inserter-hand-base-shadow.png",
+      filename = "__base__/graphics/entity/burner-inserter/burner-inserter-hand-base-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 132,
       scale = 0.25,
     },
     hand_closed_shadow = {
-      filename = "__base__/graphics/entity/stack-inserter/hr-stack-inserter-hand-closed-shadow.png",
+      filename = "__base__/graphics/entity/bulk-inserter/bulk-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 100,
       height = 164,
       scale = 0.25,
     },
     hand_open_shadow = {
-      filename = "__base__/graphics/entity/stack-inserter/hr-stack-inserter-hand-open-shadow.png",
+      filename = "__base__/graphics/entity/bulk-inserter/bulk-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 130,
       height = 164,
@@ -498,7 +498,7 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = "__base__/graphics/entity/stack-filter-inserter/hr-stack-filter-inserter-platform.png",
+        filename = "__Ultracube__/assets/inserter/bulk-filter-inserter-platform.png",
         priority = "extra-high",
         width = 105,
         height = 79,
@@ -577,42 +577,42 @@ data:extend({
     working_sound = sounds.inserter_fast,
     hand_size = 2.625,
     hand_base_picture = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base.png",
       priority = "extra-high",
       width = 32,
       height = 272,
       scale = 0.25,
     },
     hand_closed_picture = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed.png",
       priority = "extra-high",
       width = 72,
       height = 328,
       scale = 0.25,
     },
     hand_open_picture = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open.png",
       priority = "extra-high",
       width = 72,
       height = 328,
       scale = 0.25,
     },
     hand_base_shadow = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base-shadow.png",
       priority = "extra-high",
       width = 32,
       height = 272,
       scale = 0.25,
     },
     hand_closed_shadow = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed-shadow.png",
       priority = "extra-high",
       width = 72,
       height = 328,
       scale = 0.25,
     },
     hand_open_shadow = {
-      filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open-shadow.png",
+      filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open-shadow.png",
       priority = "extra-high",
       width = 72,
       height = 328,

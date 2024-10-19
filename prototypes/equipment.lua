@@ -36,7 +36,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "cube-solar-panel-equipment",
     sprite = {
-      filename = "__base__/graphics/equipment/hr-solar-panel-equipment.png",
+      filename = "__base__/graphics/equipment/solar-panel-equipment.png",
       width = 64,
       height = 64,
       priority = "medium",
@@ -103,7 +103,7 @@ data:extend({
     type = "battery-equipment",
     name = "cube-battery-equipment",
     sprite = {
-      filename = "__base__/graphics/equipment/hr-battery-equipment.png",
+      filename = "__base__/graphics/equipment/battery-equipment.png",
       width = 64,
       height = 128,
       priority = "medium",
@@ -125,7 +125,7 @@ data:extend({
     type = "roboport-equipment",
     name = "cube-personal-roboport-equipment",
     sprite = {
-      filename = "__base__/graphics/equipment/hr-personal-roboport-equipment.png",
+      filename = "__base__/graphics/equipment/personal-roboport-equipment.png",
       width = 128,
       height = 128,
       priority = "medium",

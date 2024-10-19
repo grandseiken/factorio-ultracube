@@ -149,7 +149,7 @@ data:extend({
         height = 20,
       },
       gas_flow = {
-        filename = "__base__/graphics/entity/pipe/hr-steam.png",
+        filename = "__base__/graphics/entity/pipe/steam.png",
         priority = "extra-high",
         line_length = 10,
         width = 48,
@@ -260,7 +260,7 @@ data:extend({
         height = 20,
       },
       gas_flow = {
-        filename = "__base__/graphics/entity/pipe/hr-steam.png",
+        filename = "__base__/graphics/entity/pipe/steam.png",
         priority = "extra-high",
         line_length = 10,
         width = 48,

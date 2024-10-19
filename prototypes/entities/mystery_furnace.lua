@@ -71,7 +71,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace.png",
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
           priority = "high",
           width = 171,
           height = 174,
@@ -80,7 +80,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-shadow.png",
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
           priority = "high",
           width = 277,
           height = 85,
@@ -97,7 +97,7 @@ data:extend({
         fadeout = true,
         effect = "flicker",
         animation = {
-          filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-fire.png",
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
           priority = "high",
           line_length = 8,
           width = 57,
@@ -127,7 +127,7 @@ data:extend({
         draw_as_light = true,
         effect = "flicker",
         animation = {
-          filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-working.png",
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
           priority = "high",
           line_length = 1,
           width = 128,
@@ -145,7 +145,7 @@ data:extend({
         fadeout = true,
         effect = "flicker",
         animation = {
-          filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-ground-light.png",
+          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
           priority = "high",
           line_length = 1,
           draw_as_sprite = false,

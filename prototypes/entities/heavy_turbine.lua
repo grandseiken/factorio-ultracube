@@ -51,7 +51,7 @@ data:extend({
       layers =
       {
         {
-          filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H.png",
+          filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H.png",
           width = 320,
           height = 245,
           frame_count = 8,
@@ -61,7 +61,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-H-shadow.png",
+          filename = "__base__/graphics/entity/steam-turbine/steam-turbine-H-shadow.png",
           width = 435,
           height = 150,
           repeat_count = 8,
@@ -77,7 +77,7 @@ data:extend({
     vertical_animation = {
       layers = {
         {
-          filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V.png",
+          filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V.png",
           width = 217,
           height = 347,
           frame_count = 8,
@@ -87,7 +87,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__base__/graphics/entity/steam-turbine/hr-steam-turbine-V-shadow.png",
+          filename = "__base__/graphics/entity/steam-turbine/steam-turbine-V-shadow.png",
           width = 302,
           height = 260,
           repeat_count = 8,

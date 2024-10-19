@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "filter-inserter",
-    icon = "__base__/graphics/icons/filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "inserter",
     order = "e[filter-inserter]",
@@ -15,7 +15,7 @@ data:extend({
   {
     type = "item",
     name = "bulk-filter-inserter",
-    icon = "__base__/graphics/icons/stack-filter-inserter.png",
+    icon = "__Ultracube__/assets/icons/bulk-filter-inserter.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "inserter",
     order = "g[bulk-filter-inserter]",
