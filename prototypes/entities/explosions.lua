@@ -30,7 +30,7 @@ local red_light = {r=1.0, g=0.6, b=0.7}
 local function blood_particle_pictures(tint, shift)
   return {
     sheet = {
-      filename = "__base__/graphics/particle/blood-particle/blood-particle.png",
+      filename = "__Ultracube__/assets/effects/blood-particle.png",
       line_length = 12,
       width = 16,
       height = 16,
@@ -38,7 +38,7 @@ local function blood_particle_pictures(tint, shift)
       variation_count = 7,
       tint = tint,
       scale = 0.5,
-      shift = util.add_shift(util.by_pixel(1.5,-1), shift)
+      shift = util.add_shift(util.by_pixel(1.5, -1), shift)
     }
   }
 end
