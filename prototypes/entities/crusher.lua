@@ -14,27 +14,29 @@ data:extend({
     dying_explosion = "big-explosion",
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          frame_count = 30,
-          line_length = 6,
-          animation_speed = 0.75,
-          scale = 0.5,
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          frame_count = 30,
-          line_length = 6,
-          draw_as_shadow = true,
-          scale = 0.5,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            frame_count = 30,
+            line_length = 6,
+            animation_speed = 0.75,
+            scale = 0.5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            frame_count = 30,
+            line_length = 6,
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
         },
       },
     },

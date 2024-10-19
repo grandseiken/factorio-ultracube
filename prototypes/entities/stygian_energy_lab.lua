@@ -63,39 +63,41 @@ data:extend({
     fast_replaceable_group = "cube-stygian-energy-lab",
     module_slots = 2,
     allowed_effects = module_effects.fuel_speed_only,
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          frame_count = 1,
-          scale = 0.5,
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          shift = {0.32, 0},
-          frame_count = 1,
-          draw_as_shadow = true,
-          scale = 0.5,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            shift = {0.32, 0},
+            frame_count = 1,
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
-          width = 387,
-          height = 342,
-          shift = {0.05, -0.31},
-          frame_count = 30,
-          line_length = 5,
-          scale = 0.5,
-          animation_speed = 0.35,
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
+            width = 387,
+            height = 342,
+            shift = {0.05, -0.31},
+            frame_count = 30,
+            line_length = 5,
+            scale = 0.5,
+            animation_speed = 0.35,
+          },
         },
       },
     },

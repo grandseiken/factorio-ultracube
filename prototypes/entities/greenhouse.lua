@@ -40,50 +40,52 @@ data:extend({
       scale = 1,
     }},
     allowed_effects = module_effects.speed_efficiency,
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          frame_count = 1,
-          scale = 0.5,
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
-          priority = "high",
-          width = 512,
-          height = 512,
-          shift = {0.32, 0},
-          frame_count = 1,
-          draw_as_shadow = true,
-          scale = 0.5,
-        },
-      },
-    },
-    working_visualisations = {
-      {
-        draw_as_light = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
-          width = 512,
-          height = 512,
-          frame_count = 1,
-          repeat_count = 10,
-          scale = 0.5,
-          animation_speed = 0.35,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            frame_count = 1,
+            scale = 0.5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
+            priority = "high",
+            width = 512,
+            height = 512,
+            shift = {0.32, 0},
+            frame_count = 1,
+            draw_as_shadow = true,
+            scale = 0.5,
+          },
         },
       },
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
-          width = 512,
-          height = 512,
-          frame_count = 10,
-          line_length = 5,
-          scale = 0.5,
-          animation_speed = 0.35,
+      working_visualisations = {
+        {
+          draw_as_light = true,
+          animation = {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
+            width = 512,
+            height = 512,
+            frame_count = 1,
+            repeat_count = 10,
+            scale = 0.5,
+            animation_speed = 0.35,
+          },
+        },
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
+            width = 512,
+            height = 512,
+            frame_count = 10,
+            line_length = 5,
+            scale = 0.5,
+            animation_speed = 0.35,
+          },
         },
       },
     },

@@ -17,44 +17,46 @@ data:extend({
     corpse = "medium-remnants",
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
-          priority = "high",
-          width = 170,
-          height = 170,
-          frame_count = 80,
-          line_length = 10,
-          animation_speed = 0.4,
-          scale = 0.4,
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
-          priority = "high",
-          width = 170,
-          height = 144,
-          frame_count = 80,
-          line_length = 8,
-          animation_speed = 0.4,
-          shift = {0.23, 0.262},
-          draw_as_shadow = true,
-          scale = 0.4,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
+            priority = "high",
+            width = 170,
+            height = 170,
+            frame_count = 80,
+            line_length = 10,
+            animation_speed = 0.4,
+            scale = 0.4,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
+            priority = "high",
+            width = 170,
+            height = 144,
+            frame_count = 80,
+            line_length = 8,
+            animation_speed = 0.4,
+            shift = {0.23, 0.262},
+            draw_as_shadow = true,
+            scale = 0.4,
+          },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
-          priority = "high",
-          width = 170,
-          height = 170,
-          frame_count = 80,
-          line_length = 10,
-          animation_speed = 0.4,
-          scale = 0.4,
-          draw_as_light = true,
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
+            priority = "high",
+            width = 170,
+            height = 170,
+            frame_count = 80,
+            line_length = 10,
+            animation_speed = 0.4,
+            scale = 0.4,
+            draw_as_light = true,
+          },
         },
       },
     },

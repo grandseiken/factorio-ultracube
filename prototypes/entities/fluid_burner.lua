@@ -25,117 +25,119 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = false,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
-    animation = {
-      north = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-n.png",
-            width = 150,
-            height = 300,
-            scale = 0.5,
-            frame_count = 1,
-            shift = {0, -1},
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-n.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
           },
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
-            priority = "high",
-            width = 258,
-            height = 94,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            scale = 0.5,
+        },
+        east = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-e.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-s.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-w.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
           },
         },
       },
-      east = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-e.png",
-            width = 150,
-            height = 300,
-            scale = 0.5,
-            frame_count = 1,
-            shift = {0, -1},
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
-            priority = "high",
-            width = 258,
-            height = 94,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            scale = 0.5,
+      working_visualisations = {
+        {
+          apply_recipe_tint = "quaternary",
+          fadeout = true,
+          animation = {
+            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-fire.png",
+            line_length = 10,
+            width = 40,
+            height = 81,
+            frame_count = 60,
+            animation_speed = 0.75,
+            scale = 0.50,
+            shift = {0, -3.25},
           },
         },
-      },
-      south = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-s.png",
-            width = 150,
-            height = 300,
-            scale = 0.5,
-            frame_count = 1,
-            shift = {0, -1},
+        {
+          light = {
+            intensity = 0.75,
+            size = 25,
+            shift = {0, 0},
+            color = {r = 1, g = 0.95, b = 0.75},
           },
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
-            priority = "high",
-            width = 258,
-            height = 94,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            scale = 0.5,
-          },
-        },
-      },
-      west = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-w.png",
-            width = 150,
-            height = 300,
-            scale = 0.5,
-            frame_count = 1,
-            shift = {0, -1},
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
-            priority = "high",
-            width = 258,
-            height = 94,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            scale = 0.5,
-          },
-        },
-      },
-    },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "quaternary",
-        fadeout = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-fire.png",
-          line_length = 10,
-          width = 40,
-          height = 81,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 0.50,
-          shift = {0, -3.25},
-        },
-      },
-      {
-        light = {
-          intensity = 0.75,
-          size = 25,
-          shift = {0, 0},
-          color = {r = 1, g = 0.95, b = 0.75},
         },
       },
     },

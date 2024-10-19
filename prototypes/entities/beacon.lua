@@ -148,7 +148,6 @@ data:extend({
         },
       },
     },
-    animation = util.empty_sprite(),
     crafting_categories = {"cube-uncraftable"},
     crafting_speed = 0.5,  -- Must match by_tick size.
     fixed_recipe = "cube-uncraftable-dummy-recipe",

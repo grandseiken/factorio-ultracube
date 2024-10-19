@@ -68,94 +68,96 @@ data:extend({
     },
     module_slots = 0,
     allowed_effects = module_effects.none,
-    animation = {
-      layers = {
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
+            priority = "high",
+            width = 171,
+            height = 174,
+            frame_count = 1,
+            shift = util.by_pixel(-1.25, 2),
+            scale = 0.5,
+          },
+          {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
+            priority = "high",
+            width = 277,
+            height = 85,
+            frame_count = 1,
+            draw_as_shadow = true,
+            shift = util.by_pixel(39.25, 11.25),
+            scale = 0.5,
+          }
+        }
+      },
+      working_visualisations = {
         {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
-          priority = "high",
-          width = 171,
-          height = 174,
-          frame_count = 1,
-          shift = util.by_pixel(-1.25, 2),
-          scale = 0.5,
+          draw_as_light = true,
+          fadeout = true,
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+            priority = "high",
+            line_length = 8,
+            width = 57,
+            height = 81,
+            frame_count = 48,
+            direction_count = 1,
+            shift = util.by_pixel(-0.75, 5.75),
+            scale = 0.5,
+          },
         },
         {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
-          priority = "high",
-          width = 277,
-          height = 85,
-          frame_count = 1,
-          draw_as_shadow = true,
-          shift = util.by_pixel(39.25, 11.25),
-          scale = 0.5,
-        }
-      }
-    },
-    working_visualisations = {
-      {
-        draw_as_light = true,
-        fadeout = true,
-        effect = "flicker",
-        animation = {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-          priority = "high",
-          line_length = 8,
-          width = 57,
-          height = 81,
-          frame_count = 48,
-          direction_count = 1,
-          shift = util.by_pixel(-0.75, 5.75),
-          scale = 0.5,
+          fadeout = true,
+          draw_as_light = true,
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+            priority = "high",
+            width = 60,
+            height = 43,
+            frame_count = 1,
+            shift = {0.03125, 0.640625},
+            blend_mode = "additive"
+          }
         },
-      },
-      {
-        fadeout = true,
-        draw_as_light = true,
-        effect = "flicker",
-        animation = {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
-          priority = "high",
-          width = 60,
-          height = 43,
-          frame_count = 1,
-          shift = {0.03125, 0.640625},
-          blend_mode = "additive"
-        }
-      },
-      {
-        fadeout = true,
-        draw_as_light = true,
-        effect = "flicker",
-        animation = {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
-          priority = "high",
-          line_length = 1,
-          width = 128,
-          height = 150,
-          frame_count = 1,
-          direction_count = 1,
-          shift = util.by_pixel(0, -5),
-          blend_mode = "additive",
-          scale = 0.5,
-        }
-      },
-      {
-        draw_as_light = true,
-        draw_as_sprite = false,
-        fadeout = true,
-        effect = "flicker",
-        animation = {
-          filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
-          priority = "high",
-          line_length = 1,
+        {
+          fadeout = true,
+          draw_as_light = true,
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
+            priority = "high",
+            line_length = 1,
+            width = 128,
+            height = 150,
+            frame_count = 1,
+            direction_count = 1,
+            shift = util.by_pixel(0, -5),
+            blend_mode = "additive",
+            scale = 0.5,
+          }
+        },
+        {
+          draw_as_light = true,
           draw_as_sprite = false,
-          width = 152,
-          height = 126,
-          frame_count = 1,
-          direction_count = 1,
-          shift = util.by_pixel(1, 48),
-          blend_mode = "additive",
-          scale = 0.5,
+          fadeout = true,
+          effect = "flicker",
+          animation = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
+            priority = "high",
+            line_length = 1,
+            draw_as_sprite = false,
+            width = 152,
+            height = 126,
+            frame_count = 1,
+            direction_count = 1,
+            shift = util.by_pixel(1, 48),
+            blend_mode = "additive",
+            scale = 0.5,
+          },
         },
       },
     },

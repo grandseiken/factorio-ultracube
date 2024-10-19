@@ -336,7 +336,7 @@ data:extend({
     fixed_recipe = "cube-uncraftable-dummy-recipe",
     energy_usage = "1W",
     energy_source = {type = "void"},
-    working_visualisations = reactor_working_visualizations,
+    graphics_set = {working_visualisations = reactor_working_visualizations},
   },
 
   make_reactor_port(false),
@@ -379,11 +379,13 @@ data:extend({
       usage_priority = "secondary-input",
       emissions_per_minute = {},
     },
-    animation = {
-      north = chamber_animation_vertical,
-      south = chamber_animation_vertical,
-      east = chamber_animation_horizontal,
-      west = chamber_animation_horizontal,
+    graphics_set = {
+      animation = {
+        north = chamber_animation_vertical,
+        south = chamber_animation_vertical,
+        east = chamber_animation_horizontal,
+        west = chamber_animation_horizontal,
+      },
     },
     energy_usage = "150MW",
     ingredient_count = 2,

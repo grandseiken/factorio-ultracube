@@ -215,7 +215,7 @@ data:extend({
     }},
     allowed_effects = module_effects.all,
 
-    animation = teleporter_animation,
+    graphics_set = {animation = teleporter_animation},
     launch_wait_time = 8,
     rocket_rising_delay = 1,
     rocket_quick_relaunch_start_offset = 0,
@@ -290,7 +290,7 @@ data:extend({
     fixed_recipe = "cube-uncraftable-dummy-recipe",
     energy_usage = "1W",
     energy_source = {type = "void"},
-    working_visualisations = teleporter_animations_red,
+    graphics_set = {working_visualisations = teleporter_animations_red},
   },
   {
     type = "simple-entity",

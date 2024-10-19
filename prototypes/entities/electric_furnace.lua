@@ -49,8 +49,7 @@ data:extend({
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
     working_sound = data.raw.furnace["electric-furnace"].working_sound,
-    animation = data.raw.furnace["electric-furnace"].animation,
-    working_visualisations = data.raw.furnace["electric-furnace"].working_visualisations,
+    graphics_set = data.raw.furnace["electric-furnace"].graphics_set,
     water_reflection = data.raw.furnace["electric-furnace"].water_reflection,
   },
 })

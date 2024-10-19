@@ -170,10 +170,10 @@ data:extend({
       emissions_per_minute = {},
       drain = "50MW",
     },
-
-    animation = ziggurat_picture,
-    working_visualisations = ziggurat_animations,
-
+    graphics_set = {
+      animation = ziggurat_picture,
+      working_visualisations = ziggurat_animations,
+    },
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = ziggurat_working_sound,
     audible_distance_modifier = 30,

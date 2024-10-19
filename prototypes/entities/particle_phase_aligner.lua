@@ -16,54 +16,56 @@ data:extend({
     corpse = "medium-remnants",
     collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          shift = {0., -0.2},
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          scale = 0.5,
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          draw_as_shadow = true,
-          shift = {0., -0.2},
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          scale = 0.5,
-        },
-      },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
-          priority = "extra-high",
-          width = 256,
-          height = 256,
-          shift = {0., -0.2},
-          draw_as_light = true,
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          scale = 0.5,
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
+            priority = "high",
+            width = 256,
+            height = 256,
+            shift = {0., -0.2},
+            frame_count = 60,
+            line_length = 15,
+            animation_speed = 0.9,
+            scale = 0.5,
+          },
+          {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
+            priority = "high",
+            width = 256,
+            height = 256,
+            draw_as_shadow = true,
+            shift = {0., -0.2},
+            frame_count = 60,
+            line_length = 15,
+            animation_speed = 0.9,
+            scale = 0.5,
+          },
         },
       },
-      {
-        light = {
-          intensity = 0.25,
-          size = 1,
-          shift = {0.0, 0.0},
-          color = {r = 0.1, g = 0.5, b = 1},
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
+            priority = "extra-high",
+            width = 256,
+            height = 256,
+            shift = {0., -0.2},
+            draw_as_light = true,
+            frame_count = 60,
+            line_length = 15,
+            animation_speed = 0.9,
+            scale = 0.5,
+          },
+        },
+        {
+          light = {
+            intensity = 0.25,
+            size = 1,
+            shift = {0.0, 0.0},
+            color = {r = 0.1, g = 0.5, b = 1},
+          },
         },
       },
     },
