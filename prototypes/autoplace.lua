@@ -31,6 +31,23 @@ data.raw.resource["copper-ore"].autoplace = nil
 data.raw.resource["coal"].autoplace = nil
 data.raw.resource["crude-oil"].autoplace = nil
 
+local nauvis = data.raw.planet.nauvis
+local nauvis_gen = nauvis.map_gen_settings
+nauvis.pollutant_type = nil
+nauvis_gen.autoplace_controls["iron-ore"] = nil
+nauvis_gen.autoplace_controls["copper-ore"] = nil
+nauvis_gen.autoplace_controls["coal"] = nil
+nauvis_gen.autoplace_controls["crude-oil"] = nil
+nauvis_gen.autoplace_controls["enemy-base"] = nil
+nauvis_gen.autoplace_controls["cube-deep-core-vein"] = {}
+nauvis_gen.autoplace_controls["cube-rare-metals"] = {}
+nauvis_gen.autoplace_settings.entity.settings["iron-ore"] = nil
+nauvis_gen.autoplace_settings.entity.settings["copper-ore"] = nil
+nauvis_gen.autoplace_settings.entity.settings["coal"] = nil
+nauvis_gen.autoplace_settings.entity.settings["crude-oil"] = nil
+nauvis_gen.autoplace_settings.entity.settings["cube-deep-core-vein"] = {}
+nauvis_gen.autoplace_settings.entity.settings["cube-rare-metals"] = {}
+
 data.raw.turret["small-worm-turret"].autoplace = nil
 data.raw.turret["medium-worm-turret"].autoplace = nil
 data.raw.turret["big-worm-turret"].autoplace = nil

@@ -1,6 +1,9 @@
 local resource_autoplace = require("__core__/lualib/resource-autoplace")
 local noise = require("__core__/lualib/noise")
 
+resource_autoplace.initialize_patch_set("cube-rare-metals", false)
+resource_autoplace.initialize_patch_set("cube-deep-core-vein", false)
+
 local deep_core_ore_autoplace = resource_autoplace.resource_autoplace_settings({
   name = "cube-deep-core-vein",
   order = "f",
@@ -21,23 +24,24 @@ local deep_core_distance = 512
 -- Factor where it starts to fade in.
 local deep_core_fade_ratio = 3
 local deep_core_distance_bonus = 1024
-deep_core_ore_autoplace.probability_expression =
-    deep_core_ore_autoplace.probability_expression + noise.define_noise_function(function(x, y)
-      local d = deep_core_distance * deep_core_distance
-      local r = deep_core_fade_ratio * deep_core_fade_ratio
-      local c = r / d * (1 - r)
-      return noise.clamp(c * (d - x * x - y * y), -1, 0)
-    end)
-deep_core_ore_autoplace.richness_expression = deep_core_ore_autoplace.richness_expression +
-    noise.get_control_setting("cube-deep-core-vein").richness_multiplier *
-    noise.get_control_setting("cube-deep-core-vein").size_multiplier * noise.define_noise_function(function(x, y)
-      return noise.max(0, deep_core_distance_bonus * ((x * x + y * y)^0.5 - deep_core_distance))
-    end)
+
+local d = deep_core_distance * deep_core_distance
+local r = deep_core_fade_ratio * deep_core_fade_ratio
+local c = r / d * (1 - r)
+deep_core_ore_autoplace.probability_expression = deep_core_ore_autoplace.probability_expression ..
+    " + clamp(" .. c .. " * (" .. d .. " - x * x - y * y), -1, 0)"
+deep_core_ore_autoplace.richness_expression = deep_core_ore_autoplace.richness_expression ..
+    " + (var('control:cube-deep-core-vein:richness') * var('control:cube-deep-core-vein:size') * " ..
+    "max(0, " .. deep_core_distance_bonus .. " * (x * x + y * y)^0.5 - " .. deep_core_distance .. "))"
 
 data:extend({
   {
     type = "resource-category",
     name = "cube-deep-core",
+  },
+  {
+    type = "resource-category",
+    name = "cube-none",
   },
 
   {
@@ -55,15 +59,6 @@ data:extend({
     richness = true,
     order = "b-k",
     category = "resource",
-  },
-
-  {
-    type = "noise-layer",
-    name = "cube-rare-metals",
-  },
-  {
-    type = "noise-layer",
-    name = "cube-deep-core-vein",
   },
 
   {

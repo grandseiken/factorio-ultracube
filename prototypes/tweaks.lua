@@ -10,6 +10,9 @@ data.raw["item-subgroup"]["armor"].group = "cube-tools"
 data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"
 data.raw["item-subgroup"]["transport"].group = "cube-tools"
 
+data.raw["mining-drill"]["burner-mining-drill"].resource_categories = {"cube-none"}
+data.raw["mining-drill"]["electric-mining-drill"].resource_categories = {"cube-none"}
+
 data.raw.container["iron-chest"].inventory_size = 20
 data.raw["logistic-container"]["passive-provider-chest"].inventory_size = 20
 data.raw["logistic-container"]["active-provider-chest"].inventory_size = 20
