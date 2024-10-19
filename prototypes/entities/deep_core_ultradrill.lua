@@ -80,7 +80,7 @@ data:extend({
       layers = {
         {
           priority = "extra-high",
-          filename = "__Krastorio2Assets__/entities/quarry-drill/hr-quarry-drill-light.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill-light.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -94,7 +94,7 @@ data:extend({
         },
         {
           priority = "high",
-          filename = "__Krastorio2Assets__/entities/quarry-drill/hr-quarry-drill.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill.png",
           width = 440,
           height = 464,
           frame_count = 90,
@@ -105,7 +105,7 @@ data:extend({
         },
         {
           priority = "medium",
-          filename = "__Krastorio2Assets__/entities/quarry-drill/hr-quarry-drill-sh.png",
+          filename = "__Krastorio2Assets__/entities/quarry-drill/quarry-drill-sh.png",
           width = 500,
           height = 422,
           frame_count = 1,

@@ -12,7 +12,7 @@ data:extend({
   {
     type = "container",
     name = "cube-medium-container",
-    icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/medium-container.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
@@ -28,7 +28,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
-      filename = "__Krastorio2Assets__/entities/containers/medium-containers/medium-container/hr-medium-container.png",
+      filename = "__Krastorio2Assets__/entities/medium-container/medium-container.png",
       priority = "extra-high",
       width = 340,
       height = 340,
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "container",
     name = "cube-big-container",
-    icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/big-container.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
@@ -58,7 +58,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
-      filename = "__Krastorio2Assets__/entities/containers/big-containers/big-container/hr-big-container.png",
+      filename = "__Krastorio2Assets__/entities/big-container/big-container.png",
       priority = "extra-high",
       width = 512,
       height = 512,
@@ -67,7 +67,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/containers/big-containers/big-container-reflection.png",
+        filename = "__Krastorio2Assets__/entities/big-container/big-container-reflection.png",
         priority = "extra-high",
         width = 60,
         height = 50,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "cube-fluid-storage-1",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-1.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-1.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
     minable = {mining_time = 0.5, result = "cube-fluid-storage-1"},
@@ -111,7 +111,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/hr-fluid-storage-1.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -119,7 +119,7 @@ data:extend({
             height = 256,
           },
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/hr-fluid-storage-1-sh.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -173,7 +173,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-1/fluid-storage-1-reflection.png",
+        filename = "__Krastorio2Assets__/entities/fluid-storage-1/fluid-storage-1-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 35,
@@ -191,7 +191,7 @@ data:extend({
   {
     type = "storage-tank",
     name = "cube-fluid-storage-2",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-2.png",
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-player", "player-creation", "not-rotatable"},
@@ -223,7 +223,7 @@ data:extend({
       picture = {
         sheets = {
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/hr-fluid-storage-2.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-2/fluid-storage-2.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -231,7 +231,7 @@ data:extend({
             height = 426,
           },
           {
-            filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/hr-fluid-storage-2-sh.png",
+            filename = "__Krastorio2Assets__/entities/fluid-storage-2/fluid-storage-2-sh.png",
             priority = "extra-high",
             frames = 1,
             scale = 0.5,
@@ -284,7 +284,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/fluid-storages/fluid-storage-2/fluid-storage-2-reflection.png",
+        filename = "__Krastorio2Assets__/entities/fluid-storage-2/fluid-storage-2-reflection.png",
         priority = "extra-high",
         width = 52,
         height = 48,

@@ -5,7 +5,7 @@ data:extend({
     type = "technology",
     name = "cube-arcane-drive",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/advanced-additional-engine.png",
+    icon = "__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-arcane-drive"},
     },

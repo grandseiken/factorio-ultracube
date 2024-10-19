@@ -19,7 +19,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/research-server/hr-research-server.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -30,7 +30,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/research-server/hr-research-server-shadow.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
           priority = "high",
           width = 256,
           height = 256,
@@ -46,7 +46,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__Krastorio2Assets__/entities/research-server/hr-research-server-light.png",
+          filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
           priority = "extra-high",
           width = 256,
           height = 256,

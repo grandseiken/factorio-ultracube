@@ -183,7 +183,7 @@ data:extend({
     type = "technology",
     name = "cube-fluid-burner",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/fluid-burner.png",
+    icon = "__Krastorio2Assets__/technologies/flare-stack.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fluid-burner"},
     },

@@ -66,7 +66,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -74,7 +74,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab-sh.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
           priority = "high",
           width = 512,
           height = 512,
@@ -88,7 +88,7 @@ data:extend({
     working_visualisations = {
       {
         animation = {
-          filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab-working.png",
+          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
           width = 387,
           height = 342,
           shift = {0.05, -0.31},

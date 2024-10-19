@@ -132,7 +132,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-burner",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-burner.png",
+    icon = "__Krastorio2Assets__/icons/entities/flare-stack.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-chemical-machines",
     order = "cube-1[3-fluid-burner]",

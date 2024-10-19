@@ -173,7 +173,7 @@ data:extend({
   {
     type = "item",
     name = "cube-advanced-engine",
-    icon = "__Krastorio2Assets__/icons/equipments/vehicle/additional-engine.png",
+    icon = "__Krastorio2Assets__/icons/equipment/additional-engine-equipment.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-0[b-advanced-engine]",
@@ -182,7 +182,7 @@ data:extend({
   {
     type = "item",
     name = "cube-arcane-drive",
-    icon = "__Krastorio2Assets__/icons/equipments/vehicle/advanced-additional-engine.png",
+    icon = "__Krastorio2Assets__/icons/equipment/advanced-additional-engine-equipment.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-0[c-advanced-engine]",
@@ -416,7 +416,7 @@ data:extend({
   {
     type = "item",
     name = "cube-teleporter-activation",
-    icon = "__Krastorio2Assets__/icons/signals/power_off.png",
+    icon = "__Krastorio2Assets__/icons/virtual-signals/power-off.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-experimental",
     order = "cube-z[1-teleporter-activation]",

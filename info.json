@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 2.0",
     "aai-loaders >= 0.1.4",
-    "Krastorio2Assets >= 1.2",
+    "Krastorio2Assets >= 2.0",
     "?elevated-rails",
     "?enable-all-features-flags",
     "?aai-signal-transmission",

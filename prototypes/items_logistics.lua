@@ -28,7 +28,7 @@ data:extend({
   {
     type = "item",
     name = "cube-medium-container",
-    icon = "__Krastorio2Assets__/icons/entities/containers/medium-containers/medium-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/medium-container.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
     order = "cube-a[items]-w[medium-chest]",
@@ -38,7 +38,7 @@ data:extend({
   {
     type = "item",
     name = "cube-big-container",
-    icon = "__Krastorio2Assets__/icons/entities/containers/big-containers/big-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/big-container.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
     order = "cube-a[items]-x[big-chest]",
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-storage-1",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-1.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-1.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
     order = "cube-z[tanks]-y[medium]",
@@ -58,7 +58,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-storage-2",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
+    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-2.png",
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "storage",
     order = "cube-z[tanks]-z[big]",

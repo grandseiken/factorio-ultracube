@@ -28,7 +28,7 @@ local turbine_scale = 0.85
 local turbine_animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/wind-turbine/hr-wind-turbine.png",
+      filename = "__Krastorio2Assets__/entities/wind-turbine/wind-turbine.png",
       priority = "medium",
       width = 196,
       height = 286,
@@ -39,7 +39,7 @@ local turbine_animation = {
       shift = {0, turbine_scale * -1.2},
     },
     {
-      filename = "__Krastorio2Assets__/entities/wind-turbine/hr-wind-turbine-shadow.png",
+      filename = "__Krastorio2Assets__/entities/wind-turbine/wind-turbine-shadow.png",
       priority = "medium",
       width = 242,
       height = 100,

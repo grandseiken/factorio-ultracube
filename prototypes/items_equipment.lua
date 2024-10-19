@@ -86,7 +86,7 @@ data:extend({
   {
     type = "item",
     name = "cube-exoskeleton-equipment-mk2",
-    icon = "__Krastorio2Assets__/icons/equipments/character/advanced-exoskeleton-equipment.png",
+    icon = "__Krastorio2Assets__/icons/equipment/advanced-exoskeleton-equipment.png",
     localised_description = {"item-description.exoskeleton-equipment"},
     icon_size = 64, icon_mipmaps = 4,
     place_as_equipment_result = "cube-exoskeleton-equipment-mk2",

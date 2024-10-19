@@ -21,7 +21,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/remnants/matter-plant/hr-matter-plant-remnant.png",
+      filename = "__Krastorio2Assets__/entities/remnants/matter-plant/matter-plant-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,
@@ -77,7 +77,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/matter-plant/hr-matter-plant.png",
+          filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -86,7 +86,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/matter-plant/hr-matter-plant-sh.png",
+          filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-sh.png",
           priority = "high",
           width = 504,
           height = 444,
@@ -102,7 +102,7 @@ data:extend({
         draw_as_light = true,
         blend_mode = "additive-soft",
         animation = {
-          filename = "__Krastorio2Assets__/entities/matter-plant/hr-matter-plant-working-light.png",
+          filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-working-light.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -118,7 +118,7 @@ data:extend({
         blend_mode = "additive-soft",
         synced_fadeout = true,
         animation = {
-          filename = "__Krastorio2Assets__/entities/matter-plant/hr-matter-plant-working-glow.png",
+          filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-working-glow.png",
           priority = "high",
           width = 462,
           height = 500,
@@ -131,7 +131,7 @@ data:extend({
       },
       {
         animation = {
-          filename = "__Krastorio2Assets__/entities/matter-plant/hr-matter-plant-working.png",
+          filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-working.png",
           width = 462,
           height = 500,
           frame_count = 30,

@@ -62,14 +62,14 @@ data:extend({
     base = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport.png",
+          filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport.png",
           width = 560,
           height = 560,
           shift = {0, 0.08 / 2},
           scale = 0.25,
         },
         {
-          filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-sh.png",
+          filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-sh.png",
           width = 626,
           height = 426,
           shift = {1.1 / 2, 1.19 / 2},
@@ -79,7 +79,7 @@ data:extend({
       },
     },
     base_patch = {
-      filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-patch.png",
+      filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-patch.png",
       width = 138,
       height = 112,
       shift = {0, 0.28 / 2},
@@ -88,7 +88,7 @@ data:extend({
     base_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-animation.png",
+          filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-animation.png",
           priority = "medium",
           width = 350,
           height = 286,
@@ -100,7 +100,7 @@ data:extend({
           animation_speed = 0.1,
         },
         {
-          filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-animation-light.png",
+          filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-animation-light.png",
           priority = "high",
           width = 350,
           height = 286,
@@ -114,7 +114,7 @@ data:extend({
       },
     },
     door_animation_up = {
-      filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-door-up.png",
+      filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-door-up.png",
       priority = "medium",
       width = 98,
       height = 38,
@@ -123,7 +123,7 @@ data:extend({
       shift = {0, -0.86 / 2},
     },
     door_animation_down = {
-      filename = "__Krastorio2Assets__/entities/large-roboport/hr-large-roboport-door-down.png",
+      filename = "__Krastorio2Assets__/entities/large-roboport/large-roboport-door-down.png",
       priority = "medium",
       width = 98,
       height = 36,

@@ -5,7 +5,7 @@ require("__Ultracube__/prototypes/entities/lib/pipe")
 
 local beacon_scale = 2
 local beacon_picture = {
-  filename = "__Krastorio2Assets__/entities/singularity-beacon/hr-singularity-beacon.png",
+  filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon.png",
   width = 360,
   height = 360,
   shift = util.by_pixel(0, -5),
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "virtual-signal",
     name = "cube-beacon-overload",
-    icon = "__Krastorio2Assets__/icons/signals/attention_2.png",
+    icon = "__Krastorio2Assets__/icons/virtual-signals/attention-2.png",
     icon_size = 64,
     order = "x[special-signals]",
   },
@@ -39,7 +39,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/singularity-beacon/hr-singularity-beacon-w-light.png",
+          filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon-w-light.png",
           width = 190,
           height = 214,
           frame_count = 10,
@@ -51,7 +51,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/entities/singularity-beacon/hr-singularity-beacon-w.png",
+          filename = "__Krastorio2Assets__/entities/singularity-beacon/singularity-beacon-w.png",
           width = 190,
           height = 214,
           frame_count = 10,

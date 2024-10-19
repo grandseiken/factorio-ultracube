@@ -103,7 +103,7 @@ data:extend({
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
     stages = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/rare-metals/hr-rare-metals.png",
+        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -114,7 +114,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/rare-metals/hr-rare-metals-glow.png",
+        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals-glow.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -162,7 +162,7 @@ data:extend({
     stage_counts = {0},
     stages = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/imersite/hr-imersite-rift.png",
+        filename = "__Krastorio2Assets__/resources/imersite/imersite-rift.png",
         priority = "extra-high",
         width = 500,
         height = 500,
@@ -174,7 +174,7 @@ data:extend({
     stages_effect = {
       sheets = {
         {
-          filename = "__Krastorio2Assets__/resources/imersite/hr-imersite-rift-glow.png",
+          filename = "__Krastorio2Assets__/resources/imersite/imersite-rift-glow.png",
           priority = "extra-high",
           width = 500,
           height = 500,

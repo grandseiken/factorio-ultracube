@@ -549,7 +549,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-arcane-drive",
-    icon = "__Krastorio2Assets__/icons/equipments/vehicle/advanced-additional-engine.png",
+    icon = "__Krastorio2Assets__/icons/equipment/advanced-additional-engine-equipment.png",
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},

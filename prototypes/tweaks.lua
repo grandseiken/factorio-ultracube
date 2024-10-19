@@ -74,8 +74,8 @@ data.raw.radar["radar"].vehicle_impact_sound = {
   filename = "__base__/sound/car-metal-impact.ogg",
   volume = 0.65,
 }
-data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar.png"
-data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/hr-radar-shadow.png"
+data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png"
+data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png"
 data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
 data.raw.fluid["sulfuric-acid"].order = "cube-a[tar]-b[acid]"
 -- Revert 1 water -> 10 steam boiler change.
