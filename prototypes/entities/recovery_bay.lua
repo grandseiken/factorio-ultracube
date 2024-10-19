@@ -93,12 +93,13 @@ data:extend({
 
     result_inventory_size = 1,
     source_inventory_size = 1,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_scale = 0.35,
-      module_info_max_icons_per_row = 4,
-      module_info_icon_shift = {0, 0.6},
-    },
+    module_slots = 4,
+    icons_positioning = {{
+      inventory_index = defines.inventory.furnace_modules,
+      shift = {0, 0.6},
+      scale = 0.35,
+      max_icons_per_row = 4,
+    }},
     allowed_effects = module_effects.speed_efficiency,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,

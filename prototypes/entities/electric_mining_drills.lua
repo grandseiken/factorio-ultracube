@@ -260,9 +260,9 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       volume = 200,
       pipe_connections = {
-        {direction = defines.direction.west, position = {-2, 0}},
-        {direction = defines.direction.east, position = {2, 0}},
-        {direction = defines.direction.south, position = {0, 2}},
+        {direction = defines.direction.west, position = {-1, 0}},
+        {direction = defines.direction.east, position = {1, 0}},
+        {direction = defines.direction.south, position = {0, 1}},
       },
     },
     working_sound = {
@@ -1590,7 +1590,7 @@ data:extend({
     energy_usage = "200kW",
     resource_searching_radius = 3.49,
     vector_to_place_result = {0, -1.85},
-    module_specification = {module_slots = 2},
+    module_slots = 2,
     allowed_effects = module_effects.all,
     radius_visualisation_picture = {
       filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",
@@ -1630,9 +1630,9 @@ data:extend({
       pipe_covers = pipecoverspictures(),
       volume = 200,
       pipe_connections = {
-        {direction = defines.direction.west, position = {-2, 0}},
-        {direction = defines.direction.east, position = {2, 0}},
-        {direction = defines.direction.south, position = {0, 2}},
+        {direction = defines.direction.west, position = {-1, 0}},
+        {direction = defines.direction.east, position = {1, 0}},
+        {direction = defines.direction.south, position = {0, 1}},
       },
     },
     working_sound = {
@@ -2960,7 +2960,7 @@ data:extend({
     energy_usage = "400kW",
     resource_searching_radius = 4.49,
     vector_to_place_result = {0, -1.85},
-    module_specification = {module_slots = 4},
+    module_slots = 4,
     allowed_effects = module_effects.all,
     radius_visualisation_picture = {
       filename = "__Krastorio2Assets__/entities/electric-mining-drill-mk2/electric-mining-drill-radius-visualization.png",

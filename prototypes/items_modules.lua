@@ -102,8 +102,8 @@ data:extend({
     order = "cube-b[1]",
     stack_size = 20,
     effect = {
-      speed = {bonus = 0.2},
-      consumption = {bonus = 0.2},
+      speed = 0.2,
+      consumption = 0.2,
     },
     beacon_tint = {
       primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
@@ -124,8 +124,8 @@ data:extend({
     order = "cube-b[2]",
     stack_size = 20,
     effect = {
-      speed = {bonus = 0.35},
-      consumption = {bonus = 0.35},
+      speed = 0.35,
+      consumption = 0.35,
     },
     beacon_tint = {
       primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
@@ -146,8 +146,8 @@ data:extend({
     order = "cube-b[3]",
     stack_size = 20,
     effect = {
-      speed = {bonus = 0.5},
-      consumption = {bonus = 0.5},
+      speed = 0.5,
+      consumption = 0.5,
     },
     beacon_tint = {
       primary = {r = 0.441, g = 0.714, b = 1.000, a = 1.000}, -- #70b6ffff
@@ -169,8 +169,8 @@ data:extend({
     order = "cube-c[1]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.2},
-      pollution = {bonus = -0.2},
+      consumption = -0.2,
+      pollution = -0.2,
     },
     beacon_tint = {
       primary = {0, 1, 0},
@@ -191,8 +191,8 @@ data:extend({
     order = "cube-c[2]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.4},
-      pollution = {bonus = -0.4},
+      consumption = -0.4,
+      pollution = -0.4,
     },
     beacon_tint = {
       primary = {0, 1, 0},
@@ -213,8 +213,8 @@ data:extend({
     order = "cube-c[3]",
     stack_size = 20,
     effect = {
-      consumption = {bonus = -0.6},
-      pollution = {bonus = -0.6},
+      consumption = -0.6,
+      pollution = -0.6,
     },
     beacon_tint = {
       primary = {0, 1, 0},
@@ -236,9 +236,9 @@ data:extend({
     order = "cube-d[1]",
     stack_size = 20,
     effect = {
-      productivity = {bonus = 0.05},
-      consumption = {bonus = 0.2},
-      speed = {bonus = -0.05},
+      productivity = 0.05,
+      consumption = 0.2,
+      speed = -0.05,
     },
     limitation = productivity_module_limitation,
     limitation_message_key = "production-module-usable-only-on-intermediates"
@@ -255,9 +255,9 @@ data:extend({
     order = "cube-d[2]",
     stack_size = 20,
     effect = {
-      productivity = {bonus = 0.08},
-      consumption = {bonus = 0.4},
-      speed = {bonus = -0.1},
+      productivity = 0.08,
+      consumption = 0.4,
+      speed = -0.1,
     },
     limitation = productivity_module_limitation,
     limitation_message_key = "production-module-usable-only-on-intermediates"
@@ -274,9 +274,9 @@ data:extend({
     order = "cube-d[3]",
     stack_size = 20,
     effect = {
-      productivity = {bonus = 0.12},
-      consumption = {bonus = 0.6},
-      speed = {bonus = -0.15},
+      productivity = 0.12,
+      consumption = 0.6,
+      speed = -0.15,
     },
     limitation = productivity_module_limitation,
     limitation_message_key = "production-module-usable-only-on-intermediates"

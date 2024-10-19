@@ -96,14 +96,14 @@ data:extend({
     energy_usage = "800kW",
     energy_source = {type = "void"},
     allowed_effects = module_effects.fuel_speed_only,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = {0, -0.25},
-      module_info_max_icon_rows = 2,
-      module_info_max_icons_per_row = 2,
-      module_info_icon_scale = 0.625,
-      -- module_info_multi_row_initial_height_modifier = -0.3,
-    },
+    module_slots = 4,
+    icons_positioning = {{
+      inventory_index = defines.inventory.beacon_modules,
+      shift = {0, -0.25},
+      scale = 0.625,
+      max_icon_rows = 2,
+      max_icons_per_row = 2,
+    }},
     supply_area_distance = 3.0,
     distribution_effectivity = 0.5,
 
@@ -155,6 +155,6 @@ data:extend({
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,
     allowed_effects = module_effects.none,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
   }
 })

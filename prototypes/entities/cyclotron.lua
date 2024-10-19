@@ -74,7 +74,6 @@ data:extend({
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "assembling-machine",
-    scale_entity_info_icon = true,
     animation = {
       layers = {
         {
@@ -161,7 +160,12 @@ data:extend({
       drain = "0W",
     },
     energy_usage = "120MW",
-    module_specification = {module_slots = 2, module_info_icon_shift = {0, 1.7}, module_info_icon_scale = 1},
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.fuel_speed_only,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

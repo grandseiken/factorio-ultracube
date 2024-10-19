@@ -231,7 +231,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-ultradense-furnace"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -286,11 +285,12 @@ data:extend({
 
     energy_usage = "250MW",
     ingredient_count = 6,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 4,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.fuel_speed_only,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,

@@ -170,10 +170,11 @@ data:extend({
       "cube-synthetic-premonition-card",
       "cube-complete-annihilation-card",
     },
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 0.9}
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.lab_modules,
+      shift = {0, 0.9},
+    }},
     allowed_effects = module_effects.all,
   },
 })

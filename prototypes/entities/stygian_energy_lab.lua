@@ -61,9 +61,7 @@ data:extend({
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "cube-stygian-energy-lab",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = module_effects.fuel_speed_only,
     animation = {
       layers = {
@@ -103,7 +101,6 @@ data:extend({
     },
     fixed_recipe = "cube-stygian-power-generation",
     crafting_categories = {"cube-stygian-energy-lab"},
-    scale_entity_info_icon = true,
     show_recipe_icon = false,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {

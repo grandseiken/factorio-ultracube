@@ -172,7 +172,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-fabricator", "cube-fabricator-handcraft"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -211,11 +210,12 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_shift = {0, 0.7},
-      module_info_icon_scale = 0.625,
-    },
+    module_slots = 4,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 0.7},
+      scale = 0.625,
+    }},
     allowed_effects = module_effects.all,
     open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.75},
     close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75},

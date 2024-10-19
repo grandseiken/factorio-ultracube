@@ -176,7 +176,7 @@ data:extend({
     energy_usage = "0.1MW",
     source_inventory_size = 1,
     result_inventory_size = 1,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

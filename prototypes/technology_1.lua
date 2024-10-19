@@ -455,7 +455,7 @@ data:extend({
     icon = "__base__/graphics/technology/construction-robotics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-construction-robot"},
-      {type = "ghost-time-to-live", modifier = 60 * 60 * 60 * 24 * 7},
+      {type = "create-ghost-on-entity-death", modifier = true},
     },
     prerequisites = {
       "cube-robotics",

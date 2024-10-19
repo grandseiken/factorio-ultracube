@@ -100,7 +100,7 @@ local function make_quantum_decoder(name)
     },
     energy_usage = "1MW",
     working_visualisations = working_visualisations,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     allowed_effects = module_effects.none,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

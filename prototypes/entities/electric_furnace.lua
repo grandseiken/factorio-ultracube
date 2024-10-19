@@ -27,11 +27,11 @@ data:extend({
       },
     },
     fluid_boxes_off_when_no_fluid_recipe = true,
-    module_specification =
-    {
-      module_slots = 2,
-      module_info_icon_shift = {0, 0.8},
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 0.8},
+    }},
     allowed_effects = module_effects.all,
     crafting_categories = {"cube-furnace"},
     fast_replaceable_group = "furnace",

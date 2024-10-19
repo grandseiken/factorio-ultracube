@@ -96,7 +96,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-dimension-folding-engine"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -119,11 +118,12 @@ data:extend({
     },
 
     ingredient_count = 5,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 2.5},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 2.5},
+      scale = 1,
+    }},
     allowed_effects = module_effects.speed_efficiency,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

@@ -39,7 +39,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-crusher"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
@@ -74,11 +73,12 @@ data:extend({
     },
 
     energy_usage = "250kW",
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.furnace_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.all,
     --open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.75},
     --close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75}

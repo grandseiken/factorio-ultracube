@@ -105,7 +105,7 @@ data:extend({
 
     energy_usage = "200kW",
     ingredient_count = 1,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     allowed_effects = module_effects.none,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

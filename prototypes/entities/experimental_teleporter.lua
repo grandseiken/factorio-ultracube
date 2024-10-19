@@ -206,12 +206,13 @@ data:extend({
     crafting_categories = {"cube-experimental-teleporter"},
     fixed_recipe = "cube-teleporter-activation",
     show_recipe_icon = false,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 2.35},
-      module_info_icon_scale = 0.625,
-      module_info_separation_multiplier = 4,
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.rocket_silo_modules,
+      shift = {0, 2.35},
+      scale = 0.625,
+      separation_multiplier = 4,
+    }},
     allowed_effects = module_effects.all,
 
     animation = teleporter_animation,

@@ -66,7 +66,7 @@ data:extend({
       },
       smoke = stygian_smoke(),
     },
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     allowed_effects = module_effects.none,
     animation = {
       layers = {
