@@ -154,8 +154,8 @@ data:extend({
         pipe_connections = {{type = "output", position = {4, 1}}},
         secondary_draw_orders = {north = -1},
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     animation = {
       layers = {
         {
@@ -260,7 +260,7 @@ data:extend({
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       smoke = {
         {
           name = "cube-ultradense-furnace-smoke",

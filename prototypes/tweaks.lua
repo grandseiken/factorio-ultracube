@@ -58,7 +58,7 @@ data.raw.item["centrifuge"].order = "cube-1[0-centrifuge]"
 data.raw.item["centrifuge"].stack_size = 20
 data.raw.item["heat-pipe"].subgroup = "cube-advanced-power"
 data.raw.item["heat-exchanger"].subgroup = "cube-advanced-power"
-data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_minute = 0
+data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_minute = {}
 
 data.raw.item["uranium-235"].subgroup = "cube-uranium"
 data.raw.item["uranium-238"].subgroup = "cube-uranium"

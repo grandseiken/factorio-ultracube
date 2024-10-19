@@ -212,7 +212,7 @@ local function make_reactor_port(flip)
       usage_priority = "secondary-output",
       output_flow_limit = "0W",
       buffer_capacity = "100MJ",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       render_no_power_icon = false,
       render_no_network_icon = false,
     },
@@ -276,7 +276,7 @@ data:extend({
       buffer_capacity = "400MJ",  -- Production / 60.
       usage_priority = "primary-output",
       input_flow_limit = "0W",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       render_no_power_icon = false,
     },
 
@@ -382,7 +382,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
     animation = {
       north = chamber_animation_vertical,

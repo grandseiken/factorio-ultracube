@@ -26,8 +26,8 @@ data:extend({
         pipe_connections = {{type = "input", position = {0, -2}}},
         secondary_draw_orders = {north = -1},
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     module_specification =
     {
       module_slots = 2,
@@ -44,7 +44,7 @@ data:extend({
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
     vehicle_impact_sound = sounds.generic_impact,
     open_sound = sounds.machine_open,

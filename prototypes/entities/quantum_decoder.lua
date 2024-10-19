@@ -96,7 +96,7 @@ local function make_quantum_decoder(name)
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
     energy_usage = "1MW",
     working_visualisations = working_visualisations,

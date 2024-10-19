@@ -2,8 +2,12 @@ local function add_cluster_offsets(source, count, distance, angle_offset, t)
   for i = 0, count - 1 do
     local a = 2 * math.pi * (i + angle_offset) / count
     local tt = table.deepcopy(t)
-    tt.offset_deviation = {{distance * math.sin(a) * 0.75, distance * math.cos(a) * 0.75},
-                           {distance * math.sin(a), distance * math.cos(a)}}
+    local x0 = distance * math.sin(a) * 0.75
+    local x1 = distance * math.sin(a)
+    local y0 = distance * math.cos(a) * 0.75
+    local y1 = distance * math.cos(a)
+    tt.offset_deviation = {{math.min(x0, x1), math.min(y0, y1)},
+                           {math.max(x0, x1), math.max(y0, y1)}}
     source[#source + 1] = tt
   end
   return source

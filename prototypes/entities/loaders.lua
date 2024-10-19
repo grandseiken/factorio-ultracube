@@ -40,7 +40,7 @@ local function add_energy_source(t, energy_scale)
     type = "electric",
     usage_priority = "secondary-input",
     input_flow_limit = (energy_scale * 0.4) .. "MW",
-    emissions_per_minute = 0,
+    emissions_per_minute = {},
     drain = (energy_scale * 50) .. "kW",
   }
 end

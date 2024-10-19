@@ -49,8 +49,8 @@ data:extend({
         base_level = 1,
         pipe_connections = {{type = "output", position = {4, 0}}},
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     animation = {
@@ -159,7 +159,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       drain = "50kW",
     },
 

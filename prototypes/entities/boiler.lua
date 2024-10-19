@@ -47,7 +47,7 @@ data:extend({
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       light_flicker = boiler_data.energy_source.light_flicker,
       smoke = boiler_data.energy_source.smoke,
       render_no_power_icon = false,

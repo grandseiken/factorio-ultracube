@@ -57,7 +57,7 @@ data:extend({
       type = "burner",
       fuel_category = "cube-haunted-energy",
       effectivity = 1,
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       fuel_inventory_size = 1,
       light_flicker = {
         color = {r = 0.4, g = 0.8, b = 1},

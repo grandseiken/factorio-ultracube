@@ -73,8 +73,8 @@ data:extend({
         pipe_connections = {{type = "output", position = {0.5, 2.5}}},
         secondary_draw_orders = {north = -1},
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
 
     animation = {
       layers = {
@@ -194,7 +194,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       drain = "10kW",
     },
     energy_usage = "150kW",

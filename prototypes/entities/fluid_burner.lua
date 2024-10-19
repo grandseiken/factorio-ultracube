@@ -22,8 +22,8 @@ data:extend({
         base_level = -1,
         pipe_connections = {{type = "input", position = {0.5, 1.5}}},
       },
-      off_when_no_fluid_recipe = false,
     },
+    fluid_boxes_off_when_no_fluid_recipe = false,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
     animation = {
@@ -157,7 +157,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
 
     water_reflection = {
