@@ -194,16 +194,4 @@ data:extend({
     order = "cube-y[singularity-research-data]",
     stack_size = 50,
   },
-  {
-    type = "tool",
-    name = "cube-construct-forbidden-ziggurat-dummy",
-    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
-    icon_size = 64,
-    icon_mipmaps = 4,
-    subgroup = "cube-final-machines",
-    order = "cube-4[z-construct]",
-    stack_size = 1,
-    durability = 1,
-    hidden = true,
-  },
 })

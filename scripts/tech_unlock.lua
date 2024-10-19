@@ -25,7 +25,7 @@ local function get_unlocks_for_technology(force, technology_name)
       }
     end
   end
-  return game.get_filtered_technology_prototypes(filters)
+  return prototypes.get_technology_filtered(filters)
 end
 
 local tech_unlock = {}
@@ -36,7 +36,7 @@ function tech_unlock.trigger(force, technology_name, unlocked)
     if unlocked then
       technologies = get_unlocks_for_technology(force, technology_name)
     else
-      technologies = game.get_filtered_technology_prototypes {{
+      technologies = prototypes.get_technology_filtered {{
         filter = "research-unit-ingredient",
         ingredient = technology_name,
         mode = "and",
@@ -86,7 +86,7 @@ function tech_unlock.sync(force)
   end
   for _, tech in pairs(force.technologies) do
     if tech.enabled and tech.researched then
-      for _, effect in ipairs(tech.effects) do
+      for _, effect in ipairs(tech.prototype.effects) do
         if effect.type == "unlock-recipe" then
           local recipe = force.recipes[effect.recipe]
           if recipe then

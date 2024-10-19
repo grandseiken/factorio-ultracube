@@ -216,11 +216,11 @@ script.on_event(
     defines.events.on_robot_built_entity,
   },
   function(e)
-    if not e.created_entity.unit_number then
+    if not e.entity.unit_number then
       return
     end
-    tech_unlock.constructed(e.created_entity)
-    on_entity_added(e.created_entity)
+    tech_unlock.constructed(e.entity)
+    on_entity_added(e.entity)
   end)
 
 script.on_event(

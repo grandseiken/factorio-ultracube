@@ -77,7 +77,7 @@ function cube_management.recipes()
   end
 
   cube_recipes_cache = {}
-  for name, recipe in pairs(game.recipe_prototypes) do
+  for name, recipe in pairs(prototypes.recipe) do
     local data = {recipe = recipe, total_weight = 0, ingredients = {}}
     local is_cube_recipe = false
     for k, _ in pairs(cube_info) do
@@ -118,11 +118,11 @@ function cube_management.module_machines()
   end
 
   module_machines_cache = {}
-  local prototypes = game.get_filtered_entity_prototypes {{
+  local entity_prototypes = prototypes.get_entity_filtered {{
     filter = "type",
     type = module_machine_types,
   }}
-  for name, prototype in pairs(prototypes) do
+  for name, prototype in pairs(entity_prototypes) do
     if prototype.module_inventory_size and prototype.module_inventory_size > 0 then
       module_machines_cache[name] = true
     elseif prototype.allowed_effects then

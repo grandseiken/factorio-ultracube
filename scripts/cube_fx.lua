@@ -272,7 +272,7 @@ local function get_cube_powered_cars()
   -- Set for cache, since this can be on_tick we care about minor performance improvements.
   if not cube_powered_cars_cache then
     cube_powered_cars_cache = {}
-    for car_name, _ in pairs(game.get_filtered_entity_prototypes({{filter = "type", type = "car"}})) do
+    for car_name, _ in pairs(prototypes.get_entity_filtered({{filter = "type", type = "car"}})) do
       if starts_with(car_name, cube_powered_prefix) then
         cube_powered_cars_cache[car_name] = string.sub(car_name, string.len(cube_powered_prefix) + 1)
       end

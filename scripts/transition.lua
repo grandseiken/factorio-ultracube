@@ -8,7 +8,7 @@ local function get_products(e_state, entry)
     return nil
   end
   if entry.product_recipe then
-    return game.recipe_prototypes[entry.product_recipe].products
+    return prototypes.recipe[entry.product_recipe].products
   elseif e_state.random_product then
     return e_state.random_product
   elseif entry.random_products then

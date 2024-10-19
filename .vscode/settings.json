@@ -14,7 +14,8 @@
     "rendering",
     "settings",
     "storage",
-    "feature_flags"
+    "feature_flags",
+    "prototypes"
   ],
   "Lua.diagnostics.disable": [
     "lowercase-global",
