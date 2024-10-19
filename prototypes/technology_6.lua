@@ -97,6 +97,7 @@ data:extend({
     icon = "__Ultracube__/assets/technology/everything.png",
     effects = {},
     prerequisites = {"cube-complete-annihilation-card"},
+    essential = true,
     unit = tech_cost_unit("6", 9600),
     order = "6-9-0",
   },

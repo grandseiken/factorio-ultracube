@@ -76,8 +76,9 @@ data:extend({
       "cube-electric-mining-drill",
       "cube-electric-furnace",
     },
+    essential = true,
     unit = tech_cost_unit("0", 40),
-    order = "0-2-0"
+    order = "0-2-0",
   },
   {
     type = "technology",
@@ -89,6 +90,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
     },
     prerequisites = {"cube-ultradense-furnace"},
+    essential = true,
     unit = tech_cost_unit("0", 60),
     order = "0-2-1",
   },
@@ -101,6 +103,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
     prerequisites = {"cube-ultradense-furnace"},
+    essential = true,
     unit = tech_cost_unit("0", 80),
     order = "0-2-2"
   },
@@ -155,6 +158,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-fabricator"},
     },
     prerequisites = {"cube-electronics"},
+    essential = true,
     unit = tech_cost_unit("0", 60),
     order = "0-2-6",
   },
@@ -171,6 +175,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets"
     },
+    essential = true,
     unit = tech_cost_unit("0", 80),
     order = "0-3-0",
   },
@@ -186,6 +191,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets",
     },
+    essential = true,
     unit = tech_cost_unit("0", 80),
     order = "0-3-1",
   },
@@ -203,6 +209,7 @@ data:extend({
       "cube-electronics",
       "cube-n-dimensional-widgets",
     },
+    essential = true,
     unit = tech_cost_unit("0", 120),
     order = "0-4-0",
   },
