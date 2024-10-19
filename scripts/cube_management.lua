@@ -143,6 +143,7 @@ function cube_management.player_data(player)
   end
   local recipes = cube_management.recipes()
   if (player.controller_type == defines.controllers.character or
+      player.controller_type == defines.controllers.remote or
       player.controller_type == defines.controllers.god) and player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
@@ -170,7 +171,8 @@ end
 
 function cube_management.update_player(player_index)
   local player = game.get_player(player_index)
-  if player.controller_type == defines.controllers.character then
+  if player.controller_type == defines.controllers.character or
+     player.controller_type == defines.controllers.remote then
     player.character_running_speed_modifier = -1.0 + 0.5^cube_management.player_data(player).total_weight
   end
 end
