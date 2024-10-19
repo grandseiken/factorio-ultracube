@@ -62,7 +62,7 @@ if mods["jetpack"] then
       type = "item",
       name = "cube-ultradense-debris",
       amount = 160,
-      catalyst_amount = 160,
+      ignored_by_productivity = 160,
     },
   }
   pack3_recipe.main_product = "jetpack-4"

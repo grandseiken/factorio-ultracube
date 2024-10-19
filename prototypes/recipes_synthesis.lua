@@ -8,7 +8,7 @@ data:extend({
       {type = "item", name = "cube-dormant-utility-cube", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 10,
@@ -32,7 +32,7 @@ data:extend({
       {type = "item", name = "cube-dormant-phantom-constituent", amount = 32},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 30,
@@ -56,7 +56,7 @@ data:extend({
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 1,
@@ -80,7 +80,7 @@ data:extend({
       {type = "item", name = "cube-dormant-phantom-constituent", amount = 64},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 30,
@@ -106,8 +106,8 @@ data:extend({
       {type = "item", name = "cube-boson-conduit", amount = 32},
     },
     results = {
-      {type = "item", name = "cube-ultradense-combustion-cube", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 32, catalyst_amount = 32},
+      {type = "item", name = "cube-ultradense-combustion-cube", amount = 1, ignored_by_productivity = 1},
+      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 32, ignored_by_productivity = 32},
     },
     main_product = "",
     energy_required = 4,
@@ -127,7 +127,7 @@ data:extend({
       {type = "item", name = "cube-ultradense-combustion-cube", amount = 1},
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 32},
     },
-    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
+    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1}},
     main_product = "",
     energy_required = 4,
     category = "cube-dimension-folding-engine",
@@ -143,7 +143,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/phantom-ultradense-constituent.png",
     icon_size = 128,
     ingredients = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1}},
-    results = {{type = "item", name = "cube-phantom-ultradense-constituent", amount = 64, catalyst_amount = 64}},
+    results = {{type = "item", name = "cube-phantom-ultradense-constituent", amount = 64, ignored_by_productivity = 64}},
     main_product = "",
     energy_required = 4,
     category = "cube-dimension-folding-engine",
@@ -159,7 +159,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/ultradense-utility-cube-phantom.png",
     icon_size = 128,
     ingredients = {{type = "item", name = "cube-phantom-ultradense-constituent", amount = 64}},
-    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1}},
+    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1}},
     main_product = "",
     energy_required = 4,
     category = "cube-dimension-folding-engine",
@@ -178,7 +178,7 @@ data:extend({
       {type = "item", name = "cube-dormant-utility-cube", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 2,
@@ -202,7 +202,7 @@ data:extend({
       {type = "item", name = "cube-dormant-combustion-cube", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-combustion-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-combustion-cube", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 2,
@@ -226,7 +226,7 @@ data:extend({
       {type = "item", name = "cube-dormant-phantom-constituent", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, ignored_by_productivity = 1},
     },
     main_product = "",
     energy_required = 2,
@@ -251,8 +251,8 @@ data:extend({
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.75},
+      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, ignored_by_productivity = 1},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, ignored_by_productivity = 1, probability = 0.75, show_details_in_recipe_tooltip = false},
     },
     main_product = "",
     energy_required = 1,
@@ -282,7 +282,7 @@ data:extend({
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-matter-unit", amount = 100},
     },
     main_product = "",
@@ -304,7 +304,7 @@ data:extend({
       {type = "fluid", name = "steam", amount = 2000},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-matter-unit", amount = 1000},
     },
     energy_required = 1,
@@ -325,7 +325,7 @@ data:extend({
       {type = "fluid", name = "cube-matter-replication-gel", amount = 40},
     },
     results = {
-      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-matter-unit", amount = 100},
     },
     main_product = "",
@@ -348,7 +348,7 @@ data:extend({
       {type = "item", name = "cube-rare-metals", amount = 50},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1},
       {type = "item", name = "cube-n-dimensional-widget", amount = 5},
     },
     main_product = "",
@@ -372,9 +372,9 @@ data:extend({
       {type = "fluid", name = "steam", amount = 1000},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-n-dimensional-widget", amount = 50},
-      {type = "fluid", name = "water", amount = 1000},
+      {type = "fluid", name = "water", amount = 1000, show_details_in_recipe_tooltip = false},
     },
     energy_required = 1,
     category = "cube-synthesizer",
@@ -397,8 +397,8 @@ data:extend({
       {type = "item", name = "cube-calcium", amount = 5},
     },
     results = {
-      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "water", amount = 100},
+      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, ignored_by_productivity = 1},
+      {type = "fluid", name = "water", amount = 100, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-n-dimensional-widget", amount = 5},
       {type = "item", name = "cube-basic-contemplation-unit", amount = 5},
     },
@@ -419,13 +419,13 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     ingredients = {
       {type = "item", name = "cube-basic-matter-unit", amount = 200},
-      {type = "fluid", name = "steam", amount = 8000, catalyst_amount = 2000},
-      {type = "fluid", name = "water", amount = 2000, catalyst_amount = 2000},
+      {type = "fluid", name = "steam", amount = 8000, ignored_by_stats = 2000},
+      {type = "fluid", name = "water", amount = 2000, ignored_by_stats = 2000},
     },
     results = {
       {type = "fluid", name = "cube-matter-replication-gel", amount = 4000},
-      {type = "fluid", name = "steam", amount = 2000, catalyst_amount = 2000, temperature = 215},
-      {type = "fluid", name = "water", amount = 4000, catalyst_amount = 2000},
+      {type = "fluid", name = "steam", amount = 2000, ignored_by_stats = 2000, ignored_by_productivity = 2000, temperature = 215, show_details_in_recipe_tooltip = false},
+      {type = "fluid", name = "water", amount = 4000, ignored_by_stats = 2000, ignored_by_productivity = 2000, show_details_in_recipe_tooltip = false},
     },
     energy_required = 4,
     category = "cube-ultradense-furnace",
@@ -444,7 +444,7 @@ data:extend({
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 8000},
     },
     energy_required = 2,
@@ -465,9 +465,9 @@ data:extend({
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "fluid", name = "cube-cerebral-substrate", amount = 1000},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, ignored_by_productivity = 1, probability = 0.5, show_details_in_recipe_tooltip = false},
     },
     energy_required = 1,
     category = "cube-synthesizer",
@@ -487,7 +487,7 @@ data:extend({
       {type = "fluid", name = "cube-ethanol", amount = 2000},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1},
       {type = "fluid", name = "cube-joy", amount = 10000},
       {type = "fluid", name = "cube-despair", amount = 10000},
     },
@@ -510,7 +510,7 @@ data:extend({
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, ignored_by_productivity = 1},
       {type = "item", name = "cube-ghost-crystal", amount = 100},
     },
     main_product = "",
@@ -537,9 +537,9 @@ data:extend({
       {type = "fluid", name = "cube-unstable-gas", amount = 50},
     },
     results = {
-      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-dormant-phantom-constituent", amount = 1, ignored_by_productivity = 1},
       {type = "fluid", name = "cube-ectoplasm", amount = 200},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, ignored_by_productivity = 1, probability = 0.5, show_details_in_recipe_tooltip = false},
     },
     main_product = "",
     energy_required = 1,
@@ -566,7 +566,7 @@ data:extend({
       {type = "fluid", name = "cube-ectoplasm", amount = 20},
     },
     results = {
-      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-arcane-drive", amount = 1}
     },
     main_product = "",
@@ -585,11 +585,11 @@ data:extend({
     icon_size = 128,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
-      {type = "item", name = "cube-residual-tendrils", amount = 20000},
+      {type = "item", name = "cube-residual-tendrils", amount = 20000, ignored_by_stats = 20000},
     },
     results = {
-      {type = "item", name = "cube-dormant-utility-cube", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-residual-tendrils", amount_min = 4800, amount_max = 6400, catalyst_amount = 6400},
+      {type = "item", name = "cube-dormant-utility-cube", amount = 1, ignored_by_productivity = 1},
+      {type = "item", name = "cube-residual-tendrils", amount_min = 4800, amount_max = 6400, ignored_by_stats = 20000, show_details_in_recipe_tooltip = false},
     },
     main_product = "",
     energy_required = 2,
@@ -612,7 +612,7 @@ data:extend({
       {type = "item", name = "cube-deep-powder", amount = 200},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-boson-conduit", amount = 50, probability = 0.5},
       {type = "item", name = "cube-fermion-conduit", amount = 50, probability = 0.5},
     },
@@ -635,7 +635,7 @@ data:extend({
       {type = "item", name = "cube-fermion-conduit", amount = 50},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-boson-conduit", amount = 50},
       {type = "item", name = "cube-deep-powder", amount_min = 0, amount_max = 10},
     },
@@ -658,7 +658,7 @@ data:extend({
       {type = "item", name = "uranium-235", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-fermion-conduit", amount = 50},
     },
     energy_required = 2,
@@ -681,7 +681,7 @@ data:extend({
       {type = "item", name = "cube-rare-metals", amount = 400},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-singularity-research-data", amount = 5},
     },
     energy_required = 2,
@@ -705,7 +705,7 @@ data:extend({
       {type = "item", name = "cube-rare-metals", amount = 2000},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1},
       {type = "item", name = "cube-singularity-research-data", amount = 50},
     },
     energy_required = 2,
@@ -727,8 +727,8 @@ data:extend({
       {type = "item", name = "cube-bottled-euphoria", amount = 10},
     },
     results = {
-      {type = "item", name = "cube-legendary-iron-gear", amount = 1, catalyst_amount = 1},
-      {type = "item", name = "cube-ultradense-debris", amount = 256, catalyst_amount = 256},
+      {type = "item", name = "cube-legendary-iron-gear", amount = 1, ignored_by_productivity = 1},
+      {type = "item", name = "cube-ultradense-debris", amount = 256, ignored_by_productivity = 256},
       {type = "item", name = "cube-basic-antimatter-unit", amount = 1000},
     },
     main_product = "",
@@ -764,7 +764,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "cube-ultradense-mineral", amount = 1},
-      {type = "fluid", name = "water", amount = 10},
+      {type = "fluid", name = "water", amount = 10, show_details_in_recipe_tooltip = false},
     },
     main_product = "cube-ultradense-mineral",
     energy_required = 1,
@@ -830,7 +830,7 @@ data:extend({
     },
     results = {
       {type = "item", name = "cube-ultradense-composite", amount = 1},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, ignored_by_productivity = 1, probability = 0.5, show_details_in_recipe_tooltip = false},
     },
     main_product = "cube-ultradense-composite",
     energy_required = 4,

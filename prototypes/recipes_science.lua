@@ -8,7 +8,7 @@ data:extend({
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-contemplation-unit", amount = 10},
     },
     main_product = "",
@@ -31,8 +31,8 @@ data:extend({
       {type = "item", name = "cube-calcium", amount = 50},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
-      {type = "fluid", name = "steam", amount = 8000, temperature = 215},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
+      {type = "fluid", name = "steam", amount = 8000, temperature = 215, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-contemplation-unit", amount = 100},
     },
     energy_required = 1,

@@ -312,7 +312,7 @@ data:extend({
       {type = "fluid", name = "cube-unstable-gas", amount = 4000},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-condensed-fuel", amount = 50}
     },
     main_product = "cube-condensed-fuel",
@@ -333,7 +333,7 @@ data:extend({
       {type = "fluid", name = "cube-unstable-gas", amount = 8000},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-condensed-fuel", amount = 160}
     },
     category = "cube-fuel-refinery",
@@ -353,7 +353,7 @@ data:extend({
       {type = "item", name = "uranium-238", amount = 19},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "uranium-fuel-cell", amount = 10},
     },
     energy_required = 2,
@@ -377,7 +377,7 @@ data:extend({
       {type = "fluid", name = "cube-radioactive-sludge", amount = 1200},
     },
     results = {
-      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, catalyst_amount = 1},
+      {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "uranium-fuel-cell", amount = 40},
     },
     energy_required = 2,
@@ -396,8 +396,8 @@ data:extend({
       {type = "item", name = "depleted-uranium-fuel-cell", amount = 10},
     },
     results = {
-      {type = "item", name = "uranium-238", amount = 3},
-      {type = "item", name = "cube-uranium-234", amount = 1},
+      {type = "item", name = "uranium-238", amount = 3, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-uranium-234", amount = 1, show_details_in_recipe_tooltip = false},
     },
     energy_required = 20,
     main_product = "",

@@ -79,7 +79,7 @@ data:extend({
       {type = "fluid", name = "steam", amount = 100},
     },
     results = {
-      {type = "fluid", name = "cube-gelatinous-tar", amount = 320},
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 320, show_details_in_recipe_tooltip = false},
     },
     energy_required = 4,
     main_product = "",
@@ -105,7 +105,7 @@ data:extend({
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
     },
     results = {
-      {type = "fluid", name = "cube-gelatinous-tar", amount = 360},
+      {type = "fluid", name = "cube-gelatinous-tar", amount = 360, show_details_in_recipe_tooltip = false},
     },
     energy_required = 4,
     main_product = "",
@@ -129,10 +129,10 @@ data:extend({
     ingredients = {
       {type = "item", name = "coal", amount = 20},
       {type = "fluid", name = "steam", amount = 40},
-      {type = "fluid", name = "cube-heavy-tar", amount = 20},
+      {type = "fluid", name = "cube-heavy-tar", amount = 20, ignored_by_stats = 20},
     },
     results = {
-      {type = "fluid", name = "cube-heavy-tar", amount = 100},
+      {type = "fluid", name = "cube-heavy-tar", amount = 100, ignored_by_productivity = 20, ignored_by_stats = 20},
       {type = "fluid", name = "cube-light-tar", amount = 20},
     },
     energy_required = 6,
@@ -269,14 +269,14 @@ data:extend({
     icon = "__Ultracube__/assets/icons/recipe/deep-crystal-distillation.png",
     icon_size = 128,
     ingredients = {
-      {type = "fluid", name = "cube-mineral-water", amount = 2000},
+      {type = "fluid", name = "cube-mineral-water", amount = 2000, ignored_by_stats = 1000},
       {type = "fluid", name = "sulfuric-acid", amount = 200},
       {type = "item", name = "cube-sand", amount = 200},
     },
     results = {
       {type = "fluid", name = "cube-deep-solution", amount = 500},
-      {type = "fluid", name = "cube-mineral-water", amount = 1000},
-      {type = "fluid", name = "water", amount = 250},
+      {type = "fluid", name = "cube-mineral-water", amount = 1000, ignored_by_stats = 1000, ignored_by_productivity = 100, show_details_in_recipe_tooltip = false0},
+      {type = "fluid", name = "water", amount = 250, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-deep-powder", amount = 50},
     },
     main_product = "",
@@ -315,8 +315,8 @@ data:extend({
       {type = "item", name = "cube-bottled-euphoria", amount = 1},
     },
     results = {
-      {type = "fluid", name = "steam", amount = 250, temperature = 215},
-      {type = "item", name = "cube-besselheim-flask", amount = 1, catalyst_amount = 1, probability = 0.5},
+      {type = "fluid", name = "steam", amount = 250, temperature = 215, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "cube-besselheim-flask", amount = 1, ignored_by_productivity = 1, probability = 0.5, show_details_in_recipe_tooltip = false},
     },
     main_product = "",
     energy_required = 2,
@@ -383,8 +383,8 @@ data:extend({
       {type = "fluid", name = "cube-gamma-waste-stream", amount = 48000},
     },
     results = {
-      {type = "fluid", name = "water", amount = 8000},
-      {type = "fluid", name = "steam", amount = 8000, temperature = 1000},
+      {type = "fluid", name = "water", amount = 8000, show_details_in_recipe_tooltip = false},
+      {type = "fluid", name = "steam", amount = 8000, temperature = 1000, show_details_in_recipe_tooltip = false},
     },
     energy_required = 0.5,
     main_product = "",

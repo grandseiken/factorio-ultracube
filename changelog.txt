@@ -6,6 +6,8 @@ Date: ???
     - This should be considered a beta release for 2.0 compatibility. Everything appears to be working, but there could still be some tendrils lurking somewhere.
     - The "Show only essential technologies" button in the tech tree will show a simplified view of the tech tree progression.
     - Added a cubecam shortcut button to the toolbar.
+    - Production statistics will better reflect the net effect of cyclic recipes.
+    - Removed extra detail tooltips for uninteresting byproducts of certain recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 13.10.2024

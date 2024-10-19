@@ -1,54 +1,3 @@
-local productivity_module_limitation = {
-  "cube-pipe",
-  "cube-basic-motor-unit",
-  "cube-advanced-engine",
-  "cube-electronic-circuit",
-  "cube-advanced-circuit",
-  "cube-spectral-processor",
-  "cube-concrete",
-  "cube-refined-concrete",
-  "cube-stone-crushing",
-  "cube-rare-metal-crushing",
-  "cube-deep-core-crushing",
-  "cube-mash",
-  "cube-stone-brick",
-  "cube-glass",
-  "cube-sophisticated-matter-unit",
-  "cube-resplendent-plate",
-  "cube-spectralite",
-  "cube-conductive-wire",
-  "cube-ghost-wire",
-  "cube-explosives",
-  "cube-battery",
-  "cube-flying-robot-frame",
-  "cube-haunted-energy-cell",
-  "cube-intelligent-calcium",
-  "cube-besselheim-flask",
-  "cube-bottled-consciousness",
-  "cube-bottled-euphoria",
-  "cube-bottled-anguish",
-  "cube-fundamental-comprehension-card",
-  "cube-abstract-interrogation-card",
-  "cube-deep-introspection-card",
-  "cube-synthetic-premonition-card",
-  "cube-complete-annihilation-card",
-  "cube-unstable-gas",
-  "cube-sulfuric-acid",
-  "cube-elbow-grease",
-  "cube-ethanol",
-  -- Only _just_ OK. Will break with slightly more productivity.
-  "cube-tar-processing",
-  "cube-sulfur",
-  -- Also a loop, but should be OK.
-  "cube-deep-crystal",
-  "cube-uranium-processing",
-  "cube-kovarex-enrichment-process",
-  "cube-qubit",
-  -- Is it OK?
-  "cube-resonance-cascade",
-  "cube-teleporter-activation",
-}
-
 data:extend({
   {
     type = "module-category",
@@ -240,8 +189,6 @@ data:extend({
       consumption = 0.2,
       speed = -0.05,
     },
-    limitation = productivity_module_limitation,
-    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -259,8 +206,6 @@ data:extend({
       consumption = 0.4,
       speed = -0.1,
     },
-    limitation = productivity_module_limitation,
-    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
   {
     type = "module",
@@ -278,7 +223,5 @@ data:extend({
       consumption = 0.6,
       speed = -0.15,
     },
-    limitation = productivity_module_limitation,
-    limitation_message_key = "production-module-usable-only-on-intermediates"
   },
 })
