@@ -119,6 +119,9 @@ data.raw["generator-equipment"]["fission-reactor-equipment"].categories = {"cube
 data.raw["equipment-grid"]["spidertron-equipment-grid"].equipment_categories = {"cube-armor"}
 data.raw["battery-equipment"]["battery-mk2-equipment"].sprite.filename = "__Ultracube__/assets/equipment/battery-mk2-equipment.png"
 
+data.raw.shortcut["give-discharge-defense-remote"] = nil
+data.raw.shortcut["give-artillery-targeting-remote"] = nil
+
 if feature_flags.space_travel then
   -- With the space travel feature activated but no space-age mod enabled, we have to define
   -- the empty_space tile to prevent the game crashing.

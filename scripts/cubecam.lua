@@ -104,9 +104,9 @@ local function cubecam_open(player, fullscreen)
     type = "sprite-button",
     name = "cube-cubecam-close",
     style = "frame_action_button",
-    sprite = "utility/close_white",
-    hovered_sprite = "utility/close_white",
-    clicked_sprite = "utility/close_white",
+    sprite = "utility/close",
+    hovered_sprite = "utility/close",
+    clicked_sprite = "utility/close",
   }
   local content = main.add {
     type = "frame",
