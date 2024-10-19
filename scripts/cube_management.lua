@@ -179,14 +179,14 @@ end
 
 function cube_management.get_entity_burning_fuel(entity)
   if entity.burner and entity.burner.currently_burning then
-    return entity.burner.currently_burning.name
+    return entity.burner.currently_burning.name.name
   end
   return nil
 end
 
 function cube_management.is_entity_burning_fuel(entity, fuel_item)
   return entity.burner and entity.burner.currently_burning and
-         entity.burner.currently_burning.name == fuel_item
+         entity.burner.currently_burning.name.name == fuel_item
 end
 
 function cube_management.drop_before_leaving(player_index)

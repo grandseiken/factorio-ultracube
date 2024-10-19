@@ -38,3 +38,12 @@ require("updates.ultralocomotion")
 for _, t in pairs(data.raw.technology) do
   t.enabled = false
 end
+
+-- Get rid of rocket capacity.
+for t, _ in pairs(defines.prototypes.item) do
+  if data.raw[t] then
+    for _, v in pairs(data.raw[t]) do
+      v.weight = (1000 * 1000) / v.stack_size
+    end
+  end
+end

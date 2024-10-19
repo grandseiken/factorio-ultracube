@@ -4,7 +4,7 @@ data.raw.generator["steam-engine"].maximum_temperature = 215
 data.raw.pump.pump.pumping_speed = 250
 data.raw.pump.pump.energy_usage = "40kW"
 data.raw.pump.pump.energy_source.drain = "0kW"
-data.raw.pump.pump.fluid_box.height = 5
+data.raw.pump.pump.fluid_box.volume = 500
 
 data.raw["item-subgroup"]["armor"].group = "cube-tools"
 data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"

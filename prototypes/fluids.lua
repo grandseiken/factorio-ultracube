@@ -18,8 +18,8 @@ data:extend({
     flow_color = {r=0.15, g=0.15, b=0.20},
     default_temperature = 25,
     heat_capacity = "0.1kJ",
-    subgroup = "cube-tar-input",
-    order = "cube-a[tar]-a[tar]",
+    subgroup = "cube-tar-furnace",
+    order = "cube-0[a-tar]",
     barrelling_unlock_tech = "cube-tar-processing",
   },
   {
@@ -33,7 +33,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1kJ",
     subgroup = "cube-tar-input",
-    order = "cube-a[tar]-b[heavy]",
+    order = "cube-0[tar]-a[heavy]",
     barrelling_unlock_tech = "cube-tar-processing",
   },
   {
@@ -47,7 +47,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1kJ",
     subgroup = "cube-tar-input",
-    order = "cube-a[tar]-c[light]",
+    order = "cube-0[tar]-b[light]",
     barrelling_unlock_tech = "cube-tar-processing",
   },
   {
@@ -86,7 +86,7 @@ data:extend({
     default_temperature = 25,
     heat_capacity = "0.1kJ",
     subgroup = "cube-distillation",
-    order = "cube-1[ethanol]",
+    order = "cube-2[ethanol]",
     barrelling_unlock_tech = "cube-distillation",
   },
   {
@@ -98,8 +98,8 @@ data:extend({
     flow_color = {r=0.9, g=0.9, b=0.9},
     default_temperature = 25,
     heat_capacity = "0.1kJ",
-    subgroup = "cube-synthesis-fluids",
-    order = "cube-b[matter]-a[gel]",
+    subgroup = "cube-synthesis-basics",
+    order = "cube-1[0-cube-matter-replication-gel]",
     auto_barrel = false,
   },
   {
@@ -111,8 +111,8 @@ data:extend({
     flow_color = {r=0.2, g=0.9, b=0.9},
     default_temperature = 25,
     heat_capacity = "0.1kJ",
-    subgroup = "cube-synthesis-fluids",
-    order = "cube-b[matter]-b[cerebral]",
+    subgroup = "cube-synthesis-sentience",
+    order = "cube-0[a-cube-cerebral-substrate]",
     auto_barrel = false,
   },
   {
@@ -150,7 +150,8 @@ data:extend({
     flow_color = {r=0.5, g=0.5, b=0.75},
     default_temperature = 25,
     heat_capacity = "0.1kJ",
-    order = "cube-a[fluid]-b[mineral-water]",
+    subgroup = "cube-distillation",
+    order = "cube-1[mineral-water]",
     barrelling_unlock_tech = "cube-deep-crystallization",
   },
   {
@@ -241,7 +242,7 @@ data:extend({
     default_temperature = 25,
     fuel_value = "250kJ",
     subgroup = "cube-energy-fluids",
-    order = "cube-x[ion-stream]",
+    order = "cube-c[ion-stream]",
     auto_barrel = false,
   },
   {
@@ -253,7 +254,7 @@ data:extend({
     flow_color = {r=0.45, g=0.1, b=0.2, a=1},
     default_temperature = 25,
     subgroup = "cube-energy-fluids",
-    order = "cube-y[gamma-stream]",
+    order = "cube-d[gamma-stream]",
     auto_barrel = false,
   },
 })

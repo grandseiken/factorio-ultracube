@@ -1,20 +1,9 @@
-local item_prototypes = {
-  "item",
-  "tool",
-  "gun",
-  "ammo",
-  "armor",
-  "module",
-  "item-with-entity-data",
-  "capsule",
-  "rail-planner",
-  "spidertron-remote",
-}
-
 function add_mystery_recipe(a, b, c, d, e)
   local item = nil
-  for _, t in ipairs(item_prototypes) do
-    item = data.raw[t][b]
+  for t, _ in pairs(defines.prototypes.item) do
+    if data.raw[t] then
+      item = data.raw[t][b]
+    end
     if item then break end
   end
   local results = {{type = "item", name = "cube-residual-tendrils",

@@ -20,14 +20,14 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     target_temperature = 215,
     fluid_box = {
-      volume = 300,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -0.5}}},
       production_type = "input",
       filter = "water"
     },
     output_fluid_box = {
-      volume = 300,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
         {flow_direction = "output", direction = defines.direction.west, position = {-1, 0.5}},
@@ -54,8 +54,7 @@ data:extend({
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
 
-    structure = boiler_data.structure,
-    patch = boiler_data.patch,
+    pictures = boiler_data.pictures,
     water_reflection = boiler_data.water_reflection,
     fire_flicker_enabled = true,
     fire_glow_flicker_enabled = true,

@@ -29,6 +29,12 @@ data:extend({
 
   {
     type = "item-subgroup",
+    name = "cube-cubes",
+    group = "cube-synthesis",
+    order = "0",
+  },
+  {
+    type = "item-subgroup",
     name = "cube-synthesis-manual",
     group = "cube-synthesis",
     order = "0",
@@ -86,12 +92,6 @@ data:extend({
     name = "cube-synthesis-forbidden",
     group = "cube-synthesis",
     order = "z",
-  },
-  {
-    type = "item-subgroup",
-    name = "cube-basic-products",
-    group = "intermediate-products",
-    order = "0",
   },
   {
     type = "item-subgroup",

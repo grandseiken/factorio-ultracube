@@ -109,6 +109,7 @@ local ziggurat_working_sound = {
   max_sounds_per_type = 3,
   fade_in_ticks = 10,
   fade_out_ticks = 30,
+  audible_distance_modifier = 1,
 }
 
 local ziggurat_picture = {

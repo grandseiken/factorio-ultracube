@@ -101,6 +101,12 @@ local entity_prototypes = {
   "mining-drill",
   "construction-robot",
   "logistic-robot",
+  "unit",
+  "unit-spawner",
+  "turret",
+  "combat-robot",
+  "cargo-pod",
+  "temporary-container",
 }
 
 local item_prototypes = {
@@ -155,6 +161,7 @@ for _, v in ipairs(entity_prototypes) do
     else
       t.next_upgrade = nil
       t.hidden = true
+      t.hide_from_signal_gui = true
     end
   end
 end
@@ -165,6 +172,7 @@ for _, v in ipairs(item_prototypes) do
       t.order = add_prefix(t.order)
     else
       t.hidden = true
+      t.hide_from_signal_gui = true
     end
   end
 end
@@ -174,6 +182,7 @@ for _, t in pairs(data.raw.fluid) do
     t.order = add_prefix(t.order)
   else
     t.hidden = true
+    t.hide_from_signal_gui = true
   end
 end
 
@@ -182,11 +191,6 @@ for _, t in pairs(data.raw.recipe) do
     t.order = add_prefix(t.order)
   else
     t.enabled = false
-    if t.normal then
-      t.normal.enabled = false
-    end
-    if t.expensive then
-      t.expensive.enabled = false
-    end
+    t.hide_from_signal_gui = true
   end
 end

@@ -430,7 +430,7 @@ local function cube_vehicle_mod(size, results)
   end
 
   for _, locomotive in pairs(new_locomotives) do
-    local fuel = locomotive.burner.currently_burning.name
+    local fuel = locomotive.burner.currently_burning.name.name
     local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
     if ultralocomotion_fuel then
       locomotive.burner.currently_burning = ultralocomotion_fuel
@@ -452,7 +452,7 @@ local function cube_vehicle_mod(size, results)
   for unit_number, locomotive in pairs(cube_fx_data.last_locomotives) do
     if not new_locomotives[unit_number] and locomotive.valid and
        locomotive.burner and locomotive.burner.currently_burning then
-      local ultralocomotion_fuel = locomotive.burner.currently_burning.name
+      local ultralocomotion_fuel = locomotive.burner.currently_burning.name.name
       local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
       if normal_fuel then
         locomotive.burner.currently_burning = normal_fuel
@@ -559,7 +559,7 @@ end
 function cube_fx.reset_ultralocomotion_fuel(entity)
   if entity.unit_number and cube_fuel_vehicle_entity_types[entity.type] and entity.burner and
      entity.burner.currently_burning then
-    local fuel = entity.burner.currently_burning.name
+    local fuel = entity.burner.currently_burning.name.name
     local normal_fuel = ultralocomotion_fuel_inverse_map[fuel]
     if normal_fuel then
       entity.burner.currently_burning = normal_fuel
@@ -591,7 +591,7 @@ function cube_fx.tick(tick)
         if burner then
           local currently_burning = burner.currently_burning
           if currently_burning then
-            local fuel = currently_burning.name
+            local fuel = currently_burning.name.name
             local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
             if ultralocomotion_fuel then
               burner.currently_burning = ultralocomotion_fuel

@@ -76,6 +76,7 @@ data:extend({
 
     energy_usage = "250kW",
     module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
     icons_positioning = {{
       inventory_index = defines.inventory.furnace_modules,
       shift = {0, 1.7},

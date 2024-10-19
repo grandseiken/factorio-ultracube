@@ -176,6 +176,7 @@ data:extend({
 
     ingredient_count = 4,
     module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
     icons_positioning = {{
       inventory_index = defines.inventory.assembling_machine_modules,
       shift = {0, 1.7},

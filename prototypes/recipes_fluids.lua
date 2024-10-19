@@ -59,7 +59,7 @@ data:extend({
     energy_required = 6,
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
-    order = "cube-0[c-tar-processing]",
+    order = "cube-1[tar-processing]",
     always_show_made_in = true,
     enabled = false,
     crafting_machine_tint = {
@@ -85,7 +85,7 @@ data:extend({
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
-    order = "cube-1[a-heavy-reclamation]",
+    order = "cube-2[a-heavy-reclamation]",
     always_show_made_in = true,
     enabled = false,
     crafting_machine_tint = {
@@ -111,7 +111,7 @@ data:extend({
     main_product = "",
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
-    order = "cube-1[b-light-reclamation]",
+    order = "cube-2[b-light-reclamation]",
     always_show_made_in = true,
     enabled = false,
     crafting_machine_tint = {
@@ -138,7 +138,7 @@ data:extend({
     energy_required = 6,
     category = "cube-chemical-plant",
     subgroup = "cube-tar-input",
-    order = "cube-2[coal-liquefaction]",
+    order = "cube-3[coal-liquefaction]",
     always_show_made_in = true,
     allow_decomposition = false,
     enabled = false,
@@ -321,7 +321,7 @@ data:extend({
     main_product = "",
     energy_required = 2,
     category = "cube-chemical-plant",
-    subgroup = "cube-tar-furnace",
+    subgroup = "cube-tar-output",
     order = "cube-x[euphoric-release]",
     always_show_made_in = true,
     enabled = false,
@@ -448,6 +448,7 @@ for _, fluid in ipairs(voidable_fluids) do
     subgroup = "cube-fluid-burner",
     order = "cube-a[void]-" .. prototype.order,
     hide_from_player_crafting = true,
+    hide_from_signal_gui = true,
     always_show_products = false,
     show_amount_in_title = false,
   }})

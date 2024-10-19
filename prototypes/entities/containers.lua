@@ -24,7 +24,6 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "container",
     inventory_size = 40,
-    scale_info_icons = true,
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
@@ -34,6 +33,7 @@ data:extend({
       height = 340,
       scale = 0.25,
     },
+    icon_draw_specification = {scale = 1.25, shift = {0, -0.3}},
     circuit_connector = circuit_connector_definitions["chest"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     open_sound = sounds.machine_open,
@@ -54,7 +54,6 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "container",
     inventory_size = 60,
-    scale_info_icons = true,
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
@@ -79,6 +78,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
+    icon_draw_specification = {scale = 1.5, shift = {0, -0.3}},
     circuit_connector = circuit_connector_definitions["cube-big-container"],
     circuit_wire_max_distance = 20,
     open_sound = sounds.machine_open,
@@ -185,6 +185,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
+    icon_draw_specification = {scale = 1.5, shift = {0, -0.3}},
     circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
   },
@@ -296,6 +297,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
     circuit_connector = circuit_connector_definitions["storage-tank"],
     circuit_wire_max_distance = 20,
   },
