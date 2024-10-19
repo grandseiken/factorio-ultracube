@@ -55,7 +55,7 @@ data:extend({
     source_inventory_size = 1,
     energy_source = {
       type = "burner",
-      fuel_category = "cube-haunted-energy",
+      fuel_categories = {"cube-haunted-energy"},
       effectivity = 1,
       emissions_per_minute = {},
       fuel_inventory_size = 1,

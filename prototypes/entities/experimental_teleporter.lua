@@ -217,6 +217,8 @@ data:extend({
     animation = teleporter_animation,
     launch_wait_time = 8,
     rocket_rising_delay = 1,
+    rocket_quick_relaunch_start_offset = 0,
+    cargo_station_parameters = {hatch_definitions = {{}}},
 
     arm_01_back_animation = util.empty_sprite(),
     arm_02_right_animation = util.empty_sprite(),
@@ -319,6 +321,7 @@ data:extend({
     flying_speed = 1,
     flying_acceleration = 1,
 
+    cargo_pod_entity = "cargo-pod",
     rocket_sprite = util.empty_sprite(),
     rocket_shadow_sprite = util.empty_sprite(),
     rocket_glare_overlay_sprite = util.empty_sprite(),

@@ -168,11 +168,12 @@ local reactor_working_visualizations = {
 }
 
 local function make_reactor_port(flip)
-  local pipe_position = {0, -1}
+  local pipe_position = {0, 0}
+  local direction = defines.direction.north
   local selection_box = {{-2.5, -0.5}, {2.5, 3.5}}
   local name = "cube-antimatter-reactor-port"
   if flip then
-    pipe_position = {0, 1}
+    direction = defines.direction.south
     selection_box = {{-2.5, -3.5}, {2.5, 0.5}}
     name = name .. "-flip"
   end
@@ -199,11 +200,9 @@ local function make_reactor_port(flip)
       production_type = "input",
       pipe_covers = pipecoverspictures(),
       pipe_picture = pipe_path,
-      base_area = 250,
-      base_height = 50,
-      base_level = -25,
+      volume = 1250000,
       pipe_connections = {
-        {type = "input", position = pipe_position},
+        {flow_direction = "input", direction = direction, position = pipe_position},
       },
       filter = "cube-ionized-annihilation-stream",
     },
@@ -359,22 +358,18 @@ data:extend({
     selection_box = {{-2.5, -3.5}, {2.5, 3.5}},
     fluid_boxes = {
       {
-        base_area = 5,
-        height = 50,
-        base_level = 1,
+        volume = 25000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          {type = "output", position = {0, -4}},
+          {flow_direction = "output", direction = defines.direction.north, position = {0, -3}},
         },
         production_type = "output",
       },
       {
-        base_area = 5,
-        height = 50,
-        base_level = 1,
+        volume = 25000,
         pipe_covers = pipecoverspictures(),
         pipe_connections = {
-          {type = "output", position = {0, 4}},
+          {flow_direction = "output", direction = defines.direction.south, position = {0, 3}},
         },
         production_type = "output",
       },

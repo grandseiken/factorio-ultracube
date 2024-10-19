@@ -60,7 +60,7 @@ data:extend({
     neighbour_bonus = 0.25,
     energy_source = {
       type = "burner",
-      fuel_category = "cube-cube",
+      fuel_categories = {"cube-cube"},
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 2,
@@ -119,7 +119,7 @@ data:extend({
     neighbour_bonus = 0.25,
     energy_source = {
       type = "burner",
-      fuel_category = "nuclear",
+      fuel_categories = {"nuclear"},
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 2,

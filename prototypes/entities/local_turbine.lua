@@ -158,7 +158,13 @@ data:extend({
     selectable_in_game = false,
     maximum_wire_distance = 0.5,
     supply_area_distance = 1,
-    pictures = util.empty_sprite(),
+    pictures = {
+      filename = "__core__/graphics/empty.png",
+      priority = "extra-high",
+      width = 1,
+      height = 1,
+      direction_count = 1,
+    },
     connection_points = no_connections,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
@@ -184,7 +190,13 @@ data:extend({
     max_health = 100,
     maximum_wire_distance = 0.5,
     supply_area_distance = 3,
-    pictures = util.empty_sprite(),
+    pictures = {
+      filename = "__core__/graphics/empty.png",
+      priority = "extra-high",
+      width = 1,
+      height = 1,
+      direction_count = 1,
+    },
     connection_points = no_connections,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",

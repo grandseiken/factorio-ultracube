@@ -20,22 +20,18 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     target_temperature = 215,
     fluid_box = {
-      base_area = 1,
-      height = 3,
-      base_level = -1,
+      volume = 300,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{type = "input", position = {0, -1.5}}},
+      pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -0.5}}},
       production_type = "input",
       filter = "water"
     },
     output_fluid_box = {
-      base_area = 1,
-      height = 3,
-      base_level = 1,
+      volume = 300,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        {type = "output", position = {-2, 0.5}},
-        {type = "output", position = {2, 0.5}}
+        {flow_direction = "output", direction = defines.direction.west, position = {-1, 0.5}},
+        {flow_direction = "output", direction = defines.direction.east, position = {1, 0.5}}
       },
       production_type = "output",
       filter = "steam"

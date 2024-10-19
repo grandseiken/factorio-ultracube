@@ -32,14 +32,12 @@ data:extend({
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     damaged_trigger_effect = hit_effects.entity(),
     fluid_box = {
-      base_area = 1,
-      height = 2,
-      base_level = -1,
+      volume = 200,
       pipe_covers = pipecoverspictures(),
       pipe_connections =
       {
-        {type = "input-output", position = {0, 3}},
-        {type = "input-output", position = {0, -3}}
+        {flow_direction = "input-output", direction = defines.direction.south, position = {0, 2}},
+        {flow_direction = "input-output", direction = defines.direction.north, position = {0, -2}}
       },
       production_type = "input-output",
       minimum_temperature = 100.0,
