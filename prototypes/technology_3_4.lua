@@ -114,7 +114,7 @@ data:extend({
     icon_size = 256, icon_mipmaps = 4,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fission-reactor-equipment.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fusion-reactor-equipment"},
+      {type = "unlock-recipe", recipe = "cube-fission-reactor-equipment"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
