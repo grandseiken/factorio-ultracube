@@ -370,7 +370,6 @@ data:extend({
     icon = "__base__/graphics/technology/spidertron.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-spidertron"},
-      {type = "unlock-recipe", recipe = "cube-spidertron-remote"},
     },
     prerequisites = {
       "cube-exoskeleton-equipment",

@@ -529,18 +529,6 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
-  {
-    type = "recipe",
-    name = "cube-spidertron-remote",
-    ingredients = {
-      {type = "item", name = "cube-spectral-processor", amount = 1},
-      {type = "item", name = "radar", amount = 1},
-    },
-    results = {{type = "item", name = "spidertron-remote", amount = 1}},
-    energy_required = 2,
-    category = "cube-fabricator-handcraft",
-    enabled = false,
-  },
 
   {
     type = "recipe",

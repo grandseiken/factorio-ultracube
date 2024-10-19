@@ -312,7 +312,6 @@ add_mystery_recipe(1, "night-vision-equipment", "small-lamp")
 
 add_mystery_recipe(2, "car", "cube-advanced-engine")
 add_mystery_recipe(4, "spidertron", "raw-fish")
-add_mystery_recipe(1, "spidertron-remote", "raw-fish")
 
 add_mystery_recipe(1, "stone-wall", "stone-brick")
 add_mystery_recipe(1, "gate", "stone-wall")

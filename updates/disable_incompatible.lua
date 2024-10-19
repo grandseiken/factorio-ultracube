@@ -64,6 +64,8 @@ local vanilla_item_whitelist = make_set({
   "explosives",
   "cliff-explosives",
   "flying-robot-frame",
+  "red-wire",
+  "green-wire",
   "constant-combinator",
   "arithmetic-combinator",
   "decider-combinator",

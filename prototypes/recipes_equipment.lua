@@ -42,6 +42,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-battery-mk2-equipment",
+    localised_name = {"equipment-name.battery-mk2-equipment"},
     ingredients = {
       {type = "item", name = "cube-battery-equipment", amount = 4},
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 10},
@@ -81,6 +82,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-fission-reactor-equipment",
+    localised_name = {"equipment-name.fission-reactor-equipment"},
     ingredients = {
       {type = "item", name = "uranium-fuel-cell", amount = 20},
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 100},
@@ -94,6 +96,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-night-vision-equipment",
+    localised_name = {"equipment-name.night-vision-equipment"},
     ingredients = {
       {type = "item", name = "cube-advanced-circuit", amount = 10},
       {type = "item", name = "cube-rare-metals", amount = 4},
@@ -107,6 +110,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-belt-immunity-equipment",
+    localised_name = {"equipment-name.belt-immunity-equipment"},
     ingredients = {
       {type = "item", name = "cube-resplendent-plate", amount = 1},
       {type = "item", name = "cube-spectral-processor", amount = 10},
@@ -120,6 +124,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-exoskeleton-equipment",
+    localised_name = {"equipment-name.exoskeleton-equipment"},
     ingredients = {
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 10},
       {type = "item", name = "cube-speed-module", amount = 4},
@@ -161,6 +166,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-personal-roboport-mk2-equipment",
+    localised_name = {"equipment-name.personal-roboport-mk2-equipment"},
     ingredients = {
       {type = "item", name = "cube-personal-roboport-equipment", amount = 2},
       {type = "item", name = "cube-sophisticated-matter-unit", amount = 20},

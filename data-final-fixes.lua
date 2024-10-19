@@ -25,10 +25,7 @@ local replacement_techs = {
   ["spidertron"] = "cube-spidertron",
 }
 for _, v in pairs(data.raw.shortcut) do
-  if v.technology_to_unlock == "circuit-network" then
-    v.technology_to_unlock = "cube-combinatorics"
-  end
-  if v.technology_to_unlock == "construction-robotics" then
-    v.technology_to_unlock = "cube-construction-robotics"
+  if replacement_techs[v.technology_to_unlock] then
+    v.technology_to_unlock = replacement_techs[v.technology_to_unlock]
   end
 end
