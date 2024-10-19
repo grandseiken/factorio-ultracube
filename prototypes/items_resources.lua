@@ -12,25 +12,25 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -47,19 +47,19 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -76,43 +76,43 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-4.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-5.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals-6.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -130,7 +130,7 @@ data:extend({
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/sand-01.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -157,19 +157,19 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -187,7 +187,7 @@ data:extend({
         layers = {
           {
             filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand.png",
-            scale = 0.25,
+            scale = 0.5,
             size = 64,
             mipmap_count = 4,
           },
@@ -203,7 +203,7 @@ data:extend({
         layers = {
           {
             filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-1.png",
-            scale = 0.25,
+            scale = 0.5,
             size = 64,
             mipmap_count = 4,
           },
@@ -219,7 +219,7 @@ data:extend({
         layers = {
           {
             filename = "__Krastorio2Assets__/icons/items-with-variations/sand/sand-2.png",
-            scale = 0.25,
+            scale = 0.5,
             size = 64,
             mipmap_count = 4,
           },
@@ -245,19 +245,19 @@ data:extend({
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/mash.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/mash-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/mash-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -278,7 +278,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -288,7 +288,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -298,7 +298,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-1.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -308,7 +308,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-1-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -318,7 +318,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-2.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -328,7 +328,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-2-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -338,7 +338,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-3.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -348,7 +348,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite-3-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -370,7 +370,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -380,7 +380,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -390,7 +390,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -400,7 +400,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-1-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -410,7 +410,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -420,7 +420,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder-2-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -442,7 +442,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -452,7 +452,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -462,7 +462,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -472,7 +472,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-1-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -482,7 +482,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -492,7 +492,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-2-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -502,7 +502,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -512,7 +512,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-3-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -522,7 +522,7 @@ data:extend({
           {
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -532,7 +532,7 @@ data:extend({
             tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
             size = 64,
             filename = "__Krastorio2Assets__/icons/items-with-variations/imersite-crystal/imersite-crystal-4-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },
@@ -573,28 +573,28 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
@@ -616,21 +616,21 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/silicon/silicon-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
@@ -648,19 +648,19 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -677,7 +677,7 @@ data:extend({
         {
           size = 64,
           filename = "__Ultracube__/assets/icons/uranium-234.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4
         },
         {
@@ -685,7 +685,7 @@ data:extend({
           blend_mode = "additive",
           size = 64,
           filename = "__Ultracube__/assets/icons/uranium-234.png",
-          scale = 0.25,
+          scale = 0.5,
           tint = {r = 0.3, g = 0.3, b = 0.3, a = 0.3},
           mipmap_count = 4,
         }

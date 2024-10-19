@@ -10,7 +10,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -18,7 +18,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/military-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -39,7 +39,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -47,7 +47,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -68,7 +68,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -76,7 +76,7 @@ data:extend({
           flags = { "light" },
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/matter-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -97,7 +97,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -105,7 +105,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -126,7 +126,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -134,7 +134,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -155,7 +155,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -163,7 +163,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },

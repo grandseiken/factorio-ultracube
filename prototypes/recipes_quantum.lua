@@ -129,7 +129,7 @@ for i = 0, 5 do
           {
             size = 64,
             filename = icon,
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
           {
@@ -137,7 +137,7 @@ for i = 0, 5 do
             flags = {"light"},
             size = 64,
             filename = "__Ultracube__/assets/icons/qubit-light.png",
-            scale = 0.25,
+            scale = 0.5,
             mipmap_count = 4,
           },
         },

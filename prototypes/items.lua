@@ -285,7 +285,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/imersium-plate.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -293,7 +293,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/imersium-plate-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -312,7 +312,7 @@ data:extend({
         {
           size = 64,
           filename = "__Ultracube__/assets/icons/haunted-energy-cell.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -320,7 +320,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Ultracube__/assets/icons/haunted-energy-cell-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -342,7 +342,7 @@ data:extend({
         {
           filename = "__Ultracube__/assets/icons/boson-conduit.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -350,7 +350,7 @@ data:extend({
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -369,7 +369,7 @@ data:extend({
         {
           filename = "__Ultracube__/assets/icons/fermion-conduit.png",
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -377,7 +377,7 @@ data:extend({
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -396,7 +396,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -404,7 +404,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -435,7 +435,7 @@ data:extend({
         {
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
         {
@@ -443,7 +443,7 @@ data:extend({
           flags = {"light"},
           size = 64,
           filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
-          scale = 0.25,
+          scale = 0.5,
           mipmap_count = 4,
         },
       },
@@ -462,19 +462,19 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -492,13 +492,13 @@ data:extend({
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },
@@ -516,25 +516,25 @@ data:extend({
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/ultradense-mineral.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/ultradense-mineral-1.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/ultradense-mineral-2.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
       {
         size = 64,
         filename = "__Ultracube__/assets/icons/ultradense-mineral-3.png",
-        scale = 0.25,
+        scale = 0.5,
         mipmap_count = 4,
       },
     },

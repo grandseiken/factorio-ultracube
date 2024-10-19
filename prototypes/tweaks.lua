@@ -77,8 +77,44 @@ data.raw.radar["radar"].vehicle_impact_sound = {
   filename = "__base__/sound/car-metal-impact.ogg",
   volume = 0.65,
 }
-data.raw.radar["radar"].pictures.layers[1].filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png"
-data.raw.radar["radar"].pictures.layers[2].filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png"
+
+data.raw.radar["radar"].integration_patch = {
+  filename = "__Krastorio2Assets__/entities/advanced-radar/radar-integration.png",
+  priority = "low",
+  width = 238,
+  height = 216,
+  direction_count = 1,
+  shift = util.by_pixel(1.5, 4),
+  scale = 0.5,
+}
+data.raw.radar["radar"].pictures = {
+  layers = {
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png",
+      priority = "low",
+      width = 196,
+      height = 254,
+      apply_projection = false,
+      direction_count = 64,
+      line_length = 8,
+      shift = util.by_pixel(1, -16),
+      scale = 0.5,
+    },
+    {
+      filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png",
+      priority = "low",
+      width = 343,
+      height = 186,
+      apply_projection = false,
+      direction_count = 64,
+      line_length = 8,
+      shift = util.by_pixel(39.25, 3),
+      draw_as_shadow = true,
+      scale = 0.5,
+    },
+  },
+}
+
 data.raw.fluid["sulfuric-acid"].subgroup = "cube-tar-output"
 data.raw.fluid["sulfuric-acid"].order = "cube-a[tar]-b[acid]"
 -- Revert 1 water -> 10 steam boiler change.
