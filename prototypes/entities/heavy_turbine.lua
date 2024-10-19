@@ -126,8 +126,7 @@ data:extend({
       fade_in_ticks = 4,
       fade_out_ticks = 20
     },
-    min_perceived_performance = 0.25,
-    performance_to_sound_speedup = 0.5,
+    perceived_performance = {minimum = 0.25, performance_to_activity_rate = 2.0},
     water_reflection = {
       pictures = {
         filename = "__base__/graphics/entity/steam-turbine/steam-turbine-reflection.png",
