@@ -181,9 +181,7 @@ if mods["RenaiTransportation"] then
     local inserter_list = {
       "fast-inserter",
       "long-handed-inserter",
-      "filter-inserter",
       "bulk-inserter",
-      "bulk-filter-inserter",
     }
     if settings.startup["RTModdedThrowers"].value then  -- Renai will generate throwers for modded inserters.
       -- Ultracube's extremely long filter inserter. Why you would want to use a thrower version of this,
@@ -219,7 +217,6 @@ if mods["RenaiTransportation"] then
     local effects = data.raw.technology["cube-inserters"].effects
     effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-fast-inserter-Recipe"}
     effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-long-handed-inserter-Recipe"}
-    effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-filter-inserter-Recipe"}
 
     -- Thrower techs
     data:extend({
@@ -230,8 +227,7 @@ if mods["RenaiTransportation"] then
         icon = "__RenaiTransportation__/graphics/tech/ThrowerTech.png",
         icon_size = 128,
         effects = {
-          {type = "unlock-recipe", recipe = "cube-RTThrower-stack-inserter-Recipe"},
-          {type = "unlock-recipe", recipe = "cube-RTThrower-stack-filter-inserter-Recipe"}
+          {type = "unlock-recipe", recipe = "cube-RTThrower-bulk-inserter-Recipe"},
         },
         prerequisites = {"se~no", "cube-bulk-inserters"},
         unit = tech_cost_unit("1b", 50),

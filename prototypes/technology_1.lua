@@ -316,7 +316,6 @@ data:extend({
     icon = "__base__/graphics/technology/bulk-inserter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-bulk-inserter"},
-      {type = "unlock-recipe", recipe = "cube-bulk-filter-inserter"},
     },
     prerequisites = {
       "cube-inserters",

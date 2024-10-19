@@ -9,7 +9,6 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-fast-inserter"},
       {type = "unlock-recipe", recipe = "cube-long-inserter"},
-      {type = "unlock-recipe", recipe = "cube-filter-inserter"},
     },
     unit = tech_cost_unit("0", 10),
     order = "0-0-0",

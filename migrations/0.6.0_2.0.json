@@ -1,7 +1,6 @@
 {
   "recipe": [
     ["cube-stack-inserter", "cube-bulk-inserter"],
-    ["cube-stack-filter-inserter", "cube-bulk-filter-inserter"],
     ["cube-fusion-reactor-equipment", "cube-fission-reactor-equipment"]
   ],
   "technology": [
