@@ -71,10 +71,6 @@ function tech_unlock.trigger(force, technology_name, unlocked)
           victorious_force = "player",
         }
       end
-      game.print({"cube-msg-victory-0"})
-      game.print({"cube-msg-victory-1"})
-      game.print({"cube-msg-victory-2"})
-      game.print({"cube-msg-victory-3"})
     end
   end
 end

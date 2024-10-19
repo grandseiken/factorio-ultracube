@@ -111,6 +111,17 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
+  game.set_win_ending_info {
+    image_path = "__Ultracube__/assets/victory.png",
+    title = {"gui-game-finished.victory"},
+    message = {"cube-msg-victory-0"},
+    bullet_points = {
+      {"cube-msg-victory-1"},
+      {"cube-msg-victory-2"},
+    },
+    final_message = {"cube-msg-victory-3"},
+  }
+
   for _, interface in pairs {"silo_script", "better-victory-screen"} do
     if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
       remote.call(interface, "set_no_victory", true)
