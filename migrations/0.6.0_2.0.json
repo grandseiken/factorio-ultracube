@@ -4,8 +4,7 @@
     ["cube-stack-filter-inserter", "cube-bulk-filter-inserter"],
     ["cube-fusion-reactor-equipment", "cube-fission-reactor-equipment"]
   ],
-  "technology":
-  [
+  "technology": [
     ["cube-stack-inserters", "cube-bulk-inserters"],
     ["cube-stack-inserter-capacity-bonus-1", "cube-bulk-inserter-capacity-bonus-1"],
     ["cube-stack-inserter-capacity-bonus-2", "cube-bulk-inserter-capacity-bonus-2"],
@@ -15,5 +14,5 @@
     ["cube-stack-inserter-capacity-bonus-6", "cube-bulk-inserter-capacity-bonus-6"],
     ["cube-stack-inserter-capacity-bonus-7", "cube-bulk-inserter-capacity-bonus-7"],
     ["cube-stack-inserter-capacity-bonus-8", "cube-bulk-inserter-capacity-bonus-8"]
- ],
+ ]
 }

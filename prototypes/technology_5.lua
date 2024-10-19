@@ -124,10 +124,9 @@ data:extend({
       tech_unlock_effect(),
     },
     prerequisites = {"cube-forbidden-ziggurat"},
-    unit = {
-      count = 1,
-      time = 1 / 1024,
-      ingredients = {{"cube-construct-forbidden-ziggurat-dummy", 1}},
+    research_trigger = {
+      type = "build-entity",
+      entity = {name = "cube-forbidden-ziggurat"},
     },
     order = "5-3-1",
   },
