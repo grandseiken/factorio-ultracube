@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 data:extend({
   {
     type = "module-category",
@@ -27,6 +29,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "cube-a[modular-casing]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 20,
   },
   {
@@ -36,6 +41,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-module-intermediates",
     order = "cube-b[burnt-out-modular-casing]",
+    inventory_move_sound = item_sounds.steam_inventory_move,
+    pick_sound = item_sounds.steam_inventory_pickup,
+    drop_sound = item_sounds.steam_inventory_move,
     stack_size = 20,
   },
 
@@ -49,6 +57,9 @@ data:extend({
     category = "cube-speed",
     tier = 1,
     order = "cube-b[1]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       speed = 0.2,
@@ -71,6 +82,9 @@ data:extend({
     category = "cube-speed",
     tier = 2,
     order = "cube-b[2]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       speed = 0.35,
@@ -93,6 +107,9 @@ data:extend({
     category = "cube-speed",
     tier = 3,
     order = "cube-b[3]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       speed = 0.5,
@@ -116,6 +133,9 @@ data:extend({
     category = "cube-efficiency",
     tier = 1,
     order = "cube-c[1]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       consumption = -0.2,
@@ -138,6 +158,9 @@ data:extend({
     category = "cube-efficiency",
     tier = 2,
     order = "cube-c[2]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       consumption = -0.4,
@@ -160,6 +183,9 @@ data:extend({
     category = "cube-efficiency",
     tier = 3,
     order = "cube-c[3]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       consumption = -0.6,
@@ -183,6 +209,9 @@ data:extend({
     category = "cube-productivity",
     tier = 1,
     order = "cube-d[1]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       productivity = 0.05,
@@ -200,6 +229,9 @@ data:extend({
     category = "cube-productivity",
     tier = 2,
     order = "cube-d[2]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       productivity = 0.08,
@@ -217,6 +249,9 @@ data:extend({
     category = "cube-productivity",
     tier = 3,
     order = "cube-d[3]",
+    inventory_move_sound = item_sounds.module_inventory_move,
+    pick_sound = item_sounds.module_inventory_pickup,
+    drop_sound = item_sounds.module_inventory_move,
     stack_size = 20,
     effect = {
       productivity = 0.12,

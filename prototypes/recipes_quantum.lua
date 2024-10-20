@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 data:extend({
   {
     type = "item",
@@ -6,6 +8,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-research-quantum",
     order = "cube-0[qubit]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 10,
   },
   {
@@ -144,6 +149,9 @@ for i = 0, 5 do
       },
       subgroup = "cube-qubits",
       order = "cube-1[" .. i .. "]",
+      inventory_move_sound = item_sounds.science_inventory_move,
+      pick_sound = item_sounds.science_inventory_pickup,
+      drop_sound = item_sounds.science_inventory_move,
       stack_size = 10,
     },
     {

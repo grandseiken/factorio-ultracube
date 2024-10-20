@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 data:extend({
   {
     type = "item",
@@ -7,6 +9,9 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "cube-0[0-cube]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.atomic_bomb_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 1,
 
     fuel_category = "cube-cube",
@@ -24,6 +29,9 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "cube-0[1-cube]",
+    inventory_move_sound = item_sounds.solid_fuel_inventory_move,
+    pick_sound = item_sounds.solid_fuel_inventory_pickup,
+    drop_sound = item_sounds.solid_fuel_inventory_move,
     stack_size = 1,
   },
   {
@@ -34,6 +42,9 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "cube-0[2-cube]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.atomic_bomb_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 1,
 
     fuel_category = "cube-cube",
@@ -51,6 +62,9 @@ data:extend({
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
     order = "cube-0[3-cube]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.solid_fuel_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 1,
   },
   {
@@ -63,6 +77,9 @@ data:extend({
     }},
     subgroup = "cube-cubes",
     order = "cube-0[4-cube]",
+    inventory_move_sound = item_sounds.energy_shield_inventory_move,
+    pick_sound = item_sounds.energy_shield_inventory_pickup,
+    drop_sound = item_sounds.energy_shield_inventory_move,
     stack_size = 1,
 
     fuel_category = "cube-phantom",
@@ -80,6 +97,9 @@ data:extend({
     }},
     subgroup = "cube-cubes",
     order = "cube-0[5-cube]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.solid_fuel_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 1,
   },
   {
@@ -89,6 +109,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "cube-0[0-plate]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 1,
     flags = {"not-stackable"},
   },
@@ -104,6 +127,9 @@ data:extend({
     fuel_top_speed_multiplier = 1.1,
     subgroup = "cube-fuel",
     order = "cube-x[fuel-0]",
+    inventory_move_sound = item_sounds.fuel_cell_inventory_move,
+    pick_sound = item_sounds.fuel_cell_inventory_pickup,
+    drop_sound = item_sounds.fuel_cell_inventory_move,
     stack_size = 20,
   },
   {
@@ -117,6 +143,9 @@ data:extend({
     fuel_top_speed_multiplier = 1.25,
     subgroup = "cube-fuel",
     order = "cube-y[fuel-1]",
+    inventory_move_sound = item_sounds.fuel_cell_inventory_move,
+    pick_sound = item_sounds.fuel_cell_inventory_pickup,
+    drop_sound = item_sounds.fuel_cell_inventory_move,
     stack_size = 10,
   },
   {
@@ -130,6 +159,9 @@ data:extend({
     fuel_top_speed_multiplier = 1.15,
     subgroup = "cube-fuel",
     order = "cube-z[a-condensed-fuel]",
+    inventory_move_sound = item_sounds.fuel_cell_inventory_move,
+    pick_sound = item_sounds.fuel_cell_inventory_pickup,
+    drop_sound = item_sounds.fuel_cell_inventory_move,
     stack_size = 10,
   },
 
@@ -140,6 +172,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-basics",
     order = "cube-0[a-matter]",
+    inventory_move_sound = item_sounds.plastic_inventory_move,
+    pick_sound = item_sounds.plastic_inventory_pickup,
+    drop_sound = item_sounds.plastic_inventory_move,
     stack_size = 200,
   },
   {
@@ -149,6 +184,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-basics",
     order = "cube-x[antimatter]",
+    inventory_move_sound = item_sounds.plastic_inventory_move,
+    pick_sound = item_sounds.plastic_inventory_pickup,
+    drop_sound = item_sounds.plastic_inventory_move,
     stack_size = 200,
   },
   {
@@ -168,6 +206,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-0[a-basic-motor-unit]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 50,
   },
   {
@@ -177,6 +218,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-0[b-advanced-engine]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 50,
   },
   {
@@ -186,6 +230,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-ethereal",
     order = "cube-0[c-advanced-engine]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 50,
   },
   {
@@ -198,6 +245,9 @@ data:extend({
     }},
     subgroup = "cube-processed-materials",
     order = "cube-6[ghostwire]",
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
     stack_size = 200,
   },
   {
@@ -207,6 +257,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-2[a-electronic-circuit]",
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move,
     stack_size = 100,
   },
   {
@@ -216,6 +269,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-components",
     order = "cube-2[b-advanced-circuit]",
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move,
     stack_size = 100,
   },
   {
@@ -228,6 +284,9 @@ data:extend({
     }},
     subgroup = "cube-components",
     order = "cube-2[c-processing-unit]",
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move,
     stack_size = 100,
   },
   {
@@ -237,6 +296,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "cube-b[d-besselheim-flask]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 50,
   },
   {
@@ -246,6 +308,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "cube-b[e-besselheim-flask]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 50,
   },
   {
@@ -255,6 +320,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "cube-b[f-besselheim-flask]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 50,
   },
   {
@@ -264,6 +332,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-flasks",
     order = "cube-b[g-besselheim-flask]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 50,
   },
   {
@@ -273,6 +344,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-processed-materials",
     order = "cube-2[sophisticated]",
+    inventory_move_sound = item_sounds.plastic_inventory_move,
+    pick_sound = item_sounds.plastic_inventory_pickup,
+    drop_sound = item_sounds.plastic_inventory_move,
     stack_size = 100,
   },
   {
@@ -300,6 +374,9 @@ data:extend({
     },
     subgroup = "cube-processed-materials",
     order = "cube-3[plate]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 100,
   },
   {
@@ -327,6 +404,9 @@ data:extend({
     },
     subgroup = "cube-chemical-intermediates",
     order = "cube-z[haunted-energy-cell]",
+    inventory_move_sound = item_sounds.rocket_control_inventory_move,
+    pick_sound = item_sounds.rocket_control_inventory_pickup,
+    drop_sound = item_sounds.rocket_control_inventory_move,
     fuel_category = "cube-haunted-energy",
     -- TODO: may need tweaking with actual practice.
     fuel_value = "400MJ",
@@ -357,6 +437,9 @@ data:extend({
     },
     subgroup = "cube-research-singularity",
     order = "cube-1[boson-conduit]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 20,
   },
   {
@@ -384,33 +467,9 @@ data:extend({
     },
     subgroup = "cube-research-singularity",
     order = "cube-2[fermion-conduit]",
-    stack_size = 20,
-  },
-  {
-    type = "item",
-    name = "cube-teleportation-control-module",
-    icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-    icon_size = 64, icon_mipmaps = 4,
-    pictures = {
-      layers = {
-        {
-          size = 64,
-          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
-          scale = 0.5,
-          mipmap_count = 4,
-        },
-        {
-          draw_as_light = true,
-          flags = {"light"},
-          size = 64,
-          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
-          scale = 0.5,
-          mipmap_count = 4,
-        },
-      },
-    },
-    subgroup = "cube-experimental",
-    order = "cube-z[0-teleportation-control-module]",
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
     stack_size = 20,
   },
   {
@@ -450,6 +509,9 @@ data:extend({
     },
     subgroup = "cube-experimental",
     order = "cube-z[teleportation-control-module]",
+    inventory_move_sound = item_sounds.rocket_control_inventory_move,
+    pick_sound = item_sounds.rocket_control_inventory_pickup,
+    drop_sound = item_sounds.rocket_control_inventory_move,
     stack_size = 10,
   },
   {
@@ -480,6 +542,9 @@ data:extend({
     },
     subgroup = "cube-synthesis-forbidden",
     order = "cube-1[step-0]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 64,
   },
   {
@@ -504,6 +569,9 @@ data:extend({
     },
     subgroup = "cube-synthesis-forbidden",
     order = "cube-2[step-1]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 200,
   },
   {
@@ -540,6 +608,9 @@ data:extend({
     },
     subgroup = "cube-synthesis-forbidden",
     order = "cube-3[step-2a]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -549,6 +620,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "cube-4[step-3]",
+    inventory_move_sound = item_sounds.plastic_inventory_move,
+    pick_sound = item_sounds.plastic_inventory_pickup,
+    drop_sound = item_sounds.plastic_inventory_move,
     stack_size = 50,
   },
   {
@@ -558,6 +632,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-synthesis-forbidden",
     order = "cube-5[step-4]",
+    inventory_move_sound = item_sounds.metal_large_inventory_move,
+    pick_sound = item_sounds.metal_large_inventory_pickup,
+    drop_sound = item_sounds.metal_large_inventory_move,
     stack_size = 10,
   },
 })

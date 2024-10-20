@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 data:extend({
   {
     type = "resource-category",
@@ -36,6 +38,9 @@ data:extend({
     },
     subgroup = "raw-resource",
     order = "cube-e[0-raw-rare-metals]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -65,6 +70,9 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-a[refined-rare-metals]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -118,6 +126,9 @@ data:extend({
     },
     subgroup = "cube-smelting",
     order = "cube-0[rare-metals]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 100,
   },
 
@@ -136,6 +147,9 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-c[0-sand]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 200,
   },
   {
@@ -145,6 +159,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-processed-materials",
     order = "cube-1[a-glass]",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 50,
   },
 
@@ -175,6 +192,9 @@ data:extend({
     },
     subgroup = "cube-experimental",
     order = "cube-a[calcium]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -234,6 +254,9 @@ data:extend({
     },
     subgroup = "cube-experimental",
     order = "cube-b[calcium]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -263,6 +286,9 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-b[0-mash]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
 
@@ -356,6 +382,9 @@ data:extend({
     },
     subgroup = "raw-resource",
     order = "cube-f[1-deep-core-ore]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 50,
   },
   {
@@ -428,6 +457,9 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-d[0-powder]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 100,
   },
   {
@@ -540,6 +572,9 @@ data:extend({
     },
     subgroup = "cube-chemical-intermediates",
     order = "cube-0[b-crystal]",
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
     stack_size = 50,
   },
   {
@@ -549,6 +584,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-fuel",
     order = "cube-1[a-potato]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 50,
   },
   {
@@ -558,6 +596,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-fuel",
     order = "cube-1[b-potato]",
+    inventory_move_sound = item_sounds.resource_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.resource_inventory_move,
     stack_size = 50,
   },
   {
@@ -601,6 +642,9 @@ data:extend({
     },
     subgroup = "cube-synthesis-ethereal",
     order = "cube-0[c-crystal]",
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
     stack_size = 50,
   },
   {
@@ -637,6 +681,9 @@ data:extend({
     },
     subgroup = "cube-processed-materials",
     order = "cube-5[spectralite]",
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
     stack_size = 100,
   },
   {
@@ -666,6 +713,9 @@ data:extend({
     },
     subgroup = "cube-processing",
     order = "cube-x[0-tendrils]",
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.fluid_inventory_pickup,
+    drop_sound = item_sounds.fluid_inventory_move,
     stack_size = 50,
   },
   {
@@ -694,6 +744,9 @@ data:extend({
     icon_size = 64, icon_mipmaps = 4,
     subgroup = "cube-uranium",
     order = "cube-a[1]",
+    inventory_move_sound = item_sounds.nuclear_inventory_move,
+    pick_sound = item_sounds.nuclear_inventory_pickup,
+    drop_sound = item_sounds.nuclear_inventory_move,
     stack_size = 100,
   },
 })

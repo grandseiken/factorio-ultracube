@@ -6,6 +6,7 @@ Date: ???
     - This should be considered a beta release for 2.0 compatibility. Everything appears to be working, but there could still be some tendrils lurking somewhere.
     - Added a cubecam shortcut button to the toolbar.
     - Rearranged the positions of item and fluid signals to better match the character's recipe GUI and fit with the new recipe signals.
+    - Updated items to use new pickup and placement sounds.
     - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
     - Production statistics will better reflect the net effect of cyclic recipes.
     - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes which output one of their inputs.

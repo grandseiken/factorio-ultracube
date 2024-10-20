@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 data:extend({
   {
     type = "armor",
@@ -13,6 +15,9 @@ data:extend({
     inventory_size_bonus = 0,
     open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
     close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1},
+    inventory_move_sound = item_sounds.armor_small_inventory_move,
+    pick_sound = item_sounds.armor_small_inventory_pickup,
+    drop_sound = item_sounds.armor_small_inventory_move,
   },
   {
     type = "armor",
@@ -28,6 +33,9 @@ data:extend({
     inventory_size_bonus = 0,
     open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
     close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1},
+    inventory_move_sound = item_sounds.armor_small_inventory_move,
+    pick_sound = item_sounds.armor_small_inventory_pickup,
+    drop_sound = item_sounds.armor_small_inventory_move,
   },
   {
     type = "armor",
@@ -43,6 +51,9 @@ data:extend({
     inventory_size_bonus = 6,
     open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
     close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1},
+    inventory_move_sound = item_sounds.armor_large_inventory_move,
+    pick_sound = item_sounds.armor_large_inventory_pickup,
+    drop_sound = item_sounds.armor_large_inventory_move,
   },
   {
     type = "armor",
@@ -58,6 +69,9 @@ data:extend({
     inventory_size_bonus = 10,
     open_sound = {filename =  "__base__/sound/armor-open.ogg", volume = 1},
     close_sound = {filename = "__base__/sound/armor-close.ogg", volume = 1},
+    inventory_move_sound = item_sounds.armor_large_inventory_pickup,
+    pick_sound = item_sounds.armor_large_inventory_pickup,
+    drop_sound = item_sounds.armor_large_inventory_move,
   },
   {
     type = "item",
@@ -68,7 +82,9 @@ data:extend({
     place_as_equipment_result = "cube-solar-panel-equipment",
     subgroup = "cube-equipment-power",
     order = "cube-a[energy-source]-a[solar-panel]",
-    default_request_amount = 5,
+    inventory_move_sound = item_sounds.electric_large_inventory_pickup,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.electric_large_inventory_move,
     stack_size = 20,
   },
   {
@@ -80,7 +96,9 @@ data:extend({
     place_as_equipment_result = "cube-solar-panel-equipment-mk2",
     subgroup = "cube-equipment-power",
     order = "cube-a[energy-source]-b[solar-panel-mk2]",
-    default_request_amount = 5,
+    inventory_move_sound = item_sounds.electric_large_inventory_pickup,
+    pick_sound = item_sounds.electric_large_inventory_pickup,
+    drop_sound = item_sounds.electric_large_inventory_move,
     stack_size = 20,
   },
   {
@@ -92,7 +110,9 @@ data:extend({
     place_as_equipment_result = "cube-exoskeleton-equipment-mk2",
     subgroup = "cube-equipment",
     order = "cube-d[exoskeleton]-b[exoskeleton-equipment-mk2]",
-    default_request_amount = 1,
+    inventory_move_sound = item_sounds.exoskeleton_inventory_move,
+    pick_sound = item_sounds.exoskeleton_inventory_pickup,
+    drop_sound = item_sounds.exoskeleton_inventory_move,
     stack_size = 20,
   },
   {
@@ -104,7 +124,9 @@ data:extend({
     place_as_equipment_result = "cube-battery-equipment",
     subgroup = "cube-equipment-power",
     order = "cube-b[battery]-a[battery-equipment]",
-    default_request_amount = 5,
+    inventory_move_sound = item_sounds.electric_small_inventory_move,
+    pick_sound = item_sounds.electric_small_inventory_pickup,
+    drop_sound = item_sounds.electric_small_inventory_move,
     stack_size = 20,
   },
   {
@@ -116,7 +138,9 @@ data:extend({
     place_as_equipment_result = "cube-personal-roboport-equipment",
     subgroup = "cube-equipment",
     order = "cube-e[robotics]-a[personal-roboport-equipment]",
-    default_request_amount = 1,
+    inventory_move_sound = item_sounds.roboport_inventory_move,
+    pick_sound = item_sounds.roboport_inventory_pickup,
+    drop_sound = item_sounds.roboport_inventory_move,
     stack_size = 20,
   },
 })
