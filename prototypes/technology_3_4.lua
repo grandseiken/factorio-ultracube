@@ -203,6 +203,7 @@ data:extend({
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.25},
+        scale = 0.75,
       },
     },
     effects = {
@@ -323,7 +324,7 @@ data:extend({
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
-        scale = 0.625,
+        scale = 0.625 / 2,
       },
     },
     effects = {

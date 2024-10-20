@@ -52,17 +52,20 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/icons/tar.png",
-        shift = {0, -40},
+        shift = {0, -20},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
-        shift = {-0.866 * 40, 20},
+        shift = {-0.866 * 20, 10},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
-        shift = {0.866 * 40, 20},
+        shift = {0.866 * 20, 10},
+        scale = 0.5,
       },
     },
     effects = {
@@ -265,7 +268,7 @@ data:extend({
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__base__/graphics/technology/explosives.png",
-        scale = 0.625,
+        scale = 0.625 / 2,
       },
     },
     effects = {
@@ -286,7 +289,7 @@ data:extend({
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/technologies/matter-coal.png",
-        scale = 0.625,
+        scale = 0.625 / 2,
       },
     },
     effects = {
@@ -453,7 +456,7 @@ data:extend({
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/technologies/matter-minerals.png",
-        scale = 0.625,
+        scale = 0.625 / 2,
       },
     },
     effects = {
@@ -474,6 +477,7 @@ data:extend({
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.0},
+        scale = 1,
       },
       {
         icon_size = 256, icon_mipmaps = 4,
@@ -491,6 +495,7 @@ data:extend({
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.5},
+        scale = 1,
       },
     },
     effects = {
@@ -530,12 +535,14 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/icons/bottled-euphoria.png",
-        shift = {-32, 0},
+        shift = {-16, 0},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/icons/bottled-anguish.png",
-        shift = {32, 0},
+        shift = {16, 0},
+        scale = 0.5,
       },
       {
         icon_size = 256, icon_mipmaps = 4,
@@ -602,17 +609,20 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
-        shift = {0, -40},
+        shift = {0, -20},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
-        shift = {-0.866 * 40, 20},
+        shift = {-0.866 * 20, 10},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
-        shift = {0.866 * 40, 20},
+        shift = {0.866 * 20, 10},
+        scale = 0.5,
       },
     },
     effects = {

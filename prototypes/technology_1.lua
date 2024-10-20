@@ -39,17 +39,20 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
-        shift = {0, -40},
+        shift = {0, -20},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-        shift = {-0.866 * 40, 20},
+        shift = {-0.866 * 20, 10},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__base__/graphics/icons/stone.png",
-        shift = {0.866 * 40, 20},
+        shift = {0.866 * 20, 10},
+        scale = 0.5,
       },
     },
     effects = {
@@ -102,12 +105,14 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Ultracube__/assets/icons/sand-01.png",
-        shift = {0, 32},
+        shift = {0, 16},
+        scale = 0.5,
       },
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/water.png",
-        shift = {0, -32},
+        shift = {0, -16},
+        scale = 0.5,
       },
     },
     effects = {
@@ -128,7 +133,7 @@ data:extend({
       {
         icon_size = 256, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/technologies/matter-oil.png",
-        scale = 0.625,
+        scale = 0.625 / 2,
       },
     },
     effects = {
@@ -361,7 +366,7 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {48, 48},
+        scale = 1, shift = {24, 24},
       },
     },
     effects = {
@@ -382,7 +387,7 @@ data:extend({
       {
         icon_size = 64, icon_mipmaps = 4,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-        scale = 2, shift = {48, 48},
+        scale = 1, shift = {24, 24},
       },
     },
     effects = {
