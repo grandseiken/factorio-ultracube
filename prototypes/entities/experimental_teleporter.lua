@@ -275,6 +275,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
     icon_size = 64, icon_mipmaps = 4,
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
+    show_recipe_icon_on_map = false,
     max_health = 1000,
     collision_mask = {layers = {}},
     selection_box = {{-3, -2}, {3, 3.4}},

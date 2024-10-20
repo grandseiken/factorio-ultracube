@@ -80,6 +80,7 @@ local function make_quantum_decoder(name)
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    show_recipe_icon_on_map = false,
     fast_replaceable_group = "cube-quantum-decoder",
     minable = {mining_time = 0.75, result = "cube-quantum-decoder"},
     damaged_trigger_effect = hit_effects.entity(),

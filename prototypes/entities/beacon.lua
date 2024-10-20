@@ -121,6 +121,7 @@ data:extend({
     placeable_by = {item = "cube-beacon", count = 1},
     allow_copy_paste = false,
     selectable_in_game = true,
+    show_recipe_icon_on_map = false,
     hidden = true,
     max_health = 300,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},

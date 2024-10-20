@@ -10,6 +10,7 @@ data:extend({
     icon_size = 128,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 1, result = "cube-recovery-bay"},
     max_health = 200,
     damaged_trigger_effect = hit_effects.entity(),

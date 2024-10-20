@@ -9,6 +9,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 0.5, result = "cube-fluid-burner"},
     max_health = 250,
     corpse = "medium-remnants",
