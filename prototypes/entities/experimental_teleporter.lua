@@ -231,7 +231,7 @@ data:extend({
       usage_priority = "secondary-input",
     },
     rocket_parts_required = 4,
-    rocket_result_inventory_size = 1,
+    to_be_inserted_to_rocket_inventory_size = 1,
     crafting_speed = 1,
     crafting_categories = {"cube-experimental-teleporter"},
     fixed_recipe = "cube-teleporter-activation",
