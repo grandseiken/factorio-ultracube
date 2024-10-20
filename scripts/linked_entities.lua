@@ -265,7 +265,7 @@ local function transfer_or_drop_all(entity, inventory, item_set)
           insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
         elseif item_set[stack.name] then
           insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
-          di.remove({name = item, count = count})
+          di.remove({name = stack.name, count = stack.count})
         end
       end
       if not item_set then
