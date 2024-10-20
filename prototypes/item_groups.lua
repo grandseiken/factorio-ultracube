@@ -14,15 +14,8 @@ data:extend({
     order = "d",
     icons = {
       {
-        icon = "__base__/graphics/technology/power-armor-mk2.png",
+        icon = "__Ultracube__/assets/tools.png",
         icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/technology/module.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-        scale = 0.8,
       },
     },
   },
