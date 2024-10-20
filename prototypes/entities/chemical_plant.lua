@@ -16,7 +16,7 @@ data:extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
+    drawing_box_vertical_extension = 0.4,
     module_slots = 2,
     allowed_effects = module_effects.all,
     graphics_set = data.raw["assembling-machine"]["chemical-plant"].graphics_set,

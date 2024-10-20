@@ -20,7 +20,7 @@ data:extend({
     },
     collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
     selection_box = {{-3, -3}, {3, 3}},
-    drawing_box = {{-3, -3}, {3, 3}},
+    drawing_box_vertical_extension = 0.5,
     energy_source = {
       -- TODO: numbers (particularly input flow) tweaked upwards to handle antimatter power.
       -- Perhaps tweak down a bit if we add some other super-endgame storage solution.

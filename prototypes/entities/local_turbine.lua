@@ -103,7 +103,6 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-0.9, -0.7}, {0.9, 0.7}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
-    drawing_box = {{-0.45, -1.6}, {0.45, 0.8}},
     water_reflection = turbine_water_reflection,
     animations = turbine_animation,
     working_sound = {
@@ -126,7 +125,6 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-0.9, -0.7}, {0.9, 0.7}},
     selection_box = {{-1.0, -1.0}, {1.0, 1.0}},
-    drawing_box = {{-0.45, -1.6}, {0.45, 0.8}},
     energy_source = {
       type = "electric",
       buffer_capacity = "20kJ",

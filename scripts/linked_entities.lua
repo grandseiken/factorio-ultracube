@@ -63,7 +63,7 @@ end
 function linked_entities.added(entity)
   on_change(entity)
   if entity and entity.name == "cube-beacon" then
-    set_active(entity, "beacon", false)
+    set_active(entity, "cube-beacon", false)
   end
 end
 
@@ -90,12 +90,12 @@ function linked_entities.tick(tick)
       for _, e in pairs(module_machines[tick_index]) do
         local entity = e.entity
         local active = not (entity.beacons_count and entity.beacons_count > 1)
-        if set_active(entity, "effect", active) then
+        if set_active(entity, "cube-effect", active) then
           if active then
             local unit_number = entity.unit_number
-            local id = overload_sprites[unit_number]
-            if id and rendering.is_valid(id) then
-              rendering.destroy(id)
+            local sprite = overload_sprites[unit_number]
+            if sprite and sprite.valid then
+              sprite.destroy()
             end
             overload_sprites[unit_number] = nil
           else
@@ -123,7 +123,7 @@ function linked_entities.tick(tick)
         e.products_finished = 0
       end
       local products_finished = fluid_source.products_finished
-      set_active(entity, "beacon", products_finished > e.products_finished)
+      set_active(entity, "cube-beacon", products_finished > e.products_finished)
       e.products_finished = products_finished
     end
   end
@@ -144,8 +144,9 @@ function linked_entities.tick(tick)
         end
         e.power_production = energy
         e.electric_buffer_size = energy
+        set_active(e, "cube-antimatter", energy > 0)
         if animation and animation.valid then
-          set_active(animation, "anti", energy > 0)
+          set_active(animation, "cube-antimatter", energy > 0)
         end
       end
     end

@@ -30,6 +30,7 @@ data:extend({
     max_health = 300,
     corpse = "medium-remnants",
     dying_explosion = "cube-medium-matter-explosion",
+    drawing_box_vertical_extension = 0.75,
     collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.25, -1.5}, {1.25, 1.0}},
     selection_priority = 100,
@@ -136,7 +137,7 @@ data:extend({
       burns_fluid = true,
       scale_fluid_usage = true,
       fluid_box = {
-        volume = 100,
+        volume = 10,
         filter = "cube-beacon-juice",
         production_type = "input-output",
         pipe_covers = pipecoverspictures(),

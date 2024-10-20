@@ -184,7 +184,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-2.65, -1.9}, {2.65, 3.2}},
     selection_box = {{-3, -2}, {3, 3.4}},
-    drawing_box = {{-3, -3}, {3, 3}},
+    drawing_box_vertical_extension = 1,
     collision_mask = {
       layers = {item = true, object = true, water_tile = true},
     },

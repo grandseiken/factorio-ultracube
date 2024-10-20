@@ -195,7 +195,6 @@ local function make_reactor_port(flip)
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     placeable_by = {item = "cube-antimatter-reactor", count = 1},
     max_health = 1000,
-    drawing_box = {{-0.5, -0.5}, {0.5, 0.5}},
     collision_box = {{-0.25, -0.25}, {0.25, 0.25}},
     collision_mask = {layers = {cube_selectable_composite = true}},
     selection_box = selection_box,

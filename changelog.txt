@@ -7,12 +7,14 @@ Date: ???
     - Added support for selector combinators and display panels.
     - Added optional support for the elevated rails expansion mod.
     - Added a cubecam shortcut button to the toolbar.
+    - Reduced the volume of the beacon input fluidbox from 100 to 10.
     - Rearranged the positions of item and fluid signals to better match the character's recipe GUI and fit with the new recipe signals.
     - Updated items to use new pickup and placement sounds.
+    - Entities set to inactive by script for some reason will have a custom status message shown.
     - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
     - Production statistics will better reflect the net effect of cyclic recipes.
     - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes which output one of their inputs.
-    - Accidentally-obtained excess cubes should now be detected and removed.
+    - Players who accidentally obtain excess cubes should now have them confiscated.
   Bugfixes:
     - The wire connections of the backup turbine can no longer be interacted with manually.
 ---------------------------------------------------------------------------------------------------

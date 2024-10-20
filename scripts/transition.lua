@@ -91,7 +91,7 @@ function transition.tick(tick)
           end
         end
       end
-      set_active(e, "multi", active)
+      set_active(e, "full-output", active)
     end
     e_state.crafts = crafts
     e_state.recipe = recipe

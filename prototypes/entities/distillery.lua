@@ -16,7 +16,7 @@ data:extend({
     collision_box = {{-2.4, -2.4}, {2.4, 2.4}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    drawing_box = {{-2.5, -2.8}, {2.5, 2.5}},
+    drawing_box_vertical_extension = 0.3,
     module_slots = 2,
     icons_positioning = {{
       inventory_index = defines.inventory.assembling_machine_modules,

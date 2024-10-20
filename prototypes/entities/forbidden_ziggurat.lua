@@ -161,7 +161,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-5.75, -5.25}, {5.75, 5.25}},
     selection_box = {{-6, -5.5}, {6, 5.5}},
-    drawing_box = {{-6, -6.5}, {6, 4.5}},
+    drawing_box_vertical_extension = 0.5,
     crafting_categories = {"cube-forbidden-ziggurat"},
     crafting_speed = 1,
     energy_usage = "4GW",

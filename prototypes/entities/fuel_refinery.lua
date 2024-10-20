@@ -16,7 +16,7 @@ data:extend({
     dying_explosion = "medium-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    drawing_box = {{-1.5, -1.9}, {1.5, 1.5}},
+    drawing_box_vertical_extension = 0.5,
     module_slots = 0,
     allowed_effects = module_effects.none,
     graphics_set = {
