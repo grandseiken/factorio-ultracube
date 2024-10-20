@@ -260,11 +260,11 @@ local function transfer_or_drop_all(entity, inventory, item_set)
   for i = 1, entity.get_max_inventory_index() do
     local di = entity.get_inventory(i)
     if di then
-      for item, count in pairs(di.get_contents()) do
+      for _, stack in pairs(di.get_contents()) do
         if not item_set then
-          insert_or_spill(entity, inventory, {name = item, count = count})
-        elseif item_set[item] then
-          insert_or_spill(entity, inventory, {name = item, count = count})
+          insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
+        elseif item_set[stack.name] then
+          insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
           di.remove({name = item, count = count})
         end
       end

@@ -22,8 +22,8 @@ end
 
 local function get_send_item(inventory)
   if inventory then
-    for name, count in pairs(inventory.get_contents()) do
-      return {name = name, count = count}
+    for _, stack in pairs(inventory.get_contents()) do
+      return {name = stack.name, count = stack.count}
     end
   end
   return nil
