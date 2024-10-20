@@ -71,6 +71,7 @@ local reactor_picture = {
 
 local reactor_working_visualizations = {
   {
+    render_layer = "higher-object-under",
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
@@ -87,6 +88,7 @@ local reactor_working_visualizations = {
     },
   },
   {
+    render_layer = "higher-object-under",
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
@@ -103,6 +105,7 @@ local reactor_working_visualizations = {
     },
   },
   {
+    render_layer = "higher-object-under",
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-glow.png",
       priority = "high",
@@ -118,6 +121,7 @@ local reactor_working_visualizations = {
     },
   },
   {
+    render_layer = "higher-object-under",
     draw_as_light = true,
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
@@ -131,6 +135,7 @@ local reactor_working_visualizations = {
     },
   },
   {
+    render_layer = "higher-object-under",
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-light.png",
       priority = "high",
@@ -146,6 +151,7 @@ local reactor_working_visualizations = {
     },
   },
   {
+    render_layer = "higher-object-under",
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation.png",
       line_length = 6,
@@ -159,8 +165,9 @@ local reactor_working_visualizations = {
   },
   {
     light = {
-      intensity = 0.25,
-      size = 4,
+      intensity = 0.5,
+      size = 30,
+      flicker_interval = 40,
       shift = {0, 0},
       color = {r = 0.95, g = 0.75, b = 0.5},
     },
