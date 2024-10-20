@@ -395,6 +395,19 @@ data:extend({
     category = "cube-fabricator-handcraft",
     enabled = false,
   },
+  {
+    type = "recipe",
+    name = "cube-selector-combinator",
+    ingredients =
+    {
+      {type = "item", name = "decider-combinator", amount = 4},
+      {type = "item", name = "cube-advanced-circuit", amount = 2},
+    },
+    results = {{type = "item", name = "selector-combinator", amount = 1}},
+    energy_required = 1,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
 
   {
     type = "recipe",
@@ -419,6 +432,19 @@ data:extend({
     },
     results = {{type = "item", name = "programmable-speaker", amount = 1}},
     energy_required = 2,
+    category = "cube-fabricator-handcraft",
+    enabled = false,
+  },
+  {
+    type = "recipe",
+    name = "cube-display-panel",
+    ingredients = {
+      {type = "item", name = "cube-basic-matter-unit", amount = 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
+      {type = "item", name = "cube-glass", amount = 1},
+    },
+    results = {{type = "item", name = "display-panel", amount = 1}},
+    energy_required = 1,
     category = "cube-fabricator-handcraft",
     enabled = false,
   },

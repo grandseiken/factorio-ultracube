@@ -22,6 +22,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-crusher"},
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
       {type = "unlock-recipe", recipe = "cube-glass"},
+      {type = "unlock-recipe", recipe = "cube-display-panel"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     essential = true,

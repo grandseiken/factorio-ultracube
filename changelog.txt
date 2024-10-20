@@ -4,6 +4,8 @@ Date: ???
   Changes:
     - Ultracube is now (only) compatible with Factorio 2.0.
     - This should be considered a beta release for 2.0 compatibility. Everything appears to be working, but there could still be some tendrils lurking somewhere.
+    - Added support for selector combinators and display panels.
+    - Added optional support for the elevated rails expansion mod.
     - Added a cubecam shortcut button to the toolbar.
     - Rearranged the positions of item and fluid signals to better match the character's recipe GUI and fit with the new recipe signals.
     - Updated items to use new pickup and placement sounds.

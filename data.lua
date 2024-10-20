@@ -74,3 +74,5 @@ require("prototypes.entities.robots")
 require("prototypes.entities.stygian_energy_lab")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
+
+require("prototypes.expansion.elevated_rails")

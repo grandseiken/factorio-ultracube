@@ -146,6 +146,18 @@ data:extend({
   },
   {
     type = "technology",
+    name = "cube-advanced-combinatorics",
+    icon = "__base__/graphics/technology/advanced-combinators.png",
+    icon_size = 256,
+    effects = {
+      {type = "unlock-recipe", recipe = "cube-selector-combinator"},
+    },
+    prerequisites = {"cube-combinatorics", "cube-abstract-interrogation-card"},
+    unit = tech_cost_unit("2", 120),
+    order = "2-0-7",
+  },
+  {
+    type = "technology",
     name = "cube-sophisticated-matter-unit",
     icon_size = 256, icon_mipmaps = 4,
     icon = "__Ultracube__/assets/icons/sophisticated-matter-unit.png",
