@@ -9,6 +9,7 @@ Date: ???
     - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
     - Production statistics will better reflect the net effect of cyclic recipes.
     - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes which output one of their inputs.
+    - Accidentally-obtained excess cubes should now be detected and removed.
   Bugfixes:
     - The wire connections of the backup turbine can no longer be interacted with manually.
 ---------------------------------------------------------------------------------------------------

@@ -88,7 +88,8 @@ local function add_result(item, count, entity, remote)
   if entity and result_set.exclude[entity.unit_number] then
     return false
   end
-  result_set.total_weight = result_set.total_weight + count * search_result_weight[item]
+  local weight = search_result_weight[item]
+  result_set.total_weight = result_set.total_weight + count * weight
   if result_set.entries_size == result_set.entries_capacity then
     local capacity = result_set.entries_capacity + 1
     result_set.entries[capacity] = {}
@@ -100,6 +101,7 @@ local function add_result(item, count, entity, remote)
   entry.count = count
   entry.entity = entity
   entry.remote = remote
+  entry.weight = count * weight
   if entity then
     entry.unit_number = entity.unit_number
   end
@@ -837,6 +839,7 @@ local function process_results()
     cube_search_data.last_entities[capacity] = {}
     cube_search_data.last_entities_capacity = capacity
   end
+  cube_search_data.weight_in_characters = 0
   for i = 1, result_set.entries_size do
     local result = result_set.entries[i]
     local entity = result.entity
@@ -847,6 +850,9 @@ local function process_results()
     if entity then
       e.position = entity.position
       e.surface_index = entity.surface_index
+      if entity.type == "character" then
+        cube_search_data.weight_in_characters = cube_search_data.weight_in_characters + result.weight
+      end
 
       local pickup_target = nil
       if entity.type == inserter_t then
@@ -870,6 +876,46 @@ local function process_results()
     end
   end
   cube_search_data.last_entities_size = result_set.entries_size
+end
+
+function remove_excess_cubes()
+  local actual_weight_in_characters = 0
+  for _, player in pairs(game.players) do
+    if player.character then
+      local data = cube_management.player_data(player)
+      for item, count in pairs(data.ingredients) do
+        actual_weight_in_characters = actual_weight_in_characters + count * search_result_weight[item]
+      end
+    end
+  end
+  cube_search_data.weight_in_characters =
+      math.min(cube_search_data.weight_in_characters, max_search_result_weight)
+  if actual_weight_in_characters <= cube_search_data.weight_in_characters then
+    return
+  end
+  for _, player in pairs(game.players) do
+    if player.character then
+      local data = cube_management.player_data(player)
+      for item, count in pairs(data.ingredients) do
+        while count > 0 and
+              (search_result_weight[item] <=
+               actual_weight_in_characters - cube_search_data.weight_in_characters) do
+          if player.remove_item({name = item, count = 1}) > 0 then
+            actual_weight_in_characters = actual_weight_in_characters - search_result_weight[item]
+            count = count - 1
+          else
+            break
+          end
+        end
+        if actual_weight_in_characters <= cube_search_data.weight_in_characters then
+          return
+        end
+      end
+    end
+    if actual_weight_in_characters <= cube_search_data.weight_in_characters then
+      return
+    end
+  end
 end
 
 function cube_search.hint_entity(entity)
@@ -960,6 +1006,7 @@ local function cube_search_update(tick)
   process_results()
   if done then
     cube_search_data.last_tick = tick
+    remove_excess_cubes()
   else
     game.print("Ultracube warning: cannot find the ultradense cube. This may be due to compatibility issues with another mod, or a bug that should be reported.")
     game.print("If the cube is really gone, you fix it with the following console command: /c game.player.insert(\"cube-ultradense-utility-cube\")")
