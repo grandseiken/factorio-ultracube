@@ -6,8 +6,8 @@ if mods["RenaiTransportation"] then
 end
 
 -- Ensure other mods haven't messed with some important settings.
-data.raw["electric-pole"]["cube-local-turbine-source"].maximum_wire_distance = 0.25
-data.raw["electric-pole"]["cube-local-turbine-transmitter"].maximum_wire_distance = 0.25
+data.raw["electric-pole"]["cube-local-turbine-source"].maximum_wire_distance = 0
+data.raw["electric-pole"]["cube-local-turbine-transmitter"].maximum_wire_distance = 0
 
 -- Make sure items can be sent automatically in the teleporter.
 for type, _ in pairs(defines.prototypes.item) do

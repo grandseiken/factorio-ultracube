@@ -156,7 +156,7 @@ data:extend({
     hidden = true,
     max_health = 100,
     selectable_in_game = false,
-    maximum_wire_distance = 0.5,
+    maximum_wire_distance = 0,
     supply_area_distance = 1,
     pictures = {
       filename = "__core__/graphics/empty.png",
@@ -165,6 +165,7 @@ data:extend({
       height = 1,
       direction_count = 1,
     },
+    auto_connect_up_to_n_wires = 0,
     connection_points = no_connections,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",
@@ -188,7 +189,7 @@ data:extend({
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
     collision_mask = {layers = {cube_accumulator_forbidden_zone = true}},
     max_health = 100,
-    maximum_wire_distance = 0.5,
+    maximum_wire_distance = 0,
     supply_area_distance = 3,
     pictures = {
       filename = "__core__/graphics/empty.png",
@@ -197,6 +198,7 @@ data:extend({
       height = 1,
       direction_count = 1,
     },
+    auto_connect_up_to_n_wires = 0,
     connection_points = no_connections,
     radius_visualisation_picture = {
       filename = "__base__/graphics/entity/small-electric-pole/electric-pole-radius-visualization.png",

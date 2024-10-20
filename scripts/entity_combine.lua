@@ -5,7 +5,9 @@ local function make_inoperable(_, _, e)
 end
 
 local function setup_local_turbine(base, linked, e)
-  e.connect_neighbour(linked[2])
+  local e_con = e.get_wire_connector(defines.wire_connector_id.pole_copper, true)
+  local l_con = linked[2].get_wire_connector(defines.wire_connector_id.pole_copper, true)
+  e_con.connect_to(l_con, false, defines.wire_origin.script)
 end
 
 local combine_definitions = {

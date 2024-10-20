@@ -91,8 +91,11 @@ function remote_ownership.tick()
         surface = game.surfaces[1]
       end
       local position = data.spill_position or data.position or {x = 0, y = 0}
-      local spill = surface.spill_item_stack(
-          position, {name = data.item, count = data.count}, nil, nil, false)
+      local spill = surface.spill_item_stack {
+          position,
+          stack = {name = data.item, count = data.count},
+          allow_belts = false,
+      }
       for _, e in ipairs(spill) do
         cube_search.hint_entity(e)
       end

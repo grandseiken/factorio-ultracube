@@ -214,7 +214,11 @@ function linked_entities.tick(tick)
         elseif status == defines.entity_status.full_burnt_result_output or
                status == defines.entity_status.no_fuel then
           burner.currently_burning = nil
-          reactor.surface.spill_item_stack(reactor.position, {name = "depleted-uranium-fuel-cell", count = 1}, false, nil, false)
+          reactor.surface.spill_item_stack {
+            position = reactor.position,
+            stack = {name = "depleted-uranium-fuel-cell", count = 1},
+            allow_belts = false,
+          }
         end
       end
       if new_entity then
@@ -241,7 +245,11 @@ local function insert_or_spill(entity, inventory, item)
   end
   if inserted_count < item.count then
     item.count = item.count - inserted_count
-    local spill = entity.surface.spill_item_stack(entity.position, item, nil, nil, false)
+    local spill = entity.surface.spill_item_stack {
+      position = entity.position,
+      stack = item,
+      allow_belts = false,
+    }
     for _, e in ipairs(spill) do
       cube_search.hint_entity(e)
     end

@@ -50,8 +50,9 @@ local function insert_or_drop(teleporter, item)
     inventory.insert(item)
     cube_search.hint_entity(teleporter)
   else
-    local items_on_ground = teleporter.surface.spill_item_stack(
-      teleporter.position, item, nil, nil, false)
+    local items_on_ground = teleporter.surface.spill_item_stack {
+      position = teleporter.position, stack = item, allow_belts = false,
+    }
     for _, e in pairs(items_on_ground) do
       cube_search.hint_entity(e)
     end

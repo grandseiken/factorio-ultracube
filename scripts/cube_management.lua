@@ -211,7 +211,11 @@ function cube_management.drop_before_leaving(player_index)
     for item, _ in pairs(cube_drop) do
       local removed = player.remove_item(item)
       if removed > 0 then
-        local spill = player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)
+        local spill = player.surface.spill_item_stack {
+          position = player.position,
+          stack = {name = item, count = removed},
+          allow_belts = false,
+        }
         for _, e in ipairs(spill) do
           results[#results + 1] = e
         end
