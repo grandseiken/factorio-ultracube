@@ -602,7 +602,7 @@ function cube_fx.tick(tick)
     end
     return
   end
-  local alert_tick = tick % 60 == 12
+  local alert_tick = tick % 24 == 12
   local spark_tick = tick % 240 >= 120 and tick % 240 < 234
   local boom_tick = tick % 240 == 0
   local size, results = cube_search.update(tick)

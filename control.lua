@@ -230,7 +230,6 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    tech_unlock.constructed(e.entity)
     on_entity_added(e.entity)
   end)
 
@@ -253,7 +252,6 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    tech_unlock.constructed(e.entity)
     on_entity_added(e.entity)
     cube_search.hint_entity(e.entity)
   end)

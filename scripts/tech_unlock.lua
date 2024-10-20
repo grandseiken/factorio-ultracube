@@ -94,14 +94,4 @@ function tech_unlock.sync(force)
   end
 end
 
-function tech_unlock.constructed(entity)
-  if entity.name == "cube-forbidden-ziggurat" then
-    local technology = entity.force.technologies["cube-construct-forbidden-ziggurat"]
-    if not technology.researched then
-      technology.researched = true
-      game.print({"cube-msg-project-completed"})
-    end
-  end
-end
-
 return tech_unlock

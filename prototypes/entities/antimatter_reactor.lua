@@ -271,7 +271,7 @@ data:extend({
     minable = {mining_time = 2, result = "cube-antimatter-reactor"},
     max_health = 6000,
     corpse = "cube-antimatter-reactor-remnant",
-    dying_explosion = "medium-explosion",
+    dying_explosion = "nuclear-reactor-explosion",
     collision_box = {{-7.25, -7.25}, {7.25, 7.25}},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
 

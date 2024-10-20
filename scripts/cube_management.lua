@@ -158,7 +158,10 @@ function cube_management.player_data(player)
   ingredients[cubes.ultradense] = math.min(ingredients[cubes.ultradense], 1)
   ingredients[cubes.dormant] = math.min(ingredients[cubes.dormant], 1)
   for _, item in pairs(cubes) do
-    local count = player.get_item_count(item)
+    local count = 0
+    if player.character then
+      count = player.character.get_item_count(item)
+    end
     local trash = player.get_inventory(defines.inventory.character_trash)
     if trash then
       count = count + trash.get_item_count(item)
