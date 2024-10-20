@@ -1,9 +1,10 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-local teleporter_animation = {
-  layers = {
-    {
+local teleporter_animations = {
+  {
+    always_draw = true,
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/planetary-teleporter-shadow.png",
       priority = "low",
       width = 531,
@@ -15,7 +16,11 @@ local teleporter_animation = {
       animation_speed = 0.5,
       shift = {1.9, 1.2},
     },
-    {
+  },
+  {
+    always_draw = true,
+    render_layer = "object-under",
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
@@ -25,7 +30,21 @@ local teleporter_animation = {
       line_length = 5,
       animation_speed = 0.5,
     },
-    {
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-further-towers.png",
+      priority = "medium",
+      width = 400,
+      height = 475,
+      scale = 0.5,
+      frame_count = 1,
+    },
+  },
+  {
+    always_draw = true,
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
@@ -34,7 +53,10 @@ local teleporter_animation = {
       repeat_count = 20,
       animation_speed = 0.5,
     },
-    {
+  },
+  {
+    always_draw = true,
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "high",
       width = 400,
@@ -47,7 +69,10 @@ local teleporter_animation = {
       fadeout = true,
       blend_mode = "additive-soft",
     },
-    {
+  },
+  {
+    always_draw = true,
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "extra-high",
       width = 400,
@@ -59,7 +84,10 @@ local teleporter_animation = {
       draw_as_light = true,
       blend_mode = "additive-soft",
     },
-    {
+  },
+  {
+    always_draw = true,
+    animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
@@ -74,6 +102,7 @@ local teleporter_animation = {
 
 local teleporter_animations_red = {
   {
+    render_layer = "object",
     animation = {
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
@@ -98,6 +127,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
+      render_layer = "higher-object-under",
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       flags = {"mask"},
       priority = "extra-high",
@@ -215,7 +245,7 @@ data:extend({
     }},
     allowed_effects = module_effects.all,
 
-    graphics_set = {animation = teleporter_animation},
+    graphics_set = {working_visualisations = teleporter_animations},
     launch_wait_time = 8,
     rocket_rising_delay = 1,
     rocket_quick_relaunch_start_offset = 0,
