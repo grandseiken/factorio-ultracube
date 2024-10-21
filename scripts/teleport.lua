@@ -46,8 +46,7 @@ end
 
 local function insert_or_drop(teleporter, item)
   local inventory = teleporter.get_output_inventory()
-  if inventory.is_empty() then
-    inventory.insert(item)
+  if inventory.is_empty() and inventory.insert(item) then
     cube_search.hint_entity(teleporter)
   else
     local items_on_ground = teleporter.surface.spill_item_stack {
@@ -85,7 +84,7 @@ function teleport.on_teleport(event)
     return
   end
 
-  local send_item = get_send_item(event.rocket.get_inventory(1))
+  local send_item = get_send_item(event.rocket.cargo_pod.get_inventory(1))
   local send_players = get_send_players(src_teleporter)
   if not send_item and #send_players == 0 then
     return
@@ -130,6 +129,8 @@ function teleport.on_teleport(event)
   if send_item then
     insert_or_drop(dst_teleporter or src_teleporter, send_item)
   end
+  event.rocket.cargo_pod.destroy()
+  event.rocket.destroy()
 end
 
 return teleport

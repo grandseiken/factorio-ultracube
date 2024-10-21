@@ -317,7 +317,7 @@ script.on_event(
 script.on_event(
   defines.events.on_rocket_launch_ordered,
   function(e)
-    cube_search.hint_entity(e.rocket)
+    cube_search.hint_entity(e.rocket.cargo_pod)
   end)
 
 script.on_event(

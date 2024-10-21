@@ -15,6 +15,7 @@ Date: ???
     - Production statistics will better reflect the net effect of cyclic recipes.
     - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes which output one of their inputs.
     - Players who accidentally obtain excess cubes should now have them confiscated.
+    - Due to rocket silo changes in the base game, the experimental teleporter is now more experimental than ever. It has a single combined input/output inventory slot, and can buffer a second calibration.
   Balancing:
     - Reduced the volume of the beacon input fluidbox from 100 to 10.
     - Increased the yield of the Altered Components recipe.
