@@ -29,9 +29,9 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
 
 # Factorio 2.0 and expansion status
 
-**TL;DR: Ultracube is compatible with Factorio 2.0 (only) as of version 0.6.0. It is not compatible with Space Age itself or the Quality mod. However, if you own the expansion, enable the `elevated-rails` and [Enable all Feature Flags](https://mods.factorio.com/mod/enable-all-feature-flags) optional dependencies in order for Ultracube to take advantage of new expansion features (elevated rails, belt stacking, new spoilage challenges, and so on).**
+**TL;DR: Ultracube is compatible with Factorio 2.0 (only) as of version 0.6.0. It is not compatible with Space Age itself or the Quality mod. Elevated rails are included if the built-in Elevated rails mod is active.** While the mod will remain playable for those who do not own the expansion, future updates will add more optional content and mechanics based on expansion features.
 
-Other previously-compatible optional dependencies listed [below](#list-of-compatible-mods) have not yet been tested extensively on 2.0. They might work, but you might also need to wait for them to be updated.
+Other previously-compatible optional dependencies listed [below](#list-of-compatible-mods) have not yet been tested extensively on 2.0. For now, they might or might not work.
 
 Ultracube 0.5.7 was the last version to work with 1.x Factorio versions.
 
@@ -105,6 +105,8 @@ Regardless of technical obstacles, practical considerations could make some othe
 
 ## List of compatible mods
 
+**NOTE:** these mods were compatible with Ultracube pre-Factorio 2.0. While compatibility logic remains in place, they have not been tested extensively on Factorio 2.0 yet, and might require further patching.
+
 The following mods have been specifically adapted to work with Ultracube:
 
 | Mod | Notes |
@@ -153,7 +155,7 @@ See the [dedicated compatibility page here](https://github.com/grandseiken/facto
 
 | Q | A |
 | - | - |
-| **Is Ultracube compatible with the Space Age expansion?** | Ultracube is **not** compatible with the Space Age expansion mod itself (i.e. having space travel or more than one planet), nor the quality mod. However, it **is** compatible with 2.0 and other expansion features. If you own the expansion, make sure to enable both the built-in `elevated-rails` mod and [Enable all Feature Flags](https://mods.factorio.com/mod/enable-all-feature-flags) from the optional dependencies. You will then have access to things like elevated rails and belt stacking in the technology tree, new challenges involving spoilage, and so on. |
+| **Is Ultracube compatible with the Space Age expansion?** | Ultracube is **not** compatible with the Space Age expansion mod itself (i.e. having space travel or more than one planet), nor the quality mod. However, it **is** compatible with 2.0 and other expansion features, for example elevated rails. More optional expansion-only content is coming soon. |
 | **How can I make my mod compatible with Ultracube?** | See the [compatibility guide](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md). |
 | **Can I help translate this mod?** | Yes, translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. More details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin). |
 | **Where are the biters?** | Currently there are no military technologies and biters are disabled. This was mostly to prioritise releasing a playable version without needing to integrate and balance military. Biters might get reintroduced as an optional extra at some point. |

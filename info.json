@@ -8,10 +8,9 @@
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0",
-    "aai-loaders >= 0.1.4",
+    "aai-loaders >= 0.2.1",
     "Krastorio2Assets >= 2.0",
     "?elevated-rails",
-    "?enable-all-features-flags",
     "?aai-signal-transmission",
     "?better-victory-screen >= 0.2.7",
     "?far-reach",
