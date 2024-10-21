@@ -1,5 +1,4 @@
 local resource_autoplace = require("__core__/lualib/resource-autoplace")
-local noise = require("__core__/lualib/noise")
 
 resource_autoplace.initialize_patch_set("cube-rare-metals", false)
 resource_autoplace.initialize_patch_set("cube-deep-core-vein", false)

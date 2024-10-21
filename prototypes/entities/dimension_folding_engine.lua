@@ -35,6 +35,7 @@ data:extend({
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
     icon_size = 128, icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 2, result = "cube-dimension-folding-engine"},
     max_health = 2000,
     damaged_trigger_effect = hit_effects.entity(),
@@ -121,6 +122,7 @@ data:extend({
 
     ingredient_count = 5,
     module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
     icons_positioning = {{
       inventory_index = defines.inventory.assembling_machine_modules,
       shift = {0, 2.5},
