@@ -15,7 +15,10 @@
     "settings",
     "storage",
     "feature_flags",
-    "prototypes"
+    "prototypes",
+    "circuit_connector_definitions",
+    "universal_connector_template",
+    "assembling_machine_circuit_wire_max_distance"
   ],
   "Lua.diagnostics.disable": [
     "lowercase-global",

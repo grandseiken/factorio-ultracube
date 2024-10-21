@@ -31,6 +31,7 @@ require("updates.compatibility.wire_shortcuts")
 
 require("updates.barrelling")
 require("updates.character")
+require("updates.circuit_connectors")
 require("updates.recipes_mystery")
 require("updates.productivity")
 require("updates.disable_incompatible")

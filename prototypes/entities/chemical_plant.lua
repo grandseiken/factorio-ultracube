@@ -35,5 +35,7 @@ data:extend({
     crafting_categories = {"cube-chemical-plant"},
     fluid_boxes = data.raw["assembling-machine"]["chemical-plant"].fluid_boxes,
     water_reflection = data.raw["assembling-machine"]["chemical-plant"].water_reflection,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["chemical-plant"],
   },
 })

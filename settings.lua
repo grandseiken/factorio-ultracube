@@ -1,10 +1,17 @@
 data:extend({
   {
     type = "bool-setting",
+    name = "cube-circuit-machines",
+    setting_type = "startup",
+    default_value = false,
+    order = "0",
+  },
+  {
+    type = "bool-setting",
     name = "cube-show-cube-alerts",
     setting_type = "runtime-per-user",
     default_value = true,
-    order = "0",
+    order = "1",
   },
   {
     type = "string-setting",
@@ -18,14 +25,14 @@ data:extend({
       "verylow",
       "off",
     },
-    order = "1",
+    order = "2",
   },
   {
     type = "bool-setting",
     name = "cube-powered-cars",
     setting_type = "runtime-global",
     default_value = true,
-    order = "2",
+    order = "3",
   },
   {
     type = "double-setting",
@@ -34,7 +41,7 @@ data:extend({
     minimum_value = 0.1,
     maximum_value = 2.0,
     default_value = 1.0,
-    order = "3",
+    order = "4",
   }
 })
 

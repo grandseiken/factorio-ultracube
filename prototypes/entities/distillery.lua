@@ -40,5 +40,7 @@ data:extend({
     working_sound = data.raw["assembling-machine"]["oil-refinery"].working_sound,
     fluid_boxes = data.raw["assembling-machine"]["oil-refinery"].fluid_boxes,
     water_reflection = data.raw["assembling-machine"]["oil-refinery"].water_reflection,
+    circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["oil-refinery"],
   }
 })

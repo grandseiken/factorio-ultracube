@@ -10,10 +10,11 @@ Date: ???
   Changes:
     - Added support for selector combinators and display panels.
     - Added optional support for the elevated rails expansion mod.
+    - Added a mod setting to allow circuit connections on machines. Since the inability to easily read machine contents was originally part of the challenge, this can be left disabled for "classic" gameplay.
+    - Removed filter inserters and stack filter inserters, and renamed stack inserters to bulk inserters to match the base game.
     - Added a cubecam shortcut button to the toolbar.
     - Rearranged the positions of item and fluid signals to better match the character's recipe GUI and fit with the new recipe signals.
     - Updated items to take advantage of new pickup and placement sounds.
-    - Removed filter inserters and stack filter inserters, and renamed stack inserters to bulk inserters to match the base game.
     - Entities set to inactive by script for some reason will have a custom status message shown.
     - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
     - Production statistics will better reflect the net effect of cyclic recipes.

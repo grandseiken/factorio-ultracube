@@ -209,7 +209,9 @@ data:extend({
       size = 1,
       color = {r = 0.196, g = 0.658, b = 0.650},
     },
-    circuit_connector = circuit_connector_definitions["roboport"],
+    circuit_connector = circuit_connector_definitions.create_single(
+      universal_connector_template,
+      {variation = 27, main_offset = util.by_pixel(30.5, 38), shadow_offset = util.by_pixel(24.5, 50.5), show_shadow = false}),
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_available_logistic_output_signal = {type = "virtual", name = "signal-X"},
     default_total_logistic_output_signal = {type = "virtual", name = "signal-Y"},
