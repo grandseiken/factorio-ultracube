@@ -4,7 +4,7 @@ AAILoaders.make_tier{
   name = "",
   transport_belt = "transport-belt",
   color = {255, 217, 85},
-  recipe = {},
+  recipe = {ingredients = {}},
   localise = false,
 }
 
@@ -12,7 +12,7 @@ AAILoaders.make_tier{
   name = "v2",
   transport_belt = "fast-transport-belt",
   color = {255, 24, 38},
-  recipe = {},
+  recipe = {ingredients = {}},
   upgrade = "aai-v3-loader",
   localise = false,
 }
@@ -21,7 +21,7 @@ AAILoaders.make_tier{
   name = "v3",
   transport_belt = "express-transport-belt",
   color = {90, 190, 255},
-  recipe = {},
+  recipe = {ingredients = {}},
   upgrade = "aai-v4-loader",
   localise = false,
 }
@@ -30,7 +30,7 @@ AAILoaders.make_tier{
   name = "v4",
   transport_belt = "cube-v4-transport-belt",
   color = {210, 1, 247},
-  recipe = {},
+  recipe = {ingredients = {}},
   localise = false,
 }
 
