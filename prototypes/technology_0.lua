@@ -123,7 +123,7 @@ data:extend({
     type = "technology",
     name = "cube-optics",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/optics.png",
+    icon = "__base__/graphics/technology/lamp.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-lamp"},
     },

@@ -306,7 +306,7 @@ data:extend({
     type = "technology",
     name = "cube-rail-signals",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/rail-signals.png",
+    icon = "__base__/graphics/technology/automated-rail-transportation.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-rail-signal"},
       {type = "unlock-recipe", recipe = "cube-chain-signal"},
@@ -435,7 +435,7 @@ data:extend({
     type = "technology",
     name = "cube-advanced-electronics",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/advanced-electronics.png",
+    icon = "__base__/graphics/technology/advanced-circuit.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-circuit"},
     },

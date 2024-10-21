@@ -577,7 +577,7 @@ data:extend({
     type = "technology",
     name = "cube-spectral-processor",
     icons = {{
-      icon = "__base__/graphics/technology/advanced-electronics-2.png",
+      icon = "__base__/graphics/technology/processing-unit.png",
       icon_size = 256, icon_mipmaps = 4,
       tint = {r = 1, g = 1, b = 1, a = 0.75},
     }},
@@ -746,7 +746,7 @@ data:extend({
     type = "technology",
     name = "cube-efficiency-module",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/effectivity-module-1.png",
+    icon = "__base__/graphics/technology/speed-module-1.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-efficiency-module"},
     },
