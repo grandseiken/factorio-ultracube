@@ -7,7 +7,7 @@ data:extend({
     type = "lab",
     name = "cube-lab",
     icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.25, result = "cube-lab"},
     max_health = 200,

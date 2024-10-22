@@ -7,7 +7,7 @@ data:extend({
     type = "assembling-machine",
     name = "cube-chemical-plant",
     icon = "__base__/graphics/icons/chemical-plant.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral","placeable-player", "player-creation"},
     minable = {mining_time = 0.1, result = "cube-chemical-plant"},
     max_health = 300,

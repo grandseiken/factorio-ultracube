@@ -6,7 +6,6 @@ data:extend({
     order_in_recipe = "0",
     icon = "__Krastorio2Assets__/technologies/matter-cube.png",
     icon_size = 256,
-    icon_mipmaps = 4,
   },
   {
     type = "item-group",

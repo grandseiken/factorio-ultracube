@@ -45,7 +45,6 @@ data:extend({
     name = "cube-fabricator",
     icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-fabricator"},
     max_health = 800,

@@ -15,7 +15,7 @@ data:extend({
     type = "generator",
     name = "cube-heavy-turbine",
     icon = "__base__/graphics/icons/steam-turbine.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 0.3, result = "cube-heavy-turbine"},
     max_health = 300,

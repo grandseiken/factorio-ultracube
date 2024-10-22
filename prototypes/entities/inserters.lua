@@ -47,7 +47,6 @@ data:extend({
     name = "cube-extremely-long-inserter",
     icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     filter_count = 4,
     minable = {mining_time = 0.1, result = "cube-extremely-long-inserter"},

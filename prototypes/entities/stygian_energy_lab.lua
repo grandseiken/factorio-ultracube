@@ -35,7 +35,6 @@ data:extend({
     type = "assembling-machine",
     name = "cube-stygian-energy-lab",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-stygian-energy-lab"},

@@ -277,7 +277,7 @@ data:extend({
     type = "recipe",
     name = "cube-basic-matter-unit-0",
     icon = "__base__/graphics/icons/plastic-bar.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
     },
@@ -342,7 +342,7 @@ data:extend({
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
     icon = "__Krastorio2Assets__/icons/items/automation-core.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-rare-metals", amount = 50},
@@ -416,7 +416,7 @@ data:extend({
     type = "recipe",
     name = "cube-matter-replication-gel",
     icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-basic-matter-unit", amount = 200},
       {type = "fluid", name = "steam", amount = 8000, ignored_by_stats = 2000},
@@ -438,7 +438,7 @@ data:extend({
     type = "recipe",
     name = "cube-cerebral-substrate",
     icon = "__Krastorio2Assets__/icons/fluids/matter.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-dormant-utility-cube", amount = 1},
       {type = "fluid", name = "cube-matter-replication-gel", amount = 400},
@@ -503,7 +503,7 @@ data:extend({
     name = "cube-ghost-crystal",
     icons = {{
       icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon_size = 64,
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
     ingredients = {
@@ -529,7 +529,7 @@ data:extend({
     type = "recipe",
     name = "cube-ectoplasm",
     icon = "__Ultracube__/assets/icons/ectoplasm.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},
       {type = "item", name = "cube-bottled-anguish", amount = 1},
@@ -557,7 +557,7 @@ data:extend({
     type = "recipe",
     name = "cube-arcane-drive",
     icon = "__Krastorio2Assets__/icons/equipment/advanced-additional-engine-equipment.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},
       {type = "item", name = "cube-advanced-engine", amount = 1},
@@ -604,7 +604,7 @@ data:extend({
     type = "recipe",
     name = "cube-conduits",
     icon = "__Ultracube__/assets/icons/recipe/conduits.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "fluid", name = "cube-ectoplasm", amount = 400},
@@ -628,7 +628,7 @@ data:extend({
     type = "recipe",
     name = "cube-conduit-conversion-a",
     icon = "__Ultracube__/assets/icons/recipe/conduit-conversion-a.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-deep-crystal", amount = 4},
@@ -651,7 +651,7 @@ data:extend({
     type = "recipe",
     name = "cube-conduit-conversion-b",
     icon = "__Ultracube__/assets/icons/recipe/conduit-conversion-b.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-boson-conduit", amount = 50},
@@ -673,7 +673,7 @@ data:extend({
     type = "recipe",
     name = "cube-singularity-research-data",
     icon = "__Krastorio2Assets__/icons/cards/singularity-research-data.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-boson-conduit", amount = 16},
@@ -721,7 +721,7 @@ data:extend({
     type = "recipe",
     name = "cube-resonance-cascade",
     icon = "__Ultracube__/assets/icons/recipe/resonance-cascade.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
       {type = "item", name = "cube-bottled-euphoria", amount = 10},
@@ -845,7 +845,7 @@ data:extend({
     type = "recipe",
     name = "cube-ultradense-utility-cube",
     icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-legendary-iron-gear", amount = 1},
       {type = "item", name = "cube-ultradense-composite", amount = 64},

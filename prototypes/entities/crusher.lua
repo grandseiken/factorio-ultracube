@@ -5,7 +5,6 @@ data:extend({
     type = "furnace",
     name = "cube-crusher",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/crusher.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-crusher"},

@@ -7,7 +7,7 @@ data:extend({
     type = "assembling-machine",
     name = "cube-distillery",
     icon = "__base__/graphics/icons/oil-refinery.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral","player-creation"},
     minable = {mining_time = 0.5, result = "cube-distillery"},
     max_health = 400,

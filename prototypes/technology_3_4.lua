@@ -4,7 +4,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-cyclotron",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Ultracube__/assets/technology/cyclotron.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cyclotron"},
@@ -23,7 +23,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-refined-concrete",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/concrete.png",
     effects =
     {
@@ -37,7 +37,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-coal-liquefaction",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/coal-liquefaction.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-coal-liquefaction"},
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-energy-bulkframe",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/energy-storage.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-energy-bulkframe"},
@@ -65,7 +65,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-v4-logistics",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/logistics-5.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-transport-belt-3"},
@@ -83,7 +83,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-steel-axe",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/steel-axe.png",
     effects = {
       {type = "character-mining-speed", modifier = 1},
@@ -95,7 +95,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-kovarex-enrichment-process",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/kovarex-enrichment-process.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-kovarex-enrichment-process"},
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-fission-reactor-equipment",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fission-reactor-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-fission-reactor-equipment"},
@@ -129,7 +129,7 @@ data:extend({
     type = "technology",
     name = "cube-belt-immunity-equipment",
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/belt-immunity-equipment.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     effects = {
       {type = "unlock-recipe", recipe = "cube-belt-immunity-equipment"},
     },
@@ -143,7 +143,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-speed-module-v2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/speed-module-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-speed-module-v2"},
@@ -159,7 +159,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-efficiency-module-v2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/efficiency-module-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-efficiency-module-v2"},
@@ -175,7 +175,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-logistic-system",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/logistic-system.png",
     effects = {
       -- TODO: more complex recipes?
@@ -196,11 +196,11 @@ data:extend({
     name = "cube-cerebral-substrate-phantom",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
       },
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Ultracube__/assets/technology/phantom-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.25},
         scale = 0.75,
@@ -216,7 +216,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-personal-roboport-mk2-equipment",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-mk2-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-personal-roboport-mk2-equipment"},
@@ -256,7 +256,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mystery-furnace",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-mystery-furnace"},
@@ -268,7 +268,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mystery-furnace-dummy",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/advanced-material-processing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-mystery-furnace-dummy-0"},
@@ -289,7 +289,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-quantum-decoder",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/quantum-computer.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-particle-phase-aligner"},
@@ -318,11 +318,11 @@ data:extend({
     name = "cube-cyclotron-uranium",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Ultracube__/assets/technology/cyclotron.png",
       },
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
         scale = 0.625 / 2,
       },
@@ -341,7 +341,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-beacon",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/singularity-beacon.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-beacon"},
@@ -357,7 +357,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-nuclear-fuel-reprocessing",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/nuclear-fuel-reprocessing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-nuclear-fuel-reprocessing"},
@@ -369,7 +369,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-spidertron",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/spidertron.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-spidertron"},

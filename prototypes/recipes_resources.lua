@@ -34,7 +34,7 @@ data:extend({
     type = "recipe",
     name = "cube-rare-metals",
     icon = "__Krastorio2Assets__/icons/items-with-variations/rare-metals/rare-metals.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {{type = "item", name = "cube-raw-rare-metals", amount = 500}},
     results = {{type = "item", name = "cube-rare-metals", amount = 250}},
     main_product = "",
@@ -91,7 +91,7 @@ data:extend({
     type = "recipe",
     name = "cube-rare-metal-crushing",
     icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {{type = "item", name = "cube-raw-rare-metals", amount = 40}},
     results = {
       {type = "item", name = "cube-refined-rare-metals", amount_min = 15, amount_max = 20},
@@ -127,7 +127,7 @@ data:extend({
     type = "recipe",
     name = "cube-deep-core-crushing",
     icon = "__Krastorio2Assets__/icons/items-with-variations/imersite-powder/imersite-powder.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {{type = "item", name = "cube-deep-core-ore", amount = 40}},
     results = {
       {type = "item", name = "cube-deep-powder", amount_min = 30, amount_max = 60},
@@ -206,7 +206,7 @@ data:extend({
     type = "recipe",
     name = "cube-greenhouse-wood",
     icon = "__base__/graphics/icons/wood.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "fluid", name = "water", amount = 400},
     },
@@ -224,7 +224,7 @@ data:extend({
     type = "recipe",
     name = "cube-greenhouse-potato",
     icon = "__Krastorio2Assets__/icons/items/potato.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "fluid", name = "water", amount = 400},
     },
@@ -257,7 +257,7 @@ data:extend({
     type = "recipe",
     name = "cube-uranium-processing",
     icon = "__base__/graphics/icons/uranium-processing.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {{type = "item", name = "uranium-ore", amount = 10}},
     results = {
       {type = "item", name = "cube-uranium-234", probability = 0.0001, amount = 1},
@@ -274,7 +274,7 @@ data:extend({
     type = "recipe",
     name = "cube-kovarex-enrichment-process",
     icon = "__base__/graphics/icons/kovarex-enrichment-process.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-uranium-234", amount = 1, ignored_by_stats = 1},
       {type = "item", name = "uranium-235", amount = 40, ignored_by_stats = 40},
@@ -296,7 +296,7 @@ data:extend({
     type = "recipe",
     name = "cube-kovarex-redemption-process",
     icon = "__Ultracube__/assets/icons/recipe/kovarex-redemption-process.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-uranium-234", amount = 200, ignored_by_stats = 200},
       {type = "item", name = "uranium-238", amount = 200, ignored_by_stats = 200},

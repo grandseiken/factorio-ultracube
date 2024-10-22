@@ -17,7 +17,6 @@ function add_mystery_recipe(a, b, c, d, e)
       name = "cube-mystery-" .. b,
       icon = item.icon,
       icon_size = item.icon_size,
-      icon_mipmaps = item.icon_mipmaps,
       icons = item.icons,
       localised_name = {"recipe-name.cube-mystery"},
       ingredients = {{type = "item", name = b, amount = d or 1}},

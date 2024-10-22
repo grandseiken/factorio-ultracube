@@ -5,7 +5,6 @@ local sounds = require("__base__/prototypes/entity/sounds")
 local function generate_2x1_combinator(data)
   data.icon = "__base__/graphics/icons/decider-combinator.png"
   data.icon_size = 64
-  data.icon_mipmaps = 4
   data.flags = {"placeable-neutral", "placeable-player", "player-creation"}
   data.max_health = 150
   data.corpse = "decider-combinator-remnants"
@@ -56,7 +55,6 @@ end
 local function generate_1x1_combinator(data, is_final)
   data.icon = "__base__/graphics/icons/constant-combinator.png"
   data.icon_size = 64
-  data.icon_mipmaps = 4
   data.flags = {"placeable-neutral", "placeable-player", "player-creation"}
   data.max_health = 120
   data.corpse = "constant-combinator-remnants"

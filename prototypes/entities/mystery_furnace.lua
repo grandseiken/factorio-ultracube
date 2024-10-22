@@ -24,7 +24,7 @@ data:extend({
     type = "furnace",
     name = "cube-mystery-furnace",
     icon = "__base__/graphics/icons/steel-furnace.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
     minable = {mining_time = 0.2, result = "cube-mystery-furnace"},

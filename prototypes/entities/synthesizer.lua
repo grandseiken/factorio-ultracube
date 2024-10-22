@@ -9,7 +9,6 @@ data:extend({
     name = "cube-synthesizer",
     icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-synthesizer"},
     max_health = 1000,

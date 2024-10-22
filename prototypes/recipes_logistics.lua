@@ -642,7 +642,7 @@ data:extend({
     type = "recipe",
     name = "cube-construction-robot",
     icon = "__base__/graphics/icons/construction-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-basic-matter-unit", amount = 1},
       {type = "item", name = "flying-robot-frame", amount = 1},
@@ -660,7 +660,7 @@ data:extend({
     type = "recipe",
     name = "cube-logistic-robot",
     icon = "__base__/graphics/icons/logistic-robot.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "flying-robot-frame", amount = 2},
       {type = "item", name = "cube-advanced-circuit", amount = 2},

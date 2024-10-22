@@ -30,7 +30,7 @@ data:extend({
     type = "recipe",
     name = "cube-burnt-out-modular-casing",
     icon = "__Ultracube__/assets/icons/burnt-out-modular-casing.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {{type = "item", name = "cube-burnt-out-modular-casing", amount = 1}},
     results = {
       {type = "item", name = "cube-basic-matter-unit", amount_min = 0, amount_max = 50, probability = 0.5},

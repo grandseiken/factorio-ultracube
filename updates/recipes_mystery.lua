@@ -53,7 +53,7 @@ local function add_mystery_dummy(name, item)
       type = "recipe",
       name = name,
       icon = "__base__/graphics/icons/steel-furnace.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon_size = 64,
       localised_name = {"recipe-name.cube-mystery"},
       ingredients = {},
       results = {{type = "item", name = item, amount = 1}},

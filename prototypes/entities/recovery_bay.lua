@@ -8,7 +8,6 @@ data:extend({
     name = "cube-recovery-bay",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
     minable = {mining_time = 1, result = "cube-recovery-bay"},

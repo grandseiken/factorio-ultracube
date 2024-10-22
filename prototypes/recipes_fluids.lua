@@ -5,7 +5,7 @@ data:extend({
     type = "recipe",
     name = "cube-gelatinous-tar",
     icon = "__Ultracube__/assets/icons/tar.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "fluid", name = "steam", amount = 1000},
       {type = "item", name = "cube-sand", amount = 100},
@@ -125,7 +125,7 @@ data:extend({
     type = "recipe",
     name = "cube-coal-liquefaction",
     icon = "__base__/graphics/icons/fluid/coal-liquefaction.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "coal", amount = 20},
       {type = "fluid", name = "steam", amount = 40},
@@ -153,7 +153,7 @@ data:extend({
     type = "recipe",
     name = "cube-unstable-gas",
     icon = "__Krastorio2Assets__/icons/fluids/petroleum-gas.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 360},
       {type = "fluid", name = "cube-light-tar", amount = 80},
@@ -179,7 +179,7 @@ data:extend({
     type = "recipe",
     name = "cube-elbow-grease",
     icon = "__Krastorio2Assets__/icons/fluids/lubricant.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 80},
       {type = "fluid", name = "cube-light-tar", amount = 240},
@@ -203,7 +203,7 @@ data:extend({
     type = "recipe",
     name = "cube-ethanol",
     icon = "__Ultracube__/assets/icons/ethanol.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-mash", amount = 200},
       {type = "fluid", name = "cube-light-tar", amount = 2000},
@@ -222,7 +222,7 @@ data:extend({
     type = "recipe",
     name = "cube-sulfuric-acid",
     icon = "__base__/graphics/icons/fluid/sulfuric-acid.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "sulfur", amount = 4},
       {type = "item", name = "cube-raw-rare-metals", amount = 1},
@@ -247,7 +247,7 @@ data:extend({
     type = "recipe",
     name = "cube-deep-solution",
     icon = "__Ultracube__/assets/icons/deep-solution.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-deep-powder", amount = 2000},
       {type = "fluid", name = "sulfuric-acid", amount = 4000},
@@ -337,7 +337,7 @@ data:extend({
     type = "recipe",
     name = "cube-stygian-power-generation",
     icon = "__Ultracube__/assets/icons/void-wind.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {},
     results = {
       {type = "fluid", name = "cube-void-wind", amount = 400, temperature = 425},
@@ -399,7 +399,7 @@ data:extend({
     type = "recipe",
     name = "cube-uncraftable-dummy-recipe",
     icon = "__base__/graphics/icons/heat-interface.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {},
     results = {},
     energy_required = 1,
@@ -439,7 +439,6 @@ for _, fluid in ipairs(voidable_fluids) do
     localised_name = {"recipe-name.cube-void-recipe", {"fluid-name." .. fluid}},
     icon = prototype.icon,
     icon_size = prototype.icon_size,
-    icon_mipmaps = prototype.icon_mipmaps,
     icons = prototype.icons,
     ingredients = {{type = "fluid", name = fluid, amount = 100}},
     results = {},

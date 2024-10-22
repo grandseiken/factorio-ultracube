@@ -12,7 +12,7 @@ local logistic_robot_0 = {
   name = "cube-logistic-robot-0",
   localised_name = {"entity-name.logistic-robot"},
   icon = "__base__/graphics/icons/logistic-robot.png",
-  icon_size = 64, icon_mipmaps = 4,
+  icon_size = 64,
   flags = {"placeable-player", "player-creation", "placeable-off-grid", "not-on-map"},
   minable = {mining_time = 0.1, result = "cube-logistic-robot-0"},
   resistances = {

@@ -391,7 +391,7 @@ data:extend({
     type = "recipe",
     name = "cube-nuclear-fuel-reprocessing",
     icon = "__base__/graphics/icons/nuclear-fuel-reprocessing.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     ingredients = {
       {type = "item", name = "depleted-uranium-fuel-cell", amount = 10},
     },

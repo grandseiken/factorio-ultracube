@@ -7,7 +7,7 @@ data:extend({
     type = "boiler",
     name = "cube-boiler",
     icon = "__base__/graphics/icons/boiler.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-boiler"},
     max_health = 200,

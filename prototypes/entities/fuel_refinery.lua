@@ -8,7 +8,6 @@ data:extend({
     name = "cube-fuel-refinery",
     icon = "__Krastorio2Assets__/icons/entities/fuel-refinery.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 0.5, mining_time = 0.5, result = "cube-fuel-refinery"},
     max_health = 300,

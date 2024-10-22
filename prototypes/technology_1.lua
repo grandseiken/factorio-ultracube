@@ -4,7 +4,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-electric-energy-distribution-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
@@ -16,7 +16,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-crusher",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/crusher.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-crusher"},
@@ -34,23 +34,23 @@ data:extend({
     name = "cube-rare-metal-crushing",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
         shift = {0, -20},
         scale = 0.5,
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
         shift = {-0.866 * 20, 10},
         scale = 0.5,
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__base__/graphics/icons/stone.png",
         shift = {0.866 * 20, 10},
         scale = 0.5,
@@ -67,7 +67,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-greenhouse",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/greenhouse.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-greenhouse"},
@@ -84,7 +84,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-chemical-plant",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/oil-processing.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-chemical-plant"},
@@ -100,17 +100,17 @@ data:extend({
     name = "cube-sand-dilution",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Ultracube__/assets/technology/recycling.png",
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Ultracube__/assets/icons/sand-01.png",
         shift = {0, 16},
         scale = 0.5,
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/fluids/water.png",
         shift = {0, -16},
         scale = 0.5,
@@ -128,11 +128,11 @@ data:extend({
     name = "cube-tar-processing",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
       },
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/matter-oil.png",
         scale = 0.625 / 2,
       },
@@ -152,7 +152,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-elbow-grease",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/lubricant.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-elbow-grease"},
@@ -164,7 +164,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-sulfur-processing",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/sulfur-processing.png",
     prerequisites = {"cube-tar-processing"},
     effects = {
@@ -177,7 +177,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-fuel-refinery",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
@@ -191,7 +191,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-fluid-burner",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/flare-stack.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fluid-burner"},
@@ -203,7 +203,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-battery",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/battery.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-battery"},
@@ -216,7 +216,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-concrete",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/concrete.png",
     effects =
     {
@@ -233,7 +233,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-gate",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/gate.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-gate"},
@@ -247,7 +247,7 @@ data:extend({
     -- to make the tech tree a lot cleaner. Revisit later?
     type = "technology",
     name = "cube-advanced-engine",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/electric-engine.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-engine"},
@@ -263,7 +263,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-automobilism",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/automobilism.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-car"},
@@ -275,7 +275,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-railway",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/railway.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-rail"},
@@ -290,7 +290,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-fluid-wagon",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/fluid-wagon.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fluid-wagon"},
@@ -305,7 +305,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-rail-signals",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/automated-rail-transportation.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-rail-signal"},
@@ -318,7 +318,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-bulk-inserters",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/bulk-inserter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-bulk-inserter"},
@@ -335,11 +335,11 @@ data:extend({
     name = "cube-matter-replication",
     icons = {
       {
-        icon_size = 128, icon_mipmaps = 4,
+        icon_size = 128,
         icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
@@ -361,11 +361,11 @@ data:extend({
     name = "cube-widget-replication",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/automation-core.png",
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
@@ -382,11 +382,11 @@ data:extend({
     name = "cube-contemplative-replication",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/military-tech-card.png",
       },
       {
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
         icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
@@ -404,7 +404,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-sentience-extraction",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
@@ -416,7 +416,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-bottled-consciousness",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/space-science-pack.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-intelligent-calcium"},
@@ -434,7 +434,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-advanced-electronics",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/advanced-circuit.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-advanced-circuit"},
@@ -450,7 +450,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-robotics",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/robotics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-flying-robot-frame"},
@@ -462,7 +462,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-construction-robotics",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/construction-robotics.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-construction-robot"},
@@ -479,7 +479,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-modular-armor",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/armor-making.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-modular-armor"},
@@ -494,7 +494,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-night-vision-equipment",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/night-vision-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-night-vision-equipment"},
@@ -506,7 +506,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-personal-roboport-equipment",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-equipment.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-personal-roboport-equipment"},
@@ -522,7 +522,7 @@ data:extend({
     type = "technology",
     name = "cube-abstract-interrogation-card",
     localised_description = {"technology-description.cube-technology-technology"},
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-abstract-interrogation-card"},

@@ -46,7 +46,7 @@ if mods["Flow Control"] then
     {
       type = "technology",
       name = "flow_control_valves_tech",
-      icon_size = 256, icon_mipmaps = 4,
+      icon_size = 256,
       icon = "__Flow Control__/graphics/technology/flow_control_valves_tech.png",
       effects = {
         {type = "unlock-recipe", recipe = "cube-check-valve"},

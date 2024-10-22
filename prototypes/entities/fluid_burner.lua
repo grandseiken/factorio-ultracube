@@ -7,7 +7,6 @@ data:extend({
     name = "cube-fluid-burner",
     icon = "__Krastorio2Assets__/icons/entities/flare-stack.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
     minable = {mining_time = 0.5, result = "cube-fluid-burner"},

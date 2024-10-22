@@ -7,7 +7,7 @@ data:extend({
     type = "assembling-machine",
     name = "cube-electric-furnace",
     icon = "__base__/graphics/icons/electric-furnace.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "cube-electric-furnace"},
     max_health = 400,

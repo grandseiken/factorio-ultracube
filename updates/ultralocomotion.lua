@@ -9,7 +9,6 @@ for _, name in ipairs(fuel_items) do
       localised_name = {"", {"item-name." .. name}, " (ultralocomotion)"},
       icon = base.icon,
       icon_size = base.icon_size,
-      icon_mipmaps = base.icon_mipmaps,
       icons = base.icons,
       fuel_category = base.fuel_category,
       fuel_value = base.fuel_value,

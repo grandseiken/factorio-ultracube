@@ -7,7 +7,6 @@ data:extend({
     type = "assembling-machine",
     name = "cube-greenhouse",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-greenhouse"},

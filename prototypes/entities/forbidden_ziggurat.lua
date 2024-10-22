@@ -149,7 +149,6 @@ data:extend({
     name = "cube-forbidden-ziggurat",
     icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     map_color = {r = 0.37, g = 0.18, b = 0.47},
     max_health = 20000,

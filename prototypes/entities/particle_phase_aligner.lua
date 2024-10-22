@@ -8,7 +8,6 @@ data:extend({
     name = "cube-particle-phase-aligner",
     icon = "__Krastorio2Assets__/icons/entities/research-server.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-particle-phase-aligner"},
     damaged_trigger_effect = hit_effects.entity(),

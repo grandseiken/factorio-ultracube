@@ -35,7 +35,6 @@ data:extend({
     name = "cube-deep-core-ultradrill",
     icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 2, result = "cube-deep-core-ultradrill"},
     damaged_trigger_effect = hit_effects.entity(),

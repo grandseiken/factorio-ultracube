@@ -17,7 +17,7 @@ if mods["pushbutton"] then
     {
       type = "technology",
       name = "pushbutton",
-      icon_size = 256, icon_mipmaps = 4,
+      icon_size = 256,
       icon = "__pushbutton__/graphics/rwSiA9L.png",
       effects = {
         {type = "unlock-recipe", recipe = "cube-pushbutton"},

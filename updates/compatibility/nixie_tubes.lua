@@ -42,7 +42,7 @@ if mods["nixie-tubes"] then
     {
       type = "technology",
       name = "cathodes",
-      icon_size = 128, icon_mipmaps = 4,
+      icon_size = 128,
       icon = "__nixie-tubes__/graphics/nixie-technology-icon.png",
       effects = {
         {type = "unlock-recipe", recipe = "cube-nixie-tube"},
