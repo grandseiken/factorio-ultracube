@@ -18,6 +18,7 @@ Date: ???
     - Entities set to inactive by script for some reason will have a custom status message shown.
     - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
     - Production statistics will better reflect the net effect of cyclic recipes.
+    - Updated the mystery furnace to have spookier flames.
     - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes that output one of their inputs.
     - Due to rocket silo changes in the base game, the experimental teleporter is now more experimental than ever. It has a single inventory slot used for both input and output, and is capable of buffering a second calibration.
     - Players who accidentally obtain excess cubes should now have them confiscated.
