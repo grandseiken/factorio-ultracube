@@ -32,10 +32,10 @@ local animation = {
 
 local working_visualisations = {
   {
-    draw_as_light = true,
     animation = {
       filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer-light.png",
       priority = "extra-high",
+      draw_as_light = true,
       width = 400,
       height = 420,
       shift = {0, -0.2},
@@ -46,11 +46,11 @@ local working_visualisations = {
     },
   },
   {
-    draw_as_glow = true,
-    blend_mode = "additive-soft",
     animation = {
       filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer-glow.png",
       priority = "extra-high",
+      draw_as_glow = true,
+      blend_mode = "additive-soft",
       width = 400,
       height = 420,
       shift = {0, -0.2},

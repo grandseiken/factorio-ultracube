@@ -176,7 +176,6 @@ for _, v in ipairs(item_prototypes) do
       t.order = add_prefix(t.order)
     else
       t.hidden = true
-      t.hide_from_signal_gui = true
     end
   end
 end

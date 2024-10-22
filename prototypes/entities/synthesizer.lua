@@ -74,10 +74,10 @@ data:extend({
       },
       working_visualisations = {
         {
-          draw_as_light = true,
           animation = {
             filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
             priority = "high",
+            draw_as_light = true,
             width = 144,
             height = 110,
             frame_count = 30,
@@ -88,12 +88,12 @@ data:extend({
           },
         },
         {
-          draw_as_glow = true,
-          blend_mode = "additive",
           synced_fadeout = true,
           animation = {
             filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
             priority = "high",
+            draw_as_glow = true,
+            blend_mode = "additive",
             width = 144,
             height = 110,
             frame_count = 30,

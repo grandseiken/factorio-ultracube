@@ -122,7 +122,6 @@ local reactor_working_visualizations = {
   },
   {
     render_layer = "higher-object-under",
-    draw_as_light = true,
     animation = {
       filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
       line_length = 6,
@@ -130,6 +129,7 @@ local reactor_working_visualizations = {
       height = 688,
       frame_count = 12,
       animation_speed = 0.75,
+      draw_as_light = true,
       scale = 0.5,
       shift = {2.18, -2.358},
     },

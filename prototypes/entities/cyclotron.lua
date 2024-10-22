@@ -100,11 +100,11 @@ data:extend({
       },
       working_visualisations = {
         {
-          draw_as_light = true,
-          blend_mode = "additive-soft",
           animation = {
             filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-working-light.png",
             priority = "high",
+            draw_as_light = true,
+            blend_mode = "additive-soft",
             width = 462,
             height = 500,
             frame_count = 30,
@@ -115,12 +115,12 @@ data:extend({
           },
         },
         {
-          draw_as_glow = true,
-          blend_mode = "additive-soft",
           synced_fadeout = true,
           animation = {
             filename = "__Krastorio2Assets__/entities/matter-plant/matter-plant-working-glow.png",
             priority = "high",
+            draw_as_glow = true,
+            blend_mode = "additive-soft",
             width = 462,
             height = 500,
             frame_count = 30,

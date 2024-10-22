@@ -64,7 +64,6 @@ data:extend({
       },
       working_visualisations = {
         {
-          draw_as_light = true,
           animation = {
             filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
             width = 512,
@@ -72,6 +71,7 @@ data:extend({
             frame_count = 1,
             repeat_count = 10,
             scale = 0.5,
+            draw_as_light = true,
             animation_speed = 0.35,
           },
         },
