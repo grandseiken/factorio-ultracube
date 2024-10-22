@@ -160,7 +160,7 @@ data:extend({
     type = "technology",
     name = "cube-efficiency-module-v2",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/speed-module-2.png",
+    icon = "__base__/graphics/technology/efficiency-module-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-efficiency-module-v2"},
       {type = "unlock-recipe", recipe = "cube-burnt-out-modular-casing"},

@@ -746,7 +746,7 @@ data:extend({
     type = "technology",
     name = "cube-efficiency-module",
     icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/speed-module-1.png",
+    icon = "__base__/graphics/technology/efficiency-module-1.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-efficiency-module"},
     },

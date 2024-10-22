@@ -96,7 +96,7 @@ data:extend({
 
     energy_usage = "800kW",
     energy_source = {type = "void"},
-    allowed_effects = module_effects.fuel_speed_only,
+    allowed_effects = module_effects.speed_efficiency,
     module_slots = 4,
     icons_positioning = {{
       inventory_index = defines.inventory.beacon_modules,
