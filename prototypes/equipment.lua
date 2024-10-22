@@ -37,16 +37,10 @@ data:extend({
     name = "cube-solar-panel-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/solar-panel-equipment.png",
-      width = 32,
-      height = 32,
+      width = 64,
+      height = 64,
       priority = "medium",
-      hr_version = {
-        filename = "__base__/graphics/equipment/hr-solar-panel-equipment.png",
-        width = 64,
-        height = 64,
-        priority = "medium",
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
     shape = {
       width = 1,
@@ -65,16 +59,10 @@ data:extend({
     name = "cube-solar-panel-equipment-mk2",
     sprite = {
       filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel.png",
-      width = 140,
-      height = 140,
+      width = 280,
+      height = 280,
       priority = "medium",
-      hr_version = {
-        filename = "__Krastorio2Assets__/entities/advanced-solar-panel/hr-advanced-solar-panel.png",
-        width = 280,
-        height = 280,
-        priority = "medium",
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
     shape = {
       width = 2,
@@ -104,17 +92,11 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__Krastorio2Assets__/equipments/character/advanced-exoskeleton-equipment.png",
-      width = 64,
-      height = 128,
+      filename = "__Krastorio2Assets__/equipment/advanced-exoskeleton-equipment.png",
+      width = 128,
+      height = 256,
       priority = "medium",
-      hr_version = {
-        filename = "__Krastorio2Assets__/equipments/character/hr-advanced-exoskeleton-equipment.png",
-        width = 128,
-        height = 256,
-        priority = "medium",
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
   },
   {
@@ -122,16 +104,10 @@ data:extend({
     name = "cube-battery-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/battery-equipment.png",
-      width = 32,
-      height = 64,
+      width = 64,
+      height = 128,
       priority = "medium",
-      hr_version = {
-        filename = "__base__/graphics/equipment/hr-battery-equipment.png",
-        width = 64,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
     shape = {
       width = 1,
@@ -150,16 +126,10 @@ data:extend({
     name = "cube-personal-roboport-equipment",
     sprite = {
       filename = "__base__/graphics/equipment/personal-roboport-equipment.png",
-      width = 64,
-      height = 64,
+      width = 128,
+      height = 128,
       priority = "medium",
-      hr_version = {
-        filename = "__base__/graphics/equipment/hr-personal-roboport-equipment.png",
-        width = 128,
-        height = 128,
-        priority = "medium",
-        scale = 0.5,
-      },
+      scale = 0.5,
     },
     shape = {
       width = 2,

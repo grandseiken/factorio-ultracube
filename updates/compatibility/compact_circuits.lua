@@ -10,9 +10,9 @@ if mods["compaktcircuit"] then
   local proc = data.raw.recipe[proc_name]
   proc.category = "cube-fabricator-handcraft"
   proc.ingredients = {
-    {"cube-electronic-circuit", 20},
-    {"cube-advanced-circuit", 30},
-    {"cube-spectral-processor", 10},
+    {type = "item", name = "cube-electronic-circuit", amount = 20},
+    {type = "item", name = "cube-advanced-circuit", amount = 30},
+    {type = "item", name = "cube-spectral-processor", amount = 10},
   }
   local item = data.raw.item[proc_name]
   item.order = "cube-" .. item.order
@@ -23,9 +23,9 @@ if mods["compaktcircuit"] then
   proc = data.raw.recipe[proc_name]
   proc.category = "cube-fabricator-handcraft"
   proc.ingredients = {
-    {"cube-electronic-circuit", 10},
-    {"cube-advanced-circuit", 10},
-    {"cube-spectral-processor", 3},
+    {type = "item", name = "cube-electronic-circuit", amount = 10},
+    {type = "item", name = "cube-advanced-circuit", amount = 10},
+    {type = "item", name = "cube-spectral-processor", amount = 3},
   }
 
   item = data.raw.item[proc_name]

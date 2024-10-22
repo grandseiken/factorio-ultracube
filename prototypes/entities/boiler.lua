@@ -7,7 +7,7 @@ data:extend({
     type = "boiler",
     name = "cube-boiler",
     icon = "__base__/graphics/icons/boiler.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-boiler"},
     max_health = 200,
@@ -20,22 +20,18 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     target_temperature = 215,
     fluid_box = {
-      base_area = 1,
-      height = 3,
-      base_level = -1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
-      pipe_connections = {{type = "input", position = {0, -1.5}}},
+      pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -0.5}}},
       production_type = "input",
       filter = "water"
     },
     output_fluid_box = {
-      base_area = 1,
-      height = 3,
-      base_level = 1,
+      volume = 1000,
       pipe_covers = pipecoverspictures(),
       pipe_connections = {
-        {type = "output", position = {-2, 0.5}},
-        {type = "output", position = {2, 0.5}}
+        {flow_direction = "output", direction = defines.direction.west, position = {-1, 0.5}},
+        {flow_direction = "output", direction = defines.direction.east, position = {1, 0.5}}
       },
       production_type = "output",
       filter = "steam"
@@ -47,7 +43,7 @@ data:extend({
       effectivity = 1,
       fuel_inventory_size = 1,
       burnt_inventory_size = 1,
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       light_flicker = boiler_data.energy_source.light_flicker,
       smoke = boiler_data.energy_source.smoke,
       render_no_power_icon = false,
@@ -58,8 +54,7 @@ data:extend({
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
 
-    structure = boiler_data.structure,
-    patch = boiler_data.patch,
+    pictures = boiler_data.pictures,
     water_reflection = boiler_data.water_reflection,
     fire_flicker_enabled = true,
     fire_glow_flicker_enabled = true,

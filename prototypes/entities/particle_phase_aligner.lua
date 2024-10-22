@@ -8,7 +8,6 @@ data:extend({
     name = "cube-particle-phase-aligner",
     icon = "__Krastorio2Assets__/icons/entities/research-server.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-particle-phase-aligner"},
     damaged_trigger_effect = hit_effects.entity(),
@@ -16,20 +15,11 @@ data:extend({
     corpse = "medium-remnants",
     collision_box = {{-1.25, -1.25}, {1.25, 1.25}},
     selection_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
-          priority = "high",
-          scale = 1,
-          width = 128,
-          height = 128,
-          shift = {0., -0.2},
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/research-server/hr-research-server.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -39,20 +29,8 @@ data:extend({
             animation_speed = 0.9,
             scale = 0.5,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
-          priority = "high",
-          scale = 1,
-          width = 128,
-          height = 128,
-          draw_as_shadow = true,
-          shift = {0., -0.2},
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/research-server/hr-research-server-shadow.png",
+          {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server-shadow.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -65,22 +43,10 @@ data:extend({
           },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
-          priority = "extra-high",
-          scale = 1,
-          width = 128,
-          height = 128,
-          shift = {0., -0.2},
-          draw_as_light = true,
-          frame_count = 60,
-          line_length = 15,
-          animation_speed = 0.9,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/research-server/hr-research-server-light.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/research-server/research-server-light.png",
             priority = "extra-high",
             width = 256,
             height = 256,
@@ -92,13 +58,13 @@ data:extend({
             scale = 0.5,
           },
         },
-      },
-      {
-        light = {
-          intensity = 0.25,
-          size = 1,
-          shift = {0.0, 0.0},
-          color = {r = 0.1, g = 0.5, b = 1},
+        {
+          light = {
+            intensity = 0.25,
+            size = 1,
+            shift = {0.0, 0.0},
+            color = {r = 0.1, g = 0.5, b = 1},
+          },
         },
       },
     },
@@ -121,7 +87,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
 
     water_reflection = {
@@ -138,9 +104,9 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "200KW",
+    energy_usage = "200kW",
     ingredient_count = 1,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     allowed_effects = module_effects.none,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

@@ -1,5 +1,7 @@
 local resource_autoplace = require("__core__/lualib/resource-autoplace")
-local noise = require("__core__/lualib/noise")
+
+resource_autoplace.initialize_patch_set("cube-rare-metals", false)
+resource_autoplace.initialize_patch_set("cube-deep-core-vein", false)
 
 local deep_core_ore_autoplace = resource_autoplace.resource_autoplace_settings({
   name = "cube-deep-core-vein",
@@ -21,23 +23,24 @@ local deep_core_distance = 512
 -- Factor where it starts to fade in.
 local deep_core_fade_ratio = 3
 local deep_core_distance_bonus = 1024
-deep_core_ore_autoplace.probability_expression =
-    deep_core_ore_autoplace.probability_expression + noise.define_noise_function(function(x, y)
-      local d = deep_core_distance * deep_core_distance
-      local r = deep_core_fade_ratio * deep_core_fade_ratio
-      local c = r / d * (1 - r)
-      return noise.clamp(c * (d - x * x - y * y), -1, 0)
-    end)
-deep_core_ore_autoplace.richness_expression = deep_core_ore_autoplace.richness_expression +
-    noise.get_control_setting("cube-deep-core-vein").richness_multiplier *
-    noise.get_control_setting("cube-deep-core-vein").size_multiplier * noise.define_noise_function(function(x, y)
-      return noise.max(0, deep_core_distance_bonus * ((x * x + y * y)^0.5 - deep_core_distance))
-    end)
+
+local d = deep_core_distance * deep_core_distance
+local r = deep_core_fade_ratio * deep_core_fade_ratio
+local c = r / d * (1 - r)
+deep_core_ore_autoplace.probability_expression = deep_core_ore_autoplace.probability_expression ..
+    " + clamp(" .. c .. " * (" .. d .. " - x * x - y * y), -1, 0)"
+deep_core_ore_autoplace.richness_expression = deep_core_ore_autoplace.richness_expression ..
+    " + (var('control:cube-deep-core-vein:richness') * var('control:cube-deep-core-vein:size') * " ..
+    "max(0, " .. deep_core_distance_bonus .. " * (x * x + y * y)^0.5 - " .. deep_core_distance .. "))"
 
 data:extend({
   {
     type = "resource-category",
     name = "cube-deep-core",
+  },
+  {
+    type = "resource-category",
+    name = "cube-none",
   },
 
   {
@@ -58,20 +61,10 @@ data:extend({
   },
 
   {
-    type = "noise-layer",
-    name = "cube-rare-metals",
-  },
-  {
-    type = "noise-layer",
-    name = "cube-deep-core-vein",
-  },
-
-  {
     type = "resource",
     name = "cube-rare-metals",
     icon = "__Krastorio2Assets__/icons/resources/rare-metals.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral"},
     order = "a-b-a",
     subgroup = "raw-resource",
@@ -105,42 +98,24 @@ data:extend({
       sheet = {
         filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals.png",
         priority = "extra-high",
-        width = 64,
-        height = 64,
+        width = 128,
+        height = 128,
         frame_count = 8,
         variation_count = 8,
-        hr_version = {
-          filename = "__Krastorio2Assets__/resources/rare-metals/hr-rare-metals.png",
-          priority = "extra-high",
-          width = 128,
-          height = 128,
-          frame_count = 8,
-          variation_count = 8,
-          scale = 0.5,
-        },
+        scale = 0.5,
       },
     },
     stages_effect = {
       sheet = {
         filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals-glow.png",
         priority = "extra-high",
-        width = 64,
-        height = 64,
+        width = 128,
+        height = 128,
         frame_count = 8,
         animation_speed = 3,
         variation_count = 8,
+        scale = 0.5,
         draw_as_glow = true,
-        hr_version = {
-          filename = "__Krastorio2Assets__/resources/rare-metals/hr-rare-metals-glow.png",
-          priority = "extra-high",
-          width = 128,
-          height = 128,
-          frame_count = 8,
-          animation_speed = 3,
-          variation_count = 8,
-          scale = 0.5,
-          draw_as_glow = true,
-        },
       },
     },
     effect_animation_period = 5,
@@ -157,7 +132,6 @@ data:extend({
     category = "cube-deep-core",
     icon = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral"},
     order = "a-b-b",
     subgroup = "raw-resource",
@@ -182,20 +156,11 @@ data:extend({
       sheet = {
         filename = "__Krastorio2Assets__/resources/imersite/imersite-rift.png",
         priority = "extra-high",
-        width = 250,
-        height = 250,
+        width = 500,
+        height = 500,
         frame_count = 6,
         variation_count = 1,
-        scale = 0.8,
-        hr_version = {
-          filename = "__Krastorio2Assets__/resources/imersite/hr-imersite-rift.png",
-          priority = "extra-high",
-          width = 500,
-          height = 500,
-          frame_count = 6,
-          variation_count = 1,
-          scale = 0.4,
-        },
+        scale = 0.4,
       },
     },
     stages_effect = {
@@ -203,22 +168,12 @@ data:extend({
         {
           filename = "__Krastorio2Assets__/resources/imersite/imersite-rift-glow.png",
           priority = "extra-high",
-          width = 250,
-          height = 250,
+          width = 500,
+          height = 500,
           frame_count = 6,
           variation_count = 1,
+          scale = 0.4,
           draw_as_glow = true,
-          scale = 0.8,
-          hr_version = {
-            filename = "__Krastorio2Assets__/resources/imersite/hr-imersite-rift-glow.png",
-            priority = "extra-high",
-            width = 500,
-            height = 500,
-            frame_count = 6,
-            variation_count = 1,
-            scale = 0.4,
-            draw_as_glow = true,
-          },
         },
       },
     },

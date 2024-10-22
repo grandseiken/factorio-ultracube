@@ -25,15 +25,15 @@ if mods["textplates"] then
     recipes[large].category = "cube-fabricator-handcraft"
     data.raw.technology[technology] = nil
     if ingredient then
-      recipes[small].ingredients = {{ingredient, 1}}
-      recipes[large].ingredients = {{ingredient, 4}}
+      recipes[small].ingredients = {{type = "item", name = ingredient, amount = 1}}
+      recipes[large].ingredients = {{type = "item", name = ingredient, amount = 4}}
       data.raw.item[small].flags = {}
       data.raw.item[large].flags = {}
       data.raw.item[small].order = "cube-" .. data.raw.item[small].order
       data.raw.item[large].order = "cube-" .. data.raw.item[large].order
     else
-      data.raw.item[small].flags = {"hidden"}
-      data.raw.item[large].flags = {"hidden"}
+      data.raw.item[small].hidden = true
+      data.raw.item[large].hidden = true
     end
 
     if ingredient and prerequisite then

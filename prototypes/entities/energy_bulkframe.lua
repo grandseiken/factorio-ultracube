@@ -1,6 +1,5 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
-require("__Ultracube__/prototypes/entities/lib/collision_layers")
 
 data:extend({
   {
@@ -8,18 +7,19 @@ data:extend({
     name = "cube-energy-bulkframe",
     icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     minable = {mining_time = 1, result = "cube-energy-bulkframe"},
     max_health = 750,
     corpse = "big-remnants",
     dying_explosion = "big-explosion",
     damaged_trigger_effect = hit_effects.entity(),
-    collision_mask = {"item-layer", "object-layer", "player-layer", "water-tile",
-                      collision_layers.accumulator_forbidden_zone},
+    collision_mask = {
+      layers = {item = true, object = true, player = true, water_tile = true,
+                cube_accumulator_forbidden_zone = true},
+    },
     collision_box = {{-2.75, -2.75}, {2.75, 2.75}},
     selection_box = {{-3, -3}, {3, 3}},
-    drawing_box = {{-3, -3}, {3, 3}},
+    drawing_box_vertical_extension = 0.5,
     energy_source = {
       -- TODO: numbers (particularly input flow) tweaked upwards to handle antimatter power.
       -- Perhaps tweak down a bit if we add some other super-endgame storage solution.
@@ -29,34 +29,19 @@ data:extend({
       input_flow_limit = "50MW",
       output_flow_limit = "50MW",
     },
-    picture = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          scale = 1.1,
-          shift = {0, -0.4},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage.png",
+    chargable_graphics = {
+      picture = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
             frame_count = 1,
             shift = {0, -0.4},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
-          width = 207,
-          height = 135,
-          frame_count = 1,
-          draw_as_shadow = true,
-          scale = 1.1,
-          shift = {0.72, 0.56},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -66,20 +51,10 @@ data:extend({
           },
         },
       },
-    },
-    charge_animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.03,
-          scale = 1.1,
-          shift = {0, -0.4},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage.png",
+      charge_animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -88,19 +63,8 @@ data:extend({
             animation_speed = 0.03,
             shift = {0, -0.4},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
-          width = 207,
-          height = 135,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.03,
-          draw_as_shadow = true,
-          scale = 1.1,
-          shift = {0.72, 0.56},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -110,19 +74,8 @@ data:extend({
             draw_as_shadow = true,
             shift = {0.72, 0.56},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-charge.png",
-          width = 190,
-          height = 190,
-          frame_count = 2,
-          line_length = 2,
-          animation_speed = 0.03,
-          scale = 1.1,
-          shift = {0, -0.4},
-          draw_as_glow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-charge.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-charge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -132,19 +85,8 @@ data:extend({
             shift = {0, -0.4},
             draw_as_glow = true,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.06,
-          scale = 1.1,
-          shift = {0, -0.4},
-          draw_as_light = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-light.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -156,20 +98,10 @@ data:extend({
           },
         },
       },
-    },
-    discharge_animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.06,
-          scale = 1.1,
-          shift = {0, -0.4},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage.png",
+      discharge_animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -178,19 +110,8 @@ data:extend({
             animation_speed = 0.06,
             shift = {0, -0.4},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
-          width = 207,
-          height = 135,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.06,
-          draw_as_shadow = true,
-          scale = 1.1,
-          shift = {0.72, 0.56},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -200,19 +121,8 @@ data:extend({
             draw_as_shadow = true,
             shift = {0.72, 0.56},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-discharge.png",
-          width = 190,
-          height = 190,
-          frame_count = 2,
-          line_length = 2,
-          animation_speed = 0.06,
-          scale = 1.1,
-          shift = {0, -0.4},
-          draw_as_glow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-discharge.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-discharge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -222,19 +132,8 @@ data:extend({
             shift = {0, -0.4},
             draw_as_glow = true,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
-          width = 190,
-          height = 190,
-          frame_count = 1,
-          repeat_count = 2,
-          animation_speed = 0.06,
-          scale = 1.1,
-          shift = {0, -0.4},
-          draw_as_light = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/energy-storage/hr-energy-storage-light.png",
+          {
+            filename = "__Krastorio2Assets__/entities/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -292,8 +191,7 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    circuit_wire_connection_point = circuit_connector_definitions["accumulator"].points,
-    circuit_connector_sprites = circuit_connector_definitions["accumulator"].sprites,
+    circuit_connector = circuit_connector_definitions["accumulator"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_output_signal = { type = "virtual", name = "signal-A" },
   },

@@ -8,10 +8,10 @@ local lock_entity_types = make_set({"car", "tank", "character", "spider-vehicle"
 local vehicle_entity_types = make_set({"car", "tank", "spider-vehicle", "locomotive", "cargo-wagon"})
 
 local function player_state(player)
-  local map = global.cubecam_player_state
+  local map = storage.cubecam_player_state
   if not map then
     map = {}
-    global.cubecam_player_state = map
+    storage.cubecam_player_state = map
   end
   local state = map[player.index]
   if not state then
@@ -104,9 +104,9 @@ local function cubecam_open(player, fullscreen)
     type = "sprite-button",
     name = "cube-cubecam-close",
     style = "frame_action_button",
-    sprite = "utility/close_white",
-    hovered_sprite = "utility/close_white",
-    clicked_sprite = "utility/close_white",
+    sprite = "utility/close",
+    hovered_sprite = "utility/close",
+    clicked_sprite = "utility/close",
   }
   local content = main.add {
     type = "frame",
@@ -167,7 +167,7 @@ function cubecam.toggle_open(player, fullscreen)
 end
 
 function cubecam.remove_player(player_index)
-  local map = global.cubecam_player_state
+  local map = storage.cubecam_player_state
   if map then
     map[player_index] = nil
   end
@@ -207,32 +207,32 @@ function cubecam.on_settings_changed(player, setting)
 end
 
 function cubecam.update_position(x, y, z, e)
-  global.cubecam_target_x = x
-  global.cubecam_target_y = y
+  storage.cubecam_target_x = x
+  storage.cubecam_target_y = y
   if e and lock_entity_types[e.type] then
-    global.cubecam_target_e = e
+    storage.cubecam_target_e = e
     if vehicle_entity_types[e.type] then
       z = z / (1 + math.abs(e.speed))
     end
   else
-    global.cubecam_target_e = nil
+    storage.cubecam_target_e = nil
   end
-  global.cubecam_target_z = z
+  storage.cubecam_target_z = z
 end
 
 function cubecam.tick()
   -- TODO: don't calculate cubecam if nobody is looking at it.
-  local global = global
-  local x = global.cubecam_x or 0
-  local y = global.cubecam_y or 0
-  local z = global.cubecam_z or 1
-  local target_x = global.cubecam_target_x or 0
-  local target_y = global.cubecam_target_y or 0
-  local target_z = global.cubecam_target_z or 1
-  local lock_x = global.cubecam_lock_x
-  local lock_y = global.cubecam_lock_y
-  local target_e = global.cubecam_target_e
-  local target_lock = global.cubecam_target_lock or 0
+  local storage = storage
+  local x = storage.cubecam_x or 0
+  local y = storage.cubecam_y or 0
+  local z = storage.cubecam_z or 1
+  local target_x = storage.cubecam_target_x or 0
+  local target_y = storage.cubecam_target_y or 0
+  local target_z = storage.cubecam_target_z or 1
+  local lock_x = storage.cubecam_lock_x
+  local lock_y = storage.cubecam_lock_y
+  local target_e = storage.cubecam_target_e
+  local target_lock = storage.cubecam_target_lock or 0
   local has_target = target_e and target_e.valid
 
   if has_target then
@@ -244,28 +244,28 @@ function cubecam.tick()
     if lock_x and lock_y then
       x = lock_x
       y = lock_y
-      global.cubecam_lock_x = nil
-      global.cubecam_lock_y = nil
+      storage.cubecam_lock_x = nil
+      storage.cubecam_lock_y = nil
     end
   end
   z = z + cubecam_v * (target_z - z)
-  global.cubecam_z = z
+  storage.cubecam_z = z
   if target_lock < cubecam_lock_ticks then
     x = x + cubecam_v * (target_x - x)
     y = y + cubecam_v * (target_y - y)
-    global.cubecam_x = x
-    global.cubecam_y = y
+    storage.cubecam_x = x
+    storage.cubecam_y = y
   end
   if has_target then
     local position = target_e.position
     local lock_f = target_lock / cubecam_lock_ticks
     x = x + lock_f * (position.x - x)
     y = y + lock_f * (position.y - y)
-    global.cubecam_lock_x = x
-    global.cubecam_lock_y = y
+    storage.cubecam_lock_x = x
+    storage.cubecam_lock_y = y
   end
-  global.cubecam_target_lock = target_lock
-  local map = global.cubecam_player_state
+  storage.cubecam_target_lock = target_lock
+  local map = storage.cubecam_player_state
   if map then
     for _, state in pairs(map) do
       local camera = state.camera

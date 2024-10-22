@@ -31,10 +31,40 @@ require("updates.compatibility.wire_shortcuts")
 
 require("updates.barrelling")
 require("updates.character")
+require("updates.circuit_connectors")
 require("updates.recipes_mystery")
+require("updates.productivity")
 require("updates.disable_incompatible")
 require("updates.ultralocomotion")
 
 for _, t in pairs(data.raw.technology) do
   t.enabled = false
+end
+
+-- Get rid of rocket capacity and factoriopedia.
+for t, _ in pairs(defines.prototypes.item) do
+  if data.raw[t] then
+    for _, v in pairs(data.raw[t]) do
+      v.hidden_in_factoriopedia = true
+      v.weight = (1000 * 1000) / v.stack_size
+    end
+  end
+end
+
+for t, _ in pairs(defines.prototypes.entity) do
+  if data.raw[t] then
+    for _, v in pairs(data.raw[t]) do
+      v.hidden_in_factoriopedia = true
+    end
+  end
+end
+
+for _, v in pairs(data.raw.fluid) do
+  v.hidden_in_factoriopedia = true
+end
+for _, v in pairs(data.raw.recipe) do
+  v.hidden_in_factoriopedia = true
+end
+for _, v in pairs(data.raw["ammo-category"]) do
+  v.hidden_in_factoriopedia = true
 end

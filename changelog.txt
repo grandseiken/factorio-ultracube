@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.0
+Date: ???
+  Major Features:
+    - Ultracube is now (only) compatible with Factorio 2.0.
+    - Everything appears to be more-or-less working, but there could still be some tendrils lurking somewhere. Please consider this an experimental release and report any problems on the mod discussion page or discord.
+    - Once this version is stable, future updates will take advantage of more 2.0 features and provide optional expansion-only content for those who have it.
+  Modding:
+    - Other optional mods which were previously compatible with Ultracube for Factorio 1.0 have not yet been extensively tested or verified. They might or might not still work.
+  Changes:
+    - Added support for selector combinators and display panels.
+    - Added optional support for the elevated rails expansion mod.
+    - Added a mod setting to allow circuit connections on machines. Since the inability to easily read machine contents was originally part of the challenge, this can be left disabled for "classic" gameplay.
+    - Removed filter inserters and stack filter inserters, and renamed stack inserters to bulk inserters to match the base game.
+    - Added a cubecam shortcut button to the toolbar.
+    - Rearranged the positions of item and fluid signals to better match the character's recipe GUI and fit with the new recipe signals.
+    - Updated items to take advantage of new pickup and placement sounds.
+    - Entities set to inactive by script for some reason will have a custom status message shown.
+    - The "Show only essential technologies" button in the tech tree will show a simplified flow of the Ultracube tech tree progression.
+    - Production statistics will better reflect the net effect of cyclic recipes.
+    - Updated the mystery furnace to have spookier flames.
+    - Removed extra detail tooltips for uninteresting byproducts of certain recipes, particularly for recipes that output one of their inputs.
+    - Due to rocket silo changes in the base game, the experimental teleporter is now more experimental than ever. It has a single inventory slot used for both input and output, and is capable of buffering a second calibration.
+    - Players who accidentally obtain excess cubes should now have them confiscated.
+  Balancing:
+    - Reduced the volume of the beacon input fluidbox from 100 to 10.
+    - Increased the yield of the Altered Components recipe.
+    - Efficiency modules are now allowed in beacons.
+  Bugfixes:
+    - The wire connections of the backup turbine can no longer be interacted with manually.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.7
 Date: 13.10.2024
   Changes:

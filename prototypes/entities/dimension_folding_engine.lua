@@ -8,7 +8,7 @@ data:extend({
     name = "cube-dimension-folding-engine-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-dimension-folding-engine"}},
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
-    icon_size = 128, icon_mipmaps = 4,
+    icon_size = 128,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     tile_width = 9,
@@ -22,28 +22,20 @@ data:extend({
     animation = make_rotated_animation_variations_from_sheet(1, {
       filename = "__Krastorio2Assets__/entities/remnants/antimatter-reactor/antimatter-reactor-remnant.png",
       line_length = 1,
-      width = 300,
-      height = 300,
+      width = 600,
+      height = 600,
       frame_count = 1,
       direction_count = 1,
-      scale = 1.1,
-      hr_version = {
-        filename = "__Krastorio2Assets__/entities/remnants/antimatter-reactor/hr-antimatter-reactor-remnant.png",
-        line_length = 1,
-        width = 600,
-        height = 600,
-        frame_count = 1,
-        direction_count = 1,
-        scale = 0.55,
-      },
+      scale = 0.55,
     }),
   },
   {
     type = "assembling-machine",
     name = "cube-dimension-folding-engine",
     icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
-    icon_size = 128, icon_mipmaps = 4,
+    icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 2, result = "cube-dimension-folding-engine"},
     max_health = 2000,
     damaged_trigger_effect = hit_effects.entity(),
@@ -51,22 +43,11 @@ data:extend({
     dying_explosion = "cube-matter-explosion-s",
     collision_box = {{-4.75, -4.75}, {4.75, 4.75}},
     selection_box = {{-4.95, -4.95}, {4.95, 4.95}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-light.png",
-          priority = "high",
-          width = 330,
-          height = 353,
-          shift = {0, -0.5},
-          frame_count = 1,
-          repeat_count = 30,
-          animation_speed = 0.9,
-          scale = 0.96,
-          draw_as_light = true,
-          blend_mode = "additive",
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/hr-antimatter-reactor-light.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-light.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -78,22 +59,8 @@ data:extend({
             draw_as_light = true,
             blend_mode = "additive",
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-glow.png",
-          priority = "high",
-          width = 330,
-          height = 353,
-          shift = {0, -0.5},
-          frame_count = 1,
-          repeat_count = 30,
-          animation_speed = 0.9,
-          scale = 0.96,
-          blend_mode = "additive-soft",
-          draw_as_glow = true,
-          fadeout = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/hr-antimatter-reactor-glow.png",
+          {
+            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-glow.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -106,19 +73,8 @@ data:extend({
             draw_as_glow = true,
             fadeout = true,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor.png",
-          priority = "high",
-          width = 330,
-          height = 353,
-          shift = {0, -0.5},
-          frame_count = 30,
-          line_length = 6,
-          animation_speed = 0.9,
-          scale = 0.96,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/hr-antimatter-reactor.png",
+          {
+            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -128,19 +84,8 @@ data:extend({
             animation_speed = 0.9,
             scale = 0.48,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-sh.png",
-          width = 362,
-          height = 315,
-          shift = {0.57, 0.27},
-          frame_count = 1,
-          repeat_count = 30,
-          animation_speed = 0.9,
-          scale = 0.96,
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/hr-antimatter-reactor-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-sh.png",
             width = 724,
             height = 630,
             shift = {0.57, 0.27},
@@ -154,7 +99,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-dimension-folding-engine"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -172,16 +116,18 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
-      drain = "200KW",
+      emissions_per_minute = {},
+      drain = "200kW",
     },
 
     ingredient_count = 5,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 2.5},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 2.5},
+      scale = 1,
+    }},
     allowed_effects = module_effects.speed_efficiency,
     open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
     close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},

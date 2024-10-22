@@ -1,6 +1,17 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
+local explosion_animations = require("__base__/prototypes/entity/explosion-animations")
 
+-- Reinstate 1.1 filter inserters.
+data.raw.inserter["inserter"].filter_count = 0
+data.raw.inserter["fast-inserter"].filter_count = 5
+data.raw.inserter["bulk-inserter"].filter_count = 1
+data.raw.inserter["long-handed-inserter"].filter_count = 0
+
+data.raw.inserter["bulk-inserter"].stack_size_bonus = 3
+data.raw.inserter["long-handed-inserter"].fast_replaceable_group = "inserter"
+
+-- Extremely long-handed inserter.
 data:extend({
   {
     type = "corpse",
@@ -21,25 +32,14 @@ data:extend({
     animation = make_rotated_animation_variations_from_sheet(3, {
       filename = "__Krastorio2Assets__/entities/remnants/superior-inserter/superior-inserter-remnant.png",
       line_length = 1,
-      width = 52,
-      height = 42,
+      width = 102,
+      height = 80,
       frame_count = 1,
       variation_count = 1,
       axially_symmetrical = false,
       direction_count = 1,
-      shift = util.by_pixel(1, 5),
-      hr_version = {
-        filename = "__Krastorio2Assets__/entities/remnants/superior-inserter/hr-superior-inserter-remnant.png",
-        line_length = 1,
-        width = 102,
-        height = 80,
-        frame_count = 1,
-        variation_count = 1,
-        axially_symmetrical = false,
-        direction_count = 1,
-        shift = util.by_pixel(0.5, 4.5),
-        scale = 0.5,
-      },
+      shift = util.by_pixel(0.5, 4.5),
+      scale = 0.5,
     }),
   },
   {
@@ -47,7 +47,6 @@ data:extend({
     name = "cube-extremely-long-inserter",
     icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     filter_count = 4,
     minable = {mining_time = 0.1, result = "cube-extremely-long-inserter"},
@@ -58,8 +57,8 @@ data:extend({
     selection_box = {{-0.4, -0.35}, {0.4, 0.45}},
     pickup_position = {0, -5},
     insert_position = {0, 5.2},
-    energy_per_movement = "40KJ",
-    energy_per_rotation = "40KJ",
+    energy_per_movement = "40kJ",
+    energy_per_rotation = "40kJ",
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
@@ -74,100 +73,56 @@ data:extend({
     hand_base_picture = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base.png",
       priority = "extra-high",
-      width = 8,
-      height = 68,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base.png",
-        priority = "extra-high",
-        width = 32,
-        height = 272,
-        scale = 0.25,
-      },
+      width = 32,
+      height = 272,
+      scale = 0.25,
     },
     hand_closed_picture = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed.png",
       priority = "extra-high",
-      width = 18,
-      height = 82,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed.png",
-        priority = "extra-high",
-        width = 72,
-        height = 328,
-        scale = 0.25,
-      },
+      width = 72,
+      height = 328,
+      scale = 0.25,
     },
     hand_open_picture = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open.png",
       priority = "extra-high",
-      width = 18,
-      height = 82,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open.png",
-        priority = "extra-high",
-        width = 72,
-        height = 328,
-        scale = 0.25,
-      },
+      width = 72,
+      height = 328,
+      scale = 0.25,
     },
     hand_base_shadow = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-base-shadow.png",
       priority = "extra-high",
-      width = 8,
-      height = 66,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-base-shadow.png",
-        priority = "extra-high",
-        width = 32,
-        height = 272,
-        scale = 0.25,
-      },
+      width = 32,
+      height = 272,
+      scale = 0.25,
     },
     hand_closed_shadow = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-closed-shadow.png",
       priority = "extra-high",
-      width = 18,
-      height = 82,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-closed-shadow.png",
-        priority = "extra-high",
-        width = 72,
-        height = 328,
-        scale = 0.25,
-      },
+      width = 72,
+      height = 328,
+      scale = 0.25,
     },
     hand_open_shadow = {
       filename = "__Ultracube__/assets/inserter/extremely-long-inserter-hand-open-shadow.png",
       priority = "extra-high",
-      width = 18,
-      height = 82,
-      hr_version = {
-        filename = "__Ultracube__/assets/inserter/hr-extremely-long-inserter-hand-open-shadow.png",
-        priority = "extra-high",
-        width = 72,
-        height = 328,
-        scale = 0.25,
-      },
+      width = 72,
+      height = 328,
+      scale = 0.25,
     },
     platform_picture = {
       sheet = {
         filename = "__Krastorio2Assets__/entities/superior-inserters/superior-inserter-platform.png",
         priority = "extra-high",
-        width = 46,
-        height = 46,
-        shift = { 0.09375, 0 },
-        hr_version = {
-          filename = "__Krastorio2Assets__/entities/superior-inserters/hr-superior-inserter-platform.png",
-          priority = "extra-high",
-          width = 105,
-          height = 79,
-          shift = util.by_pixel(1.5, 7.5 - 1),
-          scale = 0.5,
-        },
+        width = 105,
+        height = 79,
+        shift = util.by_pixel(1.5, 7.5 - 1),
+        scale = 0.5,
       },
     },
-    circuit_wire_connection_points = circuit_connector_definitions["inserter"].points,
-    circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites,
+    circuit_connector = circuit_connector_definitions["inserter"],
     circuit_wire_max_distance = inserter_circuit_wire_max_distance,
     default_stack_control_input_signal = inserter_default_stack_control_input_signal,
   },

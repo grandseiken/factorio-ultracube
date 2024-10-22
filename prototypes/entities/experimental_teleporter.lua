@@ -1,10 +1,11 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-local teleporter_animation = {
-  layers = {
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/hr-planetary-teleporter-shadow.png",
+local teleporter_animations = {
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/planetary-teleporter-shadow.png",
       priority = "low",
       width = 531,
       height = 292,
@@ -15,8 +16,12 @@ local teleporter_animation = {
       animation_speed = 0.5,
       shift = {1.9, 1.2},
     },
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined.png",
+  },
+  {
+    always_draw = true,
+    render_layer = "object-under",
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -25,8 +30,22 @@ local teleporter_animation = {
       line_length = 5,
       animation_speed = 0.5,
     },
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-further-towers.png",
+      priority = "medium",
+      width = 400,
+      height = 475,
+      scale = 0.5,
+      frame_count = 1,
+    },
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -34,8 +53,11 @@ local teleporter_animation = {
       repeat_count = 20,
       animation_speed = 0.5,
     },
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -47,8 +69,11 @@ local teleporter_animation = {
       fadeout = true,
       blend_mode = "additive-soft",
     },
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow.png",
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -59,8 +84,11 @@ local teleporter_animation = {
       draw_as_light = true,
       blend_mode = "additive-soft",
     },
-    {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+  },
+  {
+    always_draw = true,
+    animation = {
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -74,8 +102,9 @@ local teleporter_animation = {
 
 local teleporter_animations_red = {
   {
+    render_layer = "object",
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -87,7 +116,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-under-forward-towers.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -98,7 +127,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       flags = {"mask"},
       priority = "extra-high",
       width = 400,
@@ -113,7 +142,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -128,7 +157,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-base-combined-glow-red.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -142,7 +171,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-forward-towers-light.png",
+      filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -163,7 +192,7 @@ local function collision_entity(collision_box)
     flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
     collision_box = collision_box,
     picture = {filename = "__core__/graphics/empty.png", size = 1},
-    collision_mask = {"player-layer"},
+    collision_mask = {layers = {player = true}},
     squeak_behaviour = false,
   }
 end
@@ -174,7 +203,6 @@ data:extend({
     name = "cube-experimental-teleporter",
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     map_color = {r = 0.337, g = 0.011, b = 0.184},
     max_health = 1000,
@@ -184,8 +212,12 @@ data:extend({
     damaged_trigger_effect = hit_effects.entity(),
     collision_box = {{-2.65, -1.9}, {2.65, 3.2}},
     selection_box = {{-3, -2}, {3, 3.4}},
-    drawing_box = {{-3, -3}, {3, 3}},
-    collision_mask = {"item-layer", "object-layer", "water-tile"},
+    drawing_box_vertical_extension = 1,
+    collision_mask = {
+      layers = {item = true, object = true, water_tile = true},
+    },
+    -- Disable DLC silo behaviour even if space_travel feature flag is enabled.
+    launch_to_space_platforms = false,
 
     energy_usage = "100MW",  -- Crafting.
     active_energy_usage = "100MW",  -- ??? not sure when this applies.
@@ -197,22 +229,25 @@ data:extend({
       usage_priority = "secondary-input",
     },
     rocket_parts_required = 4,
-    rocket_result_inventory_size = 1,
+    to_be_inserted_to_rocket_inventory_size = 1,
     crafting_speed = 1,
     crafting_categories = {"cube-experimental-teleporter"},
     fixed_recipe = "cube-teleporter-activation",
     show_recipe_icon = false,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 2.35},
-      module_info_icon_scale = 0.625,
-      module_info_separation_multiplier = 4,
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.rocket_silo_modules,
+      shift = {0, 2.35},
+      scale = 0.625,
+      separation_multiplier = 4,
+    }},
     allowed_effects = module_effects.all,
 
-    animation = teleporter_animation,
+    graphics_set = {working_visualisations = teleporter_animations},
     launch_wait_time = 8,
     rocket_rising_delay = 1,
+    rocket_quick_relaunch_start_offset = 0,
+    cargo_station_parameters = {hatch_definitions = {{}}},
 
     arm_01_back_animation = util.empty_sprite(),
     arm_02_right_animation = util.empty_sprite(),
@@ -266,15 +301,17 @@ data:extend({
     localised_name = {"entity-name.cube-experimental-teleporter"},
     localised_description = {"entity-description.cube-experimental-teleporter"},
     icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
-    icon_size = 64, icon_mipmaps = 4,
-    flags = {"hidden", "not-repairable", "not-blueprintable", "not-deconstructable"},
+    icon_size = 64,
+    flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
+    show_recipe_icon_on_map = false,
     max_health = 1000,
-    collision_mask = {},
+    collision_mask = {layers = {}},
     selection_box = {{-3, -2}, {3, 3.4}},
     allow_copy_paste = false,
     selectable_in_game = false,
     show_recipe_icon = false,
     match_animation_speed_to_activity = false,
+    hidden = true,
 
     picture = util.empty_sprite(),
     crafting_categories = {"cube-uncraftable"},
@@ -282,18 +319,18 @@ data:extend({
     fixed_recipe = "cube-uncraftable-dummy-recipe",
     energy_usage = "1W",
     energy_source = {type = "void"},
-    working_visualisations = teleporter_animations_red,
+    graphics_set = {working_visualisations = teleporter_animations_red},
   },
   {
     type = "simple-entity",
     name = "cube-experimental-teleporter-overlay",
     flags = {"not-on-map", "not-selectable-in-game", "placeable-off-grid"},
-    collision_mask = {},
+    collision_mask = {layers = {}},
     render_layer = "higher-object-above",
     picture = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/hr-teleporter-forward-towers.png",
+          filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-forward-towers.png",
           width = 400,
           height = 475,
           scale = 0.5,
@@ -306,14 +343,15 @@ data:extend({
     type = "rocket-silo-rocket",
     name = "cube-experimental-teleporter-rocket",
     flags = {"not-on-map"},
-    collision_mask = {"not-colliding-with-itself"},
+    collision_mask = {not_colliding_with_itself = true, layers = {}},
     selection_box = {{0, 0}, {0, 0}},
     inventory_size = 1,
-    rising_speed = 1,
-    engine_starting_speed = 1,
-    flying_speed = 1,
-    flying_acceleration = 1,
+    rising_speed = 1000,
+    engine_starting_speed = 1000,
+    flying_speed = 1000,
+    flying_acceleration = 1000,
 
+    cargo_pod_entity = "cube-experimental-teleporter-pod",
     rocket_sprite = util.empty_sprite(),
     rocket_shadow_sprite = util.empty_sprite(),
     rocket_glare_overlay_sprite = util.empty_sprite(),
@@ -328,8 +366,8 @@ data:extend({
     rocket_flame_right_animation = util.empty_sprite(),
     rocket_flame_right_rotation = 0.05,
 
-    rocket_rise_offset = {0, 0},
-    rocket_launch_offset = {0, 0},
+    rocket_rise_offset = {0, -500},
+    rocket_launch_offset = {0, -1000},
     rocket_render_layer_switch_distance = 0,
     full_render_layer_switch_distance = 1,
     effects_fade_in_start_distance = 0,
@@ -337,5 +375,14 @@ data:extend({
     shadow_fade_out_start_ratio = 0.25,
     shadow_fade_out_end_ratio = 0.75,
     rocket_visible_distance_from_center = 0,
+  },
+  {
+    type = "cargo-pod",
+    name = "cube-experimental-teleporter-pod",
+    flags = {"not-on-map"},
+    collision_mask = {not_colliding_with_itself = true, layers = {}},
+    selection_box = {{0, 0}, {0, 0}},
+    inventory_size = 1,
+    spawned_container = "iron-chest",
   },
 })

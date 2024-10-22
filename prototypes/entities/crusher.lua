@@ -5,7 +5,6 @@ data:extend({
     type = "furnace",
     name = "cube-crusher",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/crusher.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-crusher"},
@@ -14,18 +13,11 @@ data:extend({
     dying_explosion = "big-explosion",
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          frame_count = 30,
-          line_length = 6,
-          animation_speed = 0.75,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/crusher/hr-crusher.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -34,17 +26,8 @@ data:extend({
             animation_speed = 0.75,
             scale = 0.5,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          frame_count = 30,
-          line_length = 6,
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/crusher/hr-crusher-shadow.png",
+          {
+            filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -57,7 +40,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-crusher"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
@@ -73,8 +55,8 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
-      drain = "10KW",
+      emissions_per_minute = {},
+      drain = "10kW",
     },
 
     water_reflection = {
@@ -91,12 +73,14 @@ data:extend({
       orientation_to_variation = false,
     },
 
-    energy_usage = "250KW",
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
-    },
+    energy_usage = "250kW",
+    module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
+    icons_positioning = {{
+      inventory_index = defines.inventory.furnace_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.all,
     --open_sound = {filename = "__base__/sound/machine-open.ogg", volume = 0.75},
     --close_sound = {filename = "__base__/sound/machine-close.ogg", volume = 0.75}

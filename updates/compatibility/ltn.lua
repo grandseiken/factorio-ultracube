@@ -17,8 +17,8 @@ if mods["LogisticTrainNetwork"] then
     recipe = data.raw.recipe["ltn-combinator"]
     recipe.category = "cube-fabricator-handcraft"
     recipe.ingredients = {
-      {"constant-combinator", 1},
-      {"cube-electronic-circuit", 1},
+      {type = "item", name = "constant-combinator", amount = 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
     }
     data.raw.item["ltn-combinator"].order = "cube-" .. data.raw.item["ltn-combinator"].order
     data.raw.item["ltn-combinator"].subgroup = "cube-combinator-extra"

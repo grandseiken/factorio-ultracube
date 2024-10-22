@@ -77,7 +77,7 @@ function cube_management.recipes()
   end
 
   cube_recipes_cache = {}
-  for name, recipe in pairs(game.recipe_prototypes) do
+  for name, recipe in pairs(prototypes.recipe) do
     local data = {recipe = recipe, total_weight = 0, ingredients = {}}
     local is_cube_recipe = false
     for k, _ in pairs(cube_info) do
@@ -118,11 +118,11 @@ function cube_management.module_machines()
   end
 
   module_machines_cache = {}
-  local prototypes = game.get_filtered_entity_prototypes {{
+  local entity_prototypes = prototypes.get_entity_filtered {{
     filter = "type",
     type = module_machine_types,
   }}
-  for name, prototype in pairs(prototypes) do
+  for name, prototype in pairs(entity_prototypes) do
     if prototype.module_inventory_size and prototype.module_inventory_size > 0 then
       module_machines_cache[name] = true
     elseif prototype.allowed_effects then
@@ -143,6 +143,7 @@ function cube_management.player_data(player)
   end
   local recipes = cube_management.recipes()
   if (player.controller_type == defines.controllers.character or
+      player.controller_type == defines.controllers.remote or
       player.controller_type == defines.controllers.god) and player.crafting_queue then
     for _, craft in ipairs(player.crafting_queue) do
       local recipe = recipes[craft.recipe]
@@ -157,7 +158,10 @@ function cube_management.player_data(player)
   ingredients[cubes.ultradense] = math.min(ingredients[cubes.ultradense], 1)
   ingredients[cubes.dormant] = math.min(ingredients[cubes.dormant], 1)
   for _, item in pairs(cubes) do
-    local count = player.get_item_count(item)
+    local count = 0
+    if player.character then
+      count = player.character.get_item_count(item)
+    end
     local trash = player.get_inventory(defines.inventory.character_trash)
     if trash then
       count = count + trash.get_item_count(item)
@@ -170,21 +174,22 @@ end
 
 function cube_management.update_player(player_index)
   local player = game.get_player(player_index)
-  if player.controller_type == defines.controllers.character then
+  if player.controller_type == defines.controllers.character or
+     player.controller_type == defines.controllers.remote then
     player.character_running_speed_modifier = -1.0 + 0.5^cube_management.player_data(player).total_weight
   end
 end
 
 function cube_management.get_entity_burning_fuel(entity)
   if entity.burner and entity.burner.currently_burning then
-    return entity.burner.currently_burning.name
+    return entity.burner.currently_burning.name.name
   end
   return nil
 end
 
 function cube_management.is_entity_burning_fuel(entity, fuel_item)
   return entity.burner and entity.burner.currently_burning and
-         entity.burner.currently_burning.name == fuel_item
+         entity.burner.currently_burning.name.name == fuel_item
 end
 
 function cube_management.drop_before_leaving(player_index)
@@ -209,7 +214,11 @@ function cube_management.drop_before_leaving(player_index)
     for item, _ in pairs(cube_drop) do
       local removed = player.remove_item(item)
       if removed > 0 then
-        local spill = player.surface.spill_item_stack(player.position, {name = item, count = removed}, false, nil, false)
+        local spill = player.surface.spill_item_stack {
+          position = player.position,
+          stack = {name = item, count = removed},
+          allow_belts = false,
+        }
         for _, e in ipairs(spill) do
           results[#results + 1] = e
         end

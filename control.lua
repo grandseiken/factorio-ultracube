@@ -111,6 +111,17 @@ local function on_init()
     remote.call("freeplay", "set_respawn_items", {})
   end
 
+  game.set_win_ending_info {
+    image_path = "__Ultracube__/assets/victory.png",
+    title = {"gui-game-finished.victory"},
+    message = {"cube-msg-victory-0"},
+    bullet_points = {
+      {"cube-msg-victory-1"},
+      {"cube-msg-victory-2"},
+    },
+    final_message = {"cube-msg-victory-3"},
+  }
+
   for _, interface in pairs {"silo_script", "better-victory-screen"} do
     if remote.interfaces[interface] and remote.interfaces[interface]["set_no_victory"] then
       remote.call(interface, "set_no_victory", true)
@@ -130,8 +141,8 @@ end
 
 local function on_player_created(e)
   local player = game.get_player(e.player_index)
-  if not global.cube_given then
-    global.cube_given = true
+  if not storage.cube_given then
+    storage.cube_given = true
     create_initial_cube(player)
   end
 
@@ -216,11 +227,10 @@ script.on_event(
     defines.events.on_robot_built_entity,
   },
   function(e)
-    if not e.created_entity.unit_number then
+    if not e.entity.unit_number then
       return
     end
-    tech_unlock.constructed(e.created_entity)
-    on_entity_added(e.created_entity)
+    on_entity_added(e.entity)
   end)
 
 script.on_event(
@@ -242,7 +252,6 @@ script.on_event(
     if not e.entity.unit_number then
       return
     end
-    tech_unlock.constructed(e.entity)
     on_entity_added(e.entity)
     cube_search.hint_entity(e.entity)
   end)
@@ -308,7 +317,7 @@ script.on_event(
 script.on_event(
   defines.events.on_rocket_launch_ordered,
   function(e)
-    cube_search.hint_entity(e.rocket)
+    cube_search.hint_entity(e.rocket.cargo_pod)
   end)
 
 script.on_event(
@@ -344,6 +353,9 @@ end)
 script.on_event("cube-open-cubecam-fullscreen", function(e)
   cubecam.toggle_open(game.get_player(e.player_index), true)
 end)
+script.on_event(defines.events.on_lua_shortcut, function(e)
+  cubecam.toggle_open(game.get_player(e.player_index), false)
+end)
 script.on_event(defines.events.on_gui_click, function(e)
   cubecam.on_click(game.get_player(e.player_index), e.element)
 end)
@@ -364,7 +376,7 @@ local function remote_hint_entity(entity)
 end
 
 local function remote_cube_info()
-  return util.table.deepcopy(global.cube_remote)
+  return util.table.deepcopy(storage.cube_remote)
 end
 
 local function remote_cube_item_prototypes()
@@ -379,7 +391,7 @@ end
 local function better_victory_screen_statistics()
   local force = game.forces["player"]
   local stats = {}
-  local victory_statistics = global.victory_statistics
+  local victory_statistics = storage.victory_statistics
 
   local distance_travelled_by_cube = victory_statistics.distance_travelled_by_cube
   local cube_utilisation = victory_statistics.cube_working_samples /

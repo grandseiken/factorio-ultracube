@@ -2,8 +2,12 @@ local function add_cluster_offsets(source, count, distance, angle_offset, t)
   for i = 0, count - 1 do
     local a = 2 * math.pi * (i + angle_offset) / count
     local tt = table.deepcopy(t)
-    tt.offset_deviation = {{distance * math.sin(a) * 0.75, distance * math.cos(a) * 0.75},
-                           {distance * math.sin(a), distance * math.cos(a)}}
+    local x0 = distance * math.sin(a) * 0.75
+    local x1 = distance * math.sin(a)
+    local y0 = distance * math.cos(a) * 0.75
+    local y1 = distance * math.cos(a)
+    tt.offset_deviation = {{math.min(x0, x1), math.min(y0, y1)},
+                           {math.max(x0, x1), math.max(y0, y1)}}
     source[#source + 1] = tt
   end
   return source
@@ -26,25 +30,15 @@ local red_light = {r=1.0, g=0.6, b=0.7}
 local function blood_particle_pictures(tint, shift)
   return {
     sheet = {
-      filename = "__base__/graphics/particle/blood-particle/blood-particle.png",
+      filename = "__Ultracube__/assets/effects/blood-particle.png",
       line_length = 12,
-      width = 10,
-      height = 8,
+      width = 16,
+      height = 16,
       frame_count = 12,
       variation_count = 7,
       tint = tint,
-      shift = util.add_shift(util.by_pixel(2,-1), shift),
-      hr_version = {
-        filename = "__base__/graphics/particle/blood-particle/hr-blood-particle.png",
-        line_length = 12,
-        width = 16,
-        height = 16,
-        frame_count = 12,
-        variation_count = 7,
-        tint = tint,
-        scale = 0.5,
-        shift = util.add_shift(util.by_pixel(1.5,-1), shift)
-      }
+      scale = 0.5,
+      shift = util.add_shift(util.by_pixel(1.5, -1), shift)
     }
   }
 end
@@ -59,25 +53,15 @@ local function make_spark_particle(name, filename, hr_filename)
     render_layer_when_on_ground = "corpse",
     pictures = {
       sheet = {
-        filename = filename,
+        filename = hr_filename,
         draw_as_glow = true,
         line_length = 12,
-        width = 4,
-        height = 4,
+        width = 6,
+        height = 6,
         frame_count = 12,
         variation_count = 3,
-        shift = util.by_pixel(0,0),
-        hr_version = {
-          filename = hr_filename,
-          draw_as_glow = true,
-          line_length = 12,
-          width = 6,
-          height = 6,
-          frame_count = 12,
-          variation_count = 3,
-          scale = 0.5,
-          shift = util.by_pixel(0,0)
-        }
+        scale = 0.5,
+        shift = util.by_pixel(0, 0)
       }
     },
     movement_modifier_when_on_ground = 0,
@@ -90,21 +74,21 @@ local function make_spark_explosion(name, particle, color, height)
     name = name,
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     subgroup = "explosions",
     light = {intensity = 0.25, size = 4, color = color},
     animations = make_empty_animation(),
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
       },
       audible_distance_modifier = 1,
       variations = {
-        {filename = "__Ultracube__/assets/sounds/zap-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Ultracube__/assets/sounds/zap-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Ultracube__/assets/sounds/zap-3.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+        {filename = "__Ultracube__/assets/sounds/zap-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+        {filename = "__Ultracube__/assets/sounds/zap-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+        {filename = "__Ultracube__/assets/sounds/zap-3.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
       },
     },
     created_effect = {
@@ -123,7 +107,7 @@ local function make_spark_explosion(name, particle, color, height)
             tail_width = 4,
             tail_length = 10,
             frame_speed = 1,
-            frame_speed_variation = 0.25,
+            frame_speed_deviation = 0.25,
             speed_from_center = 0.0125,
             speed_from_center_deviation = 0.005,
             offset_deviation = {{-0.125, -0.125}, {0.125, 0.125}},
@@ -140,22 +124,22 @@ local function make_puff_explosion(name, height)
     name = name,
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     subgroup = "explosions",
     light = {intensity = 0.25, size = 2, color = blue_light},
     animations = make_empty_animation(12),
     sound = {
-      preload = true,
       aggregation = {
         max_count = 16,
         remove = true,
       },
       audible_distance_modifier = 1,
       variations = {
-        {filename = "__Ultracube__/assets/sounds/celesta-08.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-13.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-15.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-20.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-08.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-13.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-15.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-20.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
       },
     },
     created_effect = {
@@ -198,58 +182,29 @@ local function make_cube_shockwave_1(name, base_filename)
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
-      width = 66,
-      height = 68,
+      width = 132,
+      height = 136,
       frame_count = 32,
       animation_speed = 0.5,
       variation_count = 1,
-      scale = 3 / 8,
-      shift = util.by_pixel(-1, 0),
+      shift = util.by_pixel(-0.5, 0),
+      scale = 1.5 / 8,
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 8,
-        width = 132,
-        height = 136,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        shift = util.by_pixel(-0.5, 0),
-        scale = 1.5 / 8,
-        tint = {0.5, 0.5, 0.5, 1.0},
-        blend_mode = "additive-soft",
-      },
     },
     shadows = {
       filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
-      width = 66,
-      height = 68,
+      width = 132,
+      height = 136,
       frame_count = 32,
       animation_speed = 0.5,
       variation_count = 1,
-      scale = 3 / 8,
-      shift = util.by_pixel(-1, 0),
+      shift = util.by_pixel(-0.5, 0),
+      scale = 1.5 / 8,
       tint = {0, 0, 0, 0.5},
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 8,
-        width = 132,
-        height = 136,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        shift = util.by_pixel(-0.5, 0),
-        scale = 1.5 / 8,
-        tint = {0, 0, 0, 0.5},
-      },
     },
   }
 end
@@ -267,58 +222,29 @@ local function make_cube_shockwave_2(name, base_filename)
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
-      width = 56,
-      height = 64,
+      width = 110,
+      height = 128,
       frame_count = 32,
       animation_speed = 0.5,
       variation_count = 1,
-      scale = 3 / 8,
-      shift = util.by_pixel(-1, 0),
+      shift = util.by_pixel(0, 3),
+      scale = 1.5 / 8,
       tint = {0.5, 0.5, 0.5, 1.0},
       blend_mode = "additive-soft",
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 8,
-        width = 110,
-        height = 128,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        shift = util.by_pixel(0, 3),
-        scale = 1.5 / 8,
-        tint = {0.5, 0.5, 0.5, 1.0},
-        blend_mode = "additive-soft",
-      },
     },
     shadows = {
       filename = "__Ultracube__/assets/effects/" .. base_filename .. ".png",
       priority = "high",
       flags = {"smoke"},
       line_length = 8,
-      width = 56,
-      height = 64,
+      width = 110,
+      height = 128,
       frame_count = 32,
       animation_speed = 0.5,
       variation_count = 1,
-      scale = 3 / 8,
-      shift = util.by_pixel(-1, 0),
+      shift = util.by_pixel(0, 3),
+      scale = 1.5 / 8,
       tint = {0, 0, 0, 0.5},
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/hr-" .. base_filename .. ".png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 8,
-        width = 110,
-        height = 128,
-        frame_count = 32,
-        animation_speed = 0.5,
-        variation_count = 1,
-        shift = util.by_pixel(0, 3),
-        scale = 1.5 / 8,
-        tint = {0, 0, 0, 0.5},
-      },
     },
   }
 end
@@ -330,7 +256,8 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
     localised_name = {"entity-name.big-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     subgroup = "explosions",
     render_layer = "higher-object-above",
     animations = {
@@ -338,73 +265,37 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
         filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-1.png",
         draw_as_glow = true,
         priority = "high",
-        width = 62,
-        height = 112,
+        width = 124,
+        height = 224,
         frame_count = 30,
         line_length = 6,
         shift = util.by_pixel(-1, -20),
         animation_speed = 0.5,
-        hr_version =
-        {
-          filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-1.png",
-          draw_as_glow = true,
-          priority = "high",
-          width = 124,
-          height = 224,
-          frame_count = 30,
-          line_length = 6,
-          shift = util.by_pixel(-1, -20),
-          animation_speed = 0.5,
-          scale = 0.5
-        }
+        scale = 0.5,
       },
       {
         filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-2.png",
         draw_as_glow = true,
         priority = "high",
-        width = 78,
-        height = 106,
+        width = 154,
+        height = 212,
         frame_count = 41,
         line_length = 6,
         shift = util.by_pixel(-13, -18),
         animation_speed = 0.5,
-        hr_version =
-        {
-          filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-2.png",
-          draw_as_glow = true,
-          priority = "high",
-          width = 154,
-          height = 212,
-          frame_count = 41,
-          line_length = 6,
-          shift = util.by_pixel(-13, -18),
-          animation_speed = 0.5,
-          scale = 0.5
-        }
+        scale = 0.5,
       },
       {
         filename = "__Ultracube__/assets/effects/" .. base_explosion .. "-3.png",
         draw_as_glow = true,
         priority = "high",
-        width = 64,
-        height = 118,
+        width = 126,
+        height = 236,
         frame_count = 39,
         line_length = 6,
-        shift = util.by_pixel(1, -19),
+        shift = util.by_pixel(0.5, -19),
         animation_speed = 0.5,
-        hr_version =
-        {
-          filename = "__Ultracube__/assets/effects/hr-" .. base_explosion .. "-3.png",
-          draw_as_glow = true,
-          priority = "high",
-          width = 126,
-          height = 236,
-          frame_count = 39,
-          line_length = 6,
-          shift = util.by_pixel(0.5, -19),
-          animation_speed = 0.5,
-          scale = 0.5
-        }
+        scale = 0.5,
       }
     },
     light = {intensity = 1, size = 16, color = color},
@@ -418,16 +309,15 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/nuclear-explosion-1.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
-                    {filename = "__base__/sound/fight/nuclear-explosion-2.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
-                    {filename = "__base__/sound/fight/nuclear-explosion-3.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
+                    {filename = "__base__/sound/fight/nuclear-explosion-1.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
+                    {filename = "__base__/sound/fight/nuclear-explosion-2.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
+                    {filename = "__base__/sound/fight/nuclear-explosion-3.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
                   },
                 },
               },
@@ -468,10 +358,10 @@ end
 data:extend({
   make_spark_particle("cube-spark-particle",
                       "__base__/graphics/particle/pole-sparks/pole-sparks.png",
-                      "__base__/graphics/particle/pole-sparks/hr-pole-sparks.png"),
+                      "__base__/graphics/particle/pole-sparks/pole-sparks.png"),
   make_spark_particle("cube-fuel-spark-particle",
                       "__Ultracube__/assets/effects/fuel-sparks.png",
-                      "__Ultracube__/assets/effects/hr-fuel-sparks.png"),
+                      "__Ultracube__/assets/effects/fuel-sparks.png"),
   make_spark_explosion("cube-periodic-ultradense-high-spark",
                        "cube-spark-particle", blue_light, 0.75),
   make_spark_explosion("cube-periodic-ultradense-low-spark",
@@ -511,20 +401,6 @@ data:extend({
       scale = 1.0 / 8,
       tint = {1.0, 1.0, 1.0, 0.5},
       blend_mode = "additive-soft",
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/phantom-puff.png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 4,
-        width = 128,
-        height = 128,
-        frame_count = 16,
-        animation_speed = 0.5,
-        variation_count = 1,
-        scale = 1.0 / 8,
-        tint = {1.0, 1.0, 1.0, 0.5},
-        blend_mode = "additive-soft",
-      },
     },
     shadows = {
       filename = "__Ultracube__/assets/effects/phantom-puff.png",
@@ -538,19 +414,6 @@ data:extend({
       variation_count = 1,
       scale = 1.0 / 8,
       tint = {0, 0, 0, 0.5},
-      hr_version = {
-        filename = "__Ultracube__/assets/effects/phantom-puff.png",
-        priority = "high",
-        flags = {"smoke"},
-        line_length = 4,
-        width = 128,
-        height = 128,
-        frame_count = 16,
-        animation_speed = 0.5,
-        variation_count = 1,
-        scale = 1.0 / 8,
-        tint = {0, 0, 0, 0.5},
-      },
     },
   },
 
@@ -560,7 +423,8 @@ data:extend({
     localised_name = {"entity-name.medium-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     subgroup = "explosions",
     render_layer = "higher-object-above",
     animations = make_empty_animation(),
@@ -574,35 +438,33 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/robot-die-vox-01.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-02.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-03.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-04.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-05.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-06.ogg", volume = 0.25},
+                    {filename = "__base__/sound/fight/robot-die-vox-1.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-2.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-3.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-4.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-5.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-6.ogg", volume = 0.25, preload = true},
                   },
                 },
               },
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/robot-die-impact-01.ogg", volume = 0.5},
-                    {filename = "__base__/sound/fight/robot-die-impact-02.ogg", volume = 0.5},
-                    {filename = "__base__/sound/fight/robot-die-impact-03.ogg", volume = 0.5},
+                    {filename = "__base__/sound/fight/robot-die-impact-1.ogg", volume = 0.5, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-impact-2.ogg", volume = 0.5, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-impact-3.ogg", volume = 0.5, preload = true},
                   },
                 },
               },
@@ -645,7 +507,8 @@ data:extend({
     localised_name = {"entity-name.medium-explosion"},
     icon = "__base__/graphics/item-group/effects.png",
     icon_size = 64,
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     light = {intensity = 0.5, size = 4, color = blue_light},
     subgroup = "explosions",
     render_layer = "higher-object-above",
@@ -660,31 +523,29 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
                   },
                   audible_distance_modifier = 0.75,
                   variations = {
-                    {filename = "__base__/sound/fight/pulse.ogg", volume = 1 / 7, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/fight/pulse.ogg", volume = 1 / 7, min_speed = 0.875, max_speed = 1.125, preload = true},
                   },
                 },
               },
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
                   },
                 },
               },
@@ -755,7 +616,8 @@ data:extend({
   {
     type = "projectile",
     name = "cube-periodic-ultradense-projectile",
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     acceleration = 0,
     action = {
       type = "direct",
@@ -774,7 +636,8 @@ data:extend({
   {
     type = "projectile",
     name = "cube-periodic-combustion-projectile",
-    flags = {"placeable-off-grid", "not-on-map", "hidden"},
+    flags = {"placeable-off-grid", "not-on-map"},
+    hidden = true,
     acceleration = 0,
     action = {
       type = "direct",
@@ -808,16 +671,17 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 1.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 1.0,
+          preload = true,
         },
       },
     },
@@ -859,16 +723,17 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 2.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 2.0,
+          preload = true,
         },
       },
     },
@@ -897,15 +762,15 @@ data:extend({
     name = "cube-matter-explosion-s",
     flags = {"not-on-map"},
     animations = {
-      width = 316,
-      height = 360,
+      width = 628,
+      height = 720,
       frame_count = 100,
       priority = "very-low",
       flags = {"linear-magnification"},
-      shift = util.by_pixel(1, -123), --shift = util.by_pixel(1, -63), shifted by 60 due to scaling and centering
+      shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
       draw_as_glow = true,
       animation_speed = 0.5 * 0.75,
-      scale = 2,
+      scale = 1,
       dice_y = 5,
       stripes = {
         {
@@ -929,43 +794,8 @@ data:extend({
           height_in_frames = 5,
         },
       },
-      hr_version = {
-        width = 628,
-        height = 720,
-        frame_count = 100,
-        priority = "very-low",
-        flags = {"linear-magnification"},
-        shift = util.by_pixel(0.5, -122.5), --shift = util.by_pixel(0.5, -62.5), shifted by 60 due to scaling and centering
-        draw_as_glow = true,
-        animation_speed = 0.5 * 0.75,
-        scale = 1,
-        dice_y = 5,
-        stripes = {
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-1.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-2.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-3.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-4.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-        },
-      },
     },
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
@@ -974,10 +804,12 @@ data:extend({
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 1.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 1.0,
+          preload = true,
         },
       },
     },
@@ -1006,15 +838,15 @@ data:extend({
     name = "cube-experimental-teleporter-explosion",
     flags = {"not-on-map"},
     animations = {
-      width = 316,
-      height = 360,
+      width = 628,
+      height = 720,
       frame_count = 100,
       priority = "very-low",
-      shift = util.by_pixel(0.5, -61.5),
+      shift = util.by_pixel(0.25, -61.25),
       tint = {1, 1, 1, 0.125},
       draw_as_glow = true,
       animation_speed = 0.5 * 0.75,
-      scale = 1,
+      scale = 0.5,
       dice_y = 5,
       stripes = {
         {
@@ -1038,43 +870,8 @@ data:extend({
           height_in_frames = 5,
         },
       },
-      hr_version = {
-        width = 628,
-        height = 720,
-        frame_count = 100,
-        priority = "very-low",
-        shift = util.by_pixel(0.25, -61.25),
-        tint = {1, 1, 1, 0.125},
-        draw_as_glow = true,
-        animation_speed = 0.5 * 0.75,
-        scale = 0.5,
-        dice_y = 5,
-        stripes = {
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-1.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-2.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-3.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/explosions/hr-matter-explosion-4.png",
-            width_in_frames = 5,
-            height_in_frames = 5,
-          },
-        },
-      },
     },
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
@@ -1083,10 +880,12 @@ data:extend({
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 0.5,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 0.5,
+          preload = true,
         },
       },
     },

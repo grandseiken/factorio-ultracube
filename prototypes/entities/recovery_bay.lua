@@ -8,8 +8,8 @@ data:extend({
     name = "cube-recovery-bay",
     icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 1, result = "cube-recovery-bay"},
     max_health = 200,
     damaged_trigger_effect = hit_effects.entity(),
@@ -17,19 +17,11 @@ data:extend({
     corpse = "medium-remnants",
     collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
     selection_box = {{-0.9, -0.9}, {0.9, 0.9}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
-          priority = "high",
-          width = 85,
-          height = 85,
-          frame_count = 80,
-          line_length = 10,
-          animation_speed = 0.4,
-          scale = 0.8,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/hr-stabilizer-charging-station.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station.png",
             priority = "high",
             width = 170,
             height = 170,
@@ -38,20 +30,8 @@ data:extend({
             animation_speed = 0.4,
             scale = 0.4,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
-          priority = "high",
-          width = 85,
-          height = 72,
-          frame_count = 80,
-          line_length = 8,
-          animation_speed = 0.4,
-          shift = {0.23, 0.262},
-          draw_as_shadow = true,
-          scale = 0.9,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/hr-stabilizer-charging-station-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-sh.png",
             priority = "high",
             width = 170,
             height = 144,
@@ -64,21 +44,10 @@ data:extend({
           },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
-          priority = "high",
-          width = 85,
-          height = 85,
-          frame_count = 80,
-          line_length = 10,
-          animation_speed = 0.4,
-          scale = 0.8,
-          draw_as_light = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/hr-stabilizer-charging-station-light.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/stabilizer-charging-station/stabilizer-charging-station-light.png",
             priority = "high",
             width = 170,
             height = 170,
@@ -106,8 +75,8 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
-      drain = "25KW",
+      emissions_per_minute = {},
+      drain = "25kW",
     },
 
     water_reflection = {
@@ -126,12 +95,13 @@ data:extend({
 
     result_inventory_size = 1,
     source_inventory_size = 1,
-    module_specification = {
-      module_slots = 4,
-      module_info_icon_scale = 0.35,
-      module_info_max_icons_per_row = 4,
-      module_info_icon_shift = {0, 0.6},
-    },
+    module_slots = 4,
+    icons_positioning = {{
+      inventory_index = defines.inventory.furnace_modules,
+      shift = {0, 0.6},
+      scale = 0.35,
+      max_icons_per_row = 4,
+    }},
     allowed_effects = module_effects.speed_efficiency,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,

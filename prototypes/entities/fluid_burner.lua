@@ -5,10 +5,10 @@ data:extend({
   {
     type = "furnace",
     name = "cube-fluid-burner",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-burner.png",
+    icon = "__Krastorio2Assets__/icons/entities/flare-stack.png",
     icon_size = 64,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    show_recipe_icon_on_map = false,
     minable = {mining_time = 0.5, result = "cube-fluid-burner"},
     max_health = 250,
     corpse = "medium-remnants",
@@ -18,42 +18,93 @@ data:extend({
         production_type = "input",
         pipe_covers = pipecoverspictures(),
         pipe_picture = pipe_path,
-        base_area = 5,
-        base_level = -1,
-        pipe_connections = {{type = "input", position = {0.5, 1.5}}},
+        volume = 500,
+        pipe_connections = {{flow_direction = "input", direction = defines.direction.south, position = {0.5, 0.5}}},
       },
-      off_when_no_fluid_recipe = false,
     },
+    fluid_boxes_off_when_no_fluid_recipe = false,
     collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
     selection_box = {{-1, -1}, {1, 1}},
-    animation = {
-      north = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-n.png",
-            width = 75,
-            height = 150,
-            frame_count = 1,
-            shift = {0, -1},
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-n.png",
+    graphics_set = {
+      animation = {
+        north = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-n.png",
               width = 150,
               height = 300,
               scale = 0.5,
               frame_count = 1,
               shift = {0, -1},
             },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
           },
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-sh.png",
-            priority = "high",
-            width = 129,
-            height = 47,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-sh.png",
+        },
+        east = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-e.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        south = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-s.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
+              priority = "high",
+              width = 258,
+              height = 94,
+              shift = {1.1, 0.25},
+              frame_count = 1,
+              draw_as_shadow = true,
+              scale = 0.5,
+            },
+          },
+        },
+        west = {
+          layers = {
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-w.png",
+              width = 150,
+              height = 300,
+              scale = 0.5,
+              frame_count = 1,
+              shift = {0, -1},
+            },
+            {
+              filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-sh.png",
               priority = "high",
               width = 258,
               height = 94,
@@ -65,144 +116,28 @@ data:extend({
           },
         },
       },
-      east = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-e.png",
-            width = 75,
-            height = 150,
-            frame_count = 1,
-            shift = {0, -1},
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-e.png",
-              width = 150,
-              height = 300,
-              scale = 0.5,
-              frame_count = 1,
-              shift = {0, -1},
-            },
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-sh.png",
-            priority = "high",
-            width = 129,
-            height = 47,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-sh.png",
-              priority = "high",
-              width = 258,
-              height = 94,
-              shift = {1.1, 0.25},
-              frame_count = 1,
-              draw_as_shadow = true,
-              scale = 0.5,
-            },
+      working_visualisations = {
+        {
+          apply_recipe_tint = "quaternary",
+          fadeout = true,
+          animation = {
+            filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-fire.png",
+            line_length = 10,
+            width = 40,
+            height = 81,
+            frame_count = 60,
+            animation_speed = 0.75,
+            scale = 0.50,
+            shift = {0, -3.25},
           },
         },
-      },
-      south = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-s.png",
-            width = 75,
-            height = 150,
-            frame_count = 1,
-            --line_length = 6,
-            shift = {0, -1},
-            --animation_speed = 0.5
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-s.png",
-              width = 150,
-              height = 300,
-              scale = 0.5,
-              frame_count = 1,
-              shift = {0, -1},
-            },
+        {
+          light = {
+            intensity = 0.75,
+            size = 25,
+            shift = {0, 0},
+            color = {r = 1, g = 0.95, b = 0.75},
           },
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-sh.png",
-            priority = "high",
-            width = 129,
-            height = 47,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-sh.png",
-              priority = "high",
-              width = 258,
-              height = 94,
-              shift = {1.1, 0.25},
-              frame_count = 1,
-              draw_as_shadow = true,
-              scale = 0.5,
-            },
-          },
-        },
-      },
-      west = {
-        layers = {
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-w.png",
-            width = 75,
-            height = 150,
-            frame_count = 1,
-            shift = {0, -1},
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-w.png",
-              width = 150,
-              height = 300,
-              scale = 0.5,
-              frame_count = 1,
-              shift = {0, -1},
-            },
-          },
-          {
-            filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-sh.png",
-            priority = "high",
-            width = 129,
-            height = 47,
-            shift = {1.1, 0.25},
-            frame_count = 1,
-            draw_as_shadow = true,
-            hr_version = {
-              filename = "__Krastorio2Assets__/entities/fluid-burner/hr-fluid-burner-sh.png",
-              priority = "high",
-              width = 258,
-              height = 94,
-              shift = {1.1, 0.25},
-              frame_count = 1,
-              draw_as_shadow = true,
-              scale = 0.5,
-            },
-          },
-        },
-      },
-    },
-    working_visualisations = {
-      {
-        apply_recipe_tint = "quaternary",
-        fadeout = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-fire.png",
-          line_length = 10,
-          width = 40,
-          height = 81,
-          frame_count = 60,
-          animation_speed = 0.75,
-          scale = 0.50,
-          shift = {0, -3.25},
-        },
-      },
-      {
-        light = {
-          intensity = 0.75,
-          size = 25,
-          shift = {0, 0},
-          color = {r = 1, g = 0.95, b = 0.75},
         },
       },
     },
@@ -210,7 +145,7 @@ data:extend({
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/fluid-burner.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/flare-stack.ogg",
         volume = 1.7,
       },
       idle_sound = {
@@ -223,12 +158,12 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/fluid-burner/fluid-burner-reflection.png",
+        filename = "__Krastorio2Assets__/entities/flare-stack/flare-stack-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 30,
@@ -243,7 +178,7 @@ data:extend({
     energy_usage = "0.1MW",
     source_inventory_size = 1,
     result_inventory_size = 1,
-    module_specification = {module_slots = 0},
+    module_slots = 0,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
   },

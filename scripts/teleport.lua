@@ -22,8 +22,8 @@ end
 
 local function get_send_item(inventory)
   if inventory then
-    for name, count in pairs(inventory.get_contents()) do
-      return {name = name, count = count}
+    for _, stack in pairs(inventory.get_contents()) do
+      return {name = stack.name, count = stack.count}
     end
   end
   return nil
@@ -46,12 +46,12 @@ end
 
 local function insert_or_drop(teleporter, item)
   local inventory = teleporter.get_output_inventory()
-  if inventory.is_empty() then
-    inventory.insert(item)
+  if inventory.is_empty() and inventory.insert(item) then
     cube_search.hint_entity(teleporter)
   else
-    local items_on_ground = teleporter.surface.spill_item_stack(
-      teleporter.position, item, nil, nil, false)
+    local items_on_ground = teleporter.surface.spill_item_stack {
+      position = teleporter.position, stack = item, allow_belts = false,
+    }
     for _, e in pairs(items_on_ground) do
       cube_search.hint_entity(e)
     end
@@ -65,12 +65,12 @@ function teleport.on_teleport(event)
   end
 
   teleport_fx(src_teleporter)
-  if not global.teleport_table then
-    global.teleport_table = {}
+  if not storage.teleport_table then
+    storage.teleport_table = {}
   end
-  local entry = global.teleport_table[src_teleporter.unit_number]
+  local entry = storage.teleport_table[src_teleporter.unit_number]
   if entry then
-    global.teleport_table[src_teleporter.unit_number] = nil
+    storage.teleport_table[src_teleporter.unit_number] = nil
     local position = entry.dst_teleporter.position
     position.y = position.y + 1.25
     for _, player in ipairs(entry.send_players) do
@@ -84,7 +84,7 @@ function teleport.on_teleport(event)
     return
   end
 
-  local send_item = get_send_item(event.rocket.get_inventory(1))
+  local send_item = get_send_item(event.rocket.cargo_pod.get_inventory(1))
   local send_players = get_send_players(src_teleporter)
   if not send_item and #send_players == 0 then
     return
@@ -117,7 +117,7 @@ function teleport.on_teleport(event)
       insert_or_drop(src_teleporter, swap_item)
       swap_inventory.clear()
     end
-    global.teleport_table[dst_teleporter.unit_number] = {
+    storage.teleport_table[dst_teleporter.unit_number] = {
       src_teleporter = src_teleporter,
       dst_teleporter = dst_teleporter,
       send_players = send_players,
@@ -129,6 +129,8 @@ function teleport.on_teleport(event)
   if send_item then
     insert_or_drop(dst_teleporter or src_teleporter, send_item)
   end
+  event.rocket.cargo_pod.destroy()
+  event.rocket.destroy()
 end
 
 return teleport

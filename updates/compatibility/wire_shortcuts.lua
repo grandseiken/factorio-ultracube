@@ -16,16 +16,16 @@ if mods["WireShortcuts"] then
   local recipe = data.raw.recipe["fake-red-wire"]
   if recipe then
     recipe.ingredients = {
-      {"cube-electronic-circuit", 1},
-      {"copper-cable", 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
+      {type = "item", name = "copper-cable", amount = 1},
     }
     recipe.category = "cube-fabricator-handcraft"
   end
   recipe = data.raw.recipe["fake-green-wire"]
   if recipe then
     recipe.ingredients = {
-      {"cube-electronic-circuit", 1},
-      {"copper-cable", 1},
+      {type = "item", name = "cube-electronic-circuit", amount = 1},
+      {type = "item", name = "copper-cable", amount = 1},
     }
     recipe.category = "cube-fabricator-handcraft"
   end
@@ -35,8 +35,6 @@ if mods["WireShortcuts"] then
   data.raw.shortcut["WireShortcuts-give-red"].technology_to_unlock = "cube-combinatorics"
 
   local tech_effects = data.raw.technology["cube-combinatorics"].effects
-  remove_unlock_recipe(tech_effects, "cube-red-wire")
-  remove_unlock_recipe(tech_effects, "cube-green-wire")
   if settings.startup["wire-shortcuts-is-retain-wire-crafting"].value then
     table.insert(tech_effects, {type = "unlock-recipe", recipe = "fake-red-wire"})
     table.insert(tech_effects, {type = "unlock-recipe", recipe = "fake-green-wire"})

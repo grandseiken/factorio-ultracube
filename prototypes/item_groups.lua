@@ -6,7 +6,6 @@ data:extend({
     order_in_recipe = "0",
     icon = "__Krastorio2Assets__/technologies/matter-cube.png",
     icon_size = 256,
-    icon_mipmaps = 4,
   },
   {
     type = "item-group",
@@ -14,19 +13,18 @@ data:extend({
     order = "d",
     icons = {
       {
-        icon = "__base__/graphics/technology/power-armor-mk2.png",
+        icon = "__Ultracube__/assets/tools.png",
         icon_size = 256,
-        icon_mipmaps = 4,
-      },
-      {
-        icon = "__base__/graphics/technology/module.png",
-        icon_size = 256,
-        icon_mipmaps = 4,
-        scale = 0.8,
       },
     },
   },
 
+  {
+    type = "item-subgroup",
+    name = "cube-cubes",
+    group = "cube-synthesis",
+    order = "0",
+  },
   {
     type = "item-subgroup",
     name = "cube-synthesis-manual",
@@ -86,12 +84,6 @@ data:extend({
     name = "cube-synthesis-forbidden",
     group = "cube-synthesis",
     order = "z",
-  },
-  {
-    type = "item-subgroup",
-    name = "cube-basic-products",
-    group = "intermediate-products",
-    order = "0",
   },
   {
     type = "item-subgroup",

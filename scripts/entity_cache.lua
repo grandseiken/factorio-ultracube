@@ -12,7 +12,7 @@ local entity_cache = {
 }
 
 function entity_cache.refresh()
-  global.entity_cache = {
+  storage.entity_cache = {
     chunk_map = {},
     transport_lines = {},
     inventories = {},
@@ -24,7 +24,7 @@ function entity_cache.refresh()
     by_name = {},
     by_name_by_tick = {},
   }
-  cache = global.entity_cache
+  cache = storage.entity_cache
   for _, surface in pairs(game.surfaces) do
     if surface and surface.valid then
       for _, entity in pairs(surface.find_entities_filtered({force = "player"})) do
@@ -35,7 +35,7 @@ function entity_cache.refresh()
 end
 
 function entity_cache.on_load()
-  cache = global.entity_cache
+  cache = storage.entity_cache
 end
 
 function entity_cache.get()
@@ -56,7 +56,7 @@ local entity_types = {
     "container",
     "logistic-container",
     "infinity-container",
-    "rocket-silo-rocket",
+    "cargo-pod",
   }),
   cube_crafter = make_set({
     "furnace",

@@ -4,7 +4,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-speed-module-v3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/speed-module-3.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-speed-module-v3"},
@@ -19,8 +19,8 @@ data:extend({
   {
     type = "technology",
     name = "cube-efficiency-module-v3",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__base__/graphics/technology/effectivity-module-3.png",
+    icon_size = 256,
+    icon = "__base__/graphics/technology/efficiency-module-3.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-efficiency-module-v3"},
     },
@@ -34,7 +34,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-productivity-module-v3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/productivity-module-3.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-productivity-module-v3"},
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-ultradense-combustion-cube",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Ultracube__/assets/technology/ultradense-combustion-cube.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-ultradense-combustion-cube"},
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-antimatter-reactor",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-antimatter-reactor"},
@@ -93,10 +93,11 @@ data:extend({
   {
     type = "technology",
     name = "cube-everything",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Ultracube__/assets/technology/everything.png",
     effects = {},
     prerequisites = {"cube-complete-annihilation-card"},
+    essential = true,
     unit = tech_cost_unit("6", 9600),
     order = "6-9-0",
   },

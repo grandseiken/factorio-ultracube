@@ -17,10 +17,10 @@ if mods["stack-combinator"] then
       type = "recipe",
       name = "cube-stack-combinator",
       ingredients = {
-        {"arithmetic-combinator", 1},
-        {"repair-pack", 1},
+        {type = "item", name = "arithmetic-combinator", amount = 1},
+        {type = "item", name = "repair-pack", amount = 1},
       },
-      results = {{"stack-combinator", 1}},
+      results = {{type = "item", name = "stack-combinator", amount = 1}},
       energy_required = 1,
       category = "cube-fabricator-handcraft",
       enabled = false,

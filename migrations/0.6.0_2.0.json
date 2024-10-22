@@ -1,0 +1,17 @@
+{
+  "recipe": [
+    ["cube-stack-inserter", "cube-bulk-inserter"],
+    ["cube-fusion-reactor-equipment", "cube-fission-reactor-equipment"]
+  ],
+  "technology": [
+    ["cube-stack-inserters", "cube-bulk-inserters"],
+    ["cube-stack-inserter-capacity-bonus-1", "cube-bulk-inserter-capacity-bonus-1"],
+    ["cube-stack-inserter-capacity-bonus-2", "cube-bulk-inserter-capacity-bonus-2"],
+    ["cube-stack-inserter-capacity-bonus-3", "cube-bulk-inserter-capacity-bonus-3"],
+    ["cube-stack-inserter-capacity-bonus-4", "cube-bulk-inserter-capacity-bonus-4"],
+    ["cube-stack-inserter-capacity-bonus-5", "cube-bulk-inserter-capacity-bonus-5"],
+    ["cube-stack-inserter-capacity-bonus-6", "cube-bulk-inserter-capacity-bonus-6"],
+    ["cube-stack-inserter-capacity-bonus-7", "cube-bulk-inserter-capacity-bonus-7"],
+    ["cube-stack-inserter-capacity-bonus-8", "cube-bulk-inserter-capacity-bonus-8"]
+ ]
+}

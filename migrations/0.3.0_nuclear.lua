@@ -12,7 +12,11 @@ for _, surface in pairs(game.surfaces) do
   for _, refinery in ipairs(refineries) do
     local recipe = refinery.get_recipe()
     if recipe and recipe.name == "cube-nuclear-fuel-reprocessing" and refinery.is_crafting() then
-      surface.spill_item_stack(refinery.position, {name = "cube-ultradense-utility-cube", count = 1}, false, nil, false)
+      surface.spill_item_stack {
+        position = refinery.position,
+        stack = {name = "cube-ultradense-utility-cube", count = 1},
+        allow_belts = false,
+      }
     end
   end
 

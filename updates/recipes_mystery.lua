@@ -53,10 +53,10 @@ local function add_mystery_dummy(name, item)
       type = "recipe",
       name = name,
       icon = "__base__/graphics/icons/steel-furnace.png",
-      icon_size = 64, icon_mipmaps = 4,
+      icon_size = 64,
       localised_name = {"recipe-name.cube-mystery"},
       ingredients = {},
-      results = {{item, 1}},
+      results = {{type = "item", name = item, amount = 1}},
       energy_required = 1,
       category = "cube-mystery-furnace",
       subgroup = "cube-mystery",
@@ -129,9 +129,7 @@ add_mystery_recipe(1, "aai-loader", "cube-spectralite")
 add_mystery_recipe(1, "inserter", "cube-basic-matter-unit")
 add_mystery_recipe(1, "long-handed-inserter", "inserter")
 add_mystery_recipe(1, "fast-inserter", "inserter")
-add_mystery_recipe(1, "filter-inserter", "fast-inserter")
-add_mystery_recipe(1, "stack-inserter", "fast-inserter")
-add_mystery_recipe(1, "stack-filter-inserter", "stack-inserter")
+add_mystery_recipe(1, "bulk-inserter", "fast-inserter")
 add_mystery_recipe(1, "cube-extremely-long-inserter", "long-handed-inserter")
 
 add_mystery_recipe(1, "small-electric-pole", "wood")
@@ -154,15 +152,13 @@ add_mystery_recipe(2, "cube-logistic-robot-1", "cube-logistic-robot-0")
 add_mystery_recipe(2, "cube-logistic-robot-0", "cube-logistic-robot-1")
 add_mystery_recipe(2, "construction-robot", "cube-bottled-consciousness")
 
-add_mystery_recipe(1, "logistic-chest-active-provider", "iron-chest")
-add_mystery_recipe(1, "logistic-chest-passive-provider", "iron-chest")
-add_mystery_recipe(1, "logistic-chest-storage", "iron-chest")
-add_mystery_recipe(1, "logistic-chest-buffer", "iron-chest")
-add_mystery_recipe(1, "logistic-chest-requester", "iron-chest")
+add_mystery_recipe(1, "active-provider-chest", "iron-chest")
+add_mystery_recipe(1, "passive-provider-chest", "iron-chest")
+add_mystery_recipe(1, "storage-chest", "iron-chest")
+add_mystery_recipe(1, "buffer-chest", "iron-chest")
+add_mystery_recipe(1, "requester-chest", "iron-chest")
 
 add_mystery_recipe(1, "small-lamp", "cube-potato")
-add_mystery_recipe(1, "red-wire", "green-wire")
-add_mystery_recipe(1, "green-wire", "red-wire")
 add_mystery_recipe(1, "constant-combinator", "cube-electronic-circuit")
 add_mystery_recipe(1, "arithmetic-combinator", "cube-electronic-circuit")
 add_mystery_recipe(1, "decider-combinator", "cube-electronic-circuit")
@@ -272,8 +268,8 @@ add_mystery_recipe(4, "cube-haunted-energy-cell", "cube-residual-tendrils", 1, 4
 add_mystery_recipe(2, "uranium-238", "cube-uranium-234")
 add_mystery_recipe(2, "uranium-235", "cube-uranium-234")
 add_mystery_recipe(2, "cube-uranium-234", "cube-uranium-234", 1, 2)
-add_mystery_recipe(2, "uranium-fuel-cell", "used-up-uranium-fuel-cell")
-add_mystery_recipe(1, "used-up-uranium-fuel-cell", "uranium-ore")
+add_mystery_recipe(2, "uranium-fuel-cell", "depleted-uranium-fuel-cell")
+add_mystery_recipe(1, "depleted-uranium-fuel-cell", "uranium-ore")
 
 add_mystery_recipe(1, "cube-calcium", "cube-sand")
 add_mystery_recipe(1, "cube-intelligent-calcium", "cube-calcium")
@@ -300,7 +296,7 @@ add_mystery_recipe(4, "cube-modular-armor", "cube-power-armor")
 add_mystery_recipe(8, "cube-power-armor", "cube-power-armor-mk2")
 add_mystery_recipe(16, "cube-power-armor-mk2", "cube-potato")
 
-add_mystery_recipe(4, "fusion-reactor-equipment", "uranium-fuel-cell")
+add_mystery_recipe(4, "fission-reactor-equipment", "uranium-fuel-cell")
 add_mystery_recipe(1, "cube-solar-panel-equipment", "cube-advanced-circuit")
 add_mystery_recipe(2, "cube-solar-panel-equipment-mk2", "cube-solar-panel-equipment")
 add_mystery_recipe(1, "cube-battery-equipment", "battery")
@@ -314,7 +310,6 @@ add_mystery_recipe(1, "night-vision-equipment", "small-lamp")
 
 add_mystery_recipe(2, "car", "cube-advanced-engine")
 add_mystery_recipe(4, "spidertron", "raw-fish")
-add_mystery_recipe(1, "spidertron-remote", "raw-fish")
 
 add_mystery_recipe(1, "stone-wall", "stone-brick")
 add_mystery_recipe(1, "gate", "stone-wall")
@@ -334,4 +329,4 @@ add_mystery_recipe(1, "cube-speed-module-v3", "cube-speed-module-v2")
 add_mystery_recipe(1, "cube-productivity-module-v3", "cube-productivity-module-v2")
 add_mystery_recipe(1, "cube-efficiency-module-v3", "cube-efficiency-module-v2")
 
-add_mystery_recipe(1, "empty-barrel", "cube-rare-metals")
+add_mystery_recipe(1, "barrel", "cube-rare-metals")

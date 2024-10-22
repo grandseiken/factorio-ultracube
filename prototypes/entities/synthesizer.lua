@@ -9,7 +9,6 @@ data:extend({
     name = "cube-synthesizer",
     icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
     icon_size = 128,
-    icon_mipmaps = 4,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-synthesizer"},
     max_health = 1000,
@@ -21,49 +20,39 @@ data:extend({
         production_type = "input",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 20,
-        base_level = -1,
-        pipe_connections = {{type = "input", position = {0, -4}}},
+        volume = 2000,
+        pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -3}}},
       },
       {
         production_type = "input",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 20,
-        base_level = -1,
-        pipe_connections = {{type = "input", position = {0, 4}}},
+        volume = 2000,
+        pipe_connections = {{flow_direction = "input", direction = defines.direction.south, position = {0, 3}}},
       },
       {
         production_type = "output",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 20,
-        base_level = 1,
-        pipe_connections = {{type = "output", position = {-4, 0}}},
+        volume = 2000,
+        pipe_connections = {{flow_direction = "output", direction = defines.direction.west, position = {-3, 0}}},
       },
       {
         production_type = "output",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 20,
-        base_level = 1,
-        pipe_connections = {{type = "output", position = {4, 0}}},
+        volume = 2000,
+        pipe_connections = {{flow_direction = "output", direction = defines.direction.east, position = {3, 0}}},
       },
-      off_when_no_fluid_recipe = true,
     },
+    fluid_boxes_off_when_no_fluid_recipe = true,
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler.png",
-          priority = "high",
-          width = 236,
-          height = 244,
-          frame_count = 1,
-          shift = {0, -0.15},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler.png",
             priority = "high",
             width = 473,
             height = 489,
@@ -71,17 +60,8 @@ data:extend({
             scale = 0.5,
             shift = {0, -0.15},
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-sh.png",
-          priority = "medium",
-          width = 254,
-          height = 223,
-          frame_count = 1,
-          shift = {0.38, 0.22},
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-sh.png",
             priority = "medium",
             width = 508,
             height = 446,
@@ -92,22 +72,12 @@ data:extend({
           },
         },
       },
-    },
-    working_visualisations = {
-      {
-        draw_as_light = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
-          priority = "high",
-          width = 72,
-          height = 55,
-          frame_count = 30,
-          line_length = 6,
-          animation_speed = 1,
-          shift = {0, -0.23},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler-working-glow-light.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
             priority = "high",
+            draw_as_light = true,
             width = 144,
             height = 110,
             frame_count = 30,
@@ -117,23 +87,13 @@ data:extend({
             shift = {0, -0.23},
           },
         },
-      },
-      {
-        draw_as_glow = true,
-        blend_mode = "additive",
-        synced_fadeout = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
-          priority = "high",
-          width = 72,
-          height = 55,
-          frame_count = 30,
-          line_length = 6,
-          animation_speed = 1,
-          shift = {0, -0.23},
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler-working-glow.png",
+        {
+          synced_fadeout = true,
+          animation = {
+            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
             priority = "high",
+            draw_as_glow = true,
+            blend_mode = "additive",
             width = 144,
             height = 110,
             frame_count = 30,
@@ -143,22 +103,11 @@ data:extend({
             shift = {0, -0.23},
           },
         },
-      },
-      {
-        animation = {
-          layers = {
-            {
-              filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-light.png",
-              priority = "high",
-              width = 236,
-              height = 244,
-              frame_count = 30,
-              line_length = 6,
-              animation_speed = 1,
-              shift = {0, -0.15},
-              draw_as_light = true,
-              hr_version = {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler-working-light.png",
+        {
+          animation = {
+            layers = {
+              {
+                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-light.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -169,18 +118,8 @@ data:extend({
                 shift = {0, -0.15},
                 draw_as_light = true,
               },
-            },
-            {
-              filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working.png",
-              priority = "high",
-              width = 236,
-              height = 244,
-              frame_count = 30,
-              line_length = 6,
-              animation_speed = 1,
-              shift = {0, -0.15},
-              hr_version = {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/hr-matter-assembler-working.png",
+              {
+                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -192,17 +131,16 @@ data:extend({
               },
             },
           },
-        },
-        light = {
-          intensity = 0.80,
-          size = 6,
-          shift = {0, -0.15},
-          color = {r = 0.35, g = 0.5, b = 1},
+          light = {
+            intensity = 0.80,
+            size = 6,
+            shift = {0, -0.15},
+            color = {r = 0.35, g = 0.5, b = 1},
+          },
         },
       },
     },
     crafting_categories = {"cube-synthesizer", "cube-synthesizer-handcraft"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
@@ -217,8 +155,8 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
-      drain = "50KW",
+      emissions_per_minute = {},
+      drain = "50kW",
     },
 
     water_reflection = {
@@ -236,11 +174,13 @@ data:extend({
     },
 
     ingredient_count = 4,
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 2,
+    icon_draw_specification = {scale = 2, shift = {0, -0.3}},
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.speed_efficiency,
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,

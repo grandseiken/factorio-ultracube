@@ -35,7 +35,6 @@ data:extend({
     type = "assembling-machine",
     name = "cube-stygian-energy-lab",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-stygian-energy-lab"},
@@ -48,52 +47,34 @@ data:extend({
         production_type = "output",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        height = 4,
-        base_level = 1,
+        volume = 4000,
         pipe_connections = {
-          {type = "output", position = {4, 0}},
-          {type = "output", position = {-4, 0}},
-          {type = "output", position = {0, -4}},
-          {type = "output", position = {0, 4}},
+          {flow_direction = "output", direction = defines.direction.east, position = {3, 0}},
+          {flow_direction = "output", direction = defines.direction.west, position = {-3, 0}},
+          {flow_direction = "output", direction = defines.direction.north, position = {0, -3}},
+          {flow_direction = "output", direction = defines.direction.south, position = {0, 3}},
         },
       },
-      off_when_no_fluid_recipe = false,
     },
+    fluid_boxes_off_when_no_fluid_recipe = false,
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "cube-stygian-energy-lab",
-    module_specification = {
-      module_slots = 2,
-    },
+    module_slots = 2,
     allowed_effects = module_effects.fuel_speed_only,
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab.png",
             priority = "high",
             width = 512,
             height = 512,
             frame_count = 1,
             scale = 0.5,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          shift = {0.32, 0},
-          frame_count = 1,
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-sh.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -104,19 +85,10 @@ data:extend({
           },
         },
       },
-    },
-    working_visualisations = {
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
-          width = 193,
-          height = 171,
-          shift = {0.05, -0.31},
-          frame_count = 30,
-          line_length = 5,
-          animation_speed = 0.35,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/bio-lab/hr-bio-lab-working.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/bio-lab/bio-lab-working.png",
             width = 387,
             height = 342,
             shift = {0.05, -0.31},
@@ -130,7 +102,6 @@ data:extend({
     },
     fixed_recipe = "cube-stygian-power-generation",
     crafting_categories = {"cube-stygian-energy-lab"},
-    scale_entity_info_icon = true,
     show_recipe_icon = false,
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
@@ -157,7 +128,7 @@ data:extend({
       },
       fuel_categories = {"cube-haunted-energy"},
       fuel_inventory_size = 1,
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
       smoke = stygian_smoke(),
     },
     energy_usage = "16MW",

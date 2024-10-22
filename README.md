@@ -14,11 +14,11 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
 
 ## Contents
 
+* [Factorio 2.0 and expansion status](#factorio-20-and-expansion-status)
 * [Overview](#overview)
   * [You might like this mod if...](#you-might-like-this-mod-if)
   * [You might not like this mod if...](#you-might-not-like-this-mod-if)
   * [Comparison to other overhaul mods](#comparison-to-other-overhaul-mods)
-  * [Development status and roadmap](#development-status-and-roadmap)
   * [Translation](#translation)
 * [Compatibility](#compatibility)
   * [Details](#details)
@@ -26,6 +26,14 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
   * [Compatibility guide for modders](#compatibility-guide-for-modders)
 * [FAQ](#faq)
 * [Dependencies and credits](#dependencies-and-credits)
+
+# Factorio 2.0 and expansion status
+
+**TL;DR: Ultracube is compatible with Factorio 2.0 (only) as of version 0.6.0. It is not compatible with Space Age itself or the Quality mod. Elevated rails are included if the built-in Elevated rails mod is active.** While the mod will remain playable for those who do not own the expansion, future updates will add more optional content and mechanics based on expansion features.
+
+Other previously-compatible optional dependencies listed [below](#list-of-compatible-mods) have not yet been tested extensively on 2.0. For now, they might or might not work.
+
+Ultracube 0.5.7 was the last version to work with 1.x Factorio versions.
 
 # Overview
 
@@ -67,16 +75,6 @@ Progression should be relatively clear, without too much hunting around in the t
 
 The overall feel is probably closer to something like Freight Forwarding (but maybe a bit more radical) than other overhauls.
 
-## Development status and roadmap
-
-The mod is more or less feature-complete, but should still be considered a beta at this point. Especially the latter half or so will likely be subject to balancing passes after further playtesting (feedback is welcome).
-
-Planned improvements include:
-
-* Compatibility with more optional mods.
-
-See the [mod portal changelog](https://mods.factorio.com/mod/Ultracube/changelog) for version history.
-
 ## Translation
 
 Translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. You can find more details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin).
@@ -106,6 +104,8 @@ Mods that move the player to other surfaces or allow creating additional cubes f
 Regardless of technical obstacles, practical considerations could make some other mods a poor match. Ultracube imposes unusual constraints and is designed and balanced with those in mind. Combining it with mods that provide ways around those constraints could easily result something that doesn't make a whole lot of sense (but you do you).
 
 ## List of compatible mods
+
+**NOTE:** these mods were compatible with Ultracube pre-Factorio 2.0. While compatibility logic remains in place, they have not been tested extensively on Factorio 2.0 yet, and might require further patching.
 
 The following mods have been specifically adapted to work with Ultracube:
 
@@ -155,6 +155,7 @@ See the [dedicated compatibility page here](https://github.com/grandseiken/facto
 
 | Q | A |
 | - | - |
+| **Is Ultracube compatible with the Space Age expansion?** | Ultracube is **not** compatible with the Space Age expansion mod itself (i.e. having space travel or more than one planet), nor the quality mod. However, it **is** compatible with 2.0 and other expansion features, for example elevated rails. More optional expansion-only content is coming soon. |
 | **How can I make my mod compatible with Ultracube?** | See the [compatibility guide](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md). |
 | **Can I help translate this mod?** | Yes, translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. More details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin). |
 | **Where are the biters?** | Currently there are no military technologies and biters are disabled. This was mostly to prioritise releasing a playable version without needing to integrate and balance military. Biters might get reintroduced as an optional extra at some point. |

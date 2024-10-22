@@ -4,7 +4,7 @@ AAILoaders.make_tier{
   name = "",
   transport_belt = "transport-belt",
   color = {255, 217, 85},
-  recipe = {},
+  recipe = {ingredients = {}},
   localise = false,
 }
 
@@ -12,7 +12,7 @@ AAILoaders.make_tier{
   name = "v2",
   transport_belt = "fast-transport-belt",
   color = {255, 24, 38},
-  recipe = {},
+  recipe = {ingredients = {}},
   upgrade = "aai-v3-loader",
   localise = false,
 }
@@ -21,7 +21,7 @@ AAILoaders.make_tier{
   name = "v3",
   transport_belt = "express-transport-belt",
   color = {90, 190, 255},
-  recipe = {},
+  recipe = {ingredients = {}},
   upgrade = "aai-v4-loader",
   localise = false,
 }
@@ -30,18 +30,18 @@ AAILoaders.make_tier{
   name = "v4",
   transport_belt = "cube-v4-transport-belt",
   color = {210, 1, 247},
-  recipe = {},
+  recipe = {ingredients = {}},
   localise = false,
 }
 
 local function add_energy_source(t, energy_scale)
-  t.energy_per_item = "5KJ"
+  t.energy_per_item = "5kJ"
   t.energy_source = {
     type = "electric",
     usage_priority = "secondary-input",
     input_flow_limit = (energy_scale * 0.4) .. "MW",
-    emissions_per_minute = 0,
-    drain = (energy_scale * 50) .. "KW",
+    emissions_per_minute = {},
+    drain = (energy_scale * 50) .. "kW",
   }
 end
 

@@ -4,7 +4,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-toolbelt",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/toolbelt.png"),
     effects = {
       {type = "character-inventory-slots-bonus", modifier = 10},
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-toolbelt-extension-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/toolbelt.png"),
     effects = {
       {type = "character-inventory-slots-bonus", modifier = 2},
@@ -35,7 +35,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-braking-force-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       {type = "train-braking-force-bonus", modifier = 0.2},
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-braking-force-2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       {type = "train-braking-force-bonus", modifier = 0.25},
@@ -64,7 +64,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-braking-force-3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       {type = "train-braking-force-bonus", modifier = 0.25},
@@ -80,7 +80,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-braking-force-4",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       {type = "train-braking-force-bonus", modifier = 0.3},
@@ -93,7 +93,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-braking-force-5",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_braking_force("__base__/graphics/technology/braking-force.png"),
     effects = {
       -- Base game goes up to 1.0.
@@ -112,7 +112,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.025},
@@ -125,7 +125,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.025},
@@ -141,7 +141,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.05},
@@ -157,7 +157,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-4",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.05},
@@ -173,7 +173,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-5",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.05},
@@ -189,7 +189,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-6",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       {type = "mining-drill-productivity-bonus", modifier = 0.1},
@@ -205,7 +205,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-mining-productivity-7",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_productivity("__base__/graphics/technology/mining-productivity.png"),
     effects = {
       -- Base game goes up to ~0.4 before infinite.
@@ -223,14 +223,14 @@ data:extend({
 
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-1",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-1",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {
-      "cube-stack-inserters",
+      "cube-bulk-inserters",
       "cube-abstract-interrogation-card",
     },
     unit = tech_cost_unit("2", 240),
@@ -239,28 +239,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-2",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-2",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserter-capacity-bonus-1"},
+    prerequisites = {"cube-bulk-inserter-capacity-bonus-1"},
     unit = tech_cost_unit("2", 300),
     upgrade = true,
     order = "10-3-1",
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-3",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-3",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {
       "cube-deep-introspection-card",
-      "cube-stack-inserter-capacity-bonus-2",
+      "cube-bulk-inserter-capacity-bonus-2",
     },
     unit = tech_cost_unit("3", 300),
     upgrade = true,
@@ -268,28 +268,28 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-4",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-4",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserter-capacity-bonus-3"},
+    prerequisites = {"cube-bulk-inserter-capacity-bonus-3"},
     unit = tech_cost_unit("3", 360),
     upgrade = true,
     order = "10-3-3",
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-5",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-5",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {
       "cube-synthetic-premonition-card",
-      "cube-stack-inserter-capacity-bonus-4",
+      "cube-bulk-inserter-capacity-bonus-4",
     },
     unit = tech_cost_unit("5", 360),
     upgrade = true,
@@ -297,27 +297,27 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-6",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-6",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserter-capacity-bonus-5"},
+    prerequisites = {"cube-bulk-inserter-capacity-bonus-5"},
     unit = tech_cost_unit("5", 420),
     upgrade = true,
     order = "10-3-5",
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-7",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-7",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
     prerequisites = {
-      "cube-stack-inserter-capacity-bonus-6",
+      "cube-bulk-inserter-capacity-bonus-6",
       "cube-complete-annihilation-card",
     },
     unit = tech_cost_unit("6", 420),
@@ -326,14 +326,14 @@ data:extend({
   },
   {
     type = "technology",
-    name = "cube-stack-inserter-capacity-bonus-8",
-    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/stack-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    name = "cube-bulk-inserter-capacity-bonus-8",
+    icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/bulk-inserter.png"),
+    icon_size = 256,
     effects = {
       -- Base game goes up to 12, we start at 4
-      {type = "stack-inserter-capacity-bonus", modifier = 1},
+      {type = "bulk-inserter-capacity-bonus", modifier = 1},
     },
-    prerequisites = {"cube-stack-inserter-capacity-bonus-7"},
+    prerequisites = {"cube-bulk-inserter-capacity-bonus-7"},
     unit = tech_cost_unit("6", 480),
     upgrade = true,
     order = "10-3-7",
@@ -343,7 +343,7 @@ data:extend({
     type = "technology",
     name = "cube-inserter-capacity-bonus-1",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     effects = {
       {type = "inserter-stack-size-bonus", modifier = 1},
     },
@@ -359,7 +359,7 @@ data:extend({
     type = "technology",
     name = "cube-inserter-capacity-bonus-2",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     effects = {
       {type = "inserter-stack-size-bonus", modifier = 1},
     },
@@ -375,7 +375,7 @@ data:extend({
     type = "technology",
     name = "cube-inserter-capacity-bonus-3",
     icons = util.technology_icon_constant_stack_size("__base__/graphics/technology/fast-inserter.png"),
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     effects = {
       -- Base game goes up to 3.
       {type = "inserter-stack-size-bonus", modifier = 1},
@@ -392,7 +392,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.4},
@@ -405,7 +405,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.4},
@@ -421,7 +421,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.5},
@@ -437,7 +437,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-4",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.5},
@@ -453,7 +453,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-5",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.6},
@@ -469,7 +469,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-6",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.6},
@@ -485,7 +485,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-speed-7",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_movement_speed("__base__/graphics/technology/worker-robots-speed.png"),
     effects = {
       {type = "worker-robot-speed", modifier = 0.65},
@@ -503,7 +503,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-storage-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     effects = {
       {type = "worker-robot-storage", modifier = 1},
@@ -516,7 +516,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-storage-2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     effects = {
       {type = "worker-robot-storage", modifier = 1},
@@ -532,7 +532,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-storage-3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     effects = {
       {type = "worker-robot-storage", modifier = 1},
@@ -548,7 +548,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-worker-robot-storage-4",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_capacity("__base__/graphics/technology/worker-robots-storage.png"),
     effects = {
       -- Base game goes up to 3.
@@ -566,7 +566,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-research-speed-1",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
@@ -579,7 +579,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-research-speed-2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
@@ -595,7 +595,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-research-speed-3",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
@@ -611,7 +611,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-research-speed-4",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
     effects = {
       -- Base game goes up to 2.5.

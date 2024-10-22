@@ -5,13 +5,13 @@ local vanilla_item_whitelist = make_set({
   "raw-fish",
   "water",
   "steam",
-  "empty-barrel",
+  "barrel",
   "sulfuric-acid",
   "uranium-ore",
   "uranium-235",
   "uranium-238",
   "uranium-fuel-cell",
-  "used-up-uranium-fuel-cell",
+  "depleted-uranium-fuel-cell",
   "stone",
   "stone-brick",
   "wood",
@@ -21,11 +21,11 @@ local vanilla_item_whitelist = make_set({
   "pipe-to-ground",
   "iron-chest",
   "construction-robot",
-  "logistic-chest-passive-provider",
-  "logistic-chest-active-provider",
-  "logistic-chest-storage",
-  "logistic-chest-buffer",
-  "logistic-chest-requester",
+  "passive-provider-chest",
+  "active-provider-chest",
+  "storage-chest",
+  "buffer-chest",
+  "requester-chest",
   "storage-tank",
   "steam-engine",
   "offshore-pump",
@@ -42,6 +42,8 @@ local vanilla_item_whitelist = make_set({
   "spidertron-remote",
   "car",
   "rail",
+  "rail-support",
+  "rail-ramp",
   "locomotive",
   "cargo-wagon",
   "fluid-wagon",
@@ -69,8 +71,10 @@ local vanilla_item_whitelist = make_set({
   "constant-combinator",
   "arithmetic-combinator",
   "decider-combinator",
+  "selector-combinator",
   "power-switch",
   "programmable-speaker",
+  "display-panel",
   "small-electric-pole",
   "medium-electric-pole",
   "big-electric-pole",
@@ -78,9 +82,7 @@ local vanilla_item_whitelist = make_set({
   "inserter",
   "fast-inserter",
   "long-handed-inserter",
-  "filter-inserter",
-  "stack-inserter",
-  "stack-filter-inserter",
+  "bulk-inserter",
   "heat-pipe",
   "heat-exchanger",
   "centrifuge",
@@ -88,7 +90,7 @@ local vanilla_item_whitelist = make_set({
   "exoskeleton-equipment",
   "battery-mk2-equipment",
   "personal-roboport-mk2-equipment",
-  "fusion-reactor-equipment",
+  "fission-reactor-equipment",
 })
 
 local entity_prototypes = {
@@ -103,6 +105,12 @@ local entity_prototypes = {
   "mining-drill",
   "construction-robot",
   "logistic-robot",
+  "unit",
+  "unit-spawner",
+  "turret",
+  "combat-robot",
+  "cargo-pod",
+  "temporary-container",
 }
 
 local item_prototypes = {
@@ -115,7 +123,6 @@ local item_prototypes = {
   "spidertron-remote",
   "armor",
   "tool",
-  "mining-tool",
   "repair-tool",
   "rail-planner",
   "artillery-wagon",
@@ -151,20 +158,13 @@ local function is_compatible_entity(t)
   return t and (is_compatible(t) or is_compatible_item(data.raw.item[t.name]))
 end
 
-local function add_hidden_flag(t)
-  if not t.flags then
-    t.flags = {}
-  end
-  t.flags[#t.flags + 1] = "hidden"
-end
-
 for _, v in ipairs(entity_prototypes) do
   for _, t in pairs(data.raw[v]) do
     if vanilla_item_whitelist[t.name] or is_compatible_entity(t) then
       t.order = add_prefix(t.order)
     else
       t.next_upgrade = nil
-      add_hidden_flag(t)
+      t.hidden = true
     end
   end
 end
@@ -174,7 +174,7 @@ for _, v in ipairs(item_prototypes) do
     if vanilla_item_whitelist[t.name] or is_compatible_item(t) then
       t.order = add_prefix(t.order)
     else
-      add_hidden_flag(t)
+      t.hidden = true
     end
   end
 end
@@ -192,11 +192,6 @@ for _, t in pairs(data.raw.recipe) do
     t.order = add_prefix(t.order)
   else
     t.enabled = false
-    if t.normal then
-      t.normal.enabled = false
-    end
-    if t.expensive then
-      t.expensive.enabled = false
-    end
+    t.hide_from_signal_gui = true
   end
 end

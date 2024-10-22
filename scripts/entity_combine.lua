@@ -5,7 +5,9 @@ local function make_inoperable(_, _, e)
 end
 
 local function setup_local_turbine(base, linked, e)
-  e.connect_neighbour(linked[2])
+  local e_con = e.get_wire_connector(defines.wire_connector_id.pole_copper, true)
+  local l_con = linked[2].get_wire_connector(defines.wire_connector_id.pole_copper, true)
+  e_con.connect_to(l_con, false, defines.wire_origin.script)
 end
 
 local combine_definitions = {
@@ -96,20 +98,20 @@ local function get_hidden_surface()
 end
 
 local function get_combine_table()
-  if global.combine_table then
-    return global.combine_table
+  if storage.combine_table then
+    return storage.combine_table
   end
   local combine_table = {}
-  global.combine_table = combine_table
+  storage.combine_table = combine_table
   return combine_table
 end
 
 local function get_inverse_table()
-  if global.combine_inverse_table then
-    return global.combine_inverse_table
+  if storage.combine_inverse_table then
+    return storage.combine_inverse_table
   end
   local inverse_table = {}
-  global.combine_inverse_table = inverse_table
+  storage.combine_inverse_table = inverse_table
   return inverse_table
 end
 

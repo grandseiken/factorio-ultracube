@@ -7,7 +7,6 @@ data:extend({
     type = "assembling-machine",
     name = "cube-greenhouse",
     icon_size = 64,
-    icon_mipmaps = 4,
     icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-greenhouse"},
@@ -20,54 +19,39 @@ data:extend({
         production_type = "input",
         pipe_picture = pipe_path,
         pipe_covers = pipecoverspictures(),
-        base_area = 10,
-        height = 2,
-        base_level = -1,
+        volume = 2000,
         pipe_connections = {
-          {type = "input-output", position = {0, -4}},
-          {type = "input-output", position = {-4, 0}},
-          {type = "input-output", position = {4, 0}},
-          {type = "input-output", position = {0, 4}},
+          {flow_direction = "input-output", direction = defines.direction.north, position = {0, -3}},
+          {flow_direction = "input-output", direction = defines.direction.west, position = {-3, 0}},
+          {flow_direction = "input-output", direction = defines.direction.east, position = {3, 0}},
+          {flow_direction = "input-output", direction = defines.direction.south, position = {0, 3}},
         },
       },
-      off_when_no_fluid_recipe = false,
     },
+    fluid_boxes_off_when_no_fluid_recipe = false,
     collision_box = {{-3.25, -3.25}, {3.25, 3.25}},
     selection_box = {{-3.5, -3.5}, {3.5, 3.5}},
     fast_replaceable_group = "cube-greenhouse",
-    module_specification = {
-      module_slots = 2,
-      module_info_icon_shift = {0, 1.7},
-      module_info_icon_scale = 1,
-    },
+    module_slots = 2,
+    icons_positioning = {{
+      inventory_index = defines.inventory.assembling_machine_modules,
+      shift = {0, 1.7},
+      scale = 1,
+    }},
     allowed_effects = module_effects.speed_efficiency,
-    animation = {
-      layers = {
-        {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/hr-greenhouse.png",
+    graphics_set = {
+      animation = {
+        layers = {
+          {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
             priority = "high",
             width = 512,
             height = 512,
             frame_count = 1,
             scale = 0.5,
           },
-        },
-        {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
-          priority = "high",
-          width = 256,
-          height = 256,
-          shift = {0.32, 0},
-          frame_count = 1,
-          draw_as_shadow = true,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/hr-greenhouse-sh.png",
+          {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -78,38 +62,22 @@ data:extend({
           },
         },
       },
-    },
-    working_visualisations = {
-      {
-        draw_as_light = true,
-        animation = {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
-          width = 256,
-          height = 256,
-          frame_count = 1,
-          repeat_count = 10,
-          animation_speed = 0.35,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/hr-greenhouse-light.png",
+      working_visualisations = {
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
             width = 512,
             height = 512,
             frame_count = 1,
             repeat_count = 10,
             scale = 0.5,
+            draw_as_light = true,
             animation_speed = 0.35,
           },
         },
-      },
-      {
-        animation = {
-          filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
-          width = 256,
-          height = 256,
-          frame_count = 10,
-          line_length = 5,
-          animation_speed = 0.35,
-          hr_version = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/hr-greenhouse-working.png",
+        {
+          animation = {
+            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
             width = 512,
             height = 512,
             frame_count = 10,
@@ -121,7 +89,6 @@ data:extend({
       },
     },
     crafting_categories = {"cube-greenhouse"},
-    scale_entity_info_icon = true,
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       filename = "__Krastorio2Assets__/sounds/buildings/greenhouse.ogg",
@@ -138,9 +105,9 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = 0,
+      emissions_per_minute = {},
     },
-    energy_usage = "500KW",
+    energy_usage = "500kW",
     ingredient_count = 4,
   },
 })

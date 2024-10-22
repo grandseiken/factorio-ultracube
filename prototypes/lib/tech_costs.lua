@@ -77,11 +77,11 @@ function tech_unlock_effect()
     icons = {
       {
         icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
-        icon_size = 64, icon_mipmaps = 4,
+        icon_size = 64,
       },
       {
         icon = "__core__/graphics/icons/technology/effect-constant/effect-constant-capacity.png",
-        icon_size = 64, icon_mipmaps = 2,
+        icon_size = 64,
       }
     },
     effect_description = {"effect-description.cube-technology-unlock"},

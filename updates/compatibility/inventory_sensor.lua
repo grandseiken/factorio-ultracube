@@ -2,9 +2,9 @@ if mods["Inventory Sensor"] then
   data.raw.item["item-sensor"].subgroup = "cube-combinator-extra"
   local recipe = data.raw.recipe["item-sensor"]
   recipe.ingredients = {
-    {"cube-basic-matter-unit", 2},
-    {"cube-electronic-circuit", 5},
-    {"copper-cable", 5},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+    {type = "item", name = "cube-electronic-circuit", amount = 5},
+    {type = "item", name = "copper-cable", amount = 5},
   }
   recipe.category = "cube-fabricator-handcraft"
 

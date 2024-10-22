@@ -40,67 +40,42 @@ local cube_fx_data = nil
 local cube_fx = {}
 
 function cube_fx.refresh()
-  global.cube_fx_data = {
+  storage.cube_fx_data = {
     last_locomotives = {},
   }
 
-  global.victory_statistics = global.victory_statistics or {
+  storage.victory_statistics = storage.victory_statistics or {
     distance_travelled_by_cube = 0,
     cube_last_position = nil,
     cube_idle_samples = 0,
     cube_working_samples = 0,
   }
 
-  cube_fx_data = global.cube_fx_data
-  victory_statistics = global.victory_statistics
+  cube_fx_data = storage.cube_fx_data
+  victory_statistics = storage.victory_statistics
 end
 
 function cube_fx.on_load()
-  cube_fx_data = global.cube_fx_data
-  victory_statistics = global.victory_statistics
+  cube_fx_data = storage.cube_fx_data
+  victory_statistics = storage.victory_statistics
 end
 
-local alert_type_custom = defines.alert_type.custom
-local alert_type_custom_t = {type = alert_type_custom}
-local function has_existing_alert(player)
-  for _, surface in pairs(player.get_alerts(alert_type_custom_t)) do
-    local alerts = surface[alert_type_custom]
-    if alerts then
-      for i = 1, #alerts do
-        local a = alerts[i]
-        if not (a.icon and a.icon.type == "item" and alert_icons[a.icon.name]) then
-          return true
-        end
-      end
-    end
-  end
-  return false
-end
-
-local custom_alert = {type = "item"}
-local custom_alert_text = {"alert-description.cube-alert"}
-local remove_alert_icon = {type = "item"}
-local remove_alert_t = {type = alert_type_custom, icon = remove_alert_icon}
-local function cube_alert(size, results, override)
-  for _, player in pairs(game.players) do
+local function cube_alert(size, results)
+  for _, player in pairs({a = game.players[1]}) do
     local alerts_enabled =
-       player.controller_type == defines.controllers.character and
-       player.mod_settings["cube-show-cube-alerts"].value and
-       cube_management.player_data(player).total_weight < 1
-    if alerts_enabled and (override or not has_existing_alert(player)) then
-      player.remove_alert(alert_type_custom_t)
+        player.mod_settings["cube-show-cube-alerts"].value and
+        (player.controller_type == defines.controllers.remote or
+         (player.controller_type == defines.controllers.character and cube_management.player_data(player).total_weight < 1))
+    if alerts_enabled then
+      for icon, _ in pairs(alert_icons) do
+        player.remove_alert {type = defines.alert_type.custom, icon = {type = "item", name = icon}}
+      end
       for i = 1, size do
         local result = results[i]
         local entity = result.entity
         if entity and entity.valid then
-          custom_alert.name = result.item
-          player.add_custom_alert(result.entity, custom_alert, custom_alert_text, true)
+          player.add_custom_alert(result.entity, {type = "item", name = result.item}, {"alert-description.cube-alert"}, true)
         end
-      end
-    else
-      for icon, _ in pairs(alert_icons) do
-        remove_alert_icon.name = icon
-        player.remove_alert(remove_alert_t)
       end
     end
   end
@@ -272,7 +247,7 @@ local function get_cube_powered_cars()
   -- Set for cache, since this can be on_tick we care about minor performance improvements.
   if not cube_powered_cars_cache then
     cube_powered_cars_cache = {}
-    for car_name, _ in pairs(game.get_filtered_entity_prototypes({{filter = "type", type = "car"}})) do
+    for car_name, _ in pairs(prototypes.get_entity_filtered({{filter = "type", type = "car"}})) do
       if starts_with(car_name, cube_powered_prefix) then
         cube_powered_cars_cache[car_name] = string.sub(car_name, string.len(cube_powered_prefix) + 1)
       end
@@ -455,7 +430,7 @@ local function cube_vehicle_mod(size, results)
   end
 
   for _, locomotive in pairs(new_locomotives) do
-    local fuel = locomotive.burner.currently_burning.name
+    local fuel = locomotive.burner.currently_burning.name.name
     local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
     if ultralocomotion_fuel then
       locomotive.burner.currently_burning = ultralocomotion_fuel
@@ -477,7 +452,7 @@ local function cube_vehicle_mod(size, results)
   for unit_number, locomotive in pairs(cube_fx_data.last_locomotives) do
     if not new_locomotives[unit_number] and locomotive.valid and
        locomotive.burner and locomotive.burner.currently_burning then
-      local ultralocomotion_fuel = locomotive.burner.currently_burning.name
+      local ultralocomotion_fuel = locomotive.burner.currently_burning.name.name
       local normal_fuel = ultralocomotion_fuel_inverse_map[ultralocomotion_fuel]
       if normal_fuel then
         locomotive.burner.currently_burning = normal_fuel
@@ -508,10 +483,10 @@ local function is_cube_working_character(entity, item)
 end
 
 local function track_statistics(size, results)
-  local cube_remote = global.cube_remote
+  local cube_remote = storage.cube_remote
   if not cube_remote then
     cube_remote = {}
-    global.cube_remote = cube_remote
+    storage.cube_remote = cube_remote
   end
 
   -- Track distance only when there's a single cube, since inconsistencies in result ordering
@@ -584,7 +559,7 @@ end
 function cube_fx.reset_ultralocomotion_fuel(entity)
   if entity.unit_number and cube_fuel_vehicle_entity_types[entity.type] and entity.burner and
      entity.burner.currently_burning then
-    local fuel = entity.burner.currently_burning.name
+    local fuel = entity.burner.currently_burning.name.name
     local normal_fuel = ultralocomotion_fuel_inverse_map[fuel]
     if normal_fuel then
       entity.burner.currently_burning = normal_fuel
@@ -616,7 +591,7 @@ function cube_fx.tick(tick)
         if burner then
           local currently_burning = burner.currently_burning
           if currently_burning then
-            local fuel = currently_burning.name
+            local fuel = currently_burning.name.name
             local ultralocomotion_fuel = ultralocomotion_fuel_map[fuel]
             if ultralocomotion_fuel then
               burner.currently_burning = ultralocomotion_fuel
@@ -628,7 +603,6 @@ function cube_fx.tick(tick)
     return
   end
   local alert_tick = tick % 24 == 12
-  local alert_override_tick = tick % 240 >= 120
   local spark_tick = tick % 240 >= 120 and tick % 240 < 234
   local boom_tick = tick % 240 == 0
   local size, results = cube_search.update(tick)
@@ -668,7 +642,7 @@ function cube_fx.tick(tick)
   end
 
   if alert_tick then
-    cube_alert(size, results, alert_override_tick)
+    cube_alert(size, results)
   end
   local cube_remote = track_statistics(size, results)
   if x_min then

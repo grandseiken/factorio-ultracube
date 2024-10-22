@@ -25,7 +25,7 @@ local function get_unlocks_for_technology(force, technology_name)
       }
     end
   end
-  return game.get_filtered_technology_prototypes(filters)
+  return prototypes.get_technology_filtered(filters)
 end
 
 local tech_unlock = {}
@@ -36,7 +36,7 @@ function tech_unlock.trigger(force, technology_name, unlocked)
     if unlocked then
       technologies = get_unlocks_for_technology(force, technology_name)
     else
-      technologies = game.get_filtered_technology_prototypes {{
+      technologies = prototypes.get_technology_filtered {{
         filter = "research-unit-ingredient",
         ingredient = technology_name,
         mode = "and",
@@ -56,9 +56,9 @@ function tech_unlock.trigger(force, technology_name, unlocked)
     force.technologies["cube-resonance-cascade"].enabled = unlocked
     force.technologies["cube-complete-annihilation-card"].enabled = unlocked
   elseif technology_name == "cube-everything" then
-    local state = global.cube_victory_state
+    local state = storage.cube_victory_state
     if state ~= "victorious" then
-      global.cube_victory_state = "victorious"
+      storage.cube_victory_state = "victorious"
 
       local bvs = remote.interfaces["better-victory-screen"]
       if bvs and bvs["trigger_victory"] then
@@ -71,10 +71,6 @@ function tech_unlock.trigger(force, technology_name, unlocked)
           victorious_force = "player",
         }
       end
-      game.print({"cube-msg-victory-0"})
-      game.print({"cube-msg-victory-1"})
-      game.print({"cube-msg-victory-2"})
-      game.print({"cube-msg-victory-3"})
     end
   end
 end
@@ -86,7 +82,7 @@ function tech_unlock.sync(force)
   end
   for _, tech in pairs(force.technologies) do
     if tech.enabled and tech.researched then
-      for _, effect in ipairs(tech.effects) do
+      for _, effect in ipairs(tech.prototype.effects) do
         if effect.type == "unlock-recipe" then
           local recipe = force.recipes[effect.recipe]
           if recipe then
@@ -94,16 +90,6 @@ function tech_unlock.sync(force)
           end
         end
       end
-    end
-  end
-end
-
-function tech_unlock.constructed(entity)
-  if entity.name == "cube-forbidden-ziggurat" then
-    local technology = entity.force.technologies["cube-construct-forbidden-ziggurat"]
-    if not technology.researched then
-      technology.researched = true
-      game.print({"cube-msg-project-completed"})
     end
   end
 end

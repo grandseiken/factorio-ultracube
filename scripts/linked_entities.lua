@@ -42,20 +42,20 @@ local function fast_replace(e, name, spill)
 end
 
 function linked_entities.on_load()
-  overload_sprites = global.overload_sprites
+  overload_sprites = storage.overload_sprites
 end
 
 local function on_change(entity)
   -- TODO: this could be changed to do chunk-caching instead if it becomes a problem.
   if not entity or entity.name == "cube-beacon" or cube_management.module_machines()[entity.name] then
-    global.module_machines_ticks = entity_cache.by_tick_size
+    storage.module_machines_ticks = entity_cache.by_tick_size
   end
 end
 
 function linked_entities.refresh()
   if not overload_sprites then
     overload_sprites = {}
-    global.overload_sprites = overload_sprites
+    storage.overload_sprites = overload_sprites
   end
   on_change(nil)
 end
@@ -63,7 +63,7 @@ end
 function linked_entities.added(entity)
   on_change(entity)
   if entity and entity.name == "cube-beacon" then
-    set_active(entity, "beacon", false)
+    set_active(entity, "cube-beacon", false)
   end
 end
 
@@ -83,19 +83,19 @@ function linked_entities.tick(tick)
   local cache = entity_cache.get()
   local tick_index = tick % entity_cache.by_tick_size
 
-  if global.module_machines_ticks and global.module_machines_ticks > 0 then
-    global.module_machines_ticks = global.module_machines_ticks - 1
+  if storage.module_machines_ticks and storage.module_machines_ticks > 0 then
+    storage.module_machines_ticks = storage.module_machines_ticks - 1
     local module_machines = cache.by_name_by_tick["__module-machines__"]
     if module_machines then
       for _, e in pairs(module_machines[tick_index]) do
         local entity = e.entity
         local active = not (entity.beacons_count and entity.beacons_count > 1)
-        if set_active(entity, "effect", active) then
+        if set_active(entity, "cube-effect", active) then
           if active then
             local unit_number = entity.unit_number
-            local id = overload_sprites[unit_number]
-            if id and rendering.is_valid(id) then
-              rendering.destroy(id)
+            local sprite = overload_sprites[unit_number]
+            if sprite and sprite.valid then
+              sprite.destroy()
             end
             overload_sprites[unit_number] = nil
           else
@@ -123,7 +123,7 @@ function linked_entities.tick(tick)
         e.products_finished = 0
       end
       local products_finished = fluid_source.products_finished
-      set_active(entity, "beacon", products_finished > e.products_finished)
+      set_active(entity, "cube-beacon", products_finished > e.products_finished)
       e.products_finished = products_finished
     end
   end
@@ -144,8 +144,9 @@ function linked_entities.tick(tick)
         end
         e.power_production = energy
         e.electric_buffer_size = energy
+        set_active(e, "cube-antimatter", energy > 0)
         if animation and animation.valid then
-          set_active(animation, "anti", energy > 0)
+          set_active(animation, "cube-antimatter", energy > 0)
         end
       end
     end
@@ -181,10 +182,10 @@ function linked_entities.tick(tick)
 
   local nuclear_reactors = cache.by_name["cube-nuclear-reactor"]
   if nuclear_reactors then
-    local reactor_hysteresis = global.reactor_hysteresis
+    local reactor_hysteresis = storage.reactor_hysteresis
     if not reactor_hysteresis then
       reactor_hysteresis = {}
-      global.reactor_hysteresis = reactor_hysteresis
+      storage.reactor_hysteresis = reactor_hysteresis
     end
     for k, timer in pairs(reactor_hysteresis) do
       if timer > 0 then
@@ -214,7 +215,11 @@ function linked_entities.tick(tick)
         elseif status == defines.entity_status.full_burnt_result_output or
                status == defines.entity_status.no_fuel then
           burner.currently_burning = nil
-          reactor.surface.spill_item_stack(reactor.position, {name = "used-up-uranium-fuel-cell", count = 1}, false, nil, false)
+          reactor.surface.spill_item_stack {
+            position = reactor.position,
+            stack = {name = "depleted-uranium-fuel-cell", count = 1},
+            allow_belts = false,
+          }
         end
       end
       if new_entity then
@@ -241,7 +246,11 @@ local function insert_or_spill(entity, inventory, item)
   end
   if inserted_count < item.count then
     item.count = item.count - inserted_count
-    local spill = entity.surface.spill_item_stack(entity.position, item, nil, nil, false)
+    local spill = entity.surface.spill_item_stack {
+      position = entity.position,
+      stack = item,
+      allow_belts = false,
+    }
     for _, e in ipairs(spill) do
       cube_search.hint_entity(e)
     end
@@ -252,12 +261,12 @@ local function transfer_or_drop_all(entity, inventory, item_set)
   for i = 1, entity.get_max_inventory_index() do
     local di = entity.get_inventory(i)
     if di then
-      for item, count in pairs(di.get_contents()) do
+      for _, stack in pairs(di.get_contents()) do
         if not item_set then
-          insert_or_spill(entity, inventory, {name = item, count = count})
-        elseif item_set[item] then
-          insert_or_spill(entity, inventory, {name = item, count = count})
-          di.remove({name = item, count = count})
+          insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
+        elseif item_set[stack.name] then
+          insert_or_spill(entity, inventory, {name = stack.name, count = stack.count})
+          di.remove({name = stack.name, count = stack.count})
         end
       end
       if not item_set then

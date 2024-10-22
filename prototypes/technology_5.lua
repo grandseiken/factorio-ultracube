@@ -4,8 +4,8 @@ data:extend({
   {
     type = "technology",
     name = "cube-arcane-drive",
-    icon_size = 256, icon_mipmaps = 4,
-    icon = "__Krastorio2Assets__/technologies/advanced-additional-engine.png",
+    icon_size = 256,
+    icon = "__Krastorio2Assets__/technologies/advanced-additional-engine-equipment.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-arcane-drive"},
     },
@@ -13,13 +13,14 @@ data:extend({
       "cube-deep-introspection-card",
       "cube-synthetic-premonition-card",
     },
+    essential = true,
     unit = tech_cost_unit("5", 240),
     order = "5-0-0",
   },
   {
     type = "technology",
     name = "cube-exoskeleton-equipment-mk2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/advanced-exoskeleton-equipment.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment-mk2"},
@@ -60,7 +61,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-productivity-module-v2",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__base__/graphics/technology/productivity-module-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-productivity-module-v2"},
@@ -76,7 +77,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-experimental-teleporter",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/planetary-teleporter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-experimental-teleporter"},
@@ -93,7 +94,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-forbidden-ziggurat",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-forbidden-ziggurat"},
@@ -104,6 +105,7 @@ data:extend({
       "cube-arcane-drive",
       "cube-quantum-decoder",
     },
+    essential = true,
     unit = tech_cost_unit("5", 1200),
     order = "5-3-0",
   },
@@ -112,11 +114,11 @@ data:extend({
     name = "cube-construct-forbidden-ziggurat",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
       },
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/overlays/equipment-overlay.png",
       },
     },
@@ -124,10 +126,10 @@ data:extend({
       tech_unlock_effect(),
     },
     prerequisites = {"cube-forbidden-ziggurat"},
-    unit = {
-      count = 1,
-      time = 1 / 1024,
-      ingredients = {{"cube-construct-forbidden-ziggurat-dummy", 1}},
+    essential = true,
+    research_trigger = {
+      type = "build-entity",
+      entity = {name = "cube-forbidden-ziggurat"},
     },
     order = "5-3-1",
   },
@@ -136,11 +138,11 @@ data:extend({
     name = "cube-resonance-cascade",
     icons = {
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/intergalactic-transceiver.png",
       },
       {
-        icon_size = 256, icon_mipmaps = 4,
+        icon_size = 256,
         icon = "__Krastorio2Assets__/technologies/matter-cube.png",
         tint = {r = 1, g = 1, b = 1, a = 0.5},
       },
@@ -155,6 +157,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube"},
     },
     prerequisites = {"cube-construct-forbidden-ziggurat"},
+    essential = true,
     unit = tech_cost_unit("5", 800),
     order = "5-3-2",
   },
@@ -163,12 +166,13 @@ data:extend({
     name = "cube-complete-annihilation-card",
     localised_description = {"technology-description.cube-technology-technology"},
     icon = "__Krastorio2Assets__/technologies/advanced-tech-card.png",
-    icon_size = 256, icon_mipmaps = 4,
+    icon_size = 256,
     effects = {
       {type = "unlock-recipe", recipe = "cube-complete-annihilation-card"},
       tech_unlock_effect(),
     },
     prerequisites = {"cube-resonance-cascade"},
+    essential = true,
     unit = tech_cost_unit("5", 1200),
     order = "5-3-3",
   },

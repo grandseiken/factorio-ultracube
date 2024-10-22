@@ -8,7 +8,7 @@ local function get_products(e_state, entry)
     return nil
   end
   if entry.product_recipe then
-    return game.recipe_prototypes[entry.product_recipe].products
+    return prototypes.recipe[entry.product_recipe].products
   elseif e_state.random_product then
     return e_state.random_product
   elseif entry.random_products then
@@ -27,10 +27,10 @@ end
 local transition = {}
 
 function transition.tick(tick)
-  local state = global.transition_state
+  local state = storage.transition_state
   if not state then
-    global.transition_state = {}
-    state = global.transition_state
+    storage.transition_state = {}
+    state = storage.transition_state
   end
 
   local cache = entity_cache.get()
@@ -91,7 +91,7 @@ function transition.tick(tick)
           end
         end
       end
-      set_active(e, "multi", active)
+      set_active(e, "full-output", active)
     end
     e_state.crafts = crafts
     e_state.recipe = recipe

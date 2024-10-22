@@ -1,6 +1,7 @@
 require("menu_simulations.menu_simulations")
 
 require("prototypes.autoplace")
+require("prototypes.collision")
 require("prototypes.custom_inputs")
 require("prototypes.equipment")
 require("prototypes.fluids")
@@ -73,3 +74,5 @@ require("prototypes.entities.robots")
 require("prototypes.entities.stygian_energy_lab")
 require("prototypes.entities.synthesizer")
 require("prototypes.entities.ultradense_furnace")
+
+require("prototypes.expansion.elevated_rails")

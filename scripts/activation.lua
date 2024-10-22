@@ -2,13 +2,13 @@ local entity_map = nil
 local activation = {}
 
 function activation.on_load()
-  entity_map = global.activation_map
+  entity_map = storage.activation_map
 end
 
 function activation.refresh()
   if not entity_map then
     entity_map = {}
-    global.activation_map = entity_map
+    storage.activation_map = entity_map
   end
 end
 
@@ -33,6 +33,7 @@ function activation.set(entity, key, active)
       table.count = count
       if count == 0 then
         entity.active = true
+        entity.custom_status = nil
       end
       return true
     end
@@ -43,6 +44,10 @@ function activation.set(entity, key, active)
       table.count = count + 1
       if count == 0 then
         entity.active = false
+        entity.custom_status = {
+          diode = defines.entity_status_diode.red,
+          label = {"entity-status." .. key},
+        }
       end
       return true
     end
