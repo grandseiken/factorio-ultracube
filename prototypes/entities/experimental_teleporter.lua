@@ -127,7 +127,6 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      render_layer = "higher-object-under",
       filename = "__Krastorio2Assets__/entities/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       flags = {"mask"},
       priority = "extra-high",

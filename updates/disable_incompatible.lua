@@ -165,7 +165,6 @@ for _, v in ipairs(entity_prototypes) do
     else
       t.next_upgrade = nil
       t.hidden = true
-      t.hide_from_signal_gui = true
     end
   end
 end
@@ -185,7 +184,6 @@ for _, t in pairs(data.raw.fluid) do
     t.order = add_prefix(t.order)
   else
     t.hidden = true
-    t.hide_from_signal_gui = true
   end
 end
 

@@ -86,30 +86,32 @@ local ziggurat_animations = {
 
 local ziggurat_working_sound = {
   sound = {
-    preload = true,
     variations = {
       {
         filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge.ogg",
         volume = 1,
+        preload = true,
       },
       {
         filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge.ogg",
         volume = 1,
+        preload = true,
       },
       {
         filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge-morse.ogg",
         volume = 1,
+        preload = true,
       },
     },
   },
   idle_sound = {
     filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver.ogg",
     volume = 1,
+    audible_distance_modifier = 1,
   },
   max_sounds_per_type = 3,
   fade_in_ticks = 10,
   fade_out_ticks = 30,
-  audible_distance_modifier = 1,
 }
 
 local ziggurat_picture = {

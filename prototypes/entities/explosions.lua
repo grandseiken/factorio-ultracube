@@ -80,16 +80,15 @@ local function make_spark_explosion(name, particle, color, height)
     light = {intensity = 0.25, size = 4, color = color},
     animations = make_empty_animation(),
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
       },
       audible_distance_modifier = 1,
       variations = {
-        {filename = "__Ultracube__/assets/sounds/zap-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Ultracube__/assets/sounds/zap-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-        {filename = "__Ultracube__/assets/sounds/zap-3.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+        {filename = "__Ultracube__/assets/sounds/zap-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+        {filename = "__Ultracube__/assets/sounds/zap-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+        {filename = "__Ultracube__/assets/sounds/zap-3.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
       },
     },
     created_effect = {
@@ -108,7 +107,7 @@ local function make_spark_explosion(name, particle, color, height)
             tail_width = 4,
             tail_length = 10,
             frame_speed = 1,
-            frame_speed_variation = 0.25,
+            frame_speed_deviation = 0.25,
             speed_from_center = 0.0125,
             speed_from_center_deviation = 0.005,
             offset_deviation = {{-0.125, -0.125}, {0.125, 0.125}},
@@ -131,17 +130,16 @@ local function make_puff_explosion(name, height)
     light = {intensity = 0.25, size = 2, color = blue_light},
     animations = make_empty_animation(12),
     sound = {
-      preload = true,
       aggregation = {
         max_count = 16,
         remove = true,
       },
       audible_distance_modifier = 1,
       variations = {
-        {filename = "__Ultracube__/assets/sounds/celesta-08.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-13.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-15.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
-        {filename = "__Ultracube__/assets/sounds/celesta-20.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05},
+        {filename = "__Ultracube__/assets/sounds/celesta-08.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-13.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-15.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
+        {filename = "__Ultracube__/assets/sounds/celesta-20.ogg", volume = 1 / 6, min_speed = 0.925, max_speed = 1.05, preload = true},
       },
     },
     created_effect = {
@@ -311,16 +309,15 @@ local function make_periodic_explosion(name, color, base_shockwave, base_explosi
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/nuclear-explosion-1.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
-                    {filename = "__base__/sound/fight/nuclear-explosion-2.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
-                    {filename = "__base__/sound/fight/nuclear-explosion-3.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275},
+                    {filename = "__base__/sound/fight/nuclear-explosion-1.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
+                    {filename = "__base__/sound/fight/nuclear-explosion-2.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
+                    {filename = "__base__/sound/fight/nuclear-explosion-3.ogg", volume = 0.25, min_speed = 1.225, max_speed = 1.275, preload = true},
                   },
                 },
               },
@@ -441,35 +438,33 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/robot-die-vox-1.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-2.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-3.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-4.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-5.ogg", volume = 0.25},
-                    {filename = "__base__/sound/fight/robot-die-vox-6.ogg", volume = 0.25},
+                    {filename = "__base__/sound/fight/robot-die-vox-1.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-2.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-3.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-4.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-5.ogg", volume = 0.25, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-vox-6.ogg", volume = 0.25, preload = true},
                   },
                 },
               },
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 1,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/fight/robot-die-impact-1.ogg", volume = 0.5},
-                    {filename = "__base__/sound/fight/robot-die-impact-2.ogg", volume = 0.5},
-                    {filename = "__base__/sound/fight/robot-die-impact-3.ogg", volume = 0.5},
+                    {filename = "__base__/sound/fight/robot-die-impact-1.ogg", volume = 0.5, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-impact-2.ogg", volume = 0.5, preload = true},
+                    {filename = "__base__/sound/fight/robot-die-impact-3.ogg", volume = 0.5, preload = true},
                   },
                 },
               },
@@ -528,31 +523,29 @@ data:extend({
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
                   },
                   audible_distance_modifier = 0.75,
                   variations = {
-                    {filename = "__base__/sound/fight/pulse.ogg", volume = 1 / 7, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/fight/pulse.ogg", volume = 1 / 7, min_speed = 0.875, max_speed = 1.125, preload = true},
                   },
                 },
               },
               {
                 type = "play-sound",
                 sound = {
-                  preload = true,
                   aggregation = {
                     max_count = 16,
                     remove = true,
                   },
                   audible_distance_modifier = 1,
                   variations = {
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
-                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-1.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
+                    {filename = "__base__/sound/creatures/projectile-acid-burn-long-2.ogg", volume = 1 / 8, min_speed = 0.875, max_speed = 1.125, preload = true},
                   },
                 },
               },
@@ -678,16 +671,17 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 1.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 1.0,
+          preload = true,
         },
       },
     },
@@ -729,16 +723,17 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {max_count = 1, remove = true},
       variations = {
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 2.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 2.0,
+          preload = true,
         },
       },
     },
@@ -801,7 +796,6 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
@@ -810,10 +804,12 @@ data:extend({
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 1.0,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 1.0,
+          preload = true,
         },
       },
     },
@@ -876,7 +872,6 @@ data:extend({
       },
     },
     sound = {
-      preload = true,
       aggregation = {
         max_count = 1,
         remove = true,
@@ -885,10 +880,12 @@ data:extend({
         {
           filename = "__base__/sound/fight/large-explosion-1.ogg",
           volume = 0.5,
+          preload = true,
         },
         {
           filename = "__base__/sound/fight/large-explosion-2.ogg",
           volume = 0.5,
+          preload = true,
         },
       },
     },
