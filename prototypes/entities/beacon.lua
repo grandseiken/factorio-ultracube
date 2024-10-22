@@ -93,6 +93,12 @@ data:extend({
       rotate = false,
       orientation_to_variation = false,
     },
+    working_sound =
+    {
+      sound = sound_variations("__base__/sound/beacon", 2, 0.2),
+      audible_distance_modifier = 0.33,
+      max_sounds_per_type = 3
+    },
 
     energy_usage = "800kW",
     energy_source = {type = "void"},
