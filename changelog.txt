@@ -26,6 +26,7 @@ Date: ???
     - Reduced the volume of the beacon input fluidbox from 100 to 10.
     - Increased the yield of the Altered Components recipe.
     - Efficiency modules are now allowed in beacons.
+    - Somewhat increased the capacity of larger containers to match the storge density (stacks-per-tile in typical layout) of iron chests.
   Bugfixes:
     - The wire connections of the backup turbine can no longer be interacted with manually.
 ---------------------------------------------------------------------------------------------------

@@ -22,7 +22,7 @@ data:extend({
     selection_box = {{-1, -1}, {1, 1}},
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "container",
-    inventory_size = 40,
+    inventory_size = 60,
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
@@ -51,7 +51,7 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     fast_replaceable_group = "container",
-    inventory_size = 60,
+    inventory_size = 120,
     vehicle_impact_sound = sounds.generic_impact,
     opened_duration = logistic_chest_opened_duration,
     picture = {
