@@ -3,7 +3,7 @@ require("__Ultracube__/prototypes/entities/lib/pipe")
 local chamber_animation_horizontal = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-H.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-H.png",
       width = 469,
       height = 270,
       frame_count = 6,
@@ -12,7 +12,7 @@ local chamber_animation_horizontal = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
       width = 514,
       height = 225,
       frame_count = 6,
@@ -27,7 +27,7 @@ local chamber_animation_horizontal = {
 local chamber_animation_vertical = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-V.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-V.png",
       width = 330,
       height = 500,
       frame_count = 6,
@@ -36,7 +36,7 @@ local chamber_animation_vertical = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
       width = 350,
       height = 425,
       frame_count = 6,
@@ -51,14 +51,14 @@ local chamber_animation_vertical = {
 local reactor_picture = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor.png",
       width = 1100,
       height = 1100,
       scale = 0.5,
       shift = {1.01, 0},
     },
     {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-shadow.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-shadow.png",
       priority = "medium",
       width = 1100,
       height = 1100,
@@ -73,7 +73,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
@@ -90,7 +90,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-steam.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
@@ -107,7 +107,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-glow.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-glow.png",
       priority = "high",
       line_length = 6,
       width = 626,
@@ -123,7 +123,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation-light.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-light.png",
       line_length = 6,
       width = 626,
       height = 688,
@@ -137,7 +137,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-light.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-light.png",
       priority = "high",
       width = 1100,
       height = 1100,
@@ -153,7 +153,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-animation.png",
+      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation.png",
       line_length = 6,
       width = 626,
       height = 688,
@@ -248,7 +248,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/remnants/fusion-reactor/fusion-reactor-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/fusion-reactor-remnant/fusion-reactor-remnant.png",
       line_length = 1,
       width = 1100,
       height = 1100,
@@ -286,7 +286,7 @@ data:extend({
     picture = reactor_picture,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/fusion-reactor/fusion-reactor-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-reflection.png",
         priority = "extra-high",
         width = 110,
         height = 110,

@@ -17,7 +17,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/crusher/crusher.png",
+            filename = "__Krastorio2Assets__/buildings/crusher/crusher.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -27,7 +27,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/crusher/crusher-shadow.png",
+            filename = "__Krastorio2Assets__/buildings/crusher/crusher-shadow.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -61,7 +61,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/crusher/crusher-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/crusher/crusher-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

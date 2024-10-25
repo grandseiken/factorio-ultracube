@@ -8,7 +8,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charging.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -29,7 +29,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -48,7 +48,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charge.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -68,7 +68,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
+          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -117,7 +117,7 @@ local ziggurat_working_sound = {
 local ziggurat_picture = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-light.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -126,7 +126,7 @@ local ziggurat_picture = {
       draw_as_light = true,
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -134,7 +134,7 @@ local ziggurat_picture = {
       shift = {0, -0.8},
     },
     {
-      filename = "__Krastorio2Assets__/entities/intergalactic-transceiver/intergalactic-transceiver-sh.png",
+      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
       width = 867,
       height = 626,
       scale = 0.5,

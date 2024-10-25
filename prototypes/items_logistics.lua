@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "cube-medium-container",
-    icon = "__Krastorio2Assets__/icons/entities/medium-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/storehouse.png",
     icon_size = 64,
     subgroup = "storage",
     order = "cube-a[items]-w[medium-chest]",
@@ -17,7 +17,7 @@ data:extend({
   {
     type = "item",
     name = "cube-big-container",
-    icon = "__Krastorio2Assets__/icons/entities/big-container.png",
+    icon = "__Krastorio2Assets__/icons/entities/warehouse.png",
     icon_size = 64,
     subgroup = "storage",
     order = "cube-a[items]-x[big-chest]",
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-storage-1",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-1.png",
+    icon = "__Krastorio2Assets__/icons/entities/big-storage-tank.png",
     icon_size = 64,
     subgroup = "storage",
     order = "cube-z[tanks]-y[medium]",
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-storage-2",
-    icon = "__Krastorio2Assets__/icons/entities/fluid-storage-2.png",
+    icon = "__Krastorio2Assets__/icons/entities/huge-storage-tank.png",
     icon_size = 64,
     subgroup = "storage",
     order = "cube-z[tanks]-z[big]",
@@ -57,7 +57,7 @@ data:extend({
   {
     type = "item",
     name = "cube-v4-transport-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-transport-belt.png",
     icon_size = 64,
     subgroup = "belt",
     order = "cube-a[transport-belt]-d[v4-transport-belt]",
@@ -70,7 +70,7 @@ data:extend({
   {
     type = "item",
     name = "cube-v4-underground-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-underground-belt.png",
     icon_size = 64,
     subgroup = "belt",
     order = "cube-b[underground-belt]-d[v4-underground-belt]",
@@ -83,7 +83,7 @@ data:extend({
   {
     type = "item",
     name = "cube-v4-splitter",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-splitter.png",
     icon_size = 64,
     subgroup = "belt",
     order = "cube-c[splitter]-d[v4-splitter]",

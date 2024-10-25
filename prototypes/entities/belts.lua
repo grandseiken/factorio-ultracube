@@ -1,6 +1,6 @@
 local v4_transport_belt_animation_set = {
   animation_set = {
-    filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
+    filename = "__Krastorio2Assets__/buildings/superior-transport-belt/superior-transport-belt.png",
     priority = "extra-high",
     width = 128,
     height = 128,
@@ -44,7 +44,7 @@ data:extend({
     type = "corpse",
     name = "cube-v4-transport-belt-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-v4-transport-belt"}},
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-transport-belt.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -57,7 +57,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(8, {
-      filename = "__Krastorio2Assets__/entities/remnants/transport-belts/superior-transport-belt/transport-belt/superior-transport-belt-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/superior-transport-belt-remnant/superior-transport-belt-remnant.png",
       line_length = 1,
       width = 106,
       height = 102,
@@ -73,7 +73,7 @@ data:extend({
     type = "corpse",
     name = "cube-v4-underground-belt-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-v4-underground-belt"}},
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-underground-belt.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -86,7 +86,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = "__Krastorio2Assets__/entities/remnants/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/superior-underground-belt-remnant/superior-underground-belt-remnant.png",
       line_length = 1,
       width = 116,
       height = 100,
@@ -102,7 +102,7 @@ data:extend({
     type = "corpse",
     name = "cube-v4-splitter-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-v4-splitter"}},
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-splitter.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
     selection_box = {{-0.9, -0.5}, {0.9, 0.5}},
@@ -115,7 +115,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = {
-      filename = "__Krastorio2Assets__/entities/remnants/transport-belts/superior-transport-belt/splitter/superior-splitter-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/superior-splitter-remnant/superior-splitter-remnant.png",
       line_length = 1,
       width = 172,
       height = 156,
@@ -131,7 +131,7 @@ data:extend({
   {
     type = "transport-belt",
     name = "cube-v4-transport-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-transport-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-transport-belt.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "cube-v4-transport-belt"},
@@ -147,7 +147,7 @@ data:extend({
       persistent = true,
     },
     animations = {
-      filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/transport-belt/superior-transport-belt.png",
+      filename = "__Krastorio2Assets__/buildings/superior-transport-belt/superior-transport-belt.png",
       priority = "extra-high",
       width = 128,
       height = 128,
@@ -167,7 +167,7 @@ data:extend({
   {
     type = "underground-belt",
     name = "cube-v4-underground-belt",
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-underground-belt.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-underground-belt.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "cube-v4-underground-belt"},
@@ -199,7 +199,7 @@ data:extend({
     structure = {
       direction_in = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -209,7 +209,7 @@ data:extend({
       },
       direction_out = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -218,7 +218,7 @@ data:extend({
       },
       direction_in_side_loading = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -228,7 +228,7 @@ data:extend({
       },
       direction_out_side_loading = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -238,7 +238,7 @@ data:extend({
       },
       back_patch = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure-back-patch.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure-back-patch.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -247,7 +247,7 @@ data:extend({
       },
       front_patch = {
         sheet = {
-          filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/underground-belt/superior-underground-belt-structure-front-patch.png",
+          filename = "__Krastorio2Assets__/buildings/superior-underground-belt/superior-underground-belt-structure-front-patch.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -260,7 +260,7 @@ data:extend({
     type = "splitter",
     name = "cube-v4-splitter",
     localised_description = {"entity-description.splitter"},
-    icon = "__Krastorio2Assets__/icons/entities/transport-belts/superior-transport-belt/superior-splitter.png",
+    icon = "__Krastorio2Assets__/icons/entities/superior-splitter.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.2, result = "cube-v4-splitter"},
@@ -276,7 +276,7 @@ data:extend({
     animation_speed_coefficient = 32,
     structure = {
       north = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-north.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-north.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -286,7 +286,7 @@ data:extend({
         scale = 0.5,
       },
       east = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-east.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-east.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -296,7 +296,7 @@ data:extend({
         scale = 0.5,
       },
       south = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-south.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-south.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -306,7 +306,7 @@ data:extend({
         scale = 0.5,
       },
       west = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-west.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-west.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -319,7 +319,7 @@ data:extend({
     structure_patch = {
       north = util.empty_sprite(),
       east = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-east-top_patch.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-east-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",
@@ -330,7 +330,7 @@ data:extend({
       },
       south = util.empty_sprite(),
       west = {
-        filename = "__Krastorio2Assets__/entities/transport-belts/superior-transport-belt/splitter/superior-splitter-west-top_patch.png",
+        filename = "__Krastorio2Assets__/buildings/superior-splitter/superior-splitter-west-top_patch.png",
         frame_count = 32,
         line_length = 8,
         priority = "extra-high",

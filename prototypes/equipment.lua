@@ -58,7 +58,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "cube-solar-panel-equipment-mk2",
     sprite = {
-      filename = "__Krastorio2Assets__/entities/advanced-solar-panel/advanced-solar-panel.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel.png",
       width = 280,
       height = 280,
       priority = "medium",

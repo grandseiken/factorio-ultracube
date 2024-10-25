@@ -181,7 +181,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
     icon_size = 128,
     effects = {
       {type = "unlock-recipe", recipe = "cube-synthesizer"},

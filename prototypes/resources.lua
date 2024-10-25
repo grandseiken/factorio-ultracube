@@ -130,7 +130,7 @@ data:extend({
     type = "resource",
     name = "cube-deep-core-vein",
     category = "cube-deep-core",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/raw-imersite/raw-imersite.png",
+    icon = "__Krastorio2Assets__/icons/items/raw-imersite.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-b",

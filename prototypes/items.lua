@@ -506,22 +506,22 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-debris",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+    icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
     icon_size = 64,
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-1.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron-1.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/enriched-iron/enriched-iron-2.png",
+        filename = "__Krastorio2Assets__/icons/items/enriched-iron-2.png",
         scale = 0.5,
       },
     },
@@ -535,17 +535,17 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-powder",
-    icon = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+    icon = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
     icon_size = 64,
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items-with-variations/lithium-chloride/lithium-chloride-1.png",
+        filename = "__Krastorio2Assets__/icons/items/lithium-chloride-1.png",
         scale = 0.5,
       },
     },

@@ -43,7 +43,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse.png",
+            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -51,7 +51,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-sh.png",
+            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-sh.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -65,7 +65,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-light.png",
+            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-light.png",
             width = 512,
             height = 512,
             frame_count = 1,
@@ -77,7 +77,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/greenhouse/greenhouse-working.png",
+            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-working.png",
             width = 512,
             height = 512,
             frame_count = 10,

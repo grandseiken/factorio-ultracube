@@ -79,7 +79,7 @@ data.raw.radar["radar"].vehicle_impact_sound = {
 }
 
 data.raw.radar["radar"].integration_patch = {
-  filename = "__Krastorio2Assets__/entities/advanced-radar/radar-integration.png",
+  filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-integration.png",
   priority = "low",
   width = 238,
   height = 216,
@@ -90,7 +90,7 @@ data.raw.radar["radar"].integration_patch = {
 data.raw.radar["radar"].pictures = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/advanced-radar/radar.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-radar/radar.png",
       priority = "low",
       width = 196,
       height = 254,
@@ -101,7 +101,7 @@ data.raw.radar["radar"].pictures = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/advanced-radar/radar-shadow.png",
+      filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-shadow.png",
       priority = "low",
       width = 343,
       height = 186,

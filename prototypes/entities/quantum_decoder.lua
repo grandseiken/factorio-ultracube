@@ -5,7 +5,7 @@ require("__Ultracube__/prototypes/entities/lib/module_effects")
 local animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer.png",
+      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer.png",
       priority = "high",
       width = 400,
       height = 420,
@@ -16,7 +16,7 @@ local animation = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer-sh.png",
+      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-sh.png",
       priority = "medium",
       width = 402,
       height = 362,
@@ -33,7 +33,7 @@ local animation = {
 local working_visualisations = {
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer-light.png",
+      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-light.png",
       priority = "extra-high",
       draw_as_light = true,
       width = 400,
@@ -47,7 +47,7 @@ local working_visualisations = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/entities/quantum-computer/quantum-computer-glow.png",
+      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-glow.png",
       priority = "extra-high",
       draw_as_glow = true,
       blend_mode = "additive-soft",

@@ -7,7 +7,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
     icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-synthesizer"},
@@ -52,7 +52,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator.png",
             priority = "high",
             width = 473,
             height = 489,
@@ -61,7 +61,7 @@ data:extend({
             shift = {0, -0.15},
           },
           {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-sh.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-sh.png",
             priority = "medium",
             width = 508,
             height = 446,
@@ -75,7 +75,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow-light.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-glow-light.png",
             priority = "high",
             draw_as_light = true,
             width = 144,
@@ -90,7 +90,7 @@ data:extend({
         {
           synced_fadeout = true,
           animation = {
-            filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-glow.png",
+            filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-glow.png",
             priority = "high",
             draw_as_glow = true,
             blend_mode = "additive",
@@ -107,7 +107,7 @@ data:extend({
           animation = {
             layers = {
               {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working-light.png",
+                filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working-light.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -119,7 +119,7 @@ data:extend({
                 draw_as_light = true,
               },
               {
-                filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-working.png",
+                filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-working.png",
                 priority = "high",
                 width = 473,
                 height = 489,
@@ -144,7 +144,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/matter-assembler.ogg",
+        filename = "__Krastorio2Assets__/sounds/buildings/matter-associator.ogg",
         volume = 0.60,
       },
       idle_sound = { filename = "__base__/sound/idle1.ogg" },
@@ -161,7 +161,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/entities/matter-assembler/matter-assembler-reflection.png",
+        filename = "__Krastorio2Assets__/buildings/matter-associator/matter-associator-reflection.png",
         priority = "extra-high",
         width = 46,
         height = 46,

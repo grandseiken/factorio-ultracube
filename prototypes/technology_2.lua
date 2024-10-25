@@ -620,19 +620,19 @@ data:extend({
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass.png",
+        icon = "__Krastorio2Assets__/icons/items/biomass.png",
         shift = {0, -20},
         scale = 0.5,
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-1.png",
+        icon = "__Krastorio2Assets__/icons/items/biomass-1.png",
         shift = {-0.866 * 20, 10},
         scale = 0.5,
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/biomass/biomass-2.png",
+        icon = "__Krastorio2Assets__/icons/items/biomass-2.png",
         shift = {0.866 * 20, 10},
         scale = 0.5,
       },

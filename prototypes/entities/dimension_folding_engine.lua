@@ -20,7 +20,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/entities/remnants/antimatter-reactor/antimatter-reactor-remnant.png",
+      filename = "__Krastorio2Assets__/remnants/antimatter-reactor-remnant/antimatter-reactor-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,
@@ -47,7 +47,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-light.png",
+            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-light.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -60,7 +60,7 @@ data:extend({
             blend_mode = "additive",
           },
           {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-glow.png",
+            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-glow.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -74,7 +74,7 @@ data:extend({
             fadeout = true,
           },
           {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor.png",
+            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -85,7 +85,7 @@ data:extend({
             scale = 0.48,
           },
           {
-            filename = "__Krastorio2Assets__/entities/antimatter-reactor/antimatter-reactor-sh.png",
+            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-sh.png",
             width = 724,
             height = 630,
             shift = {0.57, 0.27},

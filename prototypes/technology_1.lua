@@ -39,13 +39,13 @@ data:extend({
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/raw-rare-metals/raw-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
         shift = {0, -20},
         scale = 0.5,
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items-with-variations/enriched-rare-metals/enriched-rare-metals.png",
+        icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
         shift = {-0.866 * 20, 10},
         scale = 0.5,
       },
@@ -336,7 +336,7 @@ data:extend({
     icons = {
       {
         icon_size = 128,
-        icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+        icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
       },
       {
         icon_size = 64,

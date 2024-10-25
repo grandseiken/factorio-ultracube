@@ -502,7 +502,7 @@ data:extend({
     type = "recipe",
     name = "cube-ghost-crystal",
     icons = {{
-      icon = "__Krastorio2Assets__/icons/items-with-variations/quartz/quartz.png",
+      icon = "__Krastorio2Assets__/icons/items/quartz.png",
       icon_size = 64,
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},

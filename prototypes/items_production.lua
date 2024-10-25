@@ -199,7 +199,7 @@ data:extend({
   {
     type = "item",
     name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-assembler.png",
+    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
     icon_size = 128,
     subgroup = "cube-production-machines",
     order = "cube-1[1-synthesizer]",
@@ -264,7 +264,7 @@ data:extend({
   {
     type = "item",
     name = "cube-roboport",
-    icon = "__Krastorio2Assets__/icons/entities/large-roboport.png",
+    icon = "__Krastorio2Assets__/icons/entities/big-roboport.png",
     icon_size = 64,
     subgroup = "cube-logistic-machines",
     order = "cube-2[roboport]",

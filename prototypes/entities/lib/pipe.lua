@@ -1,5 +1,5 @@
 empty_sprite = {
-  filename = "__Krastorio2Assets__/entities/empty.png",
+  filename = "__Ultracube__/assets/empty.png",
   priority = "high",
   width = 1,
   height = 1,
@@ -11,7 +11,7 @@ pipe_path = {
   north = empty_sprite,
   east = empty_sprite,
   south = {
-    filename = "__Krastorio2Assets__/entities/pipe-patch/pipe-patch.png",
+    filename = "__Krastorio2Assets__/buildings/pipe-patch/pipe-patch.png",
     priority = "high",
     width = 55,
     height = 50,
