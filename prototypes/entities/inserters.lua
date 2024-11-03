@@ -114,7 +114,7 @@ data:extend({
     },
     platform_picture = {
       sheet = {
-        filename = "__Krastorio2Assets__/buildings/superior-inserters/superior-inserter-platform.png",
+        filename = "__Krastorio2Assets__/buildings/superior-inserter/superior-inserter-platform.png",
         priority = "extra-high",
         width = 105,
         height = 79,

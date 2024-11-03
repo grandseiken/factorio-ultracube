@@ -5,7 +5,7 @@ data.raw.pump.pump.pumping_speed = 250
 data.raw.pump.pump.energy_usage = "40kW"
 data.raw.pump.pump.energy_source.drain = "0kW"
 data.raw.pump.pump.fluid_box.volume = 500
-data.raw["utility-constants"].default.max_fluid_flow = 400
+data.raw["utility-constants"].default.max_fluid_flow = 300
 
 data.raw["item-subgroup"]["armor"].group = "cube-tools"
 data.raw["item-subgroup"]["defensive-structure"].group = "cube-tools"
