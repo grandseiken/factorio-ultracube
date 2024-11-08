@@ -414,6 +414,7 @@ data:extend({
     icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk3.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-electric-mining-drill-mk2"},
+      {type = "mining-with-fluid", modifier = true},
     },
     prerequisites = {"cube-resplendent-plate"},
     unit = tech_cost_unit("2", 240),

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.1
+Date: 08.11.2024
+  Bugfixes:
+    - Fixed a missing locale entry related to stack and bulk inserter renames.
+    - Fixed that the cubecam could be opened by modded toolbar shortcuts other than the cubecam shortcut.
+    - Fixed that resplendent mining drills couldn't be placed on uranium since the 2.0 update.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.0
 Date: 03.11.2024
   Major Features:

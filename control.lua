@@ -354,7 +354,9 @@ script.on_event("cube-open-cubecam-fullscreen", function(e)
   cubecam.toggle_open(game.get_player(e.player_index), true)
 end)
 script.on_event(defines.events.on_lua_shortcut, function(e)
-  cubecam.toggle_open(game.get_player(e.player_index), false)
+  if e.prototype_name == "cube-open-cubecam" then
+    cubecam.toggle_open(game.get_player(e.player_index), false)
+  end
 end)
 script.on_event(defines.events.on_gui_click, function(e)
   cubecam.on_click(game.get_player(e.player_index), e.element)
