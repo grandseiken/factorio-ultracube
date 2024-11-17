@@ -3,6 +3,7 @@ if mods["nixie-tubes"] then
     {
       type = "recipe",
       name = "cube-nixie-tube",
+      localised_name = {"item-name.nixie-tube"},
       ingredients = {
         {type = "item", name = "cube-electronic-circuit", amount = 1},
         {type = "item", name = "cube-glass", amount = 2},
@@ -16,6 +17,7 @@ if mods["nixie-tubes"] then
     {
       type = "recipe",
       name = "cube-nixie-tube-alpha",
+      localised_name = {"item-name.nixie-tube-alpha"},
       ingredients = {
         {type = "item", name = "cube-electronic-circuit", amount = 1},
         {type = "item", name = "cube-glass", amount = 2},
@@ -29,6 +31,7 @@ if mods["nixie-tubes"] then
     {
       type = "recipe",
       name = "cube-nixie-tube-small",
+      localised_name = {"item-name.nixie-tube-small"},
       ingredients = {
         {type = "item", name = "cube-electronic-circuit", amount = 1},
         {type = "item", name = "cube-glass", amount = 1},
