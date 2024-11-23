@@ -18,21 +18,6 @@ local function handle_technology(technology_name, unit, prerequisites)
 end
 
 if mods["underground-pipe-pack"] then
-  data.raw.recipe["check-valve"].ingredients = {
-    {type = "item", name = "pipe", amount = 1},
-    {type = "item", name = "cube-basic-matter-unit", amount = 2},
-    {type = "item", name = "cube-basic-motor-unit", amount = 1},
-  }
-  data.raw.recipe["80-overflow-valve"].ingredients = {
-    {type = "item", name = "pipe", amount = 1},
-    {type = "item", name = "cube-basic-matter-unit", amount = 2},
-    {type = "item", name = "cube-basic-motor-unit", amount = 1},
-  }
-  data.raw.recipe["80-top-up-valve"].ingredients = {
-    {type = "item", name = "pipe", amount = 1},
-    {type = "item", name = "cube-basic-matter-unit", amount = 2},
-    {type = "item", name = "cube-basic-motor-unit", amount = 1},
-  }
   data.raw.recipe["underground-mini-pump"].ingredients = {
     {type = "item", name = "cube-basic-motor-unit", amount = 1},
     {type = "item", name = "cube-rare-metals", amount = 2},

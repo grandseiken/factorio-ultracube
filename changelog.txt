@@ -1,8 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: ???
-  Bugfixes:
-    - Fixed load error when using AAI Signal Transmission.
+  Modding:
+    - Restored compatibility with other optional mods, including: AAI Signal Transmission, Advanced Fluid Handling.
   Changes:
     - Removed unncessary additional detail tooltip clutter from byproducts of module recipes.
 ---------------------------------------------------------------------------------------------------
