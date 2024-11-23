@@ -9,7 +9,9 @@ if mods["aai-signal-transmission"] then
         {type = "item", name = "cube-rare-metals", amount = 10},
         {type = "item", name = "cube-advanced-engine", amount = 10},
       },
-      result = "aai-signal-sender",
+      results = {
+        {type = "item", name = "aai-signal-sender", amount = 1},
+      },
       energy_required = 10,
       category = "cube-fabricator-handcraft",
       enabled = false,
@@ -23,7 +25,9 @@ if mods["aai-signal-transmission"] then
         {type = "item", name = "cube-rare-metals", amount = 20},
         {type = "item", name = "cube-advanced-engine", amount = 10},
       },
-      result = "aai-signal-receiver",
+      results = {
+        {type = "item", name = "aai-signal-receiver", amount = 1},
+      },
       energy_required = 10,
       category = "cube-fabricator-handcraft",
       enabled = false,
