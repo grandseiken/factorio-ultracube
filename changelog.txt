@@ -2,7 +2,8 @@
 Version: 0.6.2
 Date: ???
   Modding:
-    - Restored compatibility with other optional mods, including: AAI Signal Transmission, Advanced Fluid Handling.
+    - Restored compatibility with other optional mods, including: AAI Signal Transmission, Advanced Fluid Handling, Flow Control.
+    - Removed compatibility with deprecated 2.0 mods, including: Automatic Fuel Train Stop.
   Changes:
     - Removed unncessary additional detail tooltip clutter from byproducts of module recipes.
 ---------------------------------------------------------------------------------------------------

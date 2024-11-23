@@ -31,8 +31,6 @@ There is a [discord you can join here](https://discord.gg/GAvypzwyWU).
 
 **TL;DR: Ultracube is compatible with Factorio 2.0 (only) as of version 0.6.0. It is not compatible with Space Age itself or the Quality mod. Elevated rails are included if the built-in Elevated rails mod is active.** While the mod will remain playable for those who do not own the expansion, future updates will add more optional content and mechanics based on expansion features.
 
-Other previously-compatible optional dependencies listed [below](#list-of-compatible-mods) have not yet been tested extensively on 2.0. For now, they might or might not work.
-
 Ultracube 0.5.7 was the last version to work with 1.x Factorio versions.
 
 # Overview
@@ -105,8 +103,6 @@ Regardless of technical obstacles, practical considerations could make some othe
 
 ## List of compatible mods
 
-**NOTE:** these mods were compatible with Ultracube pre-Factorio 2.0. While compatibility logic remains in place, they have not been tested extensively on Factorio 2.0 yet, and might require further patching.
-
 The following mods have been specifically adapted to work with Ultracube:
 
 | Mod | Notes |
@@ -114,13 +110,11 @@ The following mods have been specifically adapted to work with Ultracube:
 | [AAI Loaders](https://mods.factorio.com/mod/aai-loaders) | integrated as standard (required dependency) |
 | [AAI Signal Transmission](https://mods.factorio.com/mod/aai-signal-transmission) | |
 | [Advanced Fluid Handling](https://mods.factorio.com/mod/underground-pipe-pack) | not entirely compatible with Flow Control |
-| [Automatic Fuel Train Stop](https://mods.factorio.com/mod/FuelTrainStop) | |
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | adds additional information to the victory screen, for example effective cube utilisation |
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
-| [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | |
-| [Filter Combinator](https://mods.factorio.com/mod/silent-filter-combinator) | |
-| [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | |
+| [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | not yet updated for 2.0 as of last I checked |
+| [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | [Valves](https://mods.factorio.com/mod/valves) also supported on its own |
 | [Grappling Gun](https://mods.factorio.com/mod/grappling-gun) | |
 | [Holographic Signs](https://mods.factorio.com/mod/holographic_signs) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some aspects substantially: leave out for a bigger challenge |
@@ -146,6 +140,13 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
+
+The following mods were also compatible with the last Factorio 1.1 (pre-Space Age) version of Ultracube, but are now subsumed by base game features and deprecated or unnecessary on 2.0:
+
+| Mod | Notes |
+| --- | ----- |
+| [Automatic Fuel Train Stop](https://mods.factorio.com/mod/FuelTrainStop) | replaced by train schedule interrupts |
+| [Filter Combinator](https://mods.factorio.com/mod/silent-filter-combinator) | |
 
 ## Compatibility guide for modders
 
