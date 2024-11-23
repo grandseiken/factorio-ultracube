@@ -1,4 +1,4 @@
-if mods["DeadlockLargerLamp"] then
+if mods["LargerLamps-2_0"] then
   local recipe = data.raw.recipe["deadlock-floor-lamp"]
   recipe.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 1},

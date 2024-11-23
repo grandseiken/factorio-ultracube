@@ -113,40 +113,41 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Better Victory Screen](https://mods.factorio.com/mod/better-victory-screen) | adds additional information to the victory screen, for example effective cube utilisation |
 | [Circuit HUD V2](https://mods.factorio.com/mod/CircuitHUD-V2) | |
 | [Compact Circuits](https://mods.factorio.com/mod/compaktcircuit) | |
-| [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | not yet updated for 2.0 as of last I checked |
+| [Display Plates](https://mods.factorio.com/mod/DisplayPlates) | not yet updated for 2.0 as of last check |
 | [Flow Control](https://mods.factorio.com/mod/Flow%20Control) | [Valves](https://mods.factorio.com/mod/valves) also supported on its own |
 | [Grappling Gun](https://mods.factorio.com/mod/grappling-gun) | |
 | [Holographic Signs](https://mods.factorio.com/mod/holographic_signs) | |
 | [Inventory Sensor](https://mods.factorio.com/mod/Inventory%20Sensor) | simplifies some aspects substantially: leave out for a bigger challenge |
 | [Jetpack](https://mods.factorio.com/mod/jetpack) | |
-| [Larger Lamps](https://mods.factorio.com/mod/DeadlockLargerLamp) | |
+| [Larger Lamps 2.0](https://mods.factorio.com/mod/LargerLamps-2_0) | replaced by Larger Lamps 2.0 |
 | [Lighted Electric Poles +](https://mods.factorio.com/mod/LightedPolesPlus) | |
-| [LTN - Logistic Train Network](https://mods.factorio.com/mod/LogisticTrainNetwork) | [LTN Combinator Modernized](https://mods.factorio.com/mod/LTN_Combinator_Modernized) is also supported. |
+| [LTN - Logistic Train Network](https://mods.factorio.com/mod/LogisticTrainNetwork) | not yet updated for 2.0 as of last check. [LTN Combinator Modernized](https://mods.factorio.com/mod/LTN_Combinator_Modernized) is also supported. |
 | [Milestones](https://mods.factorio.com/mod/Milestones) | |
 | [Nixie Tubes](https://mods.factorio.com/mod/nixie-tubes) | [Alternative](https://mods.factorio.com/mod/SantasNixieTubeDisplay) [forks](https://mods.factorio.com/mod/UPSFriendlyNixieTubeDisplay) are also supported |
 | [Power Combinator](https://mods.factorio.com/mod/power-combinator) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
-| [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts |
+| [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts. not yet updated for 2.0, though a fork is available [here](https://github.com/hgschmie/factorio-PickerDollies) |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
 | [Quick Adjustable Inserters](https://mods.factorio.com/mod/quick-adjustable-inserters) | |
-| [Renai Transportation](https://mods.factorio.com/mod/RenaiTransportation) | |
+| [Renai Transportation](https://mods.factorio.com/mod/RenaiTransportation) | currently crashes at runtime on 2.0 |
 | [Railway Motor Car](https://mods.factorio.com/mod/railway-motor-car) | |
 | [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported. Note: be careful, it's currently possible to destroy the cube by overwriting a machine's recipe with a blueprint deployer when it holds the cube in some cases |
-| [Safe Waterfill](https://mods.factorio.com/mod/safefill) | |
-| [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
-| [Stack Combinator](https://mods.factorio.com/mod/stack-combinator) | |
+| [Safe Waterfill](https://mods.factorio.com/mod/safefill) | not yet updated for 2.0 as of last check |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
-| [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 
-The following mods were also compatible with the last Factorio 1.1 (pre-Space Age) version of Ultracube, but are now subsumed by base game features and deprecated or unnecessary on 2.0:
+The following mods were also compatible with the last Factorio 1.1 (pre-Space Age) version of Ultracube, but are now either unnecessary, deprecated or unmaintained on 2.0:
 
 | Mod | Notes |
 | --- | ----- |
 | [Automatic Fuel Train Stop](https://mods.factorio.com/mod/FuelTrainStop) | replaced by train schedule interrupts |
-| [Filter Combinator](https://mods.factorio.com/mod/silent-filter-combinator) | |
+| [Filter Combinator](https://mods.factorio.com/mod/silent-filter-combinator) | replaced by selector combinator |
+| [Larger Lamps](https://mods.factorio.com/mod/DeadlockLargerLamp) | replaced by Larger Lamps 2.0 |
+| [Spidertron Logistics System](https://mods.factorio.com/mod/spidertron-logistics) | |
+| [Stack Combinator](https://mods.factorio.com/mod/stack-combinator) | replaced by selector combinator |
+| [Wire Shortcuts](https://mods.factorio.com/mod/WireShortcuts) | circuit wires are now shortcuts in base game |
 
 ## Compatibility guide for modders
 

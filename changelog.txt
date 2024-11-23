@@ -2,8 +2,10 @@
 Version: 0.6.2
 Date: ???
   Modding:
-    - Restored compatibility with other optional mods, including: AAI Signal Transmission, Advanced Fluid Handling, Flow Control.
-    - Removed compatibility with deprecated 2.0 mods, including: Automatic Fuel Train Stop.
+    - Restored compatibility with other optional mods, including: AAI Signal Transmission, Advanced Fluid Handling, Flow Control, Larger Lamps (2.0 fork), Pushbutton, and Railway Motor Car.
+    - Restored load compatibility with Renai Transportation, although for now it crashes at runtime due to script errors in Ultracube-specific code on the Renai side.
+    - Removed compatibility with deprecated 2.0 mods, including: Automatic Fuel Train Stop, Spidertron Patrols, Stack Combinator, and Wire Shortcuts.
+    - All optionals mods listed on the mod page have been given a quick check for basic functionality and should now either work with Ultracube on 2.0, have a note listing why they don't yet (mostly because the haven't been updated yet), or have been moved to a separate section for deprecated previously-compatible 1.1-only mods.
   Changes:
     - Removed unncessary additional detail tooltip clutter from byproducts of module recipes.
 ---------------------------------------------------------------------------------------------------

@@ -4,10 +4,10 @@ if mods["railway-motor-car"] then
 
   local recipe_base = data.raw.recipe[name_base]
   recipe_base.category = "cube-fabricator-handcraft"
-  recipe_base.normal.ingredients = data.raw.recipe["cube-locomotive"].ingredients
+  recipe_base.ingredients = data.raw.recipe["cube-locomotive"].ingredients
   local recipe_nuclear = data.raw.recipe[name_nuclear]
   recipe_nuclear.category = "cube-fabricator-handcraft"
-  recipe_nuclear.normal.ingredients = {
+  recipe_nuclear.ingredients = {
     {type = "item", name = name_base, amount = 1},
     {type = "item", name = "cube-nuclear-fuel", amount = 5},
   }
