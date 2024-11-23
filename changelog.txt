@@ -3,6 +3,8 @@ Version: 0.6.2
 Date: ???
   Bugfixes:
     - Fixed load error when using AAI Signal Transmission.
+  Changes:
+    - Removed unncessary additional detail tooltip clutter from byproducts of module recipes.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.1
 Date: 08.11.2024
