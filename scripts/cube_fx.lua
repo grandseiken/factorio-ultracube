@@ -577,7 +577,8 @@ function cube_fx.tick(tick)
       cube_fx_data.last_furnace = nil
     elseif last_furnace.energy < 1000 then
       last_furnace.energy = 0
-      if last_furnace.products_finished == cube_fx_data.last_furnace_crafts then
+      if not cube_fx_data.last_furnace_crafts or
+         (last_furnace.products_finished == cube_fx_data.last_furnace_crafts) then
         last_furnace.crafting_progress = 1
       end
       cube_fx_data.last_furnace = nil
