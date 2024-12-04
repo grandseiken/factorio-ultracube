@@ -91,6 +91,16 @@ local vanilla_item_whitelist = make_set({
   "battery-mk2-equipment",
   "personal-roboport-mk2-equipment",
   "fission-reactor-equipment",
+  "parameter-0",
+  "parameter-1",
+  "parameter-2",
+  "parameter-3",
+  "parameter-4",
+  "parameter-5",
+  "parameter-6",
+  "parameter-7",
+  "parameter-8",
+  "parameter-9",
 })
 
 local entity_prototypes = {

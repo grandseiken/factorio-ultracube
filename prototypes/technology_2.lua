@@ -36,6 +36,7 @@ data:extend({
     icon = "__base__/graphics/technology/cliff-explosives.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cliff-explosives"},
+      {type = "cliff-deconstruction-enabled", modifier = true},
     },
     prerequisites = {"cube-explosives"},
     unit = tech_cost_unit("2", 240),

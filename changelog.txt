@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.3
+Date: ???
+  Bugfixes:
+    - Fixed that cliffs couldn't be marked for deconstruction after researching cliff explosives.
+    - Fixed that blueprint parameter signals were unavailable.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 23.11.2024
   Modding:
