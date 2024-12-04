@@ -4,6 +4,7 @@ Date: ???
   Bugfixes:
     - Fixed that cliffs couldn't be marked for deconstruction after researching cliff explosives.
     - Fixed that blueprint parameter signals were unavailable.
+    - Fixed (again, for 2.0) that ultradense furnaces with speed modules could sometimes behave oddly when crafting.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.2
 Date: 23.11.2024

@@ -346,9 +346,10 @@ local function cube_vehicle_mod(size, results)
       local type = entity.type
       local name = entity.name
 
-      if name == "cube-ultradense-furnace" and
-         cube_ultradense_fuel[item] and entity.energy > 1000 then
+      if name == "cube-ultradense-furnace" and cube_ultradense_fuel[item] and
+         entity.energy > 1000 and cube_fx_data.last_furnace ~= entity then
         cube_fx_data.last_furnace = entity
+        cube_fx_data.last_furnace_crafts = entity.products_finished
       end
 
       local weight = cube_weight[item]
@@ -575,8 +576,10 @@ function cube_fx.tick(tick)
     if not last_furnace.valid then
       cube_fx_data.last_furnace = nil
     elseif last_furnace.energy < 1000 then
-      last_furnace.crafting_progress = 1
       last_furnace.energy = 0
+      if last_furnace.products_finished == cube_fx_data.last_furnace_crafts then
+        last_furnace.crafting_progress = 1
+      end
       cube_fx_data.last_furnace = nil
     end
   end
