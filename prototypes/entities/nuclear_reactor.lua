@@ -42,6 +42,7 @@ data:extend({
       heat_picture = reactor.heat_buffer.heat_picture,
     },
     vehicle_impact_sound = sounds.generic_impact,
+    placeable_by = {item = "cube-nuclear-reactor", count = 1},
   },
   {
     type = "reactor",
@@ -101,6 +102,7 @@ data:extend({
     close_sound = sounds.machine_close,
     working_sound = reactor.working_sound,
     meltdown_action = reactor.meltdown_action,
+    placeable_by = {item = "cube-nuclear-reactor", count = 1},
   },
   {
     type = "reactor",
@@ -161,5 +163,6 @@ data:extend({
     close_sound = sounds.machine_close,
     working_sound = reactor.working_sound,
     meltdown_action = reactor.meltdown_action,
+    placeable_by = {item = "cube-nuclear-reactor", count = 1},
   },
 })
