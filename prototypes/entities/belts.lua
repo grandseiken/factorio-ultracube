@@ -9,6 +9,8 @@ local v4_transport_belt_animation_set = {
     direction_count = 20,
   },
 
+  belt_reader = belt_reader_gfx.belt_reader,
+  
   east_index = 1,
   west_index = 2,
   north_index = 3,
