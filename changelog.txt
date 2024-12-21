@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.4
+Date: 21.12.2024
+  Changes:
+    - Updated for compatibility with Factorio 2.0.25+.
+  Bugfixes:
+    - Fixed smart pipette interaction with nuclear reactors.
+    - Fixed read-whole-belt graphics for tier 4 belts.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.3
 Date: 03.12.2024
   Bugfixes:

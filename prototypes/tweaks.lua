@@ -14,6 +14,7 @@ data.raw["item-subgroup"]["transport"].group = "cube-tools"
 data.raw["mining-drill"]["burner-mining-drill"].resource_categories = {"cube-none"}
 data.raw["mining-drill"]["electric-mining-drill"].resource_categories = {"cube-none"}
 
+data.raw.inserter["burner-inserter"].energy_source.initial_fuel = nil
 data.raw.container["iron-chest"].inventory_size = 20
 data.raw["logistic-container"]["passive-provider-chest"].inventory_size = 20
 data.raw["logistic-container"]["active-provider-chest"].inventory_size = 20
