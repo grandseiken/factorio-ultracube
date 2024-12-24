@@ -73,7 +73,7 @@ if mods["nixie-tubes"] then
   data.raw.item["nixie-tube-small"].order = "cube-y"
 end
 
-if mods["SantasNixieTubeDisplay"] or mods["UPSFriendlyNixieTubeDisplay"] then
+if mods["SantasNixieTubeDisplay"] then
   local tech = data.raw.technology["SNTD-nixie-tubes-1"]
   tech.prerequisites = {"cube-combinatorics", "cube-crusher"}
   tech.unit = tech_cost_unit("1a", 60)
@@ -112,4 +112,45 @@ if mods["SantasNixieTubeDisplay"] or mods["UPSFriendlyNixieTubeDisplay"] then
   add_mystery_recipe(1, "SNTD-old-nixie-tube", "cube-glass")
   add_mystery_recipe(1, "SNTD-nixie-tube", "SNTD-old-nixie-tube")
   add_mystery_recipe(1, "SNTD-nixie-tube-small", "SNTD-old-nixie-tube")
+end
+
+if mods["UPSFriendlyNixieTubeDisplay"] then
+  local tech = data.raw.technology["classic-nixie-tubes"]
+  tech.prerequisites = {"cube-combinatorics", "cube-crusher"}
+  tech.unit = tech_cost_unit("1a", 60)
+  tech = data.raw.technology["reinforced-nixie-tubes"]
+  tech.unit = tech_cost_unit("1a", 80)
+
+  local recipe = data.raw.recipe["classic-nixie-tube"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {type = "item", name = "cube-electronic-circuit", amount = 1},
+    {type = "item", name = "cube-glass", amount = 2},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+  }
+  recipe = data.raw.recipe["reinforced-nixie-tube"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {type = "item", name = "classic-nixie-tube", amount = 2},
+    {type = "item", name = "cube-rare-metals", amount = 4},
+    {type = "item", name = "cube-basic-matter-unit", amount = 4},
+  }
+  recipe = data.raw.recipe["small-reinforced-nixie-tube"]
+  recipe.category = "cube-fabricator-handcraft"
+  recipe.ingredients = {
+    {type = "item", name = "classic-nixie-tube", amount = 1},
+    {type = "item", name = "cube-rare-metals", amount = 2},
+    {type = "item", name = "cube-basic-matter-unit", amount = 2},
+  }
+
+  data.raw.item["classic-nixie-tube"].subgroup = "cube-combinator-extra"
+  data.raw.item["classic-nixie-tube"].order = "cube-y-a"
+  data.raw.item["reinforced-nixie-tube"].subgroup = "cube-combinator-extra"
+  data.raw.item["reinforced-nixie-tube"].order = "cube-y-b"
+  data.raw.item["small-reinforced-nixie-tube"].subgroup = "cube-combinator-extra"
+  data.raw.item["small-reinforced-nixie-tube"].order = "cube-y-c"
+
+  add_mystery_recipe(1, "classic-nixie-tube", "cube-glass")
+  add_mystery_recipe(1, "reinforced-nixie-tube", "classic-nixie-tube")
+  add_mystery_recipe(1, "small-reinforced-nixie-tube", "classic-nixie-tube")
 end
