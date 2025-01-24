@@ -87,13 +87,14 @@ local combine_definitions = {
   },
 }
 
-local function get_hidden_surface()
+local function get_hidden_surface(player)
   local surface = game.surfaces["cube-hidden-surface"]
   if surface then
     return surface
   end
   surface = game.create_surface("cube-hidden-surface")
   surface.generate_with_lab_tiles = true
+  player.force.set_surface_hidden(surface, true)
   return surface
 end
 
@@ -139,7 +140,7 @@ function entity_combine.created(entity)
     end
     local surface = entity.surface
     if entry.hidden_surface then
-      surface = get_hidden_surface()
+      surface = get_hidden_surface(entity.last_user)
     end
     local new_entity = surface.create_entity {
       name = entry.name,
