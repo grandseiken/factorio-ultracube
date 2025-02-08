@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.5
+Date: 08.02.2025
+  Bugfixes:
+    - The hidden surface used to make backup turbines work is now hidden from the remote view.
+  Modding:
+    - Restored compatibility with recent versions of the UPS Friendly Nixie Tubes mod.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.4
 Date: 21.12.2024
   Changes:
