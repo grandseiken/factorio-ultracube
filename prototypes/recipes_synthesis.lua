@@ -745,7 +745,7 @@ data:extend({
     type = "recipe",
     name = "cube-ultradense-powder",
     ingredients = {{type = "item", name = "cube-ultradense-debris", amount = 1}},
-    results = {{type = "item", name = "cube-ultradense-powder", amount = 16}},
+    results = {{type = "item", name = "cube-ultradense-powder", amount = 16, ignored_by_productivity = 16}},
     energy_required = 1,
     category = "cube-crusher",
     always_show_made_in = true,

@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.6
+Date: ???
+  Bugfixes:
+    - Fixed that the ultradense debris crusher recipe could be affected by productivity.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.5
 Date: 08.02.2025
   Bugfixes:
