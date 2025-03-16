@@ -7,7 +7,7 @@ data:extend({
     type = "assembling-machine",
     name = "cube-greenhouse",
     icon_size = 64,
-    icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/greenhouse.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-greenhouse"},
     max_health = 500,
@@ -43,7 +43,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/greenhouse/greenhouse.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -51,7 +51,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/greenhouse/greenhouse-sh.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -65,7 +65,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/greenhouse/greenhouse-light.png",
             width = 512,
             height = 512,
             frame_count = 1,
@@ -77,7 +77,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/greenhouse/greenhouse-working.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/greenhouse/greenhouse-working.png",
             width = 512,
             height = 512,
             frame_count = 10,
@@ -91,7 +91,7 @@ data:extend({
     crafting_categories = {"cube-greenhouse"},
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
-      filename = "__Krastorio2Assets__/sounds/buildings/greenhouse.ogg",
+      filename = "__krastorio2-assets-ultracube__/sounds/buildings/greenhouse.ogg",
       volume = 0.75,
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       aggregation = {

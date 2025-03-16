@@ -65,7 +65,7 @@ data:extend({
     type = "technology",
     name = "cube-antimatter-reactor",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/fusion-energy.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/fusion-energy.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-antimatter-reactor"},
       {type = "unlock-recipe", recipe = "cube-annihilation-chamber"},
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-quantum-entanglement",
-    icons = util.technology_icon_constant_movement_speed("__Krastorio2Assets__/technologies/quantum-computer.png"),
+    icons = util.technology_icon_constant_movement_speed("__krastorio2-assets-ultracube__/technologies/quantum-computer.png"),
     effects = {
       {type = "unlock-recipe", recipe = "cube-qubits-partial-dummy"},
     },

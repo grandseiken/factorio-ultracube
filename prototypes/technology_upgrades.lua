@@ -567,7 +567,7 @@ data:extend({
     type = "technology",
     name = "cube-research-speed-1",
     icon_size = 256,
-    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    icons = util.technology_icon_constant_speed("__krastorio2-assets-ultracube__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
     },
@@ -580,7 +580,7 @@ data:extend({
     type = "technology",
     name = "cube-research-speed-2",
     icon_size = 256,
-    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    icons = util.technology_icon_constant_speed("__krastorio2-assets-ultracube__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
     },
@@ -596,7 +596,7 @@ data:extend({
     type = "technology",
     name = "cube-research-speed-3",
     icon_size = 256,
-    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    icons = util.technology_icon_constant_speed("__krastorio2-assets-ultracube__/technologies/biusart-lab.png"),
     effects = {
       {type = "laboratory-speed", modifier = 0.25},
     },
@@ -612,7 +612,7 @@ data:extend({
     type = "technology",
     name = "cube-research-speed-4",
     icon_size = 256,
-    icons = util.technology_icon_constant_speed("__Krastorio2Assets__/technologies/biusart-lab.png"),
+    icons = util.technology_icon_constant_speed("__krastorio2-assets-ultracube__/technologies/biusart-lab.png"),
     effects = {
       -- Base game goes up to 2.5.
       {type = "laboratory-speed", modifier = 0.25},

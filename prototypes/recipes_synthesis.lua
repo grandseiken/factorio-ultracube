@@ -341,7 +341,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-n-dimensional-widget-0",
-    icon = "__Krastorio2Assets__/icons/items/automation-core.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/automation-core.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
@@ -415,7 +415,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-matter-replication-gel",
-    icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/hydrogen.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-basic-matter-unit", amount = 200},
@@ -437,7 +437,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-cerebral-substrate",
-    icon = "__Krastorio2Assets__/icons/fluids/matter.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/matter.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-dormant-utility-cube", amount = 1},
@@ -502,7 +502,7 @@ data:extend({
     type = "recipe",
     name = "cube-ghost-crystal",
     icons = {{
-      icon = "__Krastorio2Assets__/icons/items/quartz.png",
+      icon = "__krastorio2-assets-ultracube__/icons/items/quartz.png",
       icon_size = 64,
       tint = {r = 1, g = 1, b = 1, a = 0.5},
     }},
@@ -556,7 +556,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-arcane-drive",
-    icon = "__Krastorio2Assets__/icons/equipment/advanced-additional-engine-equipment.png",
+    icon = "__krastorio2-assets-ultracube__/icons/equipment/advanced-additional-engine-equipment.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-phantom-ultradense-constituent", amount = 1},
@@ -672,7 +672,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-singularity-research-data",
-    icon = "__Krastorio2Assets__/icons/cards/singularity-research-data.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/singularity-research-data.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},
@@ -844,7 +844,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-ultradense-utility-cube",
-    icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/matter-cube.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-legendary-iron-gear", amount = 1},

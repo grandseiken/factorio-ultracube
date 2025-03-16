@@ -152,7 +152,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-unstable-gas",
-    icon = "__Krastorio2Assets__/icons/fluids/petroleum-gas.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/petroleum-gas.png",
     icon_size = 64,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 360},
@@ -178,7 +178,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-elbow-grease",
-    icon = "__Krastorio2Assets__/icons/fluids/lubricant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/lubricant.png",
     icon_size = 64,
     ingredients = {
       {type = "fluid", name = "cube-heavy-tar", amount = 80},

@@ -1,7 +1,7 @@
 local function furnacepipepictures_a()
   return {
     north = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -9,7 +9,7 @@ local function furnacepipepictures_a()
       scale = 0.5,
     },
     east = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-top.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-top.png",
       priority = "extra-high",
       width = 59, --42,
       height = 76,
@@ -17,7 +17,7 @@ local function furnacepipepictures_a()
       scale = 0.5,
     },
     south = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-right.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-right.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -25,7 +25,7 @@ local function furnacepipepictures_a()
       scale = 0.5,
     },
     west = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-bottom.png",
       priority = "extra-high",
       width = 39,
       height = 73,
@@ -38,7 +38,7 @@ end
 local function furnacepipepictures_b()
   return {
     north = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-N.png",
       priority = "extra-high",
       width = 71,
       height = 38,
@@ -46,7 +46,7 @@ local function furnacepipepictures_b()
       scale = 0.5,
     },
     east = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-E-bottom.png",
       priority = "extra-high",
       width = 76, --42,
       height = 76,
@@ -54,7 +54,7 @@ local function furnacepipepictures_b()
       scale = 0.5,
     },
     south = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-left.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-S-left.png",
       priority = "extra-high",
       width = 88,
       height = 61,
@@ -62,7 +62,7 @@ local function furnacepipepictures_b()
       scale = 0.5,
     },
     west = {
-      filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-top.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-k-pipe-W-top.png",
       priority = "extra-high",
       width = 39,
       height = 87, --73,
@@ -88,7 +88,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-ultradense-furnace",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-furnace.png",
     icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-ultradense-furnace"},
@@ -153,7 +153,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -162,7 +162,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-sh.png",
             priority = "high",
             width = 165,
             height = 480,
@@ -177,7 +177,7 @@ data:extend({
         {
           constant_speed = true,
           animation = {
-            filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-anim-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-anim-light.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -192,7 +192,7 @@ data:extend({
         {
           constant_speed = true,
           animation = {
-            filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-anim-glow.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-anim-glow.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -209,7 +209,7 @@ data:extend({
         {
           constant_speed = true,
           animation = {
-            filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-anim.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-anim.png",
             priority = "high",
             width = 480,
             height = 480,
@@ -235,7 +235,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/advanced-furnace.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/advanced-furnace.ogg",
         volume = 0.50,
         aggregation = {
           max_count = 2,
@@ -272,7 +272,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/advanced-furnace/advanced-furnace-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/advanced-furnace/advanced-furnace-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

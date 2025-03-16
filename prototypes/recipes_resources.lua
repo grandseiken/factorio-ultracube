@@ -33,7 +33,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-rare-metals",
-    icon = "__Krastorio2Assets__/icons/items/rare-metals.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/rare-metals.png",
     icon_size = 64,
     ingredients = {{type = "item", name = "cube-raw-rare-metals", amount = 500}},
     results = {{type = "item", name = "cube-rare-metals", amount = 250}},
@@ -90,7 +90,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-rare-metal-crushing",
-    icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/enriched-rare-metals.png",
     icon_size = 64,
     ingredients = {{type = "item", name = "cube-raw-rare-metals", amount = 40}},
     results = {
@@ -126,7 +126,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-deep-core-crushing",
-    icon = "__Krastorio2Assets__/icons/items/imersite-powder.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/imersite-powder.png",
     icon_size = 64,
     ingredients = {{type = "item", name = "cube-deep-core-ore", amount = 40}},
     results = {
@@ -223,7 +223,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-greenhouse-potato",
-    icon = "__Krastorio2Assets__/icons/items/potato.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/potato.png",
     icon_size = 64,
     ingredients = {
       {type = "fluid", name = "water", amount = 400},

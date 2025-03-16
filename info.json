@@ -1,6 +1,6 @@
 {
   "name": "Ultracube",
-  "version": "0.6.6",
+  "version": "0.6.7",
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
@@ -9,7 +9,7 @@
   "dependencies": [
     "base >= 2.0.8",
     "aai-loaders >= 0.2.1",
-    "Krastorio2Assets >= 2.0",
+    "krastorio2-assets-ultracube >= 2.0",
     "?elevated-rails",
     "?aai-signal-transmission",
     "?better-victory-screen >= 0.2.7",

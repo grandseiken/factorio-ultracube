@@ -33,7 +33,7 @@ data:extend({
   {
     type = "mining-drill",
     name = "cube-deep-core-ultradrill",
-    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/quarry-drill.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 2, result = "cube-deep-core-ultradrill"},
@@ -80,7 +80,7 @@ data:extend({
         layers = {
           {
             priority = "extra-high",
-            filename = "__Krastorio2Assets__/buildings/quarry-drill/quarry-drill-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/quarry-drill/quarry-drill-light.png",
             width = 440,
             height = 464,
             frame_count = 90,
@@ -94,7 +94,7 @@ data:extend({
           },
           {
             priority = "high",
-            filename = "__Krastorio2Assets__/buildings/quarry-drill/quarry-drill.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/quarry-drill/quarry-drill.png",
             width = 440,
             height = 464,
             frame_count = 90,
@@ -105,7 +105,7 @@ data:extend({
           },
           {
             priority = "medium",
-            filename = "__Krastorio2Assets__/buildings/quarry-drill/quarry-drill-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/quarry-drill/quarry-drill-sh.png",
             width = 500,
             height = 422,
             frame_count = 1,
@@ -121,7 +121,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/quarry-drill.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/quarry-drill.ogg",
         volume = 0.5,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},

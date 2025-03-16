@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-utility-cube",
-    icon = "__Krastorio2Assets__/icons/items/matter-cube.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/matter-cube.png",
     icon_size = 64,
     flags = {"not-stackable"},
     subgroup = "cube-cubes",
@@ -192,7 +192,7 @@ data:extend({
   {
     type = "item",
     name = "cube-n-dimensional-widget",
-    icon = "__Krastorio2Assets__/icons/items/automation-core.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/automation-core.png",
     icon_size = 64,
     subgroup = "cube-synthesis-advanced",
     order = "cube-1[widget-0]",
@@ -214,7 +214,7 @@ data:extend({
   {
     type = "item",
     name = "cube-advanced-engine",
-    icon = "__Krastorio2Assets__/icons/equipment/additional-engine-equipment.png",
+    icon = "__krastorio2-assets-ultracube__/icons/equipment/additional-engine-equipment.png",
     icon_size = 64,
     subgroup = "cube-components",
     order = "cube-0[b-advanced-engine]",
@@ -226,7 +226,7 @@ data:extend({
   {
     type = "item",
     name = "cube-arcane-drive",
-    icon = "__Krastorio2Assets__/icons/equipment/advanced-additional-engine-equipment.png",
+    icon = "__krastorio2-assets-ultracube__/icons/equipment/advanced-additional-engine-equipment.png",
     icon_size = 64,
     subgroup = "cube-synthesis-ethereal",
     order = "cube-0[c-advanced-engine]",
@@ -253,7 +253,7 @@ data:extend({
   {
     type = "item",
     name = "cube-electronic-circuit",
-    icon = "__Krastorio2Assets__/icons/items/electronic-circuit.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/electronic-circuit.png",
     icon_size = 64,
     subgroup = "cube-components",
     order = "cube-2[a-electronic-circuit]",
@@ -265,7 +265,7 @@ data:extend({
   {
     type = "item",
     name = "cube-advanced-circuit",
-    icon = "__Krastorio2Assets__/icons/items/advanced-circuit.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/advanced-circuit.png",
     icon_size = 64,
     subgroup = "cube-components",
     order = "cube-2[b-advanced-circuit]",
@@ -340,7 +340,7 @@ data:extend({
   {
     type = "item",
     name = "cube-sophisticated-matter-unit",
-    icon = "__Krastorio2Assets__/icons/items/white-reinforced-plate.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/white-reinforced-plate.png",
     icon_size = 64,
     subgroup = "cube-processed-materials",
     order = "cube-2[sophisticated]",
@@ -352,20 +352,20 @@ data:extend({
   {
     type = "item",
     name = "cube-resplendent-plate",
-    icon = "__Krastorio2Assets__/icons/items/imersium-plate.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/imersium-plate.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/imersium-plate.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/imersium-plate.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/imersium-plate-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/imersium-plate-light.png",
           scale = 0.5,
         },
       },
@@ -421,7 +421,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/tritium-light.png",
           draw_as_light = true,
           flags = {"light"},
           size = 64,
@@ -449,7 +449,7 @@ data:extend({
           scale = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/icons/items/tritium-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/tritium-light.png",
           draw_as_light = true,
           flags = {"light"},
           size = 64,
@@ -467,7 +467,7 @@ data:extend({
   {
     type = "item",
     name = "cube-teleporter-activation",
-    icon = "__Krastorio2Assets__/icons/virtual-signals/power-off.png",
+    icon = "__krastorio2-assets-ultracube__/icons/virtual-signals/power-off.png",
     icon_size = 64,
     subgroup = "cube-experimental",
     order = "cube-z[1-teleporter-activation]",
@@ -478,20 +478,20 @@ data:extend({
   {
     type = "item",
     name = "cube-teleportation-control-module",
-    icon = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/teleportation-gps-module.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/teleportation-gps-module.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/items/teleportation-gps-module-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/items/teleportation-gps-module-light.png",
           scale = 0.5,
         },
       },
@@ -506,22 +506,22 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-debris",
-    icon = "__Krastorio2Assets__/icons/items/enriched-iron.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/enriched-iron.png",
     icon_size = 64,
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items/enriched-iron.png",
+        filename = "__krastorio2-assets-ultracube__/icons/items/enriched-iron.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items/enriched-iron-1.png",
+        filename = "__krastorio2-assets-ultracube__/icons/items/enriched-iron-1.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items/enriched-iron-2.png",
+        filename = "__krastorio2-assets-ultracube__/icons/items/enriched-iron-2.png",
         scale = 0.5,
       },
     },
@@ -535,17 +535,17 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-powder",
-    icon = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/lithium-chloride.png",
     icon_size = 64,
     pictures = {
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items/lithium-chloride.png",
+        filename = "__krastorio2-assets-ultracube__/icons/items/lithium-chloride.png",
         scale = 0.5,
       },
       {
         size = 64,
-        filename = "__Krastorio2Assets__/icons/items/lithium-chloride-1.png",
+        filename = "__krastorio2-assets-ultracube__/icons/items/lithium-chloride-1.png",
         scale = 0.5,
       },
     },

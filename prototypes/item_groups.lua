@@ -4,7 +4,7 @@ data:extend({
     name = "cube-synthesis",
     order = "0",
     order_in_recipe = "0",
-    icon = "__Krastorio2Assets__/technologies/matter-cube.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/matter-cube.png",
     icon_size = 256,
   },
   {

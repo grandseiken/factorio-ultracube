@@ -25,7 +25,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-heavy-tar",
-    icon = "__Krastorio2Assets__/icons/fluids/heavy-oil.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/heavy-oil.png",
     icon_size = 64,
     -- TODO: check colour matches icon.
     base_color = {r=0.5, g=0.04, b=0},
@@ -39,7 +39,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-light-tar",
-    icon = "__Krastorio2Assets__/icons/fluids/light-oil.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/light-oil.png",
     icon_size = 64,
     -- TODO: check colour matches icon.
     base_color = {r=0.57, g=0.33, b=0},
@@ -53,7 +53,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-unstable-gas",
-    icon = "__Krastorio2Assets__/icons/fluids/petroleum-gas.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/petroleum-gas.png",
     icon_size = 64,
     base_color = {r=0.3, g=0.1, b=0.3},
     flow_color = {r=0.8, g=0.8, b=0.8},
@@ -66,7 +66,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-elbow-grease",
-    icon = "__Krastorio2Assets__/icons/fluids/lubricant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/lubricant.png",
     icon_size = 64,
     base_color = {r=0.15, g=0.32, b=0.03},
     flow_color = {r=0.43, g=0.75, b=0.31},
@@ -92,7 +92,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-matter-replication-gel",
-    icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/hydrogen.png",
     icon_size = 64,
     base_color = {r=0.8, g=0.8, b=0.8},
     flow_color = {r=0.9, g=0.9, b=0.9},
@@ -105,7 +105,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-cerebral-substrate",
-    icon = "__Krastorio2Assets__/icons/fluids/matter.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/matter.png",
     icon_size = 64,
     base_color = {r=0.15, g=0.8, b=0.8},
     flow_color = {r=0.2, g=0.9, b=0.9},
@@ -144,7 +144,7 @@ data:extend({
   {
     type = "fluid",
     name = "cube-mineral-water",
-    icon = "__Krastorio2Assets__/icons/fluids/mineral-water.png",
+    icon = "__krastorio2-assets-ultracube__/icons/fluids/mineral-water.png",
     icon_size = 64,
     base_color = {r=0.15, g=0.1, b=0.4},
     flow_color = {r=0.5, g=0.5, b=0.75},

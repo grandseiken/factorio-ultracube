@@ -28,7 +28,7 @@ data.raw.item["stone-brick"].subgroup = "cube-processed-materials"
 data.raw.item["stone-brick"].order = "cube-0[a-brick]"
 data.raw.item["radar"].subgroup = "cube-logistic-machines"
 data.raw.item["radar"].order = "cube-1[radar]"
-data.raw.item["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
+data.raw.item["radar"].icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-radar.png"
 data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["coal"].fuel_category = "cube-fuel-general"
@@ -41,8 +41,8 @@ data.raw.item["battery"].subgroup = "cube-chemical-intermediates"
 data.raw.item["battery"].order = "cube-2[battery]"
 data.raw.item["flying-robot-frame"].subgroup = "cube-chemical-intermediates"
 data.raw.item["flying-robot-frame"].order = "cube-4[frame]"
-data.raw.fluid.water.icon = "__Krastorio2Assets__/icons/fluids/water.png"
-data.raw.fluid.steam.icon = "__Krastorio2Assets__/icons/fluids/steam.png"
+data.raw.fluid.water.icon = "__krastorio2-assets-ultracube__/icons/fluids/water.png"
+data.raw.fluid.steam.icon = "__krastorio2-assets-ultracube__/icons/fluids/steam.png"
 data.raw.item.wood.subgroup = "cube-fuel"
 data.raw.item.wood.order = "cube-0[wood]"
 data.raw.car.car.energy_source.fuel_categories = {"cube-cube", "cube-fuel-canister", "cube-fuel-general"}
@@ -74,14 +74,14 @@ data.raw.resource["uranium-ore"].category = "cube-uranium"
 data.raw.radar["radar"].energy_usage = "200kW"
 data.raw.radar["radar"].energy_per_sector = "5MJ"
 data.raw.radar["radar"].energy_per_nearby_scan = "150kJ"
-data.raw.radar["radar"].icon = "__Krastorio2Assets__/icons/entities/advanced-radar.png"
+data.raw.radar["radar"].icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-radar.png"
 data.raw.radar["radar"].vehicle_impact_sound = {
   filename = "__base__/sound/car-metal-impact.ogg",
   volume = 0.65,
 }
 
 data.raw.radar["radar"].integration_patch = {
-  filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-integration.png",
+  filename = "__krastorio2-assets-ultracube__/buildings/advanced-radar/radar-integration.png",
   priority = "low",
   width = 238,
   height = 216,
@@ -92,7 +92,7 @@ data.raw.radar["radar"].integration_patch = {
 data.raw.radar["radar"].pictures = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-radar/radar.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-radar/radar.png",
       priority = "low",
       width = 196,
       height = 254,
@@ -103,7 +103,7 @@ data.raw.radar["radar"].pictures = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-radar/radar-shadow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-radar/radar-shadow.png",
       priority = "low",
       width = 343,
       height = 186,

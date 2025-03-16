@@ -5,7 +5,7 @@ require("__Ultracube__/prototypes/entities/lib/pipe")
 
 local beacon_scale = 2
 local beacon_picture = {
-  filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon.png",
+  filename = "__krastorio2-assets-ultracube__/buildings/singularity-beacon/singularity-beacon.png",
   width = 360,
   height = 360,
   shift = util.by_pixel(0, -5),
@@ -16,14 +16,14 @@ data:extend({
   {
     type = "virtual-signal",
     name = "cube-beacon-overload",
-    icon = "__Krastorio2Assets__/icons/virtual-signals/attention-2.png",
+    icon = "__krastorio2-assets-ultracube__/icons/virtual-signals/attention-2.png",
     icon_size = 64,
     order = "x[special-signals]",
   },
   {
     type = "beacon",
     name = "cube-beacon",
-    icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/singularity-beacon.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-beacon"},
@@ -40,7 +40,7 @@ data:extend({
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-w-light.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/singularity-beacon/singularity-beacon-w-light.png",
           width = 190,
           height = 214,
           frame_count = 10,
@@ -52,7 +52,7 @@ data:extend({
           animation_speed = 0.5,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-w.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/singularity-beacon/singularity-beacon-w.png",
           width = 190,
           height = 214,
           frame_count = 10,
@@ -64,7 +64,7 @@ data:extend({
       },
     },
     animation_shadow = {
-      filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-ws.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/singularity-beacon/singularity-beacon-ws.png",
       width = 10,
       height = 10,
       frame_count = 10,
@@ -82,7 +82,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/singularity-beacon/singularity-beacon-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/singularity-beacon/singularity-beacon-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,
@@ -114,15 +114,15 @@ data:extend({
     supply_area_distance = 3.0,
     distribution_effectivity = 0.5,
 
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 1},
   },
   {
     type = "assembling-machine",
     name = "cube-beacon-fluid-source",
     localised_name = {"entity-name.cube-beacon"},
     localised_description = {"entity-description.cube-beacon"},
-    icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/singularity-beacon.png",
     icon_size = 64,
     flags = {"not-rotatable", "not-repairable", "not-blueprintable", "not-deconstructable"},
     placeable_by = {item = "cube-beacon", count = 1},

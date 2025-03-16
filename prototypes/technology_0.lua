@@ -30,7 +30,7 @@ data:extend({
     type = "technology",
     name = "cube-electric-mining-drill",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/electric-mining-drill-mk2.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/electric-mining-drill-mk2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-electric-mining-drill"},
     },
@@ -65,7 +65,7 @@ data:extend({
     type = "technology",
     name = "cube-ultradense-furnace",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/advanced-furnace.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
       {type = "unlock-recipe", recipe = "cube-rare-metals"},
@@ -97,7 +97,7 @@ data:extend({
     type = "technology",
     name = "cube-n-dimensional-widgets",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/automation-core.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/automation-core.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
     },
@@ -152,7 +152,7 @@ data:extend({
     type = "technology",
     name = "cube-fabricator",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/advanced-assembling-machine.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/advanced-assembling-machine.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fabricator"},
     },
@@ -165,7 +165,7 @@ data:extend({
     type = "technology",
     name = "cube-recovery-bay",
     icon_size = 128,
-    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/stabilizer-charging-station.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-recovery-bay"},
       {type = "unlock-recipe", recipe = "cube-utility-cube-recharge"},
@@ -181,7 +181,7 @@ data:extend({
   {
     type = "technology",
     name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-associator.png",
     icon_size = 128,
     effects = {
       {type = "unlock-recipe", recipe = "cube-synthesizer"},
@@ -198,7 +198,7 @@ data:extend({
     type = "technology",
     name = "cube-fundamental-comprehension-card",
     localised_description = {"technology-description.cube-technology-technology"},
-    icon = "__Krastorio2Assets__/technologies/logistic-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/logistic-tech-card.png",
     icon_size = 256,
     effects = {
       {type = "unlock-recipe", recipe = "cube-fundamental-comprehension-card"},

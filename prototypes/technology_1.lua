@@ -17,7 +17,7 @@ data:extend({
     type = "technology",
     name = "cube-crusher",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/crusher.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/crusher.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-crusher"},
       {type = "unlock-recipe", recipe = "cube-stone-crushing"},
@@ -39,13 +39,13 @@ data:extend({
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items/raw-rare-metals.png",
+        icon = "__krastorio2-assets-ultracube__/icons/items/raw-rare-metals.png",
         shift = {0, -20},
         scale = 0.5,
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/items/enriched-rare-metals.png",
+        icon = "__krastorio2-assets-ultracube__/icons/items/enriched-rare-metals.png",
         shift = {-0.866 * 20, 10},
         scale = 0.5,
       },
@@ -68,7 +68,7 @@ data:extend({
     type = "technology",
     name = "cube-greenhouse",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/greenhouse.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/greenhouse.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-greenhouse"},
       {type = "unlock-recipe", recipe = "cube-greenhouse-wood"},
@@ -111,7 +111,7 @@ data:extend({
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/fluids/water.png",
+        icon = "__krastorio2-assets-ultracube__/icons/fluids/water.png",
         shift = {0, -16},
         scale = 0.5,
       },
@@ -129,11 +129,11 @@ data:extend({
     icons = {
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/advanced-furnace.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/advanced-furnace.png",
       },
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/matter-oil.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/matter-oil.png",
         scale = 0.625 / 2,
       },
     },
@@ -178,7 +178,7 @@ data:extend({
     type = "technology",
     name = "cube-fuel-refinery",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/fuel-refinery.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/fuel-refinery.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fuel-refinery"},
       {type = "unlock-recipe", recipe = "cube-condensed-fuel"},
@@ -192,7 +192,7 @@ data:extend({
     type = "technology",
     name = "cube-fluid-burner",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/flare-stack.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/flare-stack.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-fluid-burner"},
     },
@@ -336,11 +336,11 @@ data:extend({
     icons = {
       {
         icon_size = 128,
-        icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
+        icon = "__krastorio2-assets-ultracube__/icons/entities/matter-associator.png",
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        icon = "__krastorio2-assets-ultracube__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
     },
@@ -362,11 +362,11 @@ data:extend({
     icons = {
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/automation-core.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/automation-core.png",
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        icon = "__krastorio2-assets-ultracube__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
     },
@@ -383,11 +383,11 @@ data:extend({
     icons = {
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/military-tech-card.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/military-tech-card.png",
       },
       {
         icon_size = 64,
-        icon = "__Krastorio2Assets__/icons/fluids/hydrogen.png",
+        icon = "__krastorio2-assets-ultracube__/icons/fluids/hydrogen.png",
         scale = 1, shift = {24, 24},
       },
     },
@@ -405,7 +405,7 @@ data:extend({
     type = "technology",
     name = "cube-sentience-extraction",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/backgrounds/matter.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-cerebral-substrate"},
     },
@@ -523,7 +523,7 @@ data:extend({
     name = "cube-abstract-interrogation-card",
     localised_description = {"technology-description.cube-technology-technology"},
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/matter-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/matter-tech-card.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-abstract-interrogation-card"},
       tech_unlock_effect(),

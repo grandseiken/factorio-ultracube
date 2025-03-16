@@ -4,7 +4,7 @@ data:extend({
   {
     type = "item",
     name = "cube-local-turbine",
-    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/wind-turbine.png",
     icon_size = 64,
     subgroup = "energy",
     order = "cube-0[wind-power]-a[local-turbine]",
@@ -30,7 +30,7 @@ data:extend({
   {
     type = "item",
     name = "cube-lab",
-    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/biusart-lab.png",
     icon_size = 64,
     subgroup = "cube-logistic-machines",
     order = "cube-0[lab]",
@@ -43,7 +43,7 @@ data:extend({
   {
     type = "item",
     name = "cube-electric-mining-drill",
-    icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk2.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/electric-mining-drill-mk2.png",
     icon_size = 64,
     subgroup = "extraction-machine",
     order = "cube-d[0-drill-1]",
@@ -56,7 +56,7 @@ data:extend({
   {
     type = "item",
     name = "cube-electric-mining-drill-mk2",
-    icon = "__Krastorio2Assets__/icons/entities/electric-mining-drill-mk3.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/electric-mining-drill-mk3.png",
     icon_size = 64,
     subgroup = "extraction-machine",
     order = "cube-d[0-drill-2]",
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "cube-deep-core-ultradrill",
-    icon = "__Krastorio2Assets__/icons/entities/quarry-drill.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/quarry-drill.png",
     icon_size = 64,
     subgroup = "extraction-machine",
     order = "cube-x[0-deep-drill-1]",
@@ -82,7 +82,7 @@ data:extend({
   {
     type = "item",
     name = "cube-greenhouse",
-    icon = "__Krastorio2Assets__/icons/entities/greenhouse.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/greenhouse.png",
     icon_size = 64,
     subgroup = "extraction-machine",
     order = "cube-c[0-greenhouse]",
@@ -95,7 +95,7 @@ data:extend({
   {
     type = "item",
     name = "cube-crusher",
-    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/crusher.png",
     icon_size = 64,
     subgroup = "cube-processing-machines",
     order = "cube-0[0-crusher]",
@@ -147,7 +147,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fuel-refinery",
-    icon = "__Krastorio2Assets__/icons/entities/fuel-refinery.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/fuel-refinery.png",
     icon_size = 64,
     subgroup = "cube-chemical-machines",
     order = "cube-1[2-fuel-refinery]",
@@ -160,7 +160,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fluid-burner",
-    icon = "__Krastorio2Assets__/icons/entities/flare-stack.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/flare-stack.png",
     icon_size = 64,
     subgroup = "cube-chemical-machines",
     order = "cube-1[3-fluid-burner]",
@@ -173,7 +173,7 @@ data:extend({
   {
     type = "item",
     name = "cube-ultradense-furnace",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-furnace.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-furnace.png",
     icon_size = 128,
     subgroup = "cube-processing-machines",
     order = "cube-0[2-ultradense-furace]",
@@ -186,7 +186,7 @@ data:extend({
   {
     type = "item",
     name = "cube-recovery-bay",
-    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     subgroup = "cube-production-machines",
     order = "cube-1[0-recovery-bay]",
@@ -199,7 +199,7 @@ data:extend({
   {
     type = "item",
     name = "cube-synthesizer",
-    icon = "__Krastorio2Assets__/icons/entities/matter-associator.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-associator.png",
     icon_size = 128,
     subgroup = "cube-production-machines",
     order = "cube-1[1-synthesizer]",
@@ -212,7 +212,7 @@ data:extend({
   {
     type = "item",
     name = "cube-dimension-folding-engine",
-    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     subgroup = "cube-production-machines",
     order = "cube-1[2-disruptor]",
@@ -225,7 +225,7 @@ data:extend({
   {
     type = "item",
     name = "cube-stygian-energy-lab",
-    icon = "__Krastorio2Assets__/icons/entities/bio-lab.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/bio-lab.png",
     icon_size = 64,
     subgroup = "cube-advanced-power",
     order = "cube-x[0-haunted]",
@@ -251,7 +251,7 @@ data:extend({
   {
     type = "item",
     name = "cube-fabricator",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-assembling-machine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-assembling-machine.png",
     icon_size = 64,
     subgroup = "cube-production-machines",
     order = "cube-1[3-fabricator]",
@@ -264,7 +264,7 @@ data:extend({
   {
     type = "item",
     name = "cube-roboport",
-    icon = "__Krastorio2Assets__/icons/entities/big-roboport.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/big-roboport.png",
     icon_size = 64,
     subgroup = "cube-logistic-machines",
     order = "cube-2[roboport]",
@@ -277,7 +277,7 @@ data:extend({
   {
     type = "item",
     name = "cube-energy-bulkframe",
-    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/energy-storage.png",
     icon_size = 64,
     subgroup = "cube-advanced-power",
     order = "cube-z[energy-frame]",
@@ -303,7 +303,7 @@ data:extend({
   {
     type = "item",
     name = "cube-cyclotron",
-    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-plant.png",
     icon_size = 128,
     subgroup = "cube-advanced-machines",
     order = "cube-a[decoder]",
@@ -316,7 +316,7 @@ data:extend({
   {
     type = "item",
     name = "cube-quantum-decoder",
-    icon = "__Krastorio2Assets__/icons/entities/quantum-computer.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/quantum-computer.png",
     icon_size = 64,
     subgroup = "cube-advanced-machines",
     order = "cube-b[decoder]",
@@ -329,7 +329,7 @@ data:extend({
   {
     type = "item",
     name = "cube-particle-phase-aligner",
-    icon = "__Krastorio2Assets__/icons/entities/research-server.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/research-server.png",
     icon_size = 64,
     subgroup = "cube-advanced-machines",
     order = "cube-c[aligner]",
@@ -355,7 +355,7 @@ data:extend({
   {
     type = "item",
     name = "cube-beacon",
-    icon = "__Krastorio2Assets__/icons/entities/singularity-beacon.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/singularity-beacon.png",
     icon_size = 64,
     subgroup = "cube-logistic-machines",
     order = "cube-3[beacon]",
@@ -368,7 +368,7 @@ data:extend({
   {
     type = "item",
     name = "cube-experimental-teleporter",
-    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
     subgroup = "cube-logistic-machines",
     order = "cube-4[teleporter]",
@@ -381,7 +381,7 @@ data:extend({
   {
     type = "item",
     name = "cube-forbidden-ziggurat",
-    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/intergalactic-transceiver.png",
     icon_size = 64,
     subgroup = "cube-final-machines",
     order = "cube-0[ziggurat]",
@@ -395,7 +395,7 @@ data:extend({
   {
     type = "item",
     name = "cube-antimatter-reactor",
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     subgroup = "cube-final-machines",
     order = "cube-1[reactor]",
@@ -409,7 +409,7 @@ data:extend({
   {
     type = "item",
     name = "cube-annihilation-chamber",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-steam-turbine.png",
     icon_size = 64,
     subgroup = "cube-final-machines",
     order = "cube-2[chamber]",

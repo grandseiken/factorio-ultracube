@@ -2,7 +2,7 @@ data:extend({
   {
     type = "corpse",
     name = "cube-medium-random-pipes-remnant",
-    icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/remnants-icon.png",
     icon_size = 64,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-3, -3}, {3, 3}},
@@ -15,7 +15,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/remnants/medium-random-pipes-remnant/medium-random-pipes-remnant.png",
+      filename = "__krastorio2-assets-ultracube__/remnants/medium-random-pipes-remnant/medium-random-pipes-remnant.png",
       line_length = 1,
       width = 350,
       height = 350,
@@ -27,7 +27,7 @@ data:extend({
   {
     type = "corpse",
     name = "cube-big-random-pipes-remnant",
-    icon = "__Krastorio2Assets__/icons/entities/remnants-icon.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/remnants-icon.png",
     icon_size = 64,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-4, -4}, { 4, 4}},
@@ -40,7 +40,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/remnants/big-random-pipes-remnant/big-random-pipes-remnant.png",
+      filename = "__krastorio2-assets-ultracube__/remnants/big-random-pipes-remnant/big-random-pipes-remnant.png",
       line_length = 1,
       width = 500,
       height = 500,

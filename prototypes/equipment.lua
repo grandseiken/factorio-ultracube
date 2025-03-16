@@ -58,7 +58,7 @@ data:extend({
     type = "solar-panel-equipment",
     name = "cube-solar-panel-equipment-mk2",
     sprite = {
-      filename = "__Krastorio2Assets__/buildings/advanced-solar-panel/advanced-solar-panel.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-solar-panel/advanced-solar-panel.png",
       width = 280,
       height = 280,
       priority = "medium",
@@ -92,7 +92,7 @@ data:extend({
       type = "full",
     },
     sprite = {
-      filename = "__Krastorio2Assets__/equipment/advanced-exoskeleton-equipment.png",
+      filename = "__krastorio2-assets-ultracube__/equipment/advanced-exoskeleton-equipment.png",
       width = 128,
       height = 256,
       priority = "medium",

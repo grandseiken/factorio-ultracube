@@ -90,7 +90,7 @@ data:extend({
   {
     type = "item",
     name = "cube-solar-panel-equipment-mk2",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-solar-panel.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-solar-panel.png",
     localised_description = {"item-description.solar-panel-equipment"},
     icon_size = 64,
     place_as_equipment_result = "cube-solar-panel-equipment-mk2",
@@ -104,7 +104,7 @@ data:extend({
   {
     type = "item",
     name = "cube-exoskeleton-equipment-mk2",
-    icon = "__Krastorio2Assets__/icons/equipment/advanced-exoskeleton-equipment.png",
+    icon = "__krastorio2-assets-ultracube__/icons/equipment/advanced-exoskeleton-equipment.png",
     localised_description = {"item-description.exoskeleton-equipment"},
     icon_size = 64,
     place_as_equipment_result = "cube-exoskeleton-equipment-mk2",

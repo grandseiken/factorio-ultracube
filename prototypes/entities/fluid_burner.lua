@@ -5,7 +5,7 @@ data:extend({
   {
     type = "furnace",
     name = "cube-fluid-burner",
-    icon = "__Krastorio2Assets__/icons/entities/flare-stack.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/flare-stack.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
@@ -30,7 +30,7 @@ data:extend({
         north = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-n.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-n.png",
               width = 150,
               height = 300,
               scale = 0.5,
@@ -38,7 +38,7 @@ data:extend({
               shift = {0, -1},
             },
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-sh.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-sh.png",
               priority = "high",
               width = 258,
               height = 94,
@@ -52,7 +52,7 @@ data:extend({
         east = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-e.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-e.png",
               width = 150,
               height = 300,
               scale = 0.5,
@@ -60,7 +60,7 @@ data:extend({
               shift = {0, -1},
             },
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-sh.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-sh.png",
               priority = "high",
               width = 258,
               height = 94,
@@ -74,7 +74,7 @@ data:extend({
         south = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-s.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-s.png",
               width = 150,
               height = 300,
               scale = 0.5,
@@ -82,7 +82,7 @@ data:extend({
               shift = {0, -1},
             },
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-sh.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-sh.png",
               priority = "high",
               width = 258,
               height = 94,
@@ -96,7 +96,7 @@ data:extend({
         west = {
           layers = {
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-w.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-w.png",
               width = 150,
               height = 300,
               scale = 0.5,
@@ -104,7 +104,7 @@ data:extend({
               shift = {0, -1},
             },
             {
-              filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-sh.png",
+              filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-sh.png",
               priority = "high",
               width = 258,
               height = 94,
@@ -121,7 +121,7 @@ data:extend({
           apply_recipe_tint = "quaternary",
           fadeout = true,
           animation = {
-            filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-fire.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-fire.png",
             line_length = 10,
             width = 40,
             height = 81,
@@ -145,7 +145,7 @@ data:extend({
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/flare-stack.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/flare-stack.ogg",
         volume = 1.7,
       },
       idle_sound = {
@@ -163,7 +163,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/flare-stack/flare-stack-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/flare-stack/flare-stack-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 30,

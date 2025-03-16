@@ -5,7 +5,7 @@ require("__Ultracube__/prototypes/entities/lib/module_effects")
 local animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/quantum-computer/quantum-computer.png",
       priority = "high",
       width = 400,
       height = 420,
@@ -16,7 +16,7 @@ local animation = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-sh.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/quantum-computer/quantum-computer-sh.png",
       priority = "medium",
       width = 402,
       height = 362,
@@ -33,7 +33,7 @@ local animation = {
 local working_visualisations = {
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/quantum-computer/quantum-computer-light.png",
       priority = "extra-high",
       draw_as_light = true,
       width = 400,
@@ -47,7 +47,7 @@ local working_visualisations = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/quantum-computer/quantum-computer-glow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/quantum-computer/quantum-computer-glow.png",
       priority = "extra-high",
       draw_as_glow = true,
       blend_mode = "additive-soft",
@@ -76,7 +76,7 @@ local function make_quantum_decoder(name)
     name = name,
     localised_name = {"entity-name.cube-quantum-decoder"},
     localised_description = {"entity-description.cube-quantum-decoder"},
-    icon = "__Krastorio2Assets__/icons/entities/quantum-computer.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/quantum-computer.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
@@ -104,12 +104,12 @@ local function make_quantum_decoder(name)
     },
     module_slots = 0,
     allowed_effects = module_effects.none,
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 1},
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/quantum-computer.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/quantum-computer.ogg",
         volume = 0.75,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},

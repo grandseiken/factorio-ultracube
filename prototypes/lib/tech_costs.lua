@@ -76,7 +76,7 @@ function tech_unlock_effect()
     type = "nothing",
     icons = {
       {
-        icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+        icon = "__krastorio2-assets-ultracube__/icons/entities/biusart-lab.png",
         icon_size = 64,
       },
       {

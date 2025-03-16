@@ -5,7 +5,7 @@ data:extend({
   {
     type = "accumulator",
     name = "cube-energy-bulkframe",
-    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/energy-storage.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     minable = {mining_time = 1, result = "cube-energy-bulkframe"},
@@ -33,7 +33,7 @@ data:extend({
       picture = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -41,7 +41,7 @@ data:extend({
             shift = {0, -0.4},
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -54,7 +54,7 @@ data:extend({
       charge_animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -64,7 +64,7 @@ data:extend({
             shift = {0, -0.4},
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -75,7 +75,7 @@ data:extend({
             shift = {0.72, 0.56},
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-charge.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-charge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -86,7 +86,7 @@ data:extend({
             draw_as_glow = true,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -101,7 +101,7 @@ data:extend({
       discharge_animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -111,7 +111,7 @@ data:extend({
             shift = {0, -0.4},
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-sh.png",
             width = 414,
             height = 270,
             scale = 0.55,
@@ -122,7 +122,7 @@ data:extend({
             shift = {0.72, 0.56},
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-discharge.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-discharge.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -133,7 +133,7 @@ data:extend({
             draw_as_glow = true,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-light.png",
             width = 380,
             height = 380,
             scale = 0.55,
@@ -165,7 +165,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/energy-storage-working.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/energy-storage-working.ogg",
         volume = 0.9,
       },
       idle_sound = {
@@ -179,7 +179,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/energy-storage/energy-storage-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/energy-storage/energy-storage-reflection.png",
         priority = "extra-high",
         width = 44,
         height = 44,

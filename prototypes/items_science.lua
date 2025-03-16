@@ -5,20 +5,20 @@ data:extend({
     type = "tool",
     name = "cube-basic-contemplation-unit",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/military-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/military-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/military-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/military-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -35,20 +35,20 @@ data:extend({
     type = "tool",
     name = "cube-fundamental-comprehension-card",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/logistic-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/logistic-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/logistic-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/logistic-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -65,20 +65,20 @@ data:extend({
     type = "tool",
     name = "cube-abstract-interrogation-card",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/matter-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/matter-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/matter-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = { "light" },
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/matter-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/matter-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -95,20 +95,20 @@ data:extend({
     type = "tool",
     name = "cube-deep-introspection-card",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/singularity-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/singularity-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/singularity-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/singularity-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -125,20 +125,20 @@ data:extend({
     type = "tool",
     name = "cube-synthetic-premonition-card",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/optimization-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/optimization-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/optimization-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/optimization-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -155,20 +155,20 @@ data:extend({
     type = "tool",
     name = "cube-complete-annihilation-card",
     localised_description = {"item-description.cube-science-card"},
-    icon = "__Krastorio2Assets__/icons/cards/advanced-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/advanced-tech-card.png",
     icon_size = 64,
     pictures = {
       layers = {
         {
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/advanced-tech-card.png",
           scale = 0.5,
         },
         {
           draw_as_light = true,
           flags = {"light"},
           size = 64,
-          filename = "__Krastorio2Assets__/icons/cards/advanced-tech-card-light.png",
+          filename = "__krastorio2-assets-ultracube__/icons/cards/advanced-tech-card-light.png",
           scale = 0.5,
         },
       },
@@ -185,7 +185,7 @@ data:extend({
   {
     type = "item",
     name = "cube-quantum-research-data",
-    icon = "__Krastorio2Assets__/icons/cards/biters-research-data.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/biters-research-data.png",
     icon_size = 64,
     subgroup = "cube-research-quantum",
     order = "cube-z[quantum-research-data]",
@@ -197,7 +197,7 @@ data:extend({
   {
     type = "item",
     name = "cube-singularity-research-data",
-    icon = "__Krastorio2Assets__/icons/cards/singularity-research-data.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/singularity-research-data.png",
     icon_size = 64,
     subgroup = "cube-research-singularity",
     order = "cube-y[singularity-research-data]",

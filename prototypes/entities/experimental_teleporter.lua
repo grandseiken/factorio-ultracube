@@ -5,7 +5,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/planetary-teleporter-shadow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/planetary-teleporter-shadow.png",
       priority = "low",
       width = 531,
       height = 292,
@@ -21,7 +21,7 @@ local teleporter_animations = {
     always_draw = true,
     render_layer = "object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -34,7 +34,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-further-towers.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-further-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -45,7 +45,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -57,7 +57,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -73,7 +73,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined-glow.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -88,7 +88,7 @@ local teleporter_animations = {
   {
     always_draw = true,
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -104,7 +104,7 @@ local teleporter_animations_red = {
   {
     render_layer = "object",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -116,7 +116,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-under-forward-towers.png",
       priority = "medium",
       width = 400,
       height = 475,
@@ -127,7 +127,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       flags = {"mask"},
       priority = "extra-high",
       width = 400,
@@ -142,7 +142,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "high",
       width = 400,
       height = 475,
@@ -157,7 +157,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-base-combined-glow-red.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -171,7 +171,7 @@ local teleporter_animations_red = {
   },
   {
     animation = {
-      filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-forward-towers-light.png",
       priority = "extra-high",
       width = 400,
       height = 475,
@@ -201,7 +201,7 @@ data:extend({
   {
     type = "rocket-silo",
     name = "cube-experimental-teleporter",
-    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     map_color = {r = 0.337, g = 0.011, b = 0.184},
@@ -276,12 +276,12 @@ data:extend({
 
     vehicle_impact_sound = sounds.generic_impact,
     alarm_sound = {
-      filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-close-sound.ogg",
+      filename = "__krastorio2-assets-ultracube__/sounds/buildings/planetary-teleporter-close-sound.ogg",
       volume = 1,
     },
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/planetary-teleporter-working-sound.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/planetary-teleporter-working-sound.ogg",
         volume = 0.25,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
@@ -300,7 +300,7 @@ data:extend({
     name = "cube-experimental-teleporter-ready",
     localised_name = {"entity-name.cube-experimental-teleporter"},
     localised_description = {"entity-description.cube-experimental-teleporter"},
-    icon = "__Krastorio2Assets__/icons/entities/planetary-teleporter.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     show_recipe_icon_on_map = false,
@@ -330,7 +330,7 @@ data:extend({
     picture = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/planetary-teleporter/new/teleporter-forward-towers.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/planetary-teleporter/new/teleporter-forward-towers.png",
           width = 400,
           height = 475,
           scale = 0.5,

@@ -2,7 +2,7 @@ data:extend({
   {
     type = "recipe",
     name = "cube-basic-contemplation-unit-0",
-    icon = "__Krastorio2Assets__/icons/cards/military-tech-card.png",
+    icon = "__krastorio2-assets-ultracube__/icons/cards/military-tech-card.png",
     icon_size = 64,
     ingredients = {
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1},

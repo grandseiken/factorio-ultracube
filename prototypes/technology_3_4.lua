@@ -50,7 +50,7 @@ data:extend({
     type = "technology",
     name = "cube-energy-bulkframe",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/energy-storage.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/energy-storage.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-energy-bulkframe"},
     },
@@ -66,7 +66,7 @@ data:extend({
     type = "technology",
     name = "cube-v4-logistics",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/logistics-5.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/logistics-5.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-transport-belt-3"},
       {type = "unlock-recipe", recipe = "cube-underground-belt-3"},
@@ -197,7 +197,7 @@ data:extend({
     icons = {
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/backgrounds/matter.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/backgrounds/matter.png",
       },
       {
         icon_size = 256,
@@ -290,7 +290,7 @@ data:extend({
     type = "technology",
     name = "cube-quantum-decoder",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/quantum-computer.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/quantum-computer.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-particle-phase-aligner"},
       {type = "unlock-recipe", recipe = "cube-quantum-decoder"},
@@ -323,7 +323,7 @@ data:extend({
       },
       {
         icon_size = 256,
-        icon = "__Krastorio2Assets__/technologies/matter-uranium.png",
+        icon = "__krastorio2-assets-ultracube__/technologies/matter-uranium.png",
         scale = 0.625 / 2,
       },
     },
@@ -342,7 +342,7 @@ data:extend({
     type = "technology",
     name = "cube-beacon",
     icon_size = 256,
-    icon = "__Krastorio2Assets__/technologies/singularity-beacon.png",
+    icon = "__krastorio2-assets-ultracube__/technologies/singularity-beacon.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-beacon"},
       {type = "unlock-recipe", recipe = "cube-beacon-juice"},

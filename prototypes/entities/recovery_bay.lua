@@ -6,7 +6,7 @@ data:extend({
   {
     type = "furnace",
     name = "cube-recovery-bay",
-    icon = "__Krastorio2Assets__/icons/entities/stabilizer-charging-station.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/stabilizer-charging-station.png",
     icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
@@ -21,7 +21,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/stabilizer-charging-station/stabilizer-charging-station.png",
             priority = "high",
             width = 170,
             height = 170,
@@ -31,7 +31,7 @@ data:extend({
             scale = 0.4,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/stabilizer-charging-station/stabilizer-charging-station-sh.png",
             priority = "high",
             width = 170,
             height = 144,
@@ -47,7 +47,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/stabilizer-charging-station/stabilizer-charging-station-light.png",
             priority = "high",
             width = 170,
             height = 170,
@@ -64,7 +64,7 @@ data:extend({
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/stabilizer-charging-station.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/stabilizer-charging-station.ogg",
         volume = 0.75,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
@@ -81,7 +81,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/stabilizer-charging-station/stabilizer-charging-station-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/stabilizer-charging-station/stabilizer-charging-station-reflection.png",
         priority = "extra-high",
         width = 20,
         height = 25,

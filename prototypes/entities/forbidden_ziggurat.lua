@@ -8,7 +8,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -29,7 +29,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-charging-light.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -48,7 +48,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -68,7 +68,7 @@ local ziggurat_animations = {
     animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-charge-light.png",
           priority = "high",
           width = 800,
           height = 800,
@@ -88,24 +88,24 @@ local ziggurat_working_sound = {
   sound = {
     variations = {
       {
-        filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/intergalactic-transceiver-charge.ogg",
         volume = 1,
         preload = true,
       },
       {
-        filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/intergalactic-transceiver-charge.ogg",
         volume = 1,
         preload = true,
       },
       {
-        filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver-charge-morse.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/intergalactic-transceiver-charge-morse.ogg",
         volume = 1,
         preload = true,
       },
     },
   },
   idle_sound = {
-    filename = "__Krastorio2Assets__/sounds/buildings/intergalactic-transceiver.ogg",
+    filename = "__krastorio2-assets-ultracube__/sounds/buildings/intergalactic-transceiver.ogg",
     volume = 1,
     audible_distance_modifier = 1,
   },
@@ -117,7 +117,7 @@ local ziggurat_working_sound = {
 local ziggurat_picture = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-light.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -126,7 +126,7 @@ local ziggurat_picture = {
       draw_as_light = true,
     },
     {
-      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver.png",
       width = 800,
       height = 800,
       scale = 0.5,
@@ -134,7 +134,7 @@ local ziggurat_picture = {
       shift = {0, -0.8},
     },
     {
-      filename = "__Krastorio2Assets__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/intergalactic-transceiver/intergalactic-transceiver-sh.png",
       width = 867,
       height = 626,
       scale = 0.5,
@@ -149,7 +149,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-forbidden-ziggurat",
-    icon = "__Krastorio2Assets__/icons/entities/intergalactic-transceiver.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/intergalactic-transceiver.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     map_color = {r = 0.37, g = 0.18, b = 0.47},

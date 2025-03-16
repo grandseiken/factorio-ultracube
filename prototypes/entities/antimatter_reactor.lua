@@ -3,7 +3,7 @@ require("__Ultracube__/prototypes/entities/lib/pipe")
 local chamber_animation_horizontal = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-H.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-steam-turbine/advanced-steam-turbine-H.png",
       width = 469,
       height = 270,
       frame_count = 6,
@@ -12,7 +12,7 @@ local chamber_animation_horizontal = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-H.png",
       width = 514,
       height = 225,
       frame_count = 6,
@@ -27,7 +27,7 @@ local chamber_animation_horizontal = {
 local chamber_animation_vertical = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-V.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-steam-turbine/advanced-steam-turbine-V.png",
       width = 330,
       height = 500,
       frame_count = 6,
@@ -36,7 +36,7 @@ local chamber_animation_vertical = {
       scale = 0.5,
     },
     {
-      filename = "__Krastorio2Assets__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/advanced-steam-turbine/advanced-steam-turbine-sh-V.png",
       width = 350,
       height = 425,
       frame_count = 6,
@@ -51,14 +51,14 @@ local chamber_animation_vertical = {
 local reactor_picture = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor.png",
       width = 1100,
       height = 1100,
       scale = 0.5,
       shift = {1.01, 0},
     },
     {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-shadow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-shadow.png",
       priority = "medium",
       width = 1100,
       height = 1100,
@@ -73,7 +73,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
@@ -90,7 +90,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-steam.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-steam.png",
       priority = "extra-high",
       line_length = 10,
       width = 40,
@@ -107,7 +107,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-glow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-animation-glow.png",
       priority = "high",
       line_length = 6,
       width = 626,
@@ -123,7 +123,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-animation-light.png",
       line_length = 6,
       width = 626,
       height = 688,
@@ -137,7 +137,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-light.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-light.png",
       priority = "high",
       width = 1100,
       height = 1100,
@@ -153,7 +153,7 @@ local reactor_working_visualizations = {
   {
     render_layer = "higher-object-under",
     animation = {
-      filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-animation.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-animation.png",
       line_length = 6,
       width = 626,
       height = 688,
@@ -235,7 +235,7 @@ data:extend({
     type = "corpse",
     name = "cube-antimatter-reactor-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-antimatter-reactor"}},
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-7.5, -7.5}, {7.5, 7.5}},
@@ -248,7 +248,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/remnants/fusion-reactor-remnant/fusion-reactor-remnant.png",
+      filename = "__krastorio2-assets-ultracube__/remnants/fusion-reactor-remnant/fusion-reactor-remnant.png",
       line_length = 1,
       width = 1100,
       height = 1100,
@@ -262,7 +262,7 @@ data:extend({
   {
     type = "electric-energy-interface",
     name = "cube-antimatter-reactor",
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 2, result = "cube-antimatter-reactor"},
@@ -286,7 +286,7 @@ data:extend({
     picture = reactor_picture,
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/fusion-reactor/fusion-reactor-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/fusion-reactor/fusion-reactor-reflection.png",
         priority = "extra-high",
         width = 110,
         height = 110,
@@ -300,7 +300,7 @@ data:extend({
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/fusion-reactor.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/fusion-reactor.ogg",
         volume = 1.5,
         audible_distance_modifier = 10,
       },
@@ -311,8 +311,8 @@ data:extend({
       fade_out_ticks = 5,
     },
 
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 0.85},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 0.85},
   },
 
   {
@@ -320,7 +320,7 @@ data:extend({
     name = "cube-antimatter-reactor-animation",
     localised_name = {"entity-name.cube-antimatter-reactor"},
     localised_description = {"entity-description.cube-antimatter-reactor"},
-    icon = "__Krastorio2Assets__/icons/entities/fusion-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/fusion-reactor.png",
     icon_size = 64,
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     show_recipe_icon_on_map = false,
@@ -349,7 +349,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-annihilation-chamber",
-    icon = "__Krastorio2Assets__/icons/entities/advanced-steam-turbine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/advanced-steam-turbine.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation"},
     show_recipe_icon_on_map = false,

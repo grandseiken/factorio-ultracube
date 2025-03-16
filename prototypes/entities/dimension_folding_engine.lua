@@ -7,7 +7,7 @@ data:extend({
     type = "corpse",
     name = "cube-dimension-folding-engine-remnant",
     localised_name = {"remnant-name", {"entity-name.cube-dimension-folding-engine"}},
-    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
@@ -20,7 +20,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/remnants/antimatter-reactor-remnant/antimatter-reactor-remnant.png",
+      filename = "__krastorio2-assets-ultracube__/remnants/antimatter-reactor-remnant/antimatter-reactor-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,
@@ -32,7 +32,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-dimension-folding-engine",
-    icon = "__Krastorio2Assets__/icons/entities/antimatter-reactor.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
     show_recipe_icon_on_map = false,
@@ -47,7 +47,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/antimatter-reactor/antimatter-reactor-light.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -60,7 +60,7 @@ data:extend({
             blend_mode = "additive",
           },
           {
-            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-glow.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/antimatter-reactor/antimatter-reactor-glow.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -74,7 +74,7 @@ data:extend({
             fadeout = true,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/antimatter-reactor/antimatter-reactor.png",
             priority = "high",
             width = 660,
             height = 706,
@@ -85,7 +85,7 @@ data:extend({
             scale = 0.48,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/antimatter-reactor/antimatter-reactor-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/antimatter-reactor/antimatter-reactor-sh.png",
             width = 724,
             height = 630,
             shift = {0.57, 0.27},
@@ -103,7 +103,7 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__Krastorio2Assets__/sounds/buildings/antimatter-reactor.ogg",
+          filename = "__krastorio2-assets-ultracube__/sounds/buildings/antimatter-reactor.ogg",
           volume = 1,
         },
       },
@@ -129,7 +129,7 @@ data:extend({
       scale = 1,
     }},
     allowed_effects = module_effects.speed_efficiency,
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 1},
   },
 })

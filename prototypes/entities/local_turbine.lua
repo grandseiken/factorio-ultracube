@@ -4,13 +4,13 @@ local sounds = require("__base__/prototypes/entity/sounds")
 local turbine_persistent_sound = {
   variations = {
     {
-      filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating.ogg",
+      filename = "__krastorio2-assets-ultracube__/sounds/buildings/wind-turbine-rotating.ogg",
       volume = 0.4,
       min_speed = 0.8,
       max_speed = 0.9,
     },
     {
-      filename = "__Krastorio2Assets__/sounds/buildings/wind-turbine-rotating-2.ogg",
+      filename = "__krastorio2-assets-ultracube__/sounds/buildings/wind-turbine-rotating-2.ogg",
       volume = 0.3,
       min_speed = 0.8,
       max_speed = 0.9,
@@ -28,7 +28,7 @@ local turbine_scale = 0.85
 local turbine_animation = {
   layers = {
     {
-      filename = "__Krastorio2Assets__/buildings/wind-turbine/wind-turbine.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/wind-turbine/wind-turbine.png",
       priority = "medium",
       width = 196,
       height = 286,
@@ -39,7 +39,7 @@ local turbine_animation = {
       shift = {0, turbine_scale * -1.2},
     },
     {
-      filename = "__Krastorio2Assets__/buildings/wind-turbine/wind-turbine-shadow.png",
+      filename = "__krastorio2-assets-ultracube__/buildings/wind-turbine/wind-turbine-shadow.png",
       priority = "medium",
       width = 242,
       height = 100,
@@ -55,7 +55,7 @@ local turbine_animation = {
 
 local turbine_water_reflection = {
   pictures = {
-    filename = "__Krastorio2Assets__/buildings/wind-turbine/wind-turbine-reflection.png",
+    filename = "__krastorio2-assets-ultracube__/buildings/wind-turbine/wind-turbine-reflection.png",
     priority = "extra-high",
     width = 20,
     height = 25,
@@ -88,7 +88,7 @@ data:extend({
     name = "cube-local-turbine",
     localised_name = {"entity-name.cube-local-turbine"},
     localised_description = {"entity-description.cube-local-turbine"},
-    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/wind-turbine.png",
     icon_size = 64,
     flags = {"placeable-neutral", "player-creation", "not-rotatable"},
     collision_mask = {
@@ -115,7 +115,7 @@ data:extend({
     name = "cube-local-turbine-generator",
     localised_name = {"entity-name.cube-local-turbine"},
     localised_description = {"entity-description.cube-local-turbine"},
-    icon = "__Krastorio2Assets__/icons/entities/wind-turbine.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/wind-turbine.png",
     icon_size = 64,
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},
     hidden = true,
@@ -223,7 +223,7 @@ data:extend({
   {
     type = "simple-entity-with-owner",
     name = "cube-energy-bulkframe-local-turbine-collision",
-    icon = "__Krastorio2Assets__/icons/entities/energy-storage.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/energy-storage.png",
     icon_size = 64,
     localised_name = {"entity-name.cube-energy-bulkframe"},
     flags = {"not-repairable", "not-blueprintable", "not-deconstructable"},

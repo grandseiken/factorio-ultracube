@@ -63,7 +63,7 @@ data:extend({
   {
     type = "resource",
     name = "cube-rare-metals",
-    icon = "__Krastorio2Assets__/icons/resources/rare-metals.png",
+    icon = "__krastorio2-assets-ultracube__/icons/resources/rare-metals.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-a",
@@ -96,7 +96,7 @@ data:extend({
     stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
     stages = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals.png",
+        filename = "__krastorio2-assets-ultracube__/resources/rare-metals/rare-metals.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -107,7 +107,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/rare-metals/rare-metals-glow.png",
+        filename = "__krastorio2-assets-ultracube__/resources/rare-metals/rare-metals-glow.png",
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -130,7 +130,7 @@ data:extend({
     type = "resource",
     name = "cube-deep-core-vein",
     category = "cube-deep-core",
-    icon = "__Krastorio2Assets__/icons/items/raw-imersite.png",
+    icon = "__krastorio2-assets-ultracube__/icons/items/raw-imersite.png",
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "a-b-b",
@@ -154,7 +154,7 @@ data:extend({
     stage_counts = {0},
     stages = {
       sheet = {
-        filename = "__Krastorio2Assets__/resources/imersite/imersite-rift.png",
+        filename = "__krastorio2-assets-ultracube__/resources/imersite/imersite-rift.png",
         priority = "extra-high",
         width = 500,
         height = 500,
@@ -166,7 +166,7 @@ data:extend({
     stages_effect = {
       sheets = {
         {
-          filename = "__Krastorio2Assets__/resources/imersite/imersite-rift-glow.png",
+          filename = "__krastorio2-assets-ultracube__/resources/imersite/imersite-rift-glow.png",
           priority = "extra-high",
           width = 500,
           height = 500,

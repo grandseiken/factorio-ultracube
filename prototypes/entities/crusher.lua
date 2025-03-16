@@ -5,7 +5,7 @@ data:extend({
     type = "furnace",
     name = "cube-crusher",
     icon_size = 64,
-    icon = "__Krastorio2Assets__/icons/entities/crusher.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/crusher.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {hardness = 1, mining_time = 1, result = "cube-crusher"},
     max_health = 1000,
@@ -17,7 +17,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/crusher/crusher.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/crusher/crusher.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -27,7 +27,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/crusher/crusher-shadow.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/crusher/crusher-shadow.png",
             priority = "high",
             width = 512,
             height = 512,
@@ -43,7 +43,7 @@ data:extend({
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/crusher.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/crusher.ogg",
         volume = 1.25,
       },
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
@@ -61,7 +61,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/crusher/crusher-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/crusher/crusher-reflection.png",
         priority = "extra-high",
         width = 80,
         height = 60,

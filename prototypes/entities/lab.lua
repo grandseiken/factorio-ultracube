@@ -6,7 +6,7 @@ data:extend({
   {
     type = "lab",
     name = "cube-lab",
-    icon = "__Krastorio2Assets__/icons/entities/biusart-lab.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/biusart-lab.png",
     icon_size = 64,
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 0.25, result = "cube-lab"},
@@ -24,7 +24,7 @@ data:extend({
     on_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim-light.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-anim-light.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -35,7 +35,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -45,7 +45,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -55,7 +55,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-anim.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -65,7 +65,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-light-anim.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-light-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -76,7 +76,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-light-anim.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-light-anim.png",
           width = 150,
           height = 150,
           frame_count = 29,
@@ -88,7 +88,7 @@ data:extend({
           blend_mode = "additive-soft",
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-shadow.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-shadow.png",
           width = 240,
           height = 240,
           frame_count = 1,
@@ -100,7 +100,7 @@ data:extend({
           draw_as_shadow = true,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-ao.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-ao.png",
           width = 220,
           height = 220,
           frame_count = 1,
@@ -114,7 +114,7 @@ data:extend({
     off_animation = {
       layers = {
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab.png",
           width = 150,
           height = 150,
           frame_count = 1,
@@ -122,7 +122,7 @@ data:extend({
           scale = 0.64,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-shadow.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-shadow.png",
           width = 240,
           height = 240,
           frame_count = 1,
@@ -132,7 +132,7 @@ data:extend({
           draw_as_shadow = true,
         },
         {
-          filename = "__Krastorio2Assets__/buildings/biusart-lab/biusart-lab-ao.png",
+          filename = "__krastorio2-assets-ultracube__/buildings/biusart-lab/biusart-lab-ao.png",
           width = 220,
           height = 220,
           frame_count = 1,
@@ -145,7 +145,7 @@ data:extend({
     },
     working_sound = {
       sound = {
-        filename = "__Krastorio2Assets__/sounds/buildings/biusart-lab.ogg",
+        filename = "__krastorio2-assets-ultracube__/sounds/buildings/biusart-lab.ogg",
         volume = 0.7
       },
       audible_distance_modifier = 0.7,

@@ -8,7 +8,7 @@ data:extend({
     type = "corpse",
     name = "cube-cyclotron-remnant",
     localised_name = {"remnant-name", {"entity-name.kr-matter-plant"}},
-    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-plant.png",
     icon_size = 128,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
@@ -21,7 +21,7 @@ data:extend({
     final_render_layer = "remnants",
     remove_on_tile_placement = false,
     animation = make_rotated_animation_variations_from_sheet(1, {
-      filename = "__Krastorio2Assets__/remnants/matter-plant-remnant/matter-plant-remnant.png",
+      filename = "__krastorio2-assets-ultracube__/remnants/matter-plant-remnant/matter-plant-remnant.png",
       line_length = 1,
       width = 600,
       height = 600,
@@ -33,7 +33,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "cube-cyclotron",
-    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-plant.png",
     icon_size = 128,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-cyclotron"},
@@ -78,7 +78,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/matter-plant/matter-plant.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/matter-plant/matter-plant.png",
             priority = "high",
             width = 462,
             height = 500,
@@ -87,7 +87,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/matter-plant/matter-plant-sh.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/matter-plant/matter-plant-sh.png",
             priority = "high",
             width = 504,
             height = 444,
@@ -101,7 +101,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/matter-plant/matter-plant-working-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/matter-plant/matter-plant-working-light.png",
             priority = "high",
             draw_as_light = true,
             blend_mode = "additive-soft",
@@ -117,7 +117,7 @@ data:extend({
         {
           synced_fadeout = true,
           animation = {
-            filename = "__Krastorio2Assets__/buildings/matter-plant/matter-plant-working-glow.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/matter-plant/matter-plant-working-glow.png",
             priority = "high",
             draw_as_glow = true,
             blend_mode = "additive-soft",
@@ -132,7 +132,7 @@ data:extend({
         },
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/matter-plant/matter-plant-working.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/matter-plant/matter-plant-working.png",
             width = 462,
             height = 500,
             frame_count = 30,
@@ -147,7 +147,7 @@ data:extend({
     crafting_categories = {"cube-cyclotron"},
     vehicle_impact_sound = sounds.generic_impact,
     working_sound = {
-      sound = {filename = "__Krastorio2Assets__/sounds/buildings/matter-plant.ogg"},
+      sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/matter-plant.ogg"},
       idle_sound = {filename = "__base__/sound/idle1.ogg"},
       apparent_volume = 1.5,
       fade_in_ticks = 5,
@@ -170,14 +170,14 @@ data:extend({
       scale = 1,
     }},
     allowed_effects = module_effects.fuel_speed_only,
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 1},
   },
 
   {
     type = "electric-energy-interface",
     name = "cube-cyclotron-interface",
-    icon = "__Krastorio2Assets__/icons/entities/matter-plant.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/matter-plant.png",
     icon_size = 128,
     flags = {"not-repairable", "not-rotatable", "not-blueprintable", "not-deconstructable"},
     max_health = 1000,

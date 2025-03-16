@@ -6,7 +6,7 @@ data:extend({
   {
     type = "furnace",
     name = "cube-particle-phase-aligner",
-    icon = "__Krastorio2Assets__/icons/entities/research-server.png",
+    icon = "__krastorio2-assets-ultracube__/icons/entities/research-server.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "cube-particle-phase-aligner"},
@@ -19,7 +19,7 @@ data:extend({
       animation = {
         layers = {
           {
-            filename = "__Krastorio2Assets__/buildings/research-server/research-server.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/research-server/research-server.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -30,7 +30,7 @@ data:extend({
             scale = 0.5,
           },
           {
-            filename = "__Krastorio2Assets__/buildings/research-server/research-server-shadow.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/research-server/research-server-shadow.png",
             priority = "high",
             width = 256,
             height = 256,
@@ -46,7 +46,7 @@ data:extend({
       working_visualisations = {
         {
           animation = {
-            filename = "__Krastorio2Assets__/buildings/research-server/research-server-light.png",
+            filename = "__krastorio2-assets-ultracube__/buildings/research-server/research-server-light.png",
             priority = "extra-high",
             width = 256,
             height = 256,
@@ -72,7 +72,7 @@ data:extend({
     working_sound = {
       sound = {
         {
-          filename = "__Krastorio2Assets__/sounds/buildings/small-research-server.ogg",
+          filename = "__krastorio2-assets-ultracube__/sounds/buildings/small-research-server.ogg",
           volume = 0.75,
         },
       },
@@ -92,7 +92,7 @@ data:extend({
 
     water_reflection = {
       pictures = {
-        filename = "__Krastorio2Assets__/buildings/research-server/research-server-reflection.png",
+        filename = "__krastorio2-assets-ultracube__/buildings/research-server/research-server-reflection.png",
         priority = "extra-high",
         width = 40,
         height = 40,
@@ -108,7 +108,7 @@ data:extend({
     ingredient_count = 1,
     module_slots = 0,
     allowed_effects = module_effects.none,
-    open_sound = {filename = "__Krastorio2Assets__/sounds/buildings/open.ogg", volume = 1},
-    close_sound = {filename = "__Krastorio2Assets__/sounds/buildings/close.ogg", volume = 1},
+    open_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/open.ogg", volume = 1},
+    close_sound = {filename = "__krastorio2-assets-ultracube__/sounds/buildings/close.ogg", volume = 1},
   },
 })

@@ -660,7 +660,7 @@ data:extend({
     flags = {"not-on-map"},
     animations = {
       {
-        filename = "__Krastorio2Assets__/explosions/small-matter-explosion.png",
+        filename = "__krastorio2-assets-ultracube__/explosions/small-matter-explosion.png",
         width = 400,
         height = 400,
         frame_count = 47,
@@ -712,7 +712,7 @@ data:extend({
     flags = {"not-on-map"},
     animations = {
       {
-        filename = "__Krastorio2Assets__/explosions/medium-matter-explosion.png",
+        filename = "__krastorio2-assets-ultracube__/explosions/medium-matter-explosion.png",
         width = 800,
         height = 800,
         frame_count = 47,
@@ -774,22 +774,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-1.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-2.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-3.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-4.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
@@ -850,22 +850,22 @@ data:extend({
       dice_y = 5,
       stripes = {
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-1.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-1.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-2.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-2.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-3.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-3.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
         {
-          filename = "__Krastorio2Assets__/explosions/matter-explosion-4.png",
+          filename = "__krastorio2-assets-ultracube__/explosions/matter-explosion-4.png",
           width_in_frames = 5,
           height_in_frames = 5,
         },
@@ -894,7 +894,7 @@ data:extend({
     type = "sound",
     name = "cube-experimental-teleporter-effect-sound",
     category = "alert",
-    filename = "__Krastorio2Assets__/sounds/others/planetary-teleporter-effect-sound.ogg",
+    filename = "__krastorio2-assets-ultracube__/sounds/others/planetary-teleporter-effect-sound.ogg",
     volume = 2.0,
     audible_distance_modifier = 2.0,
     aggregation = {
