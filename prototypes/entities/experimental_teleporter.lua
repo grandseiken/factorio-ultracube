@@ -203,7 +203,7 @@ data:extend({
     name = "cube-experimental-teleporter",
     icon = "__krastorio2-assets-ultracube__/icons/entities/planetary-teleporter.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     map_color = {r = 0.337, g = 0.011, b = 0.184},
     max_health = 1000,
     minable = {mining_time = 1, result = "cube-experimental-teleporter"},
