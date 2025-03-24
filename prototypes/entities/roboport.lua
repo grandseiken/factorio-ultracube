@@ -11,7 +11,7 @@ data:extend({
     localised_description = {"entity-description.roboport"},
     icon = "__krastorio2-assets-ultracube__/icons/entities/big-roboport.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-roboport"},
     max_health = 1500,
     corpse = "cube-medium-random-pipes-remnant",

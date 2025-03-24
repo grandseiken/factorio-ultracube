@@ -90,7 +90,7 @@ data:extend({
     localised_description = {"entity-description.cube-local-turbine"},
     icon = "__krastorio2-assets-ultracube__/icons/entities/wind-turbine.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "player-creation"},
     collision_mask = {
       layers = {item = true, object = true, player = true, water_tile = true,
                 cube_local_turbine_forbidden_zone = true},
