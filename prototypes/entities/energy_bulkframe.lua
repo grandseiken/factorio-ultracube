@@ -7,7 +7,7 @@ data:extend({
     name = "cube-energy-bulkframe",
     icon = "__krastorio2-assets-ultracube__/icons/entities/energy-storage.png",
     icon_size = 64,
-    flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "cube-energy-bulkframe"},
     max_health = 750,
     corpse = "big-remnants",
