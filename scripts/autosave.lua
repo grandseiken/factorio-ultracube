@@ -21,6 +21,6 @@ function helvetica_scenario_autosave()
     end
 end
 
-function autosave.on_tick()
+function autosave.on_tick(_tick)
     helvetica_scenario_autosave()
 end
