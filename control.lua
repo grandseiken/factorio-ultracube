@@ -6,7 +6,7 @@ do
 end
 
 local activation = require("__Ultracube__/scripts/activation")
-local cube_fx = require("__Ultracube__/scripts/autosave")
+local autosave = require("__Ultracube__/scripts/autosave")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
