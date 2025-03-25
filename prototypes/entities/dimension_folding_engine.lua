@@ -34,7 +34,7 @@ data:extend({
     name = "cube-dimension-folding-engine",
     icon = "__krastorio2-assets-ultracube__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
-    flags = {"placeable-neutral", "placeable-player", "player-creation", "not-rotatable"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     show_recipe_icon_on_map = false,
     minable = {mining_time = 2, result = "cube-dimension-folding-engine"},
     max_health = 2000,
