@@ -399,7 +399,7 @@ local function better_victory_screen_statistics()
   local cube_utilisation = victory_statistics.cube_working_samples /
       (victory_statistics.cube_working_samples + victory_statistics.cube_idle_samples)
   local fastest_helvetica = victory_statistics.fastest_helvetica
-  local production = force.item_production_statistics
+  local production = force.get_item_production_statistics(game.surfaces[1])
   local cubes_consumed = production.get_output_count("cube-ultradense-utility-cube")
   local cubes_consumed_dormant = production.get_output_count("cube-dormant-utility-cube")
   local cubes_consumed_phantom = production.get_output_count("cube-phantom-ultradense-constituent")
