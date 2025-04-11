@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.8
+Date: 11.04.2025
+  Changes:
+    - Removed rocket capacity limits from tooltips.
+  Bugfixes:
+    - Fixed an issue with recent Factorio versions where some structures could not be rotated in blueprints.
+    - Fixed an issue with Better Victory Screen integration.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.7
 Date: 16.03.2025
   Changes:
