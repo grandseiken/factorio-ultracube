@@ -42,7 +42,7 @@ for t, _ in pairs(defines.prototypes.item) do
   if data.raw[t] then
     for _, v in pairs(data.raw[t]) do
       v.hidden_in_factoriopedia = true
-      v.weight = (1000 * 1000) / v.stack_size
+      v.weight = 0
     end
   end
 end
