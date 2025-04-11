@@ -6,6 +6,7 @@ do
 end
 
 local activation = require("__Ultracube__/scripts/activation")
+local autosave = require("__Ultracube__/scripts/autosave")
 local cube_fx = require("__Ultracube__/scripts/cube_fx")
 local cube_search = require("__Ultracube__/scripts/cube_search")
 local cube_management = require("__Ultracube__/scripts/cube_management")
@@ -331,6 +332,7 @@ script.on_event(defines.events.on_tick,
     transition.tick(tick)
     linked_entities.tick(tick)
     cubecam.tick(tick)
+    autosave.on_tick(tick)
   end)
 
 -- Custom input events.
