@@ -1,5 +1,8 @@
 if mods["RenaiTransportation"] then
   data.raw.container["OpenContainer"].inventory_size = data.raw.container["iron-chest"].inventory_size
+  if data.raw.container["RTCatchingChute"] then
+    data.raw.container["RTCatchingChute"].inventory_size = data.raw.container["iron-chest"].inventory_size
+  end
 
   -- Conversion of vanilla items to rough equivalents in Ultracube.
   local recipe_item_conversion = {
@@ -10,6 +13,7 @@ if mods["RenaiTransportation"] then
     ["automation-science-pack"] = "cube-basic-contemplation-unit",
     ["electronic-circuit"] = "cube-electronic-circuit",
     ["advanced-circuit"] = "cube-advanced-circuit",
+    ["processing-unit"] = "cube-spectral-processor",
 
     -- Items that can stay as-is.
     ["iron-chest"] = true,
@@ -17,11 +21,13 @@ if mods["RenaiTransportation"] then
     ["constant-combinator"] = true,
     ["pipe"] = true,
     ["pipe-to-ground"] = true,
+    ["pump"] = true,
     ["rail"] = true,
     ["accumulator"] = true,
     ["substation"] = true,
     ["refined-concrete"] = true,
     ["cargo-wagon"] = true,
+    ["copper-cable"] = true,
   }
 
   -- Conversion of vanilla science items to Ultracube science equivalents.
@@ -29,12 +35,13 @@ if mods["RenaiTransportation"] then
     ["automation-science-pack"] = "cube-basic-contemplation-unit",
     ["logistic-science-pack"] = "cube-fundamental-comprehension-card",
     ["chemical-science-pack"] = "cube-abstract-interrogation-card",
+    ["production-science-pack"] = "cube-deep-introspection-card",
   }
 
   -- Conversion of prerequisite techs from vanilla to Ultracube.
   local tech_prerequisite_conversion = {
-    ["automation-science-pack"] = {},
     ["logistic-science-pack"] = "cube-fundamental-comprehension-card",
+    ["production-science-pack"] = "cube-deep-introspection-card",
     ["advanced-circuit"] = "cube-advanced-electronics",
     ["circuit-network"] = "cube-combinatorics",
     ["railway"] = "cube-railway",
@@ -54,6 +61,11 @@ if mods["RenaiTransportation"] then
     "RTMagnetTrainRamps",  -- Magnetic train ramp
     "RTImpactTech",  -- Impact wagon and unloader (unloader requires refined concrete)
     "RTFreightPlates",  -- Train bounce pads
+    "RTVacuumHatchTech",  -- Vacuum hatches
+    "RTItemCannonTech",  -- Item cannons
+    "RTItemCannonLogisticsTech",  -- Item cannon logistic chutes
+    "RTTrapdoorWagonTech",  -- Trapdoor wagons
+    "RTSwitchRampTech",  -- Switch ramps
   }
 
   -- All recipes that can be handled completely automatically or with minor tweaks afterward
@@ -61,6 +73,8 @@ if mods["RenaiTransportation"] then
     -- Default-enabled recipes.
     "RTBouncePlate",
     "OpenContainer",
+    "OpenContainerRevertRecipe",
+
     "DirectedBouncePlate",
     "PlayerLauncher",
     "HatchRT",  -- HatchRTTech
@@ -73,6 +87,14 @@ if mods["RenaiTransportation"] then
     "RTImpactUnloader",  -- RTImpactTech (Recipe is changed to use regular concrete)
     "RTTrainBouncePlate",  -- RTFreightPlates
     "RTTrainDirectedBouncePlate",  -- RTFreightPlates
+    "RTVacuumHatch",  -- RTVacuumHatchTech
+    "RTRicochetPanel",  -- RTItemCannonTech
+    "RTCatchingChute",  -- RTItemCannonTech
+    "RTDivergingChute",  -- RTItemCannonLogisticsTech
+    "RTMergingChute",  -- RTItemCannonLogisticsTech
+    "RTTrapdoorSwitch",  -- RTTrapdoorWagonTech
+    "RTSwitchTrainRamp",  -- RTSwitchRampTech
+    "RTMagnetSwitchTrainRamp",  -- RTSwitchRampTech
   }
 
   local valid_recipes = {} -- List of recipes that have cube-equivalents created or have been updated to be compatible.
@@ -118,6 +140,45 @@ if mods["RenaiTransportation"] then
     end
   end
 
+  -- Replace discharge-defense-equipment in item cannons
+  if data.raw.recipe["RTItemCannon"] then
+    data.raw.recipe["RTItemCannon"].ingredients = {
+      {type = "item", name = "refined-concrete", amount = 100},
+      {type = "item", name = "steel-plate", amount = 50},
+      {type = "item", name = "cube-spectral-processor", amount = 10},
+      {type = "item", name = "accumulator", amount = 50}  -- Not really equivalent but whatever
+    }
+    valid_recipes["RTItemCannon"] = true
+  end
+
+  -- Replace iron-gear-wheel and iron-stick in trapdoor wagons
+  if data.raw.recipe["RTTrapdoorWagon"] then
+    data.raw.recipe["RTTrapdoorWagon"].ingredients = {
+      {type = "item", name = "cube-basic-matter-unit", amount = 9},  -- 4 iron-gear-wheel + 2 iron-stick = 9 iron-plate
+      {type = "item", name = "cube-advanced-circuit", amount = 20},
+      {type = "item", name = "cargo-wagon", amount = 1},
+    }
+    valid_recipes["RTTrapdoorWagon"] = true
+  end
+
+  -- Tech adjustments before automatic editing
+
+  -- Remove automation-science-pack prerequisite from root Renai tech
+  if data.raw.technology["se-no"] then
+    data.raw.technology["se-no"].prerequisites = {}
+  end
+
+  -- Adjust RTItemCannonTech prerequisites
+  if data.raw.technology["RTItemCannonTech"] then
+    data.raw.technology["RTItemCannonTech"].prerequisites = {
+      "se-no",
+      "cube-refined-concrete",
+      "cube-electric-energy-accumulators",
+      "cube-deep-introspection-card"
+    }
+  end
+
+
   -- Fully automatic technology editing.
   for _, tech_name in ipairs(renai_auto_techs) do
     if data.raw.technology[tech_name] then
@@ -131,7 +192,7 @@ if mods["RenaiTransportation"] then
             if type(tech_prerequisite_conversion[prereq_name]) == "string" then  -- is a tech that needs conversion
               tech.prerequisites[prereq_index] = tech_prerequisite_conversion[prereq_name]
             end
-          else
+          elseif not string.find(prereq_name, "^cube-") then -- is not an Ultracube prerequisite
             log("Ultracube+Renai - Unrecognised prerequisites: " .. prereq_name .. " in tech: " .. tech_name)
             is_valid_tech = false
           end
@@ -521,4 +582,90 @@ if mods["RenaiTransportation"] then
       }
     })
   end
+
+  -- Belt ramps (including ultrafast belts)
+  -- Hijacking RTturboBeltRamp name so scripts work
+  v4BeltEntity = table.deepcopy(data.raw["transport-belt"]["RTexpressBeltRamp"])
+  v4BeltEntity.type = "transport-belt"
+  v4BeltEntity.name = "RTturboBeltRamp"
+  v4BeltEntity.localised_name = "Ultrafast belt ramp"
+  v4BeltEntity.icons[2].tint = {216, 7, 249}
+  v4BeltEntity.minable.result = "RTturboBeltRamp"
+  v4BeltEntity.corpse = "cube-v4-transport-belt-remnant"
+  v4BeltEntity.animation_speed_coefficient = 128
+  v4BeltEntity.belt_animation_set.animation_set.layers[2].tint = {216, 7, 249}
+  v4BeltEntity.radius_visualisation_specification.distance = 40
+
+  v4BeltItem = table.deepcopy(data.raw["item"]["RTexpressBeltRamp"])
+  v4BeltItem.type = "item"
+  v4BeltItem.name = "RTturboBeltRamp"
+  v4BeltItem.icons[2].tint = {216, 7, 249}
+  v4BeltItem.order = "e-d"
+  v4BeltItem.place_result = "RTturboBeltRamp"
+
+  data:extend({
+    v4BeltEntity,
+    v4BeltItem,
+    {
+      type = "recipe",
+      name = "RTfastBeltRamp",
+      enabled = false,
+      energy_required = 1,
+      ingredients = {
+        {type = "item", name = "fast-transport-belt", amount = 2},
+        {type = "item", name = "cube-advanced-engine", amount = 1},
+        {type = "item", name = "cube-basic-matter-unit", amount = 4}, -- 2 iron-gear-wheel = 4 iron-plate
+      },
+      results = {{type = "item", name = "RTfastBeltRamp", amount = 1}},
+      category = "cube-fabricator-handcraft",
+    },
+    {
+      type = "recipe",
+      name = "RTexpressBeltRamp",
+      enabled = false,
+      energy_required = 1,
+      ingredients = {
+        {type = "item", name = "express-transport-belt", amount = 2},
+        {type = "item", name = "cube-advanced-engine", amount = 1},
+        {type = "item", name = "cube-basic-matter-unit", amount = 4},
+      },
+      results = {{type = "item", name = "RTexpressBeltRamp", amount = 1}},
+      category = "cube-fabricator-handcraft",
+    },
+    {
+      type = "recipe",
+      name = "RTturboBeltRamp",
+      localised_name = "Ultrafast belt ramp",
+      enabled = false,
+      energy_required = 1,
+      ingredients = {
+        {type = "item", name = "cube-v4-transport-belt", amount = 2},
+        {type = "item", name = "cube-advanced-engine", amount = 1},
+        {type = "item", name = "cube-basic-matter-unit", amount = 4},
+      },
+      results = {{type = "item", name = "RTturboBeltRamp", amount = 1}},
+      category = "cube-fabricator-handcraft",
+    },
+    {
+      type = "technology",
+      name = "RTBeltRampTech",
+      icon = "__RenaiTransportation__/graphics/tech/BeltRampTech.png",
+      icon_size = 150,
+      effects = {
+        {type = "unlock-recipe", recipe = "RTfastBeltRamp"},
+        {type = "unlock-recipe", recipe = "RTexpressBeltRamp"},
+        {type = "unlock-recipe", recipe = "RTturboBeltRamp"},
+      },
+      prerequisites = {"se-no", "cube-advanced-engine", "cube-logistics"},
+      unit = {
+        count = 200,
+        ingredients = {
+            {"cube-basic-contemplation-unit", 1},
+            {"cube-fundamental-comprehension-card", 1},
+            {"cube-abstract-interrogation-card", 1},
+        },
+        time = 45,
+      }
+    }
+  })
 end
