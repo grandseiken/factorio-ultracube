@@ -1,5 +1,7 @@
 if mods["RenaiTransportation"] then
-  data.raw.container["OpenContainer"].inventory_size = data.raw.container["iron-chest"].inventory_size
+  if data.raw.container["OpenContainer"] then
+    data.raw.container["OpenContainer"].inventory_size = data.raw.container["iron-chest"].inventory_size
+  end
   if data.raw.container["RTCatchingChute"] then
     data.raw.container["RTCatchingChute"].inventory_size = data.raw.container["iron-chest"].inventory_size
   end
@@ -234,7 +236,7 @@ if mods["RenaiTransportation"] then
 
   -- Manual recipes/techs
 
-  -- Thrower inserters
+  -- Thrower inserters and belt ramps
   if settings.startup["RTThrowersSetting"].value then -- Throwers are enabled
     --[[
     Since Ultracube has inserters available before electronic circuits/copper cable,
@@ -349,6 +351,92 @@ if mods["RenaiTransportation"] then
       local effects = data.raw.technology["RTFocusedFlinging"].effects
       effects[#effects + 1] = {type = "unlock-recipe", recipe = "cube-RTThrower-cube-extremely-long-inserter-Recipe"}
     end
+
+    -- Belt ramps (including ultrafast belts)
+    -- Hijacking RTturboBeltRamp name so scripts work
+    v4BeltEntity = table.deepcopy(data.raw["transport-belt"]["RTexpressBeltRamp"])
+    v4BeltEntity.type = "transport-belt"
+    v4BeltEntity.name = "RTturboBeltRamp"
+    v4BeltEntity.localised_name = "Ultrafast belt ramp"
+    v4BeltEntity.icons[2].tint = {216, 7, 249}
+    v4BeltEntity.minable.result = "RTturboBeltRamp"
+    v4BeltEntity.corpse = "cube-v4-transport-belt-remnant"
+    v4BeltEntity.animation_speed_coefficient = 128
+    v4BeltEntity.belt_animation_set.animation_set.layers[2].tint = {216, 7, 249}
+    v4BeltEntity.radius_visualisation_specification.distance = 40
+
+    v4BeltItem = table.deepcopy(data.raw["item"]["RTexpressBeltRamp"])
+    v4BeltItem.type = "item"
+    v4BeltItem.name = "RTturboBeltRamp"
+    v4BeltItem.icons[2].tint = {216, 7, 249}
+    v4BeltItem.order = "e-d"
+    v4BeltItem.place_result = "RTturboBeltRamp"
+
+    data:extend({
+      v4BeltEntity,
+      v4BeltItem,
+      {
+        type = "recipe",
+        name = "RTfastBeltRamp",
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+          {type = "item", name = "fast-transport-belt", amount = 2},
+          {type = "item", name = "cube-advanced-engine", amount = 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 4}, -- 2 iron-gear-wheel = 4 iron-plate
+        },
+        results = {{type = "item", name = "RTfastBeltRamp", amount = 1}},
+        category = "cube-fabricator-handcraft",
+      },
+      {
+        type = "recipe",
+        name = "RTexpressBeltRamp",
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+          {type = "item", name = "express-transport-belt", amount = 2},
+          {type = "item", name = "cube-advanced-engine", amount = 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 4},
+        },
+        results = {{type = "item", name = "RTexpressBeltRamp", amount = 1}},
+        category = "cube-fabricator-handcraft",
+      },
+      {
+        type = "recipe",
+        name = "RTturboBeltRamp",
+        localised_name = "Ultrafast belt ramp",
+        enabled = false,
+        energy_required = 1,
+        ingredients = {
+          {type = "item", name = "cube-v4-transport-belt", amount = 2},
+          {type = "item", name = "cube-advanced-engine", amount = 1},
+          {type = "item", name = "cube-basic-matter-unit", amount = 4},
+        },
+        results = {{type = "item", name = "RTturboBeltRamp", amount = 1}},
+        category = "cube-fabricator-handcraft",
+      },
+      {
+        type = "technology",
+        name = "RTBeltRampTech",
+        icon = "__RenaiTransportation__/graphics/tech/BeltRampTech.png",
+        icon_size = 150,
+        effects = {
+          {type = "unlock-recipe", recipe = "RTfastBeltRamp"},
+          {type = "unlock-recipe", recipe = "RTexpressBeltRamp"},
+          {type = "unlock-recipe", recipe = "RTturboBeltRamp"},
+        },
+        prerequisites = {"se-no", "cube-advanced-engine", "cube-logistics"},
+        unit = {
+          count = 200,
+          ingredients = {
+              {"cube-basic-contemplation-unit", 1},
+              {"cube-fundamental-comprehension-card", 1},
+              {"cube-abstract-interrogation-card", 1},
+          },
+          time = 45,
+        }
+      }
+    })
   end
 
   -- Ziplines.
@@ -586,89 +674,4 @@ if mods["RenaiTransportation"] then
     })
   end
 
-  -- Belt ramps (including ultrafast belts)
-  -- Hijacking RTturboBeltRamp name so scripts work
-  v4BeltEntity = table.deepcopy(data.raw["transport-belt"]["RTexpressBeltRamp"])
-  v4BeltEntity.type = "transport-belt"
-  v4BeltEntity.name = "RTturboBeltRamp"
-  v4BeltEntity.localised_name = "Ultrafast belt ramp"
-  v4BeltEntity.icons[2].tint = {216, 7, 249}
-  v4BeltEntity.minable.result = "RTturboBeltRamp"
-  v4BeltEntity.corpse = "cube-v4-transport-belt-remnant"
-  v4BeltEntity.animation_speed_coefficient = 128
-  v4BeltEntity.belt_animation_set.animation_set.layers[2].tint = {216, 7, 249}
-  v4BeltEntity.radius_visualisation_specification.distance = 40
-
-  v4BeltItem = table.deepcopy(data.raw["item"]["RTexpressBeltRamp"])
-  v4BeltItem.type = "item"
-  v4BeltItem.name = "RTturboBeltRamp"
-  v4BeltItem.icons[2].tint = {216, 7, 249}
-  v4BeltItem.order = "e-d"
-  v4BeltItem.place_result = "RTturboBeltRamp"
-
-  data:extend({
-    v4BeltEntity,
-    v4BeltItem,
-    {
-      type = "recipe",
-      name = "RTfastBeltRamp",
-      enabled = false,
-      energy_required = 1,
-      ingredients = {
-        {type = "item", name = "fast-transport-belt", amount = 2},
-        {type = "item", name = "cube-advanced-engine", amount = 1},
-        {type = "item", name = "cube-basic-matter-unit", amount = 4}, -- 2 iron-gear-wheel = 4 iron-plate
-      },
-      results = {{type = "item", name = "RTfastBeltRamp", amount = 1}},
-      category = "cube-fabricator-handcraft",
-    },
-    {
-      type = "recipe",
-      name = "RTexpressBeltRamp",
-      enabled = false,
-      energy_required = 1,
-      ingredients = {
-        {type = "item", name = "express-transport-belt", amount = 2},
-        {type = "item", name = "cube-advanced-engine", amount = 1},
-        {type = "item", name = "cube-basic-matter-unit", amount = 4},
-      },
-      results = {{type = "item", name = "RTexpressBeltRamp", amount = 1}},
-      category = "cube-fabricator-handcraft",
-    },
-    {
-      type = "recipe",
-      name = "RTturboBeltRamp",
-      localised_name = "Ultrafast belt ramp",
-      enabled = false,
-      energy_required = 1,
-      ingredients = {
-        {type = "item", name = "cube-v4-transport-belt", amount = 2},
-        {type = "item", name = "cube-advanced-engine", amount = 1},
-        {type = "item", name = "cube-basic-matter-unit", amount = 4},
-      },
-      results = {{type = "item", name = "RTturboBeltRamp", amount = 1}},
-      category = "cube-fabricator-handcraft",
-    },
-    {
-      type = "technology",
-      name = "RTBeltRampTech",
-      icon = "__RenaiTransportation__/graphics/tech/BeltRampTech.png",
-      icon_size = 150,
-      effects = {
-        {type = "unlock-recipe", recipe = "RTfastBeltRamp"},
-        {type = "unlock-recipe", recipe = "RTexpressBeltRamp"},
-        {type = "unlock-recipe", recipe = "RTturboBeltRamp"},
-      },
-      prerequisites = {"se-no", "cube-advanced-engine", "cube-logistics"},
-      unit = {
-        count = 200,
-        ingredients = {
-            {"cube-basic-contemplation-unit", 1},
-            {"cube-fundamental-comprehension-card", 1},
-            {"cube-abstract-interrogation-card", 1},
-        },
-        time = 45,
-      }
-    }
-  })
 end

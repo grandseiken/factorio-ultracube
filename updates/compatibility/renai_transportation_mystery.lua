@@ -8,4 +8,6 @@ if settings.startup["RTThrowersSetting"].value then
   if settings.startup["RTModdedThrowers"].value then
     add_mystery_recipe(1, "RTThrower-cube-extremely-long-inserter-Item", "cube-extremely-long-inserter")
   end
+  add_mystery_recipe(1, "RTfastBeltRamp", "RTBeltRamp")
+  add_mystery_recipe(1, "RTBeltRamp", "transport-belt")
 end
