@@ -140,13 +140,15 @@ if mods["RenaiTransportation"] then
     end
   end
 
-  -- Replace discharge-defense-equipment in item cannons
+  -- Replace steel-plate and discharge-defense-equipment in item cannons
   if data.raw.recipe["RTItemCannon"] then
     data.raw.recipe["RTItemCannon"].ingredients = {
       {type = "item", name = "refined-concrete", amount = 100},
-      {type = "item", name = "steel-plate", amount = 50},
+      {type = "item", name = "cube-resplendent-plate", amount = 50},
       {type = "item", name = "cube-spectral-processor", amount = 10},
-      {type = "item", name = "accumulator", amount = 50}  -- Not really equivalent but whatever
+      -- Not exactly equivalent but whatever
+      {type = "item", name = "cube-advanced-engine", amount = 50},
+      {type = "item", name = "accumulator", amount = 50},
     }
     valid_recipes["RTItemCannon"] = true
   end
@@ -174,6 +176,7 @@ if mods["RenaiTransportation"] then
       "se-no",
       "cube-refined-concrete",
       "cube-electric-energy-accumulators",
+      "cube-spectral-processor",
       "cube-deep-introspection-card"
     }
   end
