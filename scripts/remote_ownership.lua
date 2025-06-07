@@ -92,7 +92,7 @@ function remote_ownership.tick()
       end
       local position = data.spill_position or data.position or {x = 0, y = 0}
       local spill = surface.spill_item_stack {
-          position,
+          position = position,
           stack = {name = data.item, count = data.count},
           allow_belts = false,
       }
