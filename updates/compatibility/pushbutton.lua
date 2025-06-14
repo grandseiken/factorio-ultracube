@@ -18,7 +18,7 @@ if mods["pushbutton"] then
   local tech = data.raw.technology["cube-combinatorics"]
   table.insert(tech.effects, {type = "unlock-recipe", recipe = "cube-pushbutton"})
 
-  add_mystery_recipe(1, "pushbutton", "cube-advanced-circuit")
+  add_mystery_recipe(1, "pushbutton", "cube-electronic-circuit")
 
   data.raw.item["pushbutton"].subgroup = "cube-combinator-extra"
   data.raw.item["pushbutton"].order = "cube-x"
