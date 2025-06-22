@@ -5,6 +5,7 @@ Date: ???
     - The pushbutton now becomes a green rather than red circuit when fed to the mystery furnace.
   Bugfixes:
     - Fixed alt-icon sizes on the tier 4 belt and extremely long-handed filter inserter.
+    - Fixed heavy turbine graphics being incorrectly positioned after base game changes.
   Modding:
     - Restored compatibility with Renai Transportation.
     - Added optional compatibility with Extra Storage Tanks: Tiny Storage Tanks.
