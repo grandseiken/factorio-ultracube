@@ -159,6 +159,7 @@ See the [dedicated compatibility page here](https://github.com/grandseiken/facto
 | Q | A |
 | - | - |
 | **Is Ultracube compatible with the Space Age expansion?** | Ultracube is **not** compatible with the Space Age expansion mod itself (i.e. having space travel or more than one planet), nor the quality mod. However, it **is** compatible with 2.0 and other expansion features, for example elevated rails. More optional expansion-only content is coming soon. |
+| **Why can't I connect machines to the circuit network?** | You need to turn on the "allow machines to connect to circuit network" startup option in the mod settings. Since the inability to easily read machine contents in 1.0 was originally part of the challenge, this can be left disabled for "classic" gameplay. |
 | **How can I make my mod compatible with Ultracube?** | See the [compatibility guide](https://github.com/grandseiken/factorio-ultracube/blob/main/COMPATIBILITY.md). |
 | **Can I help translate this mod?** | Yes, translation is handled via this [CrowdIn project](https://crowdin.com/project/factorio-mods-localization) under `Factorio Ultracube`. More details [here](https://github.com/dima74/factorio-mods-localization#how-to-translate-using-crowdin). |
 | **Where are the biters?** | Currently there are no military technologies and biters are disabled. This was mostly to prioritise releasing a playable version without needing to integrate and balance military. Biters might get reintroduced as an optional extra at some point. |
