@@ -125,5 +125,6 @@ data:extend({
     circuit_connector = circuit_connector_definitions["inserter"],
     circuit_wire_max_distance = inserter_circuit_wire_max_distance,
     default_stack_control_input_signal = inserter_default_stack_control_input_signal,
+    icon_draw_specification = data.raw.inserter["fast-inserter"].icon_draw_specification,
   },
 })

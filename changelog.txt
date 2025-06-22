@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.9
+Date: ???
+  Changes:
+    - The pushbutton now becomes a green rather than red circuit when fed to the mystery furnace.
+  Bugfixes:
+    - Fixed alt-icon sizes on the tier 4 belt and extremely long-handed filter inserter.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.8
 Date: 11.04.2025
   Changes:

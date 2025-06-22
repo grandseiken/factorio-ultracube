@@ -342,5 +342,6 @@ data:extend({
         scale = 0.5,
       },
     },
+    icon_draw_specification = data.raw.splitter["express-splitter"].icon_draw_specification,
   },
 })
