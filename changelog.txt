@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
-Date: ???
+Date: 22.06.2025
   Changes:
     - The pushbutton now becomes a green rather than red circuit when fed to the mystery furnace.
   Bugfixes:

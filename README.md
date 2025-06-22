@@ -129,7 +129,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts. not yet updated for 2.0, though a fork is available [here](https://github.com/hgschmie/factorio-PickerDollies) |
 | [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
 | [Quick Adjustable Inserters](https://mods.factorio.com/mod/quick-adjustable-inserters) | |
-| [Renai Transportation](https://mods.factorio.com/mod/RenaiTransportation) | currently crashes at runtime on 2.0 |
+| [Renai Transportation](https://mods.factorio.com/mod/RenaiTransportation) | |
 | [Railway Motor Car](https://mods.factorio.com/mod/railway-motor-car) | |
 | [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) | [Recursive Blueprints+](https://mods.factorio.com/mod/rec-blue-plus) is also supported. Note: be careful, it's currently possible to destroy the cube by overwriting a machine's recipe with a blueprint deployer when it holds the cube in some cases |
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | not yet updated for 2.0 as of last check |
