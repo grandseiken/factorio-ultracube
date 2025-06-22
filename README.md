@@ -135,6 +135,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Safe Waterfill](https://mods.factorio.com/mod/safefill) | not yet updated for 2.0 as of last check |
 | [Textplates](https://mods.factorio.com/mod/textplates) | |
 | [Tiny Assemblers](https://mods.factorio.com/mod/tiny-assemblers) | |
+| [Tiny Storage Tanks](https://mods.factorio.com/mod/est-tiny-storage-tank) | |
 
 This list is expected to grow with time. You can submit a pull request, github issue or mod portal comment if you'd like to see compatibility with some other mod in particular.
 
