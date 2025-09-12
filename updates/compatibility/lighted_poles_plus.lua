@@ -1,4 +1,4 @@
-if mods["LightedPolesPlus"] then
+if mods["Lighted-Poles-Plus"] then
   -- Medium pole is special because it starts unlocked.
   if data.raw.recipe["lighted-medium-electric-pole"] then
     local technology = data.raw.technology["cube-optics"]
