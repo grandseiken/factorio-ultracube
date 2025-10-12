@@ -11,7 +11,7 @@ if mods["quick-adjustable-inserters"] then
   if tech then
     tech.unit = tech_cost_unit("0", 120)
     tech.prerequisites = {
-      "near-inserters",
+      "bob-near-inserters",
       "cube-electronics",
     }
   end
@@ -20,7 +20,7 @@ if mods["quick-adjustable-inserters"] then
   if tech then
     tech.unit = tech_cost_unit("1a", 240)
     tech.prerequisites = {
-      "more-inserters-1",
+      "bob-more-inserters-1",
       "cube-advanced-electronics",
     }
   end
@@ -29,7 +29,7 @@ if mods["quick-adjustable-inserters"] then
   if tech then
     tech.unit = tech_cost_unit("2", 240)
     tech.prerequisites = {
-      "near-inserters",
+      "bob-near-inserters",
       "cube-abstract-interrogation-card",
     }
   end
@@ -38,7 +38,7 @@ if mods["quick-adjustable-inserters"] then
   if tech then
     tech.unit = tech_cost_unit("3", 240)
     tech.prerequisites = {
-      "long-inserters-1",
+      "bob-long-inserters-1",
       "cube-deep-introspection-card",
     }
   end
