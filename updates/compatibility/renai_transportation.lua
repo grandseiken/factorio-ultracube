@@ -289,8 +289,8 @@ if mods["RenaiTransportation"] then
         -- Stack thrower inserters + modded inserters, normally is all thrower insterters >= fast inserters.
         type = "technology",
         name = "RTThrowerTime",
-        icon = "__RenaiTransportation__/graphics/tech/ThrowerTech.png",
-        icon_size = 128,
+        icon = "__RenaiTransportation__/graphics/technology/ThrowerTech.png",
+        icon_size = 256,
         effects = {
           {type = "unlock-recipe", recipe = "cube-RTThrower-bulk-inserter-Recipe"},
         },
@@ -312,8 +312,8 @@ if mods["RenaiTransportation"] then
         -- RTThrowerTime tech.
         type = "technology",
         name = "RTFocusedFlinging",
-        icon = "__RenaiTransportation__/graphics/tech/focus.png",
-        icon_size = 128,
+        icon = "__RenaiTransportation__/graphics/technology/focus.png",
+        icon_size = 256,
         effects = {
           {
             type = "nothing",
@@ -322,7 +322,7 @@ if mods["RenaiTransportation"] then
           {
             type = "nothing",
             effect_description = "Thrower Range can be set by this signal",
-            icon = "__RenaiTransportation__/graphics/RangeSignaling.png",
+            icon = "__RenaiTransportation__/graphics/icons/RangeSignaling.png",
             icon_size = 64,
           },
         },
@@ -418,8 +418,8 @@ if mods["RenaiTransportation"] then
       {
         type = "technology",
         name = "RTBeltRampTech",
-        icon = "__RenaiTransportation__/graphics/tech/BeltRampTech.png",
-        icon_size = 150,
+        icon = "__RenaiTransportation__/graphics/technology/BeltRampTech.png",
+        icon_size = 256,
         effects = {
           {type = "unlock-recipe", recipe = "RTfastBeltRamp"},
           {type = "unlock-recipe", recipe = "RTexpressBeltRamp"},
@@ -583,8 +583,8 @@ if mods["RenaiTransportation"] then
       {
         type = "technology",
         name = "RTZiplineTech",
-        icon = "__RenaiTransportation__/graphics/zipline/icon.png",
-        icon_size = 64,
+        icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+        icon_size = 256,
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineTrolley"},
           {type = "unlock-recipe", recipe = "RTZiplineControls"},
@@ -595,8 +595,8 @@ if mods["RenaiTransportation"] then
       {
         type = "technology",
         name = "RTZiplineControlTech1",
-        icon = "__RenaiTransportation__/graphics/zipline/crankcontrols.png",
-        icon_size = 64,
+        icon = "__RenaiTransportation__/graphics/technology/Zipline_crankcontrols.png",
+        icon_size = 256,
         effects = {
           {type = "unlock-recipe", recipe = "RTZiplineCrankControls"},
         },
@@ -606,8 +606,8 @@ if mods["RenaiTransportation"] then
       {
         type = "technology",
         name = "RTProgrammableZiplineControlTech",
-        icon = "__RenaiTransportation__/graphics/zipline/terminaltech.png",
-        icon_size = 128,
+        icon = "__RenaiTransportation__/graphics/technology/Zipline_terminaltech.png",
+        icon_size = 256,
         effects = {
           {type = "unlock-recipe", recipe = "RTProgrammableZiplineControls"},
           {type = "unlock-recipe", recipe = "RTZiplineTerminal"},
@@ -619,8 +619,8 @@ if mods["RenaiTransportation"] then
         type = "technology",
         name = "RTZiplineTech2",
         icons = {{
-          icon = "__RenaiTransportation__/graphics/zipline/icon.png",
-          icon_size = 64,
+          icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+          icon_size = 256,
           tint = {1, 0.9, 0},
         }},
         effects = {
@@ -633,8 +633,8 @@ if mods["RenaiTransportation"] then
         type = "technology",
         name = "RTZiplineTech3",
         icons = {{
-          icon = "__RenaiTransportation__/graphics/zipline/icon.png",
-          icon_size = 64,
+          icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+          icon_size = 256,
           tint = {255, 35, 35},
         }},
         effects = {
@@ -647,8 +647,8 @@ if mods["RenaiTransportation"] then
         type = "technology",
         name = "RTZiplineTech4",
         icons = {{
-          icon = "__RenaiTransportation__/graphics/zipline/icon.png",
-          icon_size = 64,
+          icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+          icon_size = 256,
           tint = {18, 201, 233},
         }},
         effects = {
@@ -661,8 +661,8 @@ if mods["RenaiTransportation"] then
         type = "technology",
         name = "RTZiplineTech5",
         icons = {{
-          icon = "__RenaiTransportation__/graphics/zipline/icon.png",
-          icon_size = 64,
+          icon = "__RenaiTransportation__/graphics/technology/Zipline1.png",
+          icon_size = 256,
           tint = {83, 255, 26},
         }},
         effects = {
