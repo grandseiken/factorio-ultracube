@@ -343,5 +343,11 @@ data:extend({
       },
     },
     icon_draw_specification = data.raw.splitter["express-splitter"].icon_draw_specification,
+    circuit_wire_max_distance = splitter_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["splitter"],
+    default_input_left_condition = { first = {type="virtual", name="signal-I"}, comparator="<", second=0},
+    default_input_right_condition = { first = {type="virtual", name="signal-I"}, comparator=">", second=0},
+    default_output_left_condition = { first = {type="virtual", name="signal-O"}, comparator="<", second=0},
+    default_output_right_condition = { first = {type="virtual", name="signal-O"}, comparator=">", second=0},
   },
 })
