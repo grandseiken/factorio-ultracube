@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.6.10
+Date: ???
+  Bugfixes:
+    - Fixed minor naming inconsistencies with qubit transformation recipes made in the particle phase aligner.
+---------------------------------------------------------------------------------------------------
 Version: 0.6.9
 Date: 22.06.2025
   Changes:
