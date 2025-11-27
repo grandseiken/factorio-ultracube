@@ -6,7 +6,8 @@ Date: ???
     - Fixed the mod losing track of the cube and printing a warning message if it ended up in a machine's trash slots.
     - Fixed minor naming inconsistencies with qubit transformation recipes made in the particle phase aligner.
   Modding:
-    - Fixed compatibility with Renai Transportation version 2.2.0 after renames in that mod.
+    - Fixed compatibility with Renai Transportation version 2.2.0+ after renames in that mod.
+    - Fixed compatibility with Quick Adjustable Inserters version 2.0.8+ after renames in that mod.
     - Updated compatibility with Lighted Electric Poles + to target the version of that mod that works with Factorio 2.x (https://mods.factorio.com/mod/Lighted-Poles-Plus).
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
