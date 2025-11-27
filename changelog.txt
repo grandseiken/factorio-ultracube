@@ -1,9 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.6.10
+Version: 0.7.0
 Date: ???
   Bugfixes:
     - Fixed that ultrafast splitters couldn't be connected to the circuit network.
     - Fixed the mod losing track of the cube and printing a warning message if it ended up in a machine's trash slots.
+    - Fixed that the ghost cursor UI incorrectly showed base-game recipes and marked items as "not researched".
     - Fixed minor naming inconsistencies with qubit transformation recipes made in the particle phase aligner.
   Modding:
     - Fixed compatibility with Renai Transportation version 2.2.0+ after renames in that mod.
