@@ -8,6 +8,7 @@ Date: ???
   Modding:
     - Fixed compatibility with Renai Transportation version 2.2.0+ after renames in that mod.
     - Fixed compatibility with Quick Adjustable Inserters version 2.0.8+ after renames in that mod.
+    - Added optional compatibility with fCPU.
     - Updated compatibility with Lighted Electric Poles + to target the version of that mod that works with Factorio 2.x (https://mods.factorio.com/mod/Lighted-Poles-Plus).
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
