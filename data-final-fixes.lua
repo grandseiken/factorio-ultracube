@@ -40,6 +40,9 @@ for _, v in pairs(data.raw.shortcut) do
 end
 
 -- Remove base game recipes that confuse various 2.0 GUIs.
+-- This is a quick hack: really we need to rename all of these to match the Ultracube
+-- recipe names, since there is no other way to tell the game they should be linked (lol).
+-- However, that's a huge fucking pain.
 local removed_recipes = make_set({
   "transport-belt", "fast-transport-belt", "express-transport-belt",
   "underground-belt", "fast-underground-belt", "express-underground-belt",
