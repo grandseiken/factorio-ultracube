@@ -305,6 +305,14 @@ local function cube_check_entity(entity)
     if entity_type == rocket_silo_t then
       inventory = entity.get_inventory(defines.inventory.rocket_silo_rocket)
       if inventory and check_inventory(entity, inventory) then return true end
+      if entity.cargo_pod then
+        inventory = entity.cargo_pod.get_inventory(defines.inventory.chest)
+        if inventory and check_inventory(entity, inventory) then return true end
+      end
+      if entity.rocket and entity.rocket.attached_cargo_pod then
+        inventory = entity.rocket.attached_cargo_pod.get_inventory(defines.inventory.chest)
+        if inventory and check_inventory(entity, inventory) then return true end
+      end
     end
     return false
   end
@@ -366,6 +374,14 @@ local function cube_search_crafters(cache)
     if e.type == rocket_silo_t then
       inventory = e.get_inventory(defines.inventory.rocket_silo_rocket)
       if inventory and check_inventory(e, inventory) then return true end
+      if e.cargo_pod then
+        inventory = e.cargo_pod.get_inventory(defines.inventory.chest)
+        if inventory and check_inventory(e, inventory) then return true end
+      end
+      if e.rocket and e.rocket.attached_cargo_pod then
+        inventory = e.rocket.attached_cargo_pod.get_inventory(defines.inventory.chest)
+        if inventory and check_inventory(e, inventory) then return true end
+      end
     end
   end
   return false

@@ -56,7 +56,6 @@ local entity_types = {
     "container",
     "logistic-container",
     "infinity-container",
-    "cargo-pod",
   }),
   cube_crafter = make_set({
     "furnace",

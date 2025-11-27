@@ -60,7 +60,7 @@ end
 
 function teleport.on_teleport(event)
   local src_teleporter = event.rocket_silo
-  if src_teleporter.name ~= "cube-experimental-teleporter" then
+  if not src_teleporter or src_teleporter.name ~= "cube-experimental-teleporter" then
     return
   end
 
@@ -84,7 +84,7 @@ function teleport.on_teleport(event)
     return
   end
 
-  local send_item = get_send_item(event.rocket.cargo_pod.get_inventory(1))
+  local send_item = get_send_item(event.rocket.attached_cargo_pod.get_inventory(1))
   local send_players = get_send_players(src_teleporter)
   if not send_item and #send_players == 0 then
     return
@@ -128,9 +128,10 @@ function teleport.on_teleport(event)
 
   if send_item then
     insert_or_drop(dst_teleporter or src_teleporter, send_item)
+    event.rocket.attached_cargo_pod.get_inventory(1).remove(send_item)
   end
-  event.rocket.cargo_pod.destroy()
-  event.rocket.destroy()
+  event.rocket.attached_cargo_pod.destroy {raise_destroy = true}
+  event.rocket.destroy {raise_destroy = true}
 end
 
 return teleport

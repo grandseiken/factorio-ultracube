@@ -2,6 +2,7 @@
 Version: 0.7.0
 Date: ???
   Bugfixes:
+    - Fixed that use of the experimental teleporter could cause crashes and warning messages after earlier changes to the base game.
     - Fixed that ultrafast splitters couldn't be connected to the circuit network.
     - Fixed the mod losing track of the cube and printing a warning message if it ended up in a machine's trash slots.
     - Fixed that the ghost cursor UI incorrectly showed base-game recipes and marked items as "not researched".
