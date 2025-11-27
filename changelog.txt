@@ -5,6 +5,8 @@ Date: ???
     - Fixed that ultrafast splitters couldn't be connected to the circuit network.
     - Fixed the mod losing track of the cube and printing a warning message if it ended up in a machine's trash slots.
     - Fixed minor naming inconsistencies with qubit transformation recipes made in the particle phase aligner.
+  Modding:
+    - Restored compatibility with Renai Transportation after renames in that mod.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
 Date: 22.06.2025
