@@ -28,7 +28,6 @@ local construction_robot_t = "construction-robot"
 local car_t = "car"
 local cargo_wagon_t = "cargo-wagon"
 local spider_vehicle_t = "spider-vehicle"
-local furnace_t = "furnace"
 local rocket_silo_t = "rocket-silo"
 local item_entity_t = "item-entity"
 local character_corpse_t = "character-corpse"
@@ -297,14 +296,11 @@ local function cube_check_entity(entity)
       local recipe_data = recipes[entity.get_recipe().name]
       if recipe_data and check_ingredients(entity, recipe_data.ingredients) then return true end
     end
-    local inventory
-    if entity_type == furnace_t then
-      inventory = entity.get_inventory(defines.inventory.furnace_source)
-    else
-      inventory = entity.get_inventory(defines.inventory.assembling_machine_input)
-    end
+    local inventory = entity.get_inventory(defines.inventory.crafter_input)
     if inventory and check_inventory(entity, inventory) then return true end
-    inventory = entity.get_output_inventory()
+    inventory = entity.get_inventory(defines.inventory.crafter_output)
+    if inventory and check_inventory(entity, inventory) then return true end
+    inventory = entity.get_inventory(defines.inventory.crafter_trash)
     if inventory and check_inventory(entity, inventory) then return true end
     if entity_type == rocket_silo_t then
       inventory = entity.get_inventory(defines.inventory.rocket_silo_rocket)
@@ -361,14 +357,11 @@ local function cube_search_crafters(cache)
       local recipe_data = recipes[e.get_recipe().name]
       if recipe_data and check_ingredients(e, recipe_data.ingredients) then return true end
     end
-    local inventory
-    if e.type == furnace_t then
-      inventory = e.get_inventory(defines.inventory.furnace_source)
-    else
-      inventory = e.get_inventory(defines.inventory.assembling_machine_input)
-    end
+    local inventory = e.get_inventory(defines.inventory.crafter_input)
     if inventory and check_inventory(e, inventory) then return true end
-    inventory = e.get_output_inventory()
+    inventory = e.get_inventory(defines.inventory.crafter_output)
+    if inventory and check_inventory(e, inventory) then return true end
+    inventory = e.get_inventory(defines.inventory.crafter_trash)
     if inventory and check_inventory(e, inventory) then return true end
     if e.type == rocket_silo_t then
       inventory = e.get_inventory(defines.inventory.rocket_silo_rocket)

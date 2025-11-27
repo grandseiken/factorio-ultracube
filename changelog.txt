@@ -3,6 +3,7 @@ Version: 0.6.10
 Date: ???
   Bugfixes:
     - Fixed that ultrafast splitters couldn't be connected to the circuit network.
+    - Fixed the mod losing track of the cube and printing a warning message if it ended up in a machine's trash slots.
     - Fixed minor naming inconsistencies with qubit transformation recipes made in the particle phase aligner.
 ---------------------------------------------------------------------------------------------------
 Version: 0.6.9
