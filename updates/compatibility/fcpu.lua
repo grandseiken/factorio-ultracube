@@ -8,6 +8,7 @@ if mods["fcpu"] then
   fcpu_recipe.category = "cube-fabricator-handcraft"
 
   local fcpu_item = data.raw.item["fcpu"]
+  fcpu_item.subgroup = "cube-combinator-extra"
   fcpu_item.order = "cube-" .. fcpu_item.order
 
   local tech = data.raw.technology["fcpu"]
