@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
-Date: ???
+Date: 29.11.2025
   Bugfixes:
     - Fixed that use of the experimental teleporter could cause crashes and warning messages after earlier changes to the base game.
     - Fixed that ultrafast splitters couldn't be connected to the circuit network.
