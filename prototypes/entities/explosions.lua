@@ -704,6 +704,7 @@ data:extend({
         },
       },
     },
+    hidden_in_factoriopedia = true,
   },
 
   {
@@ -756,6 +757,7 @@ data:extend({
         },
       },
     },
+    hidden_in_factoriopedia = true,
   },
   {
     type = "explosion",
@@ -832,6 +834,7 @@ data:extend({
         },
       },
     },
+    hidden_in_factoriopedia = true,
   },
   {
     type = "explosion",
@@ -889,6 +892,7 @@ data:extend({
         },
       },
     },
+    hidden_in_factoriopedia = true,
   },
   {
     type = "sound",

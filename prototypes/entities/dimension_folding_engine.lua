@@ -10,6 +10,7 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/icons/entities/antimatter-reactor.png",
     icon_size = 128,
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
+    hidden_in_factoriopedia = true,
     selection_box = {{-4.5, -4.5}, {4.5, 4.5}},
     tile_width = 9,
     tile_height = 9,

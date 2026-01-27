@@ -20,6 +20,7 @@ data:extend({
     icon = "__Ultracube__/assets/icons/extremely-long-inserter.png",
     icon_size = 64,
     flags = {"placeable-neutral", "not-on-map"},
+    hidden_in_factoriopedia = true,
     selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     tile_width = 1,
     tile_height = 1,

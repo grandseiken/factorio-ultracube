@@ -194,6 +194,7 @@ local function collision_entity(collision_box)
     picture = {filename = "__core__/graphics/empty.png", size = 1},
     collision_mask = {layers = {player = true}},
     squeak_behaviour = false,
+    hidden_in_factoriopedia = true,
   }
 end
 
@@ -337,6 +338,7 @@ data:extend({
         },
       },
     },
+    hidden_in_factoriopedia = true,
   },
 
   {
@@ -375,6 +377,7 @@ data:extend({
     shadow_fade_out_start_ratio = 0.25,
     shadow_fade_out_end_ratio = 0.75,
     rocket_visible_distance_from_center = 0,
+    hidden_in_factoriopedia = true,
   },
   {
     type = "cargo-pod",
@@ -384,5 +387,6 @@ data:extend({
     selection_box = {{0, 0}, {0, 0}},
     inventory_size = 1,
     spawned_container = "iron-chest",
+    hidden_in_factoriopedia = true,
   },
 })
