@@ -27,8 +27,8 @@ data:extend({
     icon = "__base__/graphics/technology/concrete.png",
     effects =
     {
-      {type = "unlock-recipe", recipe = "cube-refined-concrete"},
-      {type = "unlock-recipe", recipe = "cube-refined-hazard-concrete"},
+      {type = "unlock-recipe", recipe = "refined-concrete"},
+      {type = "unlock-recipe", recipe = "refined-hazard-concrete"},
     },
     prerequisites = {"cube-deep-introspection-card"},
     unit = tech_cost_unit("3", 180),
@@ -68,9 +68,9 @@ data:extend({
     icon_size = 256,
     icon = "__krastorio2-assets-ultracube__/technologies/logistics-5.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt-3"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt-3"},
-      {type = "unlock-recipe", recipe = "cube-splitter-3"},
+      {type = "unlock-recipe", recipe = "cube-v4-transport-belt"},
+      {type = "unlock-recipe", recipe = "cube-v4-underground-belt"},
+      {type = "unlock-recipe", recipe = "cube-v4-splitter"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
@@ -115,7 +115,7 @@ data:extend({
     icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/fission-reactor-equipment.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fission-reactor-equipment"},
+      {type = "unlock-recipe", recipe = "fission-reactor-equipment"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
@@ -131,7 +131,7 @@ data:extend({
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/belt-immunity-equipment.png"),
     icon_size = 256,
     effects = {
-      {type = "unlock-recipe", recipe = "cube-belt-immunity-equipment"},
+      {type = "unlock-recipe", recipe = "belt-immunity-equipment"},
     },
     prerequisites = {
       "cube-deep-introspection-card",
@@ -179,9 +179,9 @@ data:extend({
     icon = "__base__/graphics/technology/logistic-system.png",
     effects = {
       -- TODO: more complex recipes?
-      {type = "unlock-recipe", recipe = "cube-logistic-chest-active-provider"},
-      {type = "unlock-recipe", recipe = "cube-logistic-chest-requester"},
-      {type = "unlock-recipe", recipe = "cube-logistic-chest-buffer"},
+      {type = "unlock-recipe", recipe = "active-provider-chest"},
+      {type = "unlock-recipe", recipe = "requester-chest"},
+      {type = "unlock-recipe", recipe = "buffer-chest"},
     },
     prerequisites = {
       -- TODO ???: "cube-roboport",
@@ -219,7 +219,7 @@ data:extend({
     icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/personal-roboport-mk2-equipment.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-personal-roboport-mk2-equipment"},
+      {type = "unlock-recipe", recipe = "personal-roboport-mk2-equipment"},
     },
     prerequisites = {
       "cube-personal-roboport-equipment",
@@ -243,7 +243,7 @@ data:extend({
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-v3-loader"},
+      {type = "unlock-recipe", recipe = "aai-v3-loader"},
     },
     prerequisites = {
       "cube-synthetic-premonition-card",
@@ -296,12 +296,12 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-quantum-decoder"},
       {type = "unlock-recipe", recipe = "cube-qubit"},
       {type = "unlock-recipe", recipe = "cube-qubit-init"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-0"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-1"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-2"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-3"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-4"},
-      {type = "unlock-recipe", recipe = "cube-qubit-next-5"},
+      {type = "unlock-recipe", recipe = "cube-qubit-0"},
+      {type = "unlock-recipe", recipe = "cube-qubit-1"},
+      {type = "unlock-recipe", recipe = "cube-qubit-2"},
+      {type = "unlock-recipe", recipe = "cube-qubit-3"},
+      {type = "unlock-recipe", recipe = "cube-qubit-4"},
+      {type = "unlock-recipe", recipe = "cube-qubit-5"},
       {type = "unlock-recipe", recipe = "cube-qubits-failure-dummy"},
       {type = "unlock-recipe", recipe = "cube-qubits-success-dummy"},
     },
@@ -372,7 +372,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/spidertron.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-spidertron"},
+      {type = "unlock-recipe", recipe = "spidertron"},
     },
     prerequisites = {
       "cube-exoskeleton-equipment",

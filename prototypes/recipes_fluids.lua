@@ -335,7 +335,7 @@ data:extend({
 
   {
     type = "recipe",
-    name = "cube-stygian-power-generation",
+    name = "cube-void-wind",
     icon = "__Ultracube__/assets/icons/void-wind.png",
     icon_size = 64,
     ingredients = {},
@@ -343,6 +343,7 @@ data:extend({
       {type = "fluid", name = "cube-void-wind", amount = 400, temperature = 425},
       {type = "item", name = "cube-residual-tendrils", amount_min = 1, amount_max = 4},
     },
+    main_product = "cube-void-wind",
     energy_required = 2,
     category = "cube-stygian-energy-lab",
     subgroup = "cube-energy-fluids",

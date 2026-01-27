@@ -7,7 +7,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/landfill.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-landfill"},
+      {type = "unlock-recipe", recipe = "landfill"},
     },
     prerequisites = {"cube-abstract-interrogation-card"},
     unit = tech_cost_unit("2", 180),
@@ -19,7 +19,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/explosives.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-explosives"},
+      {type = "unlock-recipe", recipe = "explosives"},
     },
     prerequisites = {
       "cube-distillation",
@@ -35,7 +35,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/cliff-explosives.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-cliff-explosives"},
+      {type = "unlock-recipe", recipe = "cliff-explosives"},
       {type = "cliff-deconstruction-enabled", modifier = true},
     },
     prerequisites = {"cube-explosives"},
@@ -83,7 +83,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/electric-energy-acumulators.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-accumulator"},
+      {type = "unlock-recipe", recipe = "accumulator"},
     },
     prerequisites = {
       "cube-electric-energy-distribution-1",
@@ -98,9 +98,9 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/logistics-3.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt-2"},
-      {type = "unlock-recipe", recipe = "cube-splitter-2"},
+      {type = "unlock-recipe", recipe = "express-transport-belt"},
+      {type = "unlock-recipe", recipe = "express-underground-belt"},
+      {type = "unlock-recipe", recipe = "express-splitter"},
     },
     prerequisites = {
       "cube-abstract-interrogation-card",
@@ -151,7 +151,7 @@ data:extend({
     icon = "__base__/graphics/technology/advanced-combinators.png",
     icon_size = 256,
     effects = {
-      {type = "unlock-recipe", recipe = "cube-selector-combinator"},
+      {type = "unlock-recipe", recipe = "selector-combinator"},
     },
     prerequisites = {"cube-combinatorics", "cube-abstract-interrogation-card"},
     unit = tech_cost_unit("2", 120),
@@ -176,7 +176,7 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/technologies/quarry-drill.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-deep-core-ultradrill"},
-      {type = "unlock-recipe", recipe = "cube-deep-core-crushing"},
+      {type = "unlock-recipe", recipe = "cube-deep-powder"},
     },
     prerequisites = {
       "cube-sophisticated-matter-unit",
@@ -192,7 +192,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/electric-energy-distribution-2.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-substation"},
+      {type = "unlock-recipe", recipe = "substation"},
     },
     prerequisites = {
       "cube-electric-energy-accumulators",
@@ -207,7 +207,7 @@ data:extend({
     icon_size = 256,
     icon = "__krastorio2-assets-ultracube__/technologies/advanced-radar.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-radar"},
+      {type = "unlock-recipe", recipe = "radar"},
     },
     prerequisites = {"cube-sophisticated-matter-unit"},
     unit = tech_cost_unit("2", 120),
@@ -220,8 +220,8 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/technologies/advanced-roboports.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-roboport"},
-      {type = "unlock-recipe", recipe = "cube-logistic-chest-passive-provider"},
-      {type = "unlock-recipe", recipe = "cube-logistic-chest-storage"},
+      {type = "unlock-recipe", recipe = "passive-provider-chest"},
+      {type = "unlock-recipe", recipe = "storage-chest"},
     },
     prerequisites = {
       "cube-radar",
@@ -342,7 +342,7 @@ data:extend({
     icon = "__Ultracube__/assets/technology/distillation.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-distillery"},
-      {type = "unlock-recipe", recipe = "cube-greenhouse-potato"},
+      {type = "unlock-recipe", recipe = "cube-potato"},
       {type = "unlock-recipe", recipe = "cube-mash"},
       {type = "unlock-recipe", recipe = "cube-ethanol"},
     },
@@ -668,7 +668,7 @@ data:extend({
     icon = "__Ultracube__/assets/technology/battery-mk2-equipment.png",
     icon_size = 256,
     effects = {
-      {type = "unlock-recipe", recipe = "cube-battery-mk2-equipment"},
+      {type = "unlock-recipe", recipe = "battery-mk2-equipment"},
     },
     prerequisites = {"cube-haunted-energy-cell"},
     unit = tech_cost_unit("2", 180),
@@ -705,7 +705,7 @@ data:extend({
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-v2-loader"},
+      {type = "unlock-recipe", recipe = "aai-v2-loader"},
     },
     prerequisites = {
       "cube-logistics",
@@ -777,7 +777,7 @@ data:extend({
     icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/exoskeleton-equipment.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-exoskeleton-equipment"},
+      {type = "unlock-recipe", recipe = "exoskeleton-equipment"},
     },
     prerequisites = {"cube-speed-module"},
     unit = tech_cost_unit("2", 240),
@@ -790,9 +790,9 @@ data:extend({
     icon = "__base__/graphics/technology/uranium-processing.png",
     effects =
     {
-      {type = "unlock-recipe", recipe = "cube-centrifuge"},
+      {type = "unlock-recipe", recipe = "centrifuge"},
       {type = "unlock-recipe", recipe = "cube-uranium-processing"},
-      {type = "unlock-recipe", recipe = "cube-uranium-fuel-cell"},
+      {type = "unlock-recipe", recipe = "uranium-fuel-cell"},
       {type = "unlock-recipe", recipe = "cube-nuclear-fuel"},
     },
     prerequisites = {
@@ -810,8 +810,8 @@ data:extend({
     effects =
     {
       {type = "unlock-recipe", recipe = "cube-nuclear-reactor"},
-      {type = "unlock-recipe", recipe = "cube-heat-exchanger"},
-      {type = "unlock-recipe", recipe = "cube-heat-pipe"},
+      {type = "unlock-recipe", recipe = "heat-exchanger"},
+      {type = "unlock-recipe", recipe = "heat-pipe"},
       {type = "unlock-recipe", recipe = "cube-heavy-turbine"},
     },
     prerequisites = {"cube-uranium-processing"},

@@ -100,7 +100,7 @@ data:extend({
         },
       },
     },
-    fixed_recipe = "cube-stygian-power-generation",
+    fixed_recipe = "cube-void-wind",
     crafting_categories = {"cube-stygian-energy-lab"},
     show_recipe_icon = false,
     vehicle_impact_sound = sounds.generic_impact,

@@ -57,6 +57,7 @@ data:extend({
     name = "cube-qubit-init",
     ingredients = {{type = "item", name = "cube-qubit", amount = 1}},
     results = {{type = "item", name = "cube-qubit-0", amount = 1, show_details_in_recipe_tooltip = false}},
+    main_product = "cube-qubit-0",
     energy_required = 1,
     category = "cube-particle-phase-aligner",
     enabled = false,
@@ -97,7 +98,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-qubits", amount = 2}},
     results = {{type = "item", name = "cube-quantum-research-data", amount = 10}},
     energy_required = 3.2,
-    main_product = "",
+    main_product = "cube-quantum-research-data",
     category = "cube-quantum-decoder-dummy",
     subgroup = "cube-research-quantum",
     order = "cube-a[2]",
@@ -154,9 +155,10 @@ for i = 0, 5 do
     },
     {
       type = "recipe",
-      name = "cube-qubit-next-" .. ((i + 1) % 6),
+      name = qubit_next,
       ingredients = {{type = "item", name = qubit, amount = 1}},
       results = {{type = "item", name = qubit_next, amount = 1}},
+      main_product = qubit_next,
       energy_required = 1,
       category = "cube-particle-phase-aligner",
       enabled = false,
@@ -186,6 +188,7 @@ for i = 0, 5 do
       enabled = true,
       hide_from_player_crafting = true,
       unlock_results = false,
+      hidden_in_factoriopedia = true,
     },
   })
 end

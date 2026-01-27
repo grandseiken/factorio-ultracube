@@ -7,7 +7,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/electric-energy-distribution-1.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-big-electric-pole"},
+      {type = "unlock-recipe", recipe = "big-electric-pole"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     unit = tech_cost_unit("1a", 60),
@@ -20,9 +20,9 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/technologies/crusher.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-crusher"},
-      {type = "unlock-recipe", recipe = "cube-stone-crushing"},
+      {type = "unlock-recipe", recipe = "cube-sand"},
       {type = "unlock-recipe", recipe = "cube-glass"},
-      {type = "unlock-recipe", recipe = "cube-display-panel"},
+      {type = "unlock-recipe", recipe = "display-panel"},
     },
     prerequisites = {"cube-fundamental-comprehension-card"},
     essential = true,
@@ -57,8 +57,8 @@ data:extend({
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-rare-metal-crushing"},
       {type = "unlock-recipe", recipe = "cube-refined-rare-metals"},
+      {type = "unlock-recipe", recipe = "cube-refined-rare-metals-smelting"},
     },
     prerequisites = {"cube-crusher"},
     unit = tech_cost_unit("1a", 120),
@@ -71,7 +71,7 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/technologies/greenhouse.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-greenhouse"},
-      {type = "unlock-recipe", recipe = "cube-greenhouse-wood"},
+      {type = "unlock-recipe", recipe = "wood"},
     },
     prerequisites = {
       "cube-crusher",
@@ -168,8 +168,8 @@ data:extend({
     icon = "__base__/graphics/technology/sulfur-processing.png",
     prerequisites = {"cube-tar-processing"},
     effects = {
-      {type = "unlock-recipe", recipe = "cube-sulfur"},
-      {type = "unlock-recipe", recipe = "cube-sulfuric-acid"},
+      {type = "unlock-recipe", recipe = "sulfur"},
+      {type = "unlock-recipe", recipe = "sulfuric-acid"},
     },
     unit = tech_cost_unit("1a", 120),
     order = "1-1-6",
@@ -206,7 +206,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/battery.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-battery"},
+      {type = "unlock-recipe", recipe = "battery"},
       {type = "unlock-recipe", recipe = "cube-battery-equipment"},
     },
     prerequisites = {"cube-sulfur-processing"},
@@ -220,8 +220,8 @@ data:extend({
     icon = "__base__/graphics/technology/concrete.png",
     effects =
     {
-      {type = "unlock-recipe", recipe = "cube-concrete"},
-      {type = "unlock-recipe", recipe = "cube-hazard-concrete"},
+      {type = "unlock-recipe", recipe = "concrete"},
+      {type = "unlock-recipe", recipe = "hazard-concrete"},
     },
     prerequisites = {
       "cube-fabricator",
@@ -236,7 +236,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/gate.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-gate"},
+      {type = "unlock-recipe", recipe = "gate"},
     },
     prerequisites = {"cube-concrete", "cube-stone-wall"},
     unit = tech_cost_unit("1a", 120),
@@ -266,7 +266,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/automobilism.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-car"},
+      {type = "unlock-recipe", recipe = "car"},
     },
     prerequisites = {"cube-advanced-engine"},
     unit = tech_cost_unit("1a", 120),
@@ -278,10 +278,10 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/railway.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-rail"},
-      {type = "unlock-recipe", recipe = "cube-locomotive"},
-      {type = "unlock-recipe", recipe = "cube-cargo-wagon"},
-      {type = "unlock-recipe", recipe = "cube-train-stop"},
+      {type = "unlock-recipe", recipe = "rail"},
+      {type = "unlock-recipe", recipe = "locomotive"},
+      {type = "unlock-recipe", recipe = "cargo-wagon"},
+      {type = "unlock-recipe", recipe = "train-stop"},
     },
     prerequisites = {"cube-advanced-engine"},
     unit = tech_cost_unit("1a", 180),
@@ -293,7 +293,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/fluid-wagon.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fluid-wagon"},
+      {type = "unlock-recipe", recipe = "fluid-wagon"},
     },
     prerequisites = {
       "cube-railway",
@@ -308,8 +308,8 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/automated-rail-transportation.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-rail-signal"},
-      {type = "unlock-recipe", recipe = "cube-chain-signal"},
+      {type = "unlock-recipe", recipe = "rail-signal"},
+      {type = "unlock-recipe", recipe = "rail-chain-signal"},
     },
     prerequisites = {"cube-railway"},
     unit = tech_cost_unit("1a", 180),
@@ -321,7 +321,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/bulk-inserter.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-bulk-inserter"},
+      {type = "unlock-recipe", recipe = "bulk-inserter"},
     },
     prerequisites = {
       "cube-inserters",
@@ -453,7 +453,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/robotics.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-flying-robot-frame"},
+      {type = "unlock-recipe", recipe = "flying-robot-frame"},
     },
     prerequisites = {"cube-battery"},
     unit = tech_cost_unit("1b", 180),
@@ -465,7 +465,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/construction-robotics.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-construction-robot"},
+      {type = "unlock-recipe", recipe = "construction-robot"},
       {type = "create-ghost-on-entity-death", modifier = true},
     },
     prerequisites = {
@@ -497,7 +497,7 @@ data:extend({
     icon_size = 256,
     icons = util.technology_icon_constant_equipment("__base__/graphics/technology/night-vision-equipment.png"),
     effects = {
-      {type = "unlock-recipe", recipe = "cube-night-vision-equipment"},
+      {type = "unlock-recipe", recipe = "night-vision-equipment"},
     },
     prerequisites = {"cube-modular-armor"},
     unit = tech_cost_unit("1a", 120),

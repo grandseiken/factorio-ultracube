@@ -9,8 +9,8 @@ if mods["elevated-rails"] then
       icon_size = 256,
       effects =
       {
-        {type = "unlock-recipe", recipe = "cube-rail-support"},
-        {type = "unlock-recipe", recipe = "cube-rail-ramp"},
+        {type = "unlock-recipe", recipe = "rail-support"},
+        {type = "unlock-recipe", recipe = "rail-ramp"},
         {type = "rail-planner-allow-elevated-rails", modifier = true},
       },
       prerequisites = {"cube-refined-concrete", "cube-railway"},

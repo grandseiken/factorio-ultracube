@@ -541,6 +541,7 @@ data:extend({
     icon = "__krastorio2-assets-ultracube__/icons/capsules/spoiled-potato.png",
     icon_size = 64,
     subgroup = "cube-fuel",
+    hidden_in_factoriopedia = true,
     order = "cube-1[b-potato]",
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,

@@ -7,8 +7,8 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/fast-inserter.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-fast-inserter"},
-      {type = "unlock-recipe", recipe = "cube-long-inserter"},
+      {type = "unlock-recipe", recipe = "fast-inserter"},
+      {type = "unlock-recipe", recipe = "long-handed-inserter"},
     },
     unit = tech_cost_unit("0", 10),
     order = "0-0-0",
@@ -19,9 +19,9 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/logistics-2.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-transport-belt"},
-      {type = "unlock-recipe", recipe = "cube-underground-belt"},
-      {type = "unlock-recipe", recipe = "cube-splitter"},
+      {type = "unlock-recipe", recipe = "fast-transport-belt"},
+      {type = "unlock-recipe", recipe = "fast-underground-belt"},
+      {type = "unlock-recipe", recipe = "fast-splitter"},
     },
     unit = tech_cost_unit("0", 20),
     order = "0-0-1",
@@ -44,7 +44,7 @@ data:extend({
     icon = "__base__/graphics/technology/advanced-material-processing-2.png",
     effects = {
       {type = "unlock-recipe", recipe = "cube-electric-furnace"},
-      {type = "unlock-recipe", recipe = "cube-stone-brick"},
+      {type = "unlock-recipe", recipe = "stone-brick"},
     },
     unit = tech_cost_unit("0", 10),
     order = "0-1-1",
@@ -55,7 +55,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/stone-wall.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-stone-wall"},
+      {type = "unlock-recipe", recipe = "stone-wall"},
     },
     prerequisites = {"cube-electric-furnace"},
     unit = tech_cost_unit("0", 40),
@@ -69,7 +69,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-ultradense-furnace"},
       {type = "unlock-recipe", recipe = "cube-rare-metals"},
-      {type = "unlock-recipe", recipe = "cube-repair-pack"},
+      {type = "unlock-recipe", recipe = "repair-pack"},
     },
     prerequisites = {
       "cube-electric-mining-drill",
@@ -85,7 +85,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/electronics.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-conductive-wire"},
+      {type = "unlock-recipe", recipe = "copper-cable"},
       {type = "unlock-recipe", recipe = "cube-electronic-circuit"},
     },
     prerequisites = {"cube-ultradense-furnace"},
@@ -99,7 +99,7 @@ data:extend({
     icon_size = 256,
     icon = "__krastorio2-assets-ultracube__/technologies/automation-core.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget-0"},
+      {type = "unlock-recipe", recipe = "cube-n-dimensional-widget"},
     },
     prerequisites = {"cube-ultradense-furnace"},
     essential = true,
@@ -112,8 +112,8 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/fluid-handling.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-pump"},
-      {type = "unlock-recipe", recipe = "cube-barrel"},
+      {type = "unlock-recipe", recipe = "pump"},
+      {type = "unlock-recipe", recipe = "barrel"},
     },
     prerequisites = {"cube-electronics"},
     unit = tech_cost_unit("0", 60),
@@ -125,7 +125,7 @@ data:extend({
     icon_size = 256,
     icon = "__base__/graphics/technology/lamp.png",
     effects = {
-      {type = "unlock-recipe", recipe = "cube-lamp"},
+      {type = "unlock-recipe", recipe = "small-lamp"},
     },
     prerequisites = {"cube-electronics"},
     unit = tech_cost_unit("0", 60),
@@ -138,11 +138,11 @@ data:extend({
     icon = "__base__/graphics/technology/circuit-network.png",
     effects = {
       {type = "unlock-circuit-network", modifier = true},
-      {type = "unlock-recipe", recipe = "cube-constant-combinator"},
-      {type = "unlock-recipe", recipe = "cube-arithmetic-combinator"},
-      {type = "unlock-recipe", recipe = "cube-decider-combinator"},
-      {type = "unlock-recipe", recipe = "cube-programmable-speaker"},
-      {type = "unlock-recipe", recipe = "cube-power-switch"},
+      {type = "unlock-recipe", recipe = "constant-combinator"},
+      {type = "unlock-recipe", recipe = "arithmetic-combinator"},
+      {type = "unlock-recipe", recipe = "decider-combinator"},
+      {type = "unlock-recipe", recipe = "programmable-speaker"},
+      {type = "unlock-recipe", recipe = "power-switch"},
     },
     prerequisites = {"cube-electronics"},
     unit = tech_cost_unit("0", 60),

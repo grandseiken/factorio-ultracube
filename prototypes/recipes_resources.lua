@@ -71,7 +71,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-refined-rare-metals",
+    name = "cube-refined-rare-metals-smelting",
     icon = "__Ultracube__/assets/icons/recipe/refined-smelting.png",
     icon_size = 128,
     ingredients = {{type = "item", name = "cube-refined-rare-metals", amount = 1000}},
@@ -89,7 +89,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-rare-metal-crushing",
+    name = "cube-refined-rare-metals",
     icon = "__krastorio2-assets-ultracube__/icons/items/enriched-rare-metals.png",
     icon_size = 64,
     ingredients = {{type = "item", name = "cube-raw-rare-metals", amount = 40}},
@@ -98,6 +98,7 @@ data:extend({
       {type = "item", name = "cube-calcium", amount_min = 0, amount_max = 10},
       {type = "item", name = "stone", amount_min = 0, amount_max = 5},
     },
+    main_product = "cube-refined-rare-metals",
     energy_required = 4,
     category = "cube-crusher",
     subgroup = "cube-processing",
@@ -110,7 +111,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-stone-crushing",
+    name = "cube-sand",
     ingredients = {{type = "item", name = "stone", amount = 8}},
     results = {{type = "item", name = "cube-sand", amount = 16}},
     energy_required = 4,
@@ -122,10 +123,11 @@ data:extend({
     show_amount_in_title = false,
     allow_decomposition = true,
     enabled = false,
+    main_product = "cube-sand",
   },
   {
     type = "recipe",
-    name = "cube-deep-core-crushing",
+    name = "cube-deep-powder",
     icon = "__krastorio2-assets-ultracube__/icons/items/imersite-powder.png",
     icon_size = 64,
     ingredients = {{type = "item", name = "cube-deep-core-ore", amount = 40}},
@@ -143,6 +145,7 @@ data:extend({
     show_amount_in_title = false,
     allow_decomposition = false,
     enabled = false,
+    main_product = "cube-deep-powder",
   },
   {
     type = "recipe",
@@ -222,7 +225,7 @@ data:extend({
   },
   {
     type = "recipe",
-    name = "cube-greenhouse-potato",
+    name = "cube-potato",
     icon = "__krastorio2-assets-ultracube__/icons/items/potato.png",
     icon_size = 64,
     ingredients = {

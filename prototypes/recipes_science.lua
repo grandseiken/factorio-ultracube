@@ -1,7 +1,7 @@
 data:extend({
   {
     type = "recipe",
-    name = "cube-basic-contemplation-unit-0",
+    name = "cube-basic-contemplation-unit",
     icon = "__krastorio2-assets-ultracube__/icons/cards/military-tech-card.png",
     icon_size = 64,
     ingredients = {
@@ -11,7 +11,7 @@ data:extend({
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-contemplation-unit", amount = 10},
     },
-    main_product = "",
+    main_product = "cube-basic-contemplation-unit",
     energy_required = 1,
     category = "cube-synthesizer",
     subgroup = "cube-synthesis-advanced",
@@ -35,6 +35,7 @@ data:extend({
       {type = "fluid", name = "steam", amount = 8000, temperature = 215, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-basic-contemplation-unit", amount = 100},
     },
+    main_product = "cube-basic-contemplation-unit",
     energy_required = 1,
     category = "cube-synthesizer",
     subgroup = "cube-synthesis-advanced",

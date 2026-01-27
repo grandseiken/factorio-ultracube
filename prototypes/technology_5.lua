@@ -48,7 +48,7 @@ data:extend({
       },
     },
     effects = {
-      {type = "unlock-recipe", recipe = "cube-v4-loader"},
+      {type = "unlock-recipe", recipe = "aai-v4-loader"},
     },
     prerequisites = {
       "cube-v4-logistics",

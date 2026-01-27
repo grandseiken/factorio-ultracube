@@ -40,34 +40,15 @@ for _, v in pairs(data.raw.shortcut) do
 end
 
 -- Remove base game recipes that confuse various 2.0 GUIs.
--- This is a quick hack: really we need to rename all of these to match the Ultracube
--- recipe names, since there is no other way to tell the game they should be linked (lol).
--- However, that's a huge fucking pain.
+-- NOTE: Most recipes are now overridden in data-updates.lua to merge with factoriopedia.
+-- Only keep items here that don't have cube recipe equivalents or need special handling.
 local removed_recipes = make_set({
-  "transport-belt", "fast-transport-belt", "express-transport-belt",
-  "underground-belt", "fast-underground-belt", "express-underground-belt",
-  "splitter", "fast-splitter", "express-splitter",
-  "inserter", "long-handed-inserter", "fast-inserter", "bulk-inserter",
-  "aai-loader", "aai-v2-loader", "aai-v3-loader", "aai-v4-loader",
-  "small-electric-pole", "medium-electric-pole", "big-electric-pole",
-  "substation", "pipe", "pipe-to-ground", "pump",
-  "rail", "train-stop", "rail-signal", "rail-chain-signal",
-  "locomotive", "cargo-wagon", "fluid-wagon",
-  "iron-chest", "storage-tank",
-  "construction-robot", "active-provider-chest", "passive-provider-chest",
-  "storage-chest", "buffer-chest", "requester-chest",
-  "small-lamp", "arithmetic-combinator", "decider-combinator",
-  "selector-combinator", "constant-combinator", "power-switch",
-  "programmable-speaker", "display-panel",
-  "concrete", "hazard-concrete", "refined-concrete", "refined-hazard-concrete",
-  "landfill", "cliff-explosives", "offshore-pump", "radar",
-  "steam-engine", "accumulator", "heat-pipe", "heat-exchanger", "centrifuge",
-  "stone-brick", "sulfur", "explosives", "battery", "flying-robot-frame",
-  "barrel", "uranium-fuel-cell", "copper-cable", "repair-pack",
-  "fission-reactor-equipment", "battery-mk2-equipment",
-  "belt-immunity-equipment", "night-vision-equipment",
-  "exoskeleton-equipment", "personal-roboport-mk2-equipment",
-  "car", "spidertron", "stone-wall", "gate",
+  "transport-belt",
+  "underground-belt",
+  "splitter",
+  "inserter",
+  "aai-loader",
+  "small-electric-pole",
 })
 
 for k, _ in pairs(removed_recipes) do
@@ -81,11 +62,6 @@ for _, t in pairs(data.raw.technology) do
         table.remove(t.effects, i)
       end
     end
-  end
-end
-for _, v in pairs(data.raw.recipe) do
-  if v.factoriopedia_alternative == "barrel" then
-    v.factoriopedia_alternative = "cube-barrel"
   end
 end
 data.raw["tips-and-tricks-item"]["electric-network"].trigger = nil

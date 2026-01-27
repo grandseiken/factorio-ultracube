@@ -61,6 +61,7 @@ data:extend({
     icon = "__base__/graphics/icons/power-armor-mk2.png",
     icon_size = 64,
     subgroup = "armor",
+    hidden_in_factoriopedia = true,
     order = "cube-e[power-armor-mk2]",
     stack_size = 1,
     infinite = true,
