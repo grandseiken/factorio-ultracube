@@ -101,6 +101,7 @@ function transition.tick(tick)
       local inventory = e.get_output_inventory()
       for _, product in pairs(products) do
         inventory.insert({name = product.name, count = product.amount})
+		e.force.get_item_production_statistics(e.surface).on_flow(product.name, product.amount)
       end
     end
     ::continue::
