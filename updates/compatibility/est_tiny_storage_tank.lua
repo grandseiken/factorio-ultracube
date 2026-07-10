@@ -14,7 +14,7 @@ if mods["est-tiny-storage-tank"] then
       },
       results = {{type = "item", name = "tiny-inline-storage-tank", amount = 1}},
       energy_required = 2,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     }})
     data.raw.item["tiny-inline-storage-tank"].subgroup = "storage"
@@ -33,7 +33,7 @@ if mods["est-tiny-storage-tank"] then
       },
       results = {{type = "item", name = "tiny-4way-storage-tank", amount = 1}},
       energy_required = 2,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     }})
     data.raw.item["tiny-4way-storage-tank"].subgroup = "storage"

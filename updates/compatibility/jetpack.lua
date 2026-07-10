@@ -11,7 +11,7 @@ if mods["jetpack"] then
     {type = "item", name = "cube-advanced-engine", amount = 10},
     {type = "item", name = "cube-advanced-circuit", amount = 10},
   }
-  pack1_recipe.category = craft_category
+  pack1_recipe.categories = {craft_category}
 
   local pack1_tech = data.raw.technology["jetpack-1"]
   pack1_tech.unit = tech_cost_unit("2", 240)
@@ -34,7 +34,7 @@ if mods["jetpack"] then
     {type = "item", name = "cube-arcane-drive", amount = 20},
     {type = "item", name = "cube-spectral-processor", amount = 20},
   }
-  pack2_recipe.category = craft_category
+  pack2_recipe.categories = {craft_category}
 
   local pack2_tech = data.raw.technology["jetpack-2"]
   pack2_tech.unit = tech_cost_unit("5", 360)
@@ -67,7 +67,7 @@ if mods["jetpack"] then
   }
   pack3_recipe.main_product = "jetpack-4"
   pack3_recipe.localised_name = {"item-name.jetpack-3"}
-  pack3_recipe.category = craft_category
+  pack3_recipe.categories = {craft_category}
 
   -- Use the actual jetpack 3 tech prototype so that the number that appears on it is correct.
   -- Everything else uses the jetpack 4 prototypes so that the thrust is correct and the original

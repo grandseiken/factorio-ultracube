@@ -24,7 +24,7 @@ if mods["valves"] then
       },
       results = {{type = "item", name = "valves-one_way", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -37,7 +37,7 @@ if mods["valves"] then
       },
       results = {{type = "item", name = "valves-overflow", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -50,7 +50,7 @@ if mods["valves"] then
       },
       results = {{type = "item", name = "valves-top_up", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
   })

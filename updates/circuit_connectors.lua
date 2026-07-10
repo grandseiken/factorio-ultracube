@@ -1,13 +1,15 @@
 local function check_circuit_connectors(machine, is_cube_machine)
   if not settings.startup["cube-circuit-machines"].value then
-    machine.enable_logistic_control_behavior = false
+    if not machine.flags then
+      machine.flags = {}
+    end
+    machine.flags[#machine.flags + 1] = "no-logistic-connection"
     machine.circuit_wire_max_distance = 0
     machine.circuit_connector = nil
   end
 end
 
 local function add_circuit_connectors(machine, is_cube_machine, distance, connectors)
-  machine.enable_logistic_control_behavior = true
   machine.circuit_wire_max_distance = distance
   machine.circuit_connector = connectors
   check_circuit_connectors(machine, is_cube_machine)

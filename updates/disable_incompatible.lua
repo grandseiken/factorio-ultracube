@@ -142,6 +142,15 @@ local function has_prefix(s)
   return s and starts_with(s, "cube-")
 end
 
+local function any_has_prefix(list)
+  for _, v in ipairs(list) do
+    if has_prefix(v) then
+      return true
+    end
+  end
+  return false
+end
+
 local function add_prefix(s)
   if has_prefix(s) then
     return s
@@ -157,7 +166,7 @@ local function is_compatible(t)
 end
 
 local function is_compatible_recipe(t)
-  return t and (is_compatible(t) or has_prefix(t.category))
+  return t and (is_compatible(t) or t.categories and any_has_prefix(t.categories))
 end
 
 local function is_compatible_item(t)

@@ -58,7 +58,7 @@ local function add_mystery_dummy(name, item)
       ingredients = {},
       results = {{type = "item", name = item, amount = 1}},
       energy_required = 1,
-      category = "cube-mystery-furnace",
+      categories = {"cube-mystery-furnace"},
       subgroup = "cube-mystery",
       enabled = false,
       hidden = true,

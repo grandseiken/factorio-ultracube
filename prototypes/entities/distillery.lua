@@ -19,7 +19,7 @@ data:extend({
     drawing_box_vertical_extension = 0.3,
     module_slots = 2,
     icons_positioning = {{
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 1.2},
       scale = 0.625,
     }},

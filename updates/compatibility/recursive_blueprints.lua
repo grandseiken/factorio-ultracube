@@ -1,6 +1,6 @@
 if mods["recursive-blueprints"] or mods["rec-blue-plus"] then
   local recipe = data.raw.recipe["blueprint-deployer"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "iron-chest", amount = 1},
     {type = "item", name = "cube-electronic-circuit", amount = 3},
@@ -8,7 +8,7 @@ if mods["recursive-blueprints"] or mods["rec-blue-plus"] then
   }
 
   recipe = data.raw.recipe["recursive-blueprints-scanner"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 5},
     {type = "item", name = "cube-basic-matter-unit", amount = 5},

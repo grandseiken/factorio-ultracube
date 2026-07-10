@@ -8,7 +8,7 @@ data:extend({
     },
     results = {{type = "item", name = "repair-pack", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -17,7 +17,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-rare-metals", amount = 2}},
     results = {{type = "item", name = "copper-cable", amount = 4}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -28,7 +28,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-ghost-wire", amount = 16}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -41,7 +41,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-electronic-circuit", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -55,7 +55,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-advanced-circuit", amount = 1}},
     energy_required = 6,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -70,7 +70,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-spectral-processor", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -82,7 +82,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-basic-motor-unit", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -95,7 +95,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-advanced-engine", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -104,7 +104,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-glass", amount = 2}},
     results = {{type = "item", name = "cube-besselheim-flask", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -116,7 +116,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-intelligent-calcium", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -129,7 +129,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-bottled-consciousness", amount = 1}},
     energy_required = 2,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.55, g = 0.9, b = 0.9},
@@ -147,7 +147,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-bottled-euphoria", amount = 1}},
     energy_required = 1,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.95, g = 0.15, b = 0.5},
@@ -165,7 +165,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-bottled-anguish", amount = 1}},
     energy_required = 1,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.4, g = 0.2, b = 0.75},
@@ -189,7 +189,7 @@ data:extend({
     },
     main_product = "sulfur",
     energy_required = 2,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 1.000, g = 0.995, b = 0.089},
@@ -207,7 +207,7 @@ data:extend({
     },
     results = {{type = "item", name = "battery", amount = 1}},
     energy_required = 4,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.965, g = 0.482, b = 0.338},
@@ -228,7 +228,7 @@ data:extend({
     },
     results = {{type = "item", name = "explosives", amount = 1}},
     energy_required = 4,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.968, g = 0.381, b = 0.259},
@@ -249,7 +249,7 @@ data:extend({
     },
     results = {{type = "item", name = "flying-robot-frame", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -266,7 +266,7 @@ data:extend({
     },
     main_product = "cube-deep-crystal",
     energy_required = 6,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.525, g = 0.15, b = 0.60},
@@ -285,7 +285,7 @@ data:extend({
       {type = "fluid", name = "cube-unstable-gas", amount = 25},
     },
     results = {{type = "item", name = "cube-vehicle-fuel", amount = 1}},
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     energy_required = 12,
     always_show_made_in = true,
     enabled = false,
@@ -298,7 +298,7 @@ data:extend({
       {type = "item", name = "uranium-235", amount = 1},
     },
     results = {{type = "item", name = "cube-nuclear-fuel", amount = 10}},
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     energy_required = 120,
     always_show_made_in = true,
     enabled = false,
@@ -316,7 +316,7 @@ data:extend({
       {type = "item", name = "cube-condensed-fuel", amount = 50}
     },
     main_product = "cube-condensed-fuel",
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     energy_required = 2,
     always_show_made_in = true,
     enabled = false,
@@ -336,7 +336,7 @@ data:extend({
       {type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-condensed-fuel", amount = 160}
     },
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     subgroup = "cube-fuel",
     order = "cube-z[b-deeply-condensed-fuel]",
     energy_required = 2,
@@ -358,7 +358,7 @@ data:extend({
     },
     energy_required = 2,
     main_product = "uranium-fuel-cell",
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     subgroup = "cube-uranium-processing",
     order = "cube-d[uranium-processing]",
     always_show_made_in = true,
@@ -381,7 +381,7 @@ data:extend({
       {type = "item", name = "uranium-fuel-cell", amount = 40},
     },
     energy_required = 2,
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     subgroup = "cube-uranium-processing",
     order = "cube-e[uranium-processing]",
     always_show_made_in = true,
@@ -401,7 +401,7 @@ data:extend({
     },
     energy_required = 20,
     main_product = "",
-    category = "cube-fuel-refinery",
+    categories = {"cube-fuel-refinery"},
     subgroup = "cube-uranium-processing",
     order = "cube-f[uranium-reprocessing]",
     always_show_made_in = true,
@@ -417,7 +417,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-sophisticated-matter-unit", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -431,7 +431,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-resplendent-plate", amount = 2}},
     energy_required = 12,
-    category = "cube-furnace",
+    categories = {"cube-furnace"},
     enabled = false,
   },
   {
@@ -444,7 +444,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-haunted-energy-cell", amount = 1}},
     energy_required = 4,
-    category = "cube-chemical-plant",
+    categories = {"cube-chemical-plant"},
     enabled = false,
     crafting_machine_tint = {
       primary = {r = 0.338, g = 0.482, b = 0.965},
@@ -465,7 +465,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-teleportation-control-module", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -474,7 +474,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-teleportation-control-module", amount = 1}},
     results = {{type = "item", name = "cube-teleporter-activation", amount = 1}},
     energy_required = 4,
-    category = "cube-experimental-teleporter",
+    categories = {"cube-experimental-teleporter"},
     enabled = false,
     hidden = true,
   },

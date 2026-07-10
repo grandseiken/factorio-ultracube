@@ -1,6 +1,6 @@
 if mods["LogisticTrainNetwork"] then
   local recipe = data.raw.recipe["logistic-train-stop"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
 
   local tech = data.raw.technology["logistic-train-network"]
   tech.prerequisites = {
@@ -15,7 +15,7 @@ if mods["LogisticTrainNetwork"] then
   -- LTN combinator support.
   if mods["LTN_Combinator_Modernized"] then
     recipe = data.raw.recipe["ltn-combinator"]
-    recipe.category = "cube-fabricator-handcraft"
+    recipe.categories = {"cube-fabricator-handcraft"}
     recipe.ingredients = {
       {type = "item", name = "constant-combinator", amount = 1},
       {type = "item", name = "cube-electronic-circuit", amount = 1},

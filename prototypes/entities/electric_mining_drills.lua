@@ -1,5 +1,4 @@
 require("__base__/prototypes/entity/pipecovers")
-require("__base__/prototypes/entity/assemblerpipes")
 
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
@@ -255,7 +254,7 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5} },
     input_fluid_box = {
       production_type = "input-output",
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
       volume = 200,
       pipe_connections = {
@@ -1624,7 +1623,7 @@ data:extend({
     selection_box = {{-1.5, -1.5}, {1.5, 1.5} },
     input_fluid_box = {
       production_type = "input-output",
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
       volume = 200,
       pipe_connections = {

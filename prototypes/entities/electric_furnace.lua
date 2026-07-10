@@ -19,7 +19,7 @@ data:extend({
     fluid_boxes = {
       {
         production_type = "input",
-        pipe_picture = assembler2pipepictures(),
+        pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections = {{flow_direction = "input", direction = defines.direction.north, position = {0, -1}}},
@@ -29,7 +29,7 @@ data:extend({
     fluid_boxes_off_when_no_fluid_recipe = true,
     module_slots = 2,
     icons_positioning = {{
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 0.8},
     }},
     allowed_effects = module_effects.all,

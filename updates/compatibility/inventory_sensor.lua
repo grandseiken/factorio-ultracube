@@ -6,7 +6,7 @@ if mods["Inventory Sensor"] then
     {type = "item", name = "cube-electronic-circuit", amount = 5},
     {type = "item", name = "copper-cable", amount = 5},
   }
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
 
   local technology = data.raw.technology["circuit-network-2"]
   technology.unit = tech_cost_unit("1a", 60)

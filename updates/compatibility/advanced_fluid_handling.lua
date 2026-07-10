@@ -11,7 +11,7 @@ local function handle_technology(technology_name, unit, prerequisites)
   tech.unit = unit
 
   for _, name in ipairs(recipes) do
-    data.raw.recipe[name].category = "cube-fabricator-handcraft"
+    data.raw.recipe[name].categories = {"cube-fabricator-handcraft"}
     data.raw.item[name].order = "cube-" .. data.raw.item[name].order
     add_mystery_recipe(1, name, "pipe")
   end

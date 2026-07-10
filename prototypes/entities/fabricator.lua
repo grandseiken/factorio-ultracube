@@ -214,7 +214,7 @@ data:extend({
     module_slots = 4,
     icon_draw_specification = {scale = 1.25, shift = {0, -0.3}},
     icons_positioning = {{
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 0.7},
       scale = 0.625,
     }},

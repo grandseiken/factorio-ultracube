@@ -32,7 +32,7 @@ function activation.set(entity, key, active)
       local count = table.count - 1
       table.count = count
       if count == 0 then
-        entity.active = true
+        entity.disabled_by_script = false
         entity.custom_status = nil
       end
       return true
@@ -43,7 +43,7 @@ function activation.set(entity, key, active)
       local count = table.count
       table.count = count + 1
       if count == 0 then
-        entity.active = false
+        entity.disabled_by_script = true
         entity.custom_status = {
           diode = defines.entity_status_diode.red,
           label = {"entity-status." .. key},

@@ -5,7 +5,7 @@ if mods["fcpu"] then
     {type = "item", name = "decider-combinator", amount = 10},
     {type = "item", name = "cube-electronic-circuit", amount = 1},
   }
-  fcpu_recipe.category = "cube-fabricator-handcraft"
+  fcpu_recipe.categories = {"cube-fabricator-handcraft"}
 
   local fcpu_item = data.raw.item["fcpu"]
   fcpu_item.subgroup = "cube-combinator-extra"

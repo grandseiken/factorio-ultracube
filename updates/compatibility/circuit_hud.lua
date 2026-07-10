@@ -1,6 +1,6 @@
 if mods["CircuitHUD-V2"] then
   local recipe = data.raw.recipe["hud-combinator"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "copper-cable", amount = 5},
     {type = "item", name = "cube-basic-matter-unit", amount = 2},

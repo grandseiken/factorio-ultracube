@@ -97,7 +97,7 @@ data:extend({
     source_inventory_size = 1,
     module_slots = 4,
     icons_positioning = {{
-      inventory_index = defines.inventory.furnace_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 0.6},
       scale = 0.35,
       max_icons_per_row = 4,

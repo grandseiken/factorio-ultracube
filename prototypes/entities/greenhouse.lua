@@ -34,7 +34,7 @@ data:extend({
     fast_replaceable_group = "cube-greenhouse",
     module_slots = 2,
     icons_positioning = {{
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 1.7},
       scale = 1,
     }},

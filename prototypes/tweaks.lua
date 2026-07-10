@@ -122,6 +122,7 @@ data.raw.fluid["sulfuric-acid"].order = "cube-a[tar]-b[acid]"
 -- Revert 1 water -> 10 steam boiler change.
 data.raw.fluid["water"].max_temperature = 215
 data.raw.fluid["water"].heat_capacity = "0.2kJ"
+data.raw.fluid["steam"].max_temperature = 1000
 
 data.raw["transport-belt"]["express-transport-belt"].next_upgrade = "cube-v4-transport-belt"
 data.raw["underground-belt"]["express-underground-belt"].next_upgrade = "cube-v4-underground-belt"

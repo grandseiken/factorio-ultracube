@@ -27,7 +27,7 @@ if mods["elevated-rails"] then
       },
       results = {{type = "item", name = "rail-support", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -42,7 +42,7 @@ if mods["elevated-rails"] then
       },
       results = {{type = "item", name = "rail-ramp", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     }
   })

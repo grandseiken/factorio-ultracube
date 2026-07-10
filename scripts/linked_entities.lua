@@ -175,7 +175,7 @@ function linked_entities.tick(tick)
       local linked = get_linked(e)
       if linked then
         local animation = linked[1]
-        animation.active = e.rocket_silo_status == defines.rocket_silo_status.rocket_ready
+        animation.disabled_by_script = e.rocket_silo_status ~= defines.rocket_silo_status.rocket_ready
       end
     end
   end

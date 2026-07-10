@@ -10,7 +10,7 @@ if mods["pushbutton"] then
       },
       results = {{type = "item", name = "pushbutton", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
   })

@@ -9,7 +9,7 @@ if mods["Lighted-Poles-Plus"] then
                         "lighted-substation"}) do
     local recipe = data.raw.recipe[name]
     if recipe then
-      recipe.category = "cube-fabricator-handcraft"
+      recipe.categories = {"cube-fabricator-handcraft"}
       if recipe.order then
         recipe.order = "cube-" .. recipe.order
       end

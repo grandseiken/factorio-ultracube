@@ -11,7 +11,7 @@ if mods["safefill"] then
   for _, recipe_name in ipairs(recipes) do
     local recipe = data.raw.recipe[recipe_name]
     if recipe then
-      recipe.category = "cube-fabricator-handcraft"
+      recipe.categories = {"cube-fabricator-handcraft"}
       add_mystery_recipe(1, recipe_name, "landfill")
     end
   end

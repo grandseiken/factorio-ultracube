@@ -8,7 +8,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-local-turbine", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -20,7 +20,7 @@ data:extend({
     },
     results = {{type = "item", name = "offshore-pump", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -31,7 +31,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-boiler", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -42,7 +42,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-lab", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -54,7 +54,7 @@ data:extend({
     },
     results = {{type = "item", name = "steam-engine", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -65,7 +65,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-electric-mining-drill", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -78,7 +78,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-electric-mining-drill-mk2", amount = 1}},
     energy_required = 16,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -93,7 +93,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-deep-core-ultradrill", amount = 1}},
     energy_required = 40,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -107,7 +107,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-ultradense-furnace", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -119,7 +119,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-electric-furnace", amount = 1}},
     energy_required = 6,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -134,7 +134,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-greenhouse", amount = 1}},
     energy_required = 6,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -147,7 +147,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-crusher", amount = 1}},
     energy_required = 6,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -160,7 +160,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fabricator", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -175,7 +175,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-chemical-plant", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -190,7 +190,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-distillery", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -203,7 +203,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fluid-burner", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -218,7 +218,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fuel-refinery", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -231,7 +231,7 @@ data:extend({
     },
     results = {{type = "item", name = "accumulator", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -245,7 +245,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-recovery-bay", amount = 1}},
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -259,7 +259,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-synthesizer", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -274,7 +274,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-dimension-folding-engine", amount = 1}},
     energy_required = 40,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -289,7 +289,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-stygian-energy-lab", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -302,7 +302,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-heavy-turbine", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -316,7 +316,7 @@ data:extend({
     },
     energy_required = 20,
     results = {{type = "item", name = "cube-energy-bulkframe", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -330,7 +330,7 @@ data:extend({
     },
     results = {{type = "item", name = "centrifuge", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -344,7 +344,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-nuclear-reactor", amount = 1}},
     energy_required = 30,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     requester_paste_multiplier = 1,
     enabled = false,
   },
@@ -354,7 +354,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-rare-metals", amount = 20}},
     results = {{type = "item", name = "heat-pipe", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -367,7 +367,7 @@ data:extend({
     },
     energy_required = 4,
     results = {{type = "item", name = "heat-exchanger", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -381,7 +381,7 @@ data:extend({
     },
     energy_required = 12,
     results = {{type = "item", name = "cube-mystery-furnace", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -396,7 +396,7 @@ data:extend({
     },
     energy_required = 12,
     results = {{type = "item", name = "cube-cyclotron", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -410,7 +410,7 @@ data:extend({
     },
     energy_required = 8,
     results = {{type = "item", name = "cube-particle-phase-aligner", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -424,7 +424,7 @@ data:extend({
     },
     energy_required = 20,
     results = {{type = "item", name = "cube-quantum-decoder", amount = 1}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -438,7 +438,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-beacon", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -453,7 +453,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-experimental-teleporter", amount = 1}},
     energy_required = 30,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -469,7 +469,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-forbidden-ziggurat", amount = 1}},
     energy_required = 300,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -484,7 +484,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-antimatter-reactor", amount = 1}},
     energy_required = 300,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -498,7 +498,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-annihilation-chamber", amount = 1}},
     energy_required = 60,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 })

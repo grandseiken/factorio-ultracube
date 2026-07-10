@@ -8,7 +8,7 @@ if mods["compaktcircuit"] then
 
   local proc_name = "compaktcircuit-processor"
   local proc = data.raw.recipe[proc_name]
-  proc.category = "cube-fabricator-handcraft"
+  proc.categories = {"cube-fabricator-handcraft"}
   proc.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 20},
     {type = "item", name = "cube-advanced-circuit", amount = 30},
@@ -21,7 +21,7 @@ if mods["compaktcircuit"] then
 
   proc_name = proc_name .. "_1x1"
   proc = data.raw.recipe[proc_name]
-  proc.category = "cube-fabricator-handcraft"
+  proc.categories = {"cube-fabricator-handcraft"}
   proc.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 10},
     {type = "item", name = "cube-advanced-circuit", amount = 10},

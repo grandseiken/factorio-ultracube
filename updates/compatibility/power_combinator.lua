@@ -10,7 +10,7 @@ if mods["power-combinator"] then
   tech2.unit = tech_cost_unit("2", 100)
 
   local recipe = data.raw.recipe["power-combinator"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "constant-combinator", amount = 1},
     {type = "item", name = "cube-electronic-circuit", amount = 1},
@@ -20,7 +20,7 @@ if mods["power-combinator"] then
   add_mystery_recipe(1, "power-combinator", "constant-combinator")
 
   recipe = data.raw.recipe["power-combinator-MK2"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "power-combinator", amount = 1},
     {type = "item", name = "cube-advanced-circuit", amount = 1},

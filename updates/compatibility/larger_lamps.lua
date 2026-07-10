@@ -5,7 +5,7 @@ if mods["LargerLamps-2_0"] then
     {type = "item", name = "copper-cable", amount = 4},
     {type = "item", name = "cube-basic-matter-unit", amount = 6},
   }
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
 
   recipe = data.raw.recipe["deadlock-large-lamp"]
   recipe.ingredients = {
@@ -13,7 +13,7 @@ if mods["LargerLamps-2_0"] then
     {type = "item", name = "copper-cable", amount = 4},
     {type = "item", name = "cube-basic-matter-unit", amount = 6},
   }
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
 
   local technology = data.raw.technology["cube-optics"]
   table.insert(technology.effects, {type = "unlock-recipe", recipe = "deadlock-floor-lamp"})

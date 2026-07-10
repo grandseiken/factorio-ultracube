@@ -13,7 +13,7 @@ if mods["aai-signal-transmission"] then
         {type = "item", name = "aai-signal-sender", amount = 1},
       },
       energy_required = 10,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -29,7 +29,7 @@ if mods["aai-signal-transmission"] then
         {type = "item", name = "aai-signal-receiver", amount = 1},
       },
       energy_required = 10,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {

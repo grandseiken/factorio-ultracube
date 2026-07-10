@@ -22,7 +22,7 @@ function add_mystery_recipe(a, b, c, d, e)
       ingredients = {{type = "item", name = b, amount = d or 1}},
       results = results,
       energy_required = 2 * a,
-      category = "cube-mystery-furnace",
+      categories = {"cube-mystery-furnace"},
       subgroup = "cube-mystery",
       hidden = true,
       hide_from_player_crafting = true,

@@ -236,7 +236,7 @@ data:extend({
     show_recipe_icon = false,
     module_slots = 2,
     icons_positioning = {{
-      inventory_index = defines.inventory.rocket_silo_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 2.35},
       scale = 0.625,
       separation_multiplier = 4,

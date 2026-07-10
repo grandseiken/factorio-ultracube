@@ -1,6 +1,6 @@
 if mods["cybersyn"] then
   local recipe = data.raw.recipe["cybersyn-combinator"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "copper-cable", amount = 20},
     {type = "item", name = "cube-electronic-circuit", amount = 10},
@@ -18,7 +18,7 @@ if mods["cybersyn"] then
 
   if mods["cybersyn-combinator"] then
     recipe = data.raw.recipe["cybersyn-constant-combinator"]
-    recipe.category = "cube-fabricator-handcraft"
+    recipe.categories = {"cube-fabricator-handcraft"}
     recipe.ingredients = {
       {type = "item", name = "constant-combinator", amount = 1},
       {type = "item", name = "cube-electronic-circuit", amount = 1},

@@ -1,12 +1,12 @@
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 local sounds = require("__base__/prototypes/entity/sounds")
 
-circuit_connector_definitions["cube-big-container"] = circuit_connector_definitions.create_single(universal_connector_template, {
+circuit_connector_definitions["cube-big-container"] = {circuit_connector_definitions.create_single(universal_connector_template, {
     variation = 26,
     main_offset = util.by_pixel(0.5, -2.6),
     shadow_offset = util.by_pixel(3.5, 0),
     show_shadow = true,
-})
+})}
 
 data:extend({
   {

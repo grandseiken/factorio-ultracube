@@ -9,7 +9,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-modular-armor", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -23,7 +23,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-power-armor", amount = 1}},
     energy_required = 40,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -36,7 +36,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-battery-equipment", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -50,7 +50,7 @@ data:extend({
     },
     results = {{type = "item", name = "battery-mk2-equipment", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -63,7 +63,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-solar-panel-equipment", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -76,7 +76,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-solar-panel-equipment-mk2", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -90,7 +90,7 @@ data:extend({
     },
     results = {{type = "item", name = "fission-reactor-equipment", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -104,7 +104,7 @@ data:extend({
     },
     results = {{type = "item", name = "night-vision-equipment", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -118,7 +118,7 @@ data:extend({
     },
     results = {{type = "item", name = "belt-immunity-equipment", amount = 1}},
     energy_required = 10,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -133,7 +133,7 @@ data:extend({
     },
     results = {{type = "item", name = "exoskeleton-equipment", amount = 1}},
     energy_required = 15,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -147,7 +147,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-exoskeleton-equipment-mk2", amount = 1}},
     energy_required = 25,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -160,7 +160,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-personal-roboport-equipment", amount = 1}},
     energy_required = 15,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -174,7 +174,7 @@ data:extend({
     },
     results = {{type = "item", name = "personal-roboport-mk2-equipment", amount = 1}},
     energy_required = 25,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 })

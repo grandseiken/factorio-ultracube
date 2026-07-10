@@ -181,7 +181,7 @@ data:extend({
     audible_distance_modifier = 30,
     module_slots = 10,
     icons_positioning = {{
-      inventory_index = defines.inventory.assembling_machine_modules,
+      inventory_index = defines.inventory.crafter_modules,
       shift = {0, 1.8},
       scale = 1,
       max_icon_rows = 2,

@@ -6,7 +6,7 @@ if mods["grappling-gun"] then
     {type = "item", name = "cube-n-dimensional-widget", amount = 10},
     {type = "item", name = "pipe", amount = 5},
   }
-  gun_recipe.category = "cube-fabricator-handcraft"
+  gun_recipe.categories = {"cube-fabricator-handcraft"}
   local gun_item = data.raw.gun["grappling-gun"]
   gun_item.order = "cube-0[grappling]-0" .. gun_item.order
   gun_item.subgroup = "cube-utility"
@@ -19,7 +19,7 @@ if mods["grappling-gun"] then
     {type = "item", name = "cube-basic-matter-unit", amount = 4},
     {type = "item", name = "cube-rare-metals", amount = 1},
   }
-  ammo_recipe.category = "cube-fabricator-handcraft"
+  ammo_recipe.categories = {"cube-fabricator-handcraft"}
 
   local ammo_item = data.raw.ammo["grappling-gun-ammo"]
   ammo_item.order = "cube-0[grappling]-1" .. gun_item.order

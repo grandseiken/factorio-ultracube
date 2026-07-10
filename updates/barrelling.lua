@@ -10,9 +10,9 @@ for name, fluid in pairs(data.raw.fluid) do
   if item and fill_recipe and empty_recipe then
     item.subgroup = "cube-fill-barrel"
     fill_recipe.subgroup = "cube-fill-barrel"
-    fill_recipe.category = "cube-fabricator"
+    fill_recipe.categories = {"cube-fabricator"}
     empty_recipe.subgroup = "cube-empty-barrel"
-    empty_recipe.category = "cube-fabricator"
+    empty_recipe.categories = {"cube-fabricator"}
 
     local subgroup = data.raw["item-subgroup"][fluid.subgroup]
     local order = "cube-0-" .. fluid.order

@@ -5,7 +5,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-basic-matter-unit", amount = 10}},
     results = {{type = "item", name = "iron-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -13,7 +13,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-basic-matter-unit", amount = 2}},
     results = {{type = "item", name = "pipe", amount = 1}},
     energy_required = 0.5,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -24,7 +24,7 @@ data:extend({
     },
     results = {{type = "item", name = "pipe-to-ground", amount = 2}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -35,7 +35,7 @@ data:extend({
     },
     results = {{type = "item", name = "storage-tank", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -48,7 +48,7 @@ data:extend({
     },
     results = {{type = "item", name = "pump", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -60,7 +60,7 @@ data:extend({
     },
     results = {{type = "item", name = "fast-transport-belt", amount = 4}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -72,7 +72,7 @@ data:extend({
     },
     results = {{type = "item", name = "fast-underground-belt", amount = 2}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -85,7 +85,7 @@ data:extend({
     },
     results = {{type = "item", name = "fast-splitter", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -98,7 +98,7 @@ data:extend({
     },
     results = {{type = "item", name = "express-transport-belt", amount = 4}},
     energy_required = 2,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -110,7 +110,7 @@ data:extend({
     },
     results = {{type = "item", name = "express-underground-belt", amount = 2}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -124,7 +124,7 @@ data:extend({
     },
     results = {{type = "item", name = "express-splitter", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -137,7 +137,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-v4-transport-belt", amount = 4}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -149,7 +149,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-v4-underground-belt", amount = 2}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -163,7 +163,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-v4-splitter", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -178,7 +178,7 @@ data:extend({
     },
     results = {{type = "item", name = "aai-v2-loader", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -193,7 +193,7 @@ data:extend({
     },
     results = {{type = "item", name = "aai-v3-loader", amount = 1}},
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -208,7 +208,7 @@ data:extend({
     },
     results = {{type = "item", name = "aai-v4-loader", amount = 1}},
     energy_required = 16,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -218,7 +218,7 @@ data:extend({
     ingredients = {{type = "item", name = "stone-brick", amount = 5}},
     results = {{type = "item", name = "stone-wall", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -232,7 +232,7 @@ data:extend({
     },
     results = {{type = "item", name = "gate", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -246,7 +246,7 @@ data:extend({
     },
     results = {{type = "item", name = "concrete", amount = 10}},
     energy_required = 8,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -257,7 +257,7 @@ data:extend({
       {type = "item", name = "concrete", amount = 10},
     },
     results = {{type = "item", name = "hazard-concrete", amount = 10}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -272,7 +272,7 @@ data:extend({
     },
     results = {{type = "item", name = "refined-concrete", amount = 10}},
     energy_required = 8,
-    category = "cube-fabricator",
+    categories = {"cube-fabricator"},
     enabled = false,
   },
   {
@@ -283,7 +283,7 @@ data:extend({
       {type = "item", name = "refined-concrete", amount = 10},
     },
     results = {{type = "item", name = "refined-hazard-concrete", amount = 10}},
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -295,7 +295,7 @@ data:extend({
     },
     results = {{type = "item", name = "landfill", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -308,7 +308,7 @@ data:extend({
     },
     results = {{type = "item", name = "cliff-explosives", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -321,7 +321,7 @@ data:extend({
     },
     results = {{type = "item", name = "small-lamp", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -330,7 +330,7 @@ data:extend({
     ingredients = {{type = "item", name = "cube-basic-matter-unit", amount = 10}},
     results = {{type = "item", name = "medium-electric-pole", amount = 1}},
     energy_required = 0.5,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
   },
   {
     type = "recipe",
@@ -341,7 +341,7 @@ data:extend({
     },
     results = {{type = "item", name = "big-electric-pole", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -355,7 +355,7 @@ data:extend({
     },
     results = {{type = "item", name = "substation", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -368,7 +368,7 @@ data:extend({
     },
     results = {{type = "item", name = "constant-combinator", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -380,7 +380,7 @@ data:extend({
     },
     results = {{type = "item", name = "arithmetic-combinator", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -392,7 +392,7 @@ data:extend({
     },
     results = {{type = "item", name = "decider-combinator", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -405,7 +405,7 @@ data:extend({
     },
     results = {{type = "item", name = "selector-combinator", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -419,7 +419,7 @@ data:extend({
     },
     results = {{type = "item", name = "power-switch", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -432,7 +432,7 @@ data:extend({
     },
     results = {{type = "item", name = "programmable-speaker", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -445,7 +445,7 @@ data:extend({
     },
     results = {{type = "item", name = "display-panel", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -458,7 +458,7 @@ data:extend({
     },
     results = {{type = "item", name = "fast-inserter", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -470,7 +470,7 @@ data:extend({
     },
     results = {{type = "item", name = "long-handed-inserter", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -482,7 +482,7 @@ data:extend({
     },
     results = {{type = "item", name = "bulk-inserter", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -496,7 +496,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-extremely-long-inserter", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -511,7 +511,7 @@ data:extend({
     },
     results = {{type = "item", name = "car", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -528,7 +528,7 @@ data:extend({
     },
     results = {{type = "item", name = "spidertron", amount = 1}},
     energy_required = 20,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -543,7 +543,7 @@ data:extend({
     },
     results = {{type = "item", name = "locomotive", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -555,7 +555,7 @@ data:extend({
     },
     results = {{type = "item", name = "cargo-wagon", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -568,7 +568,7 @@ data:extend({
     },
     results = {{type = "item", name = "fluid-wagon", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -581,7 +581,7 @@ data:extend({
     },
     results = {{type = "item", name = "train-stop", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -594,7 +594,7 @@ data:extend({
     },
     results = {{type = "item", name = "rail-signal", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -608,7 +608,7 @@ data:extend({
     },
     results = {{type = "item", name = "rail-chain-signal", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -621,7 +621,7 @@ data:extend({
     },
     results = {{type = "item", name = "rail", amount = 2}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -634,7 +634,7 @@ data:extend({
     },
     results = {{type = "item", name = "radar", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -651,7 +651,7 @@ data:extend({
     },
     results = {{type = "item", name = "construction-robot", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     subgroup = "logistic-network",
     order = "cube-a[robot]-b[construction-robot]",
     enabled = false,
@@ -672,7 +672,7 @@ data:extend({
       {type = "item", name = "cube-logistic-robot-1", amount = 1},
     },
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     subgroup = "logistic-network",
     order = "cube-a[robot]-a[logistic-robot]",
     enabled = false,
@@ -689,7 +689,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-roboport", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -702,7 +702,7 @@ data:extend({
     },
     results = {{type = "item", name = "passive-provider-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -715,7 +715,7 @@ data:extend({
     },
     results = {{type = "item", name = "active-provider-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -728,7 +728,7 @@ data:extend({
     },
     results = {{type = "item", name = "storage-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -741,7 +741,7 @@ data:extend({
     },
     results = {{type = "item", name = "buffer-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -754,7 +754,7 @@ data:extend({
     },
     results = {{type = "item", name = "requester-chest", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 
@@ -767,7 +767,7 @@ data:extend({
     },
     results = {{type = "item", name = "barrel", amount = 1}},
     energy_required = 1,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -779,7 +779,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-medium-container", amount = 1}},
     energy_required = 2,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -791,7 +791,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-big-container", amount = 1}},
     energy_required = 4,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -803,7 +803,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fluid-storage-1", amount = 1}},
     energy_required = 6,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -815,7 +815,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fluid-storage-2", amount = 1}},
     energy_required = 8,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 })

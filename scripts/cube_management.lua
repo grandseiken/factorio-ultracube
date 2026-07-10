@@ -105,7 +105,9 @@ function cube_management.recipe_categories()
 
   cube_recipe_categories_cache = {}
   for _, data in pairs(cube_management.recipes()) do
-    cube_recipe_categories_cache[data.recipe.category] = true
+    for _, category in ipairs(data.recipe.categories) do
+      cube_recipe_categories_cache[category] = true
+    end
   end
   return cube_recipe_categories_cache
 end

@@ -67,7 +67,7 @@ tech.unit = tech_cost_unit("1b", 120)
 
 ### Recipes, items and entities
 
-* Recipes will be hidden unless any of their `name`, `order`, `subgroup` or `category` fields begin with the prefix `cube-`.
+* Recipes will be hidden unless any of their `name`, `order`, `subgroup` or one of their `categories` begin with the prefix `cube-`.
 * Items will be hidden unless any of their `name`, `order`, or `subgroup` fields begin with the prefix `cube-`, or there is a compatible recipe as above with the same name.
 * Some kinds of entities will be hidden unless any of their `name`, `order`, or `subgroup` fields begin with the prefix `cube-`, or there is a compatible item or recipe as above with the same name.
 
@@ -79,7 +79,7 @@ Example:
 
 ```
 local recipe = data.raw.recipe["cybersyn-combinator"]
-recipe.category = "cube-fabricator-handcraft"
+recipe.categories = {"cube-fabricator-handcraft"}
 recipe.ingredients = {
   {type = "item", name = "copper-cable", amount = 20},
   {type = "item", name = "cube-electronic-circuit", amount = 10},

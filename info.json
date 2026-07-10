@@ -1,14 +1,14 @@
 {
   "name": "Ultracube",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "title": "Ultracube: Age of Cube",
   "author": "grandseiken",
   "contact": "s+factorio@stu.scot",
   "homepage": "https://discord.gg/GAvypzwyWU",
-  "factorio_version": "2.0",
+  "factorio_version": "2.1",
   "dependencies": [
     "base >= 2.0.8",
-    "aai-loaders >= 0.2.1",
+    "aai-loaders >= 0.3.0",
     "krastorio2-assets-ultracube >= 2.0",
     "?elevated-rails",
     "?aai-signal-transmission",

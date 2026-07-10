@@ -13,7 +13,7 @@ data:extend({
     },
     main_product = "",
     energy_required = 1,
-    category = "cube-synthesizer",
+    categories = {"cube-synthesizer"},
     subgroup = "cube-synthesis-advanced",
     order = "cube-0[contemplation-0]",
     always_show_made_in = true,
@@ -36,7 +36,7 @@ data:extend({
       {type = "item", name = "cube-basic-contemplation-unit", amount = 100},
     },
     energy_required = 1,
-    category = "cube-synthesizer",
+    categories = {"cube-synthesizer"},
     subgroup = "cube-synthesis-advanced",
     order = "cube-0[contemplation-1]",
     always_show_made_in = true,
@@ -53,7 +53,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-fundamental-comprehension-card", amount = 1}},
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -66,7 +66,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-abstract-interrogation-card", amount = 2}},
     energy_required = 16,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -80,7 +80,7 @@ data:extend({
     },
     results = {{type = "item", name = "cube-deep-introspection-card", amount = 1}},
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -97,7 +97,7 @@ data:extend({
     },
     main_product = "cube-synthetic-premonition-card",
     energy_required = 12,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
   {
@@ -113,7 +113,7 @@ data:extend({
       {type = "item", name = "cube-complete-annihilation-card", amount = 2},
     },
     energy_required = 30,
-    category = "cube-fabricator-handcraft",
+    categories = {"cube-fabricator-handcraft"},
     enabled = false,
   },
 })

@@ -4,7 +4,7 @@ if mods["holographic_signs"] then
   item.subgroup = "cube-combinator-extra"
 
   local recipe = data.raw.recipe["hs_holo_sign"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "small-lamp", amount = 1},
     {type = "item", name = "cube-electronic-circuit", amount = 1},

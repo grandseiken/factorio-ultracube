@@ -15,7 +15,7 @@ if mods["DisplayPlates"] then
     for _, size in ipairs({"-small", "-medium", ""}) do
       local name = material .. "-display" .. size
       local recipe = data.raw.recipe[name]
-      recipe.category = "cube-fabricator-handcraft"
+      recipe.categories = {"cube-fabricator-handcraft"}
       recipe.ingredients[1].name = ingredient
       if technology then
         recipe.enabled = false

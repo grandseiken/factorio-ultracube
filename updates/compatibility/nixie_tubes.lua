@@ -11,7 +11,7 @@ if mods["nixie-tubes"] then
       },
       results = {{type = "item", name = "nixie-tube", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -25,7 +25,7 @@ if mods["nixie-tubes"] then
       },
       results = {{type = "item", name = "nixie-tube-alpha", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -39,7 +39,7 @@ if mods["nixie-tubes"] then
       },
       results = {{type = "item", name = "nixie-tube-small", amount = 1}},
       energy_required = 1,
-      category = "cube-fabricator-handcraft",
+      categories = {"cube-fabricator-handcraft"},
       enabled = false,
     },
     {
@@ -81,21 +81,21 @@ if mods["SantasNixieTubeDisplay"] then
   tech.unit = tech_cost_unit("1a", 80)
 
   local recipe = data.raw.recipe["SNTD-old-nixie-tube"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 1},
     {type = "item", name = "cube-glass", amount = 2},
     {type = "item", name = "cube-basic-matter-unit", amount = 2},
   }
   recipe = data.raw.recipe["SNTD-nixie-tube"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "SNTD-old-nixie-tube", amount = 2},
     {type = "item", name = "cube-rare-metals", amount = 4},
     {type = "item", name = "cube-basic-matter-unit", amount = 4},
   }
   recipe = data.raw.recipe["SNTD-nixie-tube-small"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "SNTD-old-nixie-tube", amount = 1},
     {type = "item", name = "cube-rare-metals", amount = 2},
@@ -122,21 +122,21 @@ if mods["UPSFriendlyNixieTubeDisplay"] then
   tech.unit = tech_cost_unit("1a", 80)
 
   local recipe = data.raw.recipe["classic-nixie-tube"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "cube-electronic-circuit", amount = 1},
     {type = "item", name = "cube-glass", amount = 2},
     {type = "item", name = "cube-basic-matter-unit", amount = 2},
   }
   recipe = data.raw.recipe["reinforced-nixie-tube"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "classic-nixie-tube", amount = 2},
     {type = "item", name = "cube-rare-metals", amount = 4},
     {type = "item", name = "cube-basic-matter-unit", amount = 4},
   }
   recipe = data.raw.recipe["small-reinforced-nixie-tube"]
-  recipe.category = "cube-fabricator-handcraft"
+  recipe.categories = {"cube-fabricator-handcraft"}
   recipe.ingredients = {
     {type = "item", name = "classic-nixie-tube", amount = 1},
     {type = "item", name = "cube-rare-metals", amount = 2},
