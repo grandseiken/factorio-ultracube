@@ -850,7 +850,7 @@ data:extend({
       {type = "item", name = "cube-legendary-iron-gear", amount = 1},
       {type = "item", name = "cube-ultradense-composite", amount = 64},
     },
-    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1}},
+    results = {{type = "item", name = "cube-ultradense-utility-cube", amount = 1, ignored_by_productivity = 1}},
     energy_required = 8,
     main_product = "",
     categories = {"cube-dimension-folding-engine"},

@@ -1,12 +1,13 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.0
-Date: ???
+Date: 11.07.2026
   Changes:
     - Ultracube is now compatible with Factorio 2.1.
     - Certain recipes (modules and conduits) now use shared probabilities so that random results are non-independent.
   Bugfixes:
     - Items produced by the quantum decoder now appear in production statistics.
     - Removed some dangling references to filter inserters in the mod-specific tips and tricks.
+    - Fixed that the final step of the helvetica process could incorrectly produce extra cubes in some cases.
 ---------------------------------------------------------------------------------------------------
 Version: 0.7.0
 Date: 29.11.2025
