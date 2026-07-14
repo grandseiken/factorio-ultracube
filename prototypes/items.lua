@@ -114,6 +114,13 @@ data:extend({
     drop_sound = item_sounds.metal_small_inventory_move,
     stack_size = 1,
     flags = {"not-stackable"},
+
+    fuel_category = "cube-cube",
+    fuel_value = "100MJ",
+    fuel_glow_color = {0.5, 0.5, 1, 1},
+    fuel_acceleration_multiplier = .5,
+    fuel_top_speed_multiplier = .5,
+    burnt_result = "cube-legendary-iron-gear",
   },
 
   {

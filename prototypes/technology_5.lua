@@ -156,7 +156,7 @@ data:extend({
       {type = "unlock-recipe", recipe = "cube-ultradense-composite"},
       {type = "unlock-recipe", recipe = "cube-ultradense-utility-cube"},
     },
-    prerequisites = {"cube-construct-forbidden-ziggurat"},
+    prerequisites = {"cube-construct-forbidden-ziggurat", "cube-mystery-furnace", "cube-coal-liquefaction", "cube-tar-reclamation"},
     essential = true,
     unit = tech_cost_unit("5", 800),
     order = "5-3-2",

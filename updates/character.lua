@@ -5,6 +5,10 @@ for _, character in pairs(data.raw.character) do
       "cube-synthesizer-handcraft",
       "cube-fabricator-handcraft",
     }
+    character.mining_categories = {
+      "basic-solid",
+      "cube-deep-core"
+    }
   end
 
   for _, animation in ipairs(character.animations) do

@@ -32,6 +32,9 @@ data.raw.item["radar"].icon = "__krastorio2-assets-ultracube__/icons/entities/ad
 data.raw.item["radar"].stack_size = 20
 data.raw.item["wood"].fuel_category = "cube-fuel-general"
 data.raw.item["coal"].fuel_category = "cube-fuel-general"
+data.raw.capsule["raw-fish"].fuel_category = "cube-haunted-energy"
+data.raw.capsule["raw-fish"].fuel_value = "40MJ"
+
 data.raw.item["coal"].order = "cube-f[2-coal]"
 data.raw.item["sulfur"].subgroup = "cube-chemical-intermediates"
 data.raw.item["sulfur"].order = "cube-0[a-sulfur]"

@@ -359,6 +359,7 @@ data:extend({
     effects = {
       {type = "unlock-recipe", recipe = "cube-emotional-decomposition"},
       {type = "unlock-recipe", recipe = "cube-bottled-euphoria"},
+      {type = "unlock-recipe", recipe = "cube-bottled-euphoria-personal"},
       {type = "unlock-recipe", recipe = "cube-bottled-anguish"},
       {type = "unlock-recipe", recipe = "cube-euphoric-release"},
     },

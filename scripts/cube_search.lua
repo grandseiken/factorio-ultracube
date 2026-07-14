@@ -225,7 +225,7 @@ local phantom_burners = {["cube-boiler"] = true}
 local function check_burner(entity)
   local can_burn_phantom = phantom_burners[entity.name]
   local fuel = cube_management.get_entity_burning_fuel(entity)
-  if fuel == cube_ultradense or fuel == cube_combustion or
+  if fuel == cube_ultradense or fuel == cube_combustion or fuel == legendary_iron_gear or
      (can_burn_phantom and fuel == cube_ultradense_phantom) then
     if add_result(fuel, 1, entity) then return true end
   end
@@ -238,6 +238,10 @@ local function check_burner(entity)
     count = inventory.get_item_count(cube_combustion)
     if count > 0 then
       if add_result(cube_combustion, count, entity) then return true end
+    end
+    count = inventory.get_item_count(legendary_iron_gear)
+    if count > 0 then
+      if add_result(legendary_iron_gear, count, entity) then return true end
     end
     if can_burn_phantom then
       count = inventory.get_item_count(cube_ultradense_phantom)

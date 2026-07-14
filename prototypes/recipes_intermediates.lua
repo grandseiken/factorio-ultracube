@@ -158,6 +158,17 @@ data:extend({
   },
   {
     type = "recipe",
+    name = "cube-bottled-euphoria-personal",
+    ingredients = {
+      {type = "item", name = "cube-besselheim-flask", amount = 1}
+    },
+    results = {{type = "item", name = "cube-bottled-euphoria", amount = 1}},
+    energy_required = 1,
+    categories = {"crafting"},
+    enabled = false,
+  },
+  {
+    type = "recipe",
     name = "cube-bottled-anguish",
     ingredients = {
       {type = "item", name = "cube-bottled-consciousness", amount = 1},
