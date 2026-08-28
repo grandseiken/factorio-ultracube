@@ -61,6 +61,7 @@ data:extend({
     dying_explosion = "nuclear-reactor-explosion",
     consumption = "80MW",
     neighbour_bonus = 0.25,
+    neighbour_connectable = table.deepcopy(reactor.neighbour_connectable),
     energy_source = {
       type = "burner",
       fuel_categories = {"cube-cube"},
@@ -121,6 +122,7 @@ data:extend({
     dying_explosion = "nuclear-reactor-explosion",
     consumption = "80MW",
     neighbour_bonus = 0.25,
+    neighbour_connectable = table.deepcopy(reactor.neighbour_connectable),
     energy_source = {
       type = "burner",
       fuel_categories = {"nuclear"},
