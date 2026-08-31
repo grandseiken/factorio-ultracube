@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.1
+Date: 31.08.2026
+  Bugfixes:
+    - Fixed that the nuclear reactor neighbour bonus no longer functioned after recent changes to the base game.
+    - Fixed that the heavy turbine was invisible after recent changes to the base game.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.0
 Date: 11.07.2026
   Changes:
