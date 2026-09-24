@@ -7,7 +7,7 @@
   "homepage": "https://discord.gg/GAvypzwyWU",
   "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0.8",
+    "base >= 2.1.20",
     "aai-loaders >= 0.3.0",
     "krastorio2-assets-ultracube >= 2.1",
     "?elevated-rails",

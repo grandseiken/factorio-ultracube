@@ -10,7 +10,7 @@ for _, name in ipairs(fuel_items) do
       icon = base.icon,
       icon_size = base.icon_size,
       icons = base.icons,
-      fuel_category = base.fuel_category,
+      fuel_categories = table.deepcopy(base.fuel_categories),
       fuel_value = base.fuel_value,
       fuel_acceleration_multiplier = (base.fuel_acceleration_multiplier or 1) * cube_item.fuel_acceleration_multiplier,
       fuel_top_speed_multiplier = (base.fuel_top_speed_multiplier or 1) * cube_item.fuel_top_speed_multiplier,
