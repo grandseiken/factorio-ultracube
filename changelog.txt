@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.3
+Date: ???
+  Bugfixes:
+    - Fixed that mineral water produced by the deep crystal distillation recipe was wrongly affected by productivity boosts.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.2
 Date: 09.10.2026
   Bugfixes:

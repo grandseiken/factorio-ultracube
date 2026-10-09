@@ -275,7 +275,7 @@ data:extend({
     },
     results = {
       {type = "fluid", name = "cube-deep-solution", amount = 500},
-      {type = "fluid", name = "cube-mineral-water", amount = 1000, ignored_by_stats = 1000, ignored_by_productivity = 100, show_details_in_recipe_tooltip = false0},
+      {type = "fluid", name = "cube-mineral-water", amount = 1000, ignored_by_stats = 1000, ignored_by_productivity = 1000, show_details_in_recipe_tooltip = false},
       {type = "fluid", name = "water", amount = 250, show_details_in_recipe_tooltip = false},
       {type = "item", name = "cube-deep-powder", amount = 50},
     },
