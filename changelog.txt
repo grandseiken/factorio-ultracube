@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.8.2
+Date: 09.10.2026
+  Bugfixes:
+    - Fixed that the mod would not load after recent changes to `fuel_categories` on the Factorio 2.1 experimental branch.
+---------------------------------------------------------------------------------------------------
 Version: 0.8.1
 Date: 31.08.2026
   Bugfixes:
