@@ -31,6 +31,7 @@ data:extend({
     collision_box = {{-1.25, -2.35}, {1.25, 2.35}},
     selection_box = {{-1.5, -2.5}, {1.5, 2.5}},
     damaged_trigger_effect = hit_effects.entity(),
+    minimum_input_temperature = 100.0,
     fluid_box = {
       volume = 200,
       pipe_covers = pipecoverspictures(),
@@ -40,7 +41,6 @@ data:extend({
         {flow_direction = "input-output", direction = defines.direction.north, position = {0, -2}}
       },
       production_type = "input-output",
-      minimum_temperature = 100.0,
     },
     max_power_output = "6MW",
     energy_source = {
