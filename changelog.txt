@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.3
-Date: ???
+Date: 26.10.2026
   Bugfixes:
+    - Fixed that the mod would not load after recent changes to on Factorio 2.1 stable.
     - Fixed that mineral water produced by the deep crystal distillation recipe was wrongly affected by productivity boosts.
 ---------------------------------------------------------------------------------------------------
 Version: 0.8.2
