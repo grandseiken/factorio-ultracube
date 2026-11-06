@@ -128,7 +128,7 @@ The following mods have been specifically adapted to work with Ultracube:
 | [Power Combinator](https://mods.factorio.com/mod/power-combinator) | |
 | [Pushbutton](https://mods.factorio.com/mod/pushbutton) | |
 | [Picker Dollies](https://mods.factorio.com/mod/PickerDollies) | helpful for tweaking combinator layouts. not yet updated for 2.0, though a fork is available [here](https://github.com/hgschmie/factorio-PickerDollies) |
-| [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported |
+| [Project Cybersyn](https://mods.factorio.com/mod/cybersyn) and [Cybersyn 2](https://mods.factorio.com/mod/cybersyn2) | [Cybersyn Combinator](https://mods.factorio.com/mod/cybersyn-combinator) is also supported for CS1 |
 | [Quick Adjustable Inserters](https://mods.factorio.com/mod/quick-adjustable-inserters) | |
 | [Renai Transportation](https://mods.factorio.com/mod/RenaiTransportation) | |
 | [Railway Motor Car](https://mods.factorio.com/mod/railway-motor-car) | |
